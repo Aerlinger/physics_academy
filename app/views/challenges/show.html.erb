@@ -1,0 +1,50 @@
+<% provide(:title, @lesson.title) %>
+
+<!-- Lesson pathbar at top -->
+<div class="lesson_pathbar">
+  <div class="tabbable row-fluid">
+
+    <ul class="nav nav-tabs">
+      <% @lesson.challenges.all.each_with_index do |challenge, index| %>
+        <%= "<li#{" class='active'" if (index+1)==@challenge.id}> <a href='#{lesson_challenge_url(id: index+1)}'> #{index+1}</a> </li>".html_safe %>
+      <% end %>
+    </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active">
+        <h3><%= "#{@challenge.title}, #{@challenge.id}"%></h3>
+        <p><%= "#{@challenge.content}, #{@challenge.id}"%></p>
+        <a class="btn btn-primary btn-large" style="float: right" href="<%= lesson_challenge_url(id: @challenge.id+1) %>">Next Challenge &raquo;</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row-fluid">
+
+  <!-- Left navbar -->
+  <div class="span3">
+    <div class="well sidebar-nav">
+      <ul class="nav nav-list">
+        <li class="nav-header">Lessons</li>
+        <% @lesson.challenges.all.each_with_index do |challenge, index| %>
+          <%= "<li #{"class='active'" if (index+1)==@challenge.id}}> <a href='tab#{index+1}' data-toggle='tab'> #{challenge.title}</a> </li>".html_safe %>
+        <% end %>
+      </ul>
+    </div><!--/.well -->
+  </div><!--/span-->
+
+  <!-- CENTER CONTENT -->
+  <div class="span9" >
+    <div class="well" style="height: 600px">
+      <h3><%= "#{@lesson.title}, #{@challenge.title}" %></h3>
+    </div>
+  </div><!--/span-->
+</div><!--/row-->
+
+<hr>
+
+
+</div>

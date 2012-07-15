@@ -1,0 +1,34 @@
+<h1>listing users</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Num completed lessons</th>
+    <th>Num points</th>
+    <th>Num achievements</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <%# Creates a new roy for each user %>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.email %></td>
+      <td><%= user.num_completed_lessons %></td>
+      <td><%= user.num_points %></td>
+      <td><%= user.num_achievements %></td>
+      <td><%= link_to 'Show', user %></td>
+      <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      <% if current_user.admin? &&!current_user?(user) %>
+        <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+      <% end %>
+    </tr>
+  <% end %>
+</table>
+
+<br />
+
+<%=  link_to 'New User', new_user_path %>

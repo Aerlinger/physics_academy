@@ -1,0 +1,18 @@
+<%# Show the notice: %>
+<p id="notice"><%= notice %></p>
+
+<h1><%= @user.name %></h1>
+
+
+
+    <h4>Name: <%= @user.name %></h4> 
+    <h4>Email: <%= @user.email %></h4>
+    <h4>Completed lessons: <%= @user.num_completed_lessons %></h4>
+    <h4>Points: <%= @user.num_points %></h4>
+    <h4>Achievements: <%= @user.num_achievements %></h4>
+    
+
+
+
+<%= link_to "Edit", edit_user_path(@user) %> |
+<%= link_to "Show all users", users_path %>
