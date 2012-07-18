@@ -1,2 +1,33 @@
-<h3><%= @challenge.title %></h3>
+<script type="text/javascript">
+  //$('#content').removeClass('container');
+</script>
+
+<h4><%= @challenge.title %></h4>
 <p><%= @challenge.content %></p>
+
+<a class="btn btn-primary btn-large btn-next-lesson" href="#" id="btn-main">Primary</a>
+<a class="btn btn-primary btn-mini btn-next-lesson" href="#">Primary</a>
+<a class="btn btn-primary btn-small btn-next-lesson" href="#">Primary</a>
+<br />
+<a class="btn btn-warning btn-large btn-next-lesson" href="#">Warning</a>
+<br />
+<a class="btn btn-danger btn-large btn-next-lesson" href="#">Danger</a>
+<br />
+<a class="btn btn-info btn-large btn-next-lesson" href="#">Info</a>
+<br />
+<a class="btn btn-success btn-large btn-next-lesson" href="#">Next</a>
+<br />
+<a class="btn btn-large btn-large btn-next-lesson" href="#" id="pop" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Default</a>
+<br />
+
+<div class="box">points</div>
+
+
+
+<a class="btn btn-small" data-toggle="modal" href="#myModal" >Launch Modal</a>
+
+<div class="alert alert-info">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <strong>Heads up!</strong> If you want your modal to animate in and out, just add a <code>.fade</code> class to the <code>.modal</code> element (refer to the demo to see this in action) and include bootstrap-transition.js.
+</div>
+

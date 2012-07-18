@@ -1,14 +1,24 @@
-<footer class="footer">
-  <small>
-    <a href="http://physicsacademy.com/">Physics Academy</a>
-    by Anthony Erlinger
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "Help",   help_path %></li>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Terms", terms_path %></li>
-      <li><%= link_to "Privacy Policy", privacy_path %></li>
-    </ul>
-  </nav>
+<%# Footer to be displayed at bottom of the page %>
+<footer>
+  <div class="container">
+
+    <%# link_to image_tag("turtle.png"), root_path, id: "turtle-logo" %>
+    <%= link_to image_tag("logo.png"), root_path, class: "logo-bottom" %>
+
+    <nav>
+      <%# horizontal list of links at the bottom of the page %>
+      <ul>
+        <li><%= link_to "Help",   help_path %></li>
+        <li><%= link_to "About",   about_path %></li>
+        <li><%= link_to "Terms", terms_path %></li>
+        <li><%= link_to "Privacy Policy", privacy_path %></li>
+      </ul>
+    </nav>
+
+    <div class="clear_float"></div>
+    <small>
+      PhysicsAcademy <br /><br /><a href="#">&copy 2012 Copyright Physics Academy. </a><br />All Rights Reserved.
+    </small>
+  </div>
 </footer>
+

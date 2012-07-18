@@ -1,10 +1,40 @@
 <% provide(:title, @lesson.title) %>
 
 <!-- Lesson pathbar at top -->
+<script>
+  $(function () {
+    $('#myTab a:last').tab('show');
+  })
+</script>
+
+<ul class="breadcrumb span5">
+  <li>
+    <a href="#">Home</a> <span class="divider">/</span>
+  </li>
+  <li>
+    <a href="#"><%= @lesson.title %></a> <span class="divider">/</span>
+  </li>
+  <li class="active">
+    <a href="#"><%= @challenge.title %></a>
+  </li>
+</ul>
+
+<div class="btn-toolbar" style="margin: 5px">
+  <div class="btn-group">
+    <a class="btn btn-primary" href="#">1</a>
+    <a class="btn btn-primary" href="#">2</a>
+    <a class="btn btn-warning" href="#">3</a>
+    <a class="btn btn-primary" href="#">4</a>
+  </div>
+</div>
+
+<br>
+<br>
+<br>
 <div class="lesson_pathbar">
   <div class="tabbable row-fluid">
 
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" id="#myTab">
       <% @lesson.challenges.all.each_with_index do |challenge, index| %>
         <%= "<li#{" class='active'" if (index+1)==@challenge.id}> <a href='#{lesson_challenge_url(id: index+1)}'> #{index+1}</a> </li>".html_safe %>
       <% end %>
@@ -14,7 +44,7 @@
       <div class="tab-pane active">
         <h3><%= "#{@challenge.title}, #{@challenge.id}"%></h3>
         <p><%= "#{@challenge.content}, #{@challenge.id}"%></p>
-        <a class="btn btn-primary btn-large" style="float: right" href="<%= lesson_challenge_url(id: @challenge.id+1) %>">Next Challenge &raquo;</a>
+        <a class="btn btn-success btn-large btn-next-lesson" style="float: right" href="<%= lesson_challenge_url(id: @challenge.id+1) %>">Next Challenge &raquo;</a>
       </div>
     </div>
 
@@ -26,25 +56,44 @@
 
   <!-- Left navbar -->
   <div class="span3">
-    <div class="well sidebar-nav">
-      <ul class="nav nav-list">
-        <li class="nav-header">Lessons</li>
+    <div class="sidebar-nav">
+
+
+      <ul class="nav nav-pills nav-stacked">
+        <li class="nav-header"><h3>Lessons</h3></li>
         <% @lesson.challenges.all.each_with_index do |challenge, index| %>
-          <%= "<li #{"class='active'" if (index+1)==@challenge.id}}> <a href='tab#{index+1}' data-toggle='tab'> #{challenge.title}</a> </li>".html_safe %>
+          <%= "<li #{"class='active'" if (index+1)==@challenge.id}}> <a href='tab#{index+1}' data-toggle='tab'> <i class='icon-book'></i>#{challenge.title}</a> </li>".html_safe %>
         <% end %>
       </ul>
+
     </div><!--/.well -->
   </div><!--/span-->
 
-  <!-- CENTER CONTENT -->
+
+  <!-- LESSON CONTENT -->
   <div class="span9" >
     <div class="well" style="height: 600px">
-      <h3><%= "#{@lesson.title}, #{@challenge.title}" %></h3>
+
+      <%= render 'challenge' %>
+
     </div>
   </div><!--/span-->
+
 </div><!--/row-->
 
 <hr>
-
+<div class="modal hide" id="myModal">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h3>Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="btn" data-dismiss="modal">Close</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+</div>
 
 </div>

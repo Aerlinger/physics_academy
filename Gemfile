@@ -18,6 +18,8 @@ group :development, :test do
   gem 'annotate', '~>2.4.1.beta'
   gem 'guard-rspec', '1.1.0'
   gem 'guard-bundler'
+  gem 'bullet'
+  gem 'ruby-growl'
 end
 
 gem 'activerecord-reputation-system', require: 'reputation_system'
@@ -38,7 +40,7 @@ group :test do
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
-  gem 'growl', '1.0.3'
+  #gem 'growl', '1.0.3'
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
   gem 'launchy', '2.1.0'

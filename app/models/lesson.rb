@@ -11,7 +11,7 @@
 
 class Lesson < ActiveRecord::Base
 
-  attr_accessible :title, :description
+  attr_accessible :title, :description, :image_url, :difficulty
 
   validates_presence_of :description
   validates_presence_of :title

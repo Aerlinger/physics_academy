@@ -2,13 +2,14 @@ class User < ActiveRecord::Base
 
   attr_accessible :name, :email, :password, :password_confirmation, :num_completed_lessons, :num_points, :num_achievements
   # As long as there is a password_digest column in the database, adding this one method to our model gives a secure way to create and authenticate new users
+  attr_protected :admin
   has_secure_password
+
 
   has_many :evaluations, class_name: "RSEvaluation", as: :source
   has_reputation :votes, source: {reputation: :votes, of: :lessons}, aggregated_by: :sum
 
   before_save { |user| user.email = user.email.downcase }
-  before_save :initialize_stats
   before_save :create_remember_token
 
   has_many :subscriptions, dependent: :destroy
@@ -30,12 +31,6 @@ class User < ActiveRecord::Base
 
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64
-    end
-
-    def initialize_stats
-      self.num_achievements = 0;
-      self.num_points = 0;
-      self.num_completed_lessons = 0;
     end
 
 end

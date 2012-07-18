@@ -20,7 +20,7 @@ describe User do
   it { should be_valid }
   it { should_not be_admin }
 
-  pending "accessible attributes" do
+  describe "accessible attributes" do
     it "should not allow access to admin" do
       expect { User.new(admin: "1") }.should raise_error(ActiveModel::MassAssignmentSecurity::Error)
     end

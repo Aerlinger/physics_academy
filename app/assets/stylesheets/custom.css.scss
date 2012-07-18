@@ -1,8 +1,16 @@
 @import "bootstrap";
 
-/* mixins, variables, etc. */
+
+/* Colors: */
 
 $grayMediumLight: #eaeaea;
+$grayDark: #343434;
+
+$brightOrange: #ff9d00;
+$deepOrange: #f26b41;
+$offWhite: #ffe7e8;
+
+/* mixins, variables, etc. */
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
@@ -67,12 +75,45 @@ p {
 
 .logo {
   float: left;
-  margin-bottom: -11px;
+  margin-bottom: -15px;
 }
 
 /* footer */
 
 footer {
+
+
+  height: 100%;
+  margin-top: 30px;
+  margin-bottom: -50px;
+  padding-top: 5px;
+
+  border: 1px solid $grayDark;
+  background: $grayDark;
+
+  color: $grayMediumLight;
+  a {
+    color: $brightOrange;
+    &:hover {
+      color: $offWhite;
+    }
+  }
+
+  small {
+    float: left;
+    margin: 0px 0px 70px 40px;
+  }
+  ul {
+    margin-top: 30px;
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      font-size: 1.2em;
+      margin-left: 1.9em;
+    }
+  }
+  /*
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $grayMediumLight;
@@ -94,9 +135,14 @@ footer {
       margin-left: 10px;
     }
   }
+  */
 }
 
 /* miscellaneous */
+
+.clear-float {
+  clear: both;
+}
 
 .debug_dump {
   clear: both;
@@ -201,19 +247,7 @@ input, textarea, select, .uneditable-input {
     }
   }
 }
-/* Lessons */
 
-.lesson_preview {
-  margin: 5px;
-}
-
-.lesson_preview:hover {
-  background-color: #efece1;
-}
-
-.lessons {
-  list-style-type: none;
-}
 
 /* microposts */
 

@@ -1,6 +1,78 @@
 <% provide(:title, 'All Lessons') %>
 <h1>Lessons</h1>
 
+<div class="accordion" id="accordion2">
+
+  <div class="accordion-group" style="margin: 15px auto">
+
+    <!-- SUBJECT DESCRIPTION -->
+    <div class="accordion-heading lesson-preview">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        <div class="lesson-preview-thumbnail"><p>Logo Here</p></div>
+        <h3>Introduction to Physics</h3>
+        <p>
+          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+          officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+          wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+          Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+          excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+          you probably haven't heard of them accusamus labore sustainable VHS.
+        </p>
+        <div class="clear-float"></div>
+      </a>
+    </div>
+
+    <!-- LESSON DESCRIPTIONS -->
+    <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+      <div class="accordion-inner">
+        <ul class="nav nav-tabs nav-stacked">
+          <li>
+            <a href="#">
+              <h3>Lesson 1: </h3> Short description here
+              <div class="progress progress-striped active span3 active" style="float: right">
+                <div class="bar"
+                     style="width: 50%;"></div>
+              </div>
+
+            </a>
+          </li>
+          <li><a href="#"><h4>Lesson 2: </h4> Short description here </a></li>
+          <li><a href="#"><h4>Lesson 3: </h4> Short description here </a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="accordion-group">
+    <div class="accordion-heading lesson-preview">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+      <div class="accordion-inner">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Collapsible Group Item #3
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+      <div class="accordion-inner">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+</div>
+
 <ul class="lessons nav">
   <%= render @lessons, partial: '_lesson.html.erb' %>
 </ul>

@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120713015514) do
+ActiveRecord::Schema.define(:version => 20120717182925) do
+
+  create_table "badges", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "icon"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
@@ -25,9 +33,11 @@ ActiveRecord::Schema.define(:version => 20120713015514) do
   create_table "lessons", :force => true do |t|
     t.string   "title"
     t.string   "description"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.string   "introduction"
+    t.string   "image_url"
+    t.integer  "difficulty",   :default => 0
   end
 
   create_table "rs_evaluations", :force => true do |t|

@@ -3,9 +3,9 @@ class CreateUsers < ActiveRecord::Migration
     create_table :users do |t|
       t.string :name
       t.string :email
-      t.integer :num_completed_lessons
-      t.integer :num_points
-      t.integer :num_achievements
+      t.integer :num_completed_lessons, default: 0
+      t.integer :num_points, default: 0
+      t.integer :num_achievements, default: 0
 
       t.timestamps
     end
