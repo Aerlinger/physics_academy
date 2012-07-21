@@ -8,14 +8,17 @@
 
 def create_lesson(title, description, image_url, challenges)
 
-  lesson = Lesson.create!( description: description,
-                           title: title,
-                           image_url: image_url,
-                           difficulty: 0 )
+  lesson = Lesson.find_or_create_by_title(title) do |l|
+    l.description = description
+    l.image_url = image_url
+    l.difficulty = 0
 
-  challenges.each do |challenge|
-    lesson.challenges.create!(title: challenge, content: "Description for challenge goes here")
+    challenges.each do |challenge|
+      l.challenges.create!(title: challenge, content: "Description for challenge goes here")
+    end
   end
+
+
 end
 
 
@@ -25,8 +28,6 @@ end
 title       = "Introduction to Physics"
 description = "Completely new to physics? This is where to start."
 image_url   = "introduction_to_physics.jpg"
-under_construction = true
-difficulty = 0
 
 challenges = ["What is physics?",
               "Units and Measurements",
@@ -73,6 +74,54 @@ challenges = ["<Challenge 1>",
 create_lesson(title, description, image_url, challenges)
 
 
+#################################################################
+# Introduction to Electronics
+#################################################################
+title       = "Introduction to electronics"
+description = "<Description goes here>"
+image_url   = "newtonian_physics_ii.jpg"
 
+challenges = ["<Challenge 1>",
+              "<Challenge 2>",
+              "<Challenge 3>",
+              "<Challenge 4>",
+              "<Challenge 5>",
+              "<Challenge 6>"]
+
+create_lesson(title, description, image_url, challenges)
+
+
+#################################################################
+# Introduction to Electronics
+#################################################################
+title       = "Introduction to electronics II"
+description = "<Description goes here>"
+image_url   = "newtonian_physics_ii.jpg"
+
+challenges = ["<Challenge 1>",
+              "<Challenge 2>",
+              "<Challenge 3>",
+              "<Challenge 4>",
+              "<Challenge 5>",
+              "<Challenge 6>"]
+
+create_lesson(title, description, image_url, challenges)
+
+
+#################################################################
+# Matlab
+#################################################################
+title       = "Matlab"
+description = "<Description goes here>"
+image_url   = "newtonian_physics_ii.jpg"
+
+challenges = ["<Challenge 1>",
+              "<Challenge 2>",
+              "<Challenge 3>",
+              "<Challenge 4>",
+              "<Challenge 5>",
+              "<Challenge 6>"]
+
+create_lesson(title, description, image_url, challenges)
 
 

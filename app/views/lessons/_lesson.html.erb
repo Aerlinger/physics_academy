@@ -1,6 +1,81 @@
-<li>
-  <div class="row well lesson_preview">
-    <h3 align="left"><%= link_to lesson.title, lesson %></h3>
-    <p><%= lesson.description %></p>
+<div class="accordion-group" style="margin: 15px auto">
+
+  <!-- SUBJECT DESCRIPTION -->
+  <div class="accordion-heading lesson-preview">
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= lesson.id %>">
+      <div class="lesson-preview-thumbnail"></div>
+      <h3>
+        <%= lesson.title %>
+      </h3>
+      <p>
+        <%= lesson.description %>
+      </p>
+      <!--
+      <a class="btn btn-primary btn-large" href="<%= lesson_challenge_path(lesson_id: lesson.id, id: 1)%>">Get Started &raquo;</a>
+      -->
+      <div class="clear-float"></div>
+    </a>
   </div>
-</li>
+
+  <!-- LESSON DESCRIPTIONS -->
+  <div id="collapse<%= lesson.id %>" class="accordion-body collapse" style="height: 0px; ">
+    <div class="accordion-inner">
+      <ul class="nav nav-tabs nav-stacked">
+        <% lesson.challenges.all.each_with_index do |challenge, index| %>
+          <li>
+            <a href="<%= lesson_challenge_path(lesson_id: lesson.id, id: challenge.id) %>">
+              <h4> <%= index+1 %> </h4> <%= challenge.content %>
+              <div class="progress progress-striped active span3 active" style="float: right">
+                <div class="bar" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- TEMPLATE:
+
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Collapsible Group Item #1
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+      <div class="accordion-inner">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Collapsible Group Item #2
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+      <div class="accordion-inner">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Collapsible Group Item #3
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+      <div class="accordion-inner">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
+-->

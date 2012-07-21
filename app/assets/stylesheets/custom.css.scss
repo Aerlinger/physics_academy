@@ -1,8 +1,6 @@
 @import "bootstrap";
 
 
-/* Colors: */
-
 $grayMediumLight: #eaeaea;
 $grayDark: #343434;
 
@@ -73,23 +71,42 @@ p {
 
 /* header */
 
+.navbar-inner {
+  background: $grayDark;
+}
+
+header {
+
+  a {
+    color: $brightOrange;
+    &:hover {
+      color: $offWhite;
+    }
+  }
+
+  ul {
+    font-size: 1.1em;
+    font-weight: bold;
+  }
+}
+
 .logo {
   float: left;
-  margin-bottom: -15px;
+  margin-bottom: -20px;
 }
 
 /* footer */
+.logo-bottom {
+  margin: 15px 0px -5px -8px;
+}
 
 footer {
 
-
-  height: 100%;
-  margin-top: 30px;
-  margin-bottom: -50px;
-  padding-top: 5px;
-
-  border: 1px solid $grayDark;
   background: $grayDark;
+
+  .container {
+    background: $grayDark url('footer_bg.png') no-repeat 50px -150px;
+  }
 
   color: $grayMediumLight;
   a {
@@ -101,41 +118,20 @@ footer {
 
   small {
     float: left;
-    margin: 0px 0px 70px 40px;
+    margin: 0px 0px 120px 50px;
   }
+
   ul {
-    margin-top: 30px;
+    margin-top: 23px;
+    margin-right: 50px;
     float: right;
     list-style: none;
     li {
       float: left;
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-left: 1.9em;
     }
   }
-  /*
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
-  */
 }
 
 /* miscellaneous */
@@ -148,7 +144,6 @@ footer {
   clear: both;
   float: left;
   width: 100%;
-  margin-top: 45px;
   @include box_sizing;
 }
 
@@ -275,5 +270,27 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+/** */
+.show-grid {
+
+  background-color: #eee;
+  text-align: center;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  min-height: 30px;
+  line-height: 30px;
+}
+.show-grid:hover [class*="span"] {
+  background: #ddd;
+}
+.show-grid .show-grid {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.show-grid .show-grid [class*="span"] {
+  background-color: #ccc;
 }
 

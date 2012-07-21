@@ -1,10 +1,6 @@
 <%# Footer to be displayed at bottom of the page %>
 <footer>
   <div class="container">
-
-    <%# link_to image_tag("turtle.png"), root_path, id: "turtle-logo" %>
-    <%= link_to image_tag("logo.png"), root_path, class: "logo-bottom" %>
-
     <nav>
       <%# horizontal list of links at the bottom of the page %>
       <ul>
@@ -17,8 +13,11 @@
 
     <div class="clear_float"></div>
     <small>
-      PhysicsAcademy <br /><br /><a href="#">&copy 2012 Copyright Physics Academy. </a><br />All Rights Reserved.
+      <%= link_to image_tag("logo_text.png", class: "logo-bottom"), root_path %><br />
+     <a href="#">All content &copy 2012 </a><br />All Rights Reserved.
     </small>
+
   </div>
+  <%= debug(params) if Rails.env.development? %>
 </footer>
 

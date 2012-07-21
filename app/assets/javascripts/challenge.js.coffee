@@ -9,7 +9,7 @@ $(document).ready ->
     $(@).removeClass('btn-primary')
     $(@).addClass('btn-success')
 
-  $(".collapse").collapse()
+  #$(".collapse").collapse()
   $('#myModal').modal(options)
 
   $(".alert").alert()

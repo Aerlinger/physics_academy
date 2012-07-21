@@ -23,4 +23,8 @@ class Lesson < ActiveRecord::Base
 
   has_reputation :votes, source: :user, aggregated_by: :sum
 
+  def to_param
+    self.title
+  end
+
 end
