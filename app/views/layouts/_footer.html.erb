@@ -1,23 +1,21 @@
-<%# Footer to be displayed at bottom of the page %>
-<footer>
-  <div class="container">
-    <nav>
-      <%# horizontal list of links at the bottom of the page %>
-      <ul>
-        <li><%= link_to "Help",   help_path %></li>
-        <li><%= link_to "About",   about_path %></li>
-        <li><%= link_to "Terms", terms_path %></li>
-        <li><%= link_to "Privacy Policy", privacy_path %></li>
-      </ul>
-    </nav>
+<div id="footer">
 
-    <div class="clear_float"></div>
-    <small>
-      <%= link_to image_tag("logo_text.png", class: "logo-bottom"), root_path %><br />
-     <a href="#">All content &copy 2012 </a><br />All Rights Reserved.
-    </small>
+  <div class="inner">
 
-  </div>
-  <%= debug(params) if Rails.env.development? %>
-</footer>
+    <div class="container">
 
+      <div class="row">
+        <div id="footer-copyright" class="span4">
+          &copy; 2012 Physics Academy
+        </div> <!-- /span4 -->
+
+        <div id="footer-terms" class="span8">
+
+        </div> <!-- /span8 -->
+      </div> <!-- /row -->
+
+    </div> <!-- /container -->
+
+  </div> <!-- /inner -->
+
+</div> <!-- /footer -->
