@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MvcTesting::Application.load_tasks
+PhysicsAcademy::Application.load_tasks

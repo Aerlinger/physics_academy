@@ -1,10 +1,14 @@
 /** Physics academy color theme */
-@import "bootstrap";
+
 
 /** color palette */
-$deepOrange: darkOrange;
-$orange: orange;
-//$lightOrange:
+$borderRed: #ab1515;
+$borderOrange: #ffdab5;
+$borderDarkOrange: #ffdab5;
+$darkOrange: #bb5e02;
+$orange: darkOrange;
+$lightOrange: orange;
+$yellow: yellow;
 
 
 /*------------------------------------------------------------------
@@ -13,7 +17,7 @@ $orange: orange;
 
 .navbar .nav > li.active > a,
 .navbar .nav > li.active > a:hover {
-	color: $orange;
+	color: $lightOrange;
 }
 
 .navbar .nav > li > a {
@@ -26,8 +30,12 @@ $orange: orange;
 	color: #BBB;
 }
 
+.navbar .nav {
+  margin-top: 5px;
+}
+
 .navbar {
-	border-bottom-color: #A4C160;
+	border-bottom-color: $borderOrange;
 }
 
 .navbar .navbar-inner {
@@ -37,13 +45,14 @@ $orange: orange;
 }
 
 .navbar .brand {
-	
-	/* 	
+
 	width: 180px;
-	height: 34px;
+	height: 50px;
+
+  margin-bottom: -15px;
 	
-	background: url(../img/logo.png) no-repeat 0 0; 
-	*/
+	background: url(<%= asset_path "theme/logo.png" %>) no-repeat 0 0;
+
 }
 
 
@@ -71,12 +80,10 @@ $orange: orange;
 */
 
 #landing .inner {
-	background: #81994D url(<%= asset_path 'header-bg.png' %>) repeat 0 0;
+	background: #81994D url(<%= asset_path 'theme/header-bg.png' %>) repeat 0 0;
 	
 	text-shadow: 1px 1px 2px rgba(0,0,0,.4);
 }
-
-
 
 
 /*------------------------------------------------------------------
@@ -105,11 +112,11 @@ $orange: orange;
 	
 	background: #444;
 	
-	border-color: #556828;
+	border-color: $borderRed;
 }
 
 #subheader .inner {
-	background: #81994D url(./img/header-bg.png) repeat 0 0;
+	background: #81994D url(<%= asset_path "theme/header-bg.png" %>) repeat 0 0;
 	
 }
 
@@ -166,12 +173,12 @@ $orange: orange;
 
 .circle-icon div {	
 	//color: #81994D;
-  color: $deepOrange;
+  color: $orange;
 }
 
 .slash {
 	//color: #677E30;
-  color: $orange;
+  color: $lightOrange;
 }
 
 .sidebar {
@@ -185,5 +192,5 @@ $orange: orange;
 .nav-list > li.active > a:hover {		
 	color: #FFF;
 	
-	background: #81994D;
+	background: $orange;
 }

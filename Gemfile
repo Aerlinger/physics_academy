@@ -4,6 +4,8 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem 'rails', '3.2.4.rc1'
+#gem 'therubyracer', platform: rails
+#gem 'libv8', '3.3.10.4'
 gem 'bootstrap-sass'
 
 gem 'bcrypt-ruby', '3.0.1'
@@ -32,7 +34,6 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platform => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
 

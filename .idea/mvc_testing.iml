@@ -31,8 +31,8 @@
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-sass (v2.0.4.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bootstrap-will_paginate (v0.0.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.0.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bullet (v4.1.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.0.22, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bullet (v4.1.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.1.5, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="capybara (v1.1.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="childprocess (v0.3.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v3.2.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
@@ -57,7 +57,7 @@
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.6.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="journey (v1.0.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v2.0.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="json (v1.7.3, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="json (v1.7.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="launchy (v2.1.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="libwebsocket (v0.1.4, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="listen (v0.4.7, ruby-1.9.3-p125 (1)) [gem]" level="application" />
@@ -81,7 +81,7 @@
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v3.12, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec (v2.11.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-core (v2.11.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.11.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rspec-expectations (v2.11.2, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-mocks (v2.11.1, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rspec-rails (v2.11.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ruby-growl (v4.0, ruby-1.9.3-p125 (1)) [gem]" level="application" />
