@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-// require_self
+//= require_self
 
 //= require challenge
 
