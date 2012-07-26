@@ -61,3 +61,40 @@ ActionView::Template::Error (footer/logo_text.png isn't precompiled):
   app/views/static_pages/home.html.erb:270:in `_app_views_static_pages_home_html_erb___979952621_47248320'
 
 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-26 16:57:21 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (59.0ms)
+Completed 500 Internal Server Error in 129ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    157:             <li>
+    158:               <div class="testimonial-avatar">
+    159:                 <div class="img">
+    160:                   <%= image_tag "theme/avatar.png", alt: "Thumbnail" %>
+    161:                 </div>
+    162:               </div> <!-- /testimonial-avatar -->
+    163: 
+  app/views/static_pages/home.html.erb:160:in `_app_views_static_pages_home_html_erb__843494793_48355404'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-26 16:57:54 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    157:             <li>
+    158:               <div class="testimonial-avatar">
+    159:                 <div class="img">
+    160:                   <%= image_tag "theme/avatar.png", alt: "Thumbnail" %>
+    161:                 </div>
+    162:               </div> <!-- /testimonial-avatar -->
+    163: 
+  app/views/static_pages/home.html.erb:160:in `_app_views_static_pages_home_html_erb__843494793_48355404'
+
+
