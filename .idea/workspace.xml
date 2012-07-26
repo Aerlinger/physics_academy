@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="330b0256-0241-4621-b875-612b43c8e777" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
-    </list>
+    <list default="true" id="330b0256-0241-4621-b875-612b43c8e777" name="Default" comment="" />
     <ignored path="mvc_testing.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="application.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="36" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.6147427">
+            <state line="28" column="26" selection-start="905" selection-end="905" vertical-scroll-proportion="0.2837274">
               <folding />
             </state>
           </provider>
@@ -843,7 +841,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="36" selection-start="1379" selection-end="1379" vertical-scroll-proportion="0.6147427">
+        <state line="28" column="26" selection-start="905" selection-end="905" vertical-scroll-proportion="0.2837274">
           <folding />
         </state>
       </provider>
