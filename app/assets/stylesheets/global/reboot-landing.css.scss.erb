@@ -195,7 +195,6 @@ textarea {
 
 #content .container {
 	padding-top: 3em;
-	
 	border-top: 8px solid #81994D;
 }
 
@@ -227,8 +226,9 @@ textarea {
 [6. Extra / #extra]
 */
 
-#extra {	
-	border-top: 1px solid #000;
+#extra {
+border-top: 1px solid #000;
+
 }
 
 #extra .inner {
@@ -236,8 +236,8 @@ textarea {
 	
 	color: #fff;
 	
-	background-color: #222;
-	
+	/*background-color: #222;*/
+  background: url(<%= asset_path "footer/footer_bg.png" %>) #222 no-repeat 200px -100px;
 	border-top: 1px solid #555;
 }
 
@@ -273,12 +273,18 @@ textarea {
 	list-style: none;
 }
 
+.footer-links {
+  padding-top: 0.7em !important;
+}
+
 .footer-links li {
-	margin-bottom: 1.25em;
+	margin-bottom: .7em;
+  margin-left: 1.2em;
 }
 
 .footer-links a {
-	color: #777;
+	//color: #777;
+  color: orange !important;
 }
 
 

@@ -10,47 +10,31 @@
         <span class="icon-bar"></span>
       </a>
 
-      <a class="brand" href="./">
-        Reboot Admin
-      </a>
+      <%= link_to "", :root, class: "brand" %>
 
       <div class="nav-collapse">
         <ul class="nav pull-right">
+
           <li class="active">
-            <a href="./">
-              Home
-            </a>
+            <%= link_to "Lessons", :root %>
           </li>
 
           <li class="dropdown">
-            <a href="./pricing.html">
-              Plans
-            </a>
+            <%= link_to "Lessons", lessons_path %>
           </li>
 
           <li>
-            <a href="./features.html">
-              Features
-            </a>
+            <%= link_to "Labs", labs_path %>
           </li>
 
           <li>
-            <a href="./about.html">
-              About Us
-            </a>
+            <%= link_to "About", about_path %>
           </li>
 
           <li>
-            <a href="./faq.html">
-              FAQ
-            </a>
+            <%= link_to "Sign-in", signin_path %>
           </li>
 
-          <li>
-            <a href="./contact.html">
-              Contact Us
-            </a>
-          </li>
         </ul>
 
       </div><!--/.nav-collapse -->
