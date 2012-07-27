@@ -12,6 +12,7 @@ def create_lesson(title, description, image_url, challenges)
     l.description = description
     l.image_url = image_url
     l.difficulty = 0
+    l.save!
 
     challenges.each do |challenge|
       l.challenges.create!(title: challenge, content: "Description for challenge goes here")
