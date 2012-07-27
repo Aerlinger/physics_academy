@@ -312,7 +312,7 @@
             this.onerror(msg);
         };
 
-        // we know about TTF (0x00010000) and CFF ('OTTO') fonts
+        // we know about TTF (0x00010000) and CFF ('OTTO') font
         var ttf = chr(0) + chr(1) + chr(0) + chr(0);
         var cff = "OTTO";
 
@@ -613,7 +613,7 @@
     };
 
     /**
-     * We take a different path for System fonts, because
+     * We take a different path for System font, because
      * we cannot inspect the actual byte code.
      */
     Font.prototype.processSystemFont = function () {
