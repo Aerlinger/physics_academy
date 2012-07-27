@@ -4568,3 +4568,564 @@ Compiled labs.css  (7ms)  (pid 6900)
 Compiled lessons.css  (3ms)  (pid 6900)
 Compiled partials/_base.css  (2ms)  (pid 6900)
 Compiled application.css  (1269ms)  (pid 6900)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:33:55 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (62.0ms)
+Completed 500 Internal Server Error in 147ms
+
+ActionView::Template::Error (labs/mech_example3.png isn't precompiled):
+    228: 
+    229:           <h3>Mechanics</h3>
+    230: 
+    231:           <%= link_to image_tag('labs/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
+    232: 
+    233:         </div> <!-- /span4 -->
+    234: 
+  app/views/static_pages/home.html.erb:231:in `_app_views_static_pages_home_html_erb__274090096_31610016'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:34:40 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (labs/mech_example3.png isn't precompiled):
+    228: 
+    229:           <h3>Mechanics</h3>
+    230: 
+    231:           <%= link_to image_tag('labs/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
+    232: 
+    233:         </div> <!-- /span4 -->
+    234: 
+  app/views/static_pages/home.html.erb:231:in `_app_views_static_pages_home_html_erb__274090096_31610016'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:34:42 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1ms
+
+ActionView::Template::Error (labs/mech_example3.png isn't precompiled):
+    228: 
+    229:           <h3>Mechanics</h3>
+    230: 
+    231:           <%= link_to image_tag('labs/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
+    232: 
+    233:         </div> <!-- /span4 -->
+    234: 
+  app/views/static_pages/home.html.erb:231:in `_app_views_static_pages_home_html_erb__274090096_31610016'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:35:05 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (74.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 177ms (Views: 176.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-27 18:35:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-27 18:35:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svgz" for 127.0.0.1 at 2012-07-27 18:35:06 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svgz"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svg" for 127.0.0.1 at 2012-07-27 18:35:07 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svg"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/labs" for 127.0.0.1 at 2012-07-27 18:35:15 -0400
+Processing by LabsController#index as HTML
+  Rendered layouts/_subheader.html.erb (0.0ms)
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered labs/index.html.erb within layouts/application (52.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 55ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lessons" for 127.0.0.1 at 2012-07-27 18:35:16 -0400
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (Could not find table 'lessons'):
+  app/controllers/lessons_controller.rb:4:in `index'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:36:35 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (50.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 158ms (Views: 158.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-27 18:36:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-27 18:36:50 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:37:27 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-27 18:37:28 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-27 18:37:29 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svgz" for 127.0.0.1 at 2012-07-27 18:37:29 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svgz"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svg" for 127.0.0.1 at 2012-07-27 18:37:29 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svg"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/lessons" for 127.0.0.1 at 2012-07-27 18:37:41 -0400
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'lessons'):
+  app/controllers/lessons_controller.rb:4:in `index'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-27 18:38:23 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-27 18:38:23 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-27 18:38:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svgz" for 127.0.0.1 at 2012-07-27 18:38:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svgz"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svg" for 127.0.0.1 at 2012-07-27 18:38:24 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svg"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/lessons" for 127.0.0.1 at 2012-07-27 18:38:27 -0400
+Processing by LessonsController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+ActiveRecord::StatementInvalid (Could not find table 'lessons'):
+  app/controllers/lessons_controller.rb:4:in `index'
+
+
