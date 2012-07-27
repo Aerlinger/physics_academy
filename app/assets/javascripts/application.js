@@ -14,24 +14,25 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-// require_self
+//= require_self
 
 //= require challenge
-
+//
 //= require Faraday/utility
 //= require Faraday/geom
 //= require Faraday/main
-
-
+//
 //= require Faraday/FindPathInfo
 //= require Faraday/CircuitNode
 //= require Faraday/RowInfo
 //= require Faraday/CirSim
-
+//
 //= require Faraday/elms/CircuitElement
 //= require Faraday/elms/core/Diode
 //= require Faraday/elms/core/Inductor
 //= require Faraday/elms/CapacitorElm
+//= require Faraday/elms/AntennaElm
+//= require Faraday/elms/DiodeElm
 //= require Faraday/elms/InductorElm
 //= require Faraday/elms/ResistorElm
 //= require Faraday/elms/VoltageElm
@@ -50,12 +51,14 @@
 //= require Faraday/elms/TextElm
 //= require Faraday/elms/RailElm
 //= require Faraday/elms/TransistorElm
+//= require Faraday/elms/MosfetElm
 //= require Faraday/elms/JFetElm
-
-
+//
 //= require Faraday/lib/Font
 //= require Faraday/lib/raphael-2.1.0
-
-//= require_tree ./Faraday/ui/
-
+//
+//= require Faraday/ui/ComponentGenerator
+//= require Faraday/ui/EditDialog
+//= require Faraday/ui/EditInfo
+//
 //= require Faraday/Scope
