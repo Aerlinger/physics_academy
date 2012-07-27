@@ -1,10 +1,18 @@
 PhysicsAcademy::Application.routes.draw do
 
+  get "labs/index"
+
+  get "labs/circuits"
+
+  get "labs/mechanics"
+
+  match '/labs', to: 'labs#index'
+
   root to: 'static_pages#home'
 
   resources :users
   resources :lessons do
-    #member { post :vote }
+    member { post :vote }
     resources :challenges
   end
 
@@ -16,7 +24,7 @@ PhysicsAcademy::Application.routes.draw do
   match '/signout', to: 'sessions#destroy', via: :delete
 
   match '/help',    to: 'static_pages#help'
-  match '/labs',    to: 'static_pages#labs'
+
   match '/about',   to: 'static_pages#about'
   match '/privacy', to: 'static_pages#privacy'
   match '/terms',   to: 'static_pages#terms'

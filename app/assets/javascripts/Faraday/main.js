@@ -88,16 +88,16 @@ $(document).ready(function (e) {
         CirSim.onMouseReleased(event);
     });
 
-//    $(document).keydown(function (event) {
-//        event.preventDefault();
-//        //alert(event.which);
-//        CirSim.onKeyPressed(event);
-//    });
-//
-//    $(document).keyup(function (event) {
-//        event.preventDefault();
-//        CirSim.onKeyReleased(event);
-//    });
+    $(document).keydown(function (event) {
+        event.preventDefault();
+        //alert(event.which);
+        CirSim.onKeyPressed(event);
+    });
+
+    $(document).keyup(function (event) {
+        event.preventDefault();
+        CirSim.onKeyReleased(event);
+    });
 
     start();
 });

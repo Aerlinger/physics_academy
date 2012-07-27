@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8c80be-45df-4817-afae-1b9cd20a3114" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\.idea\workspace.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\layouts\_subheader.html.erb" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\static_pages\labs.html.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_extra.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_extra.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/sessions/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/labs.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/labs.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/application.rb" afterPath="$PROJECT_DIR$/../../../../config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/environments/production.rb" afterPath="$PROJECT_DIR$/../../../../config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.gitignore" afterPath="$PROJECT_DIR$/../../../../.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../application.js" afterPath="$PROJECT_DIR$/../application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/_form.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/routes.rb" afterPath="$PROJECT_DIR$/../../../../config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CirSim.js" afterPath="$PROJECT_DIR$/CirSim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utility.js" afterPath="$PROJECT_DIR$/utility.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/500.html" afterPath="$PROJECT_DIR$/../../../../public/500.html" />
     </list>
     <ignored path="Faraday.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,28 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CurrentElm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elms/CurrentElm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VoltageElm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elms/VoltageElm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="152" column="21" selection-start="5058" selection-end="5058" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="0" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.067677945">
+            <state line="88" column="77" selection-start="3981" selection-end="3981" vertical-scroll-proportion="-16.23077">
               <folding />
             </state>
           </provider>
@@ -93,7 +80,23 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="28" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0">
+            <state line="103" column="0" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navlink_background.gif" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/navlink_background.gif">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="122" column="16" selection-start="0" selection-end="1721" vertical-scroll-proportion="2.752089">
               <folding />
             </state>
           </provider>
@@ -120,7 +123,7 @@
       <file leaf-file-name="CirSim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CirSim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="0" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+            <state line="90" column="0" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -163,17 +166,17 @@
         <option value="$PROJECT_DIR$/assets/Faraday/elms/VoltageElm.js" />
         <option value="$PROJECT_DIR$/CirSim.js" />
         <option value="$PROJECT_DIR$/elms/GroundElm.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/elms/ResistorElm.js" />
         <option value="$PROJECT_DIR$/elms/CircuitElement.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="22" />
-    <option name="width" value="1696" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -202,6 +205,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -230,22 +243,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="style" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Faraday" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -266,15 +279,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="69" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="713" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="67" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="62" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -362,13 +375,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="22" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18432671" sideWeight="0.4960464" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02202643" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32287267" sideWeight="0.64977974" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32287267" sideWeight="0.34251103" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32261464" sideWeight="0.27973568" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32261464" sideWeight="0.5330396" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17951542" sideWeight="0.6035846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819188" sideWeight="0.4900881" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.39272535" order="11" side_tool="true" content_ui="tabs" />
@@ -440,19 +453,9 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/Faraday/setuplist.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="156" selection-end="156" vertical-scroll-proportion="-0.4914966" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="17" selection-start="1393" selection-end="1393" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/WireElm.js">
@@ -470,27 +473,6 @@
         <state line="1112" column="24" selection-start="18863" selection-end="18863" vertical-scroll-proportion="0.33333334" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="626" column="52" selection-start="16777" selection-end="16777" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/ResistorElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/CapacitorElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="23" selection-start="4605" selection-end="4605" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elms/CurrentElm.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -498,14 +480,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/VoltageElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="21" selection-start="5058" selection-end="5058" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="28" selection-start="1252" selection-end="1252" vertical-scroll-proportion="0.0" />
+        <state line="152" column="21" selection-start="5058" selection-end="5058" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/GroundElm.js">
@@ -520,14 +495,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CirSim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+        <state line="90" column="0" selection-start="2102" selection-end="2102" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="626" column="52" selection-start="16777" selection-end="16777" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elms/ResistorElm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="638" selection-end="638" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elms/CapacitorElm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="23" selection-start="4605" selection-end="4605" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="0" selection-start="2824" selection-end="2824" vertical-scroll-proportion="0.067677945">
+        <state line="88" column="77" selection-start="3981" selection-end="3981" vertical-scroll-proportion="-16.23077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="0" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/navlink_background.gif">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="16" selection-start="0" selection-end="1721" vertical-scroll-proportion="2.752089">
           <folding />
         </state>
       </provider>

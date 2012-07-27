@@ -163,7 +163,7 @@ function printError(message) {
     var CanvasArea = getCanvasBounds();
     var xPos = CanvasArea.width / 2;
     var yPos = CanvasArea.height - 85;
-    paper.text(xPos, yPos, message).attr('fill', Color.color2HexString(Settings.TEXT_ERROR_COLOR));
+    //paper.text(xPos, yPos, message).attr('fill', Color.color2HexString(Settings.TEXT_ERROR_COLOR));
 }
 ;
 
