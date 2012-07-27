@@ -1,4 +1,4 @@
-var paper = new Object();
+
 
 // static members /////////////////////////////////////////////////
 CircuitElement.voltageRange = 5;
@@ -189,7 +189,7 @@ CircuitElement.prototype.reset = function () {
 };
 
 CircuitElement.prototype.draw = function () {
-    paper.rect(this.boundingBox.x, this.boundingBox.y, this.boundingBox.width, this.boundingBox.height);
+    paper.fillRect(this.boundingBox.x, this.boundingBox.y, this.boundingBox.width, this.boundingBox.height);
 };
 
 CircuitElement.prototype.setCurrent = function (x, c) {
@@ -334,10 +334,18 @@ CircuitElement.prototype.drawDots = function (pa, pb, pos) {
         var y0 = (pa.y + di * dy / dn);
 
         // Draws each dot:
-        paper.circle(x0, y0, Settings.CURRENT_RADIUS).attr({
-            stroke:Color.color2HexString(Settings.DOTS_OUTLINE),
-            fill:Color.color2HexString(Settings.DOTS_COLOR)
-        });
+        // TODO CANVAS
+        paper.beginPath();
+            paper.strokeStyle   = Color.color2HexString(Settings.DOTS_OUTLINE);
+            paper.fillStyle     = Color.color2HexString(Settings.DOTS_COLOR);
+            paper.arc(x0, y0, Settings.CURRENT_RADIUS, 0, 2*Math.PI, true);
+            paper.stroke();
+            paper.fill();
+        paper.closePath();
+//        paper.circle(x0, y0, Settings.CURRENT_RADIUS).attr({
+//            stroke:Color.color2HexString(Settings.DOTS_OUTLINE),
+//            fill:Color.color2HexString(Settings.DOTS_COLOR)
+//        });
     }
 };
 
@@ -559,11 +567,16 @@ CircuitElement.prototype.drawCenteredText = function (s, x, y, cx) {
     var ascent = -10;//fm.getAscent() / 2;
     var descent = 5;//fm.getAscent() / 2;
 
-    text = paper.text(x, y + ascent, s).attr({
-        cursor:"none",
-        'font-weight':'bold',
-        fill:Color.color2HexString(Settings.TEXT_COLOR)
-    });
+    // TODO: CANVAS
+
+        paper.fillStyle = Color.color2HexString(Settings.TEXT_COLOR);
+        paper.fillText(s, x, y+ascent);
+
+//    text = paper.text(x, y + ascent, s).attr({
+//        cursor:"none",
+//        'font-weight':'bold',
+//        fill:Color.color2HexString(Settings.TEXT_COLOR)
+//    });
     this.adjustBbox(x, y - ascent, x + w, y + ascent + descent);
 
     return text;
@@ -593,25 +606,32 @@ CircuitElement.prototype.drawValues = function (s, hs) {
     var dpx = Math.floor(this.dpx1 * hs);
     var dpy = Math.floor(this.dpy1 * hs);
 
-    var offset = 15;
+    var offset = 20;
 
     var textLabel;
 
+    paper.fillStyle = Color.color2HexString(Settings.TEXT_COLOR);
+
     if (dpx == 0) {
-        textLabel = paper.text(xc - w / 2, yc - Math.abs(dpy) - offset, s).attr({
-            fill:Color.color2HexString(Settings.TEXT_COLOR),
-            'font-weight':'bold'
-        });
+        // TODO: CANVAS
+
+        paper.fillText(s, xc - w / 2+3*offset/2, yc - Math.abs(dpy) - offset/3);
+//        textLabel = paper.text(xc - w / 2, yc - Math.abs(dpy) - offset, s).attr({
+//            fill:Color.color2HexString(Settings.TEXT_COLOR),
+//            'font-weight':'bold'
+//        });
     } else {
         var xx = xc + Math.abs(dpx) + offset;
 
         if (this instanceof VoltageElm || (this.x < this.x2 && this.y > this.y2))
             xx = xc - (10 + Math.abs(dpx) + offset);
 
-        textLabel = paper.text(xx, yc + dpy + ya, s).attr({
-            'font-weight':'bold',
-            fill:Color.color2HexString(Settings.TEXT_COLOR)
-        });
+        // TODO: CANVAS
+        paper.fillText(s, xx, yc + dpy + ya);
+//        textLabel = paper.text(xx, yc + dpy + ya, s).attr({
+//            'font-weight':'bold',
+//            fill:Color.color2HexString(Settings.TEXT_COLOR)
+//        });
     }
 
     return textLabel;
@@ -644,28 +664,41 @@ CircuitElement.prototype.drawCoil = function (hs, p1, p2, v1, v2) {
 };
 
 CircuitElement.drawCircle = function (x0, y0, r, color) {
-    var circ = paper.circle(x0, y0, r);
-    circ.attr({
-        stroke:Color.color2HexString(Settings.POST_COLOR),
-        'stroke-width':Settings.LINE_WIDTH
-        //'fill-opacity':0
-    });
+
+    paper.beginPath();
+        //paper.moveTo(x0, y0);
+        //paper.strokeStyle = Color.color2HexString(color);
+        paper.arc(x0, y0, r, 0, 2*Math.PI, true);
+        paper.stroke();
+    paper.closePath();
+//    circ.attr({
+//        stroke:Color.color2HexString(Settings.POST_COLOR),
+//        'stroke-width':Settings.LINE_WIDTH
+//        //'fill-opacity':0
+//    });
 
     return circ;
 };
 
 CircuitElement.drawThickLine = function (x, y, x2, y2, color) {
     var pathName = "M " + x + " " + y + " l " + (x2 - x) + " " + (y2 - y);
-    var newLine = paper.path(pathName);
 
-    var line_color = (color) ? Color.color2HexString(color) : CircuitElement.color;
+    paper.strokeStyle = (color) ? Color.color2HexString(color) : CircuitElement.color;
+    paper.beginPath();
+        paper.moveTo(x, y);
+        paper.lineTo(x2, y2);
+        paper.stroke();
+    paper.closePath();
+    //var newLine = paper.path(pathName);
 
-    newLine.attr({
-        'stroke':Color.color2HexString(color),
-        'stroke-width':Settings.LINE_WIDTH
-    });
+    //var line_color = (color) ? Color.color2HexString(color) : CircuitElement.color;
 
-    return newLine;
+//    newLine.attr({
+//        'stroke':Color.color2HexString(color),
+//        'stroke-width':Settings.LINE_WIDTH
+//    });
+
+    //return newLine;
 };
 
 CircuitElement.drawThickLinePt = function (pa, pb, color) {
@@ -705,11 +738,17 @@ CircuitElement.prototype.drawPost = function (x0, y0, n) {
         if (CirSim.mouseMode == CirSim.MODE_DRAG_ROW || CirSim.mouseMode == CirSim.MODE_DRAG_COLUMN)
             return;
     }
-    var circ = paper.circle(x0, y0, Settings.POST_RADIUS);
-    circ.attr({
-        stroke:Color.color2HexString(Settings.POST_COLOR),
-        fill:Color.color2HexString(Settings.POST_COLOR)
-    });
+    //var circ = paper.circle(x0, y0, Settings.POST_RADIUS);
+    paper.beginPath();
+        paper.fillStyle = Settings.POST_COLOR;
+        //paper.moveTo(x0, y0);
+        paper.arc(x0, y0, Settings.POST_RADIUS, 0, 2*Math.PI, true);
+        paper.stroke();
+    paper.closePath();
+    //circ.attr({
+    //    stroke:Color.color2HexString(Settings.POST_COLOR),
+    //    fill:Color.color2HexString(Settings.POST_COLOR)
+    //});
 };
 
 CircuitElement.getVoltageDText = function (v) {

@@ -22,6 +22,8 @@ function InductorElm(xa, ya, xb, yb, f, st) {
 
 InductorElm.prototype.draw = function () {
 
+    this.doDots();
+
     var v1 = this.volts[0];
     var v2 = this.volts[1];
     var i;
@@ -37,7 +39,6 @@ InductorElm.prototype.draw = function () {
         this.drawValues(s, hs);
     }
 
-    this.doDots();
     this.drawPosts();
 };
 

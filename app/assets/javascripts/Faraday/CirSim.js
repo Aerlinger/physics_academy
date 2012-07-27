@@ -1317,7 +1317,7 @@ CirSim.updateCircuit = function () {
     var startTime = (new Date()).getTime();
 
     // Reset the page:
-    paper.clear();
+    paper.clearRect(0, 0, CANVAS.width(), CANVAS.height());
 
     //CirSim.drawGrid();
 
@@ -1498,14 +1498,16 @@ CirSim.updateCircuit = function () {
         ybase = Math.min(ybase, CanvasBounds.height);
         ybase = Math.max(ybase, CirSim.circuitBottom);
 
-        for (i = 0; info[i] != null; ++i)
-            paper.text(x, ybase + 15 * (i + 1), info[i]).attr('fill', Color.color2HexString(Settings.TEXT_COLOR));
+        // TODO: CANVAS
+        //for (i = 0; info[i] != null; ++i)
+        //    paper.text(x, ybase + 15 * (i + 1), info[i]).attr('fill', Color.color2HexString(Settings.TEXT_COLOR));
 
     }
 
     // Draw selection outline:
     if (CirSim.selectedArea != null) {
-        paper.rect(this.selectedArea.x, this.selectedArea.y, this.selectedArea.width, this.selectedArea.height).attr('stroke', Color.color2HexString(Settings.SELECTION_MARQUEE_COLOR));
+        paper.strokeStyle = Color.color2HexString(Settings.SELECTION_MARQUEE_COLOR);
+        paper.rect(this.selectedArea.x, this.selectedArea.y, this.selectedArea.width, this.selectedArea.height);
     }
 
     CirSim.mouseElm = realMouseElm;
@@ -2511,7 +2513,7 @@ CirSim.getSetupList = function (retry) {
 
     var circuitPresetHTML = "";
 
-    $.get('/assets/Faraday/setuplist.txt', function (b) {
+    $.get('assets/Faraday/setuplist.txt', function (b) {
 
         var len = b.length;    // Number of bytes (characters) in the file
         var p;  // Address of current character
@@ -2758,7 +2760,10 @@ CirSim.drawError = function () {
     for (var i = 0; i < CirSim.errorStack.length; ++i) {
         msg += CirSim.errorStack[i] + '\n';
     }
-    paper.text(150, getCanvasBounds().height - 50, msg).attr('fill', Color.color2HexString(Settings.ERROR_COLOR));
+    console.error("Simulation Error: " + msg);
+    // TODO: CANVAS
+    //paper.text(150, getCanvasBounds().height - 50, msg).attr('fill', Color.color2HexString(Settings.ERROR_COLOR));
+    paper.fillText(msg, 150, getCanvasBounds().height - 50);
 };
 
 CirSim.warning = function (msg) {
@@ -2772,5 +2777,6 @@ CirSim.drawWarning = function () {
     for (var i = 0; i < CirSim.warningStack.length; ++i) {
         msg += CirSim.warningStack[i] + '\n';
     }
-    paper.text(150, getCanvasBounds().height - 70, msg).attr('fill', Color.color2HexString(Settings.WARNING_COLOR));
+    //paper.text(150, getCanvasBounds().height - 70, msg).attr('fill', Color.color2HexString(Settings.WARNING_COLOR));
+    paper.fillText(msg, 150, getCanvasBounds().height - 70);
 };

@@ -63,6 +63,12 @@ CapacitorElm.prototype.draw = function (g) {
     var hs = 12;
     this.setBboxPt(this.point1, this.point2, hs);
 
+    this.curcount = this.updateDotCount();
+    if (CirSim.dragElm != this) {
+        this.drawDots(this.point1, this.lead1, this.curcount);
+        this.drawDots(this.point2, this.lead2, -this.curcount);
+    }
+
     // draw first lead and plate
     var color = this.setVoltageColor(this.volts[0]);
     CircuitElement.drawThickLinePt(this.point1, this.lead1, color);
@@ -78,11 +84,6 @@ CapacitorElm.prototype.draw = function (g) {
     this.setPowerColor(false);
     CircuitElement.drawThickLinePt(this.plate2[0], this.plate2[1], color);
 
-    this.curcount = this.updateDotCount();
-    if (CirSim.dragElm != this) {
-        this.drawDots(this.point1, this.lead1, this.curcount);
-        this.drawDots(this.point2, this.lead2, -this.curcount);
-    }
     this.drawPosts();
     if (CirSim.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.capacitance, "F");

@@ -15,8 +15,9 @@ function WireElm(xa, ya, xb, yb, f, st) {
 WireElm.prototype.draw = function () {
     var color = this.setVoltageColor(this.volts[0]);
 
-    CircuitElement.drawThickLinePt(this.point1, this.point2, color);
     this.doDots();
+
+    CircuitElement.drawThickLinePt(this.point1, this.point2, color);
     this.setBboxPt(this.point1, this.point2, 3);
 
     if (this.mustShowCurrent()) {

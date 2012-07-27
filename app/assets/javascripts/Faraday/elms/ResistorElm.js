@@ -32,6 +32,9 @@ function ResistorElm(xa, ya, xb, yb, f, st) {
 
 ResistorElm.prototype.draw = function () {
 
+    // Always Draw dots first
+    this.doDots();
+
     var segments = 16;
     var ox = 0;
     var hs = 6;
@@ -42,6 +45,7 @@ ResistorElm.prototype.draw = function () {
     this.draw2Leads();
     this.setPowerColor(true);
     var segf = 1 / segments;
+
 
     for (var i = 0; i < segments; ++i) {
         var nx = 0;
@@ -69,12 +73,13 @@ ResistorElm.prototype.draw = function () {
 
     }
 
+
     if (CirSim.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.resistance, "");
         this.drawValues(s, hs);
     }
 
-    this.doDots();
+
     this.drawPosts();
 };
 

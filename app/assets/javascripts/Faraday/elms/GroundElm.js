@@ -18,6 +18,8 @@ GroundElm.prototype.getPostCount = function () {
 
 GroundElm.prototype.draw = function () {
     var color = this.setVoltageColor(0);
+    this.doDots();
+
     CircuitElement.drawThickLinePt(this.point1, this.point2, color);
     var i;
 
@@ -28,7 +30,6 @@ GroundElm.prototype.draw = function () {
         CircuitElement.drawThickLinePt(CircuitElement.ps1, CircuitElement.ps2, color);
     }
 
-    this.doDots();
     CircuitElement.interpPoint(this.point1, this.point2, CircuitElement.ps2, 1 + 11. / this.dn);
     this.setBboxPt(this.point1, CircuitElement.ps2, 11);
     this.drawPost(this.x, this.y, this.nodes[0]);

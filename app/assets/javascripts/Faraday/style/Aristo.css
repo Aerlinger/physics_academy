@@ -137,7 +137,7 @@
 }
 
 .ui-widget-header {
-  background: #ededed url(images/bg_fallback.png) 0 0 repeat-x; /* Old browsers */
+  background: #ededed url(../images/bg_fallback.png) 0 0 repeat-x; /* Old browsers */
   background: -moz-linear-gradient(top, #ededed 0%, #c4c4c4 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #c4c4c4)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #ededed 0%, #c4c4c4 100%); /* Chrome10+,Safari5.1+ */
@@ -159,7 +159,7 @@
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-  background: #ededed url(images/bg_fallback.png) 0 0 repeat-x; /* Old browsers */
+  background: #ededed url(../images/bg_fallback.png) 0 0 repeat-x; /* Old browsers */
   background: -moz-linear-gradient(top, #ededed 0%, #c4c4c4 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #c4c4c4)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #ededed 0%, #c4c4c4 100%); /* Chrome10+,Safari5.1+ */
@@ -191,7 +191,7 @@
   outline: none;
   color: #1c4257;
   border: 1px solid #7096ab;
-  background: #ededed url(images/bg_fallback.png) 0 -50px repeat-x; /* Old browsers */
+  background: #ededed url(../images/bg_fallback.png) 0 -50px repeat-x; /* Old browsers */
   background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b9e0f5), color-stop(100%, #92bdd6)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); /* Chrome10+,Safari5.1+ */
@@ -267,35 +267,35 @@
 .ui-icon {
   width: 16px;
   height: 16px;
-  background-image: url(images/ui-icons_222222_256x240.png);
+  background-image: url(../images/ui-icons_222222_256x240.png);
 }
 
 .ui-widget-content .ui-icon {
-  background-image: url(images/ui-icons_222222_256x240.png);
+  background-image: url(../images/ui-icons_222222_256x240.png);
 }
 
 .ui-widget-header .ui-icon {
-  background-image: url(images/ui-icons_222222_256x240.png);
+  background-image: url(../images/ui-icons_222222_256x240.png);
 }
 
 .ui-state-default .ui-icon {
-  background-image: url(images/ui-icons_454545_256x240.png);
+  background-image: url(../images/ui-icons_454545_256x240.png);
 }
 
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
-  background-image: url(images/ui-icons_454545_256x240.png);
+  background-image: url(../images/ui-icons_454545_256x240.png);
 }
 
 .ui-state-active .ui-icon {
-  background-image: url(images/ui-icons_454545_256x240.png);
+  background-image: url(../images/ui-icons_454545_256x240.png);
 }
 
 .ui-state-highlight .ui-icon {
-  background-image: url(images/ui-icons_454545_256x240.png);
+  background-image: url(../images/ui-icons_454545_256x240.png);
 }
 
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-  background: url(images/icon_sprite.png) -16px 0 no-repeat !important;
+  background: url(../images/icon_sprite.png) -16px 0 no-repeat !important;
 }
 
 .ui-state-highlight .ui-icon, .ui-state-error .ui-icon {
@@ -788,7 +788,7 @@
 }
 
 .ui-icon-info {
-  background: url(images/icon_sprite.png) 0 0 no-repeat !important;
+  background: url(../images/icon_sprite.png) 0 0 no-repeat !important;
 }
 
 .ui-icon-notice {
@@ -1400,7 +1400,7 @@ button.ui-button-icons-only {
   outline: none;
   color: #1c4257;
   border-color: #7096ab;
-  background: #ededed url(images/bg_fallback.png) 0 -50px repeat-x; /* Old browsers */
+  background: #ededed url(../images/bg_fallback.png) 0 -50px repeat-x; /* Old browsers */
   background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b9e0f5), color-stop(100%, #92bdd6)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); /* Chrome10+,Safari5.1+ */
@@ -1505,7 +1505,7 @@ input.ui-button::-moz-focus-inner {
 }
 
 .ui-buttonset .ui-button.ui-state-active {
-  background: #ededed url(images/bg_fallback.png) 0 -50px repeat-x; /* Old browsers */
+  background: #ededed url(../images/bg_fallback.png) 0 -50px repeat-x; /* Old browsers */
   background: -moz-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #b9e0f5), color-stop(100%, #92bdd6)); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #b9e0f5 0%, #92bdd6 100%); /* Chrome10+,Safari5.1+ */
@@ -1575,7 +1575,7 @@ button.ui-button::-moz-focus-inner {
 .ui-dialog .ui-dialog-titlebar-close span {
   display: block;
   margin: 1px;
-  background: url(images/icon_sprite.png) 0 -16px no-repeat;
+  background: url(../images/icon_sprite.png) 0 -16px no-repeat;
 }
 
 .ui-dialog .ui-dialog-titlebar-close:hover span {
@@ -1647,7 +1647,7 @@ button.ui-button::-moz-focus-inner {
 }
 
 .ui-slider .ui-slider-handle {
-  background: url(images/slider_handles.png) 0px -23px no-repeat;
+  background: url(../images/slider_handles.png) 0px -23px no-repeat;
   position: absolute;
   z-index: 2;
   width: 23px;
@@ -1885,7 +1885,7 @@ button.ui-button::-moz-focus-inner {
   margin-left: -8px;
   top: 50%;
   margin-top: -8px;
-  background: url(images/icon_sprite.png) no-repeat;
+  background: url(../images/icon_sprite.png) no-repeat;
 }
 
 .ui-datepicker .ui-datepicker-title {
@@ -2105,13 +2105,13 @@ button.ui-button::-moz-focus-inner {
 .ui-progressbar {
   height: 12px;
   text-align: left;
-  background: #FFF url(images/progress_bar.gif) 0 -14px repeat-x;
+  background: #FFF url(../images/progress_bar.gif) 0 -14px repeat-x;
 }
 
 .ui-progressbar .ui-progressbar-value {
   margin: -1px;
   height: 100%;
-  background: url(images/progress_bar.gif) 0 0 repeat-x;
+  background: url(../images/progress_bar.gif) 0 0 repeat-x;
 }
 
 /* Extra Input Field Styling */

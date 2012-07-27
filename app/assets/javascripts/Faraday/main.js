@@ -1,5 +1,6 @@
 // jQuery element of the 'live' canvas
 var CANVAS;
+var paper;
 
 function buildUI() {
     var items = [];
@@ -44,7 +45,14 @@ $(document).ready(function (e) {
     CANVAS = $('#canvas_container');
 
     // Create the context for rendering:
-    paper = new Raphael(CANVAS.get(0), CANVAS.width(), CANVAS.height());
+    var className = document.getElementById('canvas_container');
+    paper = className.getContext("2d");
+    paper.lineWidth = Settings.LINE_WIDTH;
+    paper.lineCap   = "round";
+    paper.lineJoin = "round";
+
+    //paper = new Raphael(CANVAS.get(0), CANVAS.width(), CANVAS.height());
+
 
     $("#canvas_container").css({
         'background-color':Color.color2HexString(Settings.BG_COLOR), 'border-width':'2px'
@@ -80,25 +88,27 @@ $(document).ready(function (e) {
         CirSim.onMouseReleased(event);
     });
 
-    $(document).keydown(function (event) {
-        event.preventDefault();
-        //alert(event.which);
-        CirSim.onKeyPressed(event);
-    });
-
-    $(document).keyup(function (event) {
-        event.preventDefault();
-        CirSim.onKeyReleased(event);
-    });
+//    $(document).keydown(function (event) {
+//        event.preventDefault();
+//        //alert(event.which);
+//        CirSim.onKeyPressed(event);
+//    });
+//
+//    $(document).keyup(function (event) {
+//        event.preventDefault();
+//        CirSim.onKeyReleased(event);
+//    });
 
     start();
 });
 
 
 function start() {
-    var className = CANVAS.attr('class');
-    className = className.split(" ")[0];
-    CirSim.init(className);
+    // The default circuit is loaded from the class attribute
+    // For instance <canvas ... class="lrc well span8" will render the lrc.txt file
+    var defaultCircuitType = CANVAS.attr('class');
+    defaultCircuitType = defaultCircuitType.split(" ")[0];
+    CirSim.init(defaultCircuitType);
 
     buildUI();
     console.log("Starting simulation");

@@ -119,6 +119,17 @@ VoltageElm.prototype.setPoints = function () {
 
 VoltageElm.prototype.draw = function () {
     this.setBbox(this.x, this.y, this.x2, this.y2);
+
+    this.updateDotCount();
+    if (CirSim.dragElm != this) {
+        if (this.waveform == VoltageElm.WF_DC)
+            this.drawDots(this.point1, this.point2, this.curcount);
+        else {
+            this.drawDots(this.point1, this.lead1, this.curcount);
+            this.drawDots(this.point2, this.lead2, -this.curcount);
+        }
+    }
+
     this.draw2Leads();
     if (this.waveform == VoltageElm.WF_DC) {
         this.setPowerColor(false);
@@ -134,16 +145,6 @@ VoltageElm.prototype.draw = function () {
         this.setBboxPt(this.point1, this.point2, VoltageElm.circleSize);
         CircuitElement.interpPoint(this.lead1, this.lead2, CircuitElement.ps1, .5);
         this.drawWaveform(CircuitElement.ps1);
-    }
-
-    this.updateDotCount();
-    if (CirSim.dragElm != this) {
-        if (this.waveform == VoltageElm.WF_DC)
-            this.drawDots(this.point1, this.point2, this.curcount);
-        else {
-            this.drawDots(this.point1, this.lead1, this.curcount);
-            this.drawDots(this.point2, this.lead2, -this.curcount);
-        }
     }
 
     this.drawPosts();
