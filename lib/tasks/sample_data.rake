@@ -7,24 +7,30 @@ namespace :db do
 end
 
 def make_users
-  #User.delete_all
+  User.delete_all
+
+  # Create the admin first
   admin = User.create!(name:     "admin",
                        email:    "admin@physicsacademy.org",
                        password: "anthony",
                        password_confirmation: "anthony")
 
   admin.toggle!(:admin)
+
+  # create 10 users
   10.times do |n|
     name = Faker::Name.name
-    email = "example-#{n+1}@physicsacademy.com"
+    email = "SampleUser-#{n+1}@pa.com"
     password = "password"
     User.create!(name: name, email: email, password: password, password_confirmation: password)
   end
 end
 
 def make_subscriptions
-  #Subscription.delete_all
+  Subscription.delete_all
+
+  # Create a subscription for each user
   User.all.each do |user|
-    user.subscriptions.create(user_id: user.id, lesson_id: user.id % 3)
+    user.subscriptions.create(user_id: user.id, lesson_id: user.id % Lesson.all.size)
   end
 end

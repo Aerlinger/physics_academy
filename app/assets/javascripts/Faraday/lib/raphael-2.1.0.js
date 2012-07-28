@@ -2,7 +2,7 @@
 // │ Raphaël 2.1.0 - JavaScript Vector Library                          │ \\
 // ├────────────────────────────────────────────────────────────────────┤ \\
 // │ Copyright © 2008-2012 Dmitry Baranovskiy (http://raphaeljs.com)    │ \\
-// │ Copyright © 2008-2012 Sencha Labs (http://sencha.com)              │ \\
+// │ Copyright © 2008-2012 Sencha labs (http://sencha.com)              │ \\
 // ├────────────────────────────────────────────────────────────────────┤ \\
 // │ Licensed under the MIT (http://raphaeljs.com/license.html) license.│ \\
 // └────────────────────────────────────────────────────────────────────┘ \\
@@ -227,7 +227,7 @@
 // │ "Raphaël 2.1.0" - JavaScript Vector Library                         │ \\
 // ├─────────────────────────────────────────────────────────────────────┤ \\
 // │ Copyright (c) 2008-2011 Dmitry Baranovskiy (http://raphaeljs.com)   │ \\
-// │ Copyright (c) 2008-2011 Sencha Labs (http://sencha.com)             │ \\
+// │ Copyright (c) 2008-2011 Sencha labs (http://sencha.com)             │ \\
 // │ Licensed under the MIT (http://raphaeljs.com/license.html) license. │ \\
 // └─────────────────────────────────────────────────────────────────────┘ \\
 (function () {
@@ -3749,7 +3749,7 @@
 // │ SVG Module                                                          │ \\
 // ├─────────────────────────────────────────────────────────────────────┤ \\
 // │ Copyright (c) 2008-2011 Dmitry Baranovskiy (http://raphaeljs.com)   │ \\
-// │ Copyright (c) 2008-2011 Sencha Labs (http://sencha.com)             │ \\
+// │ Copyright (c) 2008-2011 Sencha labs (http://sencha.com)             │ \\
 // │ Licensed under the MIT (http://raphaeljs.com/license.html) license. │ \\
 // └─────────────────────────────────────────────────────────────────────┘ \\
 window.Raphael.svg && function (R) {
@@ -4846,7 +4846,7 @@ window.Raphael.svg && function (R) {
 // │ VML Module                                                          │ \\
 // ├─────────────────────────────────────────────────────────────────────┤ \\
 // │ Copyright (c) 2008-2011 Dmitry Baranovskiy (http://raphaeljs.com)   │ \\
-// │ Copyright (c) 2008-2011 Sencha Labs (http://sencha.com)             │ \\
+// │ Copyright (c) 2008-2011 Sencha labs (http://sencha.com)             │ \\
 // │ Licensed under the MIT (http://raphaeljs.com/license.html) license. │ \\
 // └─────────────────────────────────────────────────────────────────────┘ \\
 window.Raphael.vml && function (R) {

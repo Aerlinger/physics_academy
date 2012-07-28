@@ -1,109 +1,137 @@
 <% provide(:title, @lesson.title) %>
 
-<!-- Top Lesson pathbar -->
-<div class="row-fluid">
-  <ul class="breadcrumb">
-    <li>
-      <a href="#">Lessons</a> <span class="divider">/</span>
-    </li>
-    <li>
-      <a href="#"><%= @lesson.title %></a> <span class="divider">/</span>
-    </li>
-    <li class="active">
-      <a href="#"><%= @challenge.title %></a>
-    </li>
-  </ul>
-</div>
+<!-- Padding for window -->
+<div class="challenge-background">
 
-<!-- Tabs -->
-<!--
-<ul class="nav nav-tabs" id="#myTab">
-  <%# @lesson.challenges.all.each_with_index do |challenge, index| %>
-    <%# "<li#{" class='active'" if (index+1)==@challenge.id}> <a href='#{lesson_challenge_url(id: index+1)}'> #{index+1}</a> </li>".html_safe %>
-  <%# end %>
-</ul>
--->
-
-<!--
-<div class="row-fluid">
-  <div class="btn-toolbar">
-    <div class="btn-group">
-      <%# @lesson.challenges.all.each_with_index do |challenge, index| %>
-        <%# link_to "#{index+1}", lesson_challenge_url(id: index+1), class: (index+1)==@challenge.id ? "btn btn-warning" : "btn btn-primary" %>
-      <%# end %>
-    </div>
+  <!-- Top Lesson navigation pathbar -->
+  <div class="row-fluid">
+    <ul class="breadcrumb">
+      <li>
+        <a href="#">Lessons</a> <span class="divider">/</span>
+      </li>
+      <li>
+        <a href="#"><%= @lesson.title %></a> <span class="divider">/</span>
+      </li>
+      <li class="active">
+        <a href="#"><%= @challenge.title %></a>
+      </li>
+    </ul>
   </div>
-</div>
--->
 
-<div class="well">
-  <div class="row-fluid tabbable">
+  <div class="row-fluid">
 
-    <!--<div class="tab-content">-->
-      <!--<div class="tab-pane active">-->
-        <h3><%= "#{@challenge.title}, #{@challenge.id}"%></h3>
-        <p><%= "#{@challenge.content}, #{@challenge.id}"%></p>
-        <a class="btn btn-success btn-large btn-next-lesson" style="float: right" href="<%= lesson_challenge_url(id: @challenge.id+1) %>">Next Challenge &raquo;</a>
-      <!--</div>-->
-    <!--</div>-->
+    <!-- Left Challenge NAVBAR -->
+    <div class="plan-container span2 sidebar-nav">
+      <div class="plan">
+        <div class="plan-header">
 
-  </div>
-</div>
+          <div class="plan-title">
+            <%= @lesson.title %>
+          </div> <!-- /plan-title -->
 
 
-<div class="row-fluid">
+          <div class="plan-price">
+            <%= image_tag "thumbs/default.png" %> <span class="term">Completed X of Y Challenges</span>
+          </div> <!-- /plan-price -->
 
-  <!-- Left navbar -->
-  <div class="span2">
-    <div class="sidebar-nav well">
+        </div> <!-- /plan-header -->
 
-      <ul class="nav nav-pills nav-stacked">
-        <li class="nav-header"><h3>Lessons</h3></li>
-        <% @lesson.challenges.all.each_with_index do |challenge, index| %>
-          <%= "<li #{"class='active'" if (index+1)==@challenge.id}}> <a href='tab#{index+1}' data-toggle='tab'> <i class='icon-book'> </i>&nbsp;#{challenge.title}</a> </li>".html_safe %>
-        <% end %>
-      </ul>
+        <div class="plan-features">
+          <ul class="nav">
+            <% @lesson.challenges.all.each_with_index do |challenge, index| %>
+              <%= "<li #{"class='active'" if (index+1)==@challenge.id}}> <a href='tab#{index+1}' data-toggle='tab'> <i class='icon-book'> </i>&nbsp;#{challenge.title}</a> </li>".html_safe %>
+            <% end %>
+          </ul>
+        </div> <!-- /plan-features -->
 
-    </div>  <!-- /sidebar-nav -->
-  </div>  <!--/Left navbar-->
+        <div class="plan-actions">
+          <a href="javascript:;" class="btn">Submit</a>
+        </div> <!-- /plan-actions -->
 
-
-  <!-- LESSON CONTENT -->
-  <div class="span7" >
-    <div class="well" style="height: 400px">
-
-      <%= render 'challenge' %>
-
+      </div> <!-- /plan -->
     </div>
 
-    <div class="alert alert-info">
-      <a class="close" data-dismiss="alert" href="#">&times;</a>
-      <strong>Heads up!</strong> If you want your modal to animate in and out, just add a <code>.fade</code> class to the <code>.modal</code> element (refer to the demo to see this in action) and include bootstrap-transition.js.
+
+    <!-- LESSON DESCRIPTION -->
+    <div class="span10 plan-container best-value">
+      <div class="plan">
+        <div class="plan-header">
+
+          <div class="plan-title">
+            <%= "Challenge ##{@challenge.id}: #{@challenge.title}"%>
+          </div> <!-- /plan-title -->
+
+        </div> <!-- /plan-header -->
+
+        <div class="plan-actions">
+          <p><%= "#{@challenge.content}, #{@challenge.id}"%></p>
+          <!--<a href="javascript:;" class="btn">Show next hint</a>-->
+        </div> <!-- /plan-actions -->
+
+      </div> <!-- /plan -->
     </div>
-  </div><!--/span-->
+
+    <!-- LESSON CONTENT -->
+    <div class="span8 offset3 well lesson-content" >
+      <div style="height: 30em">
+
+        <%= render 'challenge' %>
+
+      </div>
+
+      <!-- INFO DIALOG -->
+      <div class="alert alert-error" style="margin-bottom: 0">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <strong>Almost!</strong> Warning, errors, and user feedback relevant to the <code>lesson</code> Will be posted here.
+        Length of the content shouldn't matter (page will be pushed down). For example:
+        [2012-07-28 15:40:33] WARN  Could not determine content-length of response body. <br />Set content-length of the response or set Response#chunked = true
+        Started GET "/assets/Faraday/ui/EditInfo.js?body=1" for 127.0.0.1 at 2012-07-28 15:40:32 -0400
+        Served asset /Faraday/ui/EditInfo.js - 200 OK (0ms)
+      </div>
+
+    </div><!--/span-->
 
 
-  <div class="span3">
-    <div class="sidebar-nav well" style="height: 400px">
-      <h3>Hint</h3>
+    <!-- HINT WINDOW -->
+    <div class="span2 plan-container best-value">
+      <div class="plan">
+        <div class="plan-header">
+
+          <div class="plan-title">
+            Hints
+          </div> <!-- /plan-title -->
+
+        </div> <!-- /plan-header -->
+
+        <div class="plan-actions">
+          Stuck? Press the show hint button below to get a nudge in the right direction.
+            You'll lose points though, so don't use it if you don't need to.
+        </div> <!-- /plan-actions -->
+
+        <div class="plan-actions">
+          <a href="javascript:;" class="btn">Next Hint</a>
+        </div> <!-- /plan-actions -->
+
+      </div> <!-- /plan -->
+    </div>
+
+  </div><!--/row-->
+
+
+
+  <!-- MODAL WINDOW -->
+  <div class="modal hide" id="myModal">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal">×</button>
+      <h3>Hey There...</h3>
+    </div>
+    <div class="modal-body">
+      <p>Looks like, you've reached a course that is currently under production</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#" class="btn" data-dismiss="modal">Close</a>
+      <a href="#" class="btn btn-primary">Save changes</a>
     </div>
   </div>
 
-</div><!--/row-->
-
-
-
-<!-- Modal window -->
-<div class="modal hide" id="myModal">
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal">×</button>
-    <h3>Hey There...</h3>
-  </div>
-  <div class="modal-body">
-    <p>Looks like, you've reached a course that is currently under production</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#" class="btn" data-dismiss="modal">Close</a>
-    <a href="#" class="btn btn-primary">Save changes</a>
-  </div>
 </div>

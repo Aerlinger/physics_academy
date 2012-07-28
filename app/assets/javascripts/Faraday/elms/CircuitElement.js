@@ -731,20 +731,29 @@ CircuitElement.prototype.drawPosts = function () {
     }
 };
 
-CircuitElement.prototype.drawPost = function (x0, y0, n) {
-    if (n) {
-        if (CirSim.dragElm == null && !this.needsHighlight() && CirSim.getCircuitNode(n).links.length == 2)
+CircuitElement.prototype.drawPost = function (x0, y0, node) {
+    if (node) {
+        if (CirSim.dragElm == null && !this.needsHighlight() && CirSim.getCircuitNode(node).links.length == 2)
             return;
         if (CirSim.mouseMode == CirSim.MODE_DRAG_ROW || CirSim.mouseMode == CirSim.MODE_DRAG_COLUMN)
             return;
     }
-    //var circ = paper.circle(x0, y0, Settings.POST_RADIUS);
+
     paper.beginPath();
-        paper.fillStyle = Settings.POST_COLOR;
-        //paper.moveTo(x0, y0);
+        if(this.needsHighlight()) {
+            paper.fillStyle = Color.color2HexString(Settings.POST_COLOR_SELECTED);
+            paper.strokeStyle = Color.color2HexString(Settings.POST_COLOR_SELECTED);
+        } else {
+            paper.fillStyle = Color.color2HexString(Settings.POST_COLOR);
+            paper.strokeStyle = Color.color2HexString(Settings.POST_COLOR);
+        }
+
         paper.arc(x0, y0, Settings.POST_RADIUS, 0, 2*Math.PI, true);
         paper.stroke();
+        paper.fill();
     paper.closePath();
+
+    //var circ = paper.circle(x0, y0, Settings.POST_RADIUS);
     //circ.attr({
     //    stroke:Color.color2HexString(Settings.POST_COLOR),
     //    fill:Color.color2HexString(Settings.POST_COLOR)

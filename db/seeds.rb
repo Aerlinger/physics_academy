@@ -32,7 +32,7 @@ image_url   = "introduction_to_physics.jpg"
 
 challenges = ["What is physics?",
               "Units and Measurements",
-              "Significant Figures and the concept of uncertainty",
+              "Significant Figures",
               "Conversion of Units",
               "Dimensional Analysis",
               "In Review"]
@@ -43,7 +43,7 @@ create_lesson(title, description, image_url, challenges)
 #################################################################
 # Newtonian Physics
 #################################################################
-title       = "Newtonian Physics I: \"The laws motion\""
+title       = "Newtonian Physics I: The laws of motion"
 description = "Newtonian physics describes the motion and interaction of physical bodies under forces."
 image_url   = "newtonian_physics_i.jpg"
 

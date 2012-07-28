@@ -2,20 +2,7 @@
 
 
 
-<div id="subheader">
-
-  <div class="inner">
-
-    <div class="container">
-
-      <h1>Frequently Asked Questions</h1>
-
-    </div> <!-- /.container -->
-
-  </div> <!-- /inner -->
-
-</div> <!-- /subheader -->
-
+<%= render :partial => 'layouts/subheader', locals: {title: "Frequently Asked Questions"} %>
 
 
 <div id="subpage">
@@ -134,3 +121,19 @@
 
 </div> <!-- /subpage -->
 
+<script>
+
+  $(function () {
+
+
+    $('.faq-list').goFaq ({
+      enableSearch: true,
+      enableToc: true,
+      enableStyling: true,
+      numberHtml: '<div class="circle-icon faq-circle-icon"><div>{{#}}</div></div>'
+
+    });
+
+  });
+
+</script>

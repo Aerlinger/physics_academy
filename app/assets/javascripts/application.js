@@ -16,6 +16,8 @@
 //= require bootstrap
 //= require_self
 
+//= require faq
+
 //= require challenge
 //
 //= require Faraday/utility

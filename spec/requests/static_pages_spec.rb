@@ -34,11 +34,11 @@ describe "Static Pages" do
     it { should have_selector('title', text: full_title('All Lessons')) }
   end
 
-  describe "Labs page" do
+  describe "labs page" do
     before { visit labs_path }
 
-    it { should have_selector('h1', text: 'Labs') }
-    it { should have_selector('title', text: full_title('Labs')) }
+    it { should have_selector('h1', text: 'labs') }
+    it { should have_selector('title', text: full_title('labs')) }
   end
 
   describe "Help page" do
@@ -82,8 +82,8 @@ describe "Static Pages" do
     click_link "Lessons"
     page.should have_selector 'title', text: full_title("All Lessons")
 
-    click_link "Labs"
-    page.should have_selector 'title', text: full_title("Labs")
+    click_link "labs"
+    page.should have_selector 'title', text: full_title("labs")
 
     click_link "About"
     page.should have_selector 'title', text: full_title('About')

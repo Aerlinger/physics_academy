@@ -75,7 +75,7 @@ ResistorElm.prototype.draw = function () {
 
 
     if (CirSim.showValuesCheckItem) {
-        var s = CircuitElement.getShortUnitText(this.resistance, "");
+        var s = CircuitElement.getShortUnitText(this.resistance, "ohm");
         this.drawValues(s, hs);
     }
 

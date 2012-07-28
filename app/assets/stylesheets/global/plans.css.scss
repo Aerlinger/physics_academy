@@ -28,6 +28,7 @@
     margin-right: 6px;
     
     border-radius: 4px;
+
 }
 
 
@@ -37,7 +38,7 @@
     text-align: center;
     color: #FFF;
     
-    background-color: #686868;
+    background-color: #821800;
     
     -webkit-border-top-left-radius: 4px;
 	-webkit-border-top-right-radius: 4px;
@@ -66,7 +67,7 @@
     font-size: 66px;
     line-height: 0.8em;
     
-	background-color: #797979;
+	background-color: #6d6e78;
 	
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -95,14 +96,18 @@
 /*-- Best Value Highlight --*/
 
 .plan-container.best-value .plan-header {
-	background-color: #677E30;
+  background-color: #bf6e00;
+  text-align: left;
+
+  .plan-title {
+    padding-left: 2em;
+  }
+
 }
 
 .plan-container.best-value .plan-price {
 	background-color: #81994D;
 }
-
-
 
 /*-- Plan Features --*/
 
@@ -112,24 +117,33 @@
 }
 
 .plan-features {
-	padding-bottom: 1em;
+  background: white;
+  padding-bottom: 1em;
+  padding-top: .5em;
 }
 
 .plan-features ul {
 	padding: 0;
 	margin: 0;
-	
+
 	list-style: none;
 }
 
 .plan-features li {	
-	padding: 1em 0;
-	margin: 0 2em;
+
+    padding: 0;
+	margin: 0 1em;
 	
-	text-align: center;
+	text-align: left;
 	
 	border-bottom: 1px dotted #CCC;
+  
+  a {
+    padding: 1em 1em;
+    color: #ab1515;
+  }
 }
+
 
 .plan-features li:last-child {
 	border-bottom: none;
@@ -139,7 +153,7 @@
 /*-- Plan Actions --*/
 
 .plan-actions {
-	padding: 1.15em 0;
+	padding: 1.15em 2em;
 	
 	background: #F2F2F2;
 	

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120721002602) do
+ActiveRecord::Schema.define(:version => 20120728171649) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -87,9 +87,10 @@ ActiveRecord::Schema.define(:version => 20120721002602) do
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "lesson_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
     t.string   "completed_lessons"
+    t.text     "completed_challenges"
   end
 
   add_index "subscriptions", ["lesson_id"], :name => "index_subscriptions_on_lesson_id"

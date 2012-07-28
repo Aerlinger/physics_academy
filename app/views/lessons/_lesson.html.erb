@@ -10,9 +10,7 @@
         <p>
           <%= lesson.description %>
         </p>
-        <!--
-        <a class="btn btn-primary btn-large" href="<%= lesson_challenge_path(lesson_id: lesson.id, id: 1)%>">Get Started &raquo;</a>
-        -->
+
         <div class="clear-float"></div>
       </a>
     </div>
@@ -21,6 +19,7 @@
     <div id="collapse<%= lesson.id %>" class="accordion-body collapse" style="height: 0px; ">
       <div class="accordion-inner">
         <ul class="nav nav-tabs nav-stacked">
+
           <% lesson.challenges.all.each_with_index do |challenge, index| %>
             <li>
               <a href="<%= lesson_challenge_path(lesson_id: lesson.id, id: challenge.id) %>">
@@ -31,6 +30,7 @@
               </a>
             </li>
           <% end %>
+
         </ul>
       </div>
     </div>

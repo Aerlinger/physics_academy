@@ -27,6 +27,10 @@ class User < ActiveRecord::Base
     evaluations.where(target_type: lesson.class, target_id: lesson.id).present?
   end
 
+  def subscribe(lesson)
+    subscriptions.find_or_create_by_lesson_id(user_id: self.id, lesson_id: lesson.id)
+  end
+
   private
 
     def create_remember_token

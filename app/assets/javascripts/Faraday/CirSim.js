@@ -61,7 +61,7 @@ CirSim.dotsCheckItem = true;
 CirSim.printableCheckItem = false;
 CirSim.conventionCheckItem = true;
 CirSim.speedBar = 90;
-CirSim.currentBar = 47;
+CirSim.currentBar = 40;
 CirSim.smallGridCheckItem = false;
 CirSim.powerBar = 'replaceme';
 
@@ -370,7 +370,7 @@ CirSim.initCircuit = function (defaultCircuit) {
     //CirSim.readDefaultCircuit('circuits/amp-integ.txt');
     //CirSim.readDefaultCircuit('circuits/fullrectf.txt');
     //CirSim.readCircuitFromFile('circuits/spark-sawtooth.txt');
-    CirSim.readCircuitFromFile('/assets/Faraday/circuits/' + defaultCircuit + '.txt', false);
+    CirSim.readCircuitFromFile('assets/Faraday/circuits/' + defaultCircuit + '.txt', false);
 
 };
 
@@ -1499,8 +1499,10 @@ CirSim.updateCircuit = function () {
         ybase = Math.max(ybase, CirSim.circuitBottom);
 
         // TODO: CANVAS
-        //for (i = 0; info[i] != null; ++i)
-        //    paper.text(x, ybase + 15 * (i + 1), info[i]).attr('fill', Color.color2HexString(Settings.TEXT_COLOR));
+        for (i = 0; info[i] != null; ++i) {
+            paper.fillStyle = Color.color2HexString(Settings.TEXT_COLOR);
+            paper.fillText(info[i], x, ybase + 15 * (i + 1));
+        }
 
     }
 
@@ -2513,7 +2515,7 @@ CirSim.getSetupList = function (retry) {
 
     var circuitPresetHTML = "";
 
-    $.get('/assets/Faraday/setuplist.txt', function (b) {
+    $.get('assets/Faraday/setuplist.txt', function (b) {
 
         var len = b.length;    // Number of bytes (characters) in the file
         var p;  // Address of current character
