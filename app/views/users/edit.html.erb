@@ -1,8 +1,10 @@
-<% provide(:title, 'Edit user') %>
-<h1>Update your profile</h1>
+<% provide(:title, 'Edit Profile') %>
+
+<%=  render 'layouts/subheader', locals: {title: "Edit Profile"} %>
 
 <div class="row">
   <div class="span6 offset3">
+
     <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages', object: @user %>
       <%= f.label :name %>

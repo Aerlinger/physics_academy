@@ -61,22 +61,29 @@ h2 {
   color: #8b0000;
 }
 
-.testedworking {
-  color: gray;
+a:hover {
+  text-decoration: underline;
+  color: #fffffb;
 }
 
-.testedworking a:hover {
-  font-weight: bold;
-  background: #FFF;
-  color: #ff8c00;
+.green, .green a {
+  text-decoration: none;
+  color: #288000;
 }
 
-.notyetimplemented a {
-  color: #666;
+.yellow, .yellow a {
+  text-decoration: none;
+  color: #ddc122;
 }
 
-.notyettested {
-  color: gray;
+.red, .red a {
+  text-decoration: none;
+  color: #cc0002;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #fffffb;
 }
 
 #sitename {
@@ -109,22 +116,23 @@ h2 {
 
 #canvas_container {
 
-  /*float: left;*/
-  //width: 800px;
-  //height: 600px;
+  /*float: left;
+  width: 800px;
+  height: 600px;
+  */
   border: 1px dotted red;
 }
 
 #circuit_presets {
   float: right;
   width: 220px;
-  height: 3000px;
+  height: 6000px;
 
   padding: .6em;
   color: white;
   background-color: #333;
 }
-
+/*
 .circuit_preset_link {
   color: #cedff5;
   text-decoration: none;
@@ -136,3 +144,4 @@ h2 {
 }
 
 
+*/

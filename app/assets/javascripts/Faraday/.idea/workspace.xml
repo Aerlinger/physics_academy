@@ -2,664 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8c80be-45df-4817-afae-1b9cd20a3114" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\assets\images\challenges\bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\assets\stylesheets\challenge.css.scss.erb" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\challenge.css.scss" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120703184231_create_users.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120704223225_add_index_to_users_email.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120704224419_add_password_digest_to_users.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120704225734_add_remember_token_to_users.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120708170837_create_subscriptions.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120708171121_create_lessons.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120710155058_create_reputation_system.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120710155059_add_reputations_index.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120710155060_add_evaluations_index.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120710155061_add_reputation_messages_index.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120712135501_add_introduction_to_lessons.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120712140119_create_lesson_tasks.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120712143441_add_lesson_id_to_lesson_tasks.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120712154820_fix_lesson_tasks_column.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120712175259_add_admin_to_users.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120713015514_rename_lesson_tasks.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120716155215_create_badges.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120717181218_add_image_url_to_lessons.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120717182925_add_stats_to_lessons.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120721002602_add_params_to_subscriptions.rb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday-3e0cc8b56d707e68e6c8234e867dfeae.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday-6387f48753e389758edf772bcdb62c81.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-cgand-5f4f53dcfde9a5f091eb5f765fb28a30.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-cgand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-cgor-f48e490c6feedcaa775336377d294734.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-cgor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-f211-f7aa8ff2341f173d58733d6f9a4c2175.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-f211.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-f220-c49ba8b390290e5ceac183490931a3b8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-f220.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-f221-c67d8158c983c8b286084b280e0ab562.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-f221.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-invert-3e590a82e46965a81db330e6fb8da74b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3-invert.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3way-3014f9d4996c8cf2a0b47142d055cf46.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\3way.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\4way-9e6503719977c6a50a00213bdb62b4ab.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\4way.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555int-bd1ba64fcd30cb65d046c5a089787c0c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555int.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555lowduty-86c7a1c1417d9f144d43bc0eae492d0d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555lowduty.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555missing-f07b14f3867311e66ae7b22d06f43e7c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555missing.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555monostable-c925e53b53aa83c62bff27bbf9595d30.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555monostable.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555pulsemod-0071b093b8b0d965ed3b2eb3111b1ace.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555pulsemod.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555saw-267c008f14bb702137ea0fe52736da2c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555saw.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555schmitt-a1560c9deec66d0ba04fad3271e1ed81.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555schmitt.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555sequencer-4f7b4c9d025135b22601bf264c84e904.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555sequencer.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555square-6df8f166696f5838c4a4b8c8bd88e417.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\555square.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\7segdecoder-4e772aff264b11dce4f3190cccffabe7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\7segdecoder.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\allpass1-b514557d3a1545aea85a0f49a9ce2a1f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\allpass1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\allpass2-bcb066dc2463966d9c83bed293685497.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\allpass2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amdetect-4edbec156f13eb4c637230c588c04737.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amdetect.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-dfdx-b9a9eced118799f773a9ce6c5cce52cf.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-dfdx.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-diff-4f6daba1ce87504d2da317c91a5cc786.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-diff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-follower-93775bcf6b54c6595a7159536499c160.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-follower.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-fullrect-fd2da6e655e69f2af2ba4bcfcfcf610c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-fullrect.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-integ-0ff4eca6aa35553b444660f779044b41.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-integ.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-invert-128f35529c49dad75114b57337b5ed54.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-invert.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-noninvert-3d3268c5af479c2294fb3a2854f05b9d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-noninvert.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-rect-2a9b2d08bc3e92c077b69059ef18de17.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-rect.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-schmitt-a80e50f47ef4df0938d9ca8329b4ca43.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-schmitt.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-sum-50091dcf9631b8589444cc568af12793.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\amp-sum.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\bandpass-5ae9e77b229d2fd6829287bd634a7211.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\bandpass.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\besselbutter-d1af10731c24117f73cc5fd00d951a92.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\besselbutter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\blank-1889eed825b918cdc0e253803fdd4721.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\blank.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\butter10lo-8e48d08906b745fa40ddb30d7650694c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\butter10lo.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cap-a873c90ea0fba46df25a1b3fdc78b17c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cap.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capac-de2438f737529cf40c8f45513a796d0e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capac.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capmult-941dab0dd4ce52a9593d63e1f410c67a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capmult.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capmultcaps-d44dead9525491af34ff19e86d22f7c2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capmultcaps.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capmultfreq-e4a73267546a34e66fe2fb317cb489c0.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capmultfreq.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cappar-05d479f614968dd72cefa3b14f211b45.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cappar.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capseries-ed536ca404506c59237bb1ac36e7532a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\capseries.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2-db819acae94974e4190fc575527ce813.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2imp-d2b0ecf032506908e3bcff6fcea41d00.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2imp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2impn-18d3d71997f4faf3bd07bbf7509ce5cc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2impn.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2n-99b7ad770533e9cb60a79d4dfd6d477b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cc2n.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccdiff-2015640f86bc7e32704617dc3fa05032.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccdiff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cciamp-2d7cfe665f7ed010cb5c5f4603ad3c1d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cciamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccinductor-8ac9ef019bb339c3c1a8820287b51cd8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccinductor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccint-e6ceeb6e183c7e5d87a6132a495a1f02.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccint.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccitov-a0de80a5308d285e64f7a434e4c23083.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccitov.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccvccs-7af3370bc75eb3e504623001d913720a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ccvccs.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ceamp-894af101de156f5b35257ac37d90634a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ceamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\classd-d719d95d1f5874eb8ef66affb52a9f39.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\classd.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\clockedsrff-7b70fd276f36ce50f98a06164113fcca.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\clockedsrff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosff-6ee868783b089440c7a6db75582b9519.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosinverter-0bc6ed9d549232f1b411937c66411269.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosinverter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosinvertercap-d90353ed8b63b0f43c116efc6ad33ad9.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosinvertercap.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosinverterslow-03108a4ab240715f6efca819f1da13b4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosinverterslow.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosmsff-2e3e8d908d5403723015fdf8cf0042f4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosmsff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosnand-a8df5b827f82d8be394a2067a8afcdf3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosnand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosnor-2d288956ac1094ce5b3649eed1f5d260.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosnor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmostransgate-0516b95c5b700cbc147d5f7c4357ba96.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmostransgate.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosxor-1e8d660e3d1a8169a9b0f6491860e1f1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cmosxor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\colpitts-e31033e9e8d602eda9aeebd5b615d25b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\colpitts.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\counter-c80c2432ac59912c1b01336e968cf5b3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\counter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\counter8-f04c36d07347e765be826ee8317135af.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\counter8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\coupled1-6768b3db3f2ceecb1d50af43f32f2913.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\coupled1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\coupled2-6ee536490a2b8dcdfac338fc4eb4e4f5.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\coupled2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\coupled3-3876994d08e572d6d3dc285034afb511.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\coupled3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\crossover-415b9724ef54ae4c2a0f548738fd720f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\crossover.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cube-8352bee003ca2c3f10665045d97c26eb.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\cube.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\currentsrc-f3e47988b5eba8aa0569b8aaca9c32f7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\currentsrc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\currentsrcelm-b4d462648aa6b0e670c1d965e854f444.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\currentsrcelm.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\currentsrcramp-1f4a51dc2db5e03ca154bcf075b20e6b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\currentsrcramp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dac-f2695646629b97b83133826aaed3d45b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dac.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\darlington-76b0e3d3d834fffeebb8757f21467f8f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\darlington.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dcrestoration-ab24682f9cd8b303fa3df31bb4db6b2f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dcrestoration.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\deccounter-7fbdf7c3bf473e090866e7c96bec7004.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\deccounter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\decoder-b0e326fe51c4f95dc14de38151c46115.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\decoder.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\default-e071963b70a9aee4262e574ccd63b5e9.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\default.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\delayrc-3055ec6d957e60394a23aebcba0c6c7f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\delayrc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\deltasigma-aac67f96f9f660c459b86e22da608c36.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\deltasigma.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diff-ca7898af0141bd4cbef9bb645f0296c0.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\digcompare-9d368e864c178b3f76d228ef357829ab.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\digcompare.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\digsine-fe3af13b8ad45acdf2b57b0872aed623.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\digsine.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodeclip-3a8970ec941e216d2b2086e78d4c23c5.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodeclip.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodecurve-51f8cd2aa0e860264b0c945ef9ccb54e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodecurve.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodelimit-61c8df2bf7e508c99de496ff1fd739f4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodelimit.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodevar-eb40cd78a19bb2a6a540805442a87c18.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\diodevar.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\divideby2-91781df6c5785588a28f7e6b6b9875b4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\divideby2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\divideby3-31181aa4bcf7bb89295c83896753bcf1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\divideby3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dram-75156c82a77afa1171e5a1f43419913e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dram.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dtlinverter-bb89ddcb333fe6a01695cb798bd33515.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dtlinverter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dtlnand-872f63dac47d0ab8eb3835b67f5cdf9f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dtlnand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dtlnor-e94739df4b1826982838554c8500defd.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\dtlnor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\eclnor-94bdab38467be6524eaa18ca9403aaf4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\eclnor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\eclosc-93128f887a73a12495a67a6f2d7be483.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\eclosc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\edgedff-33788c5d7b434d75481f4f9d9db2f701.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\edgedff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-hipass-f8e008d17ddc23c55d32047c6d58f4d5.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-hipass-l-7f1de4cf8dc92d434842ad7275d0703c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-hipass-l.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-hipass.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-lopass-4ea7c8c1223d3d2278229f27d7672955.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-lopass-l-dd2b8002207286ec223bb9a2f6b86407.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-lopass-l.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-lopass.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-vcvs-hipass-177073396b57a202e67bfa91de51fef1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-vcvs-hipass.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-vcvs-lopass-b0485e214ba17ed295e5f8e5b8f3342c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\filt-vcvs-lopass.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\flashadc-c1730a6bf52b4e0f57ee6a470eded44c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\flashadc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\follower-371f11f18d4936ed41ea2d2050689be2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\follower.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\freqdouble-9a64bc342d3f8705bcef62c9be3d1a02.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\freqdouble.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\fulladd-cba12dae7ead023ef4b2ea2315ff9164.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\fulladd.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\fullrect-ee43bd358a804b3e65d339a372dc78f2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\fullrect.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\fullrectf-dfa4b93f876d9a3719d13d0a741beeb8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\fullrectf.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\graycode-821ea129a1a41ed455aa50c9b7b51bd4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\graycode.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\grid-c469b78f7c9688794a658ef7f42719f7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\grid.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\grid2-d6005ca7a536d590e75a493407986b2e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\grid2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\gyrator-2b999033cfb524d3737af1601d360685.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\gyrator.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\halfadd-6b0a9dea5cc32df9a0db02ce827e0b03.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\halfadd.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\hartley-b0a60684dc8d53b1af7a141199f36b24.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\hartley.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\hfadc-7b9c9b516bed4f1f287575ab704fbb98.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\hfadc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\howland-e6ba43ffdec0016bf855a4a100567a3a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\howland.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\impedance-40ec1d91d4f4230739c9a0a85e973e41.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\impedance.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indmultfreq-bab0e8c7d5f6e41bc3bc5fc174088f4d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indmultfreq.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indmultind-7cee8677f14927bd19ff3576023990ce.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indmultind.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indpar-5ff98cd322b9ff6e8d44981b7e6d321e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indpar.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indseries-9341e857a89bc704036245b5b97d47ff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\indseries.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\induct-f710ef4199bf99c6fb47d6bad9181275.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\induct.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductac-8a7d3bbd6b22ca14d03487ee75eb2c68.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductac.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductkick-6eb93c51f3cdb04c71b1b7560aa17260.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductkick-block-c079c884ef4be589d9375715419bec8f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductkick-block.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductkick-snub-3ef2079b3ca7a7d588243b41e0f6d75e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductkick-snub.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inductkick.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inv-osc-ea90df68419ee691098956b536cdae72.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\inv-osc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\invertamp-04fd1d828f5ca9fcec41966ffa064651.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\invertamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\itov-3784b7838742838dab2856a2a0232387.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\itov.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetamp-43dcc7fa4368bd10fd40430462e33f0b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetcurrentsrc-513ab501d68e7cfc36e1f63aa9a3219c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetcurrentsrc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetfollower-2337968572b4f44a33a3f0825010b923.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetfollower-nooff-3aae2c805f34851e741d684848baa84e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetfollower-nooff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jfetfollower.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jkff-edf23cb4ccb9e65ba9fb0728b24d8f7e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\jkff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\johnsonctr-3ddcf2de18df2a5ae4647981ace37fca.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\johnsonctr.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ladder-c8466bb957f910cd9cc00c4f570c90c8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ladder.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\leadingedge-af35018ee2b8e144defadf5f3aba9679.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\leadingedge.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ledflasher-ee7b1967a9b7506c7abc2eb5ad18c2ed.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ledflasher.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lissa-bbff2254b4d76071403e6f5520cba1a7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lissa.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\logconvert-4f7dbd2b445198fc0597da63a0bdbaaa.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\logconvert.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\longdist-6d5dacfd8337cac34488846f2c84a585.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\longdist.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-critical-d442d6f494a07712a68df337ee13f754.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-critical.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-dc5f734b723e8b019fa41a7f2987ca21.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-parallel-6a6e3c835f686402f25f81fb5bb33aea.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-parallel.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-parallel_code-6a6e3c835f686402f25f81fb5bb33aea.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc-parallel_code.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\lrc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\majority-aa3b86fc8445b74231424f50a8f58612.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\majority.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\masterslaveff-e08732f2c91df71002f472fe1ea1b676.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\masterslaveff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mirror-839cfc255940b9afc9ab46bab9904464.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mirror.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\moscurrentramp-5589f06bf75b8c22aeba9f081b97e7d1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\moscurrentramp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\moscurrentsrc-f9a853e63aec2e0af5fc1b9960f04521.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\moscurrentsrc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosfetamp-378e12f6fe0bfd84a04877347d228745.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosfetamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosfollower-e4eb0368b8bce885d31440e4d5a1f176.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosfollower.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosmirror-1971b2d52c8243fae3610737ce28d110.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosmirror.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosswitch-e53ad3a2f3551c0628a6c718c3828bc2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mosswitch.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-ba7dfb003e6dd0bb2475ec35a7e0486d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-crossbar-39a88a0cbc548f85a056e78545ee5e0c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-crossbar.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-sine-c9263a75939b339a4956e7b348fd83f1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-sine.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-sine2-5017e5c4fd20b5b3695083197b98a065.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-sine2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-sine3-64a307cce260e6a5d84540920b73fb50.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-sine3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-square-dd2451c3d30781cbbc5cfae74c62b41c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-square.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-triangle-21fd2af1be1b68141223b9013e17b2fb.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr-triangle.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mr.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\multivib-a-883a7fa1fec15d803bff6e9418f19a0c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\multivib-a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\multivib-bi-2606140828d85551753b12210b663241.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\multivib-bi.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\multivib-mono-348164739607444bbfdf992ddfe07411.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\multivib-mono.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mux-1a7177a0ddf17b0a14f9d133c481590b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mux.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mux3state-e02ba8b9cbe0f3aff674bcbd4f946a1d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\mux3state.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nandff-3422ded1e60abbbcb0b67467237bf50a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nandff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nic-r-79fa8edc82f553634fc83e8d021c0114.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nic-r.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosfet-3551d5a808488491dd479d127758a9ab.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosfet.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosinverter-41dfe158aaaaf1c0f44974c33ceda7ff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosinverter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosinverter2-403e460730b4a5cc1dbce5a0b4aa2504.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosinverter2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosnand-615bbd1360ee7e2577220d54a7418534.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\nmosnand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\norton-7467085c270d608f956a16bc5732c624.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\norton.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\notch-87329b53452899e55dd251444f938434.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\notch.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\npn-e1f55598c25546314135769c58364f0c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\npn.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ohms-4eb4ad364fe01f5583b37c1e77b54251.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ohms.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opamp-135f4a92982ae74c20e20719d79dc4c3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opamp-regulator-7231168f43d1ef110b8b2a08cb62d017.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opamp-regulator.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opampfeedback-a1212967d7e9bd7f36c3aeb059c3746f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opampfeedback.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-47cbfc6f32c201564b2ebda0bed7bb77.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-current-330f0a913565e4363fd83ba98ed681d5.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-current.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-invert-amp-0e0140662da496381c19a455a4504482.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-invert-amp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-slew-b97a06ef218e71f6e9b17f6eaaddc9f2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint-slew.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\opint.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\peak-detect-77dc509843d0e4598fa7a4128d82f069.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\peak-detect.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phasecomp-5977c42fc43a332f60950d41c696aaad.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phasecomp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phasecompint-96be290e88c91cfff4042d54d2f1895e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phasecompint.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phaseseq-3136bf228f9ad1f339df3e115b42119d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phaseseq.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phaseshiftosc-2f11e874820e26bbeebcf55178726566.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phaseshiftosc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phasesplit-cfffc5f5e9739c95440b4ac2eb29530a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\phasesplit.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pll-78fcca4f3a8b8bcb5431ac6e52321204.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pll.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pll2-0aa707e98a38f1d55c48295aa7696118.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pll2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pll2a-dca8dbdd56a8461f02f2e384fd6aed7d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pll2a.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pmosfet-7177af85f7fa7ce99f769b59ac7627ff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pmosfet.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pnp-680fdb852abd594879efcfde37cae6b7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pnp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pot-cd407fbbf2fa5db02269c576fc965eaa.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pot.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\potdivide-0da3f38c5f9dedd363d47d4051e73da8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\potdivide.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\powerfactor1-428bc1b5c32fa3b54cf1580cffe99023.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\powerfactor1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\powerfactor2-f7790152549d8f12311f8cb2a2ee9e24.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\powerfactor2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pushpull-d1d6d0b9e28eae11948333bfdba3044d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pushpull.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pushpullxover-6a8724c468c6cac6af418c8a8189cf2b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\pushpullxover.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\r2rladder-03001994ea38df9b8ff3c70ea3107aa2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\r2rladder.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rectify-d569808ce4da7ecb097c0fffe3d803a4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rectify.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relaxosc-f241cfbfb954d69bb9e51036cfe46282.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relaxosc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relay-102544df6827b563961af6791f9f5cd9.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relay.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayand-d046287d007f6e28fbf9f955ff868ff9.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayctr-49199ae4ffceb167cf4d1e66ecdeb983.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayctr.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayff-c32f56a099e4f637295056782ad98a27.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relaymux-721a5dec28a5e1d81f2a2dc6365f8271.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relaymux.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayor-7ee7e7496af25a77a0d4d02d96957cf0.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relaytff-1b8a055d49aabe2390ebce3ed00dee04.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relaytff.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayxor-b08f8945df5fa67c5d75efa72fe5b20b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\relayxor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\res-par-cd4ffa59ba9603d101694d3104bbe6ae.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\res-par.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\res-series-9c4f5d5251e4a826238e8ff4179e6e57.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\res-series.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\resistors-8db0a10559e015e7bc2d729e7016c194.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\resistors.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ringing-ef348bff8b6c0ed027406d72729ec15c.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ringing.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ringmod-ac406d4db21ee9e883199ddcdce81c04.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ringmod.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rossler-0647d415e1bd0e01c79a57dfcb1986c6.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rossler.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rtlinverter-98d85970ebda5d66ff316197faa29b49.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rtlinverter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rtlnand-f541cd6f078be8af30ba8b322c8c6e5d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rtlnand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rtlnor-784d1c4be71b522e757b321c31b42060.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\rtlnor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\samplenhold-a52f914337c5ff7f53e8e11edd1b4587.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\samplenhold.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\sawtooth-19cd92304adfc4e2358808f471eed44b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\sawtooth.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\schmitt-a6a10ab28cc57daca2e847083dac50fc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\schmitt.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\scr-ee98f0008eafc23f56cac77d99264eae.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\scr.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\scractrig-f0d04cf3981201276ae68ce3b546246d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\scractrig.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\sine-8d3ee2c90143bd98f8d4537217b57392.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\sine.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\sinediode-5a7ae3181f0e8c313f2a3cff1f46bf16.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\sinediode.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\spark-marx-e2fbc5d2587ae1457589098e1b1312b6.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\spark-marx.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\spark-sawtooth-1b73cfaef7d286dd2f28199b33670c67.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\spark-sawtooth.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\spikegen-a1139e21116206eaa7fb6a7877cb4308.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\spikegen.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\switchedcap-b1b2464c12905c93e919e1326f4dba65.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\switchedcap.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\switchfilter-b72f59f0985d319498093997942d2c24.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\switchfilter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\swtreedac-bb8be644ebc85c44260bee8a51bbc028.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\swtreedac.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\synccounter-0decb3687ff3a8950c60f8b71b747617.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\synccounter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tdiode-afdce048a5c27695ccbcd4cacd779895.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tdiode.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tdosc-9fcaf7aba23f7388b8056104ad864eb7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tdosc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tdrelax-6c301f839b6b2524ebf13f8710be8d08.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tdrelax.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tesla-b4a4e80e8da1e367c54db3efcb92b9f7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tesla.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\thevenin-3a6cf50879cd74b84d5df595008bab24.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\thevenin.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tl-0a14df80000ee85d281ad321b976c9e7.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tl.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlfreq-b86ce2fe17ed25e925a76a9f89081866.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlfreq.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tllight-0b7bf2355930b052587cd10e340f3a30.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tllight.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tllopass-35ddc821b6064643f708aa1f84a8a0ec.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tllopass.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmatch1-500285707484f47280c93a6cf8d086d2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmatch1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmatch2-3efdc3b58664961a30b194d45fdb0036.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmatch2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmis1-f74a4416476e6d072c33a7ead22c9339.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmis1.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmismatch-17e4e1a7f90b0dc7a08aabb50efc3610.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlmismatch.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlstand-4ce20d53fd46b9114a2e73f139d590e0.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlstand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlterm-4277fba3374e77f3e6fa4d80d3c196e5.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\tlterm.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\traffic-42515954c3377230131fe85db2690116.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\traffic.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\trans-diffamp-34b163f1ba744dc52868efb02292cf2d.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\trans-diffamp-common-a30b8023a5ce0a74d2090e0c88c34510.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\trans-diffamp-common.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\trans-diffamp-cursrc-085a6f0042837e717efaf87030513f4f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\trans-diffamp-cursrc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\trans-diffamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformer-adad8d7eab34c2eda97323c334398f55.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformer.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformerdc-0708f9f80443ed8691dceb6c4a665890.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformerdc.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformerdown-1da91d7fc9bb0f4f643d0681015e3873.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformerdown.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformerup-612b0e562763ff873c767add69b8e4a4.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transformerup.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transswitch-01c8a599941b3a74c3d1ff9582e86c50.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\transswitch.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\triangle-ebec3d6b2f2507f53d29e086af747270.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\triangle.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\triode-fbddc17037da36d13ac7993f8608808b.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\triode.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\triodeamp-9aa747b857b7a1e91144284b72cce9a3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\triodeamp.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ttlinverter-f33cc9d43b0ee8f1349ea4b2cf9e52ee.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ttlinverter.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ttlnand-11b83101fd8f9f7ef56800399d7a0154.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ttlnand.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ttlnor-f369420d09181f0bfce08f713bed006e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\ttlnor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\twint-0d8e947d62b7ff6930ab02f847b2234e.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\twint.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\vco-a96b8fc774102887ec20c1025992cf00.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\vco.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltdivide-fdfee12e1ff84913aaef217d5110adaf.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltdivide.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltdouble-f10e1d6b91513d5dd4706d0c77c7b130.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltdouble.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltdouble2-e784cd21eb1a2c5646e1f12f88911748.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltdouble2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltinvert-5b26cb324014a7f4d7a809ffa81a0c3f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltinvert.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltquad-bde8de68c1bef67c09d3548b6e28d4d8.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\voltquad.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\volttriple-808b70162fd6ebb93e797cd3c0a23528.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\volttriple.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\volume-8e68fa1a9e3b50b7e24156ed161c94e5.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\volume.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\wheatstone-046ee1ea055de44e114c22446ac4d51f.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\wheatstone.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\xor-89848a2d5a83783ca7a24250fae87eca.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\xor.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\xorphasedet-cfa86e3530c7d868aef4096e4b3d6e46.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\xorphasedet.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\zeneriv-395ae5e240f8bc68c097ef1594cce6ef.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\zeneriv.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\zenerref-c4c2c399903f8ae09bf4ae85738d5ad2.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\zenerref.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\zenerreffollow-6c7b8cd27b33fa92688f52c0198685d3.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\circuits\zenerreffollow.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\setuplist-67d47d452dc13ea96d32bbc222b39251.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\setuplist.txt" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\bg_fallback-55829c6af9b9af338904d5a0ed9c191d.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\bg_fallback.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\icon_sprite-555074e93c8d91f9f72d1a211d5a820e.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\icon_sprite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\progress_bar-f2c649fbf555aafd4d55d58040db2990.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\progress_bar.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\slider_handles-18c8427ce2b4db2717a495e43f5b955a.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\slider_handles.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\ui-icons_222222_256x240-4ffd13be9750b79d62db5d2f9670150c.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\ui-icons_454545_256x240-db2a5b254322e84a22f467b70714c5e8.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\Faraday\style\images\ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-533f47cc94a80110e125b1155b1eec92.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-533f47cc94a80110e125b1155b1eec92.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-5e13fc60bf06ba715278c7fac3484f7a.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-5e13fc60bf06ba715278c7fac3484f7a.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-892ae5e98c9a17d66ba2677d54129fed.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-892ae5e98c9a17d66ba2677d54129fed.css.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-8f92dc1887d9fe30da9e2965fc39d5f3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\application-8f92dc1887d9fe30da9e2965fc39d5f3.js.gz" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont-005a48840efd62d3930aa7c5f761c438.woff" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont-20c9c5850d0e36c10574c9bd7225bed9.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont-347222e8281e757082f8c97172fb7bef.svgz" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont-4e8a0fef19937d0b97a3210a35fbfe0d.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont-ea7524141a8a91bdd7d3b1decee250ce.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont.svgz" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\font\fontawesome-webfont.woff" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" afterPath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/reboot-landing.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/global/reboot-landing.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/theme.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/global/theme.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/subscription.rb" afterPath="$PROJECT_DIR$/../../../models/subscription.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/user.rb" afterPath="$PROJECT_DIR$/../../../models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/labs/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/labs/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_footer.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_footer.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../lib/tasks/create_circuits.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/.rakeTasks" afterPath="$PROJECT_DIR$/../../../../.idea/.rakeTasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_subheader.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_subheader.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/help.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/help.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/edit.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/environments/production.rb" afterPath="$PROJECT_DIR$/../../../../config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/routes.rb" afterPath="$PROJECT_DIR$/../../../../config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/schema.rb" afterPath="$PROJECT_DIR$/../../../../db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/seeds.rb" afterPath="$PROJECT_DIR$/../../../../db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../lib/tasks/sample_data.rake" afterPath="$PROJECT_DIR$/../../../../lib/tasks/sample_data.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/application-3e500e8060d5cdf95c76639486624e5f.js.gz" afterPath="$PROJECT_DIR$/../../../../public/assets/application-3e500e8060d5cdf95c76639486624e5f.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/application-ae325b3a232783c093be61c1545e6af3.css.gz" afterPath="$PROJECT_DIR$/../../../../public/assets/application-ae325b3a232783c093be61c1545e6af3.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/application.css.gz" afterPath="$PROJECT_DIR$/../../../../public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/application.js.gz" afterPath="$PROJECT_DIR$/../../../../public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/models/badge_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/models/badge_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CirSim.js" afterPath="$PROJECT_DIR$/CirSim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/Faraday/setuplist.txt" afterPath="$PROJECT_DIR$/assets/Faraday/setuplist.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/CircuitElement.js" afterPath="$PROJECT_DIR$/elms/CircuitElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/ResistorElm.js" afterPath="$PROJECT_DIR$/elms/ResistorElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/OpAmpElm.js" afterPath="$PROJECT_DIR$/elms/OpAmpElm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/raphael-2.1.0.js" afterPath="$PROJECT_DIR$/lib/raphael-2.1.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style/custom.css" afterPath="$PROJECT_DIR$/style/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/EditDialog.js" afterPath="$PROJECT_DIR$/ui/EditDialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/initialization.js" afterPath="$PROJECT_DIR$/../Newton/initialization.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../application.js" afterPath="$PROJECT_DIR$/../application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/plans.css.scss" afterPath="$PROJECT_DIR$/../../stylesheets/global/plans.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/lessons.css.scss" afterPath="$PROJECT_DIR$/../../stylesheets/lessons.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/labs.css.scss" afterPath="$PROJECT_DIR$/../../stylesheets/labs.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/production.log" afterPath="$PROJECT_DIR$/../../../../log/production.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/test.log" afterPath="$PROJECT_DIR$/../../../../log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/application.js" afterPath="$PROJECT_DIR$/../../../../public/assets/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/manifest.yml" afterPath="$PROJECT_DIR$/../../../../public/assets/manifest.yml" />
     </list>
     <ignored path="Faraday.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -684,77 +54,34 @@
       <file leaf-file-name="CircuitElement.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="740" column="0" selection-start="20267" selection-end="20267" vertical-scroll-proportion="-11.8">
+            <state line="56" column="37" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utility.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utility.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="219" column="27" selection-start="4658" selection-end="4658" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResistorElm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elms/ResistorElm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="22" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="974" selection-end="974" vertical-scroll-proportion="0.66263443">
+            <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ComponentGenerator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ui/ComponentGenerator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="10" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="0" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navlink_background.gif" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style/navlink_background.gif">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style/custom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="14" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroundElm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elms/GroundElm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="957" selection-end="957" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TextElm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elms/TextElm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="1" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0">
+            <state line="16" column="31" selection-start="475" selection-end="475" vertical-scroll-proportion="0.43589744">
               <folding />
             </state>
           </provider>
@@ -763,7 +90,7 @@
       <file leaf-file-name="CirSim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CirSim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="792" column="12" selection-start="23608" selection-end="23608" vertical-scroll-proportion="0.0">
+            <state line="18" column="48" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -794,22 +121,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/raphael.js" />
-        <option value="$PROJECT_DIR$/elms/TransistorElm.js" />
-        <option value="$PROJECT_DIR$/style/custom.css" />
-        <option value="$PROJECT_DIR$/assets/Faraday/elms/CircuitElement.js" />
         <option value="$PROJECT_DIR$/assets/Faraday/elms/ResistorElm.js" />
         <option value="$PROJECT_DIR$/assets/Faraday/elms/WireElm.js" />
         <option value="$PROJECT_DIR$/assets/Faraday/elms/InductorElm.js" />
         <option value="$PROJECT_DIR$/assets/Faraday/elms/CapacitorElm.js" />
         <option value="$PROJECT_DIR$/assets/Faraday/elms/VoltageElm.js" />
         <option value="$PROJECT_DIR$/elms/GroundElm.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/elms/ResistorElm.js" />
         <option value="$PROJECT_DIR$/utility.js" />
+        <option value="$PROJECT_DIR$/ui/EditDialog.js" />
+        <option value="$PROJECT_DIR$/elms/OpAmpElm.js" />
         <option value="$PROJECT_DIR$/elms/CircuitElement.js" />
-        <option value="$PROJECT_DIR$/CirSim.js" />
+        <option value="$PROJECT_DIR$/style/custom.css" />
+        <option value="$PROJECT_DIR$/assets/Faraday/setuplist.txt" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/CirSim.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -883,6 +210,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="style" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -898,6 +239,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -919,15 +264,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="69" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="713" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="67" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="62" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -1020,10 +365,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18432671" sideWeight="0.4960464" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02202643" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1222467" sideWeight="0.49182922" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15076436" sideWeight="0.62995595" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15076436" sideWeight="0.2400881" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17951542" sideWeight="0.6035846" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15076436" sideWeight="0.55837005" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15076436" sideWeight="0.1486784" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852423" sideWeight="0.6035846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819188" sideWeight="0.4900881" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.39272535" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1032,6 +376,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21585903" sideWeight="0.49182922" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.88105726" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1093,44 +438,24 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/elms/WireElm.js">
+    <entry file="file://$PROJECT_DIR$/elms/OpAmpElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="68" selection-start="569" selection-end="569" vertical-scroll-proportion="0.0" />
+        <state line="87" column="6" selection-start="2389" selection-end="2389" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elms/InductorElm.js">
+    <entry file="file://$PROJECT_DIR$/elms/Switch2Elm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="962" selection-end="962" vertical-scroll-proportion="0.0" />
+        <state line="92" column="2" selection-start="2634" selection-end="2634" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+    <entry file="file://$PROJECT_DIR$/style/Aristo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1112" column="24" selection-start="18863" selection-end="18863" vertical-scroll-proportion="0.33333334" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.8846154" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elms/CurrentElm.js">
+    <entry file="file://$PROJECT_DIR$/lib/jquery-1.7.2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/VoltageElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="21" selection-start="5058" selection-end="5058" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/CapacitorElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="23" selection-start="4605" selection-end="4605" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="0" selection-start="2848" selection-end="2848" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/navlink_background.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
+        <state line="5084" column="55" selection-start="193030" selection-end="193030" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/GroundElm.js">
@@ -1140,47 +465,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/TextElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="1" selection-start="576" selection-end="576" vertical-scroll-proportion="0.0" />
+        <state line="23" column="1" selection-start="574" selection-end="574" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="67" column="0" selection-start="842" selection-end="842" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utility.js">
+    <entry file="file://$PROJECT_DIR$/assets/Faraday/circuits/3-cgand.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="219" column="27" selection-start="4658" selection-end="4658" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="17" column="19" selection-start="413" selection-end="413" vertical-scroll-proportion="0.46314102" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/elms/ResistorElm.js">
+    <entry file="file://$PROJECT_DIR$/assets/Faraday/setuplist.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="22" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="1" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/Faraday/circuits/default.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="154" selection-end="154" vertical-scroll-proportion="0.16346154" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/Faraday/circuits/lrc.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="740" column="0" selection-start="20267" selection-end="20267" vertical-scroll-proportion="-11.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CirSim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="792" column="12" selection-start="23608" selection-end="23608" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="56" column="37" selection-start="1715" selection-end="1715" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="974" selection-end="974" vertical-scroll-proportion="0.66263443">
+        <state line="0" column="15" selection-start="15" selection-end="15" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ui/ComponentGenerator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="10" selection-start="661" selection-end="661" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CirSim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="48" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="31" selection-start="475" selection-end="475" vertical-scroll-proportion="0.43589744">
           <folding />
         </state>
       </provider>

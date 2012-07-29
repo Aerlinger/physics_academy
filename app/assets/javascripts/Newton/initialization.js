@@ -59,14 +59,18 @@ function init() {
       world.CreateBody(bodyDef).CreateFixture(fixDef);
    }
    
-   //setup debug draw
-   var debugDraw = new b2DebugDraw();
-debugDraw.SetSprite(document.getElementById("canvas_box2d").getContext("2d"));
-debugDraw.SetDrawScale(30.0);
-debugDraw.SetFillAlpha(0.5);
-debugDraw.SetLineThickness(1.0);
-debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
-world.SetDebugDraw(debugDraw);
+    //setup debug draw
+    var debugDraw = new b2DebugDraw();
+    var canvas = document.getElementById("canvas_box2d");
+    if(!canvas)
+        return;
+
+    debugDraw.SetSprite(canvas.getContext("2d"));
+    debugDraw.SetDrawScale(30.0);
+    debugDraw.SetFillAlpha(0.5);
+    debugDraw.SetLineThickness(1.0);
+    debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
+    world.SetDebugDraw(debugDraw);
    
    window.setInterval(update, 1000 / 60);
    

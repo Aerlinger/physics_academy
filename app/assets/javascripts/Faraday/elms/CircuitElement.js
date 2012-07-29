@@ -671,17 +671,17 @@ CircuitElement.drawCircle = function (x0, y0, r, color) {
         paper.arc(x0, y0, r, 0, 2*Math.PI, true);
         paper.stroke();
     paper.closePath();
+
 //    circ.attr({
 //        stroke:Color.color2HexString(Settings.POST_COLOR),
 //        'stroke-width':Settings.LINE_WIDTH
 //        //'fill-opacity':0
 //    });
 
-    return circ;
+    //return circ;
 };
 
 CircuitElement.drawThickLine = function (x, y, x2, y2, color) {
-    var pathName = "M " + x + " " + y + " l " + (x2 - x) + " " + (y2 - y);
 
     paper.strokeStyle = (color) ? Color.color2HexString(color) : CircuitElement.color;
     paper.beginPath();
@@ -689,16 +689,15 @@ CircuitElement.drawThickLine = function (x, y, x2, y2, color) {
         paper.lineTo(x2, y2);
         paper.stroke();
     paper.closePath();
-    //var newLine = paper.path(pathName);
 
-    //var line_color = (color) ? Color.color2HexString(color) : CircuitElement.color;
-
+//    var pathName = "M " + x + " " + y + " l " + (x2 - x) + " " + (y2 - y);
+//    var newLine = paper.path(pathName);
+//    var line_color = (color) ? Color.color2HexString(color) : CircuitElement.color;
 //    newLine.attr({
 //        'stroke':Color.color2HexString(color),
 //        'stroke-width':Settings.LINE_WIDTH
 //    });
-
-    //return newLine;
+//    return newLine;
 };
 
 CircuitElement.drawThickLinePt = function (pa, pb, color) {

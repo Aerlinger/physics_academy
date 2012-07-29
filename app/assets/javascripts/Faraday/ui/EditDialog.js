@@ -63,7 +63,7 @@ function EditDialog(ce) {
     // ===========================
     var applyHTML = createDivButtonHTML("Apply", "applybtn");
     $('#edit_pane').append(applyHTML);
-    $("#applybtn").button();
+    //$("#applybtn").button();
     self = this;
 
     $("#applybtn").click(function () {

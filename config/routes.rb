@@ -10,6 +10,9 @@ PhysicsAcademy::Application.routes.draw do
 
   root to: 'static_pages#home'
 
+  resources :circuit_simulations
+  resources :circuit_elements
+
   resources :users
   resources :lessons do
     member { post :vote }

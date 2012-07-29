@@ -84,8 +84,8 @@ OpAmpElm.prototype.draw = function () {
     CircuitElement.drawThickPolygonP(this.triangle, this.needsHighlight() ? CircuitElement.selectColor : CircuitElement.lightGrayColor);
     //g.setFont(plusFont);
 
-    this.drawCenteredText("-", this.textp[0].x + 3, this.textp[0].y + 8, true).attr({'font-weight':'bold', 'font-size':17});
-    this.drawCenteredText("+", this.textp[1].x + 3, this.textp[1].y + 10, true).attr({'font-weight':'bold', 'font-size':14});
+    //this.drawCenteredText("-", this.textp[0].x + 3, this.textp[0].y + 8, true).attr({'font-weight':'bold', 'font-size':17});
+    //this.drawCenteredText("+", this.textp[1].x + 3, this.textp[1].y + 10, true).attr({'font-weight':'bold', 'font-size':14});
 
     color = this.setVoltageColor(this.volts[2]);
     CircuitElement.drawThickLinePt(this.lead2, this.point2, color);

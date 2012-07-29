@@ -7,11 +7,11 @@
 #toolbar_buttons {
   list-style: none;
   float: left;
+  margin: 0;
 }
 
 #toolbar li {
   text-align: center;
-
   font-weight: bold;
   background: #CCC;
   border: 1px solid black;
@@ -46,10 +46,6 @@
   color: gray;
 }
 
-#sitename, #sitename a {
-  font-weight: bold;
-}
-
 #edit_pane {
   clear: both;
 /*padding: .4em;*/
@@ -59,7 +55,8 @@
 #workspace {
   float: left;
   width: 70%;
-  height: 700px;
+  height: 850px;
+  margin: .25em;
 }
 
 #circuit_presets {
@@ -72,14 +69,25 @@
   background-color: #333;
 }
 
-.circuit_preset_link {
-  color: #cedff5;
-  text-decoration: none;
+
+a:hover {
+  text-decoration: underline;
+  color: #fffffb;
 }
 
-.circuit_preset_link:hover {
-  color: #FFF;
-  text-decoration: underline;
+.green, .green a {
+  text-decoration: none;
+  color: #288000;
+}
+
+.yellow, .yellow a {
+  text-decoration: none;
+  color: #ddc122;
+}
+
+.red, .red a {
+  text-decoration: none;
+  color: #cc0002;
 }
 
 

@@ -34,7 +34,8 @@
           -->
 
           <div class="plan-actions">
-            <a href="javascript:;" class="btn">Start &raquo;</a>
+            <%= link_to "Start &raquo;".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn" %>
+            <!-- <a href="javascript:;" class="btn">Start &raquo;</a> -->
           </div> <!-- /plan-actions -->
 
         </div> <!-- /plan -->

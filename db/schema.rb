@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120728171649) do
+ActiveRecord::Schema.define(:version => 20120729192022) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -28,6 +28,34 @@ ActiveRecord::Schema.define(:version => 20120728171649) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "lesson_id"
+  end
+
+  create_table "circuit_elements", :force => true do |t|
+    t.string   "name"
+    t.string   "token_character"
+    t.integer  "x1"
+    t.integer  "y1"
+    t.integer  "x2"
+    t.integer  "y2"
+    t.integer  "flags"
+    t.text     "params"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "circuit_simulation_id"
+  end
+
+  create_table "circuit_simulations", :force => true do |t|
+    t.string   "name_unique"
+    t.string   "title"
+    t.string   "description"
+    t.integer  "flags"
+    t.float    "time_step"
+    t.float    "sim_speed"
+    t.float    "current_speed"
+    t.float    "voltage_range"
+    t.float    "power_range"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "lessons", :force => true do |t|
