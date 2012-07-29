@@ -46,6 +46,14 @@ $(document).ready(function (e) {
 
     // Create the context for rendering:
     var className = document.getElementById('canvas_container');
+
+    // If we can't load the canvas do nothing:
+    if(!className) {
+        console.log("Couldn't load: " + className);
+        return;
+    }
+
+
     paper = className.getContext("2d");
     paper.lineWidth = Settings.LINE_WIDTH;
     paper.lineCap   = "round";

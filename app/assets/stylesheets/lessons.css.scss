@@ -1,10 +1,48 @@
 /* Lessons */
 
+/* Header */
+
+/*s="subnav" style="margin-top: 10px;">*/
+
+/*<!--*/
+/*<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">*/
+/*<span class="icon-bar"></span>*/
+/*<span class="icon-bar"></span>*/
+/*<span class="icon-bar"></span>*/
+/*</a>-->*/
+
+
+/*<ul class="navbar-inner nav nav-pills" style="padding-top: 5px">*/
+
+.subnav {
+
+  h3 {
+
+    margin: .3em 1em 0em 1em;
+    color: white;
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: black;
+  }
+
+  .nav-pills .active a {
+    background-color: #d3d3d3;
+    color: black;
+  }
+
+}
+
 .lesson-preview-thumbnail {
   background-color: #FFFFFF;
   border: 1px solid black;
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   margin: 3px 10px 3px -2px;
 
   border-radius: 3px;

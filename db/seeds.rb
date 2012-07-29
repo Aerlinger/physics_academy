@@ -61,7 +61,7 @@ create_lesson(title, description, image_url, challenges)
 #################################################################
 # Newtonian Physics II
 #################################################################
-title       = "Newtonian Physics II: \"Newton's laws in action'\""
+title       = "Newtonian Physics II: Newton's laws in action"
 description = "<Description goes here>"
 image_url   = "newtonian_physics_ii.jpg"
 

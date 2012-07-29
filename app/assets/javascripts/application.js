@@ -14,12 +14,17 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-//= require_self
+// require_self
 
 //= require faq
 
 //= require challenge
-//
+
+//= require Newton/Box2dWeb-2_1_a_3
+//= require Newton/initialization
+
+// Faraday is the Javascript Circuit Simulator
+
 //= require Faraday/utility
 //= require Faraday/geom
 //= require Faraday/main
@@ -57,7 +62,6 @@
 //= require Faraday/elms/JFetElm
 //
 //= require Faraday/lib/Font
-//= require Faraday/lib/raphael-2.1.0
 //
 //= require Faraday/ui/ComponentGenerator
 //= require Faraday/ui/EditDialog
