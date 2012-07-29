@@ -414,7 +414,7 @@ CirSim.readOptions = function (st) {
 /** Retrieves string data from a circuit text file (via AJAX GET) */
 CirSim.readCircuitFromFile = function (circuitFileName, retain) {
 
-    var result = $.get(asset_path + '/circuits/'+circuitFileName, function (b) {
+    var result = $.get(js_asset_path + 'circuits/'+circuitFileName, function (b) {
 
         if (!retain)
             CirSim.clearAll();

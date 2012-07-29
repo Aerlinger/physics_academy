@@ -22,8 +22,6 @@
 //= require Newton/Box2dWeb-2_1_a_3
 //= require Newton/initialization
 
-// Faraday is the Javascript Circuit Simulator
-
 //= require Faraday/utility
 //= require Faraday/geom
 //= require Faraday/main

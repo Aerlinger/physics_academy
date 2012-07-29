@@ -666,8 +666,7 @@ CircuitElement.prototype.drawCoil = function (hs, p1, p2, v1, v2) {
 CircuitElement.drawCircle = function (x0, y0, r, color) {
 
     paper.beginPath();
-        //paper.moveTo(x0, y0);
-        //paper.strokeStyle = Color.color2HexString(color);
+        paper.strokeStyle = Color.color2HexString(color);
         paper.arc(x0, y0, r, 0, 2*Math.PI, true);
         paper.stroke();
     paper.closePath();
@@ -677,8 +676,7 @@ CircuitElement.drawCircle = function (x0, y0, r, color) {
 //        'stroke-width':Settings.LINE_WIDTH
 //        //'fill-opacity':0
 //    });
-
-    //return circ;
+//    return circ;
 };
 
 CircuitElement.drawThickLine = function (x, y, x2, y2, color) {
