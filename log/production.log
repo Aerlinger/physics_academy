@@ -5129,6 +5129,7 @@ ActiveRecord::StatementInvalid (Could not find table 'lessons'):
   app/controllers/lessons_controller.rb:4:in `index'
 
 
+<<<<<<< HEAD
 Connecting to database specified by database.yml
 Compiled jquery.js  (3ms)  (pid 8308)
 Compiled jquery_ujs.js  (0ms)  (pid 8308)
@@ -5987,3 +5988,5 @@ Compiled lessons.css  (6ms)  (pid 5524)
 Compiled partials/_base.css  (2ms)  (pid 5524)
 Compiled application.css  (1382ms)  (pid 5524)
 Connecting to database specified by database.yml
+=======
+>>>>>>> c3ebe2f42dd344ccfe7faaa1bf4ec0d0068a5469
