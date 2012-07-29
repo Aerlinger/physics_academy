@@ -1,47 +1,47 @@
 ### setuplist.txt first line must be a comment
 +Basics
 ohms.txt Ohm's Law
-default.txt Default
-resistors.txt Resistors
-cap.txt Capacitor
-induct.txt Inductor
-lrc.txt LRC Circuit
-voltdivide.txt Voltage Divider
+$default.txt Default
+$resistors.txt Resistors
+$cap.txt Capacitor
+$induct.txt Inductor
+$lrc.txt LRC Circuit
+$voltdivide.txt Voltage Divider
 pot.txt Potentiometer
 potdivide.txt Potentiometer Divider
-thevenin.txt Thevenin's Theorem
->norton.txt Norton's Theorem
+$thevenin.txt Thevenin's Theorem
+$norton.txt Norton's Theorem
 -
 +A/C Circuits
-capac.txt Capacitor
-inductac.txt Inductor
-capmultcaps.txt Caps of Various Capacitances
-capmultfreq.txt Caps w/ Various Frequencies
-indmultind.txt Inductors of Various Inductances
-indmultfreq.txt Inductors w/ Various Frequencies
-impedance.txt Impedances of Same Magnitude
-res-series.txt Series Resonance
-res-par.txt Parallel Resonance
+$capac.txt Capacitor
+$inductac.txt Inductor
+$capmultcaps.txt Caps of Various Capacitances
+$capmultfreq.txt Caps w/ Various Frequencies
+$indmultind.txt Inductors of Various Inductances
+$indmultfreq.txt Inductors w/ Various Frequencies
+$impedance.txt Impedances of Same Magnitude
+$res-series.txt Series Resonance
+$res-par.txt Parallel Resonance
 -
 +Passive Filters
-filt-hipass.txt High-Pass Filter (RC)
-filt-lopass.txt Low-Pass Filter (RC)
-filt-hipass-l.txt High-Pass Filter (RL)
-filt-lopass-l.txt Low-Pass Filter (RL)
-bandpass.txt Band-pass Filter
-notch.txt Notch Filter
-twint.txt Twin-T Filter
-crossover.txt Crossover
-butter10lo.txt Butterworth Low-Pass (10 pole)
-besselbutter.txt Bessel vs Butterworth
-ringing.txt Band-pass with Ringing
+$filt-hipass.txt High-Pass Filter (RC)
+$filt-lopass.txt Low-Pass Filter (RC)
+$filt-hipass-l.txt High-Pass Filter (RL)
+$filt-lopass-l.txt Low-Pass Filter (RL)
+$bandpass.txt Band-pass Filter
+$notch.txt Notch Filter
+$twint.txt Twin-T Filter
+$crossover.txt Crossover
+$butter10lo.txt Butterworth Low-Pass (10 pole)
+$besselbutter.txt Bessel vs Butterworth
+$ringing.txt Band-pass with Ringing
 -
 +Other Passive Circuits
 +Series/Parallel
-indseries.txt Inductors in Series
-indpar.txt Inductors in Parallel
-capseries.txt Caps in Series
-cappar.txt Caps in Parallel
+$indseries.txt Inductors in Series
+$indpar.txt Inductors in Parallel
+$capseries.txt Caps in Series
+$cappar.txt Caps in Parallel
 -
 +Transformers
 transformer.txt Transformer
@@ -62,24 +62,24 @@ relayctr.txt Relay Counter
 -
 3way.txt 3-Way Light Switches
 4way.txt 3- and 4-Way Light Switches
-diff.txt Differentiator
+$diff.txt Differentiator
 wheatstone.txt Wheatstone Bridge
-lrc-critical.txt Critically Damped LRC
+$lrc-critical.txt Critically Damped LRC
 currentsrcelm.txt Current Source
-inductkick.txt Inductive Kickback
-inductkick-snub.txt Blocking Inductive Kickback
+$inductkick.txt Inductive Kickback
+$inductkick-snub.txt Blocking Inductive Kickback
 powerfactor1.txt Power Factor
 powerfactor2.txt Power Factor Correction
-grid.txt Resistor Grid
-grid2.txt Resistor Grid 2
+$grid.txt Resistor Grid
+$grid2.txt Resistor Grid 2
 cube.txt Resistor Cube
 +Coupled LC's
-coupled1.txt LC Modes (2)
-coupled2.txt Weak Coupling
-coupled3.txt LC Modes (3)
-ladder.txt LC Ladder
+$coupled1.txt LC Modes (2)
+$coupled2.txt Weak Coupling
+$coupled3.txt LC Modes (3)
+$ladder.txt LC Ladder
 -
-phaseseq.txt Phase-Sequence Network
+$phaseseq.txt Phase-Sequence Network
 lissa.txt Lissajous Figures
 -
 +Diodes
@@ -96,7 +96,7 @@ zenerreffollow.txt Voltage Reference w/ Follower
 -
 dcrestoration.txt DC Restoration
 inductkick-block.txt Blocking Inductive Kickback
-spikegen.txt Spike Generator
+$spikegen.txt Spike Generator
 +Voltage Multipliers
 voltdouble.txt Voltage Doubler
 voltdouble2.txt Voltage Doubler 2
@@ -112,20 +112,20 @@ ringmod.txt Ring Modulator
 opamp.txt Op-Amp
 opampfeedback.txt Op-Amp Feedback
 +Amplifiers
-amp-invert.txt Inverting Amplifier
-amp-noninvert.txt Noninverting Amplifier
-amp-follower.txt Follower
-amp-diff.txt Differential Amplifier
-amp-sum.txt Summing Amplifier
+$amp-invert.txt Inverting Amplifier
+$amp-noninvert.txt Noninverting Amplifier
+$amp-follower.txt Follower
+$amp-diff.txt Differential Amplifier
+$amp-sum.txt Summing Amplifier
 logconvert.txt Log Amplifier
 classd.txt Class-D Amplifier
 -
 +Oscillators
 relaxosc.txt Relaxation Oscillator
-phaseshiftosc.txt Phase-Shift Oscillator
+$phaseshiftosc.txt Phase-Shift Oscillator
 triangle.txt Triangle Wave Generator
 sine.txt Sine Wave Generator
-sawtooth.txt Sawtooth Wave Generator
+$sawtooth.txt Sawtooth Wave Generator
 vco.txt Voltage-Controlled Oscillator
 rossler.txt Rossler Circuit
 -
@@ -169,8 +169,8 @@ trans-diffamp-common.txt Common-Mode Input
 trans-diffamp-cursrc.txt Common-Mode w/Current Source
 -
 +Push-Pull Follower
-pushpullxover.txt Simple, with distortion
-pushpull.txt Improved
+$pushpullxover.txt Simple, with distortion
+$pushpull.txt Improved
 -
 +Oscillators
 colpitts.txt Colpitts Oscillator
