@@ -142,9 +142,9 @@ howland.txt Howland Current Source
 itov.txt I-to-V Converter
 $opamp-regulator.txt Voltage Regulator
 $opint.txt 741 Internals
-$opint-invert-amp.txt 741 (inverting amplifier)
+opint-invert-amp.txt 741 (inverting amplifier)
 opint-slew.txt 741 Slew Rate
-$opint-current.txt 741 Current Limits
+opint-current.txt 741 Current Limits
 -
 +Transistors
 npn.txt NPN Transistor
