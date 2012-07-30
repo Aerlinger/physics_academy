@@ -3,8 +3,8 @@
 ohms.txt Ohm's Law
 $default.txt Default
 $resistors.txt Resistors
-$cap.txt Capacitor
-$induct.txt Inductor
+cap.txt Capacitor
+induct.txt Inductor
 $lrc.txt LRC Circuit
 $voltdivide.txt Voltage Divider
 pot.txt Potentiometer
@@ -15,10 +15,10 @@ $norton.txt Norton's Theorem
 +A/C Circuits
 $capac.txt Capacitor
 $inductac.txt Inductor
-$capmultcaps.txt Caps of Various Capacitances
-$capmultfreq.txt Caps w/ Various Frequencies
-$indmultind.txt Inductors of Various Inductances
-$indmultfreq.txt Inductors w/ Various Frequencies
+capmultcaps.txt Caps of Various Capacitances
+capmultfreq.txt Caps w/ Various Frequencies
+indmultind.txt Inductors of Various Inductances
+indmultfreq.txt Inductors w/ Various Frequencies
 $impedance.txt Impedances of Same Magnitude
 $res-series.txt Series Resonance
 $res-par.txt Parallel Resonance
@@ -39,9 +39,9 @@ $ringing.txt Band-pass with Ringing
 +Other Passive Circuits
 +Series/Parallel
 $indseries.txt Inductors in Series
-$indpar.txt Inductors in Parallel
-$capseries.txt Caps in Series
-$cappar.txt Caps in Parallel
+indpar.txt Inductors in Parallel
+capseries.txt Caps in Series
+cappar.txt Caps in Parallel
 -
 +Transformers
 transformer.txt Transformer
@@ -76,8 +76,8 @@ cube.txt Resistor Cube
 +Coupled LC's
 $coupled1.txt LC Modes (2)
 $coupled2.txt Weak Coupling
-$coupled3.txt LC Modes (3)
-$ladder.txt LC Ladder
+coupled3.txt LC Modes (3)
+ladder.txt LC Ladder
 -
 $phaseseq.txt Phase-Sequence Network
 lissa.txt Lissajous Figures
@@ -117,11 +117,11 @@ $amp-noninvert.txt Noninverting Amplifier
 $amp-follower.txt Follower
 $amp-diff.txt Differential Amplifier
 $amp-sum.txt Summing Amplifier
-logconvert.txt Log Amplifier
+$logconvert.txt Log Amplifier
 classd.txt Class-D Amplifier
 -
 +Oscillators
-relaxosc.txt Relaxation Oscillator
+$relaxosc.txt Relaxation Oscillator
 $phaseshiftosc.txt Phase-Shift Oscillator
 triangle.txt Triangle Wave Generator
 sine.txt Sine Wave Generator
@@ -140,11 +140,11 @@ gyrator.txt Gyrator
 capmult.txt Capacitance Multiplier
 howland.txt Howland Current Source
 itov.txt I-to-V Converter
-opamp-regulator.txt Voltage Regulator
-opint.txt 741 Internals
-opint-invert-amp.txt 741 (inverting amplifier)
+$opamp-regulator.txt Voltage Regulator
+$opint.txt 741 Internals
+$opint-invert-amp.txt 741 (inverting amplifier)
 opint-slew.txt 741 Slew Rate
-opint-current.txt 741 Current Limits
+$opint-current.txt 741 Current Limits
 -
 +Transistors
 npn.txt NPN Transistor
@@ -162,7 +162,7 @@ schmitt.txt Schmitt Trigger
 currentsrc.txt Current Source
 currentsrcramp.txt Current Source Ramp
 mirror.txt Current Mirror
-darlington.txt Darlington Pair
+$darlington.txt Darlington Pair
 +Differential Amplifiers
 trans-diffamp.txt Differential Input
 trans-diffamp-common.txt Common-Mode Input
@@ -173,9 +173,9 @@ $pushpullxover.txt Simple, with distortion
 $pushpull.txt Improved
 -
 +Oscillators
-colpitts.txt Colpitts Oscillator
+$colpitts.txt Colpitts Oscillator
 hartley.txt Hartley Oscillator
-eclosc.txt Emitter-Coupled LC Oscillator
+$eclosc.txt Emitter-Coupled LC Oscillator
 -
 -
 +MOSFETs
@@ -193,7 +193,7 @@ cmosinverterslow.txt CMOS Inverter (slow transition)
 cmostransgate.txt CMOS Transmission Gate
 mux.txt CMOS Multiplexer
 samplenhold.txt Sample-and-Hold
-delayrc.txt Delayed Buffer
+$delayrc.txt Delayed Buffer
 leadingedge.txt Leading-Edge Detector
 switchfilter.txt Switchable Filter
 voltinvert.txt Voltage Inverter

@@ -59,17 +59,6 @@
   margin: .25em;
 }
 
-#circuit_presets {
-  float: right;
-  width: 220px;
-  height: 3000px;
-
-  padding: .6em;
-  color: white;
-  background-color: #333;
-}
-
-
 a:hover {
   text-decoration: underline;
   color: #fffffb;
@@ -79,6 +68,22 @@ a:hover {
   text-decoration: none;
   color: #288000;
 }
+
+#circuit_presets {
+  float: right;
+  width: 220px;
+  height: 3000px;
+
+  padding: .6em;
+  color: white;
+  background-color: #333;
+
+
+  .green, .green a {
+    margin: .05em;
+  }
+}
+
 
 .yellow, .yellow a {
   text-decoration: none;

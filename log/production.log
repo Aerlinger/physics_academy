@@ -7799,3 +7799,22 @@ ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfon
 
 
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-30 01:22:22 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 136ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    154:             <li>
+    155:               <div class="testimonial-avatar">
+    156:                 <div class="img">
+    157:                   <%= image_tag "theme/avatar.png", alt: "Thumbnail" %>
+    158:                 </div>
+    159:               </div> <!-- /testimonial-avatar -->
+    160: 
+  app/views/static_pages/home.html.erb:157:in `_app_views_static_pages_home_html_erb__65329626_42597804'
+
+
