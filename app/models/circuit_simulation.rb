@@ -5,7 +5,7 @@ class CircuitSimulation < ActiveRecord::Base
   # Don't need to validate presence of :power_range
   validates_presence_of :flags, :time_step, :sim_speed, :current_speed, :voltage_range
 
-  has_many :circuit_elements
+  has_many :circuit_elements, dependent: :destroy
 
   def dump
 
