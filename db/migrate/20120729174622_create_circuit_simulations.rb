@@ -10,7 +10,6 @@ class CreateCircuitSimulations < ActiveRecord::Migration
       t.float :current_speed
       t.float :voltage_range
       t.float :power_range
-
       t.timestamps
     end
   end

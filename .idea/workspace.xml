@@ -2,299 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed0132d-2d88-4f15-a0ea-0d93e865ffbc" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\public\assets\lightbox\themes\classic-dark\images\loading-5c5a98dbe29c4a5337a7e19e056521f6.gif" afterPath="" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3-cgand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3-cgand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3-cgor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3-cgor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3-f211.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3-f211.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3-f220.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3-f220.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3-f221.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3-f221.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3-invert.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3-invert.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\3way.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/3way.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\4way.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/4way.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555int.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555int.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555lowduty.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555lowduty.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555missing.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555missing.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555monostable.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555monostable.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555pulsemod.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555pulsemod.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555saw.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555saw.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555schmitt.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555schmitt.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555sequencer.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555sequencer.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\555square.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/555square.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\7segdecoder.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/7segdecoder.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\allpass1.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/allpass1.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\allpass2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/allpass2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amdetect.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amdetect.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-dfdx.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-dfdx.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-diff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-diff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-follower.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-follower.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-fullrect.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-fullrect.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-integ.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-integ.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-invert.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-invert.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-noninvert.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-noninvert.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-rect.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-rect.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-schmitt.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-schmitt.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\amp-sum.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/amp-sum.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\bandpass.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/bandpass.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\besselbutter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/besselbutter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\blank.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/blank.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\butter10lo.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/butter10lo.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cap.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cap.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\capac.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/capac.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\capmult.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/capmult.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\capmultcaps.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/capmultcaps.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\capmultfreq.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/capmultfreq.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cappar.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cappar.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\capseries.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/capseries.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cc2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cc2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cc2imp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cc2imp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cc2impn.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cc2impn.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cc2n.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cc2n.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ccdiff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ccdiff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cciamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cciamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ccinductor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ccinductor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ccint.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ccint.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ccitov.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ccitov.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ccvccs.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ccvccs.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ceamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ceamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\classd.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/classd.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\clockedsrff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/clockedsrff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosinverter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosinverter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosinvertercap.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosinvertercap.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosinverterslow.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosinverterslow.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosmsff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosmsff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosnand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosnand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosnor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosnor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmostransgate.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmostransgate.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cmosxor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cmosxor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\colpitts.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/colpitts.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\counter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/counter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\counter8.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/counter8.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\coupled1.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/coupled1.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\coupled2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/coupled2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\coupled3.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/coupled3.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\crossover.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/crossover.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\cube.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/cube.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\currentsrc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/currentsrc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\currentsrcelm.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/currentsrcelm.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\currentsrcramp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/currentsrcramp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\dac.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/dac.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\darlington.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/darlington.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\dcrestoration.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/dcrestoration.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\deccounter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/deccounter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\decoder.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/decoder.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\default.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/default.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\delayrc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/delayrc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\deltasigma.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/deltasigma.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\diff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/diff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\digcompare.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/digcompare.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\digsine.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/digsine.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\diodeclip.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/diodeclip.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\diodecurve.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/diodecurve.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\diodelimit.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/diodelimit.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\diodevar.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/diodevar.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\divideby2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/divideby2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\divideby3.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/divideby3.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\dram.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/dram.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\dtlinverter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/dtlinverter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\dtlnand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/dtlnand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\dtlnor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/dtlnor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\eclnor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/eclnor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\eclosc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/eclosc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\edgedff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/edgedff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\filt-hipass-l.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/filt-hipass-l.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\filt-hipass.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/filt-hipass.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\filt-lopass-l.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/filt-lopass-l.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\filt-lopass.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/filt-lopass.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\filt-vcvs-hipass.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/filt-vcvs-hipass.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\filt-vcvs-lopass.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/filt-vcvs-lopass.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\flashadc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/flashadc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\follower.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/follower.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\freqdouble.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/freqdouble.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\fulladd.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/fulladd.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\fullrect.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/fullrect.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\fullrectf.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/fullrectf.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\graycode.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/graycode.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\grid.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/grid.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\grid2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/grid2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\gyrator.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/gyrator.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\halfadd.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/halfadd.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\hartley.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/hartley.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\hfadc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/hfadc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\howland.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/howland.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\impedance.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/impedance.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\indmultfreq.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/indmultfreq.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\indmultind.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/indmultind.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\indpar.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/indpar.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\indseries.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/indseries.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\induct.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/induct.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\inductac.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/inductac.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\inductkick-block.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/inductkick-block.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\inductkick-snub.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/inductkick-snub.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\inductkick.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/inductkick.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\inv-osc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/inv-osc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\invertamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/invertamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\itov.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/itov.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\jfetamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/jfetamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\jfetcurrentsrc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/jfetcurrentsrc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\jfetfollower-nooff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/jfetfollower-nooff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\jfetfollower.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/jfetfollower.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\jkff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/jkff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\johnsonctr.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/johnsonctr.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ladder.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ladder.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\leadingedge.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/leadingedge.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ledflasher.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ledflasher.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\lissa.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/lissa.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\logconvert.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/logconvert.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\longdist.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/longdist.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\lrc-critical.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/lrc-critical.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\lrc-parallel.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/lrc-parallel.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\lrc-parallel_code.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/lrc-parallel_code.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\lrc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/lrc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\majority.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/majority.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\masterslaveff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/masterslaveff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mirror.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mirror.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\moscurrentramp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/moscurrentramp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\moscurrentsrc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/moscurrentsrc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mosfetamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mosfetamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mosfollower.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mosfollower.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mosmirror.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mosmirror.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mosswitch.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mosswitch.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr-crossbar.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr-crossbar.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr-sine.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr-sine.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr-sine2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr-sine2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr-sine3.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr-sine3.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr-square.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr-square.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr-triangle.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr-triangle.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mr.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mr.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\multivib-a.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/multivib-a.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\multivib-bi.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/multivib-bi.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\multivib-mono.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/multivib-mono.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mux.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mux.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\mux3state.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/mux3state.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\nandff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/nandff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\nic-r.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/nic-r.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\nmosfet.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/nmosfet.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\nmosinverter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/nmosinverter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\nmosinverter2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/nmosinverter2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\nmosnand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/nmosnand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\norton.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/norton.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\notch.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/notch.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\npn.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/npn.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ohms.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ohms.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opamp-regulator.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opamp-regulator.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opampfeedback.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opampfeedback.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opint-current.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opint-current.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opint-invert-amp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opint-invert-amp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opint-slew.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opint-slew.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\opint.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/opint.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\peak-detect.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/peak-detect.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\phasecomp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/phasecomp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\phasecompint.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/phasecompint.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\phaseseq.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/phaseseq.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\phaseshiftosc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/phaseshiftosc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\phasesplit.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/phasesplit.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pll.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pll.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pll2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pll2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pll2a.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pll2a.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pmosfet.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pmosfet.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pnp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pnp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pot.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pot.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\potdivide.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/potdivide.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\powerfactor1.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/powerfactor1.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\powerfactor2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/powerfactor2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pushpull.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pushpull.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\pushpullxover.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/pushpullxover.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\r2rladder.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/r2rladder.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\rectify.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/rectify.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relaxosc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relaxosc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relay.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relay.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relayand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relayand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relayctr.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relayctr.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relayff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relayff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relaymux.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relaymux.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relayor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relayor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relaytff.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relaytff.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\relayxor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/relayxor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\res-par.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/res-par.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\res-series.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/res-series.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\resistors.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/resistors.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ringing.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ringing.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ringmod.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ringmod.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\rossler.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/rossler.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\rtlinverter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/rtlinverter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\rtlnand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/rtlnand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\rtlnor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/rtlnor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\samplenhold.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/samplenhold.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\sawtooth.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/sawtooth.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\schmitt.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/schmitt.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\scr.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/scr.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\scractrig.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/scractrig.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\sine.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/sine.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\sinediode.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/sinediode.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\spark-marx.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/spark-marx.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\spark-sawtooth.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/spark-sawtooth.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\spikegen.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/spikegen.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\switchedcap.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/switchedcap.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\switchfilter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/switchfilter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\swtreedac.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/swtreedac.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\synccounter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/synccounter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tdiode.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tdiode.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tdosc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tdosc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tdrelax.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tdrelax.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tesla.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tesla.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\thevenin.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/thevenin.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tl.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tl.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlfreq.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlfreq.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tllight.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tllight.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tllopass.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tllopass.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlmatch1.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlmatch1.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlmatch2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlmatch2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlmis1.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlmis1.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlmismatch.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlmismatch.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlstand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlstand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\tlterm.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/tlterm.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\traffic.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/traffic.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\trans-diffamp-common.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/trans-diffamp-common.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\trans-diffamp-cursrc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/trans-diffamp-cursrc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\trans-diffamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/trans-diffamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\transformer.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/transformer.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\transformerdc.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/transformerdc.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\transformerdown.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/transformerdown.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\transformerup.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/transformerup.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\transswitch.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/transswitch.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\triangle.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/triangle.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\triode.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/triode.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\triodeamp.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/triodeamp.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ttlinverter.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ttlinverter.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ttlnand.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ttlnand.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\ttlnor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/ttlnor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\twint.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/twint.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\vco.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/vco.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\voltdivide.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/voltdivide.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\voltdouble.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/voltdouble.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\voltdouble2.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/voltdouble2.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\voltinvert.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/voltinvert.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\voltquad.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/voltquad.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\volttriple.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/volttriple.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\volume.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/volume.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\wheatstone.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/wheatstone.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\xor.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/xor.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\xorphasedet.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/xorphasedet.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\zeneriv.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/zeneriv.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\zenerref.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/zenerref.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\circuits\zenerreffollow.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/zenerreffollow.txt" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Faraday\assets\Faraday\setuplist.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/setuplist.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/populate_circuit_simulations.rake" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\images\challenges\bg_full.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\images\header\logo_full.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\db\migrate\20120729192022_add_circuit_simulation_id_to_circuit_element.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\lib\tasks\create_circuits.rake" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/elms/CircuitElement.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/elms/CircuitElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/.idea/workspace.xml" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/wheatstone.txt" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/circuits/wheatstone.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/circuit_element.rb" afterPath="$PROJECT_DIR$/app/models/circuit_element.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/circuit_simulation.rb" afterPath="$PROJECT_DIR$/app/models/circuit_simulation.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/labs/index.html.erb" afterPath="$PROJECT_DIR$/app/views/labs/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120729174622_create_circuit_simulations.rb" afterPath="$PROJECT_DIR$/db/migrate/20120729174622_create_circuit_simulations.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
     </list>
     <ignored path="physics_academy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -325,39 +52,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <file leaf-file-name="circuit_element.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/circuit_element.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="551" selection-end="551" vertical-scroll-proportion="-13.730769">
+            <state line="17" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.41763005">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <file leaf-file-name="circuit_simulation.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/circuit_simulation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="2" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="33" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="38" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5336323">
+            <state line="5" column="2" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -375,6 +82,10 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock:///Rails console: mvc_testing" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Rails console: mvc_testing" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Rails console: mvc_testing" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Rails console: mvc_testing" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Rails console: mvc_testing" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -384,7 +95,6 @@
         <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/users/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120729174622_create_circuit_simulations.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120729190041_add_circuit_simulation_id_to_circuit_elements.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120729173705_create_circuit_elements.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
@@ -392,17 +102,22 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/labs.css.scss" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
-        <option value="$PROJECT_DIR$/app/models/circuit_simulation.rb" />
         <option value="$PROJECT_DIR$/public/500.html" />
         <option value="$PROJECT_DIR$/lib/tasks/create_circuits.rake" />
-        <option value="$PROJECT_DIR$/app/models/circuit_element.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/elms/CircuitElement.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-        <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" />
+        <option value="$PROJECT_DIR$/app/views/labs/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/setup_list.rake" />
+        <option value="$PROJECT_DIR$/db/migrate/20120729174622_create_circuit_simulations.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120730004135_add_params_to_circuit_simulations.rb" />
+        <option value="$PROJECT_DIR$/app/models/circuit_element.rb" />
+        <option value="$PROJECT_DIR$/app/models/circuit_simulation.rb" />
+        <option value="$PROJECT_DIR$/lib/tasks/populate_circuit_simulations.rake" />
       </list>
     </option>
   </component>
@@ -496,6 +211,10 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -508,162 +227,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="environments" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Faraday" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -945,11 +508,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2996795" sideWeight="0.74463516" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2996795" sideWeight="0.7693133" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21781115" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2553648" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2306867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1012,199 +575,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="32" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/_lesson.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="67" selection-start="1302" selection-end="1302" vertical-scroll-proportion="-12.333333" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_subheader.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="305" selection-end="305" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="71" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="67" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/help.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="89" selection-start="77" selection-end="122" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="13" selection-start="1367" selection-end="1367" vertical-scroll-proportion="-23.423077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/lesson.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120728162446_initial_schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="7" selection-start="518" selection-end="540" vertical-scroll-proportion="0.30665162" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="32" selection-start="210" selection-end="210" vertical-scroll-proportion="0.3961165" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="14" selection-start="1756" selection-end="1756" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/style/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="7" selection-start="782" selection-end="1034" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="model://mvc_testing">
-      <provider selected="true" editor-type-id="AssociationsFileEditorProvider">
-        <state>
-          <settings isFieldsVisible="true" isMigrationFieldsVisible="true" isTypicalFieldsVisible="false" isOwnFieldsVisible="false" isHandToolMode="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/challenge.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/home.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/labs.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="16" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="38" selection-start="1631" selection-end="1631" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/challenge.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="595" selection-end="595" vertical-scroll-proportion="-16.346153" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/create_circuits.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="20" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.65163475" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/circuit_simulation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="130" selection-start="175" selection-end="175" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120729192022_add_circuit_simulation_id_to_circuit_element.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120729173705_create_circuit_elements.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120729174622_create_circuit_simulations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="389" selection-end="389" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="1165" selection-end="1165" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/circuit_element.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.ru">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="164" selection-end="164" vertical-scroll-proportion="0.09659091">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="20506" selection-start="479349" selection-end="479349" vertical-scroll-proportion="0.3887195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/elms/CircuitElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="660" column="52" selection-start="17765" selection-end="17765" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/application-b03008212f8b14ef949dc2b804a4e23c.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="62" selection-start="262257" selection-end="262257" vertical-scroll-proportion="0.5960366">
@@ -1221,23 +591,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="30" selection-start="7206" selection-end="7206" vertical-scroll-proportion="-11.153846">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.076233186">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1074" selection-end="1074" vertical-scroll-proportion="0.13602391">
           <folding />
         </state>
       </provider>
@@ -1249,25 +605,268 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="2" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.0">
+        <state line="23" column="9" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/labs/mechanics.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/labs/circuits.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="34" selection-start="529" selection-end="529" vertical-scroll-proportion="-9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/header/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/header/logo-b009506dc6ef6ccc5747d18ac4faf159.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/header/logo_full-83d8b50fc387e08f8e5ac6a3244a3463.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/labs/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="39" selection-start="4141" selection-end="4141" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/mechanics.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/footer/logo_text.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/footer/footer_bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/challenges/bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/challenges/bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/thumbs/default.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/psd/atom.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/psd/atom2.psd">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/Circuits.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/example1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/example2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/example3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/mech_example1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/mech_example2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/labs/mech_example3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/avatar.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/avatar2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/avatar3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/feature-check.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/header-bg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/header-bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/theme/magnifier.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/images/header/logo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="776" selection-end="776" vertical-scroll-proportion="0.0">
+        <state line="32" column="2" selection-start="981" selection-end="981" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js">
+    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="38" selection-start="668" selection-end="668" vertical-scroll-proportion="0.5336323">
+        <state line="6" column="30" selection-start="385" selection-end="390" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1463" selection-end="1463" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120728162446_initial_schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120728171649_add_params_to_subscriptions.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="5" selection-start="135" selection-end="135" vertical-scroll-proportion="0.10493827">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120729173705_create_circuit_elements.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/schema.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="19" selection-start="1387" selection-end="1387" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="model://mvc_testing">
+      <provider selected="true" editor-type-id="AssociationsFileEditorProvider">
+        <state>
+          <settings isFieldsVisible="true" isMigrationFieldsVisible="true" isTypicalFieldsVisible="false" isOwnFieldsVisible="false" isHandToolMode="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120730004135_add_params_to_circuit_simulations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="233" selection-end="233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120729174622_create_circuit_simulations.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="27" selection-start="192" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/circuit_simulation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="2" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/populate_circuit_simulations.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="24" selection-start="432" selection-end="432" vertical-scroll-proportion="0.51589596">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="30" selection-start="7206" selection-end="7206" vertical-scroll-proportion="-11.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/circuit_element.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="336" selection-end="336" vertical-scroll-proportion="0.41763005">
           <folding />
         </state>
       </provider>

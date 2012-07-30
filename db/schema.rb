@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120729192022) do
+ActiveRecord::Schema.define(:version => 20120730004135) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(:version => 20120729192022) do
     t.integer  "y2"
     t.integer  "flags"
     t.text     "params"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
     t.integer  "circuit_simulation_id"
   end
 
@@ -54,8 +54,10 @@ ActiveRecord::Schema.define(:version => 20120729192022) do
     t.float    "current_speed"
     t.float    "voltage_range"
     t.float    "power_range"
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.string   "topic"
+    t.string   "completion_status", :default => "under_development"
   end
 
   create_table "lessons", :force => true do |t|
