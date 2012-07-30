@@ -18,7 +18,6 @@ group :development, :test do
   gem 'annotate', '~>2.4.1.beta'
   gem 'guard-rspec', '1.1.0'
   gem 'guard-bundler'
-  gem 'bullet'
   gem 'ruby-growl'
 end
 
