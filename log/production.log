@@ -6837,3 +6837,964 @@ Compiled labs.css  (9ms)  (pid 4756)
 Compiled lessons.css  (6ms)  (pid 4756)
 Compiled partials/_base.css  (2ms)  (pid 4756)
 Compiled application.css  (1972ms)  (pid 4756)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-29 22:15:04 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 145ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    154:             <li>
+    155:               <div class="testimonial-avatar">
+    156:                 <div class="img">
+    157:                   <%= image_tag "theme/avatar.png", alt: "Thumbnail" %>
+    158:                 </div>
+    159:               </div> <!-- /testimonial-avatar -->
+    160: 
+  app/views/static_pages/home.html.erb:157:in `_app_views_static_pages_home_html_erb__906973837_33185220'
+
+
+Connecting to database specified by database.yml
+Compiled jquery.js  (3ms)  (pid 7468)
+Compiled jquery_ujs.js  (1ms)  (pid 7468)
+Compiled jquery-ui.js  (4ms)  (pid 7468)
+Compiled bootstrap-transition.js  (0ms)  (pid 7468)
+Compiled bootstrap-alert.js  (1ms)  (pid 7468)
+Compiled bootstrap-button.js  (0ms)  (pid 7468)
+Compiled bootstrap-carousel.js  (0ms)  (pid 7468)
+Compiled bootstrap-collapse.js  (0ms)  (pid 7468)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 7468)
+Compiled bootstrap-modal.js  (1ms)  (pid 7468)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 7468)
+Compiled bootstrap-tab.js  (0ms)  (pid 7468)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 7468)
+Compiled bootstrap-popover.js  (0ms)  (pid 7468)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 7468)
+Compiled bootstrap.js  (111ms)  (pid 7468)
+Compiled faq.js  (0ms)  (pid 7468)
+Compiled challenge.js  (159ms)  (pid 7468)
+Compiled Newton/Box2dWeb-2_1_a_3.js  (3ms)  (pid 7468)
+Compiled Newton/initialization.js  (0ms)  (pid 7468)
+Compiled Faraday/utility.js  (0ms)  (pid 7468)
+Compiled Faraday/geom.js  (0ms)  (pid 7468)
+Compiled Faraday/main.js  (0ms)  (pid 7468)
+Compiled Faraday/FindPathInfo.js  (0ms)  (pid 7468)
+Compiled Faraday/CircuitNode.js  (0ms)  (pid 7468)
+Compiled Faraday/RowInfo.js  (0ms)  (pid 7468)
+Compiled Faraday/CirSim.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/CircuitElement.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/core/Diode.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/core/Inductor.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/CapacitorElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/AntennaElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/DiodeElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/InductorElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/ResistorElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/VoltageElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/WireElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/SwitchElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/Switch2Elm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/OutputElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/OpAmpElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/SparkGapElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/CurrentElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/GroundElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/LogicInputElm.js  (1ms)  (pid 7468)
+Compiled Faraday/elms/LogicOutputElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/ProbeElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/SweepElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/TextElm.js  (1ms)  (pid 7468)
+Compiled Faraday/elms/RailElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/TransistorElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/MosfetElm.js  (0ms)  (pid 7468)
+Compiled Faraday/elms/JFetElm.js  (1ms)  (pid 7468)
+Compiled Faraday/lib/Font.js  (0ms)  (pid 7468)
+Compiled Faraday/ui/ComponentGenerator.js  (0ms)  (pid 7468)
+Compiled Faraday/ui/EditDialog.js  (0ms)  (pid 7468)
+Compiled Faraday/ui/EditInfo.js  (0ms)  (pid 7468)
+Compiled Faraday/Scope.js  (0ms)  (pid 7468)
+Compiled application.js  (639ms)  (pid 7468)
+Compiled challenge.css  (25ms)  (pid 7468)
+Compiled global/font-awesome.css  (40ms)  (pid 7468)
+Compiled global/pages/about.css  (4ms)  (pid 7468)
+Compiled global/pages/faq.css  (6ms)  (pid 7468)
+Compiled global/pages/features.css  (4ms)  (pid 7468)
+Compiled global/pages/homepage.css  (21ms)  (pid 7468)
+Compiled global/plans.css  (979ms)  (pid 7468)
+Compiled global/reboot-landing-responsive.css  (14ms)  (pid 7468)
+Compiled global/reboot-landing.css  (47ms)  (pid 7468)
+Compiled global/theme.css  (16ms)  (pid 7468)
+Compiled home.css  (1ms)  (pid 7468)
+Compiled labs.css  (7ms)  (pid 7468)
+Compiled lessons.css  (6ms)  (pid 7468)
+Compiled partials/_base.css  (3ms)  (pid 7468)
+Compiled application.css  (1316ms)  (pid 7468)
+Connecting to database specified by database.yml
+Compiled jquery.js  (1ms)  (pid 3020)
+Compiled jquery_ujs.js  (0ms)  (pid 3020)
+Compiled jquery-ui.js  (53ms)  (pid 3020)
+Compiled bootstrap-transition.js  (1ms)  (pid 3020)
+Compiled bootstrap-alert.js  (0ms)  (pid 3020)
+Compiled bootstrap-button.js  (0ms)  (pid 3020)
+Compiled bootstrap-carousel.js  (0ms)  (pid 3020)
+Compiled bootstrap-collapse.js  (0ms)  (pid 3020)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 3020)
+Compiled bootstrap-modal.js  (0ms)  (pid 3020)
+Compiled bootstrap-scrollspy.js  (1ms)  (pid 3020)
+Compiled bootstrap-tab.js  (3ms)  (pid 3020)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 3020)
+Compiled bootstrap-popover.js  (0ms)  (pid 3020)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 3020)
+Compiled bootstrap.js  (150ms)  (pid 3020)
+Compiled faq.js  (0ms)  (pid 3020)
+Compiled challenge.js  (163ms)  (pid 3020)
+Compiled Newton/Box2dWeb-2_1_a_3.js  (59ms)  (pid 3020)
+Compiled Newton/initialization.js  (0ms)  (pid 3020)
+Compiled Faraday/utility.js  (0ms)  (pid 3020)
+Compiled Faraday/geom.js  (0ms)  (pid 3020)
+Compiled Faraday/main.js  (0ms)  (pid 3020)
+Compiled Faraday/FindPathInfo.js  (0ms)  (pid 3020)
+Compiled Faraday/CircuitNode.js  (0ms)  (pid 3020)
+Compiled Faraday/RowInfo.js  (0ms)  (pid 3020)
+Compiled Faraday/CirSim.js  (1ms)  (pid 3020)
+Compiled Faraday/elms/CircuitElement.js  (1ms)  (pid 3020)
+Compiled Faraday/elms/core/Diode.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/core/Inductor.js  (1ms)  (pid 3020)
+Compiled Faraday/elms/CapacitorElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/AntennaElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/DiodeElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/InductorElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/ResistorElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/VoltageElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/WireElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/SwitchElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/Switch2Elm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/OutputElm.js  (5ms)  (pid 3020)
+Compiled Faraday/elms/OpAmpElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/SparkGapElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/CurrentElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/GroundElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/LogicInputElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/LogicOutputElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/ProbeElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/SweepElm.js  (2ms)  (pid 3020)
+Compiled Faraday/elms/TextElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/RailElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/TransistorElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/MosfetElm.js  (0ms)  (pid 3020)
+Compiled Faraday/elms/JFetElm.js  (1ms)  (pid 3020)
+Compiled Faraday/lib/Font.js  (38ms)  (pid 3020)
+Compiled Faraday/ui/ComponentGenerator.js  (0ms)  (pid 3020)
+Compiled Faraday/ui/EditDialog.js  (0ms)  (pid 3020)
+Compiled Faraday/ui/EditInfo.js  (0ms)  (pid 3020)
+Compiled Faraday/Scope.js  (1ms)  (pid 3020)
+Compiled application.js  (938ms)  (pid 3020)
+Compiled challenge.css  (24ms)  (pid 3020)
+Compiled global/font-awesome.css  (83ms)  (pid 3020)
+Compiled global/pages/about.css  (6ms)  (pid 3020)
+Compiled global/pages/faq.css  (6ms)  (pid 3020)
+Compiled global/pages/features.css  (4ms)  (pid 3020)
+Compiled global/pages/homepage.css  (23ms)  (pid 3020)
+Compiled global/plans.css  (991ms)  (pid 3020)
+Compiled global/reboot-landing-responsive.css  (14ms)  (pid 3020)
+Compiled global/reboot-landing.css  (47ms)  (pid 3020)
+Compiled global/theme.css  (15ms)  (pid 3020)
+Compiled home.css  (2ms)  (pid 3020)
+Compiled labs.css  (7ms)  (pid 3020)
+Compiled lessons.css  (5ms)  (pid 3020)
+Compiled partials/_base.css  (2ms)  (pid 3020)
+Compiled application.css  (1439ms)  (pid 3020)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-29 22:20:22 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (42.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (18.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 160ms (Views: 160.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-29 22:20:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-29 22:20:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svgz" for 127.0.0.1 at 2012-07-29 22:20:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svgz"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svg" for 127.0.0.1 at 2012-07-29 22:20:22 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svg"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/lessons" for 127.0.0.1 at 2012-07-29 22:20:25 -0400
+Processing by LessonsController#index as HTML
+  Rendered lessons/_lesson.html.erb (128.0ms)
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered lessons/index.html.erb within layouts/application (131.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 141ms (Views: 135.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/labs" for 127.0.0.1 at 2012-07-29 22:20:27 -0400
+Processing by LabsController#index as HTML
+  Rendered layouts/_subheader.html.erb (1.0ms)
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered labs/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/labs/circuits" for 127.0.0.1 at 2012-07-29 22:20:28 -0400
+Processing by LabsController#circuits as HTML
+  Rendered labs/circuits.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/circuits/besselbutter.txt" for 127.0.0.1 at 2012-07-29 22:20:28 -0400
+
+ActionController::RoutingError (No route matches [GET] "/circuits/besselbutter.txt"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/setuplist.txt" for 127.0.0.1 at 2012-07-29 22:20:28 -0400
+
+ActionController::RoutingError (No route matches [GET] "/setuplist.txt"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/labs/circuits" for 127.0.0.1 at 2012-07-29 22:21:36 -0400
+Processing by LabsController#circuits as HTML
+  Rendered labs/circuits.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/setuplist.txt" for 127.0.0.1 at 2012-07-29 22:21:36 -0400
+
+ActionController::RoutingError (No route matches [GET] "/setuplist.txt"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/circuits/besselbutter.txt" for 127.0.0.1 at 2012-07-29 22:21:36 -0400
+
+ActionController::RoutingError (No route matches [GET] "/circuits/besselbutter.txt"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-29 22:21:39 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+Connecting to database specified by database.yml
+Compiled jquery.js  (1ms)  (pid 6944)
+Compiled jquery_ujs.js  (0ms)  (pid 6944)
+Compiled jquery-ui.js  (21ms)  (pid 6944)
+Compiled bootstrap-transition.js  (0ms)  (pid 6944)
+Compiled bootstrap-alert.js  (0ms)  (pid 6944)
+Compiled bootstrap-button.js  (0ms)  (pid 6944)
+Compiled bootstrap-carousel.js  (0ms)  (pid 6944)
+Compiled bootstrap-collapse.js  (0ms)  (pid 6944)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 6944)
+Compiled bootstrap-modal.js  (0ms)  (pid 6944)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 6944)
+Compiled bootstrap-tab.js  (0ms)  (pid 6944)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 6944)
+Compiled bootstrap-popover.js  (0ms)  (pid 6944)
+Compiled bootstrap-typeahead.js  (1ms)  (pid 6944)
+Compiled bootstrap.js  (116ms)  (pid 6944)
+Compiled faq.js  (0ms)  (pid 6944)
+Compiled challenge.js  (179ms)  (pid 6944)
+Compiled Newton/Box2dWeb-2_1_a_3.js  (4ms)  (pid 6944)
+Compiled Newton/initialization.js  (0ms)  (pid 6944)
+Compiled Faraday/utility.js  (0ms)  (pid 6944)
+Compiled Faraday/geom.js  (0ms)  (pid 6944)
+Compiled Faraday/main.js  (0ms)  (pid 6944)
+Compiled Faraday/FindPathInfo.js  (0ms)  (pid 6944)
+Compiled Faraday/CircuitNode.js  (0ms)  (pid 6944)
+Compiled Faraday/RowInfo.js  (0ms)  (pid 6944)
+Compiled Faraday/CirSim.js  (2ms)  (pid 6944)
+Compiled Faraday/elms/CircuitElement.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/core/Diode.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/core/Inductor.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/CapacitorElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/AntennaElm.js  (1ms)  (pid 6944)
+Compiled Faraday/elms/DiodeElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/InductorElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/ResistorElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/VoltageElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/WireElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/SwitchElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/Switch2Elm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/OutputElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/OpAmpElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/SparkGapElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/CurrentElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/GroundElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/LogicInputElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/LogicOutputElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/ProbeElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/SweepElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/TextElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/RailElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/TransistorElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/MosfetElm.js  (0ms)  (pid 6944)
+Compiled Faraday/elms/JFetElm.js  (0ms)  (pid 6944)
+Compiled Faraday/lib/Font.js  (0ms)  (pid 6944)
+Compiled Faraday/ui/ComponentGenerator.js  (0ms)  (pid 6944)
+Compiled Faraday/ui/EditDialog.js  (0ms)  (pid 6944)
+Compiled Faraday/ui/EditInfo.js  (0ms)  (pid 6944)
+Compiled Faraday/Scope.js  (1ms)  (pid 6944)
+Compiled application.js  (652ms)  (pid 6944)
+Compiled challenge.css  (25ms)  (pid 6944)
+Compiled global/font-awesome.css  (64ms)  (pid 6944)
+Compiled global/pages/about.css  (3ms)  (pid 6944)
+Compiled global/pages/faq.css  (6ms)  (pid 6944)
+Compiled global/pages/features.css  (5ms)  (pid 6944)
+Compiled global/pages/homepage.css  (22ms)  (pid 6944)
+Compiled global/plans.css  (1058ms)  (pid 6944)
+Compiled global/reboot-landing-responsive.css  (14ms)  (pid 6944)
+Compiled global/reboot-landing.css  (35ms)  (pid 6944)
+Compiled global/theme.css  (16ms)  (pid 6944)
+Compiled home.css  (3ms)  (pid 6944)
+Compiled labs.css  (8ms)  (pid 6944)
+Compiled lessons.css  (6ms)  (pid 6944)
+Compiled partials/_base.css  (3ms)  (pid 6944)
+Compiled application.css  (1389ms)  (pid 6944)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 8024)
+Compiled jquery_ujs.js  (1ms)  (pid 8024)
+Compiled jquery-ui.js  (38ms)  (pid 8024)
+Compiled bootstrap-transition.js  (0ms)  (pid 8024)
+Compiled bootstrap-alert.js  (0ms)  (pid 8024)
+Compiled bootstrap-button.js  (0ms)  (pid 8024)
+Compiled bootstrap-carousel.js  (0ms)  (pid 8024)
+Compiled bootstrap-collapse.js  (0ms)  (pid 8024)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 8024)
+Compiled bootstrap-modal.js  (0ms)  (pid 8024)
+Compiled bootstrap-scrollspy.js  (2ms)  (pid 8024)
+Compiled bootstrap-tab.js  (0ms)  (pid 8024)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 8024)
+Compiled bootstrap-popover.js  (0ms)  (pid 8024)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 8024)
+Compiled bootstrap.js  (180ms)  (pid 8024)
+Compiled faq.js  (0ms)  (pid 8024)
+Compiled challenge.js  (137ms)  (pid 8024)
+Compiled Newton/Box2dWeb-2_1_a_3.js  (21ms)  (pid 8024)
+Compiled Newton/initialization.js  (0ms)  (pid 8024)
+Compiled Faraday/utility.js  (0ms)  (pid 8024)
+Compiled Faraday/geom.js  (1ms)  (pid 8024)
+Compiled Faraday/main.js  (1ms)  (pid 8024)
+Compiled Faraday/FindPathInfo.js  (0ms)  (pid 8024)
+Compiled Faraday/CircuitNode.js  (0ms)  (pid 8024)
+Compiled Faraday/RowInfo.js  (3ms)  (pid 8024)
+Compiled Faraday/CirSim.js  (1ms)  (pid 8024)
+Compiled Faraday/elms/CircuitElement.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/core/Diode.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/core/Inductor.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/CapacitorElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/AntennaElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/DiodeElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/InductorElm.js  (4ms)  (pid 8024)
+Compiled Faraday/elms/ResistorElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/VoltageElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/WireElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/SwitchElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/Switch2Elm.js  (1ms)  (pid 8024)
+Compiled Faraday/elms/OutputElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/OpAmpElm.js  (1ms)  (pid 8024)
+Compiled Faraday/elms/SparkGapElm.js  (3ms)  (pid 8024)
+Compiled Faraday/elms/CurrentElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/GroundElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/LogicInputElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/LogicOutputElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/ProbeElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/SweepElm.js  (1ms)  (pid 8024)
+Compiled Faraday/elms/TextElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/RailElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/TransistorElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/MosfetElm.js  (0ms)  (pid 8024)
+Compiled Faraday/elms/JFetElm.js  (3ms)  (pid 8024)
+Compiled Faraday/lib/Font.js  (2ms)  (pid 8024)
+Compiled Faraday/ui/ComponentGenerator.js  (1ms)  (pid 8024)
+Compiled Faraday/ui/EditDialog.js  (0ms)  (pid 8024)
+Compiled Faraday/ui/EditInfo.js  (0ms)  (pid 8024)
+Compiled Faraday/Scope.js  (0ms)  (pid 8024)
+Compiled application.js  (1001ms)  (pid 8024)
+Compiled challenge.css  (21ms)  (pid 8024)
+Compiled global/font-awesome.css  (38ms)  (pid 8024)
+Compiled global/pages/about.css  (4ms)  (pid 8024)
+Compiled global/pages/faq.css  (6ms)  (pid 8024)
+Compiled global/pages/features.css  (6ms)  (pid 8024)
+Compiled global/pages/homepage.css  (21ms)  (pid 8024)
+Compiled global/plans.css  (950ms)  (pid 8024)
+Compiled global/reboot-landing-responsive.css  (13ms)  (pid 8024)
+Compiled global/reboot-landing.css  (48ms)  (pid 8024)
+Compiled global/theme.css  (34ms)  (pid 8024)
+Compiled home.css  (1ms)  (pid 8024)
+Compiled labs.css  (7ms)  (pid 8024)
+Compiled lessons.css  (5ms)  (pid 8024)
+Compiled partials/_base.css  (3ms)  (pid 8024)
+Compiled application.css  (1292ms)  (pid 8024)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-29 22:26:46 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-29 22:26:46 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-29 22:26:46 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svgz" for 127.0.0.1 at 2012-07-29 22:26:46 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svgz"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svg" for 127.0.0.1 at 2012-07-29 22:26:46 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svg"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/labs" for 127.0.0.1 at 2012-07-29 22:26:50 -0400
+Processing by LabsController#index as HTML
+  Rendered layouts/_subheader.html.erb (0.0ms)
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered labs/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/labs/circuits" for 127.0.0.1 at 2012-07-29 22:26:51 -0400
+Processing by LabsController#circuits as HTML
+  Rendered labs/circuits.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/setuplist.txt" for 127.0.0.1 at 2012-07-29 22:26:51 -0400
+
+ActionController::RoutingError (No route matches [GET] "/setuplist.txt"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/circuits/besselbutter.txt" for 127.0.0.1 at 2012-07-29 22:26:51 -0400
+
+ActionController::RoutingError (No route matches [GET] "/circuits/besselbutter.txt"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-29 22:32:20 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (16.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/font/fontawesome_webfont.woff" for 127.0.0.1 at 2012-07-29 22:32:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.woff"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.ttf" for 127.0.0.1 at 2012-07-29 22:32:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.ttf"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svgz" for 127.0.0.1 at 2012-07-29 22:32:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svgz"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+
+
+Started GET "/font/fontawesome_webfont.svg" for 127.0.0.1 at 2012-07-29 22:32:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfont.svg"):
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.4.rc1) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.4.rc1) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.4.rc1) lib/action_dispatch/middleware/static.rb:62:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.4.rc1) lib/rails/engine.rb:479:in `call'
+  railties (3.2.4.rc1) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.4.rc1) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
