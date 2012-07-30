@@ -3,7 +3,7 @@ var CANVAS;
 var paper;
 
 
-var js_asset_path = "assets/Faraday/";
+var js_asset_path = "/assets/Faraday/";
 //var js_asset_path = "assets/javascripts/Faraday/assets/Faraday/";
 
 function buildCircuitElementToolbar() {
@@ -111,7 +111,9 @@ var readSetupList = function (retry) {
 
                     // Append this circuit file to the HTML
                     testedWorkingCircuit ? className = 'green circuit_preset_link' : className = 'red circuit_preset_link'
-                    circuitPresetHTML += prefix + '<a class=\"' + className + '\" id=\"' + circuitName + '\" href="#">' + title + "</a> <br />";
+
+                    if(testedWorkingCircuit)
+                        circuitPresetHTML += prefix + '<a class=\"' + className + '\" id=\"' + circuitName + '\" href="#">' + title + "</a> <br />";
 
                     console.log(prefix + "Adding: " + title + " :: circuit: " + circuitName);
 

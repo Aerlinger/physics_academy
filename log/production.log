@@ -7798,3 +7798,4 @@ ActionController::RoutingError (No route matches [GET] "/font/fontawesome_webfon
   C:/RailsInstaller/Ruby1.9.3/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
 
 
+Connecting to database specified by database.yml
