@@ -1,12 +1,11 @@
 PhysicsAcademy::Application.routes.draw do
 
-  get "labs/index"
-
+  #get "labs/index"
   get "labs/circuits"
-
   get "labs/mechanics"
 
   match '/labs', to: 'labs#index'
+  match '/labs/circuits/:circuit_name', to: 'labs#circuits'
 
   root to: 'static_pages#home'
 

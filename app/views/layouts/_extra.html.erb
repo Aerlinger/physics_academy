@@ -10,7 +10,6 @@
         <div class="span4">
 
           <%= link_to image_tag(asset_path "footer/logo_text.png"), :root %>
-          <!-- <h3><span class="slash">//</span> Quick Links</h3> -->
 
           <ul class="footer-links clearfix" >
             <li><a href="./">Home</a></li>
@@ -28,8 +27,19 @@
           </ul>
 
 
-        </div> <!-- /span4 -->
+          <div class="footer-quote">
+            <p>
+              <i>
+                <%= Quote.first(:offset => rand(Quote.count)).quote %>
+              </i>
+            <br>
+              <b>
+                  <%= "~  #{ Quote.first(:offset => rand(Quote.count)).author }"%>
+              </b>
+            </p>
+          </div>
 
+        </div> <!-- /span4 -->
 
         <div class="span4">
 

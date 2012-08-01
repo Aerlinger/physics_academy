@@ -12,11 +12,12 @@ def read_setup_list
   topic_stack << "root"
 
   path = "app/assets/javascripts/Faraday/"
-  b = File.read(path+"setuplist.txt")
+  file_string = File.read(path+"setuplist.txt")
 
-  lines = b.split("\n")
+  lines = file_string.split("\n")
 
   lines.each do |line|
+
     if line[0] == "#"
       next
     elsif line[0] == "+"
@@ -48,19 +49,19 @@ def read_setup_list
 
       read_circuit_file( circuit_sim, path, filename)
 
-      #print circuit_sim.dump
       begin
         circuit_sim.save!
       rescue Exception => e
         print e
       end
-
     end
+
   end
 
 end
 
 def read_circuit_file(circuit_sim, path, circuit_filename)
+
   circuit_data = File.read("#{path}circuits/#{circuit_filename}")
 
   lines = circuit_data.split("\n")
@@ -83,17 +84,14 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
     else
       circuit_element_params = line.split(' ')
 
-      new_circuit_element = CircuitElement.new(token_character: circuit_element_params.shift)
+      new_circuit_element = circuit_sim.circuit_elements.build(token_character: circuit_element_params.shift)
       new_circuit_element.x1 = circuit_element_params.shift
       new_circuit_element.y1 = circuit_element_params.shift
       new_circuit_element.x2 = circuit_element_params.shift
       new_circuit_element.y2 = circuit_element_params.shift
       new_circuit_element.flags = circuit_element_params.shift
       new_circuit_element.params = circuit_element_params
-
-      circuit_sim.circuit_elements << new_circuit_element
     end
-
 
   end
 

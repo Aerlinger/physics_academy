@@ -1,53 +1,47 @@
 
 <div class="row">
 
-    <div class="pricing-plans plans">
 
-      <div class="plan-container best-value">
-        <div class="plan span12">
-          <div class="plan-header">
+  <div class="box-container best-value">
+    <div class="box span12">
+      <div class="box-header">
 
-            <div class="plan-title">
-              <%= lesson.title %>
-            </div> <!-- /plan-title -->
+        <div class="box-title">
+          <%= lesson.title %>
+        </div> <!-- /plan-title -->
 
-            <div class="plan-price" style="padding: 0">
-              <%= image_tag "thumbs/default.png", style: "float: left" %>
-              <p style="color: black"> <%= lesson.description %> </p>
-              <div style="clear: both">
-              </div>
+        <div class="box-content">
 
-            </div> <!-- /plan-price -->
+          <%= image_tag "thumbs/default.png" %>
+          <p> <%= lesson.description %> </p>
+          <div style="clear: both"> </div>
 
-          </div> <!-- /plan-header -->
+        </div> <!-- /plan-price -->
 
-          <!--
-          <div class="plan-features">
-            <ul>
-              <li><strong>Resistors</strong> setup</li>
-              <li><strong>Transistors</strong> Website</li>
-              <li><strong>Transformers</strong> Projects</li>
-              <li><strong>Something</strong> Storage</li>
-              <li><strong>$150</strong> Google Adwords Credit</li>
-            </ul>
-          </div>
-          -->
-
-          <div class="plan-actions">
-            <%= link_to "Start &raquo;".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn" %>
-            <!-- <a href="javascript:;" class="btn">Start &raquo;</a> -->
-          </div> <!-- /plan-actions -->
-
-        </div> <!-- /plan -->
-      </div> <!-- /plan-container -->
+      </div> <!-- /plan-header -->
 
 
+      <!--<div class="plan-features">
+        <ul>
+          <li><strong>Resistors</strong> setup</li>
+          <li><strong>Transistors</strong> Website</li>
+          <li><strong>Transformers</strong> Projects</li>
+          <li><strong>Something</strong> Storage</li>
+          <li><strong>$150</strong> Google Adwords Credit</li>
+        </ul>
+      </div>-->
 
 
+      <div class="box-actions">
+        <%= link_to "Start &raquo;".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
+        <%= link_to "View topics <b class='caret'> </b>".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
+        <div style="clear: both"> </div>
+      </div> <!-- /plan-actions -->
+
+    </div> <!-- /plan -->
+  </div> <!-- /plan-container -->
 
 
-
-  </div> <!-- /span12 -->
 </div>
 
 

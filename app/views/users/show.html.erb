@@ -1,20 +1,116 @@
 <%# Show the notice: %>
-<%=  render partial: 'layouts/subheader', locals: {title: "User Profile"} %>
+<%=  render partial: 'layouts/subheader', locals: {title: "Account &raquo User Profile".html_safe} %>
 
-<div class="container">
+<div class="chalkboard-background">
 
-  <p id="notice"><%= notice %></p>
+  <div class="container">
 
-  <h1><%= @user.name %></h1>
+    <div class="row-fluid">
 
-      <h4>Name: <%= @user.name %></h4>
-      <h4>Email: <%= @user.email %></h4>
-      <h4>Completed lessons: <%= @user.num_completed_lessons %></h4>
-      <h4>Points: <%= @user.num_points %></h4>
-      <h4>Achievements: <%= @user.num_achievements %></h4>
+      <div class="box-container span3">
+
+        <div class="box-header">
+
+          <div class="box-title">
+            <%= @user.name.capitalize! %>
+          </div>
+
+          <div class="box-subheader">
+            <%= image_tag "thumbs/default.png" %> <span class="term">Level: Quark</span>
+          </div> <!-- /plan-price -->
+
+        </div>
+
+        <div class="box-actions">
+          <a href="javascript:;" class="btn">Edit Profile</a>
+        </div> <!-- /plan-actions -->
+
+      </div> <!-- sidebar-nav -->
+
+      <div class="box-container best-value span9">
+
+        <div class="box-header">
+
+          <div class="box-title">
+            Statistics
+
+          </div>
+
+        </div>
+
+        <div class="box-features">
+          <ul class="nav">
+
+            <% if notice.nil? %>
+              <p id="notice"><%= notice %></p>
+            <% end %>
+
+            <li>Email: <%= @user.email %></li>
+            <li>Completed Lessons: <%= @user.num_completed_lessons || 0 %></li>
+            <li>Points Earned: <%= @user.num_points || 0 %></li>
+
+          </ul>
+        </div> <!-- .box-features -->
+
+        <div class="box-actions">
+          <a href="javascript:;" class="btn">Edit</a>
+        </div>
+
+      </div> <!-- .box-container -->
+
+    </div> <!-- .row-fluid -->
 
 
-  <%= link_to "Edit", edit_user_path(@user) %> |
-  <%= link_to "Show all users", users_path %>
+    <div class="row-fluid">
+
+      <div class="box-container span3">
+
+        <div class="box-header">
+
+          <div class="box-title">
+            Badges earned
+          </div>
+
+          <div class="box-subheader">
+            <%= image_tag "thumbs/default.png" %> <span class="term">Level: Quark</span>
+          </div> <!-- /plan-price -->
+
+        </div>
+
+        <div class="box-actions">
+          <a href="javascript:;" class="btn">Edit Profile</a>
+        </div> <!-- /plan-actions -->
+
+      </div> <!-- sidebar-nav -->
+
+      <div class="box-container best-value span9">
+
+        <div class="box-header">
+
+          <div class="box-title">
+            Recent Lessons
+          </div>
+
+        </div>
+
+        <div class="box-features">
+          <ul class="nav">
+
+            <% @user.subscriptions.all.each_with_index do |subscription, index| %>
+              <%= content_tag :li, link_to("#{index+1}: #{subscription.lesson.title}", lesson_challenge_path(subscription.lesson.id) ) %>
+            <% end %>
+
+          </ul>
+        </div> <!-- /plan-features -->
+
+        <div class="box-actions">
+          <a href="javascript:;" class="btn">Edit</a>
+        </div>
+
+      </div> <!-- .box-container -->
+
+    </div> <!-- .row-fluid -->
+
+  </div>
 
 </div>

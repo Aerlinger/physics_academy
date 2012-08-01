@@ -1,7 +1,7 @@
 <% provide(:title, @lesson.title) %>
 
 <!-- Padding for window -->
-<div class="challenge-background">
+<div class="chalkboard-background padded">
 
   <!-- Top Lesson navigation pathbar -->
   <div class="row-fluid">
@@ -21,22 +21,22 @@
   <div class="row-fluid">
 
     <!-- Left Challenge NAVBAR -->
-    <div class="plan-container span2 sidebar-nav">
-      <div class="plan">
-        <div class="plan-header">
+    <div class="box-container span2 sidebar-nav">
+      <!--<div class="box">-->
+        <div class="box-header">
 
-          <div class="plan-title">
+          <div class="box-title">
             <%= @lesson.title %>
           </div> <!-- /plan-title -->
 
 
-          <div class="plan-price">
+          <div class="box-subheader">
             <%= image_tag "thumbs/default.png" %> <span class="term">Completed X of Y Challenges</span>
           </div> <!-- /plan-price -->
 
         </div> <!-- /plan-header -->
 
-        <div class="plan-features">
+        <div class="box-features">
           <ul class="nav">
             <% @lesson.challenges.all.each_with_index do |challenge, index| %>
               <%= "<li #{"class='active'" if (index+1)==@challenge.id}}> <a href='tab#{index+1}' data-toggle='tab'> <i class='icon-book'> </i>&nbsp;#{challenge.title}</a> </li>".html_safe %>
@@ -44,26 +44,26 @@
           </ul>
         </div> <!-- /plan-features -->
 
-        <div class="plan-actions">
+        <div class="box-actions">
           <a href="javascript:;" class="btn">Submit</a>
         </div> <!-- /plan-actions -->
 
-      </div> <!-- /plan -->
+      <!--</div> &lt;!&ndash; /plan &ndash;&gt;-->
     </div>
 
 
     <!-- LESSON DESCRIPTION -->
-    <div class="span10 plan-container best-value">
-      <div class="plan">
-        <div class="plan-header">
+    <div class="span10 box-container best-value">
+      <div class="box">
+        <div class="box-header">
 
-          <div class="plan-title">
+          <div class="box-title">
             <%= "Challenge ##{@challenge.id}: #{@challenge.title}"%>
           </div> <!-- /plan-title -->
 
         </div> <!-- /plan-header -->
 
-        <div class="plan-actions">
+        <div class="box-actions">
           <p><%= "#{@challenge.content}, #{@challenge.id}"%></p>
           <!--<a href="javascript:;" class="btn">Show next hint</a>-->
         </div> <!-- /plan-actions -->
@@ -89,22 +89,22 @@
 
 
     <!-- HINT WINDOW -->
-    <div class="span2 plan-container best-value">
-      <div class="plan">
-        <div class="plan-header">
+    <div class="span2 box-container best-value">
+      <div class="box">
+        <div class="box-header">
 
-          <div class="plan-title">
+          <div class="box-title">
             Hints
           </div> <!-- /plan-title -->
 
         </div> <!-- /plan-header -->
 
-        <div class="plan-actions">
+        <div class="box-actions">
           Stuck? Press the show hint button below to get a nudge in the right direction.
             You'll lose points though, so don't use it if you don't need to.
         </div> <!-- /plan-actions -->
 
-        <div class="plan-actions">
+        <div class="box-actions">
           <a href="javascript:;" class="btn">Next Hint</a>
         </div> <!-- /plan-actions -->
 

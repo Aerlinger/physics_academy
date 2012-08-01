@@ -28,6 +28,10 @@ class Subscription < ActiveRecord::Base
     completed_challenges << challenge_num unless self.completed_challenges.include? challenge_num
   end
 
+  def last_challenge
+
+  end
+
   private
 
     def init_subscription

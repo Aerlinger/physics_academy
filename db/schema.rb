@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120730004135) do
+ActiveRecord::Schema.define(:version => 20120801024124) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -68,6 +68,15 @@ ActiveRecord::Schema.define(:version => 20120730004135) do
     t.string   "introduction"
     t.string   "image_url"
     t.integer  "difficulty",   :default => 0
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.string   "quote"
+    t.string   "author",     :default => "anonymous"
+    t.string   "source"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.integer  "date"
   end
 
   create_table "rs_evaluations", :force => true do |t|
@@ -138,6 +147,13 @@ ActiveRecord::Schema.define(:version => 20120730004135) do
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",                 :default => false
+    t.string   "location"
+    t.text     "about_me"
+    t.string   "website_url"
+    t.string   "twitter"
+    t.string   "linkedin_url"
+    t.text     "avatar"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

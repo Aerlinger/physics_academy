@@ -1,0 +1,40 @@
+.chalkboard-background {
+
+  background: url("challenges/bg.jpg");
+
+  /*.container {
+    background: #FFF;
+    margin: 0 auto;
+    padding: 1em 3em;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }*/
+}
+
+.padded {
+  padding: 2em;
+}
+
+.number {
+  font-size: .5em;
+}
+
+#call-to-action {
+  font-weight: bold;
+  font-size: 2em;
+  padding: .5em 1em;
+  margin: 0 4em;
+}
+
+label{
+  width: 6.5em;
+  float: left;
+
+  text-align: right;
+  font-weight: bold;
+  color: black;
+
+  margin-right: 1em;
+  display: block;
+
+}
