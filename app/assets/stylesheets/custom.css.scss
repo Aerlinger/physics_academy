@@ -17,13 +17,28 @@
 
 .number {
   font-size: .5em;
+  font-weight: bold;
 }
 
 #call-to-action {
   font-weight: bold;
   font-size: 2em;
-  padding: .5em 1em;
-  margin: 0 4em;
+  padding: .3em 1em;
+  margin: 0 2em;
+}
+
+.clear_margins {
+  margin: 0;
+}
+
+.clear_side_margins {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.clear_top_bottom_margins {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 label{

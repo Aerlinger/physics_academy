@@ -7818,3 +7818,711 @@ ActionView::Template::Error (theme/avatar.png isn't precompiled):
   app/views/static_pages/home.html.erb:157:in `_app_views_static_pages_home_html_erb__65329626_42597804'
 
 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:33:35 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (60.0ms)
+Completed 500 Internal Server Error in 132ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    159:             <!--<li>-->
+    160:               <!--<div class="testimonial-avatar">-->
+    161:                 <!--<div class="img">-->
+    162:                   <!--<%= image_tag "theme/avatar.png", alt: "Thumbnail" %>-->
+    163:                 <!--</div>-->
+    164:               <!--</div> &lt;!&ndash; /testimonial-avatar &ndash;&gt;-->
+    165: 
+  app/views/static_pages/home.html.erb:162:in `_app_views_static_pages_home_html_erb__526076951_38654604'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:34:21 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    159: 
+    160: 
+    161: <div id="screenshots">
+    162: 
+    163:   <div class="inner">
+    164: 
+    165:     <div class="container">
+  app/views/static_pages/home.html.erb:162:in `_app_views_static_pages_home_html_erb__526076951_38654604'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:34:22 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (theme/avatar.png isn't precompiled):
+    159: 
+    160: 
+    161: <div id="screenshots">
+    162: 
+    163:   <div class="inner">
+    164: 
+    165:     <div class="container">
+  app/views/static_pages/home.html.erb:162:in `_app_views_static_pages_home_html_erb__526076951_38654604'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:34:55 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (58.0ms)
+Completed 500 Internal Server Error in 127ms
+
+ActionView::Template::Error (test/mech_example3.png isn't precompiled):
+    170: 
+    171:           <h3>Laws of Motion</h3>
+    172: 
+    173:           <%= link_to image_tag(asset_path 'test/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
+    174: 
+    175:         </div> <!-- /span4 -->
+    176: 
+  app/views/static_pages/home.html.erb:173:in `_app_views_static_pages_home_html_erb___844356303_38104068'
+
+
+Compiled jquery.js  (2ms)  (pid 5184)
+Compiled jquery_ujs.js  (0ms)  (pid 5184)
+Compiled jquery-ui.js  (2ms)  (pid 5184)
+Compiled bootstrap-transition.js  (0ms)  (pid 5184)
+Compiled bootstrap-alert.js  (0ms)  (pid 5184)
+Compiled bootstrap-button.js  (0ms)  (pid 5184)
+Compiled bootstrap-carousel.js  (0ms)  (pid 5184)
+Compiled bootstrap-collapse.js  (0ms)  (pid 5184)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 5184)
+Compiled bootstrap-modal.js  (0ms)  (pid 5184)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 5184)
+Compiled bootstrap-tab.js  (1ms)  (pid 5184)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 5184)
+Compiled bootstrap-popover.js  (0ms)  (pid 5184)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 5184)
+Compiled bootstrap.js  (93ms)  (pid 5184)
+Compiled faq.js  (1ms)  (pid 5184)
+Compiled challenge.js  (183ms)  (pid 5184)
+Compiled Newton/Box2dWeb-2_1_a_3.js  (19ms)  (pid 5184)
+Compiled Newton/initialization.js  (0ms)  (pid 5184)
+Compiled Faraday/utility.js  (0ms)  (pid 5184)
+Compiled Faraday/geom.js  (0ms)  (pid 5184)
+Compiled Faraday/main.js  (0ms)  (pid 5184)
+Compiled Faraday/FindPathInfo.js  (0ms)  (pid 5184)
+Compiled Faraday/CircuitNode.js  (0ms)  (pid 5184)
+Compiled Faraday/RowInfo.js  (0ms)  (pid 5184)
+Compiled Faraday/CirSim.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/CircuitElement.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/core/Diode.js  (1ms)  (pid 5184)
+Compiled Faraday/elms/core/Inductor.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/CapacitorElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/AntennaElm.js  (1ms)  (pid 5184)
+Compiled Faraday/elms/DiodeElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/InductorElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/ResistorElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/VoltageElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/WireElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/SwitchElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/Switch2Elm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/OutputElm.js  (1ms)  (pid 5184)
+Compiled Faraday/elms/OpAmpElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/SparkGapElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/CurrentElm.js  (1ms)  (pid 5184)
+Compiled Faraday/elms/GroundElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/LogicInputElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/LogicOutputElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/ProbeElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/SweepElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/TextElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/RailElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/TransistorElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/MosfetElm.js  (0ms)  (pid 5184)
+Compiled Faraday/elms/JFetElm.js  (0ms)  (pid 5184)
+Compiled Faraday/lib/Font.js  (0ms)  (pid 5184)
+Compiled Faraday/ui/ComponentGenerator.js  (0ms)  (pid 5184)
+Compiled Faraday/ui/EditDialog.js  (0ms)  (pid 5184)
+Compiled Faraday/ui/EditInfo.js  (0ms)  (pid 5184)
+Compiled Faraday/Scope.js  (0ms)  (pid 5184)
+Compiled application.js  (597ms)  (pid 5184)
+Compiled challenge.css  (19ms)  (pid 5184)
+Compiled custom.css  (2ms)  (pid 5184)
+Compiled global/box.css  (1028ms)  (pid 5184)
+Compiled global/font-awesome.css  (49ms)  (pid 5184)
+Compiled global/pages/about.css  (2ms)  (pid 5184)
+Compiled global/pages/faq.css  (5ms)  (pid 5184)
+Compiled global/pages/features.css  (6ms)  (pid 5184)
+Compiled global/pages/homepage.css  (22ms)  (pid 5184)
+Compiled global/reboot-landing-responsive.css  (12ms)  (pid 5184)
+Compiled global/reboot-landing.css  (60ms)  (pid 5184)
+Compiled global/theme.css  (15ms)  (pid 5184)
+Compiled home.css  (1ms)  (pid 5184)
+Compiled labs.css  (7ms)  (pid 5184)
+Compiled lessons.css  (6ms)  (pid 5184)
+Compiled partials/_base.css  (1ms)  (pid 5184)
+Compiled application.css  (1329ms)  (pid 5184)
+Compiled jquery.js  (4ms)  (pid 6000)
+Compiled jquery_ujs.js  (0ms)  (pid 6000)
+Compiled jquery-ui.js  (2ms)  (pid 6000)
+Compiled bootstrap-transition.js  (0ms)  (pid 6000)
+Compiled bootstrap-alert.js  (0ms)  (pid 6000)
+Compiled bootstrap-button.js  (0ms)  (pid 6000)
+Compiled bootstrap-carousel.js  (0ms)  (pid 6000)
+Compiled bootstrap-collapse.js  (0ms)  (pid 6000)
+Compiled bootstrap-dropdown.js  (1ms)  (pid 6000)
+Compiled bootstrap-modal.js  (0ms)  (pid 6000)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 6000)
+Compiled bootstrap-tab.js  (0ms)  (pid 6000)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 6000)
+Compiled bootstrap-popover.js  (0ms)  (pid 6000)
+Compiled bootstrap-typeahead.js  (1ms)  (pid 6000)
+Compiled bootstrap.js  (79ms)  (pid 6000)
+Compiled faq.js  (0ms)  (pid 6000)
+Compiled challenge.js  (118ms)  (pid 6000)
+Compiled Newton/Box2dWeb-2_1_a_3.js  (18ms)  (pid 6000)
+Compiled Newton/initialization.js  (0ms)  (pid 6000)
+Compiled Faraday/utility.js  (0ms)  (pid 6000)
+Compiled Faraday/geom.js  (0ms)  (pid 6000)
+Compiled Faraday/main.js  (0ms)  (pid 6000)
+Compiled Faraday/FindPathInfo.js  (0ms)  (pid 6000)
+Compiled Faraday/CircuitNode.js  (0ms)  (pid 6000)
+Compiled Faraday/RowInfo.js  (0ms)  (pid 6000)
+Compiled Faraday/CirSim.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/CircuitElement.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/core/Diode.js  (1ms)  (pid 6000)
+Compiled Faraday/elms/core/Inductor.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/CapacitorElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/AntennaElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/DiodeElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/InductorElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/ResistorElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/VoltageElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/WireElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/SwitchElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/Switch2Elm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/OutputElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/OpAmpElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/SparkGapElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/CurrentElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/GroundElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/LogicInputElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/LogicOutputElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/ProbeElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/SweepElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/TextElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/RailElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/TransistorElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/MosfetElm.js  (0ms)  (pid 6000)
+Compiled Faraday/elms/JFetElm.js  (0ms)  (pid 6000)
+Compiled Faraday/lib/Font.js  (0ms)  (pid 6000)
+Compiled Faraday/ui/ComponentGenerator.js  (0ms)  (pid 6000)
+Compiled Faraday/ui/EditDialog.js  (0ms)  (pid 6000)
+Compiled Faraday/ui/EditInfo.js  (0ms)  (pid 6000)
+Compiled Faraday/Scope.js  (0ms)  (pid 6000)
+Compiled application.js  (562ms)  (pid 6000)
+Compiled challenge.css  (18ms)  (pid 6000)
+Compiled custom.css  (3ms)  (pid 6000)
+Compiled global/box.css  (1014ms)  (pid 6000)
+Compiled global/font-awesome.css  (49ms)  (pid 6000)
+Compiled global/pages/about.css  (1ms)  (pid 6000)
+Compiled global/pages/faq.css  (6ms)  (pid 6000)
+Compiled global/pages/features.css  (6ms)  (pid 6000)
+Compiled global/pages/homepage.css  (21ms)  (pid 6000)
+Compiled global/reboot-landing-responsive.css  (12ms)  (pid 6000)
+Compiled global/reboot-landing.css  (45ms)  (pid 6000)
+Compiled global/theme.css  (15ms)  (pid 6000)
+Compiled home.css  (3ms)  (pid 6000)
+Compiled labs.css  (7ms)  (pid 6000)
+Compiled lessons.css  (6ms)  (pid 6000)
+Compiled partials/_base.css  (1ms)  (pid 6000)
+Compiled application.css  (1312ms)  (pid 6000)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:39:06 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (51.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (91.0ms)
+Completed 500 Internal Server Error in 160ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__67615953_34032744'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb__382565219_39455088'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:40:22 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__67615953_34032744'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb__382565219_39455088'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:42:04 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__67615953_34032744'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb__382565219_39455088'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:42:23 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (52.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (90.0ms)
+Completed 500 Internal Server Error in 160ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb___400790761_35861640'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb__137977535_35680524'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:46:45 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (51.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (90.0ms)
+Completed 500 Internal Server Error in 160ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__461412071_34227324'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___502635588_44121756'
+
+
+Connecting to database specified by database.yml
+Migrating to InitialSchema (20120728162446)
+Migrating to AddParamsToSubscriptions (20120728171649)
+Migrating to CreateCircuitElements (20120729173705)
+Migrating to CreateCircuitSimulations (20120729174622)
+Migrating to AddParamsToCircuitSimulations (20120730004135)
+Migrating to UpdateUsers (20120801012126)
+Migrating to AddUsernameToUsers (20120801013643)
+Migrating to CreateQuotes (20120801022454)
+Migrating to AddDateToQuotes (20120801024124)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:48:46 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__461412071_34227324'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___502635588_44121756'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:48:47 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__461412071_34227324'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___502635588_44121756'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:48:48 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__461412071_34227324'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___502635588_44121756'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:48:50 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (17.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (Could not find table 'quotes'):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__461412071_34227324'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___502635588_44121756'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:49:18 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (44.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (100.0ms)
+Completed 500 Internal Server Error in 171ms
+
+ActionView::Template::Error (undefined method `quote' for nil:NilClass):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__404145176_42933528'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___916037419_55660272'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:51:34 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (3.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `quote' for nil:NilClass):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__404145176_42933528'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___916037419_55660272'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 01:52:20 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (54.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (94.0ms)
+Completed 500 Internal Server Error in 164ms
+
+ActionView::Template::Error (undefined method `quote' for nil:NilClass):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb___673858492_34032684'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb___398848592_42525072'
+
+
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:01:09 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (53.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (93.0ms)
+Completed 500 Internal Server Error in 165ms
+
+ActionView::Template::Error (undefined method `quote' for nil:NilClass):
+    30:           <div class="footer-quote">
+    31:             <p>
+    32:               <i>
+    33:                 <%= Quote.first(:offset => rand(Quote.count)).quote %>
+    34:               </i>
+    35:             <br>
+    36:               <b>
+  app/views/layouts/_extra.html.erb:33:in `_app_views_layouts__extra_html_erb__319186521_34720896'
+  app/views/static_pages/home.html.erb:203:in `_app_views_static_pages_home_html_erb__211364156_40143240'
+
+
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:17 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (57.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (18.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 182ms (Views: 173.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:48 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:53 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:55 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:56 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:57 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (2.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:58 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:07:58 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:08:07 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:08:27 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (40.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (18.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 173ms (Views: 165.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:10:04 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:10:26 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-01 02:13:08 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 1.0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 00:49:33 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (75.0ms)
+Completed 500 Internal Server Error in 149ms
+
+ActionView::Template::Error (home/interact.jpg isn't precompiled):
+    84:             <div class="feature-content">
+    85: 
+    86: 
+    87:             <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+    88:               <h4>Ask questions and learn from others</h4>
+    89:               <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your friends, classmates,
+    90:                 or mentors to Physics Academy via email or your preferred social network.
+  app/views/static_pages/home.html.erb:87:in `_app_views_static_pages_home_html_erb___922353540_37413072'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 00:50:06 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (home/interact.jpg isn't precompiled):
+    84:             <div class="feature-content">
+    85: 
+    86: 
+    87:             <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+    88:               <h4>Ask questions and learn from others</h4>
+    89:               <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your friends, classmates,
+    90:                 or mentors to Physics Academy via email or your preferred social network.
+  app/views/static_pages/home.html.erb:87:in `_app_views_static_pages_home_html_erb___922353540_37413072'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 00:50:41 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 2ms
+
+ActionView::Template::Error (home/interact.jpg isn't precompiled):
+    84:             <div class="feature-content">
+    85: 
+    86: 
+    87:             <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+    88:               <h4>Ask questions and learn from others</h4>
+    89:               <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your friends, classmates,
+    90:                 or mentors to Physics Academy via email or your preferred social network.
+  app/views/static_pages/home.html.erb:87:in `_app_views_static_pages_home_html_erb___922353540_37413072'
+
+
+
+
+Started GET "/" for 127.0.0.1 at 2012-08-03 00:53:00 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (home/interact.jpg isn't precompiled):
+    84:             <div class="feature-content">
+    85: 
+    86: 
+    87:             <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+    88:               <h4>Ask questions and learn from others</h4>
+    89:               <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your friends, classmates,
+    90:                 or mentors to Physics Academy via email or your preferred social network.
+  app/views/static_pages/home.html.erb:87:in `_app_views_static_pages_home_html_erb___922353540_37413072'
+
+
+Connecting to database specified by database.yml

@@ -14,14 +14,15 @@ function init() {
       ;
    
    var world = new b2World(
-         new b2Vec2(0, 10)    //gravity
+         new b2Vec2(0, 0)    //gravity
       ,  true                 //allow sleep
    );
    
    var fixDef = new b2FixtureDef;
-   fixDef.density = 1.0;
-   fixDef.friction = 0.5;
-   fixDef.restitution = 0.2;
+   fixDef.density = 0.0;
+   fixDef.friction = 0.0;
+   fixDef.restitution = 1.0;
+
    
    var bodyDef = new b2BodyDef;
    
@@ -36,26 +37,41 @@ function init() {
    fixDef.shape.SetAsBox(2, 14);
    bodyDef.position.Set(-1.8, 13);
    world.CreateBody(bodyDef).CreateFixture(fixDef);
-   bodyDef.position.Set(540 / 30 + 1.8, 13);
+   bodyDef.position.Set(530 / 30 + 1.8, 13);
    world.CreateBody(bodyDef).CreateFixture(fixDef);
    
    
    //create some objects
    bodyDef.type = b2Body.b2_dynamicBody;
-   for(var i = 0; i < 10; ++i) {
-      if(Math.random() > 0.5) {
-         fixDef.shape = new b2PolygonShape;
-         fixDef.shape.SetAsBox(
-               Math.random() + 0.1 //half width
-            ,  Math.random() + 0.1 //half height
-         );
-      } else {
+
+    fixDef.shape = new b2PolygonShape;
+    fixDef.shape.SetAsBox(
+        0.5 //half width
+        ,  160 / 30 //half height
+    );
+
+    bodyDef.position.x = Math.random() * 10;
+    bodyDef.position.y = Math.random() * 10;
+
+    world.CreateBody(bodyDef).CreateFixture(fixDef);
+
+    for(var i = 0; i < 50; ++i) {
+//      if(Math.random() > 0.5) {
+//         fixDef.shape = new b2PolygonShape;
+//         fixDef.shape.SetAsBox(
+//               Math.random() + 0.1 //half width
+//            ,  Math.random() + 0.1 //half height
+//         );
+//      } else {
          fixDef.shape = new b2CircleShape(
-            Math.random() + 0.1 //radius
+            .05*Math.random() + 0.1 //radius
          );
-      }
+//      }
       bodyDef.position.x = Math.random() * 10;
       bodyDef.position.y = Math.random() * 10;
+       bodyDef.mass = bodyDef.radius * 10;
+       //bodyDef.velocity.x = Math.random() * 10;
+       //bodyDef.velocity.y = Math.random() * 10;
       world.CreateBody(bodyDef).CreateFixture(fixDef);
    }
    

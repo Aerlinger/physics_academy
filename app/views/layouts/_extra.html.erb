@@ -28,14 +28,11 @@
 
 
           <div class="footer-quote">
-            <p>
-              <i>
-                <%= Quote.first(:offset => rand(Quote.count)).quote %>
-              </i>
-            <br>
-              <b>
-                  <%= "~  #{ Quote.first(:offset => rand(Quote.count)).author }"%>
-              </b>
+            <p class="quote-text">
+              <%= @quote.quote %>
+            </p>
+            <p class="quote-author">
+              <%= "~  #{ @quote.author }"%>
             </p>
           </div>
 

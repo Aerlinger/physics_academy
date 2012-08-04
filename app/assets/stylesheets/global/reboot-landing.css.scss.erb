@@ -36,6 +36,10 @@ html {
 	-webkit-text-size-adjust: none;
 }
 
+.pitch {
+  //margin-left: 1em;
+}
+
 body {
 	font: 13px/1.7em 'Open Sans';
 	
@@ -235,6 +239,7 @@ border-top: 1px solid #000;
 
 #extra .inner {
 	padding: 20px;
+  padding-bottom: 5px;
 	
 	color: #fff;
 	
@@ -281,19 +286,27 @@ border-top: 1px solid #000;
 }
 
 .footer-links li {
-	margin-bottom: .3em;
+	margin-bottom: .1em;
   margin-left: 1.2em;
 }
 
 .footer-quote {
-  margin: 1em;
-  margin-left: .5em;
-  color: #ccc8c5;
-  font-style: italic;
-  margin-left: 1em;
-  author {
-    margin-right: 1.5em;
+
+  .quote-text {
+    color: #ccc8c5;
+    font-style: italic;
+    margin: 0 .5em .5em -.5em;
   }
+
+  .quote-author {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+
+    text-align: right;
+    margin-right: 5.5em;
+  }
+
 }
 
 
@@ -419,20 +432,29 @@ border-top: 1px solid #000;
 */
 
 .circle-icon {	
-	position: relative;
+	//position: relative;
+  display: block;
+
+  margin-bottom: 1em;
+  padding: 0;
+
+	width: 40px;
+	height: 40px;
 	
-	width: 50px;
-	height: 50px;
+	background: #5e5e5e;
 	
-	background: #292929;
-	
-	-moz-border-radius: 100px;
-	-webkit-border-radius: 100px;
-	border-radius: 100px;
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	border-radius: 80px;
 	
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+
+  h1 {
+    margin-left: 40px;
+    padding-left: .5em;
+  }
 }
 
 .circle-icon div {
@@ -441,18 +463,18 @@ border-top: 1px solid #000;
 	top: 50%;
 	left: 50%;
 	
-	width: 44px;
-	height: 44px;
+	width: 34px;
+	height: 34px;
 	
-	margin-top: -22px;
-	margin-left: -22px;
+	margin-top: -17px;
+	margin-left: -17px;
 	
 	font-size: 24px;	
 	text-align: center;
-	line-height: 40px;		
-	color: #FFF;	
+	line-height: 32px;
+	color: #f5f5f5;
 	
-	border: 2px solid #FFF;	
+	border: 2px solid #f5f5f5;
 	
 	-moz-border-radius: 100px;
 	-webkit-border-radius: 100px;
@@ -489,15 +511,23 @@ border-top: 1px solid #000;
 .big-intro {
 	font-size: 28px;
 	line-height: 1.7em;
-	color: #888;
+	color: #ab5d30;
 	
-	padding: 25px 0;
-	
-	border: 1px dotted #CCC;	
+	padding: 1em 0;
+
 	border-right: none;
 	border-left: none;
-}
 
+  .backdrop {
+
+    margin:  0;
+    height: 241px;
+    font-size: 1.5em;
+    background: url(<%= asset_path "about/header2.jpg" %>) no-repeat;
+
+  }
+
+}
 
 
 .slash {

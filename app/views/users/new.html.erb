@@ -1,17 +1,6 @@
 <% provide(:title, "Sign up") %>
-<div id="subheader">
 
-  <div class="inner">
-
-    <div class="container">
-
-      <h1>Sign Up</h1>
-
-    </div> <!-- /.container -->
-
-  </div> <!-- /inner -->
-
-</div> <!-- /subheader -->
+<%= render partial: "layouts/subheader", locals: {title: "Sign Up"} %>
 
 <div class="container">
   <%= render 'form' %>

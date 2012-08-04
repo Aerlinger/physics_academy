@@ -1,20 +1,64 @@
-<div class="row">
-  <div class="span6 offset3">
+<div class="row offset3">
+
+
+  <div class="box-container span6 clear_margins">
+
+
+    <div class="box-header box-title">
+      <!--<div class="box-title">-->
+      Enter your info below
+      <!--</div>-->
+    </div>
+
+
     <%= form_for(@user) do |f| %>
+
       <%= render 'shared/error_messages', object: @user %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
 
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <fieldset>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+        <div class="box-features">
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
-      <br />
-      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+          <div class="control-group">
+            <%= f.label :name, class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :name, class: "input-xlarge focused" %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :email, class: "control-label" %>
+            <div class="controls">
+              <%= f.text_field :email, class: "input-xlarge" %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :password, class: "control-label" %>
+            <div class="controls">
+              <%= f.password_field :password, class: "input-xlarge" %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :password_confirmation, "Confirmation", class: "control-label" %>
+            <div class="controls">
+              <%= f.password_field :password_confirmation, class: "input-xlarge" %>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="box-actions">
+          <%= f.submit "Sign Up", class: "btn btn-success btn-large btn-primary" %>
+        </div>
+
+      </fieldset>
+
     <% end %>
+
   </div>
+
 </div>
+
+

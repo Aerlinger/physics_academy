@@ -1,4 +1,3 @@
-
 <div id="landing">
 
   <div class="inner">
@@ -10,19 +9,18 @@
         <div class="span5 landing-text">
 
 
-          <h1>Physics made fun.</h1>
+          <h1>Physics like you've never <em>seen</em> it before</h1>
 
-          <p>Physics Academy was founded on a simple philosophy that the best way to learn is by doing. <br />
-            We'll be launching a beta soon. If you'd like to join, feel free to sign up or join our mailing list
-            at the bottom of the page</p>
+          <!-- pitch text -->
+          <h2>Offering live interactive tutorials Physics Academy provides the most intuitive and fun way to learn physics.</h2>
 
-          <!--<span class="landing-actions">-->
-              <a href="javascript:;" id="call-to-action" class="btn btn-large btn-inverse" style="">Sign Up</a>
-          <!--</span>-->
+          <!--<small> Sign up to be included in our upcoming beta. </small>-->
+
+          <%= link_to "Get Started", signup_path, class: "btn btn-large btn-danger", id: "call-to-action" %>
 
         </div> <!-- /landing-text -->
 
-        <canvas id="canvas_box2d" width="540" height="320" class="lrc span7 landing-screenshot well" style="padding: 0; margin: 0px 0px 15px 16px; border: 2px solid #8b0000;">
+        <canvas id="canvas_box2d" width="530" height="320" class="lrc landing-screenshot well" style="padding: 0; margin: 0px 0px 15px 16px; border: 2px solid #8b0000;">
         </canvas>
 
       </div> <!-- .row -->
@@ -43,171 +41,80 @@
 
       <div class="row">
 
-        <div class="span12 offset1">
 
-          <h3><span class="slash">//</span> Why Physics Academy?</h3>
+        <!--<div class="span12">-->
+          <!--<h3><span class="slash">//</span> Why Physics Academy?</h3>-->
+        <!--</div>-->
 
 
-            <div class="span3">
-              <div class="feature-thumbnail">
-                <div class="circle-icon">
-                  <div class="number">
-                    1
-                    <!--<i class="icon-divst-alt"></i>-->
-                  </div>
-                </div> <!-- /circle-icon -->
-              </div> <!-- /feature-thumbnail -->
+        <div class="features-list">
+          <div class="span4">
 
-              <div class="feature-content">
-                <h3>Interactive examples.</h3>
-                <p>Live simulations help you understand concepts as they would exist in the physical world</p>
-              </div> <!-- /feature-content -->
+            <div class="feature-thumbnail">
+              <div class="circle-icon">
+                <div>
+                 <i class="icon-pencil"></i>
+                </div>
+                <h2>Learn.</h2>
+              </div> <!-- /circle-icon -->
             </div>
 
-            <div class="span3">
-              <div class="feature-thumbnail">
-                <div class="circle-icon">
-                  <div class="number">
-                    2
-                    <!--<i class="icon-flag"></i>-->
-                  </div>
-                </div> <!-- /circle-icon -->
-              </div> <!-- /feature-thumbnail -->
+            <div class="feature-content">
+              <%= link_to image_tag(asset_path 'test/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
+              <h4>Physics like you've never <em>seen</em> it before</h4>
+              <p>Physics Academy is the most effective and enjoyable way to learn and to teach physics at any level.
+                Take our interactive lessons and play games tailored for your level while tracking your progress and
+                earning redeemable points as you go.
+              </p>
+            </div> <!-- /feature-content -->
 
-              <div class="feature-content">
-                <h3>Learn at your own pace</h3>
-                <p>Save answers and lessons as you go. We offer lessons at various levels in a variety of subjects. </p>
-              </div> <!-- /feature-content -->
-            </div>
+          </div>
 
-            <div class="span3">
-              <div class="feature-thumbnail">
-                <div class="circle-icon">
-                  <div>
-                    3
-                    <!--<i class="icon-resize-small"></i>-->
-                  </div>
-                </div> <!-- /circle-icon -->
-              </div> <!-- /feature-thumbnail -->
+          <div class="span4">
 
-              <div class="feature-content">
-                <h3>Learn with others.</h3>
-                <p>Share your results and progress with your friends. We offer lessons at various levels in a variety of subjects.</p>
-              </div> <!-- /feature-content -->
-            </div>
+            <div class="feature-thumbnail">
+              <div class="circle-icon">
+                <div class="number">
+                  <i class="icon-user"></i>
+                </div>
+                <h2>Interact.</h2>
+              </div> <!-- /circle-icon -->
+            </div> <!-- /feature-thumbnail -->
 
-            <div class="span3">
-              <div class="feature-thumbnail">
-                <div class="circle-icon">
-                  <div>
-                    4
-                    <!--<i class="icon-tint"></i>-->
-                  </div>
-                </div> <!-- /circle-icon -->
-              </div> <!-- /feature-thumbnail -->
-              <div class="feature-content">
-                <h3>Share your knowledge</h3>
-                <p>Contribute and participate in discussions with the community</p>
-              </div> <!-- /feature-content -->
-            </div>
-
-            <div class="span3">
-              <div class="feature-thumbnail">
-                <div class="circle-icon">
-                  <div>
-                    5
-                    <!--<i class="icon-trophy"></i>-->
-                  </div>
-                </div> <!-- /circle-icon -->
-              </div> <!-- /feature-thumbnail -->
-
-              <div class="feature-content">
-                <h3>Feature #5</h3>
-                <p>Feature description will go here</p>
-              </div> <!-- /feature-content -->
-            </div>
-
-            <div class="span3">
-              <div class="feature-thumbnail">
-                <div class="circle-icon">
-                  <div>
-                    6
-                    <!--<i class="icon-file"></i>-->
-                  </div>
-                </div> <!-- /circle-icon -->
-              </div> <!-- /feature-thumbnail -->
-
-              <div class="feature-content">
-                <h3>Feature #6</h3>
-                <p>Feature description will go here</p>
-              </div> <!-- /feature-content -->
-            </div>
+            <div class="feature-content">
 
 
+            <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+              <h4>Ask questions and learn from others</h4>
+              <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your friends, classmates,
+                or mentors to Physics Academy via email or your preferred social network.
+               </p>
+            </div> <!-- /feature-content -->
+          </div>
+
+          <div class="span4">
+
+            <div class="feature-thumbnail">
+              <div class="circle-icon">
+                <div class="number">
+                  <i class="icon-book"></i>
+                </div>
+                <h2>Contribute.</h2>
+              </div> <!-- /circle-icon -->
+            </div> <!-- /feature-thumbnail -->
+
+            <div class="feature-content">
+              <%= link_to image_tag(asset_path 'home/contribute.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+              <h4>Share your knowledge with the world</h4>
+              <p>Are you a physics guru? Physics Academy gives you the forum to reach others and share your knowledge
+                with the world. Gain reputation and build your resume or CV based on your own contributions.
+              </p>
+            </div> <!-- /feature-content -->
 
 
-        </div> <!-- /span12 -->
+          </div>
+        </div>
 
-
-        <!--<div class="span4">-->
-
-          <!--<h3><span class="slash">//</span> Testimonials</h3>-->
-
-
-          <!--<ul class="testimonials-list">-->
-
-            <!--<li>-->
-              <!--<div class="testimonial-avatar">-->
-                <!--<div class="img">-->
-                  <!--<%= image_tag "theme/avatar.png", alt: "Thumbnail" %>-->
-                <!--</div>-->
-              <!--</div> &lt;!&ndash; /testimonial-avatar &ndash;&gt;-->
-
-              <!--<div class="testimonial-text">-->
-                <!--<p>-->
-                  <!--<span class="testimonial-author">Anthony</span>-->
-                  <!--Info Here. Info Here. Info Here. Info Here-->
-
-                <!--</p>-->
-              <!--</div> &lt;!&ndash; /testimonial-text &ndash;&gt;-->
-            <!--</li>-->
-
-            <!--<li>-->
-              <!--<div class="testimonial-avatar">-->
-                <!--<div class="img">-->
-                  <!--<%= image_tag "theme/avatar2.png", alt: "Thumbnail" %>-->
-                <!--</div>-->
-              <!--</div> &lt;!&ndash; /testimonial-avatar &ndash;&gt;-->
-
-              <!--<div class="testimonial-text">-->
-                <!--<p>-->
-                  <!--<span class="testimonial-author">Anthony</span>-->
-                  <!--Info Here-->
-
-                <!--</p>-->
-              <!--</div> &lt;!&ndash; /testimonial-text &ndash;&gt;-->
-            <!--</li>-->
-
-
-            <!--<li>-->
-              <!--<div class="testimonial-avatar">-->
-                <!--<div class="img">-->
-                  <!--<%= image_tag "theme/avatar3.png", alt: "Thumbnail" %>-->
-                <!--</div>-->
-              <!--</div> &lt;!&ndash; /testimonial-avatar &ndash;&gt;-->
-
-              <!--<div class="testimonial-text">-->
-                <!--<p>-->
-                  <!--<span class="testimonial-author">Anthony</span>-->
-                  <!--Info Here-->
-
-                <!--</p>-->
-              <!--</div> &lt;!&ndash; /testimonial-text &ndash;&gt;-->
-            <!--</li>-->
-
-          <!--</ul>-->
-
-        <!--</div> &lt;!&ndash; /span4 &ndash;&gt;-->
 
       </div> <!-- /row -->
 
@@ -227,10 +134,13 @@
 
       <div class="row">
 
+        <div class="span12">
+          <h3><span class="slash">//</span> Sample Topics </h3>
+        </div>
+
         <div class="span4">
 
           <h3>Laws of Motion</h3>
-
           <%= link_to image_tag(asset_path 'test/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
 
         </div> <!-- /span4 -->
@@ -246,7 +156,7 @@
 
         <div class="span4">
 
-          <h3>Thermodynamics</h3>
+          <h3>Celestial Mechanics</h3>
 
           <%= link_to image_tag(asset_path 'test/mech_example2.png'), '#', alt: "Screenshot", class: "thumbnail" %>
 
@@ -262,4 +172,4 @@
 
 
 <%= render 'layouts/extra' %>
-			
+

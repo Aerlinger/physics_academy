@@ -16,9 +16,21 @@
           </div>
         </div>
 
-        <%= form_for(@user) do |f| %>
+        <%= form_for(@user, class: "form-horizontal") do |f| %>
 
-          <div class="box-features form">
+
+            <fieldset>
+
+              <div class="control-group">
+                <label class="control-label" for="focusedInput">Focused input</label>
+                <div class="controls">
+                  <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
+                </div>
+              </div>
+
+            </fieldset>
+
+            <div class="box-features form">
 
             <%= render 'shared/error_messages', object: @user %>
 

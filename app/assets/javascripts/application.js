@@ -14,23 +14,17 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-
 //= require faq
-
 //= require challenge
-
 //= require Newton/Box2dWeb-2_1_a_3
 //= require Newton/initialization
-
 //= require Faraday/utility
 //= require Faraday/geom
 //= require Faraday/main
-//
 //= require Faraday/FindPathInfo
 //= require Faraday/CircuitNode
 //= require Faraday/RowInfo
 //= require Faraday/CirSim
-//
 //= require Faraday/elms/CircuitElement
 //= require Faraday/elms/core/Diode
 //= require Faraday/elms/core/Inductor
@@ -57,11 +51,8 @@
 //= require Faraday/elms/TransistorElm
 //= require Faraday/elms/MosfetElm
 //= require Faraday/elms/JFetElm
-//
 //= require Faraday/lib/Font
-//
 //= require Faraday/ui/ComponentGenerator
 //= require Faraday/ui/EditDialog
 //= require Faraday/ui/EditInfo
-//
 //= require Faraday/Scope
