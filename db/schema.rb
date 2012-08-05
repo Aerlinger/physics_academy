@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805182254) do
+ActiveRecord::Schema.define(:version => 20120805222406) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -62,12 +62,12 @@ ActiveRecord::Schema.define(:version => 20120805182254) do
 
   create_table "lessons", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.text     "description",  :limit => 1500
+    t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
     t.string   "introduction"
     t.string   "image_url"
-    t.string   "difficulty",   :default => "0"
+    t.string   "difficulty",                   :default => "0"
     t.boolean  "completed"
     t.string   "subject"
   end
