@@ -1,7 +1,7 @@
-class Schema2 < ActiveRecord::Migration
+class Schema3 < ActiveRecord::Migration
   create_table "badges", :force => true do |t|
     t.string   "title"
-    t.text   "description"
+    t.text     "description"
     t.string   "icon"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -9,8 +9,8 @@ class Schema2 < ActiveRecord::Migration
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
-    t.text   "content"
-    t.text   "hint"
+    t.text     "content"
+    t.text     "hint"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "lesson_id"
@@ -33,7 +33,7 @@ class Schema2 < ActiveRecord::Migration
   create_table "circuit_simulations", :force => true do |t|
     t.string   "name_unique"
     t.string   "title"
-    t.text   "description"
+    t.text     "description"
     t.integer  "flags"
     t.float    "time_step"
     t.float    "sim_speed"
@@ -48,12 +48,12 @@ class Schema2 < ActiveRecord::Migration
 
   create_table "lessons", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.text     "description",
+               t.datetime "created_at",                                    :null => false
+    t.datetime "updated_at",                                    :null => false
     t.string   "introduction"
     t.string   "image_url"
-    t.string   "difficulty",   :default => "0"
+    t.string   "difficulty",                   :default => "0"
     t.boolean  "completed"
     t.string   "subject"
   end
