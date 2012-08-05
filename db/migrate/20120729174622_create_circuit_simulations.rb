@@ -3,7 +3,7 @@ class CreateCircuitSimulations < ActiveRecord::Migration
     create_table :circuit_simulations do |t|
       t.string :name_unique
       t.string :title
-      t.string :description
+      t.text :description
       t.integer :flags
       t.float :time_step
       t.float :sim_speed

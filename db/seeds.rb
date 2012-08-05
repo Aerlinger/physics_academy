@@ -39,10 +39,7 @@ def lesson_definitions
     #################################################################
     {
         title: "Units and Measurement",
-        description: "We are all familiar with the concept of units and measurements in our everyday life.
-Every time we purchase gasoline, set the oven temperature, or schedule an appointment we are making a measurement
-according to some standardized physical unit (volume, temperature, and time in this case).
-Measurements are essential in science as they form an objective basis for record and comparison.",
+        description: "We are all familiar with the concept of units and measurements in our everyday life. Every time we purchase gasoline, set the oven temperature, or schedule an appointment we are making a measurement according to some standardized physical unit. Measurements are essential in science as they form an objective basis for record and comparison.",
         image_url: "introduction_to_physics.jpg",
         challenges: ["Familiar examples of units",
                      "Difference between units and quantity",

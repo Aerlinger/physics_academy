@@ -2,6 +2,7 @@ class UpdateLessons < ActiveRecord::Migration
   def change
     change_table :lessons do |t|
       t.change :difficulty, :string
+      t.change :description, :string
     end
 
     add_column :lessons, :under_construction, :boolean, default: true
