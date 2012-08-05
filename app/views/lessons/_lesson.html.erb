@@ -4,6 +4,7 @@
 
   <div class="box-container best-value">
     <div class="box span12">
+
       <div class="box-header">
 
         <div class="box-title">
@@ -12,13 +13,39 @@
 
         <div class="box-content">
 
-          <%= image_tag "thumbs/default.png" %>
-          <p> <%= lesson.description %> </p>
-          <div style="clear: both"> </div>
-
+          <div class="row">
+            <div class="span9">
+              <%= image_tag "thumbs/default.png" %>
+              <p> <%= lesson.description %> </p>
+              <div style="clear: both"> </div>
+            </div>
+            <div class="span3">
+              <div class="well" style="margin: 0; padding: 0">
+                <ul class="nav nav-list">
+                  <li class="nav-header">Covered Topics</li>
+                  <li><a href="#"><i class="icon-white icon-home"></i> Home</a></li>
+                  <li><a href="#"><i class="icon-book"></i> Library</a></li>
+                  <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div> <!-- /plan-price -->
 
       </div> <!-- /plan-header -->
+
+      <div class="box-actions">
+
+        <%# if lesson.completed %>
+            <!--<div class="number">-->
+              <i class="icon-wrench"></i>
+            <!--</div>-->
+        <%# end %>
+
+        <%= link_to "Start &raquo;".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
+        <%= link_to "View all topics <b class='caret'> </b>".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
+        <div style="clear: both"> </div>
+      </div> <!-- /plan-actions -->
 
 
       <!--<div class="plan-features">
@@ -31,12 +58,6 @@
         </ul>
       </div>-->
 
-
-      <div class="box-actions">
-        <%= link_to "Start &raquo;".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
-        <%= link_to "View topics <b class='caret'> </b>".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
-        <div style="clear: both"> </div>
-      </div> <!-- /plan-actions -->
 
     </div> <!-- /plan -->
   </div> <!-- /plan-container -->

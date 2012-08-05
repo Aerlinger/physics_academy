@@ -18,15 +18,42 @@ def lesson_definitions
     #################################################################
     {
         title: "Introduction to Physics",
-        description: "Completely new to physics? This is where to start.",
+        description: "In the most general definition, physics is the study of the properties and behavior of the universe.
+                      In this introductory lesson we'll cover a brief history of physics, discuss the major disciplines of physics,
+                      and introduce you to basic terminology and concepts.
+                      If you're completely new to physics this is where to start.",
         image_url: "introduction_to_physics.jpg",
         challenges: ["What is physics?",
-                     "Units and Measurements",
+                     "A brief timeline",
+                      "Matter and energy",
+        "Matter in its different forms",
+            "Energy in its different forms",
+                     "In Review"],
+        completed: false,
+        subject: "Introductory",
+        difficulty: "Beginner"
+    },
+
+    #################################################################
+    # Units of Measurement
+    #################################################################
+    {
+        title: "Units and Measurement",
+        description: "We are all familiar with the concept of units and measurements in our everyday life.
+Every time we purchase gasoline, set the oven temperature, or schedule an appointment we are making a measurement
+according to some standardized physical unit (volume, temperature, and time in this case).
+Measurements are essential in science as they form an objective basis for record and comparison.",
+        image_url: "introduction_to_physics.jpg",
+        challenges: ["Familiar examples of units",
+                     "Difference between units and quantity",
+                      "The concept of certainty and error",
                      "Significant Figures",
                      "Conversion of Units",
                      "Dimensional Analysis",
-                     "In Review"],
-        under_construction: true,
+        "Scientific notation and orders of magnitude",
+            "Familiar Examples",
+            "In Review"],
+        completed: false,
         subject: "Introductory",
         difficulty: "Beginner"
     },
@@ -36,9 +63,9 @@ def lesson_definitions
     #################################################################
     {
       title: "Newtonian Physics I: The laws of motion",
-      description: "Newtonian physics describes the motion and interaction of physical bodies under forces.",
+      description: "Newtonian physics describes the motion and interaction of physical bodies under the influence of energy and forces.",
       image_url: "newtonian_physics_ii.jpg",
-      under_construction: false,
+      completed: false,
       difficulty: "Beginner",
       subject: "Newtonian Mechanics",
       challenges: ["<Challenge 1>",
@@ -47,7 +74,7 @@ def lesson_definitions
                     "<Challenge 4>",
                     "<Challenge 5>",
                     "<Challenge 6>"],
-      under_construction: true,
+      completed: false,
       subject: "Introductory",
       difficulty: "Beginner"
     },
@@ -67,9 +94,29 @@ def lesson_definitions
                     "<Challenge 4>",
                     "<Challenge 5>",
                     "<Challenge 6>"],
-      under_construction: true,
+      completed: false,
       subject: "Introductory",
       difficulty: "Beginner"
+    },
+
+    #################################################################
+    # Effective Problem Solving
+    #################################################################
+    {
+        title:       "Newtonian Physics II: Newton's laws in action",
+        description: "<Description goes here>",
+        image_url:   "newtonian_physics_ii.jpg",
+        difficulty: "Beginner-Intermediate",
+        subject: "Newtonian Mechanics",
+        challenges: ["<Challenge 1>",
+                     "<Challenge 2>",
+                     "<Challenge 3>",
+                     "<Challenge 4>",
+                     "<Challenge 5>",
+                     "<Challenge 6>"],
+        completed: false,
+        subject: "Introductory",
+        difficulty: "Beginner"
     },
 
     #################################################################
@@ -86,7 +133,7 @@ def lesson_definitions
                   "<Challenge 4>",
                   "<Challenge 5>",
                   "<Challenge 6>"],
-      under_construction: true,
+      completed: false,
       subject: "Introductory",
       difficulty: "Beginner"
     },
@@ -105,7 +152,7 @@ def lesson_definitions
                   "<Challenge 4>",
                   "<Challenge 5>",
                   "<Challenge 6>"],
-      under_construction: true,
+      completed: false,
       subject: "Introductory",
       difficulty: "Beginner"
     },
@@ -124,7 +171,7 @@ def lesson_definitions
                     "<Challenge 4>",
                     "<Challenge 5>",
                     "<Challenge 6>"],
-      under_construction: true,
+      completed: false,
       subject: "Introductory",
       difficulty: "All Levels"
     }
@@ -144,7 +191,7 @@ def make_lessons
     new_lesson.description  = lesson[:description]
     new_lesson.difficulty   = lesson[:difficulty]
     new_lesson.subject      = lesson[:subject]
-    new_lesson.completed   = lesson[:under_construction]
+    new_lesson.completed   = lesson[:completed]
 
     lesson[:challenges].each do |challenge|
       new_lesson.challenges.build(title: challenge, content: "Description for challenge goes here")
