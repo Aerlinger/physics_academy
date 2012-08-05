@@ -3,8 +3,8 @@ var CANVAS;
 var paper;
 
 
-//var js_asset_path = "/assets/Faraday/";
-var js_asset_path = "";
+var js_asset_path = "/assets/Faraday/";
+//var js_asset_path = "";
 
 function buildCircuitElementToolbar() {
     var items = [];
