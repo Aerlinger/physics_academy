@@ -4,11 +4,9 @@ function CircuitNode() {
 
     this.links = new Array();
     this.intern = false;
-}
-;
+};
 
 function CircuitNodeLink() {
     this.num = 0;
     this.elm = null;    // CircuitElement
-}
-;
+};

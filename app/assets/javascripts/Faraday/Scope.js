@@ -57,7 +57,7 @@ Scope.prototype.plotXY = false;
 
 
 function Scope() {
-    this.rect = new Rectangle(0, 0, 0, 0);
+    this.rect = new Rectangle(0, 0, 100, 50);
     this.reset();
 }
 ;
@@ -98,6 +98,10 @@ Scope.prototype.resetGraph = function () {
     this.minI = new Array(this.scopePointCount);
     this.maxI = new Array(this.scopePointCount);
     this.ptr = this.ctr = 0;
+
+    paper.beginPath();
+    paper.strokeRect(this.rect.x, this.rect.y, this.rect.width, this.rect.height);
+    paper.closePath();
 
     this.allocImage();
 };
@@ -145,12 +149,15 @@ Scope.prototype.setElm = function (ce) {
     this.reset();
 };
 
+/** Advance scope by one frame */
 Scope.prototype.timeStep = function () {
 
     if (this.elm == null)
         return;
 
     var v = this.elm.getScopeValue(this.value);
+
+    // Clip values if out of range
     if (v < this.minV[this.ptr])
         this.minV[this.ptr] = v;
     if (v > this.maxV[this.ptr])
@@ -258,19 +265,26 @@ Scope.prototype.draw2d = function () {
             this.pixels[i] = 0xFF000000 | (0x10101 * q);
         this.dpixels[i] *= .997;
     }
+
     //g.drawImage(this.image, this.rect.x, this.rect.y, null);
     //g.setColor(this.elm.whiteColor);
     //g.fillOval(this.rect.x + this.draw_ox - 2, this.rect.y + this.draw_oy - 2, 5, 5);
 
-    paper.ellipse(this.rect.x + this.draw_ox - 2, this.rect.y + this.draw_oy - 2, 5, 5).attr({
-        stroke:Color.color2HexString(CircuitElement.whiteColor)
-    });
+    // todo: canvas
+//    paper.ellipse(this.rect.x + this.draw_ox - 2, this.rect.y + this.draw_oy - 2, 5, 5).attr({
+//        stroke:Color.color2HexString(CircuitElement.whiteColor)
+//    });
+
+    paper.beginPath();
+    paper.arc(this.rect.x + this.draw_ox - 2, this.rect.y + this.draw_oy - 2, 5, 0, 2*Math.PI,false);
+    paper.closePath();
 
     var yt = this.rect.y + 10;
     var x = this.rect.x;
     if (this.text != null && this.rect.y + this.rect.height > yt + 5) {
+        // Todo: draw text
         //g.drawString(this.text, x, yt);
-        paper.text(x, yt, this.text);
+        //paper.text(x, yt, this.text);
         yt += 15;
     }
 };
@@ -380,7 +394,11 @@ Scope.prototype.draw = function () {
         }
         //for (i = 0; i < this.pixels.length; i += this.rect.width)
         //    this.pixels[i + gx] = col;
-        paper.path('M' + (gx) + ' ' + this.rect.y + 'L' + (gx) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', col, 'stroke-width', 0);
+        //paper.path('M' + (gx) + ' ' + this.rect.y + 'L' + (gx) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', col, 'stroke-width', 0);
+        paper.beginPath();
+        paper.moveTo(gx, this.rect.y);
+        paper.lineTo(gx, this.rect.y + this.rect.height);
+        paper.closePath();
     }
 
     // these two loops are pretty much the same, and should be combined!
@@ -404,8 +422,15 @@ Scope.prototype.draw = function () {
                         continue;
                     for (j = ox; j != x + i; j++) {
                         console.log("(y - oy):  " + (y - oy));
-                        paper.path('M' + this.rect.width * (y - oy) + ' ' + this.rect.y + 'L' + this.rect.width * (y - oy) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', curColor, 'stroke-width', 0);
+
+                        //paper
+                        //paper.path('M' + this.rect.width * (y - oy) + ' ' + this.rect.y + 'L' + this.rect.width * (y - oy) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', curColor, 'stroke-width', 0);
                         //this.pixels[j + this.rect.width * (y - oy)] = curColor;
+
+                        paper.beginPath();
+                        paper.moveTo(this.rect.width * (y - oy), this.rect.y);
+                        paper.lineTo(this.rect.width * (y - oy), (this.rect.y + this.rect.height));
+                        paper.closePath();
                     }
                     ox = oy = -1;
                 }
@@ -417,6 +442,12 @@ Scope.prototype.draw = function () {
                 for (j = miniy; j <= maxiy; j++) {
                     console.log("(y - j):  " + (y - j));
                     paper.path('M' + (x + i) + ' ' + this.rect.y + 'L' + (x + i + 1) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', curColor, 'stroke-width', 0);
+
+                    paper.beginPath();
+                    paper.moveTo((x + i), this.rect.y);
+                    paper.lineTo((x + i + 1), (this.rect.y + this.rect.height));
+                    paper.closePath();
+
                     //this.pixels[x + i + this.rect.width * (y - j)] = curColor;
                 }
             }
@@ -425,7 +456,11 @@ Scope.prototype.draw = function () {
             for (j = ox; j != x + i; j++) {
                 //this.pixels[j + this.rect.width * (y - oy)] = curColor;
                 console.log("(y - oy):  " + (y - oy));
-                paper.path('M' + this.rect.width * (y - oy) + ' ' + this.rect.y + 'L' + this.rect.width * (y - oy) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', curColor, 'stroke-width', 0);
+                //paper.path('M' + this.rect.width * (y - oy) + ' ' + this.rect.y + 'L' + this.rect.width * (y - oy) + ' ' + (this.rect.y + this.rect.height)).attr('stroke', curColor, 'stroke-width', 0);
+                paper.beginPath();
+                paper.moveTo(this.rect.width * (y - oy), this.rect.y);
+                paper.lineTo(this.rect.width * (y - oy), (this.rect.y + this.rect.height));
+                paper.closePath();
             }
         }
     }
@@ -450,7 +485,12 @@ Scope.prototype.draw = function () {
                         //console.log("(y - oy):  " + (y-oy));
                         //paper.path( 'M'+ this.rect.width * (y - oy) + ' ' + this.rect.y + 'L' + this.rect.width * (y - oy) + ' ' + (this.rect.y+this.rect.height) ).attr('stroke', voltColor, 'stroke-width', 0);
                         //this.pixels[j + this.rect.width * (y - oy)] = voltColor;
-                        paper.path('M' + (j) + ' ' + (y - oy) + 'L' + (j + 1) + ' ' + (y - oy) + 1).attr('stroke', voltColor);
+                        //paper.path('M' + (j) + ' ' + (y - oy) + 'L' + (j + 1) + ' ' + (y - oy) + 1).attr('stroke', voltColor);
+
+                        paper.beginPath();
+                        paper.moveTo(this.rect.width * (y - oy), this.rect.y);
+                        paper.lineTo(this.rect.width * (y - oy), (this.rect.y + this.rect.height));
+                        paper.closePath();
                     }
                     ox = oy = -1;
                 }
@@ -461,7 +501,12 @@ Scope.prototype.draw = function () {
                 }
                 for (j = minvy; j <= maxvy; j++) {
                     //console.log("(y - j) voltcolor1:  " + (y-j) + " " + voltColor + " j= " + j);
-                    paper.path('M' + (x + i) + ' ' + (y - j) + 'L' + (x + i + 1) + ' ' + (y - j + 1)).attr('stroke', voltColor);
+                    //paper.path('M' + (x + i) + ' ' + (y - j) + 'L' + (x + i + 1) + ' ' + (y - j + 1)).attr('stroke', voltColor);
+
+                    paper.beginPath();
+                    paper.moveTo((x + i), (y - j));
+                    paper.lineTo((x + i + 1), (y - j + 1));
+                    paper.closePath();
                     //this.pixels[x + i + this.rect.width * (y - j)] = voltColor;
                 }
             }
@@ -471,6 +516,11 @@ Scope.prototype.draw = function () {
                 console.log("(y - oy) voltcolor:  " + (y - oy) + " j= " + j);
                 //this.pixels[j + this.rect.width * (y - oy)] = voltColor;
                 //paper.path( 'M'+ j + ' ' + (y-oy) + 'L' + j+ ' ' + 3*(y-oy)).attr('stroke', curColor);
+
+                paper.beginPath();
+                paper.moveTo(j, (y-oy));
+                paper.lineTo(j, 3*(y-oy));
+                paper.closePath();
             }
         }
     }
@@ -523,7 +573,11 @@ Scope.prototype.draw = function () {
         // console.log(freq + " " + periodstd + " " + periodct);
     }
 
-    paper.rect(this.rect.x, this.rect.y, this.rect.width, this.rect.height).attr({stroke:'red'});
+    //TODO: CANVAS
+    // paper.rect(this.rect.x, this.rect.y, this.rect.width, this.rect.height).attr({stroke:'red'});
+    paper.beginPath();
+    paper.strokeRect(this.rect.x, this.rect.y, this.rect.width, this.rect.height);
+    paper.closePath();
 
     //////////////////////////////////////////////////
     // RENDERING

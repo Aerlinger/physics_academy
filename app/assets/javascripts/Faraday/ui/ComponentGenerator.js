@@ -36,10 +36,6 @@ function createDivButtonHTML(text, id) {
 }
 ;
 
-function addButton() {
-
-}
-;
 
 function createButtonHTML(text, id) {
     if (!id)

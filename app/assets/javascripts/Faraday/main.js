@@ -3,8 +3,8 @@ var CANVAS;
 var paper;
 
 
-var js_asset_path = "/assets/Faraday/";
-//var js_asset_path = "assets/javascripts/Faraday/assets/Faraday/";
+//var js_asset_path = "/assets/Faraday/";
+var js_asset_path = "";
 
 function buildCircuitElementToolbar() {
     var items = [];
@@ -50,12 +50,6 @@ var readSetupList = function (retry) {
 
         var len = b.length;     // Number of bytes (characters) in the file
         var p;                  // Address of current character
-
-//        if (len == 0 || b[0] != '#') {
-//            // got a redirect, try again
-//            getSetupList(true);
-//            return;
-//        }
 
         // For each line in the setup list
         for (p = 0; p < len;) {

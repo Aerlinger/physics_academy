@@ -1,4 +1,4 @@
-class InitialSchema < ActiveRecord::Migration
+class Schema2 < ActiveRecord::Migration
   create_table "badges", :force => true do |t|
     t.string   "title"
     t.text   "description"
@@ -11,20 +11,60 @@ class InitialSchema < ActiveRecord::Migration
     t.string   "title"
     t.text   "content"
     t.text   "hint"
-    t.integer  "points",     :default => 0
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "lesson_id"
   end
 
-  create_table "lessons", :force => true do |t|
+  create_table "circuit_elements", :force => true do |t|
+    t.string   "name"
+    t.string   "token_character"
+    t.integer  "x1"
+    t.integer  "y1"
+    t.integer  "x2"
+    t.integer  "y2"
+    t.integer  "flags"
+    t.text     "params"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.integer  "circuit_simulation_id"
+  end
+
+  create_table "circuit_simulations", :force => true do |t|
+    t.string   "name_unique"
     t.string   "title"
     t.text   "description"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
-    t.text   "introduction"
+    t.integer  "flags"
+    t.float    "time_step"
+    t.float    "sim_speed"
+    t.float    "current_speed"
+    t.float    "voltage_range"
+    t.float    "power_range"
+    t.datetime "created_at",                                         :null => false
+    t.datetime "updated_at",                                         :null => false
+    t.string   "topic"
+    t.string   "completion_status", :default => "under_development"
+  end
+
+  create_table "lessons", :force => true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "introduction"
     t.string   "image_url"
-    t.integer  "difficulty",   :default => 0
+    t.string   "difficulty",   :default => "0"
+    t.boolean  "completed"
+    t.string   "subject"
+  end
+
+  create_table "quotes", :force => true do |t|
+    t.string   "quote"
+    t.string   "author",     :default => "anonymous"
+    t.string   "source"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.integer  "date"
   end
 
   create_table "rs_evaluations", :force => true do |t|
@@ -74,8 +114,10 @@ class InitialSchema < ActiveRecord::Migration
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "lesson_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "completed_lessons"
+    t.text     "completed_challenges"
   end
 
   add_index "subscriptions", ["lesson_id"], :name => "index_subscriptions_on_lesson_id"
@@ -85,14 +127,21 @@ class InitialSchema < ActiveRecord::Migration
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "num_completed_lessons", :default => 0
-    t.integer  "num_points",            :default => 0
-    t.integer  "num_achievements",      :default => 0
-    t.datetime "created_at",            :null => false
-    t.datetime "updated_at",            :null => false
+    t.integer  "num_completed_lessons"
+    t.integer  "num_points"
+    t.integer  "num_achievements"
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",                 :default => false
+    t.string   "location"
+    t.text     "about_me"
+    t.string   "website_url"
+    t.string   "twitter"
+    t.string   "linkedin_url"
+    t.text     "avatar"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

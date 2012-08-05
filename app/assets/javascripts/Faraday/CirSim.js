@@ -16,7 +16,7 @@ CirSim.dragY = 0;
 CirSim.initDragX = 0;
 CirSim.initDragY = 0;
 
-CirSim.selectedArea = new Rectangle(0, 0, 0, 0);
+CirSim.selectedArea = new Rectangle(-1, -1, -1, -1);
 
 CirSim.gridSize     = 10;
 CirSim.gridMask     = 10;
@@ -294,7 +294,7 @@ CirSim.init = function (defaultCircuit) {
 
     CirSim.scopes           = new Array(20); // Array of scope objects
     CirSim.scopeColCount    = new Array(20); // Array of integers
-    //CirSim.scopeCount       = 0;
+    CirSim.scopeCount       = 0;
 
     CirSim.initCircuit(defaultCircuit);
 
@@ -1360,10 +1360,10 @@ CirSim.drawGrid = function () {
     // Draw cols:
     for (var i = 0; i < numCols; i++) {
         for (var j = 0; j < numRows; ++j) {
-            paper.rect(CirSim.gridSize * i, CirSim.gridSize * j, 1, 1).attr({
-                'stroke':Color.color2HexString(Color.DEEP_YELLOW),
-                'stroke-width':.2
-            });
+//            paper.rect(CirSim.gridSize * i, CirSim.gridSize * j, 1, 1).attr({
+//                'stroke':Color.color2HexString(Color.DEEP_YELLOW),
+//                'stroke-width':.2
+//            });
         }
     }
 
@@ -1861,8 +1861,8 @@ CirSim.updateCircuit = function () {
         ct = 0;
 
     // TODO Implement scopes
-    //for(i=0; i!=ct; ++i)
-    //    CirSim.scopes[i].draw();
+    for(i=0; i!=ct; ++i)
+        CirSim.scopes[i].draw();
 
     if (CirSim.stopMessage != null) {
         printError(CirSim.stopMessage);
@@ -1923,17 +1923,17 @@ CirSim.updateCircuit = function () {
 
     // Draw selection outline:
     if (CirSim.selectedArea != null) {
-        paper.strokeStyle = Color.color2HexString(Settings.SELECTION_MARQUEE_COLOR);
-        paper.rect(this.selectedArea.x, this.selectedArea.y, this.selectedArea.width, this.selectedArea.height);
+        //paper.strokeStyle = Color.color2HexString(Settings.SELECTION_MARQUEE_COLOR);
+        paper.beginPath();
+        paper.strokeStyle = Settings.SELECT_COLOR;
+        paper.strokeRect(this.selectedArea.x, this.selectedArea.y, this.selectedArea.width, this.selectedArea.height);
+        paper.closePath();
     }
 
     CirSim.mouseElm = realMouseElm;
     CirSim.frames++;
 
     var endTime = (new Date()).getTime();
-    var computationTime = (endTime - startTime);
-
-    //paper.text(100, 15, "Frame: " + CirSim.frames + "\nComputationTime: " + computationTime).attr('fill', Color.color2HexString(Settings.TEXT_COLOR));
 
     CirSim.lastFrameTime = CirSim.lastTime;
 };
@@ -2549,8 +2549,8 @@ CirSim.runCircuit = function () {
         }
 
         CirSim.t += CirSim.timeStep;
-        //for(i=0; i<CirSim.scopeCount; ++i)
-        //    CirSim.scopes[i].timeStep();
+        for(i=0; i<CirSim.scopeCount; ++i)
+            CirSim.scopes[i].timeStep();
 
         tm = (new Date()).getTime();
         lit = tm;

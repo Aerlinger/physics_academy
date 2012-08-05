@@ -1,5 +1,7 @@
 class Quote < ActiveRecord::Base
 
+  attr_accessible :quote, :author
+
   before_save :validate_quote
 
   validates_presence_of :quote, length: {maximum: 200}

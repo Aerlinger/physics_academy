@@ -16,5 +16,4 @@ function RowInfo() {
     this.lsChanges = false;
     this.dropRow = false;
 
-}
-;
+};

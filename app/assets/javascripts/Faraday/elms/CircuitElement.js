@@ -81,10 +81,8 @@ function CircuitElement(xa, ya, xb, yb, f, st) {
 CircuitElement.setColor = function (color) {
     if (typeof(color) == 'string')
         CircuitElement.drawColor = color;
-    else if (color instanceof int)
-        CircuitElement.drawColor = Color.color2HexString(color);
     else
-        throw "Invalid color specified in setColor()";
+        CircuitElement.drawColor = Color.color2HexString(color);
 };
 
 ///////////////////////////////////////////////////////////////////////

@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       # If the user saves successfully
       if @user.save
-        format.html { redirect_to }
+        format.html { redirect_to @user }
         format.json { render json: @user }
       end
     end
