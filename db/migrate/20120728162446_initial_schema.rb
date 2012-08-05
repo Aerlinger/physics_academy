@@ -1,7 +1,7 @@
 class InitialSchema < ActiveRecord::Migration
   create_table "badges", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text   "description"
     t.string   "icon"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -9,7 +9,7 @@ class InitialSchema < ActiveRecord::Migration
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text   "content"
     t.text   "hint"
     t.integer  "points",     :default => 0
     t.datetime "created_at", :null => false
@@ -19,10 +19,10 @@ class InitialSchema < ActiveRecord::Migration
 
   create_table "lessons", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text   "description"
     t.datetime "created_at",                  :null => false
     t.datetime "updated_at",                  :null => false
-    t.string   "introduction"
+    t.text   "introduction"
     t.string   "image_url"
     t.integer  "difficulty",   :default => 0
   end

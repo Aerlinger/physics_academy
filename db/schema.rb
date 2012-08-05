@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(:version => 20120801203157) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text   "description"
     t.string   "icon"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(:version => 20120801203157) do
 
   create_table "challenges", :force => true do |t|
     t.string   "title"
-    t.string   "content"
-    t.string   "hint"
+    t.text   "content"
+    t.text   "hint"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.integer  "lesson_id"
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20120801203157) do
   create_table "circuit_simulations", :force => true do |t|
     t.string   "name_unique"
     t.string   "title"
-    t.string   "description"
+    t.text   "description"
     t.integer  "flags"
     t.float    "time_step"
     t.float    "sim_speed"
