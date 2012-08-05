@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed0132d-2d88-4f15-a0ea-0d93e865ffbc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/challenges/_challenge.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/_challenge.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20120805223004_schema3.rb" afterPath="$PROJECT_DIR$/db/migrate/20120805223004_schema3.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <list id="b9fe1223-a7a4-457a-9ff9-ad3bdf27a93b" name="Faraday" comment="" />
     <ignored path="physics_academy.iws" />
@@ -32,7 +29,7 @@
       <file leaf-file-name="_challenge.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/challenges/_challenge.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="70" selection-start="319" selection-end="319" vertical-scroll-proportion="-6.5384617">
+            <state line="8" column="105" selection-start="274" selection-end="274" vertical-scroll-proportion="-5.230769">
               <folding />
             </state>
           </provider>
@@ -49,10 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.13385826">
+            <state line="17" column="43" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CirSim.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1864" column="6" selection-start="54175" selection-end="54175" vertical-scroll-proportion="0.6334405">
               <folding />
             </state>
           </provider>
@@ -70,7 +76,7 @@
       <file leaf-file-name="schema.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/schema.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="0" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+            <state line="15" column="46" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +133,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/Scope.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/elms/CircuitElement.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/RowInfo.js" />
@@ -138,8 +143,9 @@
         <option value="$PROJECT_DIR$/db/migrate/20120805222406_remove_limit_from_description.rb" />
         <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20120805223004_schema3.rb" />
-        <option value="$PROJECT_DIR$/app/views/challenges/_challenge.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js" />
+        <option value="$PROJECT_DIR$/app/views/challenges/_challenge.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" />
       </list>
     </option>
   </component>
@@ -870,13 +876,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1868" column="12" selection-start="54279" selection-end="54279" vertical-scroll-proportion="8.899103">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/setuplist.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1019,7 +1018,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="0" selection-start="2225" selection-end="2225" vertical-scroll-proportion="0.0">
+        <state line="15" column="46" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1027,13 +1026,6 @@
     <entry file="file://$PROJECT_DIR$/db/migrate/20120805223004_schema3.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="51" column="79" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/challenges/_challenge.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="70" selection-start="319" selection-end="319" vertical-scroll-proportion="-6.5384617">
           <folding />
         </state>
       </provider>
@@ -1047,9 +1039,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/_challenge.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="105" selection-start="274" selection-end="274" vertical-scroll-proportion="-5.230769">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="64" selection-end="64" vertical-scroll-proportion="0.13385826">
+        <state line="17" column="43" selection-start="484" selection-end="484" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1864" column="6" selection-start="54175" selection-end="54175" vertical-scroll-proportion="0.6334405">
           <folding />
         </state>
       </provider>

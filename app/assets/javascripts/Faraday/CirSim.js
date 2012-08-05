@@ -1861,8 +1861,8 @@ CirSim.updateCircuit = function () {
         ct = 0;
 
     // TODO Implement scopes
-    for(i=0; i!=ct; ++i)
-        CirSim.scopes[i].draw();
+    //for(i=0; i!=ct; ++i)
+    //    CirSim.scopes[i].draw();
 
     if (CirSim.stopMessage != null) {
         printError(CirSim.stopMessage);
