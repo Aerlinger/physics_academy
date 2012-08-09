@@ -1,0 +1,8 @@
+<% num_removed = @subscription.reset %>
+<% if num_removed > 0 %>
+  $("#grader_response").html("<%= escape_javascript show_info("Removed: #{num_removed}") %>")
+<% else %>
+  $("#grader_response").html("<%= escape_javascript show_info("Lesson already reset") %>")
+<% end %>
+
+$('#challenge_nav').html("<%= escape_javascript challenge_list %>");

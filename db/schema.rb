@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120805223004) do
+ActiveRecord::Schema.define(:version => 20120807221256) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(:version => 20120805223004) do
     t.string   "title"
     t.text     "content"
     t.text     "hint"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.integer  "lesson_id"
+    t.integer  "points",     :default => 100
   end
 
   create_table "circuit_elements", :force => true do |t|
@@ -60,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20120805223004) do
     t.string   "completion_status", :default => "under_development"
   end
 
-  create_table "lessons", :force => true do |t|
+  create_table "lessons_content", :force => true do |t|
     t.string   "title"
     t.text     "description"
     t.datetime "created_at",                    :null => false
@@ -128,10 +129,13 @@ ActiveRecord::Schema.define(:version => 20120805223004) do
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "lesson_id"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
     t.string   "completed_lessons"
     t.text     "completed_challenges"
+    t.integer  "last_attempted_challenge", :default => 1
+    t.integer  "last_completed_challenge", :default => 0
+    t.integer  "points",                   :default => 0
   end
 
   add_index "subscriptions", ["lesson_id"], :name => "index_subscriptions_on_lesson_id"
@@ -141,9 +145,9 @@ ActiveRecord::Schema.define(:version => 20120805223004) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "num_completed_lessons"
-    t.integer  "num_points"
-    t.integer  "num_achievements"
+    t.integer  "num_completed_lessons", :default => 0
+    t.integer  "num_points",            :default => 0
+    t.integer  "num_achievements",      :default => 0
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false
     t.string   "password_digest"

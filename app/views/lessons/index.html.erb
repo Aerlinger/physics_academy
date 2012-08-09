@@ -10,9 +10,15 @@
       <ul class="navbar-inner nav nav-pills" style="padding-top: 5px">
         <li><h3>Browse By:</h3></li>
 
-        <li class="active" ><a href="#">Subject</a></li>
-        <li><a href="#">Difficulty</a></li>
-        <li><a href="#">Date</a></li>
+        <li>
+          <%= link_to "Subject", lessons_path(sort_by: "subject"), remote: true, id: 'subject' %>
+        </li>
+        <li>
+          <%= link_to "Difficulty", lessons_path(sort_by: "difficulty"), remote: true, id: 'difficulty' %>
+        </li>
+        <li>
+          <%= link_to "Newest", lessons_path(sort_by: "created_at"), remote: true, id: 'newest' %>
+        </li>
 
         <form class="navbar-search pull-right" action="" style="padding-top: -4px; margin-right:20px">
           <input type="text" class="search-query span2" placeholder="Search">
@@ -23,10 +29,9 @@
 
     </div>
 
-    <%= render @lessons, partial: '_lesson.html.erb' %>
-    <!--<div class="accordion" id="accordion2">-->
-
-    <!--</div>-->
+    <div id="lesson_container">
+      <%= render @lessons, partial: '_lesson.html.erb' %>
+    </div>
 
   </div>
 

@@ -15,7 +15,16 @@ PhysicsAcademy::Application.routes.draw do
   resources :users
   resources :lessons do
     member { post :vote }
-    resources :challenges
+
+    resources :challenges do
+      put :submit, on: :member
+      put :reset, on: :member
+      put :reset_all, on: :member
+      get :error, on: :member
+      get :warning, on: :member
+      get :next, on: :member
+    end
+
   end
 
   # Since we have no need to show or edit sessions, we’ve restricted the actions to new, create, and destroy
@@ -101,14 +110,14 @@ end
 #                 user GET    /users/:id(.:format)            users#show
 #                      PUT    /users/:id(.:format)            users#update
 #                      DELETE /users/:id(.:format)            users#destroy
-#          vote_lesson POST   /lessons/:id/vote(.:format)     lessons#vote
-#              lessons GET    /lessons(.:format)              lessons#index
-#                      POST   /lessons(.:format)              lessons#create
-#           new_lesson GET    /lessons/new(.:format)          lessons#new
-#          edit_lesson GET    /lessons/:id/edit(.:format)     lessons#edit
-#               lesson GET    /lessons/:id(.:format)          lessons#show
-#                      PUT    /lessons/:id(.:format)          lessons#update
-#                      DELETE /lessons/:id(.:format)          lessons#destroy
+#          vote_lesson POST   /lessons_content/:id/vote(.:format)     lessons_content#vote
+#              lessons_content GET    /lessons_content(.:format)              lessons_content#index
+#                      POST   /lessons_content(.:format)              lessons_content#create
+#           new_lesson GET    /lessons_content/new(.:format)          lessons_content#new
+#          edit_lesson GET    /lessons_content/:id/edit(.:format)     lessons_content#edit
+#               lesson GET    /lessons_content/:id(.:format)          lessons_content#show
+#                      PUT    /lessons_content/:id(.:format)          lessons_content#update
+#                      DELETE /lessons_content/:id(.:format)          lessons_content#destroy
 #             sessions POST   /sessions(.:format)             sessions#create
 #          new_session GET    /sessions/new(.:format)         sessions#new
 #              session DELETE /sessions/:id(.:format)         sessions#destroy

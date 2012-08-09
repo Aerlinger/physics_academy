@@ -7,7 +7,7 @@ class Challenge < ActiveRecord::Base
   validates_presence_of :content
 
   def to_param
-    self.title
+    "#{id}-#{title.parameterize}"
   end
 
 end

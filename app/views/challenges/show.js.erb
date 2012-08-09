@@ -1,0 +1,21 @@
+$('#challenge_nav').html("<%= escape_javascript challenge_list %>");
+
+$('.challenge_title').html("<%= "Challenge #{@challenge.id}: #{@challenge.title}" %>");
+$('.challenge_description').html("<%= @challenge.content %>");
+
+$(".chalkboard-background").append("<%= escape_javascript debug(@subscription) if Rails.env.development? %>")
+$(".chalkboard-background").append("<%= escape_javascript debug(@lesson) if Rails.env.development? %>")
+
+$("#task_content").html("<%=
+
+  challenge_content_path = fetch_content_for_task(@lesson.id, @challenge.id)
+
+  escape_javascript(
+    begin
+       render partial: challenge_content_path
+    rescue ActionView::MissingTemplate
+      "Couldn't find   page for \"#{challenge_content_path}\""
+    end
+  )
+
+%>");

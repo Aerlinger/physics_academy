@@ -2,7 +2,7 @@
 <div class="row">
 
 
-  <div class="box-container best-value">
+  <div class="box-container orange-header">
     <div class="box span12">
 
       <div class="box-header">
@@ -14,18 +14,21 @@
         <div class="box-content">
 
           <div class="row">
-            <div class="span9">
+            <div class="span8">
               <%= image_tag "thumbs/default.png" %>
               <p> <%= lesson.description %> </p>
               <div style="clear: both"> </div>
             </div>
-            <div class="span3">
-              <div class="well" style="margin: 0; padding: 0">
-                <ul class="nav nav-list">
-                  <li class="nav-header">Covered Topics</li>
-                  <li><a href="#"><i class="icon-white icon-home"></i> Home</a></li>
-                  <li><a href="#"><i class="icon-book"></i> Library</a></li>
-                  <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+            <div class="span4">
+              <div class="well" style="padding: 0; margin: 0;">
+                <ul class="nav">
+                  <li class="nav-header"  style="text-align: center; border-bottom: 1px solid #d3d3d3;">Covered Topics</li>
+
+                  <% lesson.challenges.all(limit: 4).each do |challenge| %>
+                    <li style="margin-left: 1em;"><%= link_to raw( "&bull; " + challenge.title), "#" %></i></li>
+                  <% end %>
+                  <li style="text-align: center; border-top: 1px solid #d3d3d3;"><%= link_to raw( content_tag(:i, "", class: "icon-chevron-down") + " Expand " + content_tag(:i, "", class: "icon-chevron-down") ), "#" %></i></li>
+
                 </ul>
               </div>
             </div>
@@ -36,27 +39,39 @@
 
       <div class="box-actions">
 
-        <%# if lesson.completed %>
-            <!--<div class="number">-->
-              <i class="icon-wrench"></i>
-            <!--</div>-->
-        <%# end %>
+        <div class="row">
 
-        <%= link_to "Start &raquo;".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
-        <%= link_to "View all topics <b class='caret'> </b>".html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn pull_right" %>
-        <div style="clear: both"> </div>
+          <div class="span2" style="border: 1px solid black; background-color: gray;">
+            <% unless lesson.completed %>
+              <%= content_tag(:i, "   Under construction", class: "icon-cog", style: "margin-left: .5em; color: white") %>
+            <% end %>
+          </div>
+
+          <div class="span2">
+            <strong>Level: </strong><%= lesson.difficulty %>
+          </div>
+
+          <% percent = current_user.progress_for_lesson( lesson ) %>
+
+          <% if percent > 0 %>
+            <div class="span2">
+              Your Progress:
+            </div>
+            <div class="span3">
+
+              <div class="progress progress-success progress-striped active" style="margin-bottom: 0; margin-top: .3em">
+                <div class="bar" style="width: <%= percent %>%;"><strong><%= percent %>%</strong></div>
+              </div>
+            </div>
+          <% end %>
+
+
+          <% link_text = current_user.subscribed_to?(lesson) ? "Continue &raquo;" : "Start &raquo;" %>
+          <%= link_to link_text.html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn btn-success pull_right", style: "margin-left: 1em;" %>
+
+        </div>
+
       </div> <!-- /plan-actions -->
-
-
-      <!--<div class="plan-features">
-        <ul>
-          <li><strong>Resistors</strong> setup</li>
-          <li><strong>Transistors</strong> Website</li>
-          <li><strong>Transformers</strong> Projects</li>
-          <li><strong>Something</strong> Storage</li>
-          <li><strong>$150</strong> Google Adwords Credit</li>
-        </ul>
-      </div>-->
 
 
     </div> <!-- /plan -->
@@ -65,91 +80,3 @@
 
 </div>
 
-
-
-<!--
-
-
-<div class="accordion-group" style="margin: 15px auto">
-
-
-  <div class="accordion-heading lesson-preview" style="height: 150px">
-    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse<%= lesson.id %>">
-      <div class="lesson-preview-thumbnail"></div>
-      <h3>
-        <%= lesson.title %>
-      </h3>
-      <p>
-        <%= lesson.description %>
-      </p>
-
-      <div class="clear-float"></div>
-    </a>
-  </div>
-
-
-  <div id="collapse<%= lesson.id %>" class="accordion-body collapse" style="height: 0px; ">
-    <div class="accordion-inner">
-      <ul class="nav nav-tabs nav-stacked">
-
-        <% lesson.challenges.all.each_with_index do |challenge, index| %>
-          <li>
-            <a href="<%= lesson_challenge_path(lesson_id: lesson.id, id: challenge.id) %>">
-              <h4> <%= index+1 %> </h4> <%= challenge.content %>
-              <div class="progress progress-striped active span3 active" style="float: right">
-                <div class="bar" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-        <% end %>
-
-      </ul>
-    </div>
-  </div>
-
-</div>
--->
-
-
-<!-- TEMPLATE:
-
-<div class="accordion" id="accordion2">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Collapsible Group Item #1
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
-      <div class="accordion-inner">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        Collapsible Group Item #2
-      </a>
-    </div>
-    <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
-      <div class="accordion-inner">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        Collapsible Group Item #3
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
-      <div class="accordion-inner">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-
--->

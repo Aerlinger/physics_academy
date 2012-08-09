@@ -1,0 +1,44 @@
+<!-- HINT WINDOW -->
+<div class="span2 box-container">
+
+  <div class="box-header">
+    <div class="box-title">
+      Stuck?
+    </div>
+  </div>
+
+  <div class="box-content">
+    <p>
+    Press the show hint button below to get a nudge in the right direction.
+    You'll lose points though, so don't use it if you don't need to.
+    </p>
+  </div>
+
+  <div class="box-actions">
+    <%= link_to "Get Hint", "hint", class: "btn btn-large btn-success", remote: true, method: :put, id: "submit" %>
+  </div>
+
+</div>
+
+<!-- QUESTION WINDOW -->
+<div class="span2 box-container">
+
+  <div class="box-header">
+    <div class="box-title">
+      Ask a Question
+    </div>
+  </div>
+
+  <div class="box-content">
+    <p>
+      Ask a question to the forums:
+
+      <textarea id="question_text" type="text" name="fname"> Type Question Here. </textarea>
+    </p>
+  </div>
+
+  <div class="box-actions">
+    <%= link_to "Submit", "hint", class: "btn btn-large btn-success", remote: true, method: :put, id: "submit" %>
+  </div>
+
+</div>

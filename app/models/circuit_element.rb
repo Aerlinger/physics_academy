@@ -1,5 +1,6 @@
 class CircuitElement < ActiveRecord::Base
-  #after_initialize :init_params
+
+  before_initialize :init_params
 
   serialize :params
   attr_accessible :name, :token_character, :flags, :params, :type, :x1, :x2, :y1, :y2
@@ -11,7 +12,7 @@ class CircuitElement < ActiveRecord::Base
   private
 
     def init_params
-      self.params = []
+      self.params ||= []
     end
 
 end

@@ -1,0 +1,316 @@
+@import "bootstrap";
+
+/*------------------------------------------------------------------
+
+[Pricing Plans Stylesheet]
+
+	Project:		Bootstrap Landing Template
+	Version:		1.0
+	Last change:	04/26/2012
+	Assigned to:	Rod Howard (rh)
+	
+
+-------------------------------------------------------------------*/
+
+
+/*-- Box Container --*/
+.box-container {
+  position: relative;
+  float: left;
+}
+
+/*-- Box Header --*/
+
+.box-header {
+  text-align: center;
+  color: #FFF;
+
+  background-color: #821800;
+
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+}
+
+.box-title {
+  padding: .5em 1em;
+
+  font-size: 1.3em;
+  color: #FFF;
+
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 4px 4px 0 0;
+}
+
+.box-subheader {
+
+  padding: 1.0em 0 .5em 0;
+
+  font-size: 1em;
+  line-height: 0.8em;
+
+  background-color: #a0a1b0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.48);
+
+  span.term {
+    font-weight: bold;
+
+    display: block;
+    margin: .5em auto;
+
+    font-size: 1em;
+    padding: 0;
+  }
+
+  span.note {
+    position: relative;
+    top: -40px;
+
+    display: inline;
+
+    font-size: 1em;
+    line-height: 0.8em;
+  }
+
+}
+
+
+.box-content {
+
+  img {
+    background: #ffffff;
+    float: left;
+
+    margin-right: 1em;
+    margin-top: .5em;
+
+    // Image border
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    margin: .5em 1em .5em .5em;
+    border: 1px solid #d8d8d8;
+
+    -moz-box-shadow: 1px 1px 5px #888;
+    -webkit-box-shadow: 1px 1px 5px #888;
+    box-shadow: 1px 1px 5px #888;
+  }
+
+  p {
+    padding: .8em;
+    margin: 0;
+    color: #212121;
+    line-height: 1.5em;
+    font-size: 1.1em;
+  }
+
+  well {
+    padding: 0 !important;
+    margin-right: 1em;
+  }
+
+  ul {
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+  }
+
+  background-color: #e3dbd8;
+}
+
+
+/*-- Features --*/
+
+.box-features {
+
+  border: 1px solid #DDD;
+  border-bottom: none;
+  background: white;
+  padding-bottom: 1em;
+  padding-top: .5em;
+
+  color: #ab1515;
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+  }
+
+  li {
+
+    padding: 0;
+    margin: 0em 1em;
+
+    text-align: left;
+    border-bottom: 1px dotted #CCC;
+    color: #5e0f0f;
+
+    a {
+      padding: 1em 1em;
+      color: #ab1515;
+    }
+
+    a:hover {
+      background-color: #ffecf3;
+      margin-left: .1em;
+    }
+  }
+
+  li.active {
+
+    a {
+      font-weight: bold;
+      color: #292929;
+      background-color: #c7dfc9;
+    }
+
+    a:hover {
+      background-color: #c7dfc9;
+    }
+
+  }
+
+  li.completed {
+
+
+    i {
+      margin-right: .2em;
+      color: #96c4a1;
+    }
+
+    a {
+      color: #272727;
+    }
+
+    a:hover {
+      background-color: #c7dfc9;
+    }
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+}
+
+.box-features.form {
+  padding: 1em;
+}
+
+.box-actions {
+  padding: .5em 1em;
+  margin-bottom: 1.3em;
+
+  background-color: whiteSmoke;
+  background-image: -moz-linear-gradient(top, #F8F8F8, #E6E6E6);
+  background-image: -ms-linear-gradient(top, #F8F8F8, #E6E6E6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#F8F8F8), to(#E6E6E6));
+  background-image: -webkit-linear-gradient(top, #F8F8F8, #E6E6E6);
+  background-image: -o-linear-gradient(top, #F8F8F8, #E6E6E6);
+  background-image: linear-gradient(top, #F8F8F8, #E6E6E6);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#e6e6e6', GradientType = 0);
+  border-color: #E6E6E6 #E6E6E6 #BFBFBF;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:dximagetransform.microsoft.gradient(enabled = false);
+
+  border: 1px solid #DDD;
+
+  -webkit-border-bottom-right-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  .btn {
+    display: block;
+
+    padding: .2em 0;
+    margin: 0 auto;
+    width: 8em;
+
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+
+  .btn.pull_right {
+    float: right;
+    width: 8em;
+  }
+}
+
+
+/*-- Orange Box --*/
+
+.box-container.orange-header .box-header {
+  background-color: #bf6e00;
+  text-align: left;
+
+  .plan-title {
+    padding-left: 2em;
+  }
+
+}
+
+.box-container.yellow-header .box-header {
+  background-color: #dec23b;
+  text-align: left;
+  color: black;
+  .plan-title {
+    padding-left: 2em;
+  }
+
+}
+
+
+
+
+/*-- Columns --*/
+
+.pricing-plans.plans-1 .box-container {
+  width: 100%;
+}
+
+.pricing-plans.plans-2 .box-container {
+  width: 50%;
+}
+
+.pricing-plans.plans-3 .box-container {
+  width: 33.33%;
+}
+
+.pricing-plans.plans-4 .box-container {
+  width: 25%;
+}
+
+/*------------------------------------------------------------------
+[2. Min Width: 767px / Max Width: 979px]
+*/
+
+@media (min-width: 767px) and (max-width: 979px) {
+
+  .pricing-plans .box-container {
+    width: 50% !important;
+    margin-bottom: 2em;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .pricing-plans .box-container {
+    width: 100% !important;
+    margin-bottom: 2em;
+  }
+
+}

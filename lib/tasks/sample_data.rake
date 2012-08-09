@@ -12,8 +12,8 @@ def make_users
   # Create the admin first
   admin = User.create!(name:     "admin",
                        email:    "admin@physicsacademy.org",
-                       password: "anthony",
-                       password_confirmation: "anthony")
+                       password: "default_password",
+                       password_confirmation: "default_password")
 
   admin.toggle!(:admin)
 
@@ -24,6 +24,8 @@ def make_users
     password = "password"
     User.create!(name: name, email: email, password: password, password_confirmation: password)
   end
+
+  # I am the serial killer
 end
 
 def make_subscriptions

@@ -16,7 +16,7 @@ class Quote < ActiveRecord::Base
       # Make sure there is a period at the end of the quote
       self.quote << '.' unless self.quote.last == '.'
 
-      # Regular expression to add quotes to a string if they aren't present'
+      # Regular expression to add quotes to a string if they aren't already present
       self.quote = %Q/"#{self.quote.gsub(/\A['"]+|['"]+\Z/, "")}"/
 
     end

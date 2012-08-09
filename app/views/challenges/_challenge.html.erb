@@ -1,31 +1,27 @@
-<h4><%= @challenge.title %></h4>
-<p><%= @challenge.content %></p>
+<div class="well lesson-content">
 
-<canvas width="400" height="200" style="background-color: black;">
+  <div id="task_content">
 
-</canvas>
-<%# Random buttons: %>
+  </div>
 
-<%= link_to "Next", "#", class: "btn btn-success btn-large btn-next-lesson", action: "Next", remote: true %>
+  <!-- BOTTOM TEST BUTTONS -->
+  <div class="span12">
+    <div class="row">
+      <%= link_to "Warning", warning_lesson_challenge_path, class: "btn btn-warning btn-large", remote: true, id: "warning" %>
+      <%= link_to "Error", error_lesson_challenge_path, class: "btn btn-danger btn-large", remote: true, id: "error" %>
+      <%= link_to "Reset", reset_lesson_challenge_path, class: "btn btn-success btn-large", remote: true, method: :put, id: "reset" %>
+      <%= link_to "Reset All", reset_all_lesson_challenge_path, class: "btn btn-inverse btn-large", remote: true, method: :put, id: "reset_all" %>
+      <%= link_to "Submit", submit_lesson_challenge_path, class: "btn btn-info btn-large", remote: true, method: :put, id: "submit" %>
+      <%= link_to "Next &raquo".html_safe, next_lesson_challenge_path, class: "btn btn-large", id: "next", style: "display: none" %>
+    </div>
+  </div>
 
-<a class="btn btn-success btn-large btn-next-lesson" href="#">Next</a>
+  <!-- SUBMISSION FEEDBACK -->
+  <div class="row">
+    <div id="grader_response" style="margin-left: 1.5em; margin-top: 1em;">
+      <!-- Submission  feedback response is rendered through AJAX here -->
+    </div>
+  </div>
 
-<!--
-
-<a class="btn btn-primary btn-large btn-next-lesson" href="#" id="btn-main">Primary</a>
-<a class="btn btn-primary btn-mini btn-next-lesson" href="#">Primary</a>
-<a class="btn btn-primary btn-small btn-next-lesson" href="#">Primary</a>
-
-<br />
-<a class="btn btn-warning btn-large btn-next-lesson" href="#">Warning</a>
-<a class="btn btn-danger btn-large btn-next-lesson" href="#">Danger</a>
-<a class="btn btn-info btn-large btn-next-lesson" href="#">Info</a>
-
-<a class="btn btn-large btn-large btn-next-lesson" href="#" id="pop" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">Default</a>
-
-<br />
-<div class="box">points</div>
-
-<a class="btn btn-small" data-toggle="modal" href="#myModal" >Launch Modal</a>
--->
+</div>
 

@@ -1,11 +1,13 @@
 class LessonsController < ApplicationController
 
   def index
-    @lessons = Lesson.all
+
+    @lessons = params[:sort_by] ? Lesson.order(params[:sort_by]) : Lesson.all
 
     respond_to do |format|
       format.html
       format.json { render json: @lessons }
+      format.js # renders index.js.erb
     end
   end
 

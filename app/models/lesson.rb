@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: lessons
+# Table name: lessons_content
 #
 #  id          :integer         not null, primary key
 #  title       :string(255)
@@ -24,7 +24,9 @@ class Lesson < ActiveRecord::Base
   has_reputation :votes, source: :user, aggregated_by: :sum
 
   def to_param
-    self.title
+    "#{id}-#{title.parameterize}"
   end
+
+  scope :newest, :order => 'created_at DESC'
 
 end

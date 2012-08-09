@@ -14,7 +14,7 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
-  it { should respond_to(:lessons) }
+  it { should respond_to(:lessons_content) }
   it { should respond_to(:subscriptions) }
 
   it { should be_valid }

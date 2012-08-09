@@ -46,7 +46,7 @@ class Schema3 < ActiveRecord::Migration
     t.string   "completion_status", :default => "under_development"
   end
 
-  create_table "lessons", :force => true do |t|
+  create_table "lessons_content", :force => true do |t|
     t.string   "title"
     t.text     "description"
                t.datetime "created_at",                          :null => false

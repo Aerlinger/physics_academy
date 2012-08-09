@@ -1,0 +1,15 @@
+var success = true;
+
+if(success) {
+
+
+
+  var message = "Success!"
+
+  $("#submit").removeClass('btn-info').addClass('btn-success');
+
+  $("#grader_response").html("<%= escape_javascript show_success("That's right!") %>");
+  $("#next").show();
+
+  $('#challenge_nav').html("<%= escape_javascript challenge_list %>");
+}

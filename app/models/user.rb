@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
 
 
   has_many :evaluations, class_name: "RSEvaluation", as: :source
-  has_reputation :votes, source: {reputation: :votes, of: :lessons}, aggregated_by: :sum
+  has_reputation :votes, source: {reputation: :votes, of: :lessons_content}, aggregated_by: :sum
 
   before_save { |user| user.email = user.email.downcase }
   before_save :create_remember_token
@@ -29,6 +29,15 @@ class User < ActiveRecord::Base
 
   def subscribe(lesson)
     subscriptions.find_or_create_by_lesson_id(user_id: self.id, lesson_id: lesson.id)
+  end
+
+  def subscribed_to?(lesson)
+    !subscriptions.find_by_lesson_id(lesson.id).blank?
+  end
+
+  def progress_for_lesson(lesson)
+    subscription = subscriptions.find_by_lesson_id(lesson.id)
+    subscription.blank? ? 0 : subscription.percent_progress
   end
 
   private
