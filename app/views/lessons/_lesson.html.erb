@@ -1,4 +1,3 @@
-
 <div class="row">
 
 
@@ -9,33 +8,40 @@
 
         <div class="box-title">
           <%= lesson.title %>
-        </div> <!-- /plan-title -->
+        </div>
 
         <div class="box-content">
 
           <div class="row">
+
             <div class="span8">
               <%= image_tag "thumbs/default.png" %>
               <p> <%= lesson.description %> </p>
-              <div style="clear: both"> </div>
+
+              <div style="clear: both"></div>
             </div>
             <div class="span4">
               <div class="well" style="padding: 0; margin: 0;">
                 <ul class="nav">
-                  <li class="nav-header"  style="text-align: center; border-bottom: 1px solid #d3d3d3;">Covered Topics</li>
+                  <li class="nav-header" style="text-align: center; border-bottom: 1px solid #d3d3d3;">
+                    Covered Topics
+                  </li>
 
                   <% lesson.challenges.all(limit: 4).each do |challenge| %>
-                    <li style="margin-left: 1em;"><%= link_to raw( "&bull; " + challenge.title), "#" %></i></li>
+                    <li style="margin-left: 1em;">
+                      <%= link_to raw("&bull; " + challenge.title), "#" %>
+                    </li>
                   <% end %>
-                  <li style="text-align: center; border-top: 1px solid #d3d3d3;"><%= link_to raw( content_tag(:i, "", class: "icon-chevron-down") + " Expand " + content_tag(:i, "", class: "icon-chevron-down") ), "#" %></i></li>
+                  <li style="text-align: center; border-top: 1px solid #d3d3d3;"><%= link_to raw(content_tag(:i, "", class: "icon-chevron-down") + " Expand " + content_tag(:i, "", class: "icon-chevron-down")), "#" %></i></li>
 
                 </ul>
               </div>
             </div>
-          </div>
-        </div> <!-- /plan-price -->
 
-      </div> <!-- /plan-header -->
+          </div>
+        </div>
+
+      </div>
 
       <div class="box-actions">
 
@@ -48,34 +54,31 @@
           </div>
 
           <div class="span2">
-            <strong>Level: </strong><%= lesson.difficulty %>
+            <strong>Level: </strong> <%= lesson.difficulty %>
           </div>
 
-          <% percent = current_user.progress_for_lesson( lesson ) %>
-
-          <% if percent > 0 %>
+          <% percent = 50 %>
+          <% if percent > 0 && signed_in? %>
             <div class="span2">
               Your Progress:
             </div>
             <div class="span3">
 
-              <div class="progress progress-success progress-striped active" style="margin-bottom: 0; margin-top: .3em">
-                <div class="bar" style="width: <%= percent %>%;"><strong><%= percent %>%</strong></div>
-              </div>
+                <div class="progress progress-success progress-striped active" style="margin-bottom: 0; margin-top: .3em">
+                  <div class="bar" style="width: <%= percent %>%;"><strong><%= percent %>%</strong></div>
+                </div>
+
             </div>
           <% end %>
 
-
-          <% link_text = current_user.subscribed_to?(lesson) ? "Continue &raquo;" : "Start &raquo;" %>
+          <% link_text = (signed_in? && current_user.subscribed_to?(lesson)) ? "Continue &raquo;" : "Start &raquo;" %>
           <%= link_to link_text.html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id), class: "btn btn-success pull_right", style: "margin-left: 1em;" %>
 
         </div>
 
-      </div> <!-- /plan-actions -->
-
-
-    </div> <!-- /plan -->
-  </div> <!-- /plan-container -->
+      </div>
+    </div>
+  </div>
 
 
 </div>

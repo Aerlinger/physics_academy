@@ -1,7 +1,7 @@
 class ChallengesController < ApplicationController
 
-  before_filter :read_params
-  after_filter :update, only: [:reset, :reset_all, :submit]  # Only executed on PUT requests
+  before_filter :read_params, except: [:index]
+  after_filter :save_subscription, only: [:reset, :reset_all, :submit]  # Only executed on PUT requests
 
   def show
 
@@ -15,23 +15,27 @@ class ChallengesController < ApplicationController
   end
 
   def index
-    redirect_to lesson_challenge_path(lesson_id: @lesson.id, id: 1)
+    redirect_to lesson_challenge_path(lesson_id: @lesson.id, id: @lesson.challenges.first.id)
   end
 
   # PUT
   def submit
 
-    if @subscription.blank?
-      @user.subscriptions.create!(user_id: @user.id, lesson_id: @lesson.id)
+    # Submit process
+
+    # Validate submission and get response. Three possibilities: :success, :error, or :warning
+    #
+    #  On success:
+    #    Mark lesson as completed and advance to next lessons
+    #    Save subscription
+    #  On warning or error:
+    #    Display relevant message and do not advance lesson
+
+
+    respond_to do |format|
+      format.js
     end
 
-    if @subscription.complete_challenge(@challenge.id)
-      respond_to do |format|
-        format.js
-      end
-    else
-
-    end
 
   end
 
@@ -49,19 +53,8 @@ class ChallengesController < ApplicationController
     end
   end
 
-  # PUT
-  def update
-    @subscription.save!
-    #render partial: "update"
-  end
-
   def next
     redirect_to lesson_challenge_path(lesson_id: @lesson.id, id: @subscription.next_challenge_id)
-
-    # For an AJAX request:
-    #respond_to do |format|
-    #  format.js
-    #end
   end
 
   def error
@@ -78,12 +71,18 @@ class ChallengesController < ApplicationController
 
   private
 
+    # PUT
+    def save_subscription
+      if !@user.guest
+        @subscription.save!
+      end
+    end
 
     def read_params
-      @user = current_user
+      @user = create_guest_user_if_not_signed_in
       @lesson = Lesson.find(params[:lesson_id])
-      @challenge = Challenge.find(params[:id]) if params[:id]
-      @subscription = current_user.subscribe(@lesson)
+      @challenge = Challenge.find(params[:id])
+      @subscription = @user.subscribe(@lesson)
     end
 
 

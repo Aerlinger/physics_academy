@@ -23,6 +23,11 @@ class Lesson < ActiveRecord::Base
 
   has_reputation :votes, source: :user, aggregated_by: :sum
 
+  # Returns the index of this lesson in the Lessons.all array
+  def index
+    Lesson.all.find_index(self)+1
+  end
+
   def to_param
     "#{id}-#{title.parameterize}"
   end

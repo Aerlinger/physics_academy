@@ -1,15 +1,19 @@
-var success = true;
+response = "success"
 
-if(success) {
+if(response == "warning") {
+  $.get("<%= escape_javascript warning_lesson_challenge_url %>");
+}
 
+else if (response=="error") {
+  $.get("<%= escape_javascript error_lesson_challenge_url %>");
+}
 
-
-  var message = "Success!"
-
+else if (response=="success") {
   $("#submit").removeClass('btn-info').addClass('btn-success');
-
-  $("#grader_response").html("<%= escape_javascript show_success("That's right!") %>");
-  $("#next").show();
+  $('#challenge_nav').html("<%= escape_javascript challenge_list %>");
+  <% @subscription.complete_challenge(@challenge.id) %>
 
   $('#challenge_nav').html("<%= escape_javascript challenge_list %>");
+
+  $.get( "<%= escape_javascript next_lesson_challenge_url %>", function() {alert("Success!")} );
 }

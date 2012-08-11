@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120807221256) do
+ActiveRecord::Schema.define(:version => 20120810212223) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -59,6 +59,18 @@ ActiveRecord::Schema.define(:version => 20120807221256) do
     t.datetime "updated_at",                                         :null => false
     t.string   "topic"
     t.string   "completion_status", :default => "under_development"
+  end
+
+  create_table "lessons", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.string   "introduction"
+    t.string   "image_url"
+    t.string   "difficulty",   :default => "0"
+    t.boolean  "completed"
+    t.string   "subject"
   end
 
   create_table "lessons_content", :force => true do |t|
@@ -129,13 +141,13 @@ ActiveRecord::Schema.define(:version => 20120807221256) do
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "lesson_id"
-    t.datetime "created_at",                              :null => false
-    t.datetime "updated_at",                              :null => false
+    t.datetime "created_at",                                 :null => false
+    t.datetime "updated_at",                                 :null => false
     t.string   "completed_lessons"
     t.text     "completed_challenges"
-    t.integer  "last_attempted_challenge", :default => 1
-    t.integer  "last_completed_challenge", :default => 0
-    t.integer  "points",                   :default => 0
+    t.integer  "current_challenge_id",        :default => 1
+    t.integer  "last_completed_challenge_id", :default => 0
+    t.integer  "points",                      :default => 0
   end
 
   add_index "subscriptions", ["lesson_id"], :name => "index_subscriptions_on_lesson_id"
@@ -145,14 +157,14 @@ ActiveRecord::Schema.define(:version => 20120807221256) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.integer  "num_completed_lessons", :default => 0
-    t.integer  "num_points",            :default => 0
-    t.integer  "num_achievements",      :default => 0
-    t.datetime "created_at",                               :null => false
-    t.datetime "updated_at",                               :null => false
+    t.integer  "num_completed_lessons",  :default => 0
+    t.integer  "num_points",             :default => 0
+    t.integer  "num_achievements",       :default => 0
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",                 :default => false
+    t.boolean  "admin",                  :default => false
     t.string   "location"
     t.text     "about_me"
     t.string   "website_url"
@@ -160,9 +172,19 @@ ActiveRecord::Schema.define(:version => 20120807221256) do
     t.string   "linkedin_url"
     t.text     "avatar"
     t.string   "username"
+    t.string   "encrypted_password",     :default => "",    :null => false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          :default => 0
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+  add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
 
 end

@@ -3,113 +3,15 @@
 
 <div class="chalkboard-background">
 
-  <div class="container">
+  <div class="container" style="padding-top: 2em;">
 
     <div class="row-fluid">
-
-      <div class="box-container span3">
-
-        <div class="box-header">
-
-          <div class="box-title">
-            <%= @user.name.capitalize! %>
-          </div>
-
-          <div class="box-subheader">
-            <%= image_tag "thumbs/default.png" %> <span class="term">Level: Quark</span>
-          </div> <!-- /plan-price -->
-
-        </div>
-
-        <div class="box-actions">
-          <a href="javascript:;" class="btn">Edit Profile</a>
-        </div> <!-- /plan-actions -->
-
-      </div> <!-- sidebar-nav -->
-
-      <div class="box-container orange-header span9">
-
-        <div class="box-header">
-
-          <div class="box-title">
-            Statistics
-
-          </div>
-
-        </div>
-
-        <div class="box-features">
-          <ul class="nav">
-
-            <% if notice.nil? %>
-              <p id="notice"><%= notice %></p>
-            <% end %>
-
-            <li>Email: <%= @user.email %></li>
-            <li>Completed Lessons: <%= @user.num_completed_lessons || 0 %></li>
-            <li>Points Earned: <%= @user.num_points || 0 %></li>
-
-          </ul>
-        </div> <!-- .box-features -->
-
-        <div class="box-actions">
-          <a href="javascript:;" class="btn">Edit</a>
-        </div>
-
-      </div> <!-- .box-container -->
-
-    </div> <!-- .row-fluid -->
-
+      <%= render partial: "statistics" %>
+    </div>
 
     <div class="row-fluid">
-
-      <div class="box-container span3">
-
-        <div class="box-header">
-
-          <div class="box-title">
-            Badges earned
-          </div>
-
-          <div class="box-subheader">
-            <%= image_tag "thumbs/default.png" %> <span class="term">Level: Quark</span>
-          </div> <!-- /plan-price -->
-
-        </div>
-
-        <div class="box-actions">
-          <a href="javascript:;" class="btn">Edit Profile</a>
-        </div> <!-- /plan-actions -->
-
-      </div> <!-- sidebar-nav -->
-
-      <div class="box-container orange-header span9">
-
-        <div class="box-header">
-
-          <div class="box-title">
-            Recent Lessons
-          </div>
-
-        </div>
-
-        <div class="box-features">
-          <ul class="nav">
-
-            <% @user.subscriptions.all.each_with_index do |subscription, index| %>
-              <%= content_tag :li, link_to("#{index+1}: #{subscription.lesson.title}", lesson_challenge_path(subscription.lesson.id) ) %>
-            <% end %>
-
-          </ul>
-        </div> <!-- /plan-features -->
-
-        <div class="box-actions">
-          <a href="javascript:;" class="btn">Edit</a>
-        </div>
-
-      </div> <!-- .box-container -->
-
-    </div> <!-- .row-fluid -->
+      <%= render partial: "achievements" %>
+    </div>
 
   </div>
 

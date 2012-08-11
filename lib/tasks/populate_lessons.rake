@@ -1,5 +1,5 @@
 namespace :db do
-  desc "Populate lessons_content directories"
+  desc "Reads data in lesson_content directory and populates the database according to folder names and lesson-setup.yml file"
   task populate_lessons: :environment do
 
     Lesson.delete_all

@@ -5,3 +5,5 @@
 <% else %>
   $("#grader_response").html("<%= escape_javascript show_info("Challenge already Reset!") %>");
 <% end %>
+
+$('#challenge_nav').html("<%= escape_javascript challenge_list %>");

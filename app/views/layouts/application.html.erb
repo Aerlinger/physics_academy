@@ -12,6 +12,17 @@
   <body>
 
     <%= render 'layouts/header' %>
+
+    <% flash.each do |key, value| %>
+      <div class="flash alert alert-#{key}">
+        <div class="container">
+          <h3 style="text-align: center;">
+            <%= value %>
+          </h3>
+        </div>
+      </div>
+    <% end %>
+
       <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>

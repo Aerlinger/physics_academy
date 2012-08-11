@@ -1,0 +1,50 @@
+<div class="box-container span3">
+
+  <div class="box-header">
+
+    <div class="box-title">
+      <%= @user.name.capitalize! %>
+    </div>
+
+    <div class="box-subheader">
+      <%= image_tag "thumbs/default.png" %> <span class="term">Level: Quark</span>
+    </div>
+
+  </div>
+
+  <div class="box-actions">
+    <a href="javascript:;" class="btn">Edit Profile</a>
+  </div>
+
+</div>
+
+<div class="box-container orange-header span9">
+
+  <div class="box-header">
+
+    <div class="box-title">
+      Statistics
+    </div>
+
+  </div>
+
+  <div class="box-features">
+    <ul class="nav">
+
+      <% if notice.nil? %>
+        <p id="notice"><%= notice %></p>
+      <% end %>
+
+      <li>Email: <%= @user.email %></li>
+      <li>Completed Lessons: <%= @user.num_completed_lessons || 0 %></li>
+      <li>Points Earned: <%= @user.num_points || 0 %></li>
+
+    </ul>
+  </div>
+
+  <div class="box-actions">
+    <a href="javascript:;" class="btn">Edit</a>
+  </div>
+
+</div>
+

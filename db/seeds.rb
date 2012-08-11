@@ -24,9 +24,10 @@ User.create!(name:     "Newton",
 ## ##########################################
 # QUOTE DB POPULATION
 ## ##########################################
+Quote.delete_all
 
-def quote_definitions
-  [
+quote_refs =
+    [
       {quote: "Tell me and I forget, teach me and I may remember, involve me and I learn.", author: "Benjamin Franklin"},
       {quote: "The Sun, with all the planets revolving around it, and depending on it, can still ripen a vine of grapes as though it had nothing else in the Universe to do", author: "Galileo Galilei"},
       {quote: "You cannot teach a man anything; you can only help him discover it in himself.", author: "Galileo Galilei"},
@@ -42,20 +43,15 @@ def quote_definitions
       {quote: "Learning is not attained by chance, it must be sought for with ardor and attended to with diligence.", author: "Abigail Adams"},
       {quote: "Measure what is measurable, and make measurable what is not so.", author: "Galileo Galilei"}
   ]
+
+
+quote_refs.each do |quote_ref|
+  new_quote = Quote.new
+  new_quote.quote = quote_ref[:quote]
+  puts "\n\t\"#{new_quote.quote}\"\n"
+  new_quote.author = quote_ref[:author] || "anonymous"
+  new_quote.save!
 end
 
-def make_quotes
-
-  quote_refs = quote_definitions
-
-  quote_refs.each do |quote_ref|
-    new_quote = Quote.new
-    new_quote.quote = quote_ref[:quote]
-    puts "\n\t\"#{new_quote.quote}\"\n"
-    new_quote.author = quote_ref[:author] || "anonymous"
-    new_quote.save!
-  end
-
-end
-
-make_quotes
+Rake::Task['db:populate_lessons'].execute
+Rake::Task['db:populate_circuit_simulations'].execute

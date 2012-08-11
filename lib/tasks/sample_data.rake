@@ -25,7 +25,6 @@ def make_users
     User.create!(name: name, email: email, password: password, password_confirmation: password)
   end
 
-  # I am the serial killer
 end
 
 def make_subscriptions

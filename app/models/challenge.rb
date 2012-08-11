@@ -6,6 +6,10 @@ class Challenge < ActiveRecord::Base
   validates_presence_of :title
   validates_presence_of :content
 
+  def index
+    lesson.challenges.find_index(self)+1
+  end
+
   def to_param
     "#{id}-#{title.parameterize}"
   end

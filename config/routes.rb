@@ -1,19 +1,22 @@
 PhysicsAcademy::Application.routes.draw do
 
-  #get "labs/index"
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+
+  root to: 'static_pages#home'
+
   get "labs/circuits"
   get "labs/mechanics"
 
   match '/labs', to: 'labs#index'
   match '/labs/circuits/:circuit_name', to: 'labs#circuits'
 
-  root to: 'static_pages#home'
 
   resources :circuit_simulations
   resources :circuit_elements
 
-  resources :users
+  #resources :users
   resources :lessons do
+
     member { post :vote }
 
     resources :challenges do
@@ -28,17 +31,18 @@ PhysicsAcademy::Application.routes.draw do
   end
 
   # Since we have no need to show or edit sessions, we’ve restricted the actions to new, create, and destroy
-  resources :sessions, only: [:new, :create, :destroy]
+  #resources :sessions, only: [:new, :create, :destroy]
 
-  match '/signup',  to: 'users#new'
-  match '/signin',  to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy', via: :delete
+  #match '/signup',  to: 'users#new'
+  #match '/signin',  to: 'sessions#new'
+  #match '/signout', to: 'sessions#destroy', via: :delete
 
   match '/help',    to: 'static_pages#help'
 
   match '/about',   to: 'static_pages#about'
   match '/privacy', to: 'static_pages#privacy'
   match '/terms',   to: 'static_pages#terms'
+
 
 
   # The priority is based upon order of creation:

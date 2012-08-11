@@ -1,5 +1,5 @@
 namespace :db do
-  desc "Read circuits from setup list"
+  desc "Read circuits from setup list and populates database with the data"
   task populate_circuit_simulations: :environment do
     CircuitSimulation.delete_all
     read_setup_list
@@ -68,9 +68,10 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
 
   lines.each do |line|
 
-    next if line.nil? || line.empty?
+    # Skip blank lines, empty lines, and comments ()starting with a '#')
+    next if line.nil? || line.empty? || line[0] == "#"
 
-    # Read the simulation parameters
+    # If this is a circuit configuration line (starts with '$')
     if line[0] == '$'
       line[0] = ''
       sim_params = line.split(' ')
@@ -81,6 +82,7 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
       circuit_sim.current_speed   = sim_params.shift
       circuit_sim.voltage_range   = sim_params.shift
       circuit_sim.power_range     = sim_params.shift || 0
+    # Else, this is a Circuit Element
     else
       circuit_element_params = line.split(' ')
 

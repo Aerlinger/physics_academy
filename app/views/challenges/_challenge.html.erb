@@ -1,16 +1,23 @@
 <div class="well lesson-content">
 
   <div id="task_content">
+  <%=
+    begin
+      render partial: fetch_content_for_task(@lesson.index, @challenge.index)
+    rescue ActionView::MissingTemplate
+      "Couldn't find page"
+    end
+  %>
 
   </div>
 
   <!-- BOTTOM TEST BUTTONS -->
   <div class="span12">
     <div class="row">
-      <%= link_to "Warning", warning_lesson_challenge_path, class: "btn btn-warning btn-large", remote: true, id: "warning" %>
-      <%= link_to "Error", error_lesson_challenge_path, class: "btn btn-danger btn-large", remote: true, id: "error" %>
       <%= link_to "Reset", reset_lesson_challenge_path, class: "btn btn-success btn-large", remote: true, method: :put, id: "reset" %>
       <%= link_to "Reset All", reset_all_lesson_challenge_path, class: "btn btn-inverse btn-large", remote: true, method: :put, id: "reset_all" %>
+      <%= link_to "Submit Warning", warning_lesson_challenge_path, class: "btn btn-warning btn-large", remote: true, id: "warning" %>
+      <%= link_to "Submit Error", error_lesson_challenge_path, class: "btn btn-danger btn-large", remote: true, id: "error" %>
       <%= link_to "Submit", submit_lesson_challenge_path, class: "btn btn-info btn-large", remote: true, method: :put, id: "submit" %>
       <%= link_to "Next &raquo".html_safe, next_lesson_challenge_path, class: "btn btn-large", id: "next", style: "display: none" %>
     </div>
@@ -22,6 +29,16 @@
       <!-- Submission  feedback response is rendered through AJAX here -->
     </div>
   </div>
+
+  challenge_content_path = fetch_content_for_task(@lesson.index, @challenge.index)
+
+  escape_javascript(
+  begin
+  render partial: challenge_content_path
+  rescue ActionView::MissingTemplate
+  "Couldn't find page for \"#{challenge_content_path}\""
+  end
+  )
 
 </div>
 
