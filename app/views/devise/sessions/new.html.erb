@@ -1,17 +1,63 @@
-<h2>Sign in</h2>
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+<%# This page is shown as the User sign-in page %>
+<% provide( :title, "Sign in") %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+<%= render :partial => 'layouts/subheader', locals: {title: "Sign In"} %>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+<div class="container">
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+  <div class="row offset3">
 
-<%= render "devise/shared/links" %>
+
+    <div class="box-container span6 clear_margins">
+
+
+      <div class="box-header box-title">
+        <!--<div class="box-title">-->
+        Enter your login info
+        <!--</div>-->
+      </div>
+
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f| %>
+
+        <fieldset>
+
+          <div class="box-features">
+
+            <div class="control-group">
+              <%= f.label :email, class: "control-label" %>
+              <div class="controls">
+                <%= f.text_field :email, class: "input-xlarge focused" %>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <%= f.label :password, class: "control-label" %>
+              <div class="controls">
+                <%= f.password_field :password, class: "input-xlarge" %>
+              </div>
+            </div>
+
+            <% if devise_mapping.rememberable? -%>
+              <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+            <% end -%>
+
+          </div>
+
+          <div class="box-actions">
+            <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
+          </div>
+
+        </fieldset>
+
+      <% end %>
+
+      <%= render "devise/shared/links" %>
+
+    </div>
+
+  </div>
+
+
+</div>

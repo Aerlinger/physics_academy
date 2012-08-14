@@ -27,12 +27,10 @@ namespace :db do
 end
 
 def create_lesson_from_yaml(lesson_yaml)
-  new_lesson = Lesson.new
+  new_lesson              = Lesson.new
   new_lesson.title        = lesson_yaml[:title]
   new_lesson.description  = lesson_yaml[:description]
   new_lesson.difficulty   = lesson_yaml[:difficulty]
-  new_lesson.subject      = lesson_yaml[:subject]
-  new_lesson.completed    = lesson_yaml[:completed]
 
   lesson_yaml[:challenges].each do |challenge|
     new_lesson.challenges.build(title: challenge, content: "Description for challenge goes here")

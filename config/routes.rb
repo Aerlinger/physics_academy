@@ -10,11 +10,10 @@ PhysicsAcademy::Application.routes.draw do
   match '/labs', to: 'labs#index'
   match '/labs/circuits/:circuit_name', to: 'labs#circuits'
 
-
+  resources :users, only: [:show, :edit]
   resources :circuit_simulations
   resources :circuit_elements
 
-  #resources :users
   resources :lessons do
 
     member { post :vote }
@@ -37,6 +36,7 @@ PhysicsAcademy::Application.routes.draw do
   #match '/signin',  to: 'sessions#new'
   #match '/signout', to: 'sessions#destroy', via: :delete
 
+  #match '/users/:id',  to: 'users#show'
   match '/help',    to: 'static_pages#help'
 
   match '/about',   to: 'static_pages#about'

@@ -13,8 +13,6 @@ describe User do
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:remember_token) }
   it { should respond_to(:admin) }
-  it { should respond_to(:authenticate) }
-  it { should respond_to(:lessons_content) }
   it { should respond_to(:subscriptions) }
 
   it { should be_valid }
@@ -22,7 +20,7 @@ describe User do
 
   describe "accessible attributes" do
     it "should not allow access to admin" do
-      expect { User.new(admin: "1") }.should raise_error(ActiveModel::MassAssignmentSecurity::Error)
+      lambda { User.new(admin: true) }.should raise_error(ActiveModel::MassAssignmentSecurity::Error)
     end
   end
 
@@ -33,8 +31,12 @@ describe User do
   end
 
   describe "when name is not present do" do
-    before { @user.name = "t" }
-    it { should_not be_valid }
+    before do
+      @user.name = ""
+      @user.save!
+    end
+
+    its(:name) { should eq "Anonymous User"}
   end
 
   describe "when email is not present" do
@@ -103,11 +105,14 @@ describe User do
     let(:found_user) { User.find_by_email(@user.email) }
 
     describe "with valid password" do
-      it { should == found_user.authenticate(@user.password) }
+
+      it {
+        found_user.password.should be_nil
+      }
     end
 
     describe "with invalid password" do
-      let(:user_for_invalid_password) { found_user.authenticate("invalid") }
+      let(:user_for_invalid_password) { found_user.valid_password?("invalid") }
 
       it { should_not == user_for_invalid_password }
       specify { user_for_invalid_password.should be_false }

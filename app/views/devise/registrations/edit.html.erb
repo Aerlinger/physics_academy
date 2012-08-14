@@ -1,25 +1,163 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% provide(:title, 'Edit Profile') %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+<%=  render partial: 'layouts/subheader', locals: {title: "Your Account &raquo Edit Profile".html_safe} %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+<div class="chalkboard-background">
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
+  <div class="container">
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+    <div class="row">
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
+      <div class="box-container span12">
 
-  <div><%= f.submit "Update" %></div>
-<% end %>
+        <div class="box-header">
+          <div class="box-title">
+            Edit your credentials below
+          </div>
+        </div>
 
-<h3>Cancel my account</h3>
+        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+          <div class="box-features form">
 
-<%= link_to "Back", :back %>
+            <fieldset>
+              <%= devise_error_messages! %>
+              <%= render 'shared/error_messages', object: @user %>
+            </fieldset>
+
+            <table style="width: 500px">
+
+              <tr>
+                <td>
+                  <%= f.label :name %>
+                </td>
+                <td>
+                  <%= f.text_field :name %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :email %>
+                </td>
+                <td>
+                  <%= f.email_field :email %>
+                </td>
+
+              </tr>
+
+              <tr>
+                <td colspan="2"> <hr> </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :password, "New Password" %>
+                </td>
+                <td>
+                  <%= f.password_field :password, autocomplete: "off" %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :password_confirmation, "New Password Confirm" %>
+                </td>
+                <td>
+                  <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :current_password %>
+                </td>
+                <td>
+                  <%= f.password_field :current_password, autocomplete: "off" %>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2"> <hr> </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :username, "Username" %>
+                </td>
+                <td>
+                  <%= f.text_field :username %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :location, "Location" %>
+                </td>
+                <td>
+                  <%= f.text_field :location %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :about_me, "About Me" %>
+                </td>
+                <td>
+                  <%= f.text_area :about_me, maxlength: 1000 %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :website_url, "Website" %>
+                </td>
+                <td>
+                  <%= f.text_field :website_url %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :twitter, "Twitter Handle" %>
+                </td>
+                <td>
+                  <%= f.text_field :twitter %>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <%= f.label :linkedin_url, "LinkedIn Profile" %>
+                </td>
+                <td>
+                  <%= f.text_field :linkedin_url %>
+                </td>
+              </tr>
+
+            </table>
+
+            <h3>Cancel my account</h3>
+
+            <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
+
+            <%# gravatar_for @user %>
+            <!--<a href="http://gravatar.com/emails" target="_blank">change</a>-->
+          </div>
+
+          <div class="box-actions">
+            <%= f.submit "Save Changes", class: "btn btn-large btn-success" %>
+            <%= link_to "&laquo Back".html_safe, :back, class: "btn btn-large btn-primary" %>
+          </div>
+
+        <% end %>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+

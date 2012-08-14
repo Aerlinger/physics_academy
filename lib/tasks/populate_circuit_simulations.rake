@@ -57,7 +57,6 @@ def read_setup_list
     end
 
   end
-
 end
 
 def read_circuit_file(circuit_sim, path, circuit_filename)

@@ -2,39 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8c80be-45df-4817-afae-1b9cd20a3114" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\helpers\challenges_helper.rb" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\challenges\_help.html.erb" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\challenges\_modal.html.erb" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\challenges\_submission_response.html.erb" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\challenges\next.js.erb" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\challenges\show.js.erb" />
-      <change type="NEW" beforePath="" afterPath="C:\rails_projects\physics_academy\app\views\challenges\submit.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lessons/index.js.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../grader.js.coffee" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\images\challenges\bg.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\challenge.js.coffee" afterPath="" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\images\challenges\bg.jpg" afterPath="C:\rails_projects\physics_academy\app\assets\images\theme\chalkboard-bg.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/reboot-landing.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/global/reboot-landing.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/theme.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/global/theme.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/homepage.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/homepage.css.scss.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/layouts/_user_thumbnail.html.erb" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\spec\controllers\labs_controller_spec.rb" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\spec\helpers\labs_helper_spec.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" afterPath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.rspec" afterPath="$PROJECT_DIR$/../../../../.rspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile.lock" afterPath="$PROJECT_DIR$/../../../../Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile" afterPath="$PROJECT_DIR$/../../../../Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Guardfile" afterPath="$PROJECT_DIR$/../../../../Guardfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/application_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/application_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/lessons_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/lessons_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/lesson.rb" afterPath="$PROJECT_DIR$/../../../models/lesson.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/subscription.rb" afterPath="$PROJECT_DIR$/../../../models/subscription.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/_challenge.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/_challenge.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/users_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/circuit_element.rb" afterPath="$PROJECT_DIR$/../../../models/circuit_element.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/devise/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/_statistics.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/_statistics.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/routes.rb" afterPath="$PROJECT_DIR$/../../../../config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/schema.rb" afterPath="$PROJECT_DIR$/../../../../db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/seeds.rb" afterPath="$PROJECT_DIR$/../../../../db/seeds.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/test.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/test.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../application.js" afterPath="$PROJECT_DIR$/../application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/../../stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/box.css.scss" afterPath="$PROJECT_DIR$/../../stylesheets/global/box.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/test.log" afterPath="$PROJECT_DIR$/../../../../log/test.log" />
     </list>
     <ignored path="Faraday.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +51,7 @@
       <file leaf-file-name="CirSim.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CirSim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="29" selection-start="812" selection-end="812" vertical-scroll-proportion="0.3908046">
+            <state line="29" column="29" selection-start="812" selection-end="812" vertical-scroll-proportion="0.01954023">
               <folding />
             </state>
           </provider>
@@ -177,16 +169,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -221,6 +203,16 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -237,15 +229,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="69" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="713" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="67" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="62" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -340,13 +332,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="22" width="1696" height="1066" extended-state="7" />
+    <frame x="1912" y="22" width="1696" height="1066" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18432671" sideWeight="0.4960464" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02202643" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17139408" sideWeight="0.43612334" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17139408" sideWeight="0.5561674" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17139408" sideWeight="0.44052863" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17139408" sideWeight="0.5517621" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852423" sideWeight="0.6035846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819188" sideWeight="0.4900881" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.39272535" order="11" side_tool="true" content_ui="tabs" />
@@ -504,7 +496,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CirSim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="29" selection-start="812" selection-end="812" vertical-scroll-proportion="0.3908046">
+        <state line="29" column="29" selection-start="812" selection-end="812" vertical-scroll-proportion="0.01954023">
           <folding />
         </state>
       </provider>

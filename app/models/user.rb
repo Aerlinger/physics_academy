@@ -22,8 +22,8 @@ class User < ActiveRecord::Base
   has_many :evaluations, class_name: "RSEvaluation", as: :source
   has_reputation :votes, source: {reputation: :votes, of: :lessons_content}, aggregated_by: :sum
 
-  before_save { |user| user.email = user.email.downcase }
   before_save :create_remember_token
+  before_save :init_name_and_email
 
   has_many :subscriptions, dependent: :destroy
   has_many :lessons, through: :subscriptions
@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
   #validates :name, presence: true , length: { maximum: 50, minimum: 2 }
   validates :email, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
+  validates :name, length: { maximum: 50 }
   validates_presence_of :password_confirmation
 
   def voted_for?(lesson)
@@ -54,6 +55,12 @@ class User < ActiveRecord::Base
   end
 
   private
+
+    def init_name_and_email
+      self.email = email.downcase
+      self.name = "Anonymous User" if name.blank?
+      self.name.try(:titleize)
+    end
 
     def create_remember_token
       self.remember_token = SecureRandom.urlsafe_base64

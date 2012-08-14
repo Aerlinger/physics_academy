@@ -9,4 +9,15 @@ module ApplicationHelper
     end
   end
 
+  def flash_key(message)
+    case message
+      when "alert"
+        "error"
+      when "notice"
+        "info"
+
+    end
+
+  end
+
 end

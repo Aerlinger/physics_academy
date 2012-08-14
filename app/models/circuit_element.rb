@@ -1,6 +1,6 @@
 class CircuitElement < ActiveRecord::Base
 
-  before_initialize :init_params
+  after_initialize :init_params
 
   serialize :params
   attr_accessible :name, :token_character, :flags, :params, :type, :x1, :x2, :y1, :y2

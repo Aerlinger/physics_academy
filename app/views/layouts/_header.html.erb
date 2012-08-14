@@ -18,30 +18,21 @@
           </li>
 
           <li class="dropdown">
-            <%= link_to "Labs <b class='caret'></b>".html_safe, labs_path, class: "dropdown-toggle"  %>
+            <%= link_to "Labs".html_safe, labs_path, class: "dropdown-toggle"  %>
           </li>
 
           <li>
             <%= link_to "About", about_path %>
           </li>
+
           <li class="divider-vertical"></li>
           <% if user_signed_in? %>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <%= current_user.name || "Anonymous" %><b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", "current_user" %></li>
-                <li><%= link_to "Settings", edit_user_registration_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
+            <%= render partial: "layouts/user_thumbnail" %>
+          <% elsif guest_user? %>
+            <li><%= link_to "Create Account to save your progress", new_user_registration_path %></li>
           <% else %>
-             <li><%= link_to "Sign in", new_user_session_path %></li>
-             <li><%= link_to "Create Account", new_user_registration_path %></li>
+            <li><%= link_to "Sign in", new_user_session_path %></li>
+            <li><%= link_to "Create Account", new_user_registration_path %></li>
           <% end %>
 
         </ul>

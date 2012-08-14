@@ -26,6 +26,7 @@ function init() {
 
     var bodyDef = new b2BodyDef;
 
+
     //create ground
     bodyDef.type = b2Body.b2_staticBody;
     fixDef.shape = new b2PolygonShape;
@@ -52,6 +53,8 @@ function init() {
 
     bodyDef.position.x = 530/60;
     bodyDef.position.y = Math.random() * 10;
+    bodyDef.friction = 0.0;
+    bodyDef.restitution = 1.0;
     bodyDef.mass = 50;
     world.CreateBody(bodyDef).CreateFixture(fixDef);
 
