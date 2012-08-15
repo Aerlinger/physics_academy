@@ -1,185 +1,14 @@
 /** Physics academy color theme */
 /** color palette */
-$borderRed: #ab1515;
+
 $borderOrange: #ffdab5;
 $borderDarkOrange: #ffdab5;
 $darkOrange: #bb5e02;
 $orange: #FF8C00;
 $lightOrange: #ffa500;
 $yellow: #ffff00;
-$navbar_height: 54px;
-
-/*------------------------------------------------------------------
-[Navbar]
-*/
-
-.navbar .nav > li.active > a,
-.navbar .nav > li.active > a:hover {
-  color: $lightOrange;
-}
-
-.navbar {
-
-  margin-bottom: 0;
-
-  #logo {
-
-    width: 300px;
-    height: 47px;
-
-    margin-top: .3em;
-    background: url(<%= asset_path "theme/logo.png" %>) no-repeat 0 0;
-    float: left;
-  }
-
-  .container {
-    position: relative;
-  }
-
-  //border-bottom-color: #ffa845;
-  //border-top-color: #ffa845;
-
-  .nav {
-    height: $navbar_height;
-  }
 
 
-  border-bottom: 1px solid #ffa946;
-
-
-  .nav > li {
-    display: block;
-    height: $navbar_height;
-    line-height: $navbar_height;
-  }
-
-  .nav > li > a, .nav > li > b {
-    display: inline;
-    vertical-align: middle !important;
-    color: #FFF;
-    height: 100%;
-    font-weight: 550;
-    font-size: 1.1em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
-  }
-
-  .nav > li.active > a,
-  .nav > li.active > a:hover {
-    background: transparent;
-    color: #ffa845;
-  }
-
-  .nav > li > a:hover {
-    color: #BBB;
-  }
-
-  .navbar-inner {
-    background: #ffa845;
-    background: url(<%= asset_path "theme/header-bg.jpg" %>);
-    border-bottom: 1px solid #710300;
-    //border-top: 2px solid #720502;
-  }
-}
-
-/*------------------------------------------------------------------
-[Content]
-*/
-
-#content .inner {
-
-  .inner {
-    background: #fff;
-  }
-
-  .container {
-    border-width: 4px;
-    border-color: #444;
-  }
-
-}
-
-/*------------------------------------------------------------------
-[Backgrounds]
-*/
-
-.chalkboard-background {
-  background: url(<%= asset_path "theme/chalkboard-bg.jpg" %>);
-}
-
-/*------------------------------------------------------------------
-[Landing]
-*/
-
-#landing .inner {
-  background: #989099 url(<%= asset_path 'theme/chalkboard-bg.jpg' %>) repeat 0 0;
-
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
-}
-
-/*------------------------------------------------------------------
-[Screenshots / #screenshots]
-*/
-
-#screenshots {
-  background: #E8E8E8;
-  border-top: 1px solid #CCC;
-
-  .inner {
-    border-top: 1px solid #FFF;
-  }
-}
-
-/*------------------------------------------------------------------
-[Subheader]
-*/
-
-#subheader {
-  color: #EEE;
-
-  background: #444;
-
-  border-color: $borderRed;
-
-  .inner {
-    background: #a2a3a3 url(<%= asset_path "theme/header-bg.png" %>) repeat 0 0;
-  }
-}
-
-/*------------------------------------------------------------------
-[Extra]
-*/
-
-#extra {
-
-  border-top: 1px solid #000;
-
-  .inner {
-    color: #fff;
-
-  /*background-color: #222;*/
-
-    border-top: 1px solid #555;
-  }
-}
-
-/*------------------------------------------------------------------
-[Footer]
-*/
-
-#footer {
-
-  border-top: 1px solid #000;
-
-  .inner {
-    background: #111;
-
-    border-top: 1px solid #222;
-  }
-}
-
-.footer-links a {
-  color: #777;
-}
 
 /*------------------------------------------------------------------
 Video
@@ -212,15 +41,6 @@ canvas {
 [Miscellaneous]
 */
 
-.circle-icon {
-  background: #a1a1a1;
-
-  div {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #f5f5f5;
-  }
-}
 
 .slash {
   color: $lightOrange;
@@ -228,13 +48,6 @@ canvas {
 
 .sidebar {
   background: #EEE;
-}
-
-.nav-list > li.active > a,
-.nav-list > li.active > a:hover {
-  color: #f0f0f0;
-
-  background: $orange;
 }
 
 .padded {
@@ -248,14 +61,4 @@ canvas {
 
 .clear_margins {
   margin: 0;
-}
-
-.clear_side_margins {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.clear_top_bottom_margins {
-  margin-top: 0;
-  margin-bottom: 0;
 }

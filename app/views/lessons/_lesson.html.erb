@@ -21,18 +21,21 @@
               <div style="clear: both"></div>
             </div>
             <div class="span4">
-              <div class="well" style="padding: 0; margin: 0;">
+              <div class="well">
                 <ul class="nav">
-                  <li class="nav-header" style="text-align: center; border-bottom: 1px solid #d3d3d3;">
-                    Covered Topics
+                  <li class="nav-header" id="covered_topics">
+                    Covered Topics:
                   </li>
-
-                  <% lesson.challenges.all(limit: 4).each do |challenge| %>
+                  <% lesson.challenges.all(limit: 5).each do |challenge| %>
                     <li style="margin-left: 1em;">
                       <%= link_to raw("&bull; " + challenge.title), "#" %>
                     </li>
                   <% end %>
-                  <li style="text-align: center; border-top: 1px solid #d3d3d3;"><%= link_to raw(content_tag(:i, "", class: "icon-chevron-down") + " Expand " + content_tag(:i, "", class: "icon-chevron-down")), "#" %></i></li>
+                  <li style="text-align: center; border-top: 1px solid #bad3c4; background-color: #ebf2ef">
+                    <%= link_to raw(content_tag(:i, "", class: "icon-chevron-down") +
+                                            " Expand " +
+                                            content_tag(:i, "", class: "icon-chevron-down")), "#" %>
+                  </li>
 
                 </ul>
               </div>

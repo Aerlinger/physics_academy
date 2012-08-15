@@ -1,0 +1,553 @@
+/*------------------------------------------------------------------
+
+[Layout Stylesheet]
+
+  Project:		Bootstrap Landing Template
+  Version:		1.0
+  Last change:	04/26/2012
+  Assigned to:	Rod Howard (rh)
+
+
+[Table of contents]
+
+  1. Global
+  2. Navbar
+  3. Landing
+  4. Content
+  5. Screenshots
+  6. Extra
+  7. Footer
+  8. Subpage
+  9. Subheader
+  10. Backgrounds
+  *. Bootstrap Overrides
+
+
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Global]
+*/
+$navbar_height: 54px;
+$lightOrange: #ffa500;
+$borderRed: #ab1515;
+
+html {
+  -webkit-text-size-adjust: none;
+}
+
+.pitch {
+  //margin-left: 1em;
+}
+
+body {
+  font: 13px/1.7em 'Open Sans';
+
+  background-color: #FFF;
+}
+
+p {
+  font: 13px/1.7em 'Open Sans';
+}
+
+ul {
+  margin-bottom: 1.7em;
+
+  li {
+    a:hover {
+      color: #a96521;
+    }
+  }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin-bottom: .85em;
+}
+
+h3, h4, h6 {
+  margin-bottom: 1.15em;
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: 'Open Sans';
+}
+
+a {
+  color: #821800;
+}
+
+a:hover {
+  color: #bd6000;
+}
+
+/*------------------------------------------------------------------
+[2. Navbar / .navbar] and flash message
+*/
+
+.navbar {
+
+  margin-bottom: 0;
+  border-bottom: 1px solid #d28800;
+
+  #logo {
+
+    width: 300px;
+    height: 47px;
+
+    margin-top: .3em;
+    background: url(<%= asset_path "theme/logo.png" %>) no-repeat 0 0;
+    float: left;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  .nav {
+    height: $navbar_height;
+  }
+
+  .nav > li {
+    display: block;
+    height: $navbar_height;
+    line-height: $navbar_height;
+  }
+
+  .nav > li > a, .nav > li > b {
+    display: inline;
+    vertical-align: middle !important;
+    color: #FFF;
+    height: 100%;
+    font-weight: 550;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+  }
+
+  .nav > li.active > a, {
+    background: transparent;
+    color: $lightOrange;
+  }
+
+  .nav > li.active > a:hover, {
+    background: transparent;
+    color: #bbada8;
+  }
+
+  .nav > li > a:hover {
+    color: #bbada8;
+  }
+
+  .navbar-inner {
+    background: url(<%= asset_path "theme/header-bg.jpg" %>);
+    border-bottom: 1px solid #710300;
+  }
+}
+
+.navbar-fixed-top {
+  position: static;
+}
+
+.navbar-inner {
+  padding: 0;
+
+  background: #292929 url(<%= asset_path "theme/header-chalkboard-bg.jpg" %> ) repeat 0 0;
+  filter: none;
+
+  border-bottom: 1px solid #111;
+
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.flash {
+  margin: 0;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+
+  .content {
+    font-size: 3em;
+  }
+
+  h1, h2, h3, h4 {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.flash.alert {
+  padding: .1em !important;
+}
+
+/*------------------------------------------------------------------
+[3. Landing / #landing]
+*/
+
+#landing {
+  height: auto;
+  border: none;
+  overflow: hidden;
+
+  .container {
+    padding-top: 30px;
+    background-color:rgba(0,0,0,0.5);
+  }
+
+  .inner {
+    color: #FFF;
+    background: #989099 url(<%= asset_path 'theme/chalkboard-dense.jpg' %>) repeat 0 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+  }
+
+
+}
+
+#canvas_box2d {
+  padding: 0;
+  margin: 0px 0px 15px 16px;
+  border: 2px solid #8b0000;
+}
+
+
+/*------------------------------------------------------------------
+[4. Content / #content]
+*/
+
+
+#content {
+  border: none;
+  background: url(<%= asset_path 'challenges/chalkboard-bg.jpg' %>);
+
+  .inner {
+    background: #fff;
+    min-height: 400px;
+    padding-top: 0;
+    padding-bottom: 2em;
+  }
+
+  .container {
+    padding-top: 3em;
+    border-width: 4px;
+    border-color: #444;
+    border-top: 8px solid #bf6e00;
+  }
+}
+
+/*------------------------------------------------------------------
+[5. Screenshots / #screenshots]
+*/
+
+#screenshots {
+
+  background: #E8E8E8;
+  border-top: 1px solid #CCC;
+
+  .inner {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    border-top: 1px solid #FFF;
+  }
+}
+
+/*------------------------------------------------------------------
+[6. Extra / #extra]
+*/
+
+#extra {
+  border-top: 1px solid #000;
+
+  .inner {
+    padding: 20px;
+    padding-bottom: 5px;
+
+    color: #fff;
+
+    background: url(<%= asset_path "footer/footer_bg.png" %>) #222 no-repeat 200px -100px;
+    border-top: 1px solid #555;
+  }
+
+  h3 {
+    font-weight: 400;
+  }
+
+}
+
+/*------------------------------------------------------------------
+[7. Footer / #footer]
+*/
+
+
+.footer-links a {
+  color: #777;
+}
+
+#footer {
+  border-top: 1px solid #000;
+
+  .inner {
+    padding: 20px 0;
+    background: #111;
+    border-top: 1px solid #222;
+  }
+}
+
+.footer-links {
+  width: 49%;
+  display: inline-block;
+  margin: 0;
+
+  list-style: none;
+  padding-top: 0.3em !important;
+
+  a {
+    color: orange !important;
+  }
+
+  li {
+    margin-bottom: .1em;
+    margin-left: 1.2em;
+  }
+}
+
+.footer-quote {
+
+  .quote-text {
+    color: #ccc8c5;
+    font-style: italic;
+    margin: 0 .5em .5em -.5em;
+  }
+
+  .quote-author {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+
+    text-align: right;
+    margin-right: 5.5em;
+  }
+
+}
+
+/*------------------------------------------------------------------
+[8. Subpage / #subpage]
+*/
+
+#subpage {
+  margin-top: 3em;
+  margin-bottom: 2.5em;
+}
+
+/*------------------------------------------------------------------
+[9. Subheader / #subheader]
+*/
+/*------------------------------------------------------------------
+[Subheader]
+*/
+
+#subheader {
+  color: #EEE;
+
+  background: #444;
+  border-color: $borderRed;
+  border-bottom: 1px solid #222;
+
+  .inner {
+    background: #a2a3a3 url(<%= asset_path "theme/header-bg.png" %>) repeat 0 0;
+    padding: 20px 0;
+  }
+}
+
+#subheader h1, #subheader h2, #subheader h3, #subheader h4, #subheader h5, #subheader h6 {
+  margin-bottom: 0;
+
+  font-size: 27px;
+  font-weight: 400;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+}
+
+/*------------------------------------------------------------------
+[Extra-1. Sidebar Container]
+*/
+
+.sidebar {
+  padding: 15px;
+
+  background: #EEE;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/*------------------------------------------------------------------
+[Extra-2. Social Icons]
+*/
+
+.social-icons-container {
+  width: 100%;
+  display: table;
+  padding: 0;
+  margin: 2.5em 0 0;
+
+  list-style: none;
+
+  li {
+    width: 33%;
+    display: table-cell;
+
+    text-align: center;
+  }
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  overflow: hidden;
+
+  line-height: 600px;
+
+  background: url(<%= asset_path 'theme/social/social-sprite.png' %>) no-repeat 0 0;
+}
+
+.social-icon-twitter {
+  background-position: 0 0;
+}
+
+.social-icon-twitter:hover {
+  background-position: 0 -50px;
+}
+
+.social-icon-googleplus {
+  background-position: -50px 0;
+}
+
+.social-icon-googleplus:hover {
+  background-position: -50px -50px;
+}
+
+.social-icon-facebook {
+  background-position: -100px 0;
+}
+
+.social-icon-facebook:hover {
+  background-position: -100px -50px;
+}
+
+/*------------------------------------------------------------------
+[Extra-3. Circle Icon]
+*/
+
+
+.circle-icon {
+
+  position: relative;
+  display: block;
+
+  margin-bottom: 1em;
+  padding: 0;
+
+  width: 40px;
+  height: 40px;
+
+  background: #BE6464;
+
+  -moz-border-radius: 80px;
+  -webkit-border-radius: 80px;
+  border-radius: 80px;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+
+
+  h2 {
+    margin-left: 40px;
+    padding-left: .5em;
+  }
+
+  div {
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    margin-top: -17px;
+    margin-left: -17px;
+
+    font-size: 1.4em;
+    text-align: center;
+    line-height: 32px;
+    color: #f5f5f5;
+
+    border: 2px solid #f5f5f5;
+
+    -moz-border-radius: 100px;
+    -webkit-border-radius: 100px;
+    border-radius: 100px;
+
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+/*------------------------------------------------------------------
+[Extra-4. Round Image]
+*/
+
+.img {
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 100px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/*------------------------------------------------------------------
+[Extra-5. Backgrounds]
+*/
+.chalkboard-background {
+  background: url(<%= asset_path "theme/chalkboard-bg.jpg" %>);
+}
+
+.chalkboard-dense-background {
+  background: url(<%= asset_path "theme/chalkboard-dense.jpg" %>);
+}
+
+/*------------------------------------------------------------------
+[Miscellaneous]
+*/
+
+.divider-vertical {
+
+  background-color: #181818 !important;
+  border-left: 1px solid #353535 !important;
+  border-right: 1px solid #3A3A3A !important;
+}
+
+.slash {
+  padding-right: .25em;
+  color: #cc7500;
+}
+
+/*------------------------------------------------------------------
+[*. Bootstrap Overrides]
+*/
+
+
+.btn {
+  border-radius: 0 e("\0/");
+}

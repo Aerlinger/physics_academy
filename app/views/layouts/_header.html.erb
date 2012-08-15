@@ -29,11 +29,12 @@
           <% if user_signed_in? %>
             <%= render partial: "layouts/user_thumbnail" %>
           <% elsif guest_user? %>
-            <li><%= link_to "Create Account to save your progress", new_user_registration_path %></li>
+            <li><%= link_to "Create account to save progress", new_user_registration_path %></li>
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path %></li>
             <li><%= link_to "Create Account", new_user_registration_path %></li>
           <% end %>
+          <li class="divider-vertical" style="margin: 0"></li>
 
         </ul>
 

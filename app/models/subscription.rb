@@ -91,7 +91,7 @@ class Subscription < ActiveRecord::Base
   def next_challenge_id
     # if We're not on the last challenge
     if current_challenge_id != lesson.challenges.last.id
-      return completed_challenges.last+1
+      return current_challenge_id+1
     else
       return current_challenge_id
     end

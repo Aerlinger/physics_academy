@@ -16,12 +16,11 @@
           </div>
         </div>
 
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
 
           <div class="box-features form">
 
             <fieldset>
-              <%= devise_error_messages! %>
               <%= render 'shared/error_messages', object: @user %>
             </fieldset>
 

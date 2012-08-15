@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120811194952) do
+ActiveRecord::Schema.define(:version => 20120815232615) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -63,12 +63,14 @@ ActiveRecord::Schema.define(:version => 20120811194952) do
 
   create_table "lessons", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.text     "description"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
     t.string   "introduction"
     t.string   "image_url"
-    t.integer  "difficulty",   :default => 0
+    t.string   "difficulty",   :default => "0"
+    t.boolean  "completed"
+    t.string   "subject"
   end
 
   create_table "lessons_content", :force => true do |t|
@@ -153,13 +155,13 @@ ActiveRecord::Schema.define(:version => 20120811194952) do
   add_index "subscriptions", ["user_id"], :name => "index_subscriptions_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "name",                   :default => "'---\n:default: Anonymous User\n'"
+    t.string   "name",                   :default => ""
     t.string   "email"
     t.integer  "num_completed_lessons",  :default => 0
     t.integer  "num_points",             :default => 0
     t.integer  "num_achievements",       :default => 0
-    t.datetime "created_at",                                                              :null => false
-    t.datetime "updated_at",                                                              :null => false
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
     t.string   "password_digest"
     t.string   "remember_token"
     t.boolean  "admin",                  :default => false
@@ -170,7 +172,7 @@ ActiveRecord::Schema.define(:version => 20120811194952) do
     t.string   "linkedin_url"
     t.text     "avatar"
     t.string   "username"
-    t.string   "encrypted_password",     :default => "",                                  :null => false
+    t.string   "encrypted_password",     :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

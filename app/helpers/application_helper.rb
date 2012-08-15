@@ -15,7 +15,6 @@ module ApplicationHelper
         "error"
       when "notice"
         "info"
-
     end
 
   end

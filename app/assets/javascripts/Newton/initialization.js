@@ -23,6 +23,8 @@ function init() {
     fixDef.friction = 0.0;
     fixDef.restitution = 1.0;
 
+    var canvas_width = 450;
+
 
     var bodyDef = new b2BodyDef;
 
@@ -38,7 +40,7 @@ function init() {
     fixDef.shape.SetAsBox(2, 14);
     bodyDef.position.Set(-1.8, 13);
     world.CreateBody(bodyDef).CreateFixture(fixDef);
-    bodyDef.position.Set(530 / 30 + 1.8, 13);
+    bodyDef.position.Set(canvas_width / 30 + 1.8, 13);
     world.CreateBody(bodyDef).CreateFixture(fixDef);
 
 
@@ -51,7 +53,7 @@ function init() {
         , 160 / 30 //half height
     );
 
-    bodyDef.position.x = 530/60;
+    bodyDef.position.x = canvas_width/60;
     bodyDef.position.y = Math.random() * 10;
     bodyDef.friction = 0.0;
     bodyDef.restitution = 1.0;
@@ -62,7 +64,7 @@ function init() {
         fixDef.shape = new b2CircleShape(
             .05 * Math.random() + 0.2 //radius
         );
-        bodyDef.position.x = Math.random() * 530/30;
+        bodyDef.position.x = Math.random() * canvas_width/30;
         bodyDef.position.y = Math.random() * 320/30;
         bodyDef.mass = bodyDef.radius * 10;
 

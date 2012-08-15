@@ -79,7 +79,7 @@ class ChallengesController < ApplicationController
     end
 
     def read_params
-      @user = current_or_guest_user
+      @user = current_or_guest_user!
       @lesson = Lesson.find(params[:lesson_id])
       @challenge = Challenge.find(params[:id])
       @subscription = @user.subscribe(@lesson)

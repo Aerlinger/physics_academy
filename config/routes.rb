@@ -10,7 +10,11 @@ PhysicsAcademy::Application.routes.draw do
   match '/labs', to: 'labs#index'
   match '/labs/circuits/:circuit_name', to: 'labs#circuits'
 
-  resources :users, only: [:show, :edit]
+  resources :users, only: [:show, :index, :edit, :delete]
+  #namespace :user do
+  #  root :to => "users#show"
+  #end
+
   resources :circuit_simulations
   resources :circuit_elements
 

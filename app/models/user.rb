@@ -54,6 +54,14 @@ class User < ActiveRecord::Base
     subscription.blank? ? 0 : subscription.percent_progress
   end
 
+  def update_with_password(params={})
+    if params[:password].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation) if params[:password_confirmation].blank?
+    end
+    update_attributes(params)
+  end
+
   private
 
     def init_name_and_email
