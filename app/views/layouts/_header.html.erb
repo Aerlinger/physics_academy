@@ -9,19 +9,19 @@
       <div class="nav-collapse">
         <ul class="nav pull-right">
 
-          <li class="active">
+          <li class=<%= is_active?(:root) %>>
             <%= link_to "Home", :root %>
           </li>
 
-          <li>
+          <li class=<%= is_active?(lessons_path) %>>
             <%= link_to "Lessons".html_safe, lessons_path, class: "dropdown-toggle" %>
           </li>
 
-          <li class="dropdown">
+          <li class=<%= is_active?(labs_path) %>>
             <%= link_to "Labs".html_safe, labs_path, class: "dropdown-toggle"  %>
           </li>
 
-          <li>
+          <li class=<%= is_active?(about_path) %>>
             <%= link_to "About", about_path %>
           </li>
 
@@ -29,7 +29,9 @@
           <% if user_signed_in? %>
             <%= render partial: "layouts/user_thumbnail" %>
           <% elsif guest_user? %>
-            <li><%= link_to "Create account to save progress", new_user_registration_path %></li>
+            <li class=<%= is_active?(new_user_registration_path) %>>
+              <%= link_to "Create account to save progress", new_user_registration_path %>
+            </li>
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path %></li>
             <li><%= link_to "Create Account", new_user_registration_path %></li>

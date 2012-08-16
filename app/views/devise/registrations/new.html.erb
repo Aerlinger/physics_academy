@@ -9,7 +9,7 @@
 
   <div class="span6 offset3">
 
-    <div class="box-container clear_margins">
+    <div class="box-container">
 
       <div class="box-header box-title">
         Create a new Account
@@ -57,14 +57,15 @@
             <%= f.submit "Sign Up", class: "btn btn-success btn-large btn-primary" %>
           </div>
 
-          <%= render "devise/shared/links" %>
+
 
         </fieldset>
 
       <% end %>
 
-
     </div>
+
+      <%= render "devise/shared/links" %>
   </div>
 
 </div>

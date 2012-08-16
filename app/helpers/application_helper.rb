@@ -9,6 +9,10 @@ module ApplicationHelper
     end
   end
 
+  def is_active?(page_name)
+    "active" if current_page? page_name
+  end
+
   def flash_key(message)
     case message
       when "alert"

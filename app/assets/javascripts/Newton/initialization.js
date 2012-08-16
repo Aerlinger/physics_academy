@@ -23,7 +23,8 @@ function init() {
     fixDef.friction = 0.0;
     fixDef.restitution = 1.0;
 
-    var canvas_width = 450;
+    var canvas_width = $("#canvas_box2d").width();
+    var canvas_height = $("#canvas_box2d").height();
 
 
     var bodyDef = new b2BodyDef;
@@ -33,7 +34,7 @@ function init() {
     bodyDef.type = b2Body.b2_staticBody;
     fixDef.shape = new b2PolygonShape;
     fixDef.shape.SetAsBox(20, 2);
-    bodyDef.position.Set(10, 320 / 30 + 1.8);
+    bodyDef.position.Set(10, canvas_height / 30 + 1.8);
     world.CreateBody(bodyDef).CreateFixture(fixDef);
     bodyDef.position.Set(10, -1.8);
     world.CreateBody(bodyDef).CreateFixture(fixDef);
@@ -60,16 +61,16 @@ function init() {
     bodyDef.mass = 50;
     world.CreateBody(bodyDef).CreateFixture(fixDef);
 
-    for (var i = 0; i < 50; ++i) {
+    for (var i = 0; i < 40; ++i) {
         fixDef.shape = new b2CircleShape(
             .05 * Math.random() + 0.2 //radius
         );
         bodyDef.position.x = Math.random() * canvas_width/30;
-        bodyDef.position.y = Math.random() * 320/30;
+        bodyDef.position.y = Math.random() * canvas_height/30;
         bodyDef.mass = bodyDef.radius * 10;
 
         if (i == 0)
-            bodyDef.linearVelocity.Set(60, 0);
+            bodyDef.linearVelocity.Set(20, 0);
         else
             bodyDef.linearVelocity.Set(0, 0);
 
