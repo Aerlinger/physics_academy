@@ -30,22 +30,22 @@
             <%= render partial: "layouts/user_thumbnail" %>
           <% elsif guest_user? %>
             <li class=<%= is_active?(new_user_registration_path) %>>
-              <%= link_to "Create account to save progress", new_user_registration_path %>
+              <%= link_to "Sign in or Sign up to save", new_user_registration_path %>
             </li>
           <% else %>
-            <li><%= link_to "Sign in", new_user_session_path %></li>
-            <li><%= link_to "Create Account", new_user_registration_path %></li>
+            <li><%= link_to "Sign in", new_user_session_path, class: "login_link" %></li>
+            <li><%= link_to "Create Account", new_user_registration_path, class: "login_link" %></li>
           <% end %>
           <li class="divider-vertical" style="margin: 0"></li>
 
         </ul>
 
-      </div><!--/.nav-collapse -->
+      </div>
 
-    </div> <!-- /container -->
+    </div>
 
-  </div> <!-- /navbar-inner -->
+  </div>
 
-</div> <!-- /navbar -->
+</div>
 
        

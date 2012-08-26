@@ -20,6 +20,7 @@
 
               <div style="clear: both"></div>
             </div>
+
             <div class="span4">
               <div class="well">
                 <ul class="nav">
@@ -50,14 +51,20 @@
 
         <div class="row">
 
-          <div class="span2" style="border: 1px solid black; background-color: gray;">
-            <%# unless lesson.completed %>
-              <%= content_tag(:i, "   Under construction", class: "icon-cog", style: "margin-left: .5em; color: white") %>
-            <%# end %>
+
+          <%# unless lesson.completed %>
+          <div class="span2 under-construction"
+               rel="popover"
+               data-content="This lesson is currently under construction check back for updates." data-original-title="Under Construction">
+
+            <%= content_tag(:i, "   Under construction", class: "icon-cog", style: "margin-left: .5em; color: white") %>
+
           </div>
+          <%# end %>
+
 
           <div class="span2">
-            <strong>Level: </strong> <%= lesson.difficulty %>
+            <strong>Level: </strong> <span class="label label-success"><%= lesson.difficulty %></span>
           </div>
 
           <% percent = 50 %>
@@ -67,9 +74,9 @@
             </div>
             <div class="span3">
 
-                <div class="progress progress-success progress-striped active" style="margin-bottom: 0; margin-top: .3em">
-                  <div class="bar" style="width: <%= percent %>%;"><strong><%= percent %>%</strong></div>
-                </div>
+              <div class="progress progress-success progress-striped active" style="margin-bottom: 0; margin-top: .3em">
+                <div class="bar" style="width: <%= percent %>%;"><strong><%= percent %>%</strong></div>
+              </div>
 
             </div>
           <% end %>

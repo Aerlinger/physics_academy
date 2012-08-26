@@ -14,9 +14,11 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-//= require grader
-//= require Newton/Box2dWeb-2_1_a_3
-//= require Newton/initialization
+//
+//= require simulations
+//
+//= require_tree ./Newton
+//
 //= require Faraday/utility
 //= require Faraday/geom
 //= require Faraday/main

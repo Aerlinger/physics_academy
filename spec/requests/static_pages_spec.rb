@@ -4,7 +4,8 @@ describe "Static Pages" do
 
   subject { page }
 
-  describe "Home page" do
+
+  describe "Visit Home page" do
 
     before do
       sign_out_user
@@ -13,17 +14,18 @@ describe "Static Pages" do
 
     it { should have_selector("div#extra") }
     it { should have_selector("div#footer") }
+    it { should have_selector("canvas") }
+    it { should have_button("Subscribe") }
 
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector('title', text: '| Home') }
     it { should have_selector('a#call_to_action') }
 
     describe "for non-signed-in users" do
-      it { should have_link("Sign in") }
-      it { should have_link("Create Account") }
+      it { should have_default_login_links }
     end
 
-    it "Call to action should redirect to sign-in page" do
+    it "Call to action button should redirect to sign-in page" do
       click_link("call_to_action")
       page.should have_selector 'h1', text: 'Sign Up'
     end
@@ -36,14 +38,18 @@ describe "Static Pages" do
         visit root_path
       end
 
-      it { should have_selector("li#fat-menu") }
-
-      describe "Display User's feed on main page when that User logs in." do
-
+      describe "Redirect to User's profile page when signing in" do
+        it { have_selector('title', text: full_title('Profile'))  }
       end
+
+      describe "Should display drop-down links" do
+        it { should show_user_in_header }
+      end
+
     end
 
   end
+
 
   describe "Lessons page" do
     before { visit lessons_path }
@@ -52,12 +58,14 @@ describe "Static Pages" do
     it { should have_selector('title', text: full_title('All Lessons')) }
   end
 
+
   describe "Labs page" do
     before { visit labs_path }
 
     it { should have_selector('h1', text: 'Labs') }
     it { should have_selector('title', text: full_title('Labs')) }
   end
+
 
   describe "About page" do
     before { visit about_path }
@@ -66,6 +74,7 @@ describe "Static Pages" do
     it { should have_selector('title', text: full_title('About')) }
   end
 
+
   describe "Sign in page" do
     before { visit new_user_session_path }
 
@@ -73,12 +82,20 @@ describe "Static Pages" do
     it { should have_selector('h1', text: 'Sign In') }
   end
 
+  describe "Sign up page" do
+    before { visit new_user_registration_path }
+
+    it { should have_selector('h1', text: 'Sign Up') }
+  end
+
+
   describe "Terms page" do
     before { visit terms_path }
 
     it { should have_selector('h1', text: 'Terms') }
     it { should have_selector('title', text: full_title('Terms')) }
   end
+
 
   it "should have the right links on the layout" do
 
@@ -89,6 +106,9 @@ describe "Static Pages" do
 
     click_link "Sign in"
     page.should have_selector 'h1', text: 'Sign In'
+
+    click_link "Create Account"
+    page.should have_selector 'h1', text: 'Sign Up'
 
     click_link "Lessons"
     page.should have_selector 'title', text: full_title("All Lessons")

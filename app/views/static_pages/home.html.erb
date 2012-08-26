@@ -1,41 +1,32 @@
 <div id="landing">
-
   <div class="inner">
-
     <div class="container">
-
       <div class="row">
 
-        <div class="span5 landing-text">
+        <div class="span5">
+            <div class="landing-text">
+            <h1>Learn physics in a whole new way.</h1>
+            <h3>Through live interactive lessons we offer the most intuitive and engaging way to learn physics.</h3>
 
-          <h1>Learn physics in a whole new way.</h1>
-          <h3>Through live interactive lessons we offer the most intuitive and engaging way to learn physics.</h3>
-
-          <%= link_to "Get Started", new_user_registration_path, class: "btn btn-large btn-success", id: "call_to_action" %>
-
+            <%= link_to "Get Started", new_user_registration_path, class: "btn btn-large btn-success", id: "call_to_action" %>
+          </div>
         </div>
 
-        <canvas id="canvas_box2d" width="450" height="320" class="lrc landing-screenshot well">
-        </canvas>
+        <!-- The Preview Pane -->
+        <div class="span7">
+          <%= render partial: "layouts/canvas", locals: {simulation_id: 1, type: :newton, show_questions: false, width: 500, height: 320} %>
+        </div>
 
       </div>
 
     </div>
-
   </div>
-
 </div>
 
-
-
 <div id="content">
-
   <div class="inner">
-
     <div class="container">
-
       <div class="row">
-
 
         <div class="features-list">
           <div class="span4">
@@ -45,7 +36,7 @@
                 <div>
                  <i class="icon-pencil"></i>
                 </div>
-                <h2>Learn.</h2>
+                <h2>Learn</h2>
               </div>
             </div>
 
@@ -67,12 +58,11 @@
                 <div class="number">
                   <i class="icon-user"></i>
                 </div>
-                <h2>Interact.</h2>
+                <h2>Interact</h2>
               </div>
             </div>
 
             <div class="feature-content">
-
 
             <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
               <h4>Ask questions and learn from others</h4>
@@ -89,7 +79,7 @@
                 <div class="number">
                   <i class="icon-book"></i>
                 </div>
-                <h2>Contribute.</h2>
+                <h2>Contribute</h2>
               </div>
             </div>
 
@@ -101,61 +91,41 @@
               </p>
             </div>
 
-
           </div>
         </div>
 
-
-      </div> <!-- /row -->
-
-    </div> <!-- /container -->
-
-  </div> <!-- /inner -->
-
-</div> <!-- /content -->
-
-
+      </div>
+    </div>
+  </div>
+</div>
 
 <div id="screenshots">
-
   <div class="inner">
-
     <div class="container">
+
+      <h4>Sample Topics</h4>
 
       <div class="row">
 
         <div class="span4">
-
           <h3>Laws of Motion</h3>
           <%= link_to image_tag(asset_path 'test/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
-
-        </div> <!-- /span4 -->
+        </div>
 
         <div class="span4">
-
           <h3>Electronics</h3>
-
-
           <%= link_to image_tag(asset_path 'test/example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
-
-        </div> <!-- /span4 -->
+        </div>
 
         <div class="span4">
-
           <h3>Celestial Mechanics</h3>
-
           <%= link_to image_tag(asset_path 'test/mech_example2.png'), '#', alt: "Screenshot", class: "thumbnail" %>
+        </div>
 
-        </div> <!-- /span4 -->
+      </div>
 
-      </div> <!-- /row -->
-
-    </div> <!-- /container -->
-
-  </div> <!-- /inner -->
-
-</div> <!-- /screenshots -->
-
+    </div>
+  </div>
+</div>
 
 <%= render 'layouts/extra' %>
-

@@ -16,13 +16,7 @@ module ChallengesHelper
     render partial: 'submission_response', locals: {type: "warning", message: message}
   end
 
-  def fetch_content_for_task(lesson_id, challenge_id)
-    "challenges/lessons_content/#{lesson_id}/#{challenge_id}-challenge/task"
-  end
-
   def challenge_list
-
-    challenge_idx = @challenge.index
 
     html = @lesson.challenges.all.each_with_index.collect do |challenge, index|
 
@@ -31,7 +25,7 @@ module ChallengesHelper
       link_text = icon.html_safe + "#{challenge.title}"
 
       class_type =
-        if challenge_idx == (index+1)
+        if @challenge.index == (index+1)
            "active"
         elsif @subscription.completed_challenge?(challenge)
            "completed"

@@ -1,72 +1,68 @@
 <% provide(:title, "Sign up") %>
 
-
 <%= render partial: "layouts/subheader", locals: {title: "Sign Up"} %>
 
+<div class="container">
+  <div class="clear_side_margins row offset3">
 
-
-<div class="row container">
-
-  <div class="span6 offset3">
-
-    <div class="box-container">
+    <div class="clear_side_margins box-container span6" style="margin-left: 0px">
 
       <div class="box-header box-title">
         Create a new Account
       </div>
 
-      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: { class: "form-horizontal" }) do |f| %>
+      <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
 
-        <%= render 'shared/error_messages', object: @user %>
+        <div class="box-features">
 
-        <fieldset>
+          <%= render 'shared/error_messages', object: @user %>
 
-          <div class="box-features">
+          <fieldset>
 
             <div class="control-group">
               <%= f.label :name, class: "control-label" %>
               <div class="controls">
-                <%= f.text_field :name, class: "input-xlarge focused", text: "" %>
+                <%= f.text_field :name, class: "input-large focused", text: "" %>
               </div>
             </div>
 
             <div class="control-group">
               <%= f.label :email, class: "control-label" %>
               <div class="controls">
-                <%= f.text_field :email, class: "input-xlarge" %>
+                <%= f.text_field :email, class: "input-large" %>
               </div>
             </div>
 
             <div class="control-group">
               <%= f.label :password, class: "control-label" %>
               <div class="controls">
-                <%= f.password_field :password, class: "input-xlarge" %>
+                <%= f.password_field :password, class: "input-large" %>
               </div>
             </div>
 
             <div class="control-group">
               <%= f.label :password_confirmation, "Confirmation", class: "control-label" %>
               <div class="controls">
-                <%= f.password_field :password_confirmation, class: "input-xlarge" %>
+                <%= f.password_field :password_confirmation, class: "input-large" %>
               </div>
             </div>
 
-          </div>
 
-          <div class="box-actions">
-            <%= f.submit "Sign Up", class: "btn btn-success btn-large btn-primary" %>
-          </div>
+          </fieldset>
 
 
+        </div>
 
-        </fieldset>
+        <div class="box-actions">
+          <%= f.submit "Sign Up", class: "btn btn-success btn-large btn-primary" %>
+        </div>
+
+        <%= render "devise/shared/links" %>
+        </div>
 
       <% end %>
 
-    </div>
-
-      <%= render "devise/shared/links" %>
-  </div>
+      </div>
 
 </div>
 

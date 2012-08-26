@@ -1,13 +1,16 @@
 <div class="well lesson-content">
 
   <div id="task_content">
-  <%=
-    begin
-      render partial: fetch_content_for_task(@lesson.index, @challenge.index)
-    rescue ActionView::MissingTemplate
-      "Couldn't find page"
-    end
-  %>
+
+    <%=
+        lesson_root = "challenges/lessons_content"
+
+        begin
+          render partial: "#{lesson_root}/lesson#{@lesson.index}/challenge#{@challenge.index}/task#{@challenge.index}"
+        rescue ActionView::MissingTemplate
+          "Couldn't find page"
+        end
+    %>
 
   </div>
 
@@ -29,16 +32,6 @@
       <!-- Submission  feedback response is rendered through AJAX here -->
     </div>
   </div>
-
-  challenge_content_path = fetch_content_for_task(@lesson.index, @challenge.index)
-
-  escape_javascript(
-  begin
-  render partial: challenge_content_path
-  rescue ActionView::MissingTemplate
-  "Couldn't find page for \"#{challenge_content_path}\""
-  end
-  )
 
 </div>
 

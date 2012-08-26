@@ -2,17 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ed0132d-2d88-4f15-a0ea-0d93e865ffbc" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/newton/bottle.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/Newton/Box2D.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/Newton/box2dJSONReader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/Newton/createTestData.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/Newton/debugPrint.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/Newton/render.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/simulations.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/canvas.css.scss.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/_canvas.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/mailing_list/error.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/newton/simulations/1.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/newton/simulations/2.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/newton/simulations/3.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/requests/guest_login_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/requests/mailing_list_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/requests/user_pages_spec.rb" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\Box2dWeb-2_1_a_3.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\demo.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\example.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\initialization.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\raphael.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\grader.js.coffee" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\theme.css.scss.erb" afterPath="" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\sessions\new.html.erb" afterPath="" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\submit.js.coffee.erb" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/test.json" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\box.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/box.css.scss.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font-awesome-extended.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font-awesome-extended.css.scss.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font-awesome.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.scss.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font\fontawesome_webfont.eot" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font/fontawesome_webfont.eot" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font\fontawesome_webfont.svg" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font/fontawesome_webfont.svg" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font\fontawesome_webfont.svgz" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font/fontawesome_webfont.svgz" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font\fontawesome_webfont.ttf" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font/fontawesome_webfont.ttf" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\font\fontawesome_webfont.woff" afterPath="$PROJECT_DIR$/app/assets/stylesheets/font/fontawesome_webfont.woff" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\main-responsive.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main-responsive.css.scss.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\main.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_challenge.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/components/_challenge.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_description.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/components/_description.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_help.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/components/_help.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_modal.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/components/_modal.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_nav_sidebar.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/components/_nav_sidebar.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_pathbar.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/components/_pathbar.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\lessons_content\1\1-challenge\_task.html" afterPath="$PROJECT_DIR$/app/views/challenges/lessons_content/1/1-challenge/_task.html.erb" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\lessons_content\1\2-challenge\_task.html" afterPath="$PROJECT_DIR$/app/views/challenges/lessons_content/1/2-challenge/_task.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/test/Circuits.png" afterPath="$PROJECT_DIR$/app/assets/images/test/Circuits.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/global/box.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/global/box.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/unused.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/unused.css.scss.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/Faraday/.idea/workspace.xml" afterPath="$PROJECT_DIR$/app/assets/javascripts/Faraday/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/homepage.css.scss.erb" afterPath="$PROJECT_DIR$/app/assets/stylesheets/homepage.css.scss.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/challenges_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/challenges_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/challenges_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/challenges_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/challenges/show.html.erb" afterPath="$PROJECT_DIR$/app/views/challenges/show.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.erb" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_extra.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_extra.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/app/views/lessons/_lesson.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/production.sqlite3" afterPath="$PROJECT_DIR$/db/production.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/test.sqlite3" afterPath="$PROJECT_DIR$/db/test.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/requests/authentication_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/requests/authentication_pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/spec/requests/static_pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/support/utilities.rb" afterPath="$PROJECT_DIR$/spec/support/utilities.rb" />
     </list>
     <list id="b9fe1223-a7a4-457a-9ff9-ad3bdf27a93b" name="Faraday" comment="" />
     <ignored path="physics_academy.iws" />
@@ -24,6 +88,9 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/physics_academy@Development.coverage" NAME="Development Coverage Results" MODIFIED="1346002970981" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -35,107 +102,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="box.css.scss.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/box.css.scss.erb">
+      <file leaf-file-name="_task.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/challenges/lessons_content/1/1-challenge/_task.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="215" column="20" selection-start="3132" selection-end="3132" vertical-scroll-proportion="0.0">
+            <state line="1" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="-0.65384614">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+      <file leaf-file-name="render.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/render.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="7" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+            <state line="95" column="51" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <file leaf-file-name="_description.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/challenges/components/_description.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="70" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1345074985279" expanded="true" signature="135:1867" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="166:1859" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="199:1807" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="241:283" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="505:1778" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="543:1615" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="584:803" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="680:784" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="844:1047" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="941:1028" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="1088:1301" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="1188:1282" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="1342:1597" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="1471:1578" placeholder="..." />
-                <marker date="1345074985279" expanded="true" signature="1652:1755" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css.scss.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/main.css.scss.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faraday.css.scss.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/faraday.css.scss.erb">
+      <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/challenges/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="16" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+            <state line="22" column="46" selection-start="674" selection-end="674" vertical-scroll-proportion="-10.923077">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="unused.css.scss.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/unused.css.scss.erb">
+      <file leaf-file-name="_challenge.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/challenges/components/_challenge.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="24" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+            <state line="17" column="18" selection-start="408" selection-end="408" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="features.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/features.css.scss">
+      <file leaf-file-name="populate_lessons.rake" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/populate_lessons.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="19" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.35843372">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+      <file leaf-file-name="lesson-params.yml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/assets/lessons_content/1-Introduction_to_Physics/lesson-params.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="17" column="21" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="initialization.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js">
+      <file leaf-file-name="populate_circuit_simulations.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/populate_circuit_simulations.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="41" selection-start="2091" selection-end="2091" vertical-scroll-proportion="1.167939">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_header.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <file leaf-file-name="sample_data.rake" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="56" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="challenges_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/challenges_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="5" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,57 +205,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/challenges_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120811181802_add_lazy_id_to_users.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/_statistics.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120811194952_change_default_name_for_users.rb" />
-        <option value="$PROJECT_DIR$/Guardfile" />
-        <option value="$PROJECT_DIR$/app/models/circuit_element.rb" />
-        <option value="$PROJECT_DIR$/.rspec" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/spec/models/subscription_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/user_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/quotes_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/models/challenge_spec.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/reboot-landing.css.scss.erb" />
-        <option value="$PROJECT_DIR$/lib/tasks/populate_lessons.rake" />
-        <option value="$PROJECT_DIR$/lib/tasks/populate_circuit_simulations.rake" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_user_thumbnail.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/spec/support/utilities.rb" />
-        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/models/subscription.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/spec/requests/authentication_pages_spec.rb" />
-        <option value="$PROJECT_DIR$/spec/requests/static_pages_spec.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_subheader.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/shared/_links.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/main-responsive.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/about.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/faraday.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/labs.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/about.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/homepage.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/theme.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/font-awesome-extended.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/views/lessons/_lesson.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120815232615_change_users_name_default.rb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/main.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/unused.css.scss.erb" />
-        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/box.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/views/simulations/_show.json.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/box2d_json_reader.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/box2d_json_reader.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/printHash.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/Box2dWeb-2_1_a_3.js" />
+        <option value="$PROJECT_DIR$/app/views/simulations/_test.json" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/Box2D_helpers.js" />
+        <option value="$PROJECT_DIR$/app/views/simulations/_show.json" />
+        <option value="$PROJECT_DIR$/app/views/simulations/show.json" />
+        <option value="$PROJECT_DIR$/db/migrate/20120816152703_create_mailing_lists.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120820172819_remove_evaluations.rb" />
+        <option value="$PROJECT_DIR$/db/schema.rb" />
         <option value="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/mailing_list/remove.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/global/main.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_extra.html.erb" />
+        <option value="$PROJECT_DIR$/spec/requests/static_pages_spec.rb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/createTestData.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/debugPrint.js" />
+        <option value="$PROJECT_DIR$/app/models/mailing_list.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/mailing_list_controller.rb" />
+        <option value="$PROJECT_DIR$/spec/requests/mailing_list_spec.rb" />
+        <option value="$PROJECT_DIR$/app/views/mailing_list/error.js" />
+        <option value="$PROJECT_DIR$/app/views/mailing_list/submit.js.erb" />
+        <option value="$PROJECT_DIR$/app/views/mailing_list/submit.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/font-awesome-extended.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/canvas.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/simulations.js" />
+        <option value="$PROJECT_DIR$/app/views/simulations/newton_simulations/1.json" />
+        <option value="$PROJECT_DIR$/app/views/simulations/newton_simulations/2.json" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/box2dJSONReader.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/homepage.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/simulations_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/canvas.css.scss.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_canvas.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/challenges/lessons_content/1/2-challenge/_task.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/challenges/lessons_content/1/1-challenge/_task.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/Newton/render.js" />
+        <option value="$PROJECT_DIR$/app/views/challenges/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/helpers/challenges_helper.rb" />
+        <option value="$PROJECT_DIR$/app/views/challenges/components/_challenge.html.erb" />
       </list>
     </option>
   </component>
@@ -216,9 +267,9 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
-    <option name="y" value="22" />
-    <option name="width" value="1696" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -227,6 +278,21 @@
         <expanded-state>
           <State>
             <id />
+          </State>
+          <State>
+            <id>Cucumber</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>SQL</id>
           </State>
           <State>
             <id>Spelling</id>
@@ -266,16 +332,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="RailsProjectView">
         <subPane>
           <PATH>
@@ -403,18 +459,8 @@
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,62 +474,58 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrate" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="helpers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="physics_academy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lessons_content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physics_academy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physics_academy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physics_academy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physics_academy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -494,7 +536,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="Errors" />
+    <property name="options.lastSelected" value="reference.settings.ide.settings.web.browsers" />
     <property name="JavaScriptLanguageLevel" value="ES5" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/spec" />
@@ -506,19 +548,21 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\rails_projects\physics_academy\app\views\simulation" />
+      <recent name="C:\rails_projects\physics_academy\app\assets\images\newton" />
       <recent name="C:\rails_projects\physics_academy\app\views\challenges\lessons_content\1\2-challenge" />
       <recent name="C:\rails_projects\physics_academy\app\views\challenges" />
       <recent name="C:\rails_projects\physics_academy\app\assets\stylesheets\global" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\rails_projects\physics_academy\app\views\challenges\components" />
+      <recent name="C:\rails_projects\physics_academy\app\views\newton\simulations" />
+      <recent name="C:\rails_projects\physics_academy\app\assets\stylesheets" />
+      <recent name="C:\rails_projects\physics_academy\app\assets\javascripts\Newton" />
       <recent name="C:\rails_projects\physics_academy\app\assets\stylesheets\global" />
-      <recent name="C:\rails_projects\physics_academy\app\views" />
-      <recent name="C:\rails_projects\physics_academy\app\views\challenges" />
-      <recent name="C:\rails_projects\physics_academy\app\views\challenges\partials" />
-      <recent name="C:\rails_projects\physics_academy\app\assets\images\theme" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Production">
+  <component name="RunManager" selected="Rails.Development">
     <configuration default="false" name="Rails console: mvc_testing" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="mvc_testing" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -693,17 +737,19 @@
     </configuration>
     <configuration default="false" name="Development JavaScript" type="JavascriptDebugSession" factoryName="Remote">
       <JSRemoteDebuggerConfigurationSettings>
-        <option name="engineId" value="firefox" />
+        <option name="engineId" value="chrome" />
         <option name="fileUrl" value="http://127.0.0.1:3000/" />
         <mapping local-file="$PROJECT_DIR$/public" url="http://127.0.0.1:3000/" />
         <mapping local-file="$PROJECT_DIR$/app/assets/javascripts/Faraday/CirSim.js" url="http://127.0.0.1:3000/labs/circuits" />
         <mapping local-file="$PROJECT_DIR$/app/views/challenges/submit.js.erb" url="http://127.0.0.1:3000/" />
+        <mapping local-file="$PROJECT_DIR$/app/assets/javascripts/simulations.js" url="http://127.0.0.1:3000/" />
+        <mapping local-file="$PROJECT_DIR$/app/assets/javascripts/box2d_json_reader.js" url="http://127.0.0.1:3000/" />
       </JSRemoteDebuggerConfigurationSettings>
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
-    <configuration default="false" name="RSpec: All" type="RSpecRunConfigurationType" factoryName="RSpec">
+    <configuration default="false" name="RSpec: All Tests" type="RSpecRunConfigurationType" factoryName="RSpec">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="mvc_testing" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -750,8 +796,10 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="BROWSER_URL" VALUE="http://127.0.0.1:3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyCover" />
       <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyCover" />
       <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
@@ -849,7 +897,7 @@
     </configuration>
     <list size="8">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.Development JavaScript" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.RSpec: All" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.RSpec: All Tests" />
       <item index="2" class="java.lang.String" itemvalue="Rails.Development" />
       <item index="3" class="java.lang.String" itemvalue="Rails.Production" />
       <item index="4" class="java.lang.String" itemvalue="Rake.Seed" />
@@ -916,24 +964,25 @@
     </servers>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="22" width="1696" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36989248" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20930232" sideWeight="0.30967742" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20930232" sideWeight="0.29462364" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39685863" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22251868" sideWeight="0.17419355" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22251868" sideWeight="0.58064514" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2376344" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26414087" sideWeight="0.42688173" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37311828" sideWeight="0.32283884" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38817203" sideWeight="0.67342585" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15698925" sideWeight="0.32283884" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36129034" sideWeight="0.67342585" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08709677" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1000,20 +1049,12 @@
           <line>6</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/sessions_controller.rb</url>
-          <line>2</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/users_controller.rb</url>
           <line>30</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/users_controller.rb</url>
           <line>41</line>
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/application_controller.rb</url>
-          <line>83</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/users_controller.rb</url>
@@ -1037,305 +1078,381 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/controllers/application_controller.rb</url>
-          <line>61</line>
+          <line>70</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/models/subscription.rb</url>
+          <line>92</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/views/challenges/submit.js.erb</url>
+          <line>17</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/mailing_list_controller.rb</url>
+          <line>4</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/mailing_list_controller.rb</url>
+          <line>12</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/mailing_list_controller.rb</url>
+          <line>8</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/spec/requests/guest_login_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="59" selection-start="288" selection-end="288" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="216" selection-end="216" vertical-scroll-proportion="-6.5384617" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="-5.230769" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_footer.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="14" selection-start="219" selection-end="219" vertical-scroll-proportion="-4.576923" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/users_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="21" selection-start="395" selection-end="395" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/users_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/challenges_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.62056077" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/application-528fca64b6d0a356f71a64b577da8ce9.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28" selection-start="181" selection-end="181" vertical-scroll-proportion="0.20318726" />
-      </provider>
-    </entry>
-    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4.rc1/lib/action_view/renderer/partial_renderer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="268" column="0" selection-start="10222" selection-end="10222" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_user_thumbnail.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="76" selection-start="470" selection-end="470" vertical-scroll-proportion="-5.8846154" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/sessions_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="3" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="12" selection-start="645" selection-end="645" vertical-scroll-proportion="-13.730769" />
-      </provider>
-    </entry>
-    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/activerecord-3.2.4.rc1/lib/active_record/connection_adapters/abstract/schema_definitions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="10" selection-start="2069" selection-end="2069" vertical-scroll-proportion="0.33271027" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="33" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/requests/authentication_pages_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="0" selection-start="3226" selection-end="3226" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/requests/static_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="37" selection-start="766" selection-end="766" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="4" selection-start="3203" selection-end="3226" vertical-scroll-proportion="-13.84">
+        <state line="9" column="13" selection-start="118" selection-end="118" vertical-scroll-proportion="0.29254302">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/static_pages_controller.rb">
+    <entry file="file://$PROJECT_DIR$/spec/requests/mailing_list_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="5" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
+        <state line="36" column="7" selection-start="989" selection-end="989" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_subheader.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/mailing_list/error.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="27" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.6153846" />
+        <state line="2" column="31" selection-start="199" selection-end="199" vertical-scroll-proportion="0.06500956">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/models/mailing_list.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="33" selection-start="342" selection-end="342" vertical-scroll-proportion="-8.5" />
+        <state line="4" column="74" selection-start="199" selection-end="199" vertical-scroll-proportion="0.13001911">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/shared/_links.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/mailing_list/submit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="98" selection-start="138" selection-end="138" vertical-scroll-proportion="0.045454547" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/main-responsive.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/mailing_list/remove.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="0" selection-start="1095" selection-end="1095" vertical-scroll-proportion="-7.730769" />
+        <state line="2" column="6" selection-start="113" selection-end="113" vertical-scroll-proportion="0.06841046">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/mailing_list_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="293" selection-end="293" vertical-scroll-proportion="-5.8846154" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/about.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="420" selection-end="420" vertical-scroll-proportion="-17.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/faq.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/challenge.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="307" selection-end="307" vertical-scroll-proportion="-10.461538" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/labs.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="22" column="0" selection-start="419" selection-end="419" vertical-scroll-proportion="0.7151052">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/about.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="-10.461538" />
+        <state line="16" column="0" selection-start="349" selection-end="349" vertical-scroll-proportion="9.653846">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/font-awesome-extended.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/challenge.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="96" selection-start="1911" selection-end="1911" vertical-scroll-proportion="0.0" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/lessons/_lesson.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/faq.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="32" selection-start="531" selection-end="531" vertical-scroll-proportion="-1.3076923" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/theme.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/script/rails">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="33" selection-start="422" selection-end="422" vertical-scroll-proportion="-1.3076923" />
+        <state line="5" column="0" selection-start="274" selection-end="274" vertical-scroll-proportion="0.1625239">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/font-awesome.css.scss.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/font-awesome-extended.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="38" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-3.2692308" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120815232615_change_users_name_default.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="122" selection-end="122" vertical-scroll-proportion="0.16504854" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/schema.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="146" column="37" selection-start="6153" selection-end="6153" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/features.css.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="19" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+        <state line="5" column="0" selection-start="272" selection-end="272" vertical-scroll-proportion="0.17102616">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/unused.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="24" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/features.css.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/faraday.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="16" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0">
+        <state line="7" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="9.153846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/labs.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/lessons.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/debugPrint.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/Box2D.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10819" column="14" selection-start="372124" selection-end="372129" vertical-scroll-proportion="0.69160587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/font-awesome.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="41" selection-start="1734" selection-end="1734" vertical-scroll-proportion="0.41379312">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/createTestData.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="9" selection-start="860" selection-end="860" vertical-scroll-proportion="0.09090909">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/box.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="191.76923">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/simulations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/newton/simulations/3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/newton/simulations/2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="106" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/homepage.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="23" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.8727273" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/main.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+        <state line="115" column="23" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.41337386">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/box2dJSONReader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="70" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1345074985279" expanded="true" signature="135:1867" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="166:1859" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="199:1807" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="241:283" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="505:1778" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="543:1615" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="584:803" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="680:784" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="844:1047" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="941:1028" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="1088:1301" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="1188:1282" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="1342:1597" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="1471:1578" placeholder="..." />
-            <marker date="1345074985279" expanded="true" signature="1652:1755" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/global/box.css.scss.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="215" column="20" selection-start="3132" selection-end="3132" vertical-scroll-proportion="0.0">
+        <state line="120" column="69" selection-start="3873" selection-end="3873" vertical-scroll-proportion="1.0248538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/main.css.scss.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="7" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+        <state line="198" column="0" selection-start="2936" selection-end="3031" vertical-scroll-proportion="-0.8627451">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+    <entry file="file://C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/actionpack-3.2.4.rc1/lib/action_view/template/resolver.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="56" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.0">
+        <state line="10" column="6" selection-start="289" selection-end="289" vertical-scroll-proportion="0.24853802">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/newton/simulations/1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="23" selection-end="23" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="2" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/challenges_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/subscription.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="104" column="0" selection-start="3636" selection-end="3636" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+        <state line="16" column="104" selection-start="646" selection-end="660" vertical-scroll-proportion="-10.461538">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/initialization.js">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="41" selection-start="2091" selection-end="2091" vertical-scroll-proportion="1.167939">
+        <state line="92" column="0" selection-start="2894" selection-end="2894" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/simulations_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="0" selection-start="185" selection-end="185" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/canvas.css.scss.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="1" selection-start="1857" selection-end="1857" vertical-scroll-proportion="-23.346153">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_canvas.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="23" selection-start="864" selection-end="864" vertical-scroll-proportion="-18.307692">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/lessons_content/1/2-challenge/_task.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="120" selection-start="879" selection-end="879" vertical-scroll-proportion="-7.1923075">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/lessons_content/1/1-challenge/_task.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="130" selection-end="130" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/Newton/render.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="95" column="51" selection-start="2432" selection-end="2432" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/components/_description.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="46" selection-start="674" selection-end="674" vertical-scroll-proportion="-10.923077">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/challenges_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="5" selection-start="501" selection-end="501" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/challenges/components/_challenge.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="18" selection-start="408" selection-end="408" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/sample_data.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/assets/lessons_content/1-Introduction_to_Physics/lesson-params.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="21" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/populate_circuit_simulations.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/tasks/populate_lessons.rake">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.35843372">
           <folding />
         </state>
       </provider>

@@ -1,7 +1,7 @@
 class ChallengesController < ApplicationController
 
   before_filter :read_params, except: [:index]
-  after_filter :save_subscription, only: [:reset, :reset_all, :submit]  # Only executed on PUT requests
+  after_filter :save_subscription, only: [:reset, :reset_all, :submit, :show]  # Only executed on PUT requests
 
   def show
 
@@ -31,11 +31,9 @@ class ChallengesController < ApplicationController
     #  On warning or error:
     #    Display relevant message and do not advance lesson
 
-
     respond_to do |format|
       format.js
     end
-
 
   end
 
@@ -82,7 +80,8 @@ class ChallengesController < ApplicationController
       @user = current_or_guest_user!
       @lesson = Lesson.find(params[:lesson_id])
       @challenge = Challenge.find(params[:id])
-      @subscription = @user.subscribe(@lesson)
+      @subscription = Subscription.find_or_create_by_user_id_and_lesson_id(user_id: @user.id, lesson_id: @lesson.id)
+
     end
 
 

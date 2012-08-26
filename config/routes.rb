@@ -1,19 +1,33 @@
 PhysicsAcademy::Application.routes.draw do
 
+  get "mailing_list/submit"
+
+  get "mailing_list/remove"
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
 
   root to: 'static_pages#home'
 
-  get "labs/circuits"
-  get "labs/mechanics"
+
+  match '/help',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
+  match '/privacy', to: 'static_pages#privacy'
+  match '/terms',   to: 'static_pages#terms'
+
+  post '/mailing_list/submit' => 'mailing_list#submit'
 
   match '/labs', to: 'labs#index'
   match '/labs/circuits/:circuit_name', to: 'labs#circuits'
 
+  get "labs/circuits"
+  get "labs/mechanics"
+
+
+  resources :simulations, only: [:show, :index]
+
+
   resources :users, only: [:show, :index, :edit, :delete]
-  #namespace :user do
-  #  root :to => "users#show"
-  #end
+  resources :mailinglists, only: [:create]
 
   resources :circuit_simulations
   resources :circuit_elements
@@ -41,13 +55,6 @@ PhysicsAcademy::Application.routes.draw do
   #match '/signout', to: 'sessions#destroy', via: :delete
 
   #match '/users/:id',  to: 'users#show'
-  match '/help',    to: 'static_pages#help'
-
-  match '/about',   to: 'static_pages#about'
-  match '/privacy', to: 'static_pages#privacy'
-  match '/terms',   to: 'static_pages#terms'
-
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

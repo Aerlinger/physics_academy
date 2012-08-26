@@ -1,6 +1,5 @@
-
 <%# This page is shown as the User sign-in page %>
-<% provide( :title, "Sign in") %>
+<% provide(:title, "Sign in") %>
 
 <%= render :partial => 'layouts/subheader', locals: {title: "Sign In"} %>
 
@@ -8,46 +7,51 @@
 
   <div class="row offset3">
 
-
-    <div class="box-container span6 clear_margins">
-
+    <div class="box-container span6 clear_side_margins" style="margin-left: 0px">
 
       <div class="box-header box-title">
         Enter your login info
       </div>
 
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-horizontal"}) do |f| %>
 
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "form-horizontal") do |f| %>
+        <div class="box-features">
 
-        <fieldset>
+          <fieldset>
 
-          <div class="box-features">
-
-            <div class="control-group">
-              <%= f.label :email, class: "control-label" %>
-              <div class="controls">
-                <%= f.text_field :email, class: "input-xlarge focused" %>
+              <div class="control-group">
+                <%= f.label :email, class: "control-label" %>
+                <div class="controls">
+                  <%= f.text_field :email, class: "input-large focused" %>
+                </div>
               </div>
-            </div>
 
-            <div class="control-group">
-              <%= f.label :password, class: "control-label" %>
-              <div class="controls">
-                <%= f.password_field :password, class: "input-xlarge" %>
+              <div class="control-group">
+                <%= f.label :password, class: "control-label" %>
+                <div class="controls">
+                  <%= f.password_field :password, class: "input-large" %>
+                </div>
               </div>
-            </div>
 
-            <% if devise_mapping.rememberable? -%>
-              <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-            <% end -%>
+              <div class="control-group">
+                <div class="controls">
+                  <% if devise_mapping.rememberable? -%>
 
-          </div>
+                    <label for="remember_me" class="control-label"><%= f.check_box :remember_me, id: "remember_me" %>
+                      &nbsp Remember me</label>
+                    <%# f.label :remember_me, class: "checkbox" %>
+                  <% end -%>
 
-          <div class="box-actions">
-            <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
-          </div>
+                </div>
+              </div>
 
-        </fieldset>
+          </fieldset>
+
+        </div>
+
+        <div class="box-actions">
+          <%= f.submit "Sign in", class: "btn btn-success btn-large btn-primary" %>
+        </div>
 
       <% end %>
 
@@ -56,6 +60,5 @@
     </div>
 
   </div>
-
 
 </div>

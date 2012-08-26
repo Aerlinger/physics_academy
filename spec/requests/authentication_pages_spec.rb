@@ -82,9 +82,17 @@ describe "Authentication Pages" do
               click_button "Sign in"
             end
 
-            xit "should render the default (profile) page" do
-              page.should have_selector('title', text: user.name)
+            it "should render the default page" do
+              current_path.should eq(user_path(user))
             end
+
+            describe "visiting home path" do
+              before {click_link "Home"}
+              it "should go to homepage when home is clicked" do
+                current_path.should eq(root_path)
+              end
+            end
+
           end
         end
 

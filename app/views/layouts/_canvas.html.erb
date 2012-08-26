@@ -1,0 +1,37 @@
+<% canvas_id = "canvas_id_#{simulation_id}" %>
+<% json_path = simulation_path(simulation_id, :json) %>
+<% default_width = 400 %>
+<% default_height = 300 %>
+
+<div id="<%= canvas_id %>" class="canvas_wrapper" style="width: <%= (width ||= default_width) + 4 %>px; height: <%= (height ||= default_height)+4 %>px">
+
+  <script type="text/javascript">
+
+    $.getJSON("<%= json_path %>",
+      function(data) {
+        console.log("data");
+        var world = loadBox2dFromJSON(data, $("#<%= canvas_id %> canvas"));
+        createBounds(world);
+        createBalls(world);
+        intervalId = render(world, $("#<%= canvas_id %> canvas"));
+    });
+
+  </script>
+
+  <%= link_to "", "#", remote: true %>
+
+  <canvas width="<%= width ||= default_width %>" height="<%= height ||= default_height show_simulations_path%>" class="box2d_canvas" />
+
+
+
+</div>
+
+<!-- Draw questions -->
+<% if show_questions %>
+  <div style="width: <%= (width ||= default_width) + 4 %>px;" class="questions">
+    <label>Text here</label>
+    text text
+  </div>
+<% end %>
+
+

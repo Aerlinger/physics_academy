@@ -18,6 +18,28 @@ RSpec::Matchers.define :have_success_message do |message|
   end
 end
 
+RSpec::Matchers.define :have_default_login_links do |message|
+  match do |page|
+    page.should have_link("Sign in")
+    page.should have_link("Create Account")
+  end
+end
+
+RSpec::Matchers.define :have_guest_login_links do |message|
+  match do |page|
+    page.should have_link("Sign in or Sign up to save")
+  end
+end
+
+RSpec::Matchers.define :show_user_in_header do |message|
+  match do |page|
+    page.should have_link("Profile")
+    page.should have_link("Settings")
+    page.should have_link("Sign out")
+  end
+end
+
+
 def sign_out_user
   delete destroy_user_session_path
 end

@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
   before_filter :generate_quote
-  helper_method :current_user?, :current_or_guest_user, :current_or_guest_user?, :guest_user?
+  helper_method :current_user?, :current_or_guest_user, :current_or_guest_user?, :guest_user?, :sign_out_guest
 
   # Three possible login states
   #  1. Not logged in
@@ -25,12 +25,10 @@ class ApplicationController < ActionController::Base
   def current_or_guest_user!
     if current_user
       if cookies[:uuid]
-        # Called when a new login is created from a guest user's current session (i.e. guest user is converted to current user)
+        # Called when a guest user is converted to current user
         logging_in
         # destroy the guest user and the session
-        guest_user.destroy
-        cookies.delete :uuid
-        #session[:guest_user_id] = nil
+        sign_out_guest
       end
       current_user
     else
@@ -51,6 +49,17 @@ class ApplicationController < ActionController::Base
   # session[:guest_user_id] is false.
   def guest_user?
     !cookies[:uuid].nil? && !user_signed_in?
+  end
+
+  def sign_out_guest
+    if guest_user
+      guest_user.destroy
+      cookies.delete :uuid
+      true
+    else
+      false
+    end
+    #session[:guest_user_id] = nil
   end
 
   # called (once) when the user logs in, insert any code your application needs
