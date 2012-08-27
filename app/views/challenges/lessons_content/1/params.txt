@@ -1,5 +1,0 @@
-{:
-titleI"Introduction to Physics:EF:descriptionI"‘In the most general definition, physics is the study of the properties and behavior of the universe.
-                          In this introductory lesson we'll cover a brief history of physics, discuss the major disciplines of physics,
-                          and introduce you to basic terminology and concepts.
-                          If you're completely new to physics this is where to start.;F:image_urlI" introduction_to_physics.jpg;F:challenges[I"What is physics?;FI"A brief timeline;FI"Matter and energy;FI""Matter in its different forms;FI""Energy in its different forms;FI"In Review;F:completedF:subjectI"Introductory;F:difficultyI"Beginner;F

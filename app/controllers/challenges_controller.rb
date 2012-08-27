@@ -81,7 +81,6 @@ class ChallengesController < ApplicationController
       @lesson = Lesson.find(params[:lesson_id])
       @challenge = Challenge.find(params[:id])
       @subscription = Subscription.find_or_create_by_user_id_and_lesson_id(user_id: @user.id, lesson_id: @lesson.id)
-
     end
 
 

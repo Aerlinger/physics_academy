@@ -14,10 +14,10 @@
   "rigidBodies":[
     {
       "name":"test01",
-      "imagePath":"/assets/newton/bottle.png",
+      "imagePath":"/assets/newton/bottle_non_square.png",
       "origin":{
-        "x":0.4795836806297302,
-        "y":0.024791661649942398
+        "x":0,
+        "y":0
       },
       "polygons":[
         [

@@ -1,68 +1,97 @@
-var imgObj = new Image();
-
-
-function render(world, CanvasElmJQuery) {
-
-  console.log("starting initialization");
+/**
+ * Renders the Box2D world object on an HTML5 canvas.
+ *
+ * @param world The Box2D world which will be updated and rendered
+ * @param mouseResponder Checks mouse position and updates world from mouse clicks/moves each frame.
+ * @param CanvasElmJQuery JQuery DOM element of the HTML5 canvas. This is where rendering will occur.
+ * @return {*}
+ */
+function render(world, mouseResponder, CanvasElmJQuery) {
+  "use strict";
 
   // The context is derived from the DOM element of the canvas jQuery selector
   var context = CanvasElmJQuery.get(0).getContext("2d");
+  var hasTextures = false;
+  var interval_id = null;
 
-  start();
-
-  function start() {
-    this.intervalId = window.setInterval(updateAndRender, world.timeStep);
+  if(world.debug) {
+    console.log("\tIn debug mode");
+    loadDebug();
+    start();
+  } else {
+    preloadTextures();
+    if(!hasTextures)
+      start();
   }
 
-  /*********************************************************************
-   * Input Events
+
+  /** Starts the render loop through a setInterval function. Rendering is not started until this function is called.
+   *
+   * @return the intervalId of window.setInterval (used for pausing/clearing).
+    */
+  function start() {
+    "use strict";
+    console.log("Starting render: " + CanvasElmJQuery.attr('class'));
+    interval_id = window.setInterval(updateAndRender, world.timeStep);
+  }
+
+
+  /**
+   * Fetches the image data for each Body (if it exists) and preloads it for rendering.
    */
-  var mouseX, mouseY, mousePVec, isMouseDown, selectedBody, mouseJoint;
-  var canvasPosition = getElementPosition(document.getElementById("box2d"));
+  function preloadTextures() {
+    "use strict";
 
-  document.addEventListener("mousedown", function (e) {
-    isMouseDown = true;
-    handleMouseMove(e);
-    document.addEventListener("mousemove", handleMouseMove, true);
-  }, true);
+    var BodyNode = world.GetBodyList();
+    var numTextures = 0;
 
-  document.addEventListener("mouseup", function () {
-    document.removeEventListener("mousemove", handleMouseMove, true);
-    isMouseDown = false;
-    mouseX = undefined;
-    mouseY = undefined;
-  }, true);
+    // For each body in the world
+    while (BodyNode) {
 
-  if(world.debug)
-    loadDebug();
+      var CurrentBodyNode = BodyNode;
+      BodyNode = BodyNode.GetNext();
+
+      // If this body has an image, preload that image
+      if (CurrentBodyNode.GetUserData() && CurrentBodyNode.GetUserData().imagePath) {
+        preloadImageFromBody(CurrentBodyNode);
+        numTextures++;
+      }
+
+    }
+
+    return numTextures;
+  }
 
 
+  /**
+   * Fetches the image data for each Body (if it exists) and preloads it for rendering.
+   */
+  function preloadImageFromBody(Body) {
+    "use strict";
+
+    var imageObj = new Image();
+    imageObj.onload = start;
+    imageObj.src = Body.GetUserData().imagePath;
+
+    Body.GetUserData().imageObj = imageObj;
+    hasTextures = true;
+  }
+
+
+  /**
+   * Updates and renders a single frame. This involves four steps:
+   *
+   * 1. Clear canvas
+   * 2. Handle mouse event
+   * 3. Call render (loops through every object in the world and draws that object)
+   * 4. Clear world forces
+   */
   function updateAndRender() {
 
     context.clearRect(0, 0, world.widthInPixels, world.heightInPixels);
 
-    if (isMouseDown && (!mouseJoint)) {
-      var body = getBodyAtMouse();
-      if (body) {
-        var md = new b2MouseJointDef();
-        md.bodyA = world.GetGroundBody();
-        md.bodyB = body;
-        md.target.Set(mouseX, mouseY);
-        md.collideConnected = true;
-        md.maxForce = 300.0 * body.GetMass();
-        mouseJoint = world.CreateJoint(md);
-        body.SetAwake(true);
-      }
-    }
-
-    if (mouseJoint) {
-      if (isMouseDown) {
-        mouseJoint.SetTarget(new b2Vec2(mouseX, mouseY));
-      } else {
-        world.DestroyJoint(mouseJoint);
-        mouseJoint = null;
-      }
-    }
+    if(mouseResponder)
+      mouseResponder.queryMouseAndUpdateWorld();
 
     world.Step(world.timeStep, world.velocityIterations, world.positionIterations);
 
@@ -75,6 +104,9 @@ function render(world, CanvasElmJQuery) {
   }
 
 
+  /**
+   * Iterates through list of objects in the world, drawing each one based on its type (circle, image, or polygon)
+   */
   function render() {
 
     var BodyNode = world.GetBodyList();
@@ -92,29 +124,30 @@ function render(world, CanvasElmJQuery) {
 
       var shape = FixtureNode.GetShape();
 
-      // If this body is a circle
-      if (shape.GetType() == b2Shape.e_circleShape)
-        drawCircle(CurrentBodyNode, shape);
-
       // If this body is an image
       if (CurrentBodyNode.GetUserData() && CurrentBodyNode.GetUserData().imagePath)
         drawImage(CurrentBodyNode);
 
+      // If this body is a circle
+      if (shape.GetType() == b2Shape.e_circleShape)
+        drawCircle(CurrentBodyNode, shape.GetRadius());
+
       // If this body is a polygon
-      if (shape.GetType() == b2Shape.e_polygonShape)
-        drawPolygon(CurrentBodyNode, FixtureNode);
+      else if (shape.GetType() == b2Shape.e_polygonShape)
+        drawPolygon(CurrentBodyNode);
 
     }
 
   }
 
-  function drawForces(Body) {
-    "use strict";
 
-  }
-
-
-  function drawCircle(Body, shape) {
+  /**
+   * Draws a circle from a b2Body
+   *
+   * @param Body The circle object as a b2Body.
+   * @param radius radius of the circle in meters.
+   */
+  function drawCircle(Body, radius) {
     "use strict";
 
     var position = Body.GetPosition();
@@ -122,48 +155,68 @@ function render(world, CanvasElmJQuery) {
     context.strokeStyle = "#FF1100";
     context.fillStyle = "#FF8800";
     context.beginPath();
-    context.arc(position.x * world.pixelsToMeters, (-position.y + world.heightInMeters) * world.pixelsToMeters, shape.GetRadius() * world.pixelsToMeters, 0, Math.PI * 2, true);
+    context.arc(position.x * world.pixelsToMeters, (-position.y + world.heightInMeters) * world.pixelsToMeters,
+      radius * world.pixelsToMeters, 0, Math.PI * 2, true);
     context.closePath();
     context.lineWidth = 3;
-    context.stroke();
+    //context.stroke();
     context.fill();
   }
 
 
+  /**
+   * Draws an image from the UserData on a body.
+   *
+   * @param Body body containing the image to be drawn.
+   */
   function drawImage(Body) {
     "use strict";
 
     var position = Body.GetPosition();
 
-    var size = 0;
+    var bodyWidthPixels   = Body.GetUserData().width * world.pixelsToMeters;
+    var bodyHeightPixels  = Body.GetUserData().height * world.pixelsToMeters;
 
     context.save();
 
+    var imageObj = Body.GetUserData().imageObj;
+
+    var scaleX = bodyWidthPixels/imageObj.width;
+    var scaleY = bodyHeightPixels/imageObj.height;
+
     // Translate to the center of the object, then flip and scale appropriately
-    context.translate(position.x * world.pixelsToMeters + size/2, (-position.y + world.heightInMeters) * world.pixelsToMeters);
+    context.translate(position.x * world.pixelsToMeters, (-position.y + world.heightInMeters) * world.pixelsToMeters);
     context.rotate(-Body.GetAngle());
-    var s2 = -1 * (size/2);
 
-    context.scale(.6, .6);
+    // TODO: The image sprite and box2d object don't line up perfectly. Find out why (xOffset and yOffset should be 0).
+    var xOffset = -4;
+    var yOffset = -4;
 
-    imgObj = new Image();
+    // Draw the bounding box:
+    context.scale(scaleX, scaleY);
+    context.rect(imageObj.width/2*scaleX+xOffset, yOffset, bodyWidthPixels/scaleX, -bodyHeightPixels/scaleY);
+    context.lineWidth = 2;
+    context.strokeStyle = 'black';
+    context.stroke();
 
-    //imgObj.onload = function(s2) {
-      //console.log("Image Loaded " + s2);
-      context.drawImage(imgObj, 30, 30);
-    //};
-
-
-    imgObj.src = Body.GetUserData().imagePath;
+    context.drawImage(imageObj, imageObj.width/2*scaleX+xOffset, -imageObj.height+yOffset);
 
     context.restore();
   }
 
 
-  function drawPolygon(Body, FixtureNode) {
+  /**
+   * Iterates through each fixture within a PolygonBody and draws an outline for that fixture. A polygon
+   * has many fixtures, and each fixture has many vertices. Each fixture is drawn by connecting the vertices of that
+   * fixture.
+   *
+   * @param PolygonBody The Polygon to be drawn.
+   */
+  function drawPolygon(PolygonBody) {
     "use strict";
 
-    var position = Body.GetPosition();
+    var position = PolygonBody.GetPosition();
+    var FixtureNode = PolygonBody.GetFixtureList();
 
     // Loop through each Fixture in this polygon definition
     while(FixtureNode) {
@@ -171,23 +224,22 @@ function render(world, CanvasElmJQuery) {
       var CurrentFixtureNode = FixtureNode;
       FixtureNode = FixtureNode.GetNext();
 
-      var shape = CurrentFixtureNode.GetShape();
+      var vertices = CurrentFixtureNode.GetShape().GetVertices();
 
-      // draw a polygon
-      var vert = shape.GetVertices();
       context.beginPath();
 
-      // Handle the possible rotation of the polygon and draw it
-      b2Math.MulMV(Body.m_xf.R, vert[0]);
-      var tV = b2Math.AddVV(position, b2Math.MulMV(Body.m_xf.R, vert[0]));
-
+      // Find first vertex of this fixture, and move to that position for drawing
+      b2Math.MulMV(PolygonBody.m_xf.R, vertices[0]);
+      var tV = b2Math.AddVV(position, b2Math.MulMV(PolygonBody.m_xf.R, vertices[0]));
       context.moveTo(tV.x * world.pixelsToMeters, (world.heightInMeters - tV.y) * world.pixelsToMeters);
 
-      for (var i = 0; i < vert.length; i++) {
-        var v = b2Math.AddVV(position, b2Math.MulMV(Body.m_xf.R, vert[i]));
+      // Loop through each vertex within this polygon draw the line from the previous vertex to this one.
+      for (var i = 0; i < vertices.length; i++) {
+        var v = b2Math.AddVV(position, b2Math.MulMV(PolygonBody.m_xf.R, vertices[i]));
         context.lineTo(v.x * world.pixelsToMeters, (world.heightInMeters - v.y) * world.pixelsToMeters);
       }
 
+      // Draw line connecting the last vertex to the first vertex
       context.lineTo(tV.x * world.pixelsToMeters, (world.heightInMeters - tV.y) * world.pixelsToMeters);
 
       context.closePath();
@@ -199,58 +251,9 @@ function render(world, CanvasElmJQuery) {
   }
 
 
-  function handleMouseMove(e) {
-    mouseX = (e.clientX - canvasPosition.x) / world.pixelsToMeters;
-    mouseY = -(e.clientY - canvasPosition.y) / world.pixelsToMeters + world.heightInPixels;
-  }
-
-
-  function getBodyAtMouse() {
-    mousePVec = new b2Vec2(mouseX, mouseY);
-    var aabb = new b2AABB();
-    aabb.lowerBound.Set(mouseX - 0.001, mouseY - 0.001);
-    aabb.upperBound.Set(mouseX + 0.001, mouseY + 0.001);
-
-    // Query the world for overlapping shapes.
-    selectedBody = null;
-    world.QueryAABB(getBodyCB, aabb);
-    return selectedBody;
-  }
-
-
-  function getBodyCB(fixture) {
-    if (fixture.GetBody().GetType() != b2Body.b2_staticBody) {
-      if (fixture.GetShape().TestPoint(fixture.GetBody().GetTransform(), mousePVec)) {
-        selectedBody = fixture.GetBody();
-        return false;
-      }
-    }
-    return true;
-  }
-
-
-  function getElementPosition(element) {
-    var elem = element, tagname = "", x = 0, y = 0;
-
-    while (elem && (typeof(elem) == "object") && (typeof(elem.tagName) != "undefined")) {
-
-      y += elem.offsetTop;
-      x += elem.offsetLeft;
-      tagname = elem.tagName.toUpperCase();
-
-      if (tagname == "BODY")
-        elem = 0;
-
-      if (typeof(elem) == "object") {
-        if (typeof(elem.offsetParent) == "object")
-          elem = elem.offsetParent;
-      }
-    }
-
-    return {x:x, y:y};
-  }
-
-
+  /**
+   * Sets drawing parameters for debug mode.
+   */
   function loadDebug() {
     "use strict";
 
@@ -265,6 +268,6 @@ function render(world, CanvasElmJQuery) {
     world.SetDebugDraw(debugDraw);
   }
 
-  return this.intervalId;
+  return interval_id;
 }
 

@@ -22,9 +22,12 @@ module ApplicationHelper
       when "notice"
         "info"
     end
-
   end
 
-
+  # Removes invalid characters from a string
+  def clean_filename(filename)
+    valid_filename_regexp = /[\s+\\\/*?:\"<>|]/
+    filename.gsub(valid_filename_regexp, '')
+  end
 
 end

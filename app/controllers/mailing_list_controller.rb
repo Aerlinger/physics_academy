@@ -2,6 +2,7 @@
 class MailingListController < ApplicationController
 
   def submit
+    
     @subscribed_email = MailingList.new(email: params[:subscribe_email])
 
     if @subscribed_email.save

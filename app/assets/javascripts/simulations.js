@@ -16,6 +16,7 @@ jQuery(function($) {
 
       var JSON_response = JSON.parse(xhr.responseText);
       var world = loadBox2dFromJSON(JSON_response, $("#box2d"));
+      MouseResponder(world, $("#box2d"));
       createBounds(world);
       createBalls(world);
 

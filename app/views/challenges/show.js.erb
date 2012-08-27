@@ -12,7 +12,7 @@ $(".chalkboard-background").append("<%= escape_javascript debug(@lesson) if Rail
 // Update the lesson center content
 $("#task_content").html("<%=
 
-  challenge_content_path = fetch_content_for_task(@lesson.index, @challenge.index)
+  challenge_content_path = path_for_lesson_challenge(@lesson, @challenge)
 
   escape_javascript(
     begin

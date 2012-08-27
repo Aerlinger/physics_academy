@@ -16,6 +16,24 @@ module ChallengesHelper
     render partial: 'submission_response', locals: {type: "warning", message: message}
   end
 
+  # build the path directory that contains the partial for lesson challenge.
+  def path_for_lesson_challenge(lesson, challenge)
+
+    # 1. Define the root directory where the lesson content resides
+    lesson_root = "challenges/lessons_content"
+
+    # 2. Get the name of the lesson folder.
+    lesson_folder = clean_filename "#{lesson.index}-#{lesson.title.gsub(' ', '_')}"
+
+    # 3. Get the name of the challenge folder
+    challenge_folder = clean_filename "#{challenge.index}-#{challenge.title.gsub(' ', '_')}"
+
+    task_file = "task"
+
+    # 4. Return the spliced string
+    "#{lesson_root}/#{lesson_folder}/#{challenge_folder}/#{task_file}"
+  end
+
   def challenge_list
 
     html = @lesson.challenges.all.each_with_index.collect do |challenge, index|

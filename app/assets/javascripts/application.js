@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require bootstrap
-//
+//= require debugPrint
 //= require simulations
 //
 //= require_tree ./Newton

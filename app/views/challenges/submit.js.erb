@@ -11,9 +11,8 @@ else if (response=="error") {
 else if (response=="success") {
   $("#submit").removeClass('btn-info').addClass('btn-success');
   $('#challenge_nav').html("<%= escape_javascript challenge_list %>");
+
   <% @subscription.complete_challenge(@challenge.id) %>
 
-  $('#challenge_nav').html("<%= escape_javascript challenge_list %>");
-
-  $.get( "<%= escape_javascript next_lesson_challenge_url %>", function() {alert("Success!")} );
+  $.get( "<%= escape_javascript next_lesson_challenge_url %>", function() { alert("Success!") } );
 }

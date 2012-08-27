@@ -3,10 +3,8 @@
   <div id="task_content">
 
     <%=
-        lesson_root = "challenges/lessons_content"
-
         begin
-          render partial: "#{lesson_root}/lesson#{@lesson.index}/challenge#{@challenge.index}/task#{@challenge.index}"
+          render partial: path_for_lesson_challenge(@lesson, @challenge)
         rescue ActionView::MissingTemplate
           "Couldn't find page"
         end

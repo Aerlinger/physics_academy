@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   protect_from_forgery
-  before_filter :generate_quote
+
   helper_method :current_user?, :current_or_guest_user, :current_or_guest_user?, :guest_user?, :sign_out_guest
 
   # Three possible login states
@@ -65,7 +65,8 @@ class ApplicationController < ActionController::Base
   # called (once) when the user logs in, insert any code your application needs
   # to hand off from guest_user to current_user.
   def logging_in
-    # What should be done here is take all that belongs to user with lazy_id matching current_user's uuid cookie... then associate them with current_user
+    # What should be done here is take all that belongs to user with lazy_id matching current_user's uuid cookie...
+    #   then associate them with current_user
 
     # Copy the subscription data from the guest user to the newly created user:
     current_user.subscriptions = guest_user.subscriptions.dup
@@ -76,10 +77,6 @@ class ApplicationController < ActionController::Base
     # comment.user_id = current_user.id
     # comment.save
     # end
-  end
-
-  def generate_quote
-    @quote = Quote.first(:offset => rand(Quote.count)) || Quote.create!(quote: "Tell me and I forget, teach me and I may remember, involve me and I learn", author: "Benjamin Franklin")
   end
 
   private

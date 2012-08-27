@@ -8,13 +8,16 @@
             <h1>Learn physics in a whole new way.</h1>
             <h3>Through live interactive lessons we offer the most intuitive and engaging way to learn physics.</h3>
 
-            <%= link_to "Get Started", new_user_registration_path, class: "btn btn-large btn-success", id: "call_to_action" %>
+            <%= link_to "Get Started", new_user_registration_path,
+                        class: "btn btn-large btn-success", id: "call_to_action" %>
+
           </div>
         </div>
 
         <!-- The Preview Pane -->
         <div class="span7">
-          <%= render partial: "layouts/canvas", locals: {simulation_id: 1, type: :newton, show_questions: false, width: 500, height: 320} %>
+          <%= render partial: "layouts/canvas", locals:
+                  {simulation_id: 1, type: :newton, debug: false, show_questions: false, width: 500, height: 320} %>
         </div>
 
       </div>
@@ -66,8 +69,8 @@
 
             <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
               <h4>Ask questions and learn from others</h4>
-              <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your friends, classmates,
-                or mentors to Physics Academy via email or your preferred social network.
+              <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your
+                friends, classmates, or mentors to Physics Academy via email or your preferred social network.
                </p>
             </div>
           </div>

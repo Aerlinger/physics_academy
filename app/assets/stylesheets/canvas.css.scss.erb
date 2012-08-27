@@ -2,7 +2,6 @@
   CSS Styles defining HTML5 canvas element.
 */
 
-
 $title_height: 30px;
 $outer_border_width: 2px;
 $outer_corner_radius: 5px;
@@ -11,8 +10,10 @@ $opacity: .5;
 
 .canvas_wrapper {
 
-  canvas {
+  float: left;
+  padding: 10px;
 
+  canvas {
     -webkit-border-radius: $outer_corner_radius;
     -moz-border-radius: $outer_corner_radius;
     border-radius: $outer_corner_radius;
@@ -74,12 +75,9 @@ $opacity: .5;
     -webkit-opacity: .8;
   }
 
-
+  .questions {
+    border: 1px solid red;
+    color: green;
+  }
 
 }
-
-.questions {
-  border: 1px solid red;
-  color: green;
-}
-

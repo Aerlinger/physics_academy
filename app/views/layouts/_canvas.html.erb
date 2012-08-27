@@ -1,37 +1,58 @@
 <% canvas_id = "canvas_id_#{simulation_id}" %>
-<% json_path = simulation_path(simulation_id, :json) %>
+
 <% default_width = 400 %>
 <% default_height = 300 %>
 
-<div id="<%= canvas_id %>" class="canvas_wrapper" style="width: <%= (width ||= default_width) + 4 %>px; height: <%= (height ||= default_height)+4 %>px">
+<!-- Default parameters -->
 
+<% width ||= default_width %>
+<% height ||= default_height %>
+
+<% json_path ||= simulation_path(simulation_id, :json) %>
+
+<% float ||= "left" %>
+<% show_questions ||= false %>
+<% debug ||= false %>
+
+<!------------------------>
+
+<div id="<%= canvas_id %>" class="canvas_wrapper"
+     style="width: <%= width + 4 %>px; height: <%= height+4 %>px; float: <%= float %>;">
+
+  <!-- Fetch JSON data and initialize canvas -->
   <script type="text/javascript">
 
     $.getJSON("<%= json_path %>",
       function(data) {
-        console.log("data");
+
         var world = loadBox2dFromJSON(data, $("#<%= canvas_id %> canvas"));
+        world.debug = <%= debug %>
         createBounds(world);
         createBalls(world);
-        intervalId = render(world, $("#<%= canvas_id %> canvas"));
+        var mouseResponderInstance = new MouseResponder(world, $("#<%= canvas_id %>"));
+        var interval_id = render(world, mouseResponderInstance, $("#<%= canvas_id %> canvas"));
+        console.log("Interval_id " + interval_id);
+
     });
 
   </script>
 
+  <!-- Top link -->
   <%= link_to "", "#", remote: true %>
 
-  <canvas width="<%= width ||= default_width %>" height="<%= height ||= default_height show_simulations_path%>" class="box2d_canvas" />
+  <!------------------------------------------------------------------------------------
+    The canvas area
+    -->
+  <canvas width="<%= width %>" height="<%= height %>" class="box2d_canvas">
+    Canvas not supported on this browser.
+  </canvas>
 
-
+  <!-- Draw questions -->
+  <% if show_questions %>
+    <div style="width: <%= width + 4 %>px; float: <%= float %>" class="questions">
+      <label>Text here</label>
+      text text
+    </div>
+  <% end %>
 
 </div>
-
-<!-- Draw questions -->
-<% if show_questions %>
-  <div style="width: <%= (width ||= default_width) + 4 %>px;" class="questions">
-    <label>Text here</label>
-    text text
-  </div>
-<% end %>
-
-
