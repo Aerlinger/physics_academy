@@ -83,7 +83,7 @@ describe "Authentication Pages" do
             end
 
             it "should render the default page" do
-              current_path.should eq(user_path(user))
+              current_path.should eq(root_path)
             end
 
             describe "visiting home path" do

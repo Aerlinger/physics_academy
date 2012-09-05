@@ -89,7 +89,7 @@ Switch2Elm.prototype.calculateCurrent = function () {
 Switch2Elm.stamp = function () {
     if (this.position == 2) // in center?
         return;
-    CirSim.stampVoltageSource(this.nodes[0], this.nodes[this.position + 1], this.voltSource, 0);
+    Circuit.stampVoltageSource(this.nodes[0], this.nodes[this.position + 1], this.voltSource, 0);
 };
 
 Switch2Elm.getVoltageSourceCount = function () {
@@ -100,8 +100,8 @@ Switch2Elm.toggle = function () {
     Switch2Elm.prototype.toggle();
     if (this.link != 0) {
         var i;
-        for (i = 0; i != CirSim.elmList.length; i++) {
-            var o = CirSim.elmList.elementAt(i);
+        for (i = 0; i != Circuit.elementList.length; i++) {
+            var o = Circuit.elementList.elementAt(i);
             if (o instanceof Switch2Elm) {
                 var s2 = o;
                 if (s2.link == this.link)

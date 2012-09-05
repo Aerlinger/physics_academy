@@ -79,7 +79,7 @@ SwitchElm.prototype.calculateCurrent = function () {
 
 SwitchElm.prototype.stamp = function () {
     if (this.position == 0)
-        CirSim.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, 0);
+        Circuit.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, 0);
 };
 
 SwitchElm.prototype.getVoltageSourceCount = function () {

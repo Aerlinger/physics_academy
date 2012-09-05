@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'rails', '3.2.4.rc1'
+gem 'rails', '3.2.8'
 gem 'bootstrap-sass'
 
 gem 'faker', '1.0.1'
@@ -24,8 +24,6 @@ group :development, :test do
   gem 'ruby-growl'
 end
 
-gem 'activerecord-reputation-system', require: 'reputation_system'
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -39,8 +37,8 @@ group :test do
   gem 'factory_girl_rails', '1.4.0'
   gem 'cucumber-rails', '1.2.1', require: false
   gem 'database_cleaner', '0.7.0'
-  gem 'guard-spork', '0.3.2'
   gem "guard-rspec"
+  gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
   gem 'launchy', '2.1.0'
 end
@@ -57,8 +55,6 @@ end
 
 # Use unicorn as the app server
 # gem 'unicorn'
-
-
 
 # To use debugger
 # gem 'debugger'

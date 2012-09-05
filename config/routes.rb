@@ -25,7 +25,6 @@ PhysicsAcademy::Application.routes.draw do
 
   resources :simulations, only: [:show, :index]
 
-
   resources :users, only: [:show, :index, :edit, :delete]
   resources :mailinglists, only: [:create]
 
@@ -46,6 +45,11 @@ PhysicsAcademy::Application.routes.draw do
     end
 
   end
+
+  # Example for admin dashboard (From Owning Rails)
+  #scope "admin", :as => "admin" do
+  #  get "dashboard" => "admin#show"
+  #end
 
   # Since we have no need to show or edit sessions, we’ve restricted the actions to new, create, and destroy
   #resources :sessions, only: [:new, :create, :destroy]

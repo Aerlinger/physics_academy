@@ -7,26 +7,26 @@ function Point(x, y) {
     if (!y)
         y = 0;
 
-    this.x = x;
+    this.x1 = x;
     this.y = y;
 }
 ;
 
-Point.prototype.x = 0;
+Point.prototype.x1 = 0;
 Point.prototype.y = 0;
 
 ////////////////////////////////////////////////////////////////
 // Rectangle
 function Rectangle(x, y, width, height) {
-    this.x = x;
-    this.y = y;
+    this.x1 = x;
+    this.y = y
     this.width = width;
     this.height = height;
 }
 ;
 
 Rectangle.prototype.contains = function (x, y) {
-    if (x > this.x && x < this.x + this.width &&
+    if (x > this.x1 && x < this.x1 + this.width &&
         y > this.y && y < this.y + this.height) {
         return true;
     }
@@ -36,7 +36,7 @@ Rectangle.prototype.contains = function (x, y) {
 
 Rectangle.prototype.equals = function (otherRect) {
     if (!otherRect) return false;
-    return ( otherRect.x === this.x && otherRect.y === this.y &&
+    return ( otherRect.x1 === this.x1 && otherRect.y === this.y &&
         otherRect.width === this.width && otherRect.height === this.height );
 };
 
@@ -51,8 +51,8 @@ Rectangle.prototype.intersects = function (otherRect) {
 //        return true;
 //    }
 
-    return !( otherRect.x > this.x + this.width
-        || otherRect.x + otherRect.width < this.x
+    return !( otherRect.x1 > this.x1 + this.width
+        || otherRect.x1 + otherRect.width < this.x1
         || otherRect.y > this.y + this.height
         || otherRect.y + otherRect.height < this.y
         );
@@ -77,7 +77,7 @@ function Polygon(vertices) {
     };
 
     this.getX = function (n) {
-        return this.vertices[n].x;
+        return this.vertices[n].x1;
     };
 
     this.getY = function (n) {

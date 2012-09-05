@@ -24,7 +24,7 @@ OutputElm.prototype.setPoints = function () {
 };
 
 OutputElm.prototype.draw = function () {
-    var selected = (this.needsHighlight() || CirSim.plotYElm == this);
+    var selected = (this.needsHighlight() || Circuit.plotYElm == this);
     //Font f = new Font("SansSerif", selected ? Font.BOLD : 0, 14);
     //g.setFont(f);
     var color = selected ? CircuitElement.selectColor : CircuitElement.whiteColor;
@@ -32,9 +32,9 @@ OutputElm.prototype.draw = function () {
     var s = (this.flags & OutputElm.FLAG_VALUE) != 0 ? CircuitElement.getVoltageText(this.volts[0]) : "out";
 
     //FontMetrics fm = g.getFontMetrics();
-    if (this == CirSim.plotXElm)
+    if (this == Circuit.plotXElm)
         s = "X";
-    if (this == CirSim.plotYElm)
+    if (this == Circuit.plotYElm)
         s = "Y";
 
     CircuitElement.interpPoint(this.point1, this.point2, this.lead1, 1 - (3 * s.length / 2 + 8) / this.dn);         //fm.stringWidth(s)

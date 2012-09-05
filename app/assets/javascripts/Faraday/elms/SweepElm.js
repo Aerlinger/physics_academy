@@ -55,7 +55,7 @@ SweepElm.prototype.draw = function () {
 
     var powerColor = this.setPowerColor(false);
 
-    var xc = this.point2.x;
+    var xc = this.point2.x1;
     var yc = this.point2.y;
     CircuitElement.drawCircle(xc, yc, this.circleSize);
 
@@ -71,7 +71,7 @@ SweepElm.prototype.draw = function () {
     if (tm > 1000)
         tm = 2000 - tm;
     var w = 1 + tm * .002;
-    if (!CirSim.stoppedCheck)
+    if (!Circuit.stoppedCheck)
         w = 1 + 2 * (this.frequency - this.minF) / (this.maxF - this.minF);
     for (i = -xl; i <= xl; i++) {
         var yy = yc + Math.floor(.95 * Math.sin(i * Math.PI * w / xl) * wl);
@@ -80,7 +80,7 @@ SweepElm.prototype.draw = function () {
         ox = xc + i;
         oy = yy;
     }
-    if (CirSim.showValuesCheckItem) {
+    if (Circuit.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.frequency, "Hz");
         if (this.dx == 0 || this.dy == 0)
             this.drawValues(s, this.circleSize);
@@ -89,12 +89,12 @@ SweepElm.prototype.draw = function () {
     this.drawPosts();
     this.curcount = this.updateDotCount(-this.current, this.curcount);
 
-    if (CirSim.dragElm != this)
+    if (Circuit.dragElm != this)
         this.drawDots(this.point1, this.lead1, this.curcount);
 };
 
 SweepElm.prototype.stamp = function () {
-    CirSim.stampVoltageSource(0, this.nodes[0], this.voltSource);
+    Circuit.stampVoltageSource(0, this.nodes[0], this.voltSource);
 };
 
 SweepElm.prototype.fadd;
@@ -110,13 +110,13 @@ SweepElm.prototype.setParams = function () {
         this.dir = 1;
     }
     if ((this.flags & SweepElm.FLAG_LOG) == 0) {
-        this.fadd = this.dir * CirSim.timeStep * (this.maxF - this.minF) / this.sweepTime;
+        this.fadd = this.dir * Circuit.timeStep * (this.maxF - this.minF) / this.sweepTime;
         this.fmul = 1;
     } else {
         this.fadd = 0;
-        this.fmul = Math.pow(this.maxF / this.minF, this.dir * CirSim.timeStep / this.sweepTime);
+        this.fmul = Math.pow(this.maxF / this.minF, this.dir * Circuit.timeStep / this.sweepTime);
     }
-    this.savedTimeStep = CirSim.timeStep;
+    this.savedTimeStep = Circuit.timeStep;
 };
 
 SweepElm.prototype.reset = function () {
@@ -130,11 +130,11 @@ SweepElm.prototype.v;
 
 SweepElm.prototype.startIteration = function () {
     // has timestep been changed?
-    if (CirSim.timeStep != this.savedTimeStep)
+    if (Circuit.timeStep != this.savedTimeStep)
         this.setParams();
 
     this.v = Math.sin(this.freqTime) * this.maxV;
-    this.freqTime += this.frequency * 2 * Math.PI * CirSim.timeStep;
+    this.freqTime += this.frequency * 2 * Math.PI * Circuit.timeStep;
     this.frequency = this.frequency * this.fmul + this.fadd;
 
     if (this.frequency >= this.maxF && this.dir == 1) {
@@ -153,7 +153,7 @@ SweepElm.prototype.startIteration = function () {
 };
 
 SweepElm.prototype.doStep = function () {
-    CirSim.updateVoltageSource(0, this.nodes[0], this.voltSource, this.v);
+    Circuit.updateVoltageSource(0, this.nodes[0], this.voltSource, this.v);
 };
 
 SweepElm.prototype.getVoltageDiff = function () {
@@ -201,7 +201,7 @@ SweepElm.prototype.getEditInfo = function (n) {
 };
 
 SweepElm.prototype.setEditValue = function (n, ei) {
-    var maxfreq = 1 / (8 * CirSim.timeStep);
+    var maxfreq = 1 / (8 * Circuit.timeStep);
     if (n == 0) {
         this.minF = ei.value;
         if (this.minF > maxfreq)

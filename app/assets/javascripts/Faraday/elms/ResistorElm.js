@@ -74,7 +74,7 @@ ResistorElm.prototype.draw = function () {
     }
 
 
-    if (CirSim.showValuesCheckItem) {
+    if (Circuit.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.resistance, "ohm");
         this.drawValues(s, hs);
     }
@@ -105,7 +105,7 @@ ResistorElm.prototype.setEditValue = function (n, ei) {
 ResistorElm.prototype.getInfo = function (arr) {
     arr[0] = "resistor";
     this.getBasicInfo(arr);
-    arr[3] = "R = " + CircuitElement.getUnitText(this.resistance, CirSim.ohmString);
+    arr[3] = "R = " + CircuitElement.getUnitText(this.resistance, Circuit.ohmString);
     arr[4] = "P = " + CircuitElement.getUnitText(this.getPower(), "W");
 };
 
@@ -125,7 +125,7 @@ ResistorElm.prototype.setPoints = function () {
 };
 
 ResistorElm.prototype.stamp = function () {
-    CirSim.stampResistor(this.nodes[0], this.nodes[1], this.resistance);
+    Circuit.stampResistor(this.nodes[0], this.nodes[1], this.resistance);
 };
 
 ResistorElm.prototype.toString = function () {

@@ -10,13 +10,13 @@
 
 <% json_path ||= simulation_path(simulation_id, :json) %>
 
-<% float ||= "left" %>
+<% float ||= "none" %>
 <% show_questions ||= false %>
 <% debug ||= false %>
 
 <!------------------------>
 
-<div id="<%= canvas_id %>" class="canvas_wrapper"
+<div id="<%= canvas_id %>" class="canvas_wrapper center"
      style="width: <%= width + 4 %>px; height: <%= height+4 %>px; float: <%= float %>;">
 
   <!-- Fetch JSON data and initialize canvas -->
@@ -44,10 +44,12 @@
     The canvas area
     -->
   <canvas width="<%= width %>" height="<%= height %>" class="box2d_canvas">
-    Canvas not supported on this browser.
+    Your browser does not support HTML5 Canvas
   </canvas>
 
-  <!-- Draw questions -->
+  <!------------------------------------------------------------------------------------
+    Questions placed below canvas
+    -->
   <% if show_questions %>
     <div style="width: <%= width + 4 %>px; float: <%= float %>" class="questions">
       <label>Text here</label>

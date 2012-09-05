@@ -33,7 +33,7 @@ WireElm.prototype.draw = function () {
 };
 
 WireElm.prototype.stamp = function () {
-    CirSim.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, 0);
+    Circuit.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, 0);
 };
 
 WireElm.prototype.mustShowCurrent = function () {

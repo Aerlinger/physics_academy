@@ -21,7 +21,6 @@ class Lesson < ActiveRecord::Base
 
   has_many :challenges, dependent: :destroy
 
-  has_reputation :votes, source: :user, aggregated_by: :sum
 
   # Returns the index of this lesson in the Lessons.all array
   def index
@@ -31,6 +30,15 @@ class Lesson < ActiveRecord::Base
   def to_param
     "#{id}-#{title.parameterize}"
   end
+
+  def first_challenge
+    challenges.first
+  end
+
+  def last_challenge
+    challenge.last
+  end
+
 
   scope :newest, :order => 'created_at DESC'
 

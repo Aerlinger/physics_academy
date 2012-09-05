@@ -89,20 +89,20 @@ SparkGapElm.prototype.startIteration = function () {
 
 SparkGapElm.prototype.doStep = function () {
     this.resistance = (this.state) ? this.onresistance : this.offresistance;
-    CirSim.stampResistor(this.nodes[0], this.nodes[1], this.resistance);
+    Circuit.stampResistor(this.nodes[0], this.nodes[1], this.resistance);
 };
 
 SparkGapElm.prototype.stamp = function () {
-    CirSim.stampNonLinear(this.nodes[0]);
-    CirSim.stampNonLinear(this.nodes[1]);
+    Circuit.stampNonLinear(this.nodes[0]);
+    Circuit.stampNonLinear(this.nodes[1]);
 };
 
 SparkGapElm.prototype.getInfo = function (arr) {
     arr[0] = "spark gap";
     this.getBasicInfo(arr);
     arr[3] = this.state ? "on" : "off";
-    arr[4] = "Ron = " + CircuitElement.getUnitText(this.onresistance, CirSim.ohmString);
-    arr[5] = "Roff = " + CircuitElement.getUnitText(this.offresistance, CirSim.ohmString);
+    arr[4] = "Ron = " + CircuitElement.getUnitText(this.onresistance, Circuit.ohmString);
+    arr[5] = "Roff = " + CircuitElement.getUnitText(this.offresistance, Circuit.ohmString);
     arr[6] = "Vbreakdown = " + CircuitElement.getUnitText(this.breakdown, "V");
 };
 

@@ -231,7 +231,7 @@ CirSim.scopeColCount = []
 CirSim.muString = "u"
 CirSim.ohmString = "ohm"
 CirSim.root
-CirSim.elmList = []
+CirSim.elementList = []
 CirSim.nodeList = []
 CirSim.voltageSources = []
 CirSim.circuitMatrix = []
@@ -362,7 +362,7 @@ CirSim.init = (defaultCircuit) ->
   CirSim.elementMap["ZenerElm"] = "-Zener Diode"
   CirSim.setGrid()
   CirSim.registerAll()
-  CirSim.elmList = new Array()
+  CirSim.elementList = new Array()
   CirSim.setupList = new Array()
   CirSim.undoStack = new Array()
   CirSim.redoStack = new Array()
@@ -478,7 +478,7 @@ CirSim.readCircuitFromString = (b) ->
       ce = CirSim.constructElement(cls, x1, y1, x2, y2, f, st)
       console.log ce
       ce.setPoints()
-      CirSim.elmList.push ce
+      CirSim.elementList.push ce
       break
     p += l
   dumpMessage = CirSim.dumpCircuit()
@@ -496,14 +496,14 @@ CirSim.addElm = (elmObjectName) ->
 CirSim.deleteSelected = ->
   CirSim.pushUndo()
   CirSim.clipboard = ""
-  i = CirSim.elmList.length - 1
+  i = CirSim.elementList.length - 1
 
   while i >= 0
     ce = CirSim.getElm(i)
     if ce.isSelected()
       CirSim.clipboard += ce.dump() + "\n"
       ce.destroy()
-      CirSim.elmList.splice i, 1
+      CirSim.elementList.splice i, 1
     i--
   CirSim.enablePaste()
   CirSim.needAnalyze()
@@ -553,7 +553,7 @@ CirSim.onMouseDragged = (evt) ->
   CanvasBounds = getCanvasBounds()
   
   # X and Y mouse position
-  x = evt.pageX - CanvasBounds.x
+  x = evt.pageX - CanvasBounds.x1
   y = evt.pageY - CanvasBounds.y
   return  unless getCanvasBounds().contains(x, y)
   CirSim.dragElm.drag x, y  if CirSim.dragElm?
@@ -590,7 +590,7 @@ CirSim.dragAll = (x, y) ->
   return  if dx is 0 and dy is 0
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.move dx, dy
     i++
@@ -601,7 +601,7 @@ CirSim.dragRow = (x, y) ->
   return  if dy is 0
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.movePoint 0, 0, dy  if ce.y is CirSim.dragY
     ce.movePoint 1, 0, dy  if ce.y2 is CirSim.dragY
@@ -614,7 +614,7 @@ CirSim.onMouseMove = (evt) ->
   CanvasBounds = getCanvasBounds()
   
   # X and Y mouse position
-  x = evt.pageX - CanvasBounds.x
+  x = evt.pageX - CanvasBounds.x1
   y = evt.pageY - CanvasBounds.y
   
   # CirSim.error("onMouseMove: " + x + ", " + y + " " + CirSim.mouseButtonDown);
@@ -634,7 +634,7 @@ CirSim.onMouseMove = (evt) ->
   bestDist = 1e7
   bestArea = 1e7
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     if ce.boundingBox.contains(x, y)
       j = undefined
@@ -644,7 +644,7 @@ CirSim.onMouseMove = (evt) ->
       j = 0
       while j isnt jn
         pt = ce.getPost(j)
-        distance = CirSim.distanceSq(x, y, pt.x, pt.y)
+        distance = CirSim.distanceSq(x, y, pt.x1, pt.y)
         
         # If multiple elements have overlapping bounding boxes, we prefer selecting elements that have posts
         # close to the mouse pointer and that have a small bounding box area.
@@ -667,15 +667,15 @@ CirSim.onMouseMove = (evt) ->
     
     # the mouse pointer was not in any of the bounding boxes, but we might still be close to a post
     i = 0
-    while i isnt CirSim.elmList.length
+    while i isnt CirSim.elementList.length
       ce = CirSim.getElm(i)
       j = undefined
       jn = ce.getPostCount()
       j = 0
       while j isnt jn
         pt = ce.getPost(j)
-        distance = CirSim.distanceSq(x, y, pt.x, pt.y)
-        if CirSim.distanceSq(pt.x, pt.y, x, y) < 26
+        distance = CirSim.distanceSq(x, y, pt.x1, pt.y)
+        if CirSim.distanceSq(pt.x1, pt.y, x, y) < 26
           CirSim.mouseElm = ce
           CirSim.mousePost = j
           break
@@ -688,7 +688,7 @@ CirSim.onMouseMove = (evt) ->
     i = 0
     while i isnt CirSim.mouseElm.getPostCount()
       pt = CirSim.mouseElm.getPost(i)
-      CirSim.mousePost = i  if CirSim.distanceSq(pt.x, pt.y, x, y) < 26
+      CirSim.mousePost = i  if CirSim.distanceSq(pt.x1, pt.y, x, y) < 26
       i++
 
 
@@ -722,7 +722,7 @@ CirSim.onMousePressed = (evt) ->
   CanvasBounds = getCanvasBounds()
   
   # X and Y mouse position
-  x = evt.pageX - CanvasBounds.x
+  x = evt.pageX - CanvasBounds.x1
   y = evt.pageY - CanvasBounds.y
   if CirSim.mouseButtonDown is CirSim.LEFT_MOUSE_BTN
     
@@ -781,14 +781,14 @@ CirSim.onMouseReleased = (evt) ->
   if CirSim.dragElm?
     
     # if the element is zero size then don't create it
-    unless CirSim.dragElm.x is CirSim.dragElm.x2 and CirSim.dragElm.y is CirSim.dragElm.y2
-      CirSim.elmList.push CirSim.dragElm
+    unless CirSim.dragElm.x1 is CirSim.dragElm.x2 and CirSim.dragElm.y is CirSim.dragElm.y2
+      CirSim.elementList.push CirSim.dragElm
       circuitChanged = true
     CirSim.dragElm = null
   i = 0
 
-  while i < CirSim.elmList.length
-    ce = CirSim.elmList[i]
+  while i < CirSim.elementList.length
+    ce = CirSim.elementList[i]
     CirSim.doEdit ce  if ce.isSelected()
     ++i
   CirSim.needAnalyze()  if circuitChanged
@@ -809,9 +809,9 @@ CirSim.dragColumn = (x, y) ->
   return  if dx is 0
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
-    ce.movePoint 0, dx, 0  if ce.x is CirSim.dragX
+    ce.movePoint 0, dx, 0  if ce.x1 is CirSim.dragX
     ce.movePoint 1, dx, 0  if ce.x2 is CirSim.dragX
     i++
   CirSim.removeZeroLengthElements()
@@ -825,11 +825,11 @@ CirSim.dragSelected = (x, y) ->
   # snap grid, unless we're only dragging text elements
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     break  if ce.isSelected() and (ce not instanceof TextElm)
     i++
-  unless i is CirSim.elmList.length
+  unless i is CirSim.elementList.length
     x = CirSim.snapGrid(x)
     y = CirSim.snapGrid(y)
   dx = x - CirSim.dragX
@@ -843,13 +843,13 @@ CirSim.dragSelected = (x, y) ->
   
   # check if moves are allowed
   i = 0
-  while allowed and i isnt CirSim.elmList.length
+  while allowed and i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     allowed = false  if ce.isSelected() and not ce.allowMove(dx, dy)
     i++
   if allowed
     i = 0
-    while i isnt CirSim.elmList.length
+    while i isnt CirSim.elementList.length
       ce = CirSim.getElm(i)
       ce.move dx, dy  if ce.isSelected()
       i++
@@ -862,7 +862,7 @@ CirSim.dragSelected = (x, y) ->
 CirSim.dragPost = (x, y) ->
   
   # TODO: test
-  CirSim.draggingPost = (if (CirSim.distanceSq(CirSim.mouseElm.x, CirSim.mouseElm.y, x, y) > CirSim.distanceSq(CirSim.mouseElm.x2, CirSim.mouseElm.y2, x, y)) then 1 else 0)  if CirSim.draggingPost is -1
+  CirSim.draggingPost = (if (CirSim.distanceSq(CirSim.mouseElm.x1, CirSim.mouseElm.y, x, y) > CirSim.distanceSq(CirSim.mouseElm.x2, CirSim.mouseElm.y2, x, y)) then 1 else 0)  if CirSim.draggingPost is -1
   dx = x - CirSim.dragX
   dy = y - CirSim.dragY
   return  if dx is 0 and dy is 0
@@ -918,7 +918,7 @@ CirSim.dumpCircuit = ->
   # 32 = linear scale in a filter
   dump = "$ " + f + " " + CirSim.timeStep + " " + CirSim.getIterCount() + " " + CirSim.currentBar + " " + CircuitElement.voltageRange + " " + CirSim.powerBar + "\n"
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     dump += CirSim.getElm(i).dump() + "\n"
     i++
   
@@ -939,7 +939,7 @@ CirSim.selectArea = (x, y) ->
   CirSim.selectedArea = new Rectangle(x1, y1, x2 - x1, y2 - y1)
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.selectRect CirSim.selectedArea
     i++
@@ -947,13 +947,13 @@ CirSim.selectArea = (x, y) ->
 CirSim.removeZeroLengthElements = ->
   i = undefined
   changed = false
-  i = CirSim.elmList.length - 1
+  i = CirSim.elementList.length - 1
   while i >= 0
     ce = CirSim.getElm(i)
-    if ce.x is ce.x2 and ce.y is ce.y2
+    if ce.x1 is ce.x2 and ce.y is ce.y2
       
       # TODO: Make sure this works
-      CirSim.elmList.splice i, 1
+      CirSim.elementList.splice i, 1
       ce.destroy()
       changed = true
     i--
@@ -1005,13 +1005,13 @@ CirSim.doCut = ->
   
   #setMenuSelection();
   CirSim.clipboard = ""
-  i = CirSim.elmList.length - 1
+  i = CirSim.elementList.length - 1
   while i >= 0
     ce = CirSim.getElm(i)
     if ce.isSelected()
       CirSim.clipboard += ce.dump() + "\n"
       ce.destroy()
-      CirSim.elmList.removeElementAt i
+      CirSim.elementList.removeElementAt i
     i--
   CirSim.enablePaste()
   CirSim.needAnalyze()
@@ -1025,7 +1025,7 @@ CirSim.doCopy = ->
   CirSim.clipboard = ""
   
   #setMenuSelection();
-  i = CirSim.elmList.length - 1
+  i = CirSim.elementList.length - 1
   while i >= 0
     ce = CirSim.getElm(i)
     CirSim.clipboard += ce.dump() + "\n"  if ce.isSelected()
@@ -1041,11 +1041,11 @@ CirSim.clearAll = ->
   # reset the interface
   i = 0
 
-  while i < CirSim.elmList.length
+  while i < CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.destroy()
     i++
-  CirSim.elmList = []
+  CirSim.elementList = []
   CirSim.hintType = -1
   CirSim.timeStep = 5e-6
   CirSim.dotsCheckItem = true
@@ -1069,7 +1069,7 @@ Clears current states, graphs, and errors then Restarts the circuit from time ze
 CirSim.reset = ->
   i = 0
 
-  while i < CirSim.elmList.length
+  while i < CirSim.elementList.length
     CirSim.getElm(i).reset()
     i++
   i = 0
@@ -1104,7 +1104,7 @@ CirSim.calcCircuitBottom = ->
   i = undefined
   CirSim.circuitBottom = 0
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     rect = CirSim.getElm(i).boundingBox
     bottom = rect.height + rect.y
     CirSim.circuitBottom = bottom  if bottom > CirSim.circuitBottom
@@ -1120,12 +1120,12 @@ CirSim.doDelete = ->
   i = undefined
   CirSim.pushUndo()
   CirSim.setMenuSelection()
-  i = CirSim.elmList.length - 1
+  i = CirSim.elementList.length - 1
   while i >= 0
     ce = CirSim.getElm(i)
     if ce.isSelected()
       ce.destroy()
-      CirSim.elmList.splice i, 1
+      CirSim.elementList.splice i, 1
     i--
   CirSim.needAnalyze()
 
@@ -1145,7 +1145,7 @@ CirSim.doPaste = ->
 CirSim.clearSelection = ->
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.setSelected false
     i++
@@ -1153,7 +1153,7 @@ CirSim.clearSelection = ->
 CirSim.doSelectAll = ->
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.setSelected true
     i++
@@ -1199,7 +1199,7 @@ CirSim.snapGrid = (x) ->
 CirSim.toggleSwitch = (n) ->
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     if ce instanceof SwitchElm
       n--
@@ -1233,8 +1233,8 @@ CirSim.getCircuitNode = (n) ->
   CirSim.nodeList[n] #[n] as CircuitNode;
 
 CirSim.getElm = (n) ->
-  return null  if n >= CirSim.elmList.length
-  CirSim.elmList[n] # as CircuitElement;
+  return null  if n >= CirSim.elementList.length
+  CirSim.elementList[n] # as CircuitElement;
 
 
 ###
@@ -1243,8 +1243,8 @@ Returns the index of a specified element. -1 is returned if that element is not 
 CirSim.locateElm = (elm) ->
   i = undefined
   i = 0
-  while i isnt CirSim.elmList.length
-    return i  if elm is CirSim.elmList[i]
+  while i isnt CirSim.elementList.length
+    return i  if elm is CirSim.elementList[i]
     i++
   -1
 
@@ -1577,16 +1577,16 @@ CirSim.updateCircuit = ->
   # Draw each circuit element
   i = 0
 
-  while i < CirSim.elmList.length
+  while i < CirSim.elementList.length
     CirSim.getElm(i).draw()
     ++i
   
   # Draw the posts for each circuit
   if CirSim.tempMouseMode is CirSim.MODE_DRAG_ROW or CirSim.tempMouseMode is CirSim.MODE_DRAG_COLUMN or CirSim.tempMouseMode is CirSim.MODE_DRAG_POST or CirSim.tempMouseMode is CirSim.MODE_DRAG_SELECTED
     i = 0
-    while i < CirSim.elmList.length
+    while i < CirSim.elementList.length
       ce = CirSim.getElm(i)
-      ce.drawPost ce.x, ce.y
+      ce.drawPost ce.x1, ce.y
       ce.drawPost ce.x2, ce.y2
       ++i
   badNodes = 0
@@ -1602,19 +1602,19 @@ CirSim.updateCircuit = ->
       # CircuitNodeLink
       j = 0
 
-      while j < CirSim.elmList.length
-        bb++  if cn1.elm isnt CirSim.getElm(j) and CirSim.getElm(j).boundingBox.contains(cn.x, cn.y)
+      while j < CirSim.elementList.length
+        bb++  if cn1.elm isnt CirSim.getElm(j) and CirSim.getElm(j).boundingBox.contains(cn.x1, cn.y)
         ++j
       if bb > 0
         
         # Outline bad nodes
-        paper.circle(cn.x, cn.y, 2 * Settings.POST_RADIUS).attr
+        paper.circle(cn.x1, cn.y, 2 * Settings.POST_RADIUS).attr
           stroke: Color.color2HexString(Color.RED)
           "stroke-dasharray": "--"
 
         badNodes++
     ++i
-  CirSim.dragElm.draw null  if CirSim.dragElm? and (CirSim.dragElm.x isnt CirSim.dragElm.x2 or CirSim.dragElm.y isnt CirSim.dragElm.y2)
+  CirSim.dragElm.draw null  if CirSim.dragElm? and (CirSim.dragElm.x1 isnt CirSim.dragElm.x2 or CirSim.dragElm.y isnt CirSim.dragElm.y2)
   ct = CirSim.scopeCount
   ct = 0  if CirSim.stopMessage?
   
@@ -1676,7 +1676,7 @@ CirSim.updateCircuit = ->
     #paper.strokeStyle = Color.color2HexString(Settings.SELECTION_MARQUEE_COLOR);
     paper.beginPath()
     paper.strokeStyle = Settings.SELECT_COLOR
-    paper.strokeRect @selectedArea.x, @selectedArea.y, @selectedArea.width, @selectedArea.height
+    paper.strokeRect @selectedArea.x1, @selectedArea.y, @selectedArea.width, @selectedArea.height
     paper.closePath()
   CirSim.mouseElm = realMouseElm
   CirSim.frames++
@@ -1691,7 +1691,7 @@ been modified in some way
 ###
 CirSim.analyzeCircuit = ->
   CirSim.calcCircuitBottom()
-  return  if CirSim.elmList.length is 0
+  return  if CirSim.elementList.length is 0
   CirSim.stopMessage = null
   CirSim.stopElm = null
   i = undefined
@@ -1702,7 +1702,7 @@ CirSim.analyzeCircuit = ->
   gotRail = false
   volt = null # CircuitElement
   i = 0
-  while i < CirSim.elmList.length
+  while i < CirSim.elementList.length
     ce = CirSim.getElm(i) # CircuitElement type
     if ce instanceof GroundElm
       gotGround = true
@@ -1715,19 +1715,19 @@ CirSim.analyzeCircuit = ->
   if not gotGround and volt? and not gotRail
     cn = new CircuitNode()
     pt = volt.getPost(0)
-    cn.x = pt.x
+    cn.x1 = pt.x1
     cn.y = pt.y
     CirSim.nodeList.push cn
   else
     
     # Else allocate extra node for ground
     cn = new CircuitNode()
-    cn.x = cn.y = -1
+    cn.x1 = cn.y = -1
     CirSim.nodeList.push cn
   
   # Allocate nodes and voltage sources
   i = 0
-  while i < CirSim.elmList.length
+  while i < CirSim.elementList.length
     ce = CirSim.getElm(i)
     inodes = ce.getInternalNodeCount()
     ivs = ce.getVoltageSourceCount()
@@ -1741,11 +1741,11 @@ CirSim.analyzeCircuit = ->
       k = 0
       while k isnt CirSim.nodeList.length
         cn = CirSim.getCircuitNode(k)
-        break  if pt.x is cn.x and pt.y is cn.y
+        break  if pt.x1 is cn.x1 and pt.y is cn.y
         ++k
       if k is CirSim.nodeList.length
         cn = new CircuitNode()
-        cn.x = pt.x
+        cn.x1 = pt.x1
         cn.y = pt.y
         cn1 = new CircuitNodeLink()
         cn1.num = j
@@ -1766,7 +1766,7 @@ CirSim.analyzeCircuit = ->
     j = 0
     while j isnt inodes
       cn = new CircuitNode()
-      cn.x = -1
+      cn.x1 = -1
       cn.y = -1
       cn.intern = true
       cn1 = new CircuitNodeLink()
@@ -1784,7 +1784,7 @@ CirSim.analyzeCircuit = ->
   
   # determine if circuit instanceof nonlinear
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i) # circuitElement
     CirSim.circuitNonLinear = true  if ce.nonLinear()
     ivs = ce.getVoltageSourceCount()
@@ -1825,7 +1825,7 @@ CirSim.analyzeCircuit = ->
   
   # stamp linear circuit elements
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     ce.stamp()
     ++i
@@ -1835,7 +1835,7 @@ CirSim.analyzeCircuit = ->
   while changed
     changed = false
     i = 0
-    while i isnt CirSim.elmList.length
+    while i isnt CirSim.elementList.length
       ce = CirSim.getElm(i)
       
       # Loop through all ce's nodes to see if theya are connected to otehr nodes not in closure
@@ -1868,10 +1868,10 @@ CirSim.analyzeCircuit = ->
         break
       ++i
   i = 0
-  while i isnt CirSim.elmList.length
+  while i isnt CirSim.elementList.length
     ce = CirSim.getElm(i)
     if ce instanceof InductorElm
-      fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length)
+      fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), CirSim.elementList, CirSim.nodeList.length)
       
       # try findPath with maximum depth of 5, to avoid slowdown
       if not fpi.findPath(ce.getNode(0), 5) and not fpi.findPath(ce.getNode(0))
@@ -1880,26 +1880,26 @@ CirSim.analyzeCircuit = ->
     
     # look for current sources with no current path
     if ce instanceof CurrentElm
-      fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length)
+      fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), CirSim.elementList, CirSim.nodeList.length)
       unless fpi.findPath(ce.getNode(0))
         CirSim.halt "No path for current source!", ce
         return
     
     # Look for voltage soure loops:
     if (ce instanceof VoltageElm and ce.getPostCount() is 2) or ce instanceof WireElm
-      fpi = new FindPathInfo(FindPathInfo.VOLTAGE, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length)
+      fpi = new FindPathInfo(FindPathInfo.VOLTAGE, ce, ce.getNode(1), CirSim.elementList, CirSim.nodeList.length)
       if fpi.findPath(ce.getNode(0)) is true
         CirSim.halt "Voltage source/wire loop with no resistance!", ce
         return
     
     # Look for shorted caps or caps with voltage but no resistance
     if ce instanceof CapacitorElm
-      fpi = new FindPathInfo(FindPathInfo.SHORT, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length)
+      fpi = new FindPathInfo(FindPathInfo.SHORT, ce, ce.getNode(1), CirSim.elementList, CirSim.nodeList.length)
       if fpi.findPath(ce.getNode(0))
         console.log ce.toString() + " shorted"
         ce.reset()
       else
-        fpi = new FindPathInfo(FindPathInfo.CAP_V, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length)
+        fpi = new FindPathInfo(FindPathInfo.CAP_V, ce, ce.getNode(1), CirSim.elementList, CirSim.nodeList.length)
         if fpi.findPath(ce.getNode(0))
           CirSim.halt "Capacitor loop with no resistance!", ce
           return
@@ -2110,7 +2110,7 @@ RunCircuit: Called by UpdateCircuit
 Called once per frame, runs many iterations
 ###
 CirSim.runCircuit = ->
-  if not CirSim.circuitMatrix? or CirSim.elmList.length is 0
+  if not CirSim.circuitMatrix? or CirSim.elementList.length is 0
     CirSim.circuitMatrix = null
     return
   iter = undefined
@@ -2135,7 +2135,7 @@ CirSim.runCircuit = ->
     
     # Start Iteration for each element in the circuit
     i = 0
-    while i < CirSim.elmList.length
+    while i < CirSim.elementList.length
       ce = CirSim.getElm(i)
       ce.startIteration()
       ++i
@@ -2166,7 +2166,7 @@ CirSim.runCircuit = ->
       
       # Step each element this iteration
       i = 0
-      while i < CirSim.elmList.length
+      while i < CirSim.elementList.length
         ce = CirSim.getElm(i)
         ce.doStep()
         ++i

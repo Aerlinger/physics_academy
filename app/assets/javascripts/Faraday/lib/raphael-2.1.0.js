@@ -346,7 +346,7 @@
             title: "Raphael",
             transform: "",
             width: 0,
-            x: 0,
+            x1: 0,
             y: 0
         },
         availableAnimAttrs = R._availableAnimAttrs = {
@@ -368,7 +368,7 @@
             "stroke-width": nu,
             transform: "transform",
             width: nu,
-            x: nu,
+            x1: nu,
             y: nu
         },
         whitespace = /[\x09\x0a\x0b\x0c\x0d\x20\xa0\u1680\u180e\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u202f\u205f\u3000\u2028\u2029]/g,
@@ -416,15 +416,15 @@
             },
             rect: function (el) {
                 var a = el.attrs;
-                return rectPath(a.x, a.y, a.width, a.height, a.r);
+                return rectPath(a.x1, a.y, a.width, a.height, a.r);
             },
             image: function (el) {
                 var a = el.attrs;
-                return rectPath(a.x, a.y, a.width, a.height);
+                return rectPath(a.x1, a.y, a.width, a.height);
             },
             text: function (el) {
                 var bbox = el._getBBox();
-                return rectPath(bbox.x, bbox.y, bbox.width, bbox.height);
+                return rectPath(bbox.x1, bbox.y, bbox.width, bbox.height);
             }
         },
 
@@ -437,7 +437,7 @@
             for (i = 0, ii = path.length; i < ii; i++) {
                 pathi = path[i];
                 for (j = 1, jj = pathi.length; j < jj; j += 2) {
-                    x = matrix.x(pathi[j], pathi[j + 1]);
+                    x = matrix.x1(pathi[j], pathi[j + 1]);
                     y = matrix.y(pathi[j], pathi[j + 1]);
                     pathi[j] = x;
                     pathi[j + 1] = y;
@@ -909,33 +909,33 @@
         var d = [];
         for (var i = 0, iLen = crp.length; iLen - 2 * !z > i; i += 2) {
             var p = [
-                {x: +crp[i - 2], y: +crp[i - 1]},
-                {x: +crp[i],     y: +crp[i + 1]},
-                {x: +crp[i + 2], y: +crp[i + 3]},
-                {x: +crp[i + 4], y: +crp[i + 5]}
+                {x1: +crp[i - 2], y: +crp[i - 1]},
+                {x1: +crp[i],     y: +crp[i + 1]},
+                {x1: +crp[i + 2], y: +crp[i + 3]},
+                {x1: +crp[i + 4], y: +crp[i + 5]}
             ];
             if (z) {
                 if (!i) {
-                    p[0] = {x: +crp[iLen - 2], y: +crp[iLen - 1]};
+                    p[0] = {x1: +crp[iLen - 2], y: +crp[iLen - 1]};
                 } else if (iLen - 4 == i) {
-                    p[3] = {x: +crp[0], y: +crp[1]};
+                    p[3] = {x1: +crp[0], y: +crp[1]};
                 } else if (iLen - 2 == i) {
-                    p[2] = {x: +crp[0], y: +crp[1]};
-                    p[3] = {x: +crp[2], y: +crp[3]};
+                    p[2] = {x1: +crp[0], y: +crp[1]};
+                    p[3] = {x1: +crp[2], y: +crp[3]};
                 }
             } else {
                 if (iLen - 4 == i) {
                     p[3] = p[2];
                 } else if (!i) {
-                    p[0] = {x: +crp[i], y: +crp[i + 1]};
+                    p[0] = {x1: +crp[i], y: +crp[i + 1]};
                 }
             }
             d.push(["C",
-                (-p[0].x + 6 * p[1].x + p[2].x) / 6,
+                (-p[0].x1 + 6 * p[1].x1 + p[2].x1) / 6,
                 (-p[0].y + 6 * p[1].y + p[2].y) / 6,
-                (p[1].x + 6 * p[2].x - p[3].x) / 6,
+                (p[1].x1 + 6 * p[2].x1 - p[3].x1) / 6,
                 (p[1].y + 6*p[2].y - p[3].y) / 6,
-                p[2].x,
+                p[2].x1,
                 p[2].y
             ]);
         }
@@ -1044,12 +1044,12 @@
             alpha = (90 - math.atan2(mx - nx, my - ny) * 180 / PI);
         (mx > nx || my < ny) && (alpha += 180);
         return {
-            x: x,
+            x1: x,
             y: y,
-            m: {x: mx, y: my},
-            n: {x: nx, y: ny},
-            start: {x: ax, y: ay},
-            end: {x: cx, y: cy},
+            m: {x1: mx, y: my},
+            n: {x1: nx, y: ny},
+            start: {x1: ax, y: ay},
+            end: {x1: cx, y: cy},
             alpha: alpha
         };
     };
@@ -1060,30 +1060,30 @@
         }
         var bbox = curveDim.apply(null, p1x);
         return {
-            x: bbox.min.x,
+            x1: bbox.min.x1,
             y: bbox.min.y,
-            x2: bbox.max.x,
+            x2: bbox.max.x1,
             y2: bbox.max.y,
-            width: bbox.max.x - bbox.min.x,
+            width: bbox.max.x1 - bbox.min.x1,
             height: bbox.max.y - bbox.min.y
         };
     };
 
     R.isPointInsideBBox = function (bbox, x, y) {
-        return x >= bbox.x && x <= bbox.x2 && y >= bbox.y && y <= bbox.y2;
+        return x >= bbox.x1 && x <= bbox.x2 && y >= bbox.y && y <= bbox.y2;
     };
 
     R.isBBoxIntersect = function (bbox1, bbox2) {
         var i = R.isPointInsideBBox;
-        return i(bbox2, bbox1.x, bbox1.y)
+        return i(bbox2, bbox1.x1, bbox1.y)
             || i(bbox2, bbox1.x2, bbox1.y)
-            || i(bbox2, bbox1.x, bbox1.y2)
+            || i(bbox2, bbox1.x1, bbox1.y2)
             || i(bbox2, bbox1.x2, bbox1.y2)
-            || i(bbox1, bbox2.x, bbox2.y)
+            || i(bbox1, bbox2.x1, bbox2.y)
             || i(bbox1, bbox2.x2, bbox2.y)
-            || i(bbox1, bbox2.x, bbox2.y2)
+            || i(bbox1, bbox2.x1, bbox2.y2)
             || i(bbox1, bbox2.x2, bbox2.y2)
-            || (bbox1.x < bbox2.x2 && bbox1.x > bbox2.x || bbox2.x < bbox1.x2 && bbox2.x > bbox1.x)
+            || (bbox1.x1 < bbox2.x2 && bbox1.x1 > bbox2.x1 || bbox2.x1 < bbox1.x2 && bbox2.x1 > bbox1.x1)
             && (bbox1.y < bbox2.y2 && bbox1.y > bbox2.y || bbox2.y < bbox1.y2 && bbox2.y > bbox1.y);
     };
     function base3(t, p1, p2, p3, p4) {
@@ -1159,7 +1159,7 @@
             ) {
             return;
         }
-        return {x: px, y: py};
+        return {x1: px, y: py};
     }
     function inter(bez1, bez2) {
         return interHelper(bez1, bez2);
@@ -1183,11 +1183,11 @@
             res = justCount ? 0 : [];
         for (var i = 0; i < n1 + 1; i++) {
             var p = R.findDotsAtSegment.apply(R, bez1.concat(i / n1));
-            dots1.push({x: p.x, y: p.y, t: i / n1});
+            dots1.push({x1: p.x1, y: p.y, t: i / n1});
         }
         for (i = 0; i < n2 + 1; i++) {
             p = R.findDotsAtSegment.apply(R, bez2.concat(i / n2));
-            dots2.push({x: p.x, y: p.y, t: i / n2});
+            dots2.push({x1: p.x1, y: p.y, t: i / n2});
         }
         for (i = 0; i < n1; i++) {
             for (var j = 0; j < n2; j++) {
@@ -1195,14 +1195,14 @@
                     di1 = dots1[i + 1],
                     dj = dots2[j],
                     dj1 = dots2[j + 1],
-                    ci = abs(di1.x - di.x) < .001 ? "y" : "x",
-                    cj = abs(dj1.x - dj.x) < .001 ? "y" : "x",
-                    is = intersect(di.x, di.y, di1.x, di1.y, dj.x, dj.y, dj1.x, dj1.y);
+                    ci = abs(di1.x1 - di.x1) < .001 ? "y" : "x",
+                    cj = abs(dj1.x1 - dj.x1) < .001 ? "y" : "x",
+                    is = intersect(di.x1, di.y, di1.x1, di1.y, dj.x1, dj.y, dj1.x1, dj1.y);
                 if (is) {
-                    if (xy[is.x.toFixed(4)] == is.y.toFixed(4)) {
+                    if (xy[is.x1.toFixed(4)] == is.y.toFixed(4)) {
                         continue;
                     }
-                    xy[is.x.toFixed(4)] = is.y.toFixed(4);
+                    xy[is.x1.toFixed(4)] = is.y.toFixed(4);
                     var t1 = di.t + abs((is[ci] - di[ci]) / (di1[ci] - di[ci])) * (di1.t - di.t),
                         t2 = dj.t + abs((is[cj] - dj[cj]) / (dj1[cj] - dj[cj])) * (dj1.t - dj.t);
                     if (t1 >= 0 && t1 <= 1 && t2 >= 0 && t2 <= 1) {
@@ -1210,7 +1210,7 @@
                             res++;
                         } else {
                             res.push({
-                                x: is.x,
+                                x1: is.x1,
                                 y: is.y,
                                 t1: t1,
                                 t2: t2
@@ -1300,7 +1300,7 @@
                 return pth.bbox;
             }
             if (!path) {
-                return {x: 0, y: 0, width: 0, height: 0, x2: 0, y2: 0};
+                return {x1: 0, y: 0, width: 0, height: 0, x2: 0, y2: 0};
             }
             path = path2curve(path);
             var x = 0,
@@ -1317,7 +1317,7 @@
                     Y.push(y);
                 } else {
                     var dim = curveDim(x, y, p[1], p[2], p[3], p[4], p[5], p[6]);
-                    X = X[concat](dim.min.x, dim.max.x);
+                    X = X[concat](dim.min.x1, dim.max.x1);
                     Y = Y[concat](dim.min.y, dim.max.y);
                     x = p[5];
                     y = p[6];
@@ -1328,7 +1328,7 @@
                 xmax = mmax[apply](0, X),
                 ymax = mmax[apply](0, Y),
                 bb = {
-                    x: xmin,
+                    x1: xmin,
                     y: ymin,
                     x2: xmax,
                     y2: ymax,
@@ -1544,14 +1544,14 @@
                 rotate = cacher(function (x, y, rad) {
                     var X = x * math.cos(rad) - y * math.sin(rad),
                         Y = x * math.sin(rad) + y * math.cos(rad);
-                    return {x: X, y: Y};
+                    return {x1: X, y: Y};
                 });
             if (!recursive) {
                 xy = rotate(x1, y1, -rad);
-                x1 = xy.x;
+                x1 = xy.x1;
                 y1 = xy.y;
                 xy = rotate(x2, y2, -rad);
-                x2 = xy.x;
+                x2 = xy.x1;
                 y2 = xy.y;
                 var cos = math.cos(PI / 180 * angle),
                     sin = math.sin(PI / 180 * angle),
@@ -1618,7 +1618,7 @@
                 res = [m2, m3, m4][concat](res).join()[split](",");
                 var newres = [];
                 for (var i = 0, ii = res.length; i < ii; i++) {
-                    newres[i] = i % 2 ? rotate(res[i - 1], res[i], rad).y : rotate(res[i], res[i + 1], rad).x;
+                    newres[i] = i % 2 ? rotate(res[i - 1], res[i], rad).y : rotate(res[i], res[i + 1], rad).x1;
                 }
                 return newres;
             }
@@ -1626,7 +1626,7 @@
         findDotAtSegment = function (p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t) {
             var t1 = 1 - t;
             return {
-                x: pow(t1, 3) * p1x + pow(t1, 2) * 3 * t * c1x + t1 * 3 * t * t * c2x + pow(t, 3) * p2x,
+                x1: pow(t1, 3) * p1x + pow(t1, 2) * 3 * t * c1x + t1 * 3 * t * t * c2x + pow(t, 3) * p2x,
                 y: pow(t1, 3) * p1y + pow(t1, 2) * 3 * t * c1y + t1 * 3 * t * t * c2y + pow(t, 3) * p2y
             };
         },
@@ -1643,12 +1643,12 @@
             abs(t2) > "1e12" && (t2 = .5);
             if (t1 > 0 && t1 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t1);
-                x.push(dot.x);
+                x.push(dot.x1);
                 y.push(dot.y);
             }
             if (t2 > 0 && t2 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t2);
-                x.push(dot.x);
+                x.push(dot.x1);
                 y.push(dot.y);
             }
             a = (c2y - 2 * c1y + p1y) - (p2y - 2 * c2y + c1y);
@@ -1660,17 +1660,17 @@
             abs(t2) > "1e12" && (t2 = .5);
             if (t1 > 0 && t1 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t1);
-                x.push(dot.x);
+                x.push(dot.x1);
                 y.push(dot.y);
             }
             if (t2 > 0 && t2 < 1) {
                 dot = findDotAtSegment(p1x, p1y, c1x, c1y, c2x, c2y, p2x, p2y, t2);
-                x.push(dot.x);
+                x.push(dot.x1);
                 y.push(dot.y);
             }
             return {
-                min: {x: mmin[apply](0, x), y: mmin[apply](0, y)},
-                max: {x: mmax[apply](0, x), y: mmax[apply](0, y)}
+                min: {x1: mmin[apply](0, x), y: mmin[apply](0, y)},
+                max: {x1: mmax[apply](0, x), y: mmax[apply](0, y)}
             };
         }),
         path2curve = R._path2curve = cacher(function (path, path2) {
@@ -1680,12 +1680,12 @@
             }
             var p = pathToAbsolute(path),
                 p2 = path2 && pathToAbsolute(path2),
-                attrs = {x: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null},
-                attrs2 = {x: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null},
+                attrs = {x1: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null},
+                attrs2 = {x1: 0, y: 0, bx: 0, by: 0, X: 0, Y: 0, qx: null, qy: null},
                 processPath = function (path, d) {
                     var nx, ny;
                     if (!path) {
-                        return ["C", d.x, d.y, d.x, d.y, d.x, d.y];
+                        return ["C", d.x1, d.y, d.x1, d.y, d.x1, d.y];
                     }
                     !(path[0] in {T:1, Q:1}) && (d.qx = d.qy = null);
                     switch (path[0]) {
@@ -1694,34 +1694,34 @@
                             d.Y = path[2];
                             break;
                         case "A":
-                            path = ["C"][concat](a2c[apply](0, [d.x, d.y][concat](path.slice(1))));
+                            path = ["C"][concat](a2c[apply](0, [d.x1, d.y][concat](path.slice(1))));
                             break;
                         case "S":
-                            nx = d.x + (d.x - (d.bx || d.x));
+                            nx = d.x1 + (d.x1 - (d.bx || d.x1));
                             ny = d.y + (d.y - (d.by || d.y));
                             path = ["C", nx, ny][concat](path.slice(1));
                             break;
                         case "T":
-                            d.qx = d.x + (d.x - (d.qx || d.x));
+                            d.qx = d.x1 + (d.x1 - (d.qx || d.x1));
                             d.qy = d.y + (d.y - (d.qy || d.y));
-                            path = ["C"][concat](q2c(d.x, d.y, d.qx, d.qy, path[1], path[2]));
+                            path = ["C"][concat](q2c(d.x1, d.y, d.qx, d.qy, path[1], path[2]));
                             break;
                         case "Q":
                             d.qx = path[1];
                             d.qy = path[2];
-                            path = ["C"][concat](q2c(d.x, d.y, path[1], path[2], path[3], path[4]));
+                            path = ["C"][concat](q2c(d.x1, d.y, path[1], path[2], path[3], path[4]));
                             break;
                         case "L":
-                            path = ["C"][concat](l2c(d.x, d.y, path[1], path[2]));
+                            path = ["C"][concat](l2c(d.x1, d.y, path[1], path[2]));
                             break;
                         case "H":
-                            path = ["C"][concat](l2c(d.x, d.y, path[1], d.y));
+                            path = ["C"][concat](l2c(d.x1, d.y, path[1], d.y));
                             break;
                         case "V":
-                            path = ["C"][concat](l2c(d.x, d.y, d.x, path[1]));
+                            path = ["C"][concat](l2c(d.x1, d.y, d.x1, path[1]));
                             break;
                         case "Z":
-                            path = ["C"][concat](l2c(d.x, d.y, d.X, d.Y));
+                            path = ["C"][concat](l2c(d.x1, d.y, d.X, d.Y));
                             break;
                     }
                     return path;
@@ -1739,10 +1739,10 @@
                 },
                 fixM = function (path1, path2, a1, a2, i) {
                     if (path1 && path2 && path1[i][0] == "M" && path2[i][0] != "M") {
-                        path2.splice(i, 0, ["M", a2.x, a2.y]);
+                        path2.splice(i, 0, ["M", a2.x1, a2.y]);
                         a1.bx = 0;
                         a1.by = 0;
-                        a1.x = path1[i][1];
+                        a1.x1 = path1[i][1];
                         a1.y = path1[i][2];
                         ii = mmax(p.length, p2 && p2.length || 0);
                     }
@@ -1758,13 +1758,13 @@
                     seg2 = p2 && p2[i],
                     seglen = seg.length,
                     seg2len = p2 && seg2.length;
-                attrs.x = seg[seglen - 2];
+                attrs.x1 = seg[seglen - 2];
                 attrs.y = seg[seglen - 1];
-                attrs.bx = toFloat(seg[seglen - 4]) || attrs.x;
+                attrs.bx = toFloat(seg[seglen - 4]) || attrs.x1;
                 attrs.by = toFloat(seg[seglen - 3]) || attrs.y;
-                attrs2.bx = p2 && (toFloat(seg2[seg2len - 4]) || attrs2.x);
+                attrs2.bx = p2 && (toFloat(seg2[seg2len - 4]) || attrs2.x1);
                 attrs2.by = p2 && (toFloat(seg2[seg2len - 3]) || attrs2.y);
-                attrs2.x = p2 && seg2[seg2len - 2];
+                attrs2.x1 = p2 && seg2[seg2len - 2];
                 attrs2.y = p2 && seg2[seg2len - 1];
             }
             if (!p2) {
@@ -1897,9 +1897,9 @@
                         bb;
                     if (command == "t" && tlen == 3) {
                         if (absolute) {
-                            x1 = inver.x(0, 0);
+                            x1 = inver.x1(0, 0);
                             y1 = inver.y(0, 0);
-                            x2 = inver.x(t[1], t[2]);
+                            x2 = inver.x1(t[1], t[2]);
                             y2 = inver.y(t[1], t[2]);
                             m.translate(x2 - x1, y2 - y1);
                         } else {
@@ -1908,11 +1908,11 @@
                     } else if (command == "r") {
                         if (tlen == 2) {
                             bb = bb || el.getBBox(1);
-                            m.rotate(t[1], bb.x + bb.width / 2, bb.y + bb.height / 2);
+                            m.rotate(t[1], bb.x1 + bb.width / 2, bb.y + bb.height / 2);
                             deg += t[1];
                         } else if (tlen == 4) {
                             if (absolute) {
-                                x2 = inver.x(t[2], t[3]);
+                                x2 = inver.x1(t[2], t[3]);
                                 y2 = inver.y(t[2], t[3]);
                                 m.rotate(t[1], x2, y2);
                             } else {
@@ -1923,12 +1923,12 @@
                     } else if (command == "s") {
                         if (tlen == 2 || tlen == 3) {
                             bb = bb || el.getBBox(1);
-                            m.scale(t[1], t[tlen - 1], bb.x + bb.width / 2, bb.y + bb.height / 2);
+                            m.scale(t[1], t[tlen - 1], bb.x1 + bb.width / 2, bb.y + bb.height / 2);
                             sx *= t[1];
                             sy *= t[tlen - 1];
                         } else if (tlen == 5) {
                             if (absolute) {
-                                x2 = inver.x(t[3], t[4]);
+                                x2 = inver.x1(t[3], t[4]);
                                 y2 = inver.y(t[3], t[4]);
                                 m.scale(t[1], t[2], x2, y2);
                             } else {
@@ -1955,7 +1955,7 @@
             _.dy = dy = m.f;
 
             if (sx == 1 && sy == 1 && !deg && _.bbox) {
-                _.bbox.x += +dx;
+                _.bbox.x1 += +dx;
                 _.bbox.y += +dy;
             } else {
                 _.dirtyT = 1;
@@ -2033,7 +2033,7 @@
         }
         return {
             container: 1,
-            x: x,
+            x1: x,
             y: y,
             width: w,
             height: h
@@ -2125,7 +2125,7 @@
             this.add(1, 0, 0, 1, -x, -y);
         };
 
-        matrixproto.x = function (x, y) {
+        matrixproto.x1 = function (x, y) {
             return x * this.a + y * this.c + this.e;
         };
 
@@ -2321,7 +2321,7 @@
                 o && eve("raphael.drag.over." + dragi.el.id, dragi.el, o);
                 x += scrollX;
                 y += scrollY;
-                eve("raphael.drag.move." + dragi.el.id, dragi.move_scope || dragi.el, x - dragi.el._drag.x, y - dragi.el._drag.y, x, y, e);
+                eve("raphael.drag.move." + dragi.el.id, dragi.move_scope || dragi.el, x - dragi.el._drag.x1, y - dragi.el._drag.y, x, y, e);
             }
         },
         dragUp = function (e) {
@@ -2433,7 +2433,7 @@
             (e.originalEvent || e).preventDefault();
             var scrollY = g.doc.documentElement.scrollTop || g.doc.body.scrollTop,
                 scrollX = g.doc.documentElement.scrollLeft || g.doc.body.scrollLeft;
-            this._drag.x = e.clientX + scrollX;
+            this._drag.x1 = e.clientX + scrollX;
             this._drag.y = e.clientY + scrollY;
             this._drag.id = e.identifier;
             !drag.length && R.mousemove(dragMove).mouseup(dragUp);
@@ -2539,7 +2539,7 @@
             left = box.left + (g.win.pageXOffset || docElem.scrollLeft || body.scrollLeft) - clientLeft;
         return {
             y: top,
-            x: left
+            x1: left
         };
     };
 
@@ -2550,7 +2550,7 @@
         if (g.win.opera && target.tagName == "svg") {
             var so = getOffset(svg),
                 sr = svg.createSVGRect();
-            sr.x = x - so.x;
+            sr.x1 = x - so.x1;
             sr.y = y - so.y;
             sr.width = sr.height = 1;
             var hits = svg.getIntersectionList(sr, null);
@@ -2601,10 +2601,10 @@
         return set;
     };
     function x_y() {
-        return this.x + S + this.y;
+        return this.x1 + S + this.y;
     }
     function x_y_w_h() {
-        return this.x + S + this.y + S + this.width + " \xd7 " + this.height;
+        return this.x1 + S + this.y + S + this.width + " \xd7 " + this.height;
     }
 
     elproto.isPointInside = function (x, y) {
@@ -2700,10 +2700,10 @@
                         if (len + l > length) {
                             if (subpath && !subpaths.start) {
                                 point = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6], length - len);
-                                sp += ["C" + point.start.x, point.start.y, point.m.x, point.m.y, point.x, point.y];
+                                sp += ["C" + point.start.x1, point.start.y, point.m.x1, point.m.y, point.x1, point.y];
                                 if (onlystart) {return sp;}
                                 subpaths.start = sp;
-                                sp = ["M" + point.x, point.y + "C" + point.n.x, point.n.y, point.end.x, point.end.y, p[5], p[6]].join();
+                                sp = ["M" + point.x1, point.y + "C" + point.n.x1, point.n.y, point.end.x1, point.end.y, p[5], p[6]].join();
                                 len += l;
                                 x = +p[5];
                                 y = +p[6];
@@ -2711,7 +2711,7 @@
                             }
                             if (!istotal && !subpath) {
                                 point = getPointAtSegmentLength(x, y, p[1], p[2], p[3], p[4], p[5], p[6], length - len);
-                                return {x: point.x, y: point.y, alpha: point.alpha};
+                                return {x1: point.x1, y: point.y, alpha: point.alpha};
                             }
                         }
                         len += l;
@@ -2722,7 +2722,7 @@
                 }
                 subpaths.end = sp;
                 point = istotal ? len : subpath ? subpaths : R.findDotsAtSegment(x, y, p[0], p[1], p[2], p[3], p[4], p[5], 1);
-                point.alpha && (point = {x: point.x, y: point.y, alpha: point.alpha});
+                point.alpha && (point = {x1: point.x1, y: point.y, alpha: point.alpha});
                 return point;
             };
         };
@@ -3528,9 +3528,9 @@
             y2 = [];
         for (var i = this.items.length; i--;) if (!this.items[i].removed) {
             var box = this.items[i].getBBox();
-            x.push(box.x);
+            x.push(box.x1);
             y.push(box.y);
-            x2.push(box.x + box.width);
+            x2.push(box.x1 + box.width);
             y2.push(box.y + box.height);
         }
         x = mmin[apply](0, x);
@@ -3538,7 +3538,7 @@
         x2 = mmax[apply](0, x2);
         y2 = mmax[apply](0, y2);
         return {
-            x: x,
+            x1: x,
             y: y,
             x2: x2,
             y2: y2,
@@ -3585,7 +3585,7 @@
                     w: path.w,
                     k: {},
                     d: path.d && "M" + path.d.replace(/[mlcxtrv]/g, function (command) {
-                        return {l: "L", c: "C", x: "z", t: "m", r: "l", v: "c"}[command] || "M";
+                        return {l: "L", c: "C", x1: "z", t: "m", r: "l", v: "c"}[command] || "M";
                     }) + "z"
                 };
                 if (path.k) {
@@ -3882,7 +3882,7 @@ window.Raphael.svg && function (R) {
         },
         updatePosition = function (o) {
             var bbox = o.getBBox(1);
-            $(o.pattern, {patternTransform: o.matrix.invert() + " translate(" + bbox.x + "," + bbox.y + ")"});
+            $(o.pattern, {patternTransform: o.matrix.invert() + " translate(" + bbox.x1 + "," + bbox.y + ")"});
         },
         addArrow = function (o, value, isEnd) {
             if (o.type == "path") {
@@ -4102,7 +4102,7 @@ window.Raphael.svg && function (R) {
                                     rc = $("rect");
                                 el.id = R.createUUID();
                                 $(rc, {
-                                    x: rect[0],
+                                    x1: rect[0],
                                     y: rect[1],
                                     width: rect[2],
                                     height: rect[3]
@@ -4137,13 +4137,13 @@ window.Raphael.svg && function (R) {
                             o._.dirty = 1;
                             if (attrs.fx) {
                                 att = "x";
-                                value = attrs.x;
+                                value = attrs.x1;
                             } else {
                                 break;
                             }
                         case "x":
                             if (attrs.fx) {
-                                value = -attrs.x - (attrs.width || 0);
+                                value = -attrs.x1 - (attrs.width || 0);
                             }
                         case "rx":
                             if (att == "rx" && o.type == "rect") {
@@ -4214,8 +4214,8 @@ window.Raphael.svg && function (R) {
                                 el = $("pattern");
                                 var ig = $("image");
                                 el.id = R.createUUID();
-                                $(el, {x: 0, y: 0, patternUnits: "userSpaceOnUse", height: 1, width: 1});
-                                $(ig, {x: 0, y: 0, "xlink:href": isURL[1]});
+                                $(el, {x1: 0, y: 0, patternUnits: "userSpaceOnUse", height: 1, width: 1});
+                                $(ig, {x1: 0, y: 0, "xlink:href": isURL[1]});
                                 el.appendChild(ig);
 
                                 (function (el) {
@@ -4317,7 +4317,7 @@ window.Raphael.svg && function (R) {
                     tspan;
                 for (var i = 0, ii = texts.length; i < ii; i++) {
                     tspan = $("tspan");
-                    i && $(tspan, {dy: fontSize * leading, x: a.x});
+                    i && $(tspan, {dy: fontSize * leading, x1: a.x1});
                     tspan.appendChild(R._g.doc.createTextNode(texts[i]));
                     node.appendChild(tspan);
                     tspans[i] = tspan;
@@ -4325,12 +4325,12 @@ window.Raphael.svg && function (R) {
             } else {
                 tspans = node.getElementsByTagName("tspan");
                 for (i = 0, ii = tspans.length; i < ii; i++) if (i) {
-                    $(tspans[i], {dy: fontSize * leading, x: a.x});
+                    $(tspans[i], {dy: fontSize * leading, x1: a.x1});
                 } else {
                     $(tspans[0], {dy: 0});
                 }
             }
-            $(node, {x: a.x, y: a.y});
+            $(node, {x1: a.x1, y: a.y});
             el._.dirty = 1;
             var bb = el._getBBox(),
                 dif = a.y - (bb.y + bb.height / 2);
@@ -4399,7 +4399,7 @@ window.Raphael.svg && function (R) {
         (cy == null) && (cx = cy);
         if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
-            cx = bbox.x + bbox.width / 2;
+            cx = bbox.x1 + bbox.width / 2;
             cy = bbox.y + bbox.height / 2;
         }
         this.transform(this._.transform.concat([["r", deg, cx, cy]]));
@@ -4422,7 +4422,7 @@ window.Raphael.svg && function (R) {
         if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
         }
-        cx = cx == null ? bbox.x + bbox.width / 2 : cx;
+        cx = cx == null ? bbox.x1 + bbox.width / 2 : cx;
         cy = cy == null ? bbox.y + bbox.height / 2 : cy;
         this.transform(this._.transform.concat([["s", sx, sy, cx, cy]]));
         return this;
@@ -4657,7 +4657,7 @@ window.Raphael.svg && function (R) {
         var el = $("rect");
         svg.canvas && svg.canvas.appendChild(el);
         var res = new Element(el, svg);
-        res.attrs = {x: x, y: y, width: w, height: h, r: r || 0, rx: r || 0, ry: r || 0, fill: "none", stroke: "#000"};
+        res.attrs = {x1: x, y: y, width: w, height: h, r: r || 0, rx: r || 0, ry: r || 0, fill: "none", stroke: "#000"};
         res.type = "rect";
         $(el, res.attrs);
         return res;
@@ -4673,11 +4673,11 @@ window.Raphael.svg && function (R) {
     };
     R._engine.image = function (svg, src, x, y, w, h) {
         var el = $("image");
-        $(el, {x: x, y: y, width: w, height: h, preserveAspectRatio: "none"});
+        $(el, {x1: x, y: y, width: w, height: h, preserveAspectRatio: "none"});
         el.setAttributeNS(xlink, "href", src);
         svg.canvas && svg.canvas.appendChild(el);
         var res = new Element(el, svg);
-        res.attrs = {x: x, y: y, width: w, height: h, src: src};
+        res.attrs = {x1: x, y: y, width: w, height: h, src: src};
         res.type = "image";
         return res;
     };
@@ -4686,7 +4686,7 @@ window.Raphael.svg && function (R) {
         svg.canvas && svg.canvas.appendChild(el);
         var res = new Element(el, svg);
         res.attrs = {
-            x: x,
+            x1: x,
             y: y,
             "text-anchor": "middle",
             text: text,
@@ -4711,7 +4711,7 @@ window.Raphael.svg && function (R) {
     R._engine.create = function () {
         var con = R._getContainer.apply(0, arguments),
             container = con && con.container,
-            x = con.x,
+            x = con.x1,
             y = con.y,
             width = con.width,
             height = con.height;
@@ -4910,7 +4910,7 @@ window.Raphael.vml && function (R) {
             var m = R.matrix();
             m.rotate(-deg, .5, .5);
             return {
-                dx: m.x(dx, dy),
+                dx: m.x1(dx, dy),
                 dy: m.y(dx, dy)
             };
         },
@@ -4945,7 +4945,7 @@ window.Raphael.vml && function (R) {
                 fill = fill && fill[0];
                 o.removeChild(fill);
                 if (fillpos) {
-                    c = compensation(deg, m.x(fillpos[0], fillpos[1]), m.y(fillpos[0], fillpos[1]));
+                    c = compensation(deg, m.x1(fillpos[0], fillpos[1]), m.y(fillpos[0], fillpos[1]));
                     fill.position = c.dx * y + S + c.dy * y;
                 }
                 if (_.fillsize) {
@@ -4993,7 +4993,7 @@ window.Raphael.vml && function (R) {
                 a = o.attrs,
                 s = node.style,
                 xy,
-                newpath = pathTypes[o.type] && (params.x != a.x || params.y != a.y || params.width != a.width || params.height != a.height || params.cx != a.cx || params.cy != a.cy || params.rx != a.rx || params.ry != a.ry || params.r != a.r),
+                newpath = pathTypes[o.type] && (params.x1 != a.x1 || params.y != a.y || params.width != a.width || params.height != a.height || params.cx != a.cx || params.cy != a.cy || params.rx != a.rx || params.ry != a.ry || params.r != a.r),
                 isOval = ovalTypes[o.type] && (a.cx != params.cx || a.cy != params.cy || a.r != params.r || a.rx != params.rx || a.ry != params.ry),
                 res = o;
 
@@ -5013,7 +5013,7 @@ window.Raphael.vml && function (R) {
             if (params.path && o.type == "path" || newpath) {
                 node.path = path2vml(~Str(a.path).toLowerCase().indexOf("r") ? R._pathToAbsolute(a.path) : a.path);
                 if (o.type == "image") {
-                    o._.fillpos = [a.x, a.y];
+                    o._.fillpos = [a.x1, a.y];
                     o._.fillsize = [a.width, a.height];
                     setCoords(o, 1, 1, 0, 0, 0);
                 }
@@ -5094,8 +5094,8 @@ window.Raphael.vml && function (R) {
                         fill.src = isURL[1];
                         fill.type = "tile";
                         var bbox = o.getBBox(1);
-                        fill.position = bbox.x + S + bbox.y;
-                        o._.fillpos = [bbox.x, bbox.y];
+                        fill.position = bbox.x1 + S + bbox.y;
+                        o._.fillpos = [bbox.x1, bbox.y];
 
                         R._preload(isURL[1], function () {
                             o._.fillsize = [this.offsetWidth, this.offsetHeight];
@@ -5180,10 +5180,10 @@ window.Raphael.vml && function (R) {
                 res.W = a.w = (brect.right - brect.left) / m;
                 res.H = a.h = (brect.bottom - brect.top) / m;
                 // res.paper.canvas.style.display = "none";
-                res.X = a.x;
+                res.X = a.x1;
                 res.Y = a.y + res.H / 2;
 
-                ("x" in params || "y" in params) && (res.path.v = R.format("m{0},{1}l{2},{1}", round(a.x * zoom), round(a.y * zoom), round(a.x * zoom) + 1));
+                ("x" in params || "y" in params) && (res.path.v = R.format("m{0},{1}l{2},{1}", round(a.x1 * zoom), round(a.y * zoom), round(a.x1 * zoom) + 1));
                 var dirtyattrs = ["x", "y", "text", "font", "font-family", "font-weight", "font-style", "font-size"];
                 for (var d = 0, dd = dirtyattrs.length; d < dd; d++) if (dirtyattrs[d] in params) {
                     res._.dirty = 1;
@@ -5323,7 +5323,7 @@ window.Raphael.vml && function (R) {
                 o.style.filter = matrix.toFilter();
                 var bb = this.getBBox(),
                     bbt = this.getBBox(1),
-                    dx = bb.x - bbt.x,
+                    dx = bb.x1 - bbt.x1,
                     dy = bb.y - bbt.y;
                 o.coordorigin = (dx * -zoom) + S + (dy * -zoom);
                 setCoords(this, 1, 1, dx, dy, 0);
@@ -5355,7 +5355,7 @@ window.Raphael.vml && function (R) {
         (cy == null) && (cx = cy);
         if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
-            cx = bbox.x + bbox.width / 2;
+            cx = bbox.x1 + bbox.width / 2;
             cy = bbox.y + bbox.height / 2;
         }
         this._.dirtyT = 1;
@@ -5373,7 +5373,7 @@ window.Raphael.vml && function (R) {
         dx = toFloat(dx[0]) || 0;
         dy = +dy || 0;
         if (this._.bbox) {
-            this._.bbox.x += dx;
+            this._.bbox.x1 += dx;
             this._.bbox.y += dy;
         }
         this.transform(this._.transform.concat([["t", dx, dy]]));
@@ -5397,7 +5397,7 @@ window.Raphael.vml && function (R) {
         if (cx == null || cy == null) {
             var bbox = this.getBBox(1);
         }
-        cx = cx == null ? bbox.x + bbox.width / 2 : cx;
+        cx = cx == null ? bbox.x1 + bbox.width / 2 : cx;
         cy = cy == null ? bbox.y + bbox.height / 2 : cy;
 
         this.transform(this._.transform.concat([["s", sx, sy, cx, cy]]));
@@ -5417,7 +5417,7 @@ window.Raphael.vml && function (R) {
             return {};
         }
         return {
-            x: this.X + (this.bbx || 0) - this.W / 2,
+            x1: this.X + (this.bbx || 0) - this.W / 2,
             y: this.Y - this.H,
             width: this.W,
             height: this.H
@@ -5581,7 +5581,7 @@ window.Raphael.vml && function (R) {
         var path = R._rectPath(x, y, w, h, r),
             res = vml.path(path),
             a = res.attrs;
-        res.X = a.x = x;
+        res.X = a.x1 = x;
         res.Y = a.y = y;
         res.W = a.width = w;
         res.H = a.height = h;
@@ -5627,7 +5627,7 @@ window.Raphael.vml && function (R) {
             node = res.node,
             fill = node.getElementsByTagName(fillString)[0];
         a.src = src;
-        res.X = a.x = x;
+        res.X = a.x1 = x;
         res.Y = a.y = y;
         res.W = a.width = w;
         res.H = a.height = h;
@@ -5669,7 +5669,7 @@ window.Raphael.vml && function (R) {
         p.textpath = o;
         p.type = "text";
         p.attrs.text = Str(text);
-        p.attrs.x = x;
+        p.attrs.x1 = x;
         p.attrs.y = y;
         p.attrs.w = 1;
         p.attrs.h = 1;
@@ -5747,7 +5747,7 @@ window.Raphael.vml && function (R) {
             height = con.height,
             s,
             width = con.width,
-            x = con.x,
+            x = con.x1,
             y = con.y;
         if (!container) {
             throw new Error("VML container not found.");

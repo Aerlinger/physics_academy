@@ -78,18 +78,18 @@ VoltageElm.prototype.triangleFunc = function (x) {
 
 VoltageElm.prototype.stamp = function () {
     if (this.waveform == VoltageElm.WF_DC)
-        CirSim.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, this.getVoltage());
+        Circuit.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, this.getVoltage());
     else
-        CirSim.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource);
+        Circuit.stampVoltageSource(this.nodes[0], this.nodes[1], this.voltSource);
 };
 
 VoltageElm.prototype.doStep = function () {
     if (this.waveform != VoltageElm.WF_DC)
-        CirSim.updateVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, this.getVoltage());
+        Circuit.updateVoltageSource(this.nodes[0], this.nodes[1], this.voltSource, this.getVoltage());
 };
 
 VoltageElm.prototype.getVoltage = function () {
-    var w = 2 * Math.PI * (CirSim.t - this.freqTimeZero) * this.frequency + this.phaseShift;
+    var w = 2 * Math.PI * (Circuit.t - this.freqTimeZero) * this.frequency + this.phaseShift;
 
     switch (this.waveform) {
         case VoltageElm.WF_DC:
@@ -118,10 +118,10 @@ VoltageElm.prototype.setPoints = function () {
 };
 
 VoltageElm.prototype.draw = function () {
-    this.setBbox(this.x, this.y, this.x2, this.y2);
+    this.setBbox(this.x1, this.y, this.x2, this.y2);
 
     this.updateDotCount();
-    if (CirSim.dragElm != this) {
+    if (Circuit.dragElm != this) {
         if (this.waveform == VoltageElm.WF_DC)
             this.drawDots(this.point1, this.point2, this.curcount);
         else {
@@ -157,7 +157,7 @@ VoltageElm.prototype.drawWaveform = function (center) {
     //g.beginFill();
     this.setPowerColor(false);
 
-    var xc = center.x;
+    var xc = center.x1;
     var yc = center.y;
 
 
@@ -220,7 +220,7 @@ VoltageElm.prototype.drawWaveform = function (center) {
             break;
         }
     }
-    if (CirSim.showValuesCheckItem) {
+    if (Circuit.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.frequency, "Hz");
         if (this.dx == 0 || this.dy == 0)
             this.drawValues(s, VoltageElm.circleSize);
@@ -317,11 +317,11 @@ VoltageElm.prototype.setEditValue = function (n, ei) {
         // adjust time zero to maintain continuity in the waveform even though the frequency has changed.
         var oldfreq = this.frequency;
         this.frequency = ei.value;
-        var maxfreq = 1 / (8 * CirSim.timeStep);
+        var maxfreq = 1 / (8 * Circuit.timeStep);
         if (this.frequency > maxfreq)
             this.frequency = maxfreq;
         var adj = this.frequency - oldfreq;
-        this.freqTimeZero = CirSim.t - oldfreq * (CirSim.t - this.freqTimeZero) / this.frequency;
+        this.freqTimeZero = Circuit.t - oldfreq * (Circuit.t - this.freqTimeZero) / this.frequency;
     }
     if (n == 1) {
         var ow = this.waveform;

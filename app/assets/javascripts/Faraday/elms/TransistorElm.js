@@ -115,7 +115,7 @@ TransistorElm.prototype.draw = function () {
     // draw base
     color = this.setVoltageColor(this.volts[0]);
 
-    if (CirSim.powerCheckItem)
+    if (Circuit.powerCheckItem)
         g.setColor(Color.gray);
 
     CircuitElement.drawThickLinePt(this.point1, this.base, color);
@@ -136,16 +136,16 @@ TransistorElm.prototype.draw = function () {
     //g.fillPolygon(rectPoly);
     CircuitElement.drawThickPolygonP(this.rectPoly, color);
 
-    if ((this.needsHighlight() || CirSim.dragElm == this) && this.dy == 0) {
+    if ((this.needsHighlight() || Circuit.dragElm == this) && this.dy == 0) {
         //g.setColor(Color.white);
         //g.setFont(this.unitsFont);
 
         CircuitElement.setColor(Color.white);
 
         var ds = sign(this.dx);
-        this.drawCenteredText("B", this.base.x - 10 * ds, this.base.y - 5, Color.WHITE);
-        this.drawCenteredText("C", this.coll[0].x - 3 + 9 * ds, this.coll[0].y + 4, Color.WHITE); // x+6 if ds=1, -12 if -1
-        this.drawCenteredText("E", this.emit[0].x - 3 + 9 * ds, this.emit[0].y + 4, Color.WHITE);
+        this.drawCenteredText("B", this.base.x1 - 10 * ds, this.base.y - 5, Color.WHITE);
+        this.drawCenteredText("C", this.coll[0].x1 - 3 + 9 * ds, this.coll[0].y + 4, Color.WHITE); // x+6 if ds=1, -12 if -1
+        this.drawCenteredText("E", this.emit[0].x1 - 3 + 9 * ds, this.emit[0].y + 4, Color.WHITE);
     }
 
     this.drawPosts();
@@ -218,16 +218,16 @@ TransistorElm.prototype.limitStep = function (vnew, vold) {
         } else {
             vnew = this.vt * Math.log(vnew / this.vt);
         }
-        CirSim.converged = false;
+        Circuit.converged = false;
         //console.log(vnew + " " + oo + " " + vold);
     }
     return (vnew);
 };
 
 TransistorElm.prototype.stamp = function () {
-    CirSim.stampNonLinear(this.nodes[0]);
-    CirSim.stampNonLinear(this.nodes[1]);
-    CirSim.stampNonLinear(this.nodes[2]);
+    Circuit.stampNonLinear(this.nodes[0]);
+    Circuit.stampNonLinear(this.nodes[1]);
+    Circuit.stampNonLinear(this.nodes[2]);
 };
 
 TransistorElm.prototype.doStep = function () {
@@ -237,14 +237,14 @@ TransistorElm.prototype.doStep = function () {
 
     if (Math.abs(vbc - this.lastvbc) > .01 || // .01
         Math.abs(vbe - this.lastvbe) > .01)
-        CirSim.converged = false;
+        Circuit.converged = false;
 
     this.gmin = 0;
 
-    if (CirSim.subIterations > 100) {
+    if (Circuit.subIterations > 100) {
         // if we have trouble converging, put a conductance in parallel with all P-N junctions.
         // Gradually increase the conductance value for each iteration.
-        this.gmin = Math.exp(-9 * Math.log(10) * (1 - CirSim.subIterations / 3000.));
+        this.gmin = Math.exp(-9 * Math.log(10) * (1 - Circuit.subIterations / 3000.));
         if (this.gmin > .1)
             this.gmin = .1;
     }
@@ -283,21 +283,21 @@ TransistorElm.prototype.doStep = function () {
 
     // stamps from page 302 of Pillage.  Node 0 is the base, node 1 the collector, node 2 the emitter.  Also stamp
     // minimum conductance (gmin) between b,e and b,c
-    CirSim.stampMatrix(this.nodes[0], this.nodes[0], -gee - gec - gce - gcc + this.gmin * 2);
-    CirSim.stampMatrix(this.nodes[0], this.nodes[1], gec + gcc - this.gmin);
-    CirSim.stampMatrix(this.nodes[0], this.nodes[2], gee + gce - this.gmin);
-    CirSim.stampMatrix(this.nodes[1], this.nodes[0], gce + gcc - this.gmin);
-    CirSim.stampMatrix(this.nodes[1], this.nodes[1], -gcc + this.gmin);
-    CirSim.stampMatrix(this.nodes[1], this.nodes[2], -gce);
-    CirSim.stampMatrix(this.nodes[2], this.nodes[0], gee + gec - this.gmin);
-    CirSim.stampMatrix(this.nodes[2], this.nodes[1], -gec);
-    CirSim.stampMatrix(this.nodes[2], this.nodes[2], -gee + this.gmin);
+    Circuit.stampMatrix(this.nodes[0], this.nodes[0], -gee - gec - gce - gcc + this.gmin * 2);
+    Circuit.stampMatrix(this.nodes[0], this.nodes[1], gec + gcc - this.gmin);
+    Circuit.stampMatrix(this.nodes[0], this.nodes[2], gee + gce - this.gmin);
+    Circuit.stampMatrix(this.nodes[1], this.nodes[0], gce + gcc - this.gmin);
+    Circuit.stampMatrix(this.nodes[1], this.nodes[1], -gcc + this.gmin);
+    Circuit.stampMatrix(this.nodes[1], this.nodes[2], -gce);
+    Circuit.stampMatrix(this.nodes[2], this.nodes[0], gee + gec - this.gmin);
+    Circuit.stampMatrix(this.nodes[2], this.nodes[1], -gec);
+    Circuit.stampMatrix(this.nodes[2], this.nodes[2], -gee + this.gmin);
 
     // we are solving for v(k+1), not delta v, so we use formula
     // 10.5.13, multiplying J by v(k)
-    CirSim.stampRightSide(this.nodes[0], -this.ib - (gec + gcc) * vbc - (gee + gce) * vbe);
-    CirSim.stampRightSide(this.nodes[1], -this.ic + gce * vbe + gcc * vbc);
-    CirSim.stampRightSide(this.nodes[2], -this.ie + gee * vbe + gec * vbc);
+    Circuit.stampRightSide(this.nodes[0], -this.ib - (gec + gcc) * vbc - (gee + gce) * vbe);
+    Circuit.stampRightSide(this.nodes[1], -this.ic + gce * vbe + gcc * vbc);
+    Circuit.stampRightSide(this.nodes[2], -this.ie + gee * vbe + gec * vbc);
 };
 
 TransistorElm.prototype.getInfo = function (arr) {

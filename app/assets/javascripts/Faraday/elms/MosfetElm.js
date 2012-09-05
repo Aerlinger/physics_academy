@@ -97,7 +97,7 @@ MosfetElm.prototype.draw = function () {
         //g.fillPolygon(arrowPoly);
     }
 
-    if (CirSim.powerCheckItem) {
+    if (Circuit.powerCheckItem) {
     }
     //g.setColor(Color.gray);
     color = this.setVoltageColor(this.volts[0]);
@@ -116,7 +116,7 @@ MosfetElm.prototype.draw = function () {
         this.drawCenteredText(s, this.x2 + 2, this.y2, false);
     }
 
-    if ((this.needsHighlight() || CirSim.dragElm == this) && this.dy == 0) {
+    if ((this.needsHighlight() || Circuit.dragElm == this) && this.dy == 0) {
         //g.setColor(Color.white);
         //g.setFont(unitsFont);
         var ds = sign(this.dx);
@@ -190,8 +190,8 @@ MosfetElm.prototype.gm = 0;
 
 MosfetElm.prototype.stamp = function () {
 
-    CirSim.stampNonLinear(this.nodes[1]);
-    CirSim.stampNonLinear(this.nodes[2]);
+    Circuit.stampNonLinear(this.nodes[1]);
+    Circuit.stampNonLinear(this.nodes[2]);
 };
 
 MosfetElm.prototype.doStep = function () {
@@ -223,7 +223,7 @@ MosfetElm.prototype.doStep = function () {
 
     if (Math.abs(this.lastv1 - vs[1]) > .01 ||
         Math.abs(this.lastv2 - vs[2]) > .01)
-        CirSim.converged = false;
+        Circuit.converged = false;
 
     this.lastv1 = vs[1];
     this.lastv2 = vs[2];
@@ -239,7 +239,7 @@ MosfetElm.prototype.doStep = function () {
     var beta = this.getBeta();
 
     if (vgs > .5 && this instanceof JFetElm) {
-        CirSim.halt("JFET is reverse biased!", this);
+        Circuit.halt("JFET is reverse biased!", this);
         return;
     }
     if (vgs < this.vt) {
@@ -265,16 +265,16 @@ MosfetElm.prototype.doStep = function () {
 
     var rs = -this.pnp * this.ids + Gds * realvds + this.gm * realvgs;
     //console.log("M " + vds + " " + vgs + " " + ids + " " + gm + " "+ Gds + " " + volts[0] + " " + volts[1] + " " + volts[2] + " " + source + " " + rs + " " + this);
-    CirSim.stampMatrix(this.nodes[drain], this.nodes[drain], Gds);
-    CirSim.stampMatrix(this.nodes[drain], this.nodes[source], -Gds - this.gm);
-    CirSim.stampMatrix(this.nodes[drain], this.nodes[gate], this.gm);
+    Circuit.stampMatrix(this.nodes[drain], this.nodes[drain], Gds);
+    Circuit.stampMatrix(this.nodes[drain], this.nodes[source], -Gds - this.gm);
+    Circuit.stampMatrix(this.nodes[drain], this.nodes[gate], this.gm);
 
-    CirSim.stampMatrix(this.nodes[source], this.nodes[drain], -Gds);
-    CirSim.stampMatrix(this.nodes[source], this.nodes[source], Gds + this.gm);
-    CirSim.stampMatrix(this.nodes[source], this.nodes[gate], -this.gm);
+    Circuit.stampMatrix(this.nodes[source], this.nodes[drain], -Gds);
+    Circuit.stampMatrix(this.nodes[source], this.nodes[source], Gds + this.gm);
+    Circuit.stampMatrix(this.nodes[source], this.nodes[gate], -this.gm);
 
-    CirSim.stampRightSide(this.nodes[drain], rs);
-    CirSim.stampRightSide(this.nodes[source], -rs);
+    Circuit.stampRightSide(this.nodes[drain], rs);
+    Circuit.stampRightSide(this.nodes[source], -rs);
 
     if (source == 2 && this.pnp == 1 || source == 1 && this.pnp == -1)
         this.ids = -this.ids;

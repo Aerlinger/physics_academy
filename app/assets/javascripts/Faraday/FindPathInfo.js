@@ -10,7 +10,7 @@ function FindPathInfo(type, firstElm, dest, elementList, numNodes) {
     this.dest = dest;
     this.type = type;
     this.firstElm = firstElm;
-    this.elmList = elementList;
+    this.elementList = elementList;
 
     this.used = new Array(numNodes);
     //zeroArray(this.used);
@@ -43,8 +43,8 @@ FindPathInfo.prototype.findPath = function (n1, depth) {
     this.used[n1] = true;
     var i;
 
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.elmList[i];
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.elementList[i];
         if (ce == this.firstElm)
             continue;
         if (this.type == FindPathInfo.INDUCT) {

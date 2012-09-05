@@ -32,7 +32,7 @@ GroundElm.prototype.draw = function () {
 
     CircuitElement.interpPoint(this.point1, this.point2, CircuitElement.ps2, 1 + 11. / this.dn);
     this.setBboxPt(this.point1, CircuitElement.ps2, 11);
-    this.drawPost(this.x, this.y, this.nodes[0]);
+    this.drawPost(this.x1, this.y, this.nodes[0]);
 };
 
 GroundElm.prototype.setCurrent = function (x, c) {
@@ -40,7 +40,7 @@ GroundElm.prototype.setCurrent = function (x, c) {
 };
 
 GroundElm.prototype.stamp = function () {
-    CirSim.stampVoltageSource(0, this.nodes[0], this.voltSource, 0);
+    Circuit.stampVoltageSource(0, this.nodes[0], this.voltSource, 0);
 };
 
 GroundElm.prototype.getVoltageDiff = function () {

@@ -34,8 +34,8 @@ VarRailElm.getVoltage = function () {
 };
 
 VarRailElm.prototype.delete = function () {
-    CirSim.main.remove(label);
-    CirSim.main.remove(slider);
+    Circuit.main.remove(label);
+    Circuit.main.remove(slider);
 };
 
 VarRailElm.prototype.getEditInfo = function (n) {

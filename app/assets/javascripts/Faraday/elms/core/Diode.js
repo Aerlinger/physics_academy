@@ -63,7 +63,7 @@ Diode.prototype.limitStep = function (vnew, vold) {
             // (1/vt = slope of load line)
             vnew = this.vt * Math.log(vnew / this.vt);
         }
-        CirSim.converged = false;
+        Circuit.converged = false;
         //console.log(vnew + " " + oo + " " + vold);
     } else if (vnew < 0 && this.zoffset != 0) {
         // for Zener breakdown, use the same logic but translate the values
@@ -84,7 +84,7 @@ Diode.prototype.limitStep = function (vnew, vold) {
             } else {
                 vnew = this.vt * Math.log(vnew / this.vt);
             }
-            CirSim.converged = false;
+            Circuit.converged = false;
         }
         vnew = -(vnew + this.zoffset);
     }
@@ -94,16 +94,16 @@ Diode.prototype.limitStep = function (vnew, vold) {
 Diode.prototype.stamp = function (n0, n1) {
     this.nodes[0] = n0;
     this.nodes[1] = n1;
-    CirSim.stampNonLinear(this.nodes[0]);
-    CirSim.stampNonLinear(this.nodes[1]);
+    Circuit.stampNonLinear(this.nodes[0]);
+    Circuit.stampNonLinear(this.nodes[1]);
 }
 
 Diode.prototype.doStep = function (voltdiff) {
     // used to have .1 here, but needed .01 for peak detector
-    if (Math.abs(voltdiff - CirSim.lastvoltdiff) > .01)
-        CirSim.converged = false;
-    voltdiff = this.limitStep(voltdiff, CirSim.lastvoltdiff);
-    CirSim.lastvoltdiff = voltdiff;
+    if (Math.abs(voltdiff - Circuit.lastvoltdiff) > .01)
+        Circuit.converged = false;
+    voltdiff = this.limitStep(voltdiff, Circuit.lastvoltdiff);
+    Circuit.lastvoltdiff = voltdiff;
 
     if (voltdiff >= 0 || this.zvoltage == 0) {
         // regular diode or forward-biased zener
@@ -113,8 +113,8 @@ Diode.prototype.doStep = function (voltdiff) {
             eval = 1;
         var geq = this.vdcoef * this.leakage * eval;
         var nc = (eval - 1) * this.leakage - geq * voltdiff;
-        CirSim.stampConductance(this.nodes[0], this.nodes[1], geq);
-        CirSim.stampCurrentSource(this.nodes[0], this.nodes[1], nc);
+        Circuit.stampConductance(this.nodes[0], this.nodes[1], geq);
+        Circuit.stampCurrentSource(this.nodes[0], this.nodes[1], nc);
     } else {
         // Zener diode
 
@@ -134,8 +134,8 @@ Diode.prototype.doStep = function (voltdiff) {
                 - 1
             ) + geq * (-voltdiff);
 
-        CirSim.stampConductance(this.nodes[0], this.nodes[1], geq);
-        CirSim.stampCurrentSource(this.nodes[0], this.nodes[1], nc);
+        Circuit.stampConductance(this.nodes[0], this.nodes[1], geq);
+        Circuit.stampCurrentSource(this.nodes[0], this.nodes[1], nc);
     }
 };
 

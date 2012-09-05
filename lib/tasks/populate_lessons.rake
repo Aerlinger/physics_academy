@@ -2,17 +2,16 @@ namespace :db do
   desc "Reads data in lesson_content directory and populates the database according to folder names and lesson-setup.yml file"
   task populate_lessons: :environment do
 
+    # Clear all lesson entries from the database
     Lesson.delete_all
 
-    valid_filename_regexp = /[\s+\\\/*?:\"<>|]/
-
-    root_path = "lib/assets/lessons_content"
+    root_path = "app/views/challenges/lessons_content"
 
     if Dir::exists?(root_path)
 
       puts "reading from Root directory: #{root_path}"
 
-      Dir.glob("lib/assets/**/lesson-params.yml") do |file|
+      Dir.glob("#{root_path}/**/lesson-params.yml") do |file|
         puts "Reading lesson configuration file #{file}"
         data = YAML::load(File.open(file))
 

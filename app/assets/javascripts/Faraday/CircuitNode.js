@@ -1,5 +1,5 @@
 function CircuitNode() {
-    this.x = 0;
+    this.x1 = 0;
     this.y = 0;
 
     this.links = new Array();

@@ -16,6 +16,7 @@
 //= require bootstrap
 //= require debugPrint
 //= require simulations
+//= require kinetic-v4.0.1
 //
 //= require_tree ./Newton
 //

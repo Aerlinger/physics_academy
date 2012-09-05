@@ -11,6 +11,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
 
   // The context is derived from the DOM element of the canvas jQuery selector
   var context = CanvasElmJQuery.get(0).getContext("2d");
+
   var hasTextures = false;
   var interval_id = null;
 
@@ -159,7 +160,6 @@ function render(world, mouseResponder, CanvasElmJQuery) {
       radius * world.pixelsToMeters, 0, Math.PI * 2, true);
     context.closePath();
     context.lineWidth = 3;
-    //context.stroke();
     context.fill();
   }
 
@@ -188,7 +188,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
     context.translate(position.x * world.pixelsToMeters, (-position.y + world.heightInMeters) * world.pixelsToMeters);
     context.rotate(-Body.GetAngle());
 
-    // TODO: The image sprite and box2d object don't line up perfectly. Find out why (xOffset and yOffset should be 0).
+    // TODO: The image sprite and box2d object don't line up perfectly. Find out why. (xOffset and yOffset should be 0).
     var xOffset = -4;
     var yOffset = -4;
 

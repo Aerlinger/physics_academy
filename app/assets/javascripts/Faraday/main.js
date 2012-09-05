@@ -9,9 +9,9 @@ var js_asset_path = "/assets/Faraday/";
 function buildCircuitElementToolbar() {
     var items = [];
 
-    for (var element in CirSim.elementMap) {
+    for (var element in Circuit.elementMap) {
         var classname = 'class="green"';
-        var buttonName = CirSim.elementMap[element];
+        var buttonName = Circuit.elementMap[element];
         if (buttonName[0] === '+') {
             classname = 'class="green"';
             buttonName[0] = '';
@@ -29,7 +29,7 @@ function buildCircuitElementToolbar() {
         buttonName = buttonName.replace('#', '');
 
         // Remove prefixes from names
-        var elmHTML = '<li ' + classname + '><a href="#" onclick="CirSim.addElm(\'' + element.toString() + '\');">' + buttonName + '</a></li>';
+        var elmHTML = '<li ' + classname + '><a href="#" onclick="Circuit.addElm(\'' + element.toString() + '\');">' + buttonName + '</a></li>';
         items.push(elmHTML);
     }
 
@@ -111,9 +111,9 @@ var readSetupList = function (retry) {
 
                     console.log(prefix + "Adding: " + title + " :: circuit: " + circuitName);
 
-                    if (first && CirSim.startCircuit == null) {
-                        CirSim.startCircuit = circuitName;
-                        CirSim.startLabel = title;
+                    if (first && Circuit.startCircuit == null) {
+                        Circuit.startCircuit = circuitName;
+                        Circuit.startLabel = title;
                     }
                 }
             }
@@ -125,7 +125,7 @@ var readSetupList = function (retry) {
         // Bind load file event to default circuit links
         $('.circuit_preset_link').click(function () {
             console.log("Loading Circuit: " + $(this).attr('id'));
-            CirSim.readCircuitFromFile($(this).attr('id'), false);
+            Circuit.readCircuitFromFile($(this).attr('id'), false);
         });
 
     });
@@ -143,12 +143,12 @@ function start() {
     // For instance <canvas ... class="lrc well span8" will render the lrc.txt file
     var defaultCircuitType = CANVAS.attr('class');
     defaultCircuitType = defaultCircuitType.split(" ")[0];
-    CirSim.init(defaultCircuitType);
+    Circuit.init(defaultCircuitType);
 
     buildCircuitElementToolbar();
     console.log("Starting simulation");
     setInterval(function () {
-        CirSim.updateCircuit();
+        Circuit.updateCircuit();
     }, 1);
 }
 
@@ -182,43 +182,43 @@ $(document).ready(function (e) {
 
     $("#canvas_container").click(function (event) {
         event.preventDefault();
-        CirSim.onMouseClicked(event);
+        Circuit.onMouseClicked(event);
     });
 
     $("#canvas_container").mouseenter(function (event) {
-        CirSim.onMouseEntered(event);
+        Circuit.onMouseEntered(event);
     });
 
     $("#canvas_container").mouseleave(function (event) {
         event.preventDefault();
-        CirSim.onMouseReleased(event);
-        CirSim.onMouseExited(event);
+        Circuit.onMouseReleased(event);
+        Circuit.onMouseExited(event);
     });
 
     $("#canvas_container").mousemove(function (event) {
         event.preventDefault();
-        CirSim.onMouseMove(event);
+        Circuit.onMouseMove(event);
     });
 
     $("#canvas_container").mousedown(function (event) {
         event.preventDefault();
-        CirSim.onMousePressed(event);
+        Circuit.onMousePressed(event);
     });
 
     $("#canvas_container").mouseup(function (event) {
         event.preventDefault();
-        CirSim.onMouseReleased(event);
+        Circuit.onMouseReleased(event);
     });
 
     $(document).keydown(function (event) {
         event.preventDefault();
         //alert(event.which);
-        CirSim.onKeyPressed(event);
+        Circuit.onKeyPressed(event);
     });
 
     $(document).keyup(function (event) {
         event.preventDefault();
-        CirSim.onKeyReleased(event);
+        Circuit.onKeyReleased(event);
     });
 
     start();

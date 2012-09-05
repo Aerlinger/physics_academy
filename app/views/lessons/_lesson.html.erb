@@ -83,7 +83,7 @@
 
           <% link_text = (signed_in? && current_user.subscribed_to?(lesson)) ? "Continue &raquo;" : "Start &raquo;" %>
           <%= link_to link_text.html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id),
-                      id: "goto_lesson_id_#{lesson.id}", class: "btn btn-success pull_right" %>
+                      id: "lesson_#{lesson.id}_start", class: "btn btn-success pull_right" %>
 
         </div>
 

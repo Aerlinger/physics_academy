@@ -81,7 +81,7 @@ TextElm.prototype.getDumpType = function () {
 };
 
 TextElm.prototype.drag = function (xx, yy) {
-    this.x = xx;
+    this.x1 = xx;
     this.y = yy;
     this.x2 = xx + 16;
     this.y2 = yy;
@@ -101,22 +101,22 @@ TextElm.prototype.draw = function () {
             maxw = w;
     }
     var cury = y;
-    this.setBbox(this.x, this.y, this.x, this.y);
+    this.setBbox(this.x1, this.y, this.x1, this.y);
     var i = 0;
     for (i = 0; i != this.lines.length; i++) {
         var s = (this.lines[i]);
         if ((this.flags & TextElm.FLAG_CENTER) != 0)
-            x = (CirSim.winSize.width - fm.stringWidth(s)) / 2;
-        g.drawString(s, this.x, cury);
+            x = (Circuit.winSize.width - fm.stringWidth(s)) / 2;
+        g.drawString(s, this.x1, cury);
         if ((this.flags & TextElm.FLAG_BAR) != 0) {
             var by = cury - fm.getAscent();
-            CircuitElement.drawLine(this.x, by, this.x + fm.stringWidth(s) - 1, by);
+            CircuitElement.drawLine(this.x1, by, this.x1 + fm.stringWidth(s) - 1, by);
         }
-        this.adjustBbox(this.x, cury - fm.getAscent(),
-            this.x + fm.stringWidth(s), cury + fm.getDescent());
+        this.adjustBbox(this.x1, cury - fm.getAscent(),
+            this.x1 + fm.stringWidth(s), cury + fm.getDescent());
         cury += fm.getHeight();
     }
-    this.x2 = this.boundingBox.x + this.boundingBox.width;
+    this.x2 = this.boundingBox.x1 + this.boundingBox.width;
     this.y2 = this.boundingBox.y + this.boundingBox.height;
 };
 

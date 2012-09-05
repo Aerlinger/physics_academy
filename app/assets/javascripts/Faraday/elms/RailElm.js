@@ -50,7 +50,7 @@ RailElm.prototype.draw = function () {
 
     this.drawPosts();
     this.curcount = this.updateDotCount(-this.current, this.curcount);
-    if (CirSim.dragElm != this)
+    if (Circuit.dragElm != this)
         this.drawDots(this.point1, this.lead1, this.curcount);
 
 };
@@ -61,14 +61,14 @@ RailElm.prototype.getVoltageDiff = function () {
 
 RailElm.prototype.stamp = function () {
     if (this.waveform == VoltageElm.WF_DC)
-        CirSim.stampVoltageSource(0, this.nodes[0], this.voltSource, this.getVoltage());
+        Circuit.stampVoltageSource(0, this.nodes[0], this.voltSource, this.getVoltage());
     else
-        CirSim.stampVoltageSource(0, this.nodes[0], this.voltSource);
+        Circuit.stampVoltageSource(0, this.nodes[0], this.voltSource);
 };
 
 RailElm.prototype.doStep = function () {
     if (this.waveform != VoltageElm.WF_DC)
-        CirSim.updateVoltageSource(0, this.nodes[0], this.voltSource, this.getVoltage());
+        Circuit.updateVoltageSource(0, this.nodes[0], this.voltSource, this.getVoltage());
 };
 
 RailElm.prototype.hasGroundConnection = function (n1) {

@@ -6,343 +6,344 @@
 
 
 
-CirSim.mouseMode = CirSim.MODE_SELECT;
-CirSim.tempMouseMode = CirSim.MODE_SELECT;
-CirSim.mouseModeStr = "Select";
+Circuit.mouseMode = Circuit.MODE_SELECT;
+Circuit.tempMouseMode = Circuit.MODE_SELECT;
+Circuit.mouseModeStr = "Select";
 
 // User drag coordinates for selection
-CirSim.dragX = 0;
-CirSim.dragY = 0;
-CirSim.initDragX = 0;
-CirSim.initDragY = 0;
+Circuit.dragX = 0;
+Circuit.dragY = 0;
+Circuit.initDragX = 0;
+Circuit.initDragY = 0;
 
-CirSim.selectedArea = new Rectangle(-1, -1, -1, -1);
+Circuit.selectedArea = new Rectangle(-1, -1, -1, -1);
 
-CirSim.gridSize     = 10;
-CirSim.gridMask     = 10;
-CirSim.gridRound    = 10;
+Circuit.gridSize     = 10;
+Circuit.gridMask     = 10;
+Circuit.gridRound    = 10;
 
-CirSim.dragging     = false;    // True if a circuit element (or elements) are being dragged)
-CirSim.analyzeFlag  = true;     // Flag indicating if the circuit needs to be reanalyzed (only true when the circuit has changed)
-CirSim.dumpMatrix   = false;
+Circuit.dragging     = false;    // True if a circuit element (or elements) are being dragged)
+Circuit.analyzeFlag  = true;     // Flag indicating if the circuit needs to be reanalyzed (only true when the circuit has changed)
+Circuit.dumpMatrix   = false;
 
 
-CirSim.t = 0;       // Simulation time (in seconds)
-CirSim.pause = 10;
+Circuit.t = 0;       // Simulation time (in seconds)
+Circuit.pause = 10;
 
 // User interaction state variables
-CirSim.MODE_ADD_ELM     = 0;
-CirSim.MODE_DRAG_ALL    = 1;
-CirSim.MODE_DRAG_ROW    = 2;
-CirSim.MODE_DRAG_COLUMN = 3;
-CirSim.MODE_DRAG_SELECTED = 4;
-CirSim.MODE_DRAG_POST   = 5;
-CirSim.MODE_SELECT      = 6;
-CirSim.infoWidth        = 120;
+Circuit.MODE_ADD_ELM     = 0;
+Circuit.MODE_DRAG_ALL    = 1;
+Circuit.MODE_DRAG_ROW    = 2;
+Circuit.MODE_DRAG_COLUMN = 3;
+Circuit.MODE_DRAG_SELECTED = 4;
+Circuit.MODE_DRAG_POST   = 5;
+Circuit.MODE_SELECT      = 6;
+Circuit.infoWidth        = 120;
 
-CirSim.menuScope    = -1;
-CirSim.hintType     = -1;
-CirSim.hintItem1    = -1;
-CirSim.hintItem2    = -1;
-CirSim.stopMessage  = 0;
+Circuit.menuScope    = -1;
+Circuit.hintType     = -1;
+Circuit.hintItem1    = -1;
+Circuit.hintItem2    = -1;
+Circuit.stopMessage  = 0;
 
 // Variables to store states and optimize rendering of circuit elements
-CirSim.HINT_LC      = 1;
-CirSim.HINT_RC      = 2;
-CirSim.HINT_3DB_C   = 3;
-CirSim.HINT_TWINT   = 4;
-CirSim.HINT_3DB_L   = 5;
+Circuit.HINT_LC      = 1;
+Circuit.HINT_RC      = 2;
+Circuit.HINT_3DB_C   = 3;
+Circuit.HINT_TWINT   = 4;
+Circuit.HINT_3DB_L   = 5;
 
 
-CirSim.setupList = [];
+Circuit.setupList = [];
 
 // Simulation state variables ///////////////////////
-CirSim.stoppedCheck         = false;
-CirSim.showPowerCheck       = false;
-CirSim.showValuesCheckItem  = false;
-CirSim.powerCheckItem       = false;
-CirSim.voltsCheckItem       = true;
-CirSim.dotsCheckItem        = true;
-CirSim.printableCheckItem   = false;
-CirSim.conventionCheckItem  = true;
-CirSim.speedBar             = 90;
-CirSim.currentBar           = 40;
-CirSim.smallGridCheckItem   = false;
-CirSim.powerBar             = 'PowerBarNeedsToBeImplemented';
+Circuit.stoppedCheck         = false;
+Circuit.showPowerCheck       = false;
+Circuit.showValuesCheckItem  = false;
+Circuit.powerCheckItem       = false;
+Circuit.voltsCheckItem       = true;
+Circuit.dotsCheckItem        = true;
+Circuit.printableCheckItem   = false;
+Circuit.conventionCheckItem  = true;
+Circuit.speedBar             = 90;
+Circuit.currentBar           = 40;
+Circuit.smallGridCheckItem   = false;
+Circuit.powerBar             = 'PowerBarNeedsToBeImplemented';
 
-CirSim.timeStep             = 1e-6;
-CirSim.converged            = true;
-CirSim.subIterations        = 5000;
+Circuit.timeStep             = 1e-6;
+Circuit.converged            = true;
+Circuit.subIterations        = 5000;
 ////////////////////////////////////////////////////
 
-CirSim.dragElm      = null;     // Element currently being dragged by the mouse
-CirSim.menuElm      = null;
-CirSim.mouseElm     = null;     // Element the mouse is hovering over
-CirSim.stopElm      = null;     // Element that caused an error
+Circuit.dragElm      = null;     // Element currently being dragged by the mouse
+Circuit.menuElm      = null;
+Circuit.mouseElm     = null;     // Element the mouse is hovering over
+Circuit.stopElm      = null;     // Element that caused an error
 
-CirSim.mousePost    = -1;       // Index of post
-CirSim.plotXElm     = null;     // Element being plotted
-CirSim.plotYElm     = null;
-CirSim.draggingPost = 0;        // Index of post being dragged
-CirSim.heldSwitchElm;
+Circuit.mousePost    = -1;       // Index of post
+Circuit.draggingPost = 0;        // Index of post being dragged
+Circuit.plotXElm     = null;     // Element being plotted
+Circuit.plotYElm     = null;
+Circuit.heldSwitchElm;
 
 // Todo: Scopes not yet fully implemented
-CirSim.Scopes           = [];   // Array of active scopes
-CirSim.scopeCount       = 0;
-CirSim.scopeSelected    = -1;
-CirSim.scopeColCount    = [];
+Circuit.Scopes           = [];   // Array of active scopes
+Circuit.scopeCount       = 0;
+Circuit.scopeSelected    = -1;
+Circuit.scopeColCount    = [];
 
-CirSim.muString     = "u";
-CirSim.ohmString    = "ohm";
+Circuit.muString     = "u";
+Circuit.ohmString    = "ohm";
 
-CirSim.root
+Circuit.root
 
-CirSim.elmList = [];
-CirSim.nodeList = [];
-CirSim.voltageSources = [];
+Circuit.elementList = [];
+Circuit.nodeList = [];
+Circuit.voltageSources = [];
 
 // Circuit data Arrays: //////////////////////////////////////////////////////////
-CirSim.circuitMatrix    = [];     // Two dimensional floating point array, representing data nodes of circuit
-CirSim.circuitRightSide = [];
+Circuit.circuitMatrix    = [];     // Two dimensional floating point array, representing data nodes of circuit
+Circuit.circuitRightSide = [];
 
-CirSim.origMatrix       = [];     // Original Circuit
-CirSim.origRightSide    = [];     // Original right-side Column vector (floating point)
+Circuit.origMatrix       = [];     // Original Circuit
+Circuit.origRightSide    = [];     // Original right-side Column vector (floating point)
 
-CirSim.circuitRowInfo   = [];     // Array of RowInfo Elements
-CirSim.circuitPermute   = [];     // Array of integers
+Circuit.circuitRowInfo   = [];     // Array of RowInfo Elements
+Circuit.circuitPermute   = [];     // Array of integers
 
-CirSim.scaleFactors     = [];
+Circuit.scaleFactors     = [];
 //////////////////////////////////////////////////////////////////////////////////
 
-CirSim.circuitNonLinear = false;
+Circuit.circuitNonLinear = false;
 
-CirSim.voltageSourceCount = 0;
+Circuit.voltageSourceCount = 0;
 
-CirSim.circuitMatrixSize;
-CirSim.circuitMatrixFullSize;
-CirSim.circuitNeedsMap;
+Circuit.circuitMatrixSize;
+Circuit.circuitMatrixFullSize;
+Circuit.circuitNeedsMap;
 
-CirSim.editDialog = null;
-CirSim.impDialog;
+Circuit.editDialog = null;
+Circuit.impDialog;
 
-CirSim.clipboard = "";
+Circuit.clipboard = "";
 
 //CirSim.circuitArea;
-CirSim.circuitBottom;
+Circuit.circuitBottom;
 
-CirSim.undoStack = [];
-CirSim.redoStack = [];
+Circuit.undoStack = [];
+Circuit.redoStack = [];
 
-CirSim.startCircuit     = null;
-CirSim.startLabel       = null;
-CirSim.startCircuitText = null;
-CirSim.baseURL          = "";
+Circuit.startCircuit     = null;
+Circuit.startLabel       = null;
+Circuit.startCircuitText = null;
+Circuit.baseURL          = "";
 
 // Simulation tracking variables:
-CirSim.lastTime = 0;
-CirSim.lastFrameTime = 0;
-CirSim.lastIterTime = 0;
-CirSim.secTime      = 0;
-CirSim.frames       = 0;
-CirSim.steps        = 0;
-CirSim.framerate    = 0;
-CirSim.steprate     = 0;
+Circuit.lastTime = 0;
+Circuit.lastFrameTime = 0;
+Circuit.lastIterTime = 0;
+Circuit.secTime      = 0;
+Circuit.frames       = 0;
+Circuit.steps        = 0;
+Circuit.framerate    = 0;
+Circuit.steprate     = 0;
 
-CirSim.dumpTypes    = [];
-CirSim.menuMapping  = [];
+Circuit.dumpTypes    = [];
+Circuit.menuMapping  = [];
 //= new Dictionary();	// Array of classes
 
-CirSim.useFrame = false;
+Circuit.useFrame = false;
 
 var date = new Date();
 
-CirSim.addingClass      = "null";    // String representing object to be added.
-CirSim.elementMap       = [];   // Map of each circuit element to its corresponding object
+Circuit.addingClass      = "null";    // String representing object to be added.
+Circuit.elementMap       = [];   // Map of each circuit element to its corresponding object
 
-CirSim.NO_MOUSE_BTN     = 0;
-CirSim.LEFT_MOUSE_BTN   = 1;
-CirSim.MIDDLE_MOUSE_BTN = 2;
-CirSim.RIGHT_MOUSE_BTN  = 3;
+Circuit.NO_MOUSE_BTN     = 0;
+Circuit.LEFT_MOUSE_BTN   = 1;
+Circuit.MIDDLE_MOUSE_BTN = 2;
+Circuit.RIGHT_MOUSE_BTN  = 3;
 
-CirSim.NO_KEY_DOWN  = 0;
-CirSim.KEY_DELETE   = 46;
-CirSim.KEY_SHIFT    = 16;
-CirSim.KEY_CTRL     = 17;
-CirSim.KEY_ALT      = 18;
+Circuit.NO_KEY_DOWN  = 0;
+Circuit.KEY_DELETE   = 46;
+Circuit.KEY_SHIFT    = 16;
+Circuit.KEY_CTRL     = 17;
+Circuit.KEY_ALT      = 18;
 
-CirSim.KEY_ESC      = 27;
+Circuit.KEY_ESC      = 27;
 
-CirSim.keyDown          = CirSim.NO_KEY_DOWN;
-CirSim.mouseButtonDown  = CirSim.NO_MOUSE_BTN;
+Circuit.keyDown          = Circuit.NO_KEY_DOWN;
+Circuit.mouseButtonDown  = Circuit.NO_MOUSE_BTN;
 
 ///////////////////////////////////////////////////////////////////////
 // CirSim Constructor: ////////////////////////////////////////////////
-function CirSim() {
+function Circuit() {
     console.log("Started simulation");
 };
 
 /**
  * Initializes
  */
-CirSim.init = function (defaultCircuit) {
+Circuit.init = function (defaultCircuit) {
 
     // TODO FINISH IMPLEMENTATION
-    CirSim.initScaleFactors();
+    Circuit.initScaleFactors();
 
     CircuitElement.initClass();
 
-    CirSim.needAnalyze();
+    Circuit.needAnalyze();
 
     /////////////////////////////////////////
     // Set up UI Here:
     /////////////////////////////////////////
-    CirSim.dumpTypes = new Array(300);
+    Circuit.dumpTypes = new Array(300);
 
-    CirSim.dumpTypes['o'] = Scope.prototype;
-    CirSim.dumpTypes['h'] = Scope.prototype;
-    CirSim.dumpTypes['$'] = Scope.prototype;
-    CirSim.dumpTypes['%'] = Scope.prototype;
-    CirSim.dumpTypes['?'] = Scope.prototype;
-    CirSim.dumpTypes['B'] = Scope.prototype;
+    Circuit.dumpTypes['o'] = Scope.prototype;
+    Circuit.dumpTypes['h'] = Scope.prototype;
+    Circuit.dumpTypes['$'] = Scope.prototype;
+    Circuit.dumpTypes['%'] = Scope.prototype;
+    Circuit.dumpTypes['?'] = Scope.prototype;
+    Circuit.dumpTypes['B'] = Scope.prototype;
 
     //////////////////////////////////////////////////////////////////////
     // Create a hashmap of all our elements:
     //////////////////////////////////////////////////////////////////////
     // Implemented, tested, working (prefixed with +)
-    CirSim.elementMap['WireElm']        = '+Wire';
-    CirSim.elementMap['ResistorElm']    = '+Resistor';
-    CirSim.elementMap['CapacitorElm']   = '+Capacitor';
-    CirSim.elementMap['InductorElm']    = '+Inductor';
-    CirSim.elementMap['SwitchElm']      = '+Switch';
-    CirSim.elementMap['GroundElm']      = '+Ground';
-    CirSim.elementMap['VoltageElm']     = '+Voltage Source';
+    Circuit.elementMap['WireElm']        = '+Wire';
+    Circuit.elementMap['ResistorElm']    = '+Resistor';
+    Circuit.elementMap['CapacitorElm']   = '+Capacitor';
+    Circuit.elementMap['InductorElm']    = '+Inductor';
+    Circuit.elementMap['SwitchElm']      = '+Switch';
+    Circuit.elementMap['GroundElm']      = '+Ground';
+    Circuit.elementMap['VoltageElm']     = '+Voltage Source';
 
     // Implemented, not tested (prefixed with #)
-    CirSim.elementMap['DiodeElm'] = '#Diode';
+    Circuit.elementMap['DiodeElm'] = '#Diode';
 
     // Not implemented (prefixed with -)
-    CirSim.elementMap['ACRailElm'] = '-AC Rail';
-    CirSim.elementMap['ACVoltageElm'] = '-AC Voltage';
-    CirSim.elementMap['ADCElm'] = '-A/D Converter';
-    CirSim.elementMap['AnalogSwitchElm'] = '-Analog Switch';
-    CirSim.elementMap['AnalogSwitch2Elm'] = '-Analog Switch2';
-    CirSim.elementMap['AndGateElm'] = '-AndGateElm';
-    CirSim.elementMap['AntennaElm'] = '-Antenna';
-    CirSim.elementMap['CC2Elm'] = '-CC2';
-    CirSim.elementMap['CC2NegElm'] = '-CC2 Negative';
-    CirSim.elementMap['ClockElm'] = '-Clock Generator';
-    CirSim.elementMap['CounterElm'] = '-Counter';
-    CirSim.elementMap['CurrentElm'] = '-Current Source';
+    Circuit.elementMap['ACRailElm'] = '-AC Rail';
+    Circuit.elementMap['ACVoltageElm'] = '-AC Voltage';
+    Circuit.elementMap['ADCElm'] = '-A/D Converter';
+    Circuit.elementMap['AnalogSwitchElm'] = '-Analog Switch';
+    Circuit.elementMap['AnalogSwitch2Elm'] = '-Analog Switch2';
+    Circuit.elementMap['AndGateElm'] = '-AndGateElm';
+    Circuit.elementMap['AntennaElm'] = '-Antenna';
+    Circuit.elementMap['CC2Elm'] = '-CC2';
+    Circuit.elementMap['CC2NegElm'] = '-CC2 Negative';
+    Circuit.elementMap['ClockElm'] = '-Clock Generator';
+    Circuit.elementMap['CounterElm'] = '-Counter';
+    Circuit.elementMap['CurrentElm'] = '-Current Source';
 
-    CirSim.elementMap['DACElm'] = '-D/A Converter';
-    CirSim.elementMap['DCVoltageElm'] = '-DC Voltage Src';
-    CirSim.elementMap['DecadeElm'] = '-Decade Counter';
-    CirSim.elementMap['DFlipFlopElm'] = '-D Flip Flop';
-    CirSim.elementMap['DiacElm'] = '-Diac';
-    CirSim.elementMap['InverterElm'] = '-InverterElm';
-    CirSim.elementMap['JfetElm'] = '-JFET';
-    CirSim.elementMap['JKFlipFlopElm'] = '-JK Flip Flop';
-    CirSim.elementMap['LampElm'] = '-LampElm';
-    CirSim.elementMap['LatchElm'] = '-Latch';
-    CirSim.elementMap['LEDElm'] = '-LED';
-    CirSim.elementMap['LogicInputElm'] = '-Logic Input';
+    Circuit.elementMap['DACElm'] = '-D/A Converter';
+    Circuit.elementMap['DCVoltageElm'] = '-DC Voltage Src';
+    Circuit.elementMap['DecadeElm'] = '-Decade Counter';
+    Circuit.elementMap['DFlipFlopElm'] = '-D Flip Flop';
+    Circuit.elementMap['DiacElm'] = '-Diac';
+    Circuit.elementMap['InverterElm'] = '-InverterElm';
+    Circuit.elementMap['JfetElm'] = '-JFET';
+    Circuit.elementMap['JKFlipFlopElm'] = '-JK Flip Flop';
+    Circuit.elementMap['LampElm'] = '-LampElm';
+    Circuit.elementMap['LatchElm'] = '-Latch';
+    Circuit.elementMap['LEDElm'] = '-LED';
+    Circuit.elementMap['LogicInputElm'] = '-Logic Input';
 
-    CirSim.elementMap['LogicOutputElm'] = '-Logic Output';
-    CirSim.elementMap['MemristorElm'] = '-Memristor';
-    CirSim.elementMap['MosftetElm'] = '-MOSFET';
-    CirSim.elementMap['NandGageElm'] = '-NAND Gate';
-    CirSim.elementMap['NJfetElm'] = '-N-type JFET';
-    CirSim.elementMap['PJfetElm'] = '-P-type JFET';
-    CirSim.elementMap['NMosfetElm'] = '-N-type FET';
-    CirSim.elementMap['PMosfetElm'] = '-P-type FET';
-    CirSim.elementMap['PotElm'] = '-Potentiometer';
-    CirSim.elementMap['ProbeElm'] = '-Probe';
-    CirSim.elementMap['PTransistorElm'] = '-P Transistor';
-    CirSim.elementMap['NTransistorElm'] = '-N Transistor';
-    CirSim.elementMap['PushSwitchElm'] = '-PushSwitch';
-    CirSim.elementMap['RailElm'] = '-Voltage Rail';
-    CirSim.elementMap['RelayElm'] = '-Relay';
-    CirSim.elementMap['SCRElm'] = '-SCR Element';
-    CirSim.elementMap['SevenSegElm'] = '-7-Segment LCD';
-    CirSim.elementMap['SparkGapElm'] = '-Spark Gap';
-    CirSim.elementMap['SquareRailElm'] = '-SquareRail';
-    CirSim.elementMap['SweepElm'] = '-Freq. Sweep';
-    CirSim.elementMap['Switch2Elm'] = '-Switch 2';
-    CirSim.elementMap['TappedTransformerElm'] = '-Tapped Transformer';
-    CirSim.elementMap['TextElm'] = '-Text';
-    CirSim.elementMap['ThermistorElm'] = '-Thermistor';
-    CirSim.elementMap['TimerElm'] = '-Timer';
-    CirSim.elementMap['TransformerElm'] = '-Transformer';
-    CirSim.elementMap['TransistorElm'] = '-Transistor';
-    CirSim.elementMap['TransmissionElm'] = '-Xmission Line';
-    CirSim.elementMap['TriacElm'] = '-Triac';
-    CirSim.elementMap['TriodeElm'] = '-Triode';
-    CirSim.elementMap['TunnelDiodeElm'] = '-TunnelDiode';
-    CirSim.elementMap['VarRailElm'] = '-Variable Rail';
-    CirSim.elementMap['VCOElm'] = '-Volt. Cont. Osc.';
-    CirSim.elementMap['XORGateElm'] = '-XOR Gate';
-    CirSim.elementMap['ZenerElm'] = '-Zener Diode';
+    Circuit.elementMap['LogicOutputElm'] = '-Logic Output';
+    Circuit.elementMap['MemristorElm'] = '-Memristor';
+    Circuit.elementMap['MosftetElm'] = '-MOSFET';
+    Circuit.elementMap['NandGageElm'] = '-NAND Gate';
+    Circuit.elementMap['NJfetElm'] = '-N-type JFET';
+    Circuit.elementMap['PJfetElm'] = '-P-type JFET';
+    Circuit.elementMap['NMosfetElm'] = '-N-type FET';
+    Circuit.elementMap['PMosfetElm'] = '-P-type FET';
+    Circuit.elementMap['PotElm'] = '-Potentiometer';
+    Circuit.elementMap['ProbeElm'] = '-Probe';
+    Circuit.elementMap['PTransistorElm'] = '-P Transistor';
+    Circuit.elementMap['NTransistorElm'] = '-N Transistor';
+    Circuit.elementMap['PushSwitchElm'] = '-PushSwitch';
+    Circuit.elementMap['RailElm'] = '-Voltage Rail';
+    Circuit.elementMap['RelayElm'] = '-Relay';
+    Circuit.elementMap['SCRElm'] = '-SCR Element';
+    Circuit.elementMap['SevenSegElm'] = '-7-Segment LCD';
+    Circuit.elementMap['SparkGapElm'] = '-Spark Gap';
+    Circuit.elementMap['SquareRailElm'] = '-SquareRail';
+    Circuit.elementMap['SweepElm'] = '-Freq. Sweep';
+    Circuit.elementMap['Switch2Elm'] = '-Switch 2';
+    Circuit.elementMap['TappedTransformerElm'] = '-Tapped Transformer';
+    Circuit.elementMap['TextElm'] = '-Text';
+    Circuit.elementMap['ThermistorElm'] = '-Thermistor';
+    Circuit.elementMap['TimerElm'] = '-Timer';
+    Circuit.elementMap['TransformerElm'] = '-Transformer';
+    Circuit.elementMap['TransistorElm'] = '-Transistor';
+    Circuit.elementMap['TransmissionElm'] = '-Xmission Line';
+    Circuit.elementMap['TriacElm'] = '-Triac';
+    Circuit.elementMap['TriodeElm'] = '-Triode';
+    Circuit.elementMap['TunnelDiodeElm'] = '-TunnelDiode';
+    Circuit.elementMap['VarRailElm'] = '-Variable Rail';
+    Circuit.elementMap['VCOElm'] = '-Volt. Cont. Osc.';
+    Circuit.elementMap['XORGateElm'] = '-XOR Gate';
+    Circuit.elementMap['ZenerElm'] = '-Zener Diode';
 
 
-    CirSim.setGrid();
-    CirSim.registerAll();
-    CirSim.elmList = new Array();
+    Circuit.setGrid();
+    Circuit.registerAll();
+    Circuit.elementList = new Array();
 
-    CirSim.setupList = new Array();
-    CirSim.undoStack = new Array();
-    CirSim.redoStack = new Array();
+    Circuit.setupList = new Array();
+    Circuit.undoStack = new Array();
+    Circuit.redoStack = new Array();
 
-    CirSim.scopes           = new Array(20); // Array of scope objects
-    CirSim.scopeColCount    = new Array(20); // Array of integers
-    CirSim.scopeCount       = 0;
+    Circuit.scopes           = new Array(20); // Array of scope objects
+    Circuit.scopeColCount    = new Array(20); // Array of integers
+    Circuit.scopeCount       = 0;
 
-    CirSim.initCircuit(defaultCircuit);
+    Circuit.initCircuit(defaultCircuit);
 
 };
+
 
 /**
  * Components in this method will be registered with the engine so that they can be read from text files
  */
-CirSim.registerAll = function () {
+Circuit.registerAll = function () {
 
-    CirSim.register("ResistorElm");
-    CirSim.register("CapacitorElm");
-    CirSim.register("SwitchElm");
-    CirSim.register("Switch2Elm");
-    CirSim.register("GroundElm");
-    CirSim.register("WireElm");
-    CirSim.register("VoltageElm");
-    CirSim.register("RailElm");
-    CirSim.register("SweepElm");
-    CirSim.register("InductorElm");
-    CirSim.register("DiodeElm");
-    CirSim.register("MosfetElm");
-    CirSim.register("TransistorElm");
-    CirSim.register("OpAmpElm");
-    CirSim.register("SparkGapElm");
-    CirSim.register("OutputElm");
+    Circuit.register("ResistorElm");
+    Circuit.register("CapacitorElm");
+    Circuit.register("SwitchElm");
+    Circuit.register("Switch2Elm");
+    Circuit.register("GroundElm");
+    Circuit.register("WireElm");
+    Circuit.register("VoltageElm");
+    Circuit.register("RailElm");
+    Circuit.register("SweepElm");
+    Circuit.register("InductorElm");
+    Circuit.register("DiodeElm");
+    Circuit.register("MosfetElm");
+    Circuit.register("TransistorElm");
+    Circuit.register("OpAmpElm");
+    Circuit.register("SparkGapElm");
+    Circuit.register("OutputElm");
 
 };
 
 /**
  * Working components must be registered with the engine so that they can be read from text files
  */
-CirSim.register = function (elmClassName) {
+Circuit.register = function (elmClassName) {
 
     // TODO test
     try {
-        var elm = CirSim.constructElement(elmClassName, 0, 0, 0, 0, 0, null);
+        var elm = Circuit.constructElement(elmClassName, 0, 0, 0, 0, 0, null);
         var dumpType = elm.getDumpType();
 
         var dclass = elmClassName;  //elmClassName.getDumpClass();
-        if (CirSim.dumpTypes[dumpType] == dclass)
+        if (Circuit.dumpTypes[dumpType] == dclass)
             return;
-        if (CirSim.dumpTypes[dumpType] != null) {
-            console.log("Dump type conflict: " + dumpType + " " + CirSim.dumpTypes[dumpType]);
+        if (Circuit.dumpTypes[dumpType] != null) {
+            console.log("Dump type conflict: " + dumpType + " " + Circuit.dumpTypes[dumpType]);
             return;
         }
 
-        CirSim.dumpTypes[dumpType] = elmClassName;
+        Circuit.dumpTypes[dumpType] = elmClassName;
     } catch (e) {
         console.log("Element: " + elmClassName + " Not yet implemented");
     }
@@ -357,15 +358,15 @@ CirSim.register = function (elmClassName) {
  *
  * $ 1 5.0E-6 11.251013186076355 50 5.0 50
  *  */
-CirSim.initCircuit = function (defaultCircuit) {
+Circuit.initCircuit = function (defaultCircuit) {
 
     // Clear and reset circuit elements
-    CirSim.clearAll();
-    CirSim.undoStack = new Array();
+    Circuit.clearAll();
+    Circuit.undoStack = new Array();
 
     readSetupList(false);
 
-    CirSim.readCircuitFromFile(defaultCircuit + '.txt', false);
+    Circuit.readCircuitFromFile(defaultCircuit + '.txt', false);
 
 };
 
@@ -379,7 +380,7 @@ CirSim.initCircuit = function (defaultCircuit) {
  *
  * $ 1 5.0E-6 11.251013186076355 50 5.0 50
  *  */
-CirSim.readOptions = function (st) {
+Circuit.readOptions = function (st) {
 
 
     var flags = Math.floor(st.shift());
@@ -387,50 +388,50 @@ CirSim.readOptions = function (st) {
     var flags;
     var sp;
 
-    CirSim.dotsCheckItem = ((flags & 1) != 0);
-    CirSim.smallGridCheckItem = ((flags & 2) != 0);
-    CirSim.voltsCheckItem = ((flags & 4) == 0);
-    CirSim.powerCheckItem = ((flags & 8) == 8);
-    CirSim.showValuesCheckItem = ((flags & 16) == 0);
+    Circuit.dotsCheckItem = ((flags & 1) != 0);
+    Circuit.smallGridCheckItem = ((flags & 2) != 0);
+    Circuit.voltsCheckItem = ((flags & 4) == 0);
+    Circuit.powerCheckItem = ((flags & 8) == 8);
+    Circuit.showValuesCheckItem = ((flags & 16) == 0);
 
-    CirSim.timeStep = Number(st.shift());
+    Circuit.timeStep = Number(st.shift());
 
     sp = Number(st.shift());
     //var sp2 = (int) (Math.log(sp)*24+1.5);
     var sp2 = Math.floor(Math.log(10 * sp) * 24 + 61.5);
 
-    CirSim.speedBar = sp2;
-    CirSim.currentBar = Math.floor(st.shift());
+    Circuit.speedBar = sp2;
+    Circuit.currentBar = Math.floor(st.shift());
 
     var vrange = Number(st.shift());
     CircuitElement.voltageRange = vrange;
 
     if (powerBar = st.shift())
-        CirSim.powerBar = Math.floor(powerBar);
+        Circuit.powerBar = Math.floor(powerBar);
 
-    CirSim.setGrid();
+    Circuit.setGrid();
 };
 
 /** Retrieves string data from a circuit text file (via AJAX GET) */
-CirSim.readCircuitFromFile = function (circuitFileName, retain) {
+Circuit.readCircuitFromFile = function (circuitFileName, retain) {
 
     var result = $.get(js_asset_path + 'circuits/'+circuitFileName, function (b) {
 
         if (!retain)
-            CirSim.clearAll();
+            Circuit.clearAll();
 
-        CirSim.readCircuitFromString(b);
+        Circuit.readCircuitFromString(b);
 
         if (!retain)
-            CirSim.handleResize(); // for scopes
+            Circuit.handleResize(); // for scopes
     });
 
 };
 
 /** Reads a circuit from a string buffer after loaded from from file.
  * Called when the defaultCircuitFile is finished loading */
-CirSim.readCircuitFromString = function (b) {
-    CirSim.reset();
+Circuit.readCircuitFromString = function (b) {
+    Circuit.reset();
 
     for (var p = 0; p < b.length;) {
 
@@ -454,17 +455,17 @@ CirSim.readCircuitFromString = function (b) {
 
             if (type == 'o') {
                 var sc = new Scope();
-                sc.position = CirSim.scopeCount;
+                sc.position = Circuit.scopeCount;
                 sc.undump(st);
-                CirSim.scopes[CirSim.scopeCount++] = sc;
+                Circuit.scopes[Circuit.scopeCount++] = sc;
                 break;
             }
             if (type == ('h')) {
-                CirSim.readHint(st);
+                Circuit.readHint(st);
                 break;
             }
             if (type == ('$')) {
-                CirSim.readOptions(st);
+                Circuit.readOptions(st);
                 break;
             }
             if (type == ('%') || type == ('?') || type == ('B')) {
@@ -481,31 +482,31 @@ CirSim.readCircuitFromString = function (b) {
             var y2 = Math.floor(st.shift());
             var f = Math.floor(st.shift());
 
-            var cls = CirSim.dumpTypes[type];
+            var cls = Circuit.dumpTypes[type];
 
             if (cls == null) {
-                CirSim.error("unrecognized dump type: " + type);
+                Circuit.error("unrecognized dump type: " + type);
                 break;
             }
 
             // ===================== NEW ELEMENTS ARE INSTANTIATED HERE ============================================
-            var ce = CirSim.constructElement(cls, x1, y1, x2, y2, f, st);
+            var ce = Circuit.constructElement(cls, x1, y1, x2, y2, f, st);
             console.log(ce);
             ce.setPoints();
             // =====================================================================================================
 
             // Add the element to the Element list
-            CirSim.elmList.push(ce);
+            Circuit.elementList.push(ce);
             break;
         }
         p += l;
 
     }
 
-    var dumpMessage = CirSim.dumpCircuit();
+    var dumpMessage = Circuit.dumpCircuit();
 
-    CirSim.needAnalyze();
-    CirSim.handleResize();
+    Circuit.needAnalyze();
+    Circuit.handleResize();
 
     //initCircuit();
     console.log("dump: \n" + dumpMessage);
@@ -513,34 +514,34 @@ CirSim.readCircuitFromString = function (b) {
 };
 
 /** Adds an element from the user interface */
-CirSim.addElm = function (elmObjectName) {
-    var insertElm = CirSim.constructElement(elmObjectName, 340, 160);
+Circuit.addElm = function (elmObjectName) {
+    var insertElm = Circuit.constructElement(elmObjectName, 340, 160);
 
-    CirSim.mouseMode = CirSim.MODE_ADD_ELM;
-    CirSim.mouseModeStr = insertElm.toString();
-    CirSim.addingClass = elmObjectName;
+    Circuit.mouseMode = Circuit.MODE_ADD_ELM;
+    Circuit.mouseModeStr = insertElm.toString();
+    Circuit.addingClass = elmObjectName;
 
-    CirSim.tempMouseMode = CirSim.mouseMode;
+    Circuit.tempMouseMode = Circuit.mouseMode;
 };
 
-CirSim.deleteSelected = function () {
+Circuit.deleteSelected = function () {
 
-    CirSim.pushUndo();
+    Circuit.pushUndo();
     //CirSim.setMenuSelection();
-    CirSim.clipboard = "";
-    for (var i = CirSim.elmList.length - 1; i >= 0; i--) {
-        var ce = CirSim.getElm(i);
+    Circuit.clipboard = "";
+    for (var i = Circuit.elementList.length - 1; i >= 0; i--) {
+        var ce = Circuit.getElm(i);
         if (ce.isSelected()) {
 
-            CirSim.clipboard += ce.dump() + "\n";
+            Circuit.clipboard += ce.dump() + "\n";
 
             // Do cleanup
             ce.destroy();
-            CirSim.elmList.splice(i, 1);
+            Circuit.elementList.splice(i, 1);
         }
     }
-    CirSim.enablePaste();
-    CirSim.needAnalyze();
+    Circuit.enablePaste();
+    Circuit.needAnalyze();
 };
 
 /**
@@ -555,7 +556,7 @@ CirSim.deleteSelected = function () {
  * @param st    string token containing variable parameters for each object
  * @return {Object}
  */
-CirSim.constructElement = function (elementObjName, xa, ya, xb, yb, f, st) {
+Circuit.constructElement = function (elementObjName, xa, ya, xb, yb, f, st) {
     // todo: Use elementObj.call(...) instead of eval for security reasons
     try {
         var newElement = eval("new " + elementObjName + "(" + xa + "," + ya + "," + xb + "," + yb + "," + f + "," + 'st' + ");");
@@ -572,55 +573,55 @@ CirSim.constructElement = function (elementObjName, xa, ya, xb, yb, f, st) {
 ////////////////////////////////////////////////////////
 
 /** TODO: Not yet fully tested */
-CirSim.onKeyPressed = function (evt) {
+Circuit.onKeyPressed = function (evt) {
 
     // Get the number of the pressed key
-    CirSim.keyDown = evt.which;
+    Circuit.keyDown = evt.which;
 
-    if (CirSim.keyDown == CirSim.KEY_SHIFT)
-        CirSim.warning("Shift key Pressed!" + evt.which);
+    if (Circuit.keyDown == Circuit.KEY_SHIFT)
+        Circuit.warning("Shift key Pressed!" + evt.which);
 
-    if (CirSim.keyDown == CirSim.KEY_CTRL)
-        CirSim.warning("Ctrl key Pressed!" + evt.which);
+    if (Circuit.keyDown == Circuit.KEY_CTRL)
+        Circuit.warning("Ctrl key Pressed!" + evt.which);
 
-    if (CirSim.keyDown == CirSim.KEY_ALT)
-        CirSim.warning("Alt key Pressed!" + evt.which);
+    if (Circuit.keyDown == Circuit.KEY_ALT)
+        Circuit.warning("Alt key Pressed!" + evt.which);
 
-    CirSim.warning('Key: ' + CirSim.keyDown);
+    Circuit.warning('Key: ' + Circuit.keyDown);
 
-    console.log("Key Pressed " + CirSim.keyDown);
+    console.log("Key Pressed " + Circuit.keyDown);
 
     // Key 'd'
-    if (CirSim.keyDown == 68) {
+    if (Circuit.keyDown == 68) {
         console.log('');
-        console.log(CirSim.dumpCircuit());
+        console.log(Circuit.dumpCircuit());
         console.log('');
     }
 
     //TODO: IMPLEMENT
-    if (CirSim.keyDown > ' ' && CirSim.keyDown < 127) {
-        var keyCode = CirSim.keyDown;
+    if (Circuit.keyDown > ' ' && Circuit.keyDown < 127) {
+        var keyCode = Circuit.keyDown;
         var keyChar = String.fromCharCode(keyCode + 32);
-        var c = CirSim.dumpTypes[keyChar];
+        var c = Circuit.dumpTypes[keyChar];
 
         if (c == null || c == 'Scope')
             return;
 
         var elm = null;
-        elm = CirSim.constructElement(c, 0, 0);
+        elm = Circuit.constructElement(c, 0, 0);
         if (elm == null || !(elm.needsShortcut() && elm.getDumpClass() == c))
             return;
 
-        CirSim.mouseMode = CirSim.MODE_ADD_ELM;
-        CirSim.mouseModeStr = c.getName();
-        CirSim.addingClass = c;
+        Circuit.mouseMode = Circuit.MODE_ADD_ELM;
+        Circuit.mouseModeStr = c.getName();
+        Circuit.addingClass = c;
     }
 
     if (keyPressed(' ')) {
-        CirSim.mouseMode = CirSim.MODE_SELECT;
-        CirSim.mouseModeStr = "Select";
+        Circuit.mouseMode = Circuit.MODE_SELECT;
+        Circuit.mouseModeStr = "Select";
     }
-    CirSim.tempMouseMode = CirSim.mouseMode;
+    Circuit.tempMouseMode = Circuit.mouseMode;
 };
 
 function keyPressed(char) {
@@ -629,132 +630,132 @@ function keyPressed(char) {
         return false;
     }
 
-    return ( CirSim.keyDown === char.charCodeAt(0) );
+    return ( Circuit.keyDown === char.charCodeAt(0) );
 }
 
 /** Key released not used */
-CirSim.onKeyReleased = function (evt) {
-    CirSim.keyDown = CirSim.NO_KEY_DOWN;
+Circuit.onKeyReleased = function (evt) {
+    Circuit.keyDown = Circuit.NO_KEY_DOWN;
 };
 
-CirSim.onMouseDragged = function (evt) {
+Circuit.onMouseDragged = function (evt) {
 
     var CanvasBounds = getCanvasBounds();
 
     // X and Y mouse position
-    var x = evt.pageX - CanvasBounds.x;
+    var x = evt.pageX - CanvasBounds.x1;
     var y = evt.pageY - CanvasBounds.y;
 
     if (!getCanvasBounds().contains(x, y))
         return;
 
-    if (CirSim.dragElm != null)
-        CirSim.dragElm.drag(x, y);
+    if (Circuit.dragElm != null)
+        Circuit.dragElm.drag(x, y);
     var success = true;
 
-    switch (CirSim.tempMouseMode) {
-        case CirSim.MODE_DRAG_ALL:
-            CirSim.dragAll(CirSim.snapGrid(x), CirSim.snapGrid(y));
+    switch (Circuit.tempMouseMode) {
+        case Circuit.MODE_DRAG_ALL:
+            Circuit.dragAll(Circuit.snapGrid(x), Circuit.snapGrid(y));
             break;
-        case CirSim.MODE_DRAG_ROW:
-            CirSim.dragRow(CirSim.snapGrid(x), CirSim.snapGrid(y));
+        case Circuit.MODE_DRAG_ROW:
+            Circuit.dragRow(Circuit.snapGrid(x), Circuit.snapGrid(y));
             break;
-        case CirSim.MODE_DRAG_COLUMN:
-            CirSim.dragColumn(CirSim.snapGrid(x), CirSim.snapGrid(y));
+        case Circuit.MODE_DRAG_COLUMN:
+            Circuit.dragColumn(Circuit.snapGrid(x), Circuit.snapGrid(y));
             break;
-        case CirSim.MODE_DRAG_POST:
-            if (CirSim.mouseElm != null)
-                CirSim.dragPost(CirSim.snapGrid(x), CirSim.snapGrid(y));
+        case Circuit.MODE_DRAG_POST:
+            if (Circuit.mouseElm != null)
+                Circuit.dragPost(Circuit.snapGrid(x), Circuit.snapGrid(y));
             break;
-        case CirSim.MODE_SELECT:
-            if (CirSim.mouseElm == null)
-                CirSim.selectArea(x, y);
+        case Circuit.MODE_SELECT:
+            if (Circuit.mouseElm == null)
+                Circuit.selectArea(x, y);
             else {
-                CirSim.tempMouseMode = CirSim.MODE_DRAG_SELECTED;
-                success = CirSim.dragSelected(x, y);
+                Circuit.tempMouseMode = Circuit.MODE_DRAG_SELECTED;
+                success = Circuit.dragSelected(x, y);
             }
             break;
-        case CirSim.MODE_DRAG_SELECTED:
-            success = CirSim.dragSelected(x, y);
+        case Circuit.MODE_DRAG_SELECTED:
+            success = Circuit.dragSelected(x, y);
             break;
     }
 
-    CirSim.dragging = true;
+    Circuit.dragging = true;
 
     if (success) {
-        if (CirSim.tempMouseMode == CirSim.MODE_DRAG_SELECTED && CirSim.mouseElm instanceof TextElm) {
-            CirSim.dragX = x;
-            CirSim.dragY = y;
+        if (Circuit.tempMouseMode == Circuit.MODE_DRAG_SELECTED && Circuit.mouseElm instanceof TextElm) {
+            Circuit.dragX = x;
+            Circuit.dragY = y;
         } else {
-            CirSim.dragX = CirSim.snapGrid(x);
-            CirSim.dragY = CirSim.snapGrid(y);
+            Circuit.dragX = Circuit.snapGrid(x);
+            Circuit.dragY = Circuit.snapGrid(y);
         }
     }
     //root.repaint();
 };
 
-CirSim.dragAll = function (x, y) {
-    var dx = x - CirSim.dragX;
-    var dy = y - CirSim.dragY;
+Circuit.dragAll = function (x, y) {
+    var dx = x - Circuit.dragX;
+    var dy = y - Circuit.dragY;
     if (dx == 0 && dy == 0)
         return;
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         ce.move(dx, dy);
     }
-    CirSim.removeZeroLengthElements();
+    Circuit.removeZeroLengthElements();
 };
 
-CirSim.dragRow = function (x, y) {
-    var dy = y - CirSim.dragY;
+Circuit.dragRow = function (x, y) {
+    var dy = y - Circuit.dragY;
     if (dy == 0)
         return;
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
-        if (ce.y == CirSim.dragY)
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
+        if (ce.y == Circuit.dragY)
             ce.movePoint(0, 0, dy);
-        if (ce.y2 == CirSim.dragY)
+        if (ce.y2 == Circuit.dragY)
             ce.movePoint(1, 0, dy);
     }
-    CirSim.removeZeroLengthElements();
+    Circuit.removeZeroLengthElements();
 };
 
 
-CirSim.onMouseMove = function (evt) {
+Circuit.onMouseMove = function (evt) {
     //    TODO: TEST
     var CanvasBounds = getCanvasBounds();
 
     // X and Y mouse position
-    var x = evt.pageX - CanvasBounds.x;
+    var x = evt.pageX - CanvasBounds.x1;
     var y = evt.pageY - CanvasBounds.y;
 
     // CirSim.error("onMouseMove: " + x + ", " + y + " " + CirSim.mouseButtonDown);
 
     // If the mouse is down
-    if (CirSim.mouseButtonDown != 0) {
-        CirSim.onMouseDragged(evt);
+    if (Circuit.mouseButtonDown != 0) {
+        Circuit.onMouseDragged(evt);
         return;
     }
 
-    CirSim.dragX = CirSim.snapGrid(x);
-    CirSim.dragY = CirSim.snapGrid(y);
+    Circuit.dragX = Circuit.snapGrid(x);
+    Circuit.dragY = Circuit.snapGrid(y);
 
-    CirSim.draggingPost = -1;
+    Circuit.draggingPost = -1;
 
     var i;
-    var origMouse = CirSim.mouseElm;
+    var origMouse = Circuit.mouseElm;
 
-    CirSim.mouseElm = null;
-    CirSim.mousePost = -1;
+    Circuit.mouseElm = null;
+    Circuit.mousePost = -1;
 
-    CirSim.plotXElm = CirSim.plotYElm = null;
+    Circuit.plotXElm = Circuit.plotYElm = null;
     var bestDist = 1e7;
     var bestArea = 1e7;
 
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         if (ce.boundingBox.contains(x, y)) {
             var j;
             var area = ce.boundingBox.width * ce.boundingBox.height;
@@ -763,81 +764,81 @@ CirSim.onMouseMove = function (evt) {
                 jn = 2;
             for (j = 0; j != jn; j++) {
                 var pt = ce.getPost(j);
-                var distance = CirSim.distanceSq(x, y, pt.x, pt.y);
+                var distance = Circuit.distanceSq(x, y, pt.x1, pt.y);
 
                 // If multiple elements have overlapping bounding boxes, we prefer selecting elements that have posts
                 // close to the mouse pointer and that have a small bounding box area.
                 if (distance <= bestDist && area <= bestArea) {
                     bestDist = distance;
                     bestArea = area;
-                    CirSim.mouseElm = ce;
+                    Circuit.mouseElm = ce;
                 }
             }
             if (ce.getPostCount() == 0)
-                CirSim.mouseElm = ce;
+                Circuit.mouseElm = ce;
         }
     }
 
-    CirSim.scopeSelected = -1;
-    if (CirSim.mouseElm == null) {
+    Circuit.scopeSelected = -1;
+    if (Circuit.mouseElm == null) {
 
-        for (i = 0; i != CirSim.scopeCount; i++) {
-            var s = CirSim.scopes[i];
+        for (i = 0; i != Circuit.scopeCount; i++) {
+            var s = Circuit.scopes[i];
             if (s.rect.contains(x, y)) {
                 s.select();
-                CirSim.scopeSelected = i;
+                Circuit.scopeSelected = i;
             }
         }
         // the mouse pointer was not in any of the bounding boxes, but we might still be close to a post
-        for (i = 0; i != CirSim.elmList.length; i++) {
-            var ce = CirSim.getElm(i);
+        for (i = 0; i != Circuit.elementList.length; i++) {
+            var ce = Circuit.getElm(i);
             var j;
             var jn = ce.getPostCount();
             for (j = 0; j != jn; j++) {
                 var pt = ce.getPost(j);
 
-                var distance = CirSim.distanceSq(x, y, pt.x, pt.y);
-                if (CirSim.distanceSq(pt.x, pt.y, x, y) < 26) {
-                    CirSim.mouseElm = ce;
-                    CirSim.mousePost = j;
+                var distance = Circuit.distanceSq(x, y, pt.x1, pt.y);
+                if (Circuit.distanceSq(pt.x1, pt.y, x, y) < 26) {
+                    Circuit.mouseElm = ce;
+                    Circuit.mousePost = j;
                     break;
                 }
             }
         }
     } else {
-        CirSim.mousePost = -1;
+        Circuit.mousePost = -1;
         // look for post close to the mouse pointer
-        for (i = 0; i != CirSim.mouseElm.getPostCount(); i++) {
-            var pt = CirSim.mouseElm.getPost(i);
-            if (CirSim.distanceSq(pt.x, pt.y, x, y) < 26)
-                CirSim.mousePost = i;
+        for (i = 0; i != Circuit.mouseElm.getPostCount(); i++) {
+            var pt = Circuit.mouseElm.getPost(i);
+            if (Circuit.distanceSq(pt.x1, pt.y, x, y) < 26)
+                Circuit.mousePost = i;
         }
     }
     //if (CircuitSimulator.mouseElm != origMouse)
     //	this.repaint();
 };
 
-CirSim.onMouseClicked = function (evt) {
+Circuit.onMouseClicked = function (evt) {
     console.log("CLICK: " + evt.pageX + "  " + evt.pageY);
 
-    if (evt.button == CirSim.LEFT_MOUSE_BTN) {
-        if (CirSim.mouseMode == CirSim.MODE_SELECT || CirSim.mouseMode == CirSim.MODE_DRAG_SELECTED)
-            CirSim.clearSelection();
+    if (evt.button == Circuit.LEFT_MOUSE_BTN) {
+        if (Circuit.mouseMode == Circuit.MODE_SELECT || Circuit.mouseMode == Circuit.MODE_DRAG_SELECTED)
+            Circuit.clearSelection();
     }
 };
 
-CirSim.onMouseEntered = function (evt) {
+Circuit.onMouseEntered = function (evt) {
     // TODO: IMPLEMENT
 };
 
-CirSim.onMouseExited = function (evt) {
+Circuit.onMouseExited = function (evt) {
     // TODO: IMPLEMENT
-    CirSim.scopeSelected = -1;
-    CirSim.mouseElm = CirSim.plotXElm = CirSim.plotYElm = null;
+    Circuit.scopeSelected = -1;
+    Circuit.mouseElm = Circuit.plotXElm = Circuit.plotYElm = null;
 
 };
 
-CirSim.onMousePressed = function (evt) {
+Circuit.onMousePressed = function (evt) {
     //TODO: IMPLEMENT right mouse
 //    var ex = evt.getModifiersEx();
 //
@@ -847,62 +848,62 @@ CirSim.onMousePressed = function (evt) {
 //        return;
 //    }
 
-    CirSim.mouseButtonDown = evt.which;
+    Circuit.mouseButtonDown = evt.which;
 
     var CanvasBounds = getCanvasBounds();
 
     // X and Y mouse position
-    var x = evt.pageX - CanvasBounds.x;
+    var x = evt.pageX - CanvasBounds.x1;
     var y = evt.pageY - CanvasBounds.y;
 
-    if (CirSim.mouseButtonDown == CirSim.LEFT_MOUSE_BTN) {
+    if (Circuit.mouseButtonDown == Circuit.LEFT_MOUSE_BTN) {
         //left mouse
-        CirSim.tempMouseMode = CirSim.mouseMode;
-        if ((CirSim.keyDown == CirSim.KEY_ALT))
-            CirSim.tempMouseMode = CirSim.MODE_DRAG_ALL;
-        else if ((CirSim.keyDown == CirSim.KEY_ALT) && (CirSim.keyDown == CirSim.KEY_SHIFT))
-            CirSim.tempMouseMode = CirSim.MODE_DRAG_ROW;
-        else if (CirSim.keyDown == CirSim.KEY_SHIFT)
-            CirSim.tempMouseMode = CirSim.MODE_SELECT;
-        else if (CirSim.keyDown == CirSim.KEY_ALT)
-            CirSim.tempMouseMode = CirSim.MODE_DRAG_ALL;
-        else if (CirSim.keyDown == CirSim.KEY_CTRL)
-            CirSim.tempMouseMode = CirSim.MODE_DRAG_POST;
+        Circuit.tempMouseMode = Circuit.mouseMode;
+        if ((Circuit.keyDown == Circuit.KEY_ALT))
+            Circuit.tempMouseMode = Circuit.MODE_DRAG_ALL;
+        else if ((Circuit.keyDown == Circuit.KEY_ALT) && (Circuit.keyDown == Circuit.KEY_SHIFT))
+            Circuit.tempMouseMode = Circuit.MODE_DRAG_ROW;
+        else if (Circuit.keyDown == Circuit.KEY_SHIFT)
+            Circuit.tempMouseMode = Circuit.MODE_SELECT;
+        else if (Circuit.keyDown == Circuit.KEY_ALT)
+            Circuit.tempMouseMode = Circuit.MODE_DRAG_ALL;
+        else if (Circuit.keyDown == Circuit.KEY_CTRL)
+            Circuit.tempMouseMode = Circuit.MODE_DRAG_POST;
     }
-    else if (CirSim.mouseButtonDown == CirSim.RIGHT_MOUSE_BTN) {
+    else if (Circuit.mouseButtonDown == Circuit.RIGHT_MOUSE_BTN) {
         // right mouse
-        if (CirSim.keyDown == CirSim.KEY_SHIFT)
-            CirSim.tempMouseMode = CirSim.MODE_DRAG_ROW;
-        else if (CirSim.keyDown == CirSim.KEY_CTRL)
-            CirSim.tempMouseMode = CirSim.MODE_DRAG_COLUMN;
+        if (Circuit.keyDown == Circuit.KEY_SHIFT)
+            Circuit.tempMouseMode = Circuit.MODE_DRAG_ROW;
+        else if (Circuit.keyDown == Circuit.KEY_CTRL)
+            Circuit.tempMouseMode = Circuit.MODE_DRAG_COLUMN;
         else
             return;
     }
 
-    if (CirSim.tempMouseMode != CirSim.MODE_SELECT && CirSim.tempMouseMode != CirSim.MODE_DRAG_SELECTED)
-        CirSim.clearSelection();
+    if (Circuit.tempMouseMode != Circuit.MODE_SELECT && Circuit.tempMouseMode != Circuit.MODE_DRAG_SELECTED)
+        Circuit.clearSelection();
 
-    if (CirSim.doSwitch(x, y))
+    if (Circuit.doSwitch(x, y))
         return;
 
     //pushUndo();
 
-    CirSim.initDragX = x;
-    CirSim.initDragY = y;
-    CirSim.dragging = true;
+    Circuit.initDragX = x;
+    Circuit.initDragY = y;
+    Circuit.dragging = true;
 
-    if (CirSim.tempMouseMode != CirSim.MODE_ADD_ELM || !CirSim.addingClass)
+    if (Circuit.tempMouseMode != Circuit.MODE_ADD_ELM || !Circuit.addingClass)
         return;
 
-    var x0 = CirSim.snapGrid(x);
-    var y0 = CirSim.snapGrid(y);
+    var x0 = Circuit.snapGrid(x);
+    var y0 = Circuit.snapGrid(y);
     if (!CanvasBounds.contains(x0, y0))
         return;
 
-    CirSim.dragElm = CirSim.constructElement(CirSim.addingClass, x0, y0);
+    Circuit.dragElm = Circuit.constructElement(Circuit.addingClass, x0, y0);
 };
 
-CirSim.onMouseReleased = function (evt) {
+Circuit.onMouseReleased = function (evt) {
     //TODO: test
 //    int ex = e.getModifiersEx();
 
@@ -912,363 +913,363 @@ CirSim.onMouseReleased = function (evt) {
 //        return;
 //    }
 
-    CirSim.mouseButtonDown = CirSim.NO_MOUSE_BTN;
+    Circuit.mouseButtonDown = Circuit.NO_MOUSE_BTN;
 
-    CirSim.tempMouseMode = CirSim.mouseMode;
-    CirSim.selectedArea = null;
-    CirSim.dragging = false;
+    Circuit.tempMouseMode = Circuit.mouseMode;
+    Circuit.selectedArea = null;
+    Circuit.dragging = false;
     var circuitChanged = false;
 
-    if (CirSim.heldSwitchElm) {
-        CirSim.heldSwitchElm.mouseUp();
-        CirSim.heldSwitchElm = null;
+    if (Circuit.heldSwitchElm) {
+        Circuit.heldSwitchElm.mouseUp();
+        Circuit.heldSwitchElm = null;
         circuitChanged = true;
     }
 
-    if (CirSim.dragElm != null) {
+    if (Circuit.dragElm != null) {
         // if the element is zero size then don't create it
-        if (CirSim.dragElm.x == CirSim.dragElm.x2 && CirSim.dragElm.y == CirSim.dragElm.y2)
-            CirSim.dragElm.destroy();
+        if (Circuit.dragElm.x1 == Circuit.dragElm.x2 && Circuit.dragElm.y == Circuit.dragElm.y2)
+            Circuit.dragElm.destroy();
         else {
-            CirSim.elmList.push(CirSim.dragElm);
+            Circuit.elementList.push(Circuit.dragElm);
             circuitChanged = true;
         }
-        CirSim.dragElm = null;
+        Circuit.dragElm = null;
     }
 
-    for (var i = 0; i < CirSim.elmList.length; ++i) {
-        var ce = CirSim.elmList[i];
+    for (var i = 0; i < Circuit.elementList.length; ++i) {
+        var ce = Circuit.elementList[i];
 
         if (ce.isSelected()) {
-            CirSim.doEdit(ce);
+            Circuit.doEdit(ce);
         }
     }
 
     if (circuitChanged)
-        CirSim.needAnalyze();
-    if (CirSim.dragElm != null)
-        CirSim.dragElm.destroy();
+        Circuit.needAnalyze();
+    if (Circuit.dragElm != null)
+        Circuit.dragElm.destroy();
 
-    CirSim.dragElm = null;
+    Circuit.dragElm = null;
     //root.repaint();
 };
 
 
-CirSim.resetSelection = function () {
-    CirSim.mouseMode = CirSim.MODE_SELECT;
-    CirSim.mouseModeStr = "Select";
+Circuit.resetSelection = function () {
+    Circuit.mouseMode = Circuit.MODE_SELECT;
+    Circuit.mouseModeStr = "Select";
 
-    CirSim.tempMouseMode = CirSim.mouseMode;
+    Circuit.tempMouseMode = Circuit.mouseMode;
 };
 
-CirSim.dragColumn = function (x, y) {
+Circuit.dragColumn = function (x, y) {
     //TODO: test
-    var dx = x - CirSim.dragX;
+    var dx = x - Circuit.dragX;
     if (dx == 0)
         return;
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
-        if (ce.x == CirSim.dragX)
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
+        if (ce.x1 == Circuit.dragX)
             ce.movePoint(0, dx, 0);
-        if (ce.x2 == CirSim.dragX)
+        if (ce.x2 == Circuit.dragX)
             ce.movePoint(1, dx, 0);
     }
-    CirSim.removeZeroLengthElements();
+    Circuit.removeZeroLengthElements();
 };
 
-CirSim.dragSelected = function (x, y) {
+Circuit.dragSelected = function (x, y) {
     //TODO: test
     var me = false;
-    if (CirSim.mouseElm != null && !CirSim.mouseElm.isSelected())
-        CirSim.mouseElm.setSelected(me = true);
+    if (Circuit.mouseElm != null && !Circuit.mouseElm.isSelected())
+        Circuit.mouseElm.setSelected(me = true);
 
     // snap grid, unless we're only dragging text elements
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         if (ce.isSelected() && !(ce instanceof TextElm))
             break;
     }
-    if (i != CirSim.elmList.length) {
-        x = CirSim.snapGrid(x);
-        y = CirSim.snapGrid(y);
+    if (i != Circuit.elementList.length) {
+        x = Circuit.snapGrid(x);
+        y = Circuit.snapGrid(y);
     }
 
-    var dx = x - CirSim.dragX;
-    var dy = y - CirSim.dragY;
+    var dx = x - Circuit.dragX;
+    var dy = y - Circuit.dragY;
     if (dx == 0 && dy == 0) {
         // don't leave mouseElm selected if we selected it above
         if (me)
-            CirSim.mouseElm.setSelected(false);
+            Circuit.mouseElm.setSelected(false);
         return false;
     }
     var allowed = true;
 
     // check if moves are allowed
-    for (i = 0; allowed && i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; allowed && i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         if (ce.isSelected() && !ce.allowMove(dx, dy))
             allowed = false;
     }
 
     if (allowed) {
-        for (i = 0; i != CirSim.elmList.length; i++) {
-            var ce = CirSim.getElm(i);
+        for (i = 0; i != Circuit.elementList.length; i++) {
+            var ce = Circuit.getElm(i);
             if (ce.isSelected())
                 ce.move(dx, dy);
         }
-        CirSim.needAnalyze();
+        Circuit.needAnalyze();
     }
 
     // don't leave mouseElm selected if we selected it above
     if (me)
-        CirSim.mouseElm.setSelected(false);
+        Circuit.mouseElm.setSelected(false);
 
     return allowed;
 };
 
-CirSim.dragPost = function (x, y) {
+Circuit.dragPost = function (x, y) {
     // TODO: test
-    if (CirSim.draggingPost == -1) {
-        CirSim.draggingPost =
-            (CirSim.distanceSq(CirSim.mouseElm.x, CirSim.mouseElm.y, x, y) >
-                CirSim.distanceSq(CirSim.mouseElm.x2, CirSim.mouseElm.y2, x, y)) ? 1 : 0;
+    if (Circuit.draggingPost == -1) {
+        Circuit.draggingPost =
+            (Circuit.distanceSq(Circuit.mouseElm.x1, Circuit.mouseElm.y, x, y) >
+                Circuit.distanceSq(Circuit.mouseElm.x2, Circuit.mouseElm.y2, x, y)) ? 1 : 0;
     }
-    var dx = x - CirSim.dragX;
-    var dy = y - CirSim.dragY;
+    var dx = x - Circuit.dragX;
+    var dy = y - Circuit.dragY;
     if (dx == 0 && dy == 0)
         return;
 
-    CirSim.mouseElm.movePoint(CirSim.draggingPost, dx, dy);
-    CirSim.needAnalyze();
+    Circuit.mouseElm.movePoint(Circuit.draggingPost, dx, dy);
+    Circuit.needAnalyze();
 };
 
-CirSim.unstackScope = function (s) {
+Circuit.unstackScope = function (s) {
     if (s == 0) {
-        if (CirSim.scopeCount < 2)
+        if (Circuit.scopeCount < 2)
             return;
         s = 1;
     }
-    if (CirSim.scopes[s].position != CirSim.scopes[s - 1].position)
+    if (Circuit.scopes[s].position != Circuit.scopes[s - 1].position)
         return;
-    for (; s < CirSim.scopeCount; s++)
-        CirSim.scopes[s].position++;
+    for (; s < Circuit.scopeCount; s++)
+        Circuit.scopes[s].position++;
 };
 
-CirSim.stackAll = function () {
+Circuit.stackAll = function () {
     var i;
-    for (i = 0; i != CirSim.scopeCount; i++) {
-        CirSim.scopes[i].position = 0;
-        CirSim.scopes[i].showMax = CirSim.scopes[i].showMin = false;
+    for (i = 0; i != Circuit.scopeCount; i++) {
+        Circuit.scopes[i].position = 0;
+        Circuit.scopes[i].showMax = Circuit.scopes[i].showMin = false;
     }
 };
 
-CirSim.unstackAll = function () {
+Circuit.unstackAll = function () {
     var i;
-    for (i = 0; i != CirSim.scopeCount; i++) {
-        CirSim.scopes[i].position = i;
-        CirSim.scopes[i].showMax = true;
+    for (i = 0; i != Circuit.scopeCount; i++) {
+        Circuit.scopes[i].position = i;
+        Circuit.scopes[i].showMax = true;
     }
 };
 
-CirSim.doEdit = function (target) {
+Circuit.doEdit = function (target) {
     //CirSim.clearSelection();
 
-    CirSim.pushUndo();
+    Circuit.pushUndo();
 
     //if(CirSim.editDialog) {
     //CirSim.editDialog.setVisible(false);
     //CirSim.editDialog = null;
     //}
 
-    CirSim.editDialog = new EditDialog(target);
+    Circuit.editDialog = new EditDialog(target);
     //CirSim.editDialog.show();
 
 };
 
-CirSim.dumpCircuit = function () {
+Circuit.dumpCircuit = function () {
     var i;
 
-    var f = (CirSim.dotsCheckItem) ? 1 : 0;
-    f |= (CirSim.smallGridCheckItem) ? 2 : 0;
-    f |= (CirSim.voltsCheckItem) ? 0 : 4;
-    f |= (CirSim.powerCheckItem) ? 8 : 0;
-    f |= (CirSim.showValuesCheckItem) ? 0 : 16;
+    var f = (Circuit.dotsCheckItem) ? 1 : 0;
+    f |= (Circuit.smallGridCheckItem) ? 2 : 0;
+    f |= (Circuit.voltsCheckItem) ? 0 : 4;
+    f |= (Circuit.powerCheckItem) ? 8 : 0;
+    f |= (Circuit.showValuesCheckItem) ? 0 : 16;
 
     // 32 = linear scale in a filter
-    var dump = "$ " + f + " " + CirSim.timeStep + " " + CirSim.getIterCount() + " " + CirSim.currentBar + " " + CircuitElement.voltageRange + " " + CirSim.powerBar + "\n";
+    var dump = "$ " + f + " " + Circuit.timeStep + " " + Circuit.getIterCount() + " " + Circuit.currentBar + " " + CircuitElement.voltageRange + " " + Circuit.powerBar + "\n";
 
-    for (i = 0; i != CirSim.elmList.length; i++)
-        dump += CirSim.getElm(i).dump() + "\n";
+    for (i = 0; i != Circuit.elementList.length; i++)
+        dump += Circuit.getElm(i).dump() + "\n";
 
     // TODO: Implement scope
-    for (i = 0; i != CirSim.scopeCount; i++) {
-        var d = CirSim.scopes[i].dump();
+    for (i = 0; i != Circuit.scopeCount; i++) {
+        var d = Circuit.scopes[i].dump();
         if (d != null)
             dump += d + "\n";
     }
 
-    if (CirSim.hintType != -1)
-        dump += "h " + CirSim.hintType + " " + CirSim.hintItem1 + " " + CirSim.hintItem2 + "\n";
+    if (Circuit.hintType != -1)
+        dump += "h " + Circuit.hintType + " " + Circuit.hintItem1 + " " + Circuit.hintItem2 + "\n";
 
     return dump;
 };
 
-CirSim.selectArea = function (x, y) {
-    var x1 = Math.min(x, CirSim.initDragX);
-    var x2 = Math.max(x, CirSim.initDragX);
-    var y1 = Math.min(y, CirSim.initDragY);
-    var y2 = Math.max(y, CirSim.initDragY);
-    CirSim.selectedArea = new Rectangle(x1, y1, x2 - x1, y2 - y1);
+Circuit.selectArea = function (x, y) {
+    var x1 = Math.min(x, Circuit.initDragX);
+    var x2 = Math.max(x, Circuit.initDragX);
+    var y1 = Math.min(y, Circuit.initDragY);
+    var y2 = Math.max(y, Circuit.initDragY);
+    Circuit.selectedArea = new Rectangle(x1, y1, x2 - x1, y2 - y1);
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
-        ce.selectRect(CirSim.selectedArea);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
+        ce.selectRect(Circuit.selectedArea);
     }
 };
 
-CirSim.removeZeroLengthElements = function () {
+Circuit.removeZeroLengthElements = function () {
     var i;
     var changed = false;
-    for (i = CirSim.elmList.length - 1; i >= 0; i--) {
-        var ce = CirSim.getElm(i);
-        if (ce.x == ce.x2 && ce.y == ce.y2) {
+    for (i = Circuit.elementList.length - 1; i >= 0; i--) {
+        var ce = Circuit.getElm(i);
+        if (ce.x1 == ce.x2 && ce.y == ce.y2) {
             // TODO: Make sure this works
-            CirSim.elmList.splice(i, 1);
+            Circuit.elementList.splice(i, 1);
             ce.destroy();
             changed = true;
         }
     }
-    CirSim.needAnalyze();
+    Circuit.needAnalyze();
 };
 
-CirSim.pushUndo = function () {
-    CirSim.redoStack = new Array();
-    var s = CirSim.dumpCircuit();
+Circuit.pushUndo = function () {
+    Circuit.redoStack = new Array();
+    var s = Circuit.dumpCircuit();
 
-    if (CirSim.undoStack.length > 0 && s === CirSim.undoStack[CirSim.undoStack.length - 1])
+    if (Circuit.undoStack.length > 0 && s === Circuit.undoStack[Circuit.undoStack.length - 1])
         return;
 
-    CirSim.undoStack.push(s);
-    CirSim.enableUndoRedo();
+    Circuit.undoStack.push(s);
+    Circuit.enableUndoRedo();
 };
 
-CirSim.doUndo = function () {
-    if (CirSim.undoStack.length == 0)
+Circuit.doUndo = function () {
+    if (Circuit.undoStack.length == 0)
         return;
 
-    CirSim.redoStack.push(CirSim.dumpCircuit());
-    var s = CirSim.undoStack.remove(CirSim.undoStack.size() - 1);
+    Circuit.redoStack.push(Circuit.dumpCircuit());
+    var s = Circuit.undoStack.remove(Circuit.undoStack.size() - 1);
     //CirSim.readSetup(s);
-    CirSim.readCircuitFromString(s);
-    CirSim.enableUndoRedo();
+    Circuit.readCircuitFromString(s);
+    Circuit.enableUndoRedo();
 };
 
 // TODO: Test
-CirSim.doRedo = function () {
-    if (CirSim.redoStack.size() == 0)
+Circuit.doRedo = function () {
+    if (Circuit.redoStack.size() == 0)
         return;
-    CirSim.undoStack.add(CirSim.dumpCircuit());
-    var s = CirSim.redoStack.remove(CirSim.redoStack.size() - 1);
+    Circuit.undoStack.add(Circuit.dumpCircuit());
+    var s = Circuit.redoStack.remove(Circuit.redoStack.size() - 1);
 
-    CirSim.readCircuitFromString(s);
-    CirSim.enableUndoRedo();
+    Circuit.readCircuitFromString(s);
+    Circuit.enableUndoRedo();
 };
 
-CirSim.enableUndoRedo = function () {
+Circuit.enableUndoRedo = function () {
     //CirSim.redoMenuItem.setEnabled(CirSim.redoStack.size() > 0);
     //CirSim.undoMenuItem.setEnabled(CirSim.undoStack.size() > 0);
 };
 
-CirSim.setMenuSelection = function () {
-    if (CirSim.menuElm != null) {
-        if (CirSim.menuElm.selected)
+Circuit.setMenuSelection = function () {
+    if (Circuit.menuElm != null) {
+        if (Circuit.menuElm.selected)
             return;
-        CirSim.clearSelection();
-        CirSim.menuElm.setSelected(true);
+        Circuit.clearSelection();
+        Circuit.menuElm.setSelected(true);
     }
 };
 
 
 /** TODO: NOT YET IMPLEMENTED */
-CirSim.doCut = function () {
+Circuit.doCut = function () {
     var i;
-    CirSim.pushUndo();
+    Circuit.pushUndo();
     //setMenuSelection();
-    CirSim.clipboard = "";
+    Circuit.clipboard = "";
 
-    for (i = CirSim.elmList.length - 1; i >= 0; i--) {
-        var ce = CirSim.getElm(i);
+    for (i = Circuit.elementList.length - 1; i >= 0; i--) {
+        var ce = Circuit.getElm(i);
         if (ce.isSelected()) {
-            CirSim.clipboard += ce.dump() + "\n";
+            Circuit.clipboard += ce.dump() + "\n";
             ce.destroy();
-            CirSim.elmList.removeElementAt(i);
+            Circuit.elementList.removeElementAt(i);
         }
     }
 
-    CirSim.enablePaste();
-    CirSim.needAnalyze();
+    Circuit.enablePaste();
+    Circuit.needAnalyze();
 };
 
 /** TODO: NOT YET IMPLEMENTED */
-CirSim.doCopy = function () {
+Circuit.doCopy = function () {
     var i;
-    CirSim.clipboard = "";
+    Circuit.clipboard = "";
     //setMenuSelection();
-    for (i = CirSim.elmList.length - 1; i >= 0; i--) {
-        var ce = CirSim.getElm(i);
+    for (i = Circuit.elementList.length - 1; i >= 0; i--) {
+        var ce = Circuit.getElm(i);
         if (ce.isSelected())
-            CirSim.clipboard += ce.dump() + "\n";
+            Circuit.clipboard += ce.dump() + "\n";
     }
-    CirSim.enablePaste();
+    Circuit.enablePaste();
 };
 
 /**
  * Removes all circuit elements and scopes from the workspace and resets time to zero.
  * */
-CirSim.clearAll = function () {
+Circuit.clearAll = function () {
 
     // reset the interface
-    for (var i = 0; i < CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (var i = 0; i < Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         ce.destroy();
     }
 
-    CirSim.elmList = [];
-    CirSim.hintType = -1;
-    CirSim.timeStep = 5e-6;
+    Circuit.elementList = [];
+    Circuit.hintType = -1;
+    Circuit.timeStep = 5e-6;
 
-    CirSim.dotsCheckItem = true;
-    CirSim.smallGridCheckItem = false;
-    CirSim.powerCheckItem = false;
-    CirSim.voltsCheckItem = true;
-    CirSim.showValuesCheckItem = true;
-    CirSim.setGrid();
-    CirSim.speedBar = 117; // 57
-    CirSim.currentBar = 100;
-    CirSim.powerBar = 50;
+    Circuit.dotsCheckItem = true;
+    Circuit.smallGridCheckItem = false;
+    Circuit.powerCheckItem = false;
+    Circuit.voltsCheckItem = true;
+    Circuit.showValuesCheckItem = true;
+    Circuit.setGrid();
+    Circuit.speedBar = 117; // 57
+    Circuit.currentBar = 100;
+    Circuit.powerBar = 50;
     CircuitElement.voltageRange = 5;
-    CirSim.scopeCount = 0;
+    Circuit.scopeCount = 0;
 
-    CirSim.errorStack = new Array();
-    CirSim.warningStack = new Array();
+    Circuit.errorStack = new Array();
+    Circuit.warningStack = new Array();
 };
 
 /**
  * Clears current states, graphs, and errors then Restarts the circuit from time zero.
  * */
-CirSim.reset = function () {
+Circuit.reset = function () {
 
-    for (var i = 0; i < CirSim.elmList.length; i++)
-        CirSim.getElm(i).reset();
-    for (i = 0; i != CirSim.scopeCount; i++)
-        CirSim.scopes[i].resetGraph();
+    for (var i = 0; i < Circuit.elementList.length; i++)
+        Circuit.getElm(i).reset();
+    for (i = 0; i != Circuit.scopeCount; i++)
+        Circuit.scopes[i].resetGraph();
 
-    CirSim.stopMessage = "";
-    CirSim.analyzeFlag = true;
-    CirSim.t = 0;
-    CirSim.stoppedCheck = false;
+    Circuit.stopMessage = "";
+    Circuit.analyzeFlag = true;
+    Circuit.t = 0;
+    Circuit.stoppedCheck = false;
 
     //cv.repaint();
 };
@@ -1276,27 +1277,27 @@ CirSim.reset = function () {
 /**
  * Stops the circuit when an error occurs
  * */
-CirSim.halt = function (s, ce) {
-    CirSim.stopMessage = s;
-    CirSim.stopElm = ce;
-    CirSim.circuitMatrix = null;
-    CirSim.stoppedCheck = true;
-    CirSim.analyzeFlag = false;
+Circuit.halt = function (s, ce) {
+    Circuit.stopMessage = s;
+    Circuit.stopElm = ce;
+    Circuit.circuitMatrix = null;
+    Circuit.stoppedCheck = true;
+    Circuit.analyzeFlag = false;
 
-    CirSim.error("[FATAL] " + s);
-    CirSim.error("\n[SOURCE] " + ce);
+    Circuit.error("[FATAL] " + s);
+    Circuit.error("\n[SOURCE] " + ce);
 };
 
 
 /** Returns the y position of the bottom of the circuit */
-CirSim.calcCircuitBottom = function () {
+Circuit.calcCircuitBottom = function () {
     var i;
-    CirSim.circuitBottom = 0;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var rect = CirSim.getElm(i).boundingBox;
+    Circuit.circuitBottom = 0;
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var rect = Circuit.getElm(i).boundingBox;
         var bottom = rect.height + rect.y;
-        if (bottom > CirSim.circuitBottom)
-            CirSim.circuitBottom = bottom;
+        if (bottom > Circuit.circuitBottom)
+            Circuit.circuitBottom = bottom;
     }
 };
 
@@ -1304,58 +1305,58 @@ CirSim.calcCircuitBottom = function () {
  * Deletes a circuit element
  * */
 // TODO: Test!
-CirSim.doDelete = function () {
+Circuit.doDelete = function () {
     var i;
-    CirSim.pushUndo();
-    CirSim.setMenuSelection();
-    for (i = CirSim.elmList.length - 1; i >= 0; i--) {
-        var ce = CirSim.getElm(i);
+    Circuit.pushUndo();
+    Circuit.setMenuSelection();
+    for (i = Circuit.elementList.length - 1; i >= 0; i--) {
+        var ce = Circuit.getElm(i);
         if (ce.isSelected()) {
             ce.destroy();
-            CirSim.elmList.splice(i, 1)
+            Circuit.elementList.splice(i, 1)
         }
     }
-    CirSim.needAnalyze();
+    Circuit.needAnalyze();
 };
 
-CirSim.enablePaste = function () {
+Circuit.enablePaste = function () {
     //pasteMenuItem.setEnabled(CirSim.clipboard.length() > 0);
     // TODO: NOT YET IMPLEMENTED
 };
 
 /** Not yet ported */
-CirSim.doPaste = function () {
+Circuit.doPaste = function () {
     // TODO: NOT YET IMPLEMENTED
 };
 
-CirSim.clearSelection = function () {
+Circuit.clearSelection = function () {
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         ce.setSelected(false);
     }
 };
 
-CirSim.doSelectAll = function () {
+Circuit.doSelectAll = function () {
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         ce.setSelected(true);
     }
 };
 
-CirSim.setGrid = function () {
-    CirSim.gridSize = (CirSim.smallGridCheckItem) ? 8 : 16;
-    CirSim.gridMask = ~(CirSim.gridSize - 1);
-    CirSim.gridRound = CirSim.gridSize / 2 - 1;
+Circuit.setGrid = function () {
+    Circuit.gridSize = (Circuit.smallGridCheckItem) ? 8 : 16;
+    Circuit.gridMask = ~(Circuit.gridSize - 1);
+    Circuit.gridRound = Circuit.gridSize / 2 - 1;
 };
 
-CirSim.drawGrid = function () {
+Circuit.drawGrid = function () {
 
     var CanvasBounds = getCanvasBounds();
 
-    var numCols = (CanvasBounds.width / CirSim.gridSize);
-    var numRows = (CanvasBounds.height / CirSim.gridSize);
+    var numCols = (CanvasBounds.width / Circuit.gridSize);
+    var numRows = (CanvasBounds.height / Circuit.gridSize);
 
     // Draw cols:
     for (var i = 0; i < numCols; i++) {
@@ -1369,30 +1370,30 @@ CirSim.drawGrid = function () {
 
 };
 
-CirSim.handleResize = function () {
+Circuit.handleResize = function () {
     //TODO: Probably not needed.
-    CirSim.needAnalyze();
-    CirSim.circuitBottom = 0;
+    Circuit.needAnalyze();
+    Circuit.circuitBottom = 0;
 };
 
-CirSim.destroyFrame = function () {
+Circuit.destroyFrame = function () {
     //TODO: Probably not needed.
 };
 
 
-CirSim.snapGrid = function (x) {
-    return (x + CirSim.gridRound) & CirSim.gridMask;
+Circuit.snapGrid = function (x) {
+    return (x + Circuit.gridRound) & Circuit.gridMask;
 };
 
-CirSim.toggleSwitch = function (n) {
+Circuit.toggleSwitch = function (n) {
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; i++) {
+        var ce = Circuit.getElm(i);
         if (ce instanceof SwitchElm) {
             n--;
             if (n == 0) {
                 (ce).toggle();
-                CirSim.analyzeFlag = true;
+                Circuit.analyzeFlag = true;
                 //cv.repaint();
                 return;
             }
@@ -1400,107 +1401,107 @@ CirSim.toggleSwitch = function (n) {
     }
 };
 
-CirSim.doSwitch = function (x, y) {
-    if (CirSim.mouseElm == null || !(CirSim.mouseElm instanceof SwitchElm)  || !(CirSim.mouseElm instanceof Switch2Elm))
+Circuit.doSwitch = function (x, y) {
+    if (Circuit.mouseElm == null || !(Circuit.mouseElm instanceof SwitchElm)  || !(Circuit.mouseElm instanceof Switch2Elm))
         return false;
 
-    var se = CirSim.mouseElm; // as SwitchElm;
+    var se = Circuit.mouseElm; // as SwitchElm;
     se.toggle();
 
     if (se.momentary)
-        CirSim.heldSwitchElm = se;
+        Circuit.heldSwitchElm = se;
 
-    CirSim.needAnalyze();
+    Circuit.needAnalyze();
     return true;
 };
 
-CirSim.getIterCount = function () {
-    if (CirSim.speedBar == 0)
+Circuit.getIterCount = function () {
+    if (Circuit.speedBar == 0)
         return 0;
     //return (Math.exp((speedBar.getValue()-1)/24.) + .5);
-    return .1 * Math.exp((CirSim.speedBar - 61) / 24.);
+    return .1 * Math.exp((Circuit.speedBar - 61) / 24.);
 };
 
-CirSim.needAnalyze = function () {
-    CirSim.analyzeFlag = true;
+Circuit.needAnalyze = function () {
+    Circuit.analyzeFlag = true;
 };
 
-CirSim.getCircuitNode = function (n) {
-    if (n >= CirSim.nodeList.length)
+Circuit.getCircuitNode = function (n) {
+    if (n >= Circuit.nodeList.length)
         return new CircuitNode();
 
-    return CirSim.nodeList[n];//[n] as CircuitNode;
+    return Circuit.nodeList[n];//[n] as CircuitNode;
 };
 
-CirSim.getElm = function (n) {
-    if (n >= CirSim.elmList.length)
+Circuit.getElm = function (n) {
+    if (n >= Circuit.elementList.length)
         return null;
-    return CirSim.elmList[n]; // as CircuitElement;
+    return Circuit.elementList[n]; // as CircuitElement;
 };
 
 /**
  * Returns the index of a specified element. -1 is returned if that element is not found
  */
-CirSim.locateElm = function (elm) {
+Circuit.locateElm = function (elm) {
     var i;
-    for (i = 0; i != CirSim.elmList.length; i++)
-        if (elm == CirSim.elmList[i])
+    for (i = 0; i != Circuit.elementList.length; i++)
+        if (elm == Circuit.elementList[i])
             return i;
     return -1;
 };
 
 /** Todo: Check if working */
-CirSim.getCodeBase = function () {
+Circuit.getCodeBase = function () {
     return "";
 };
 
 /**
  * initializes the values of scalefactors for performance reasons
  * */
-CirSim.initScaleFactors = function () {
+Circuit.initScaleFactors = function () {
     var numScaleFactors = 200;
     for (var i = 0; i < numScaleFactors; ++i) {
-        CirSim.scaleFactors[i] = 0;
+        Circuit.scaleFactors[i] = 0;
     }
 };
 
 /**
  * Configures and places all scopes on the stage
  */
-CirSim.setupScopes = function () {
+Circuit.setupScopes = function () {
     var i;
 
     // check scopes to make sure the elements still exist, and remove unused scopes/columns
     var pos = -1;
-    for (i = 0; i < CirSim.scopeCount; i++) {
-        if (CirSim.locateElm(CirSim.scopes[i].elm) < 0)
-            CirSim.scopes[i].setElm(null);
-        if (CirSim.scopes[i].elm == null) {
+    for (i = 0; i < Circuit.scopeCount; i++) {
+        if (Circuit.locateElm(Circuit.scopes[i].elm) < 0)
+            Circuit.scopes[i].setElm(null);
+        if (Circuit.scopes[i].elm == null) {
             var j;
-            for (j = i; j != CirSim.scopeCount; j++)
-                CirSim.scopes[j] = CirSim.scopes[j + 1];
-            CirSim.scopeCount--;
+            for (j = i; j != Circuit.scopeCount; j++)
+                Circuit.scopes[j] = Circuit.scopes[j + 1];
+            Circuit.scopeCount--;
             i--;
             continue;
         }
-        if (CirSim.scopes[i].position > pos + 1)
-            CirSim.scopes[i].position = pos + 1;
-        pos = CirSim.scopes[i].position;
+        if (Circuit.scopes[i].position > pos + 1)
+            Circuit.scopes[i].position = pos + 1;
+        pos = Circuit.scopes[i].position;
     }
-    while (CirSim.scopeCount > 0 && CirSim.scopes[CirSim.scopeCount - 1].elm == null)
-        CirSim.scopeCount--;
+    while (Circuit.scopeCount > 0 && Circuit.scopes[Circuit.scopeCount - 1].elm == null)
+        Circuit.scopeCount--;
     //var h = winSize.height - circuitArea.height;
     var h = 120;
 
     pos = 0;
-    for (i = 0; i != CirSim.scopeCount; i++)
-        CirSim.scopeColCount[i] = 0;
-    for (i = 0; i != CirSim.scopeCount; i++) {
-        pos = Math.max(CirSim.scopes[i].position, pos);
-        CirSim.scopeColCount[CirSim.scopes[i].position]++;
+    for (i = 0; i != Circuit.scopeCount; i++)
+        Circuit.scopeColCount[i] = 0;
+    for (i = 0; i != Circuit.scopeCount; i++) {
+        pos = Math.max(Circuit.scopes[i].position, pos);
+        Circuit.scopeColCount[Circuit.scopes[i].position]++;
     }
     var colct = pos + 1;
-    var iw = CirSim.infoWidth;
+    var iw = Circuit.infoWidth;
     if (colct <= 2)
         iw = iw * 3 / 2;
     var w = (getCanvasBounds().width - iw) / colct;
@@ -1511,11 +1512,11 @@ CirSim.setupScopes = function () {
     var colh = 0;
     var row = 0;
     var speed = 0;
-    for (i = 0; i != CirSim.scopeCount; i++) {
-        var s = CirSim.scopes[i];
+    for (i = 0; i != Circuit.scopeCount; i++) {
+        var s = Circuit.scopes[i];
         if (s.position > pos) {
             pos = s.position;
-            colh = h / CirSim.scopeColCount[pos];
+            colh = h / Circuit.scopeColCount[pos];
             row = 0;
             speed = s.speed;
         }
@@ -1533,79 +1534,79 @@ CirSim.setupScopes = function () {
 
 
 /** control voltage source vs with voltage from n1 to n2 (must also call stampVoltageSource()) */
-CirSim.stampVCVS = function (n1, n2, coef, vs) {
-    var vn = CirSim.nodeList.length + vs;
-    CirSim.stampMatrix(vn, n1, coef);
-    CirSim.stampMatrix(vn, n2, -coef);
+Circuit.stampVCVS = function (n1, n2, coef, vs) {
+    var vn = Circuit.nodeList.length + vs;
+    Circuit.stampMatrix(vn, n1, coef);
+    Circuit.stampMatrix(vn, n2, -coef);
 };
 
 /** stamp independent voltage source #vs, from n1 to n2, amount v */
-CirSim.stampVoltageSource = function (n1, n2, vs, v) {
-    var vn = CirSim.nodeList.length + vs;
-    CirSim.stampMatrix(vn, n1, -1);
-    CirSim.stampMatrix(vn, n2, 1);
-    CirSim.stampRightSide(vn, v);
-    CirSim.stampMatrix(n1, vn, 1);
-    CirSim.stampMatrix(n2, vn, -1);
+Circuit.stampVoltageSource = function (n1, n2, vs, v) {
+    var vn = Circuit.nodeList.length + vs;
+    Circuit.stampMatrix(vn, n1, -1);
+    Circuit.stampMatrix(vn, n2, 1);
+    Circuit.stampRightSide(vn, v);
+    Circuit.stampMatrix(n1, vn, 1);
+    Circuit.stampMatrix(n2, vn, -1);
 };
 
-CirSim.updateVoltageSource = function (n1, n2, vs, v) {
-    var vn = CirSim.nodeList.length + vs;
-    CirSim.stampRightSide(vn, v);
+Circuit.updateVoltageSource = function (n1, n2, vs, v) {
+    var vn = Circuit.nodeList.length + vs;
+    Circuit.stampRightSide(vn, v);
 };
 
-CirSim.stampResistor = function (n1, n2, r) {
+Circuit.stampResistor = function (n1, n2, r) {
     var r0 = 1 / r;
     if (isNaN(r0) || isInfinite(r0)) {
-        CirSim.error("bad resistance");
+        Circuit.error("bad resistance");
         var a = 0;
         a /= a;
     }
 
-    CirSim.stampMatrix(n1, n1, r0);
-    CirSim.stampMatrix(n2, n2, r0);
-    CirSim.stampMatrix(n1, n2, -r0);
-    CirSim.stampMatrix(n2, n1, -r0);
+    Circuit.stampMatrix(n1, n1, r0);
+    Circuit.stampMatrix(n2, n2, r0);
+    Circuit.stampMatrix(n1, n2, -r0);
+    Circuit.stampMatrix(n2, n1, -r0);
 };
 
-CirSim.stampConductance = function (n1, n2, r0) {
-    CirSim.stampMatrix(n1, n1, r0);
-    CirSim.stampMatrix(n2, n2, r0);
-    CirSim.stampMatrix(n1, n2, -r0);
-    CirSim.stampMatrix(n2, n1, -r0);
+Circuit.stampConductance = function (n1, n2, r0) {
+    Circuit.stampMatrix(n1, n1, r0);
+    Circuit.stampMatrix(n2, n2, r0);
+    Circuit.stampMatrix(n1, n2, -r0);
+    Circuit.stampMatrix(n2, n1, -r0);
 };
 
 /** current from cn1 to cn2 is equal to voltage from vn1 to 2, divided by g */
-CirSim.stampVCCurrentSource = function (cn1, cn2, vn1, vn2, g) {
-    CirSim.stampMatrix(cn1, vn1, g);
-    CirSim.stampMatrix(cn2, vn2, g);
-    CirSim.stampMatrix(cn1, vn2, -g);
-    CirSim.stampMatrix(cn2, vn1, -g);
+Circuit.stampVCCurrentSource = function (cn1, cn2, vn1, vn2, g) {
+    Circuit.stampMatrix(cn1, vn1, g);
+    Circuit.stampMatrix(cn2, vn2, g);
+    Circuit.stampMatrix(cn1, vn2, -g);
+    Circuit.stampMatrix(cn2, vn1, -g);
 };
 
-CirSim.stampCurrentSource = function (n1, n2, i) {
-    CirSim.stampRightSide(n1, -i);
-    CirSim.stampRightSide(n2, i);
+Circuit.stampCurrentSource = function (n1, n2, i) {
+    Circuit.stampRightSide(n1, -i);
+    Circuit.stampRightSide(n2, i);
 };
 
 /** stamp a current source from n1 to n2 depending on current through vs */
-CirSim.stampCCCS = function (n1, n2, vs, gain) {
-    var vn = CirSim.nodeList.length + vs;
-    CirSim.stampMatrix(n1, vn, gain);
-    CirSim.stampMatrix(n2, vn, -gain);
+Circuit.stampCCCS = function (n1, n2, vs, gain) {
+    var vn = Circuit.nodeList.length + vs;
+    Circuit.stampMatrix(n1, vn, gain);
+    Circuit.stampMatrix(n2, vn, -gain);
 };
 
 /** stamp value x in row i, column j, meaning that a voltage change
  of dv in node j will increase the current into node i by x dv.
  (Unless i or j is a voltage source node.) */
-CirSim.stampMatrix = function (i, j, x) {
+Circuit.stampMatrix = function (i, j, x) {
     if (i > 0 && j > 0) {
-        if (CirSim.circuitNeedsMap) {
-            i = CirSim.circuitRowInfo[i - 1].mapRow;
-            var ri = CirSim.circuitRowInfo[j - 1];
+        if (Circuit.circuitNeedsMap) {
+            i = Circuit.circuitRowInfo[i - 1].mapRow;
+            var ri = Circuit.circuitRowInfo[j - 1];
             if (ri.type == RowInfo.ROW_CONST) {
                 //console.log("Stamping constant " + i + " " + j + " " + x);
-                CirSim.circuitRightSide[i] -= x * ri.value;
+                Circuit.circuitRightSide[i] -= x * ri.value;
                 return;
             }
             j = ri.mapCol;
@@ -1614,44 +1615,44 @@ CirSim.stampMatrix = function (i, j, x) {
             i--;
             j--;
         }
-        CirSim.circuitMatrix[i][j] += x;
+        Circuit.circuitMatrix[i][j] += x;
     }
 };
 
 /** Stamp value x on the right side of row i, representing an
  independent current source flowing into node i
  */
-CirSim.stampRightSide = function (i, x) {
+Circuit.stampRightSide = function (i, x) {
     if (isNaN(x)) {
         //console.log("rschanges true " + (i-1));
         if (i > 0)
-            CirSim.circuitRowInfo[i - 1].rsChanges = true;
+            Circuit.circuitRowInfo[i - 1].rsChanges = true;
     } else {
         if (i > 0) {
-            if (CirSim.circuitNeedsMap) {
-                i = CirSim.circuitRowInfo[i - 1].mapRow;
+            if (Circuit.circuitNeedsMap) {
+                i = Circuit.circuitRowInfo[i - 1].mapRow;
                 //console.log("stamping rs " + i + " " + x);
             } else
                 i--;
-            CirSim.circuitRightSide[i] += x;
+            Circuit.circuitRightSide[i] += x;
         }
     }
 };
 
 /** Indicate that the values on the left side of row i change in doStep() */
-CirSim.stampNonLinear = function (i) {
+Circuit.stampNonLinear = function (i) {
     if (i > 0)
-        CirSim.circuitRowInfo[i - 1].lsChanges = true;
+        Circuit.circuitRowInfo[i - 1].lsChanges = true;
 };
 
-CirSim.getHint = function () {
+Circuit.getHint = function () {
 
-    var c1 = CirSim.getElm(CirSim.hintItem1);
-    var c2 = CirSim.getElm(CirSim.hintItem2);
+    var c1 = Circuit.getElm(Circuit.hintItem1);
+    var c2 = Circuit.getElm(Circuit.hintItem2);
 
     if (c1 == null || c2 == null)
         return null;
-    if (CirSim.hintType == CirSim.HINT_LC) {
+    if (Circuit.hintType == Circuit.HINT_LC) {
         if (!( c1 instanceof InductorElm))
             return null;
         if (!( c2 instanceof CapacitorElm))
@@ -1662,7 +1663,7 @@ CirSim.getHint = function () {
         // as CapacitorElm;
         return "res.f = " + CircuitElement.getUnitText(1 / (2 * Math.PI * Math.sqrt(ie.inductance * ce.capacitance)), "Hz");
     }
-    if (CirSim.hintType == CirSim.HINT_RC) {
+    if (Circuit.hintType == Circuit.HINT_RC) {
         if (!( c1 instanceof ResistorElm))
             return null;
         if (!( c2 instanceof CapacitorElm))
@@ -1673,7 +1674,7 @@ CirSim.getHint = function () {
         // as CapacitorElm;
         return "RC = " + CircuitElement.getUnitText(re.resistance * ce.capacitance, "s");
     }
-    if (CirSim.hintType == CirSim.HINT_3DB_C) {
+    if (Circuit.hintType == Circuit.HINT_3DB_C) {
         if (!( c1 instanceof ResistorElm))
             return null;
         if (!( c2 instanceof CapacitorElm))
@@ -1684,7 +1685,7 @@ CirSim.getHint = function () {
         // as CapacitorElm;
         return "f.3db = " + CircuitElement.getUnitText(1 / (2 * Math.PI * re.resistance * ce.capacitance), "Hz");
     }
-    if (CirSim.hintType == CirSim.HINT_3DB_L) {
+    if (Circuit.hintType == Circuit.HINT_3DB_L) {
         if (!( c1 instanceof ResistorElm))
             return null;
         if (!( c2 instanceof InductorElm))
@@ -1695,7 +1696,7 @@ CirSim.getHint = function () {
         // as InductorElm;
         return "f.3db = " + CircuitElement.getUnitText(re.resistance / (2 * Math.PI * ie.inductance), "Hz");
     }
-    if (CirSim.hintType == CirSim.HINT_TWINT) {
+    if (Circuit.hintType == Circuit.HINT_TWINT) {
         if (!( c1 instanceof ResistorElm))
             return null;
         if (!( c2 instanceof CapacitorElm))
@@ -1707,10 +1708,6 @@ CirSim.getHint = function () {
 
     return null;
 };
-
-
-
-
 
 
 
@@ -1727,7 +1724,7 @@ CirSim.getHint = function () {
  *
  * Called once each frame
  */
-CirSim.updateCircuit = function () {
+Circuit.updateCircuit = function () {
     var startTime = (new Date()).getTime();
 
     // Reset the page:
@@ -1736,15 +1733,15 @@ CirSim.updateCircuit = function () {
     //CirSim.drawGrid();
 
     // CircuitElement
-    var realMouseElm = CirSim.mouseElm;
+    var realMouseElm = Circuit.mouseElm;
 
     // Render Warning and error messages:
     //CirSim.drawError();
     //CirSim.drawWarning();
 
-    if (CirSim.analyzeFlag) {
-        CirSim.analyzeCircuit();
-        CirSim.analyzeFlag = false;
+    if (Circuit.analyzeFlag) {
+        Circuit.analyzeCircuit();
+        Circuit.analyzeFlag = false;
     }
 
     // TODO
@@ -1752,15 +1749,15 @@ CirSim.updateCircuit = function () {
 //		CirSim.mouseElm = CirSim.editDialog.elm;
     // as CircuitElement;
 
-    if (CirSim.mouseElm == null)
-        CirSim.mouseElm = CirSim.stopElm;
+    if (Circuit.mouseElm == null)
+        Circuit.mouseElm = Circuit.stopElm;
 
     // TODO: test
-    CirSim.setupScopes();
+    Circuit.setupScopes();
 
     CircuitElement.selectColor = Settings.SELECT_COLOR;
 
-    if (CirSim.printableCheckItem) {
+    if (Circuit.printableCheckItem) {
         CircuitElement.whiteColor = Color.WHITE;
         CircuitElement.lightGrayColor = Color.BLACK;
     } else {
@@ -1768,12 +1765,12 @@ CirSim.updateCircuit = function () {
         CircuitElement.lightGrayColor = Color.LIGHT_GREY;
     }
 
-    if (!CirSim.stoppedCheck) {
+    if (!Circuit.stoppedCheck) {
         try {
-            CirSim.runCircuit();
+            Circuit.runCircuit();
         } catch (e) {
             console.log("error in run circuit: " + e.message);
-            CirSim.analyzeFlag = true;
+            Circuit.analyzeFlag = true;
 
             //cv.paint(g);
             return;
@@ -1781,47 +1778,47 @@ CirSim.updateCircuit = function () {
     }
 
 
-    if (!CirSim.stoppedCheck) {
+    if (!Circuit.stoppedCheck) {
 
         var sysTime = (new Date()).getTime();
-        if (CirSim.lastTime != 0) {
-            var inc = Math.floor(sysTime - CirSim.lastTime);
-            var c = CirSim.currentBar;     // The value of CirSim number must be carefully set for current to display properly
+        if (Circuit.lastTime != 0) {
+            var inc = Math.floor(sysTime - Circuit.lastTime);
+            var c = Circuit.currentBar;     // The value of CirSim number must be carefully set for current to display properly
 
             //console.log("Frame time: " + inc  + "   #: "  + frames);
 
             c = Math.exp(c / 3.5 - 14.2);
             CircuitElement.currentMult = 1.7 * inc * c;
-            if (!CirSim.conventionCheckItem)
+            if (!Circuit.conventionCheckItem)
                 CircuitElement.currentMult = -CircuitElement.currentMult;
 
         }
-        if (sysTime - CirSim.secTime >= 1000) {
-            CirSim.framerate = CirSim.frames;
-            CirSim.steprate = CirSim.steps;
-            CirSim.frames = 0;
-            CirSim.steps = 0;
-            CirSim.secTime = sysTime;
+        if (sysTime - Circuit.secTime >= 1000) {
+            Circuit.framerate = Circuit.frames;
+            Circuit.steprate = Circuit.steps;
+            Circuit.frames = 0;
+            Circuit.steps = 0;
+            Circuit.secTime = sysTime;
         }
 
-        CirSim.lastTime = sysTime;
+        Circuit.lastTime = sysTime;
     } else {
-        CirSim.lastTime = 0;
+        Circuit.lastTime = 0;
     }
 
-    CircuitElement.powerMult = Math.exp(CirSim.powerBar / 4.762 - 7);
+    CircuitElement.powerMult = Math.exp(Circuit.powerBar / 4.762 - 7);
 
     // Draw each circuit element
-    for (var i = 0; i < CirSim.elmList.length; ++i) {
-        CirSim.getElm(i).draw();
+    for (var i = 0; i < Circuit.elementList.length; ++i) {
+        Circuit.getElm(i).draw();
     }
 
     // Draw the posts for each circuit
-    if (CirSim.tempMouseMode == CirSim.MODE_DRAG_ROW || CirSim.tempMouseMode == CirSim.MODE_DRAG_COLUMN || CirSim.tempMouseMode == CirSim.MODE_DRAG_POST || CirSim.tempMouseMode == CirSim.MODE_DRAG_SELECTED) {
+    if (Circuit.tempMouseMode == Circuit.MODE_DRAG_ROW || Circuit.tempMouseMode == Circuit.MODE_DRAG_COLUMN || Circuit.tempMouseMode == Circuit.MODE_DRAG_POST || Circuit.tempMouseMode == Circuit.MODE_DRAG_SELECTED) {
 
-        for (i = 0; i < CirSim.elmList.length; ++i) {
-            var ce = CirSim.getElm(i);
-            ce.drawPost(ce.x, ce.y);
+        for (i = 0; i < Circuit.elementList.length; ++i) {
+            var ce = Circuit.getElm(i);
+            ce.drawPost(ce.x1, ce.y);
             ce.drawPost(ce.x2, ce.y2);
         }
 
@@ -1830,20 +1827,20 @@ CirSim.updateCircuit = function () {
     var badNodes = 0;
 
     // find bad connections. Nodes not connected to other elements which intersect other elements' bounding boxes
-    for (i = 0; i < CirSim.nodeList.length; ++i) {
-        var cn = CirSim.getCircuitNode(i);
+    for (i = 0; i < Circuit.nodeList.length; ++i) {
+        var cn = Circuit.getCircuitNode(i);
 
         if (!cn.intern && cn.links.length == 1) {
             var bb = 0;
             var cn1 = cn.links[0];
             // CircuitNodeLink
-            for (var j = 0; j < CirSim.elmList.length; ++j) {
-                if (cn1.elm != CirSim.getElm(j) && CirSim.getElm(j).boundingBox.contains(cn.x, cn.y))
+            for (var j = 0; j < Circuit.elementList.length; ++j) {
+                if (cn1.elm != Circuit.getElm(j) && Circuit.getElm(j).boundingBox.contains(cn.x1, cn.y))
                     bb++;
             }
             if (bb > 0) {
                 // Outline bad nodes
-                paper.circle(cn.x, cn.y, 2 * Settings.POST_RADIUS).attr({
+                paper.circle(cn.x1, cn.y, 2 * Settings.POST_RADIUS).attr({
                     'stroke':Color.color2HexString(Color.RED),
                     'stroke-dasharray':'--'
                 });
@@ -1852,41 +1849,41 @@ CirSim.updateCircuit = function () {
         }
     }
 
-    if (CirSim.dragElm != null && (CirSim.dragElm.x != CirSim.dragElm.x2 || CirSim.dragElm.y != CirSim.dragElm.y2))
-        CirSim.dragElm.draw(null);
+    if (Circuit.dragElm != null && (Circuit.dragElm.x1 != Circuit.dragElm.x2 || Circuit.dragElm.y != Circuit.dragElm.y2))
+        Circuit.dragElm.draw(null);
 
-    var ct = CirSim.scopeCount;
+    var ct = Circuit.scopeCount;
 
-    if (CirSim.stopMessage != null)
+    if (Circuit.stopMessage != null)
         ct = 0;
 
     // TODO Implement scopes
     //for(i=0; i!=ct; ++i)
     //    CirSim.scopes[i].draw();
 
-    if (CirSim.stopMessage != null) {
-        printError(CirSim.stopMessage);
+    if (Circuit.stopMessage != null) {
+        printError(Circuit.stopMessage);
     } else {
-        if (CirSim.circuitBottom == 0)
-            CirSim.calcCircuitBottom();
+        if (Circuit.circuitBottom == 0)
+            Circuit.calcCircuitBottom();
 
         var info = [];
         // Array of messages to be displayed at the bottom of the canvas
-        if (CirSim.mouseElm != null) {
-            if (CirSim.mousePost == -1)
-                CirSim.mouseElm.getInfo(info);
+        if (Circuit.mouseElm != null) {
+            if (Circuit.mousePost == -1)
+                Circuit.mouseElm.getInfo(info);
             else
-                info[0] = "V = " + CircuitElement.getUnitText(CirSim.mouseElm.getPostVoltage(CirSim.mousePost), "V");
+                info[0] = "V = " + CircuitElement.getUnitText(Circuit.mouseElm.getPostVoltage(Circuit.mousePost), "V");
         } else {
             CircuitElement.showFormat.fractionalDigits = 2;
-            info[0] = "t = " + CircuitElement.getUnitText(CirSim.t, "s") + "\nf.t.: " + (CirSim.lastTime - CirSim.lastFrameTime) + "\n";
+            info[0] = "t = " + CircuitElement.getUnitText(Circuit.t, "s") + "\nf.t.: " + (Circuit.lastTime - Circuit.lastFrameTime) + "\n";
         }
-        if (CirSim.hintType != -1) {
+        if (Circuit.hintType != -1) {
             for (i = 0; info[i] != null; ++i) {
             }
-            var s = CirSim.getHint();
+            var s = Circuit.getHint();
             if (s == null)
-                CirSim.hintType = -1;
+                Circuit.hintType = -1;
             else
                 info[i] = s;
         }
@@ -1894,7 +1891,7 @@ CirSim.updateCircuit = function () {
 
         // TODO: Implement scopes
         if (ct != 0)
-            x = CirSim.scopes[ct - 1].rightEdge() + 20;
+            x = Circuit.scopes[ct - 1].rightEdge() + 20;
 
         var CanvasBounds = getCanvasBounds();
 
@@ -1911,7 +1908,7 @@ CirSim.updateCircuit = function () {
         // Find where to show data; below circuit, not too high unless we need it
         var ybase = CanvasBounds.height - 15 * i - bottomTextOffset;
         ybase = Math.min(ybase, CanvasBounds.height);
-        ybase = Math.max(ybase, CirSim.circuitBottom);
+        ybase = Math.max(ybase, Circuit.circuitBottom);
 
         // TODO: CANVAS
         for (i = 0; info[i] != null; ++i) {
@@ -1922,20 +1919,20 @@ CirSim.updateCircuit = function () {
     }
 
     // Draw selection outline:
-    if (CirSim.selectedArea != null) {
+    if (Circuit.selectedArea != null) {
         //paper.strokeStyle = Color.color2HexString(Settings.SELECTION_MARQUEE_COLOR);
         paper.beginPath();
         paper.strokeStyle = Settings.SELECT_COLOR;
-        paper.strokeRect(this.selectedArea.x, this.selectedArea.y, this.selectedArea.width, this.selectedArea.height);
+        paper.strokeRect(this.selectedArea.x1, this.selectedArea.y, this.selectedArea.width, this.selectedArea.height);
         paper.closePath();
     }
 
-    CirSim.mouseElm = realMouseElm;
-    CirSim.frames++;
+    Circuit.mouseElm = realMouseElm;
+    Circuit.frames++;
 
     var endTime = (new Date()).getTime();
 
-    CirSim.lastFrameTime = CirSim.lastTime;
+    Circuit.lastFrameTime = Circuit.lastTime;
 };
 
 
@@ -1944,29 +1941,29 @@ CirSim.updateCircuit = function () {
  * preliminary step prior to computation. However, this is only necessary when the structure of the circuit has
  * been modified in some way
  */
-CirSim.analyzeCircuit = function () {
+Circuit.analyzeCircuit = function () {
 
-    CirSim.calcCircuitBottom();
-    if (CirSim.elmList.length == 0)
+    Circuit.calcCircuitBottom();
+    if (Circuit.elementList.length == 0)
         return;
 
-    CirSim.stopMessage = null;
-    CirSim.stopElm = null;
+    Circuit.stopMessage = null;
+    Circuit.stopElm = null;
 
     var i;
     var j;
 
     var vscount = 0; // int
 
-    CirSim.nodeList = [];
+    Circuit.nodeList = [];
 
     var gotGround = false;
     var gotRail = false;
 
     var volt = null;	// CircuitElement
 
-    for (i = 0; i < CirSim.elmList.length; ++i) {
-        var ce = CirSim.getElm(i); // CircuitElement type
+    for (i = 0; i < Circuit.elementList.length; ++i) {
+        var ce = Circuit.getElm(i); // CircuitElement type
 
         if (ce instanceof GroundElm) {
             gotGround = true;
@@ -1983,19 +1980,19 @@ CirSim.analyzeCircuit = function () {
         var cn = new CircuitNode();
 
         var pt = volt.getPost(0);
-        cn.x = pt.x;
+        cn.x1 = pt.x1;
         cn.y = pt.y;
-        CirSim.nodeList.push(cn);
+        Circuit.nodeList.push(cn);
     } else {
         // Else allocate extra node for ground
         var cn = new CircuitNode();
-        cn.x = cn.y = -1;
-        CirSim.nodeList.push(cn);
+        cn.x1 = cn.y = -1;
+        Circuit.nodeList.push(cn);
     }
 
     // Allocate nodes and voltage sources
-    for (i = 0; i < CirSim.elmList.length; ++i) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i < Circuit.elementList.length; ++i) {
+        var ce = Circuit.getElm(i);
 
         var inodes = ce.getInternalNodeCount();
         var ivs = ce.getVoltageSourceCount();
@@ -2006,26 +2003,26 @@ CirSim.analyzeCircuit = function () {
             var pt = ce.getPost(j);
 
             var k;
-            for (k = 0; k != CirSim.nodeList.length; ++k) {
-                var cn = CirSim.getCircuitNode(k);
-                if (pt.x == cn.x && pt.y == cn.y)
+            for (k = 0; k != Circuit.nodeList.length; ++k) {
+                var cn = Circuit.getCircuitNode(k);
+                if (pt.x1 == cn.x1 && pt.y == cn.y)
                     break;
             }
-            if (k == CirSim.nodeList.length) {
+            if (k == Circuit.nodeList.length) {
                 var cn = new CircuitNode();
-                cn.x = pt.x;
+                cn.x1 = pt.x1;
                 cn.y = pt.y;
                 var cn1 = new CircuitNodeLink();
                 cn1.num = j;
                 cn1.elm = ce;
                 cn.links.push(cn1);
-                ce.setNode(j, CirSim.nodeList.length);
-                CirSim.nodeList.push(cn);
+                ce.setNode(j, Circuit.nodeList.length);
+                Circuit.nodeList.push(cn);
             } else {
                 var cn1 = new CircuitNodeLink();
                 cn1.num = j;
                 cn1.elm = ce;
-                CirSim.getCircuitNode(k).links.push(cn1);
+                Circuit.getCircuitNode(k).links.push(cn1);
                 ce.setNode(j, k);
                 // If it's the ground node, make sure the node voltage instanceof 0, because it may not get set later.
                 if (k == 0)
@@ -2036,7 +2033,7 @@ CirSim.analyzeCircuit = function () {
         for (j = 0; j != inodes; ++j) {
             var cn = new CircuitNode();
 
-            cn.x = -1;
+            cn.x1 = -1;
             cn.y = -1;
             cn.intern = true;
 
@@ -2044,72 +2041,72 @@ CirSim.analyzeCircuit = function () {
             cn1.num = j + posts;
             cn1.elm = ce;
             cn.links.push(cn1);
-            ce.setNode(cn1.num, CirSim.nodeList.length);
-            CirSim.nodeList.push(cn);
+            ce.setNode(cn1.num, Circuit.nodeList.length);
+            Circuit.nodeList.push(cn);
         }
         vscount += ivs;
     }
 
-    CirSim.voltageSources = new Array(vscount);
+    Circuit.voltageSources = new Array(vscount);
     vscount = 0;
-    CirSim.circuitNonLinear = false;
+    Circuit.circuitNonLinear = false;
 
     // determine if circuit instanceof nonlinear
-    for (i = 0; i != CirSim.elmList.length; ++i) {
-        var ce = CirSim.getElm(i);		// circuitElement
+    for (i = 0; i != Circuit.elementList.length; ++i) {
+        var ce = Circuit.getElm(i);		// circuitElement
         if (ce.nonLinear())
-            CirSim.circuitNonLinear = true;
+            Circuit.circuitNonLinear = true;
         var ivs = ce.getVoltageSourceCount();
         for (j = 0; j != ivs; ++j) {
-            CirSim.voltageSources[vscount] = ce;
+            Circuit.voltageSources[vscount] = ce;
             ce.setVoltageSource(j, vscount++);
         }
     }
 
-    CirSim.voltageSourceCount = vscount;
+    Circuit.voltageSourceCount = vscount;
 
-    var matrixSize = CirSim.nodeList.length - 1 + vscount;
-    CirSim.circuitMatrix = initializeTwoDArray(matrixSize, matrixSize);
-    CirSim.origMatrix = initializeTwoDArray(matrixSize, matrixSize);
+    var matrixSize = Circuit.nodeList.length - 1 + vscount;
+    Circuit.circuitMatrix = initializeTwoDArray(matrixSize, matrixSize);
+    Circuit.origMatrix = initializeTwoDArray(matrixSize, matrixSize);
 
-    CirSim.circuitRightSide = new Array(matrixSize);
+    Circuit.circuitRightSide = new Array(matrixSize);
     // Todo: check array length
     /*circuitRightSide = */
-    zeroArray(CirSim.circuitRightSide);
-    CirSim.origRightSide = new Array(matrixSize);
+    zeroArray(Circuit.circuitRightSide);
+    Circuit.origRightSide = new Array(matrixSize);
     /*origRightSide = */
-    zeroArray(CirSim.origRightSide);
-    CirSim.circuitMatrixSize = CirSim.circuitMatrixFullSize = matrixSize;
+    zeroArray(Circuit.origRightSide);
+    Circuit.circuitMatrixSize = Circuit.circuitMatrixFullSize = matrixSize;
 
-    CirSim.circuitRowInfo = new Array(matrixSize);
-    CirSim.circuitPermute = new Array(matrixSize);
+    Circuit.circuitRowInfo = new Array(matrixSize);
+    Circuit.circuitPermute = new Array(matrixSize);
     // Todo: check
     /*circuitRowInfo = */
-    zeroArray(CirSim.circuitRowInfo);
+    zeroArray(Circuit.circuitRowInfo);
     /*circuitPermute = */
-    zeroArray(CirSim.circuitPermute);
+    zeroArray(Circuit.circuitPermute);
 
     for (i = 0; i != matrixSize; ++i) {
-        CirSim.circuitRowInfo[i] = new RowInfo();
+        Circuit.circuitRowInfo[i] = new RowInfo();
     }
 
-    CirSim.circuitNeedsMap = false;
+    Circuit.circuitNeedsMap = false;
 
     // stamp linear circuit elements
-    for (i = 0; i != CirSim.elmList.length; ++i) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; ++i) {
+        var ce = Circuit.getElm(i);
         ce.stamp();
     }
 
-    var closure = new Array(CirSim.nodeList.length);
+    var closure = new Array(Circuit.nodeList.length);
     var changed = true;
 
     closure[0] = true;
 
     while (changed) {
         changed = false;
-        for (i = 0; i != CirSim.elmList.length; ++i) {
-            var ce = CirSim.getElm(i);
+        for (i = 0; i != Circuit.elementList.length; ++i) {
+            var ce = Circuit.getElm(i);
 
             // Loop through all ce's nodes to see if theya are connected to otehr nodes not in closure
             for (j = 0; j < ce.getPostCount(); ++j) {
@@ -2136,10 +2133,10 @@ CirSim.analyzeCircuit = function () {
             continue;
 
         // connect unconnected nodes
-        for (i = 0; i != CirSim.nodeList.length; ++i) {
-            if (!closure[i] && !CirSim.getCircuitNode(i).intern) {
-                CirSim.error("node " + i + " unconnected");
-                CirSim.stampResistor(0, i, 1e8);
+        for (i = 0; i != Circuit.nodeList.length; ++i) {
+            if (!closure[i] && !Circuit.getCircuitNode(i).intern) {
+                Circuit.error("node " + i + " unconnected");
+                Circuit.stampResistor(0, i, 1e8);
                 closure[i] = true;
                 changed = true;
                 break;
@@ -2147,11 +2144,11 @@ CirSim.analyzeCircuit = function () {
         }
     }
 
-    for (i = 0; i != CirSim.elmList.length; ++i) {
-        var ce = CirSim.getElm(i);
+    for (i = 0; i != Circuit.elementList.length; ++i) {
+        var ce = Circuit.getElm(i);
 
         if (ce instanceof InductorElm) {
-            var fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length);
+            var fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
 
             // try findPath with maximum depth of 5, to avoid slowdown
             if (!fpi.findPath(ce.getNode(0), 5) && !fpi.findPath(ce.getNode(0))) {
@@ -2162,36 +2159,36 @@ CirSim.analyzeCircuit = function () {
 
         // look for current sources with no current path
         if (ce instanceof CurrentElm) {
-            var fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length);
+            var fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
 
             if (!fpi.findPath(ce.getNode(0))) {
-                CirSim.halt("No path for current source!", ce);
+                Circuit.halt("No path for current source!", ce);
                 return;
             }
         }
 
         // Look for voltage soure loops:
         if ((ce instanceof VoltageElm && ce.getPostCount() == 2) || ce instanceof WireElm) {
-            var fpi = new FindPathInfo(FindPathInfo.VOLTAGE, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length);
+            var fpi = new FindPathInfo(FindPathInfo.VOLTAGE, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
 
             if (fpi.findPath(ce.getNode(0)) == true) {
-                CirSim.halt("Voltage source/wire loop with no resistance!", ce);
+                Circuit.halt("Voltage source/wire loop with no resistance!", ce);
                 return;
             }
         }
 
         // Look for shorted caps or caps with voltage but no resistance
         if (ce instanceof CapacitorElm) {
-            var fpi = new FindPathInfo(FindPathInfo.SHORT, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length);
+            var fpi = new FindPathInfo(FindPathInfo.SHORT, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
 
             if (fpi.findPath(ce.getNode(0))) {
                 console.log(ce.toString() + " shorted");
                 ce.reset();
             } else {
 
-                fpi = new FindPathInfo(FindPathInfo.CAP_V, ce, ce.getNode(1), CirSim.elmList, CirSim.nodeList.length);
+                fpi = new FindPathInfo(FindPathInfo.CAP_V, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
                 if (fpi.findPath(ce.getNode(0))) {
-                    CirSim.halt("Capacitor loop with no resistance!", ce);
+                    Circuit.halt("Capacitor loop with no resistance!", ce);
                     return;
                 }
 
@@ -2204,7 +2201,7 @@ CirSim.analyzeCircuit = function () {
         var qm = -1;
         var qp = -1;
         var qv = 0;
-        var re = CirSim.circuitRowInfo[i];
+        var re = Circuit.circuitRowInfo[i];
 
         if (re.lsChanges || re.dropRow || re.rsChanges)
             continue;
@@ -2213,10 +2210,10 @@ CirSim.analyzeCircuit = function () {
 
         // look for rows that can be removed
         for (j = 0; j != matrixSize; ++j) {
-            var q = CirSim.circuitMatrix[i][j];
-            if (CirSim.circuitRowInfo[j].type == RowInfo.ROW_CONST) {
+            var q = Circuit.circuitMatrix[i][j];
+            if (Circuit.circuitRowInfo[j].type == RowInfo.ROW_CONST) {
                 // Keep a running total of const values that have been removed already
-                rsadd -= CirSim.circuitRowInfo[j].value * q;
+                rsadd -= Circuit.circuitRowInfo[j].value * q;
                 continue;
             }
             if (q == 0)
@@ -2245,18 +2242,18 @@ CirSim.analyzeCircuit = function () {
 
         if (j == matrixSize) {
             if (qp == -1) {
-                CirSim.halt("Matrix error", null);
+                Circuit.halt("Matrix error", null);
                 return;
             }
 
-            var elt = CirSim.circuitRowInfo[qp];
+            var elt = Circuit.circuitRowInfo[qp];
             if (qm == -1) {
                 // We found a row with only one nonzero entry, that value instanceof constant
                 var k;
                 for (k = 0; elt.type == RowInfo.ROW_EQUAL && k < 100; ++k) {
                     // Follow the chain
                     qp = elt.nodeEq;
-                    elt = CirSim.circuitRowInfo[qp];
+                    elt = Circuit.circuitRowInfo[qp];
                 }
                 if (elt.type == RowInfo.ROW_EQUAL) {
                     // break equal chains
@@ -2270,11 +2267,11 @@ CirSim.analyzeCircuit = function () {
                 }
 
                 elt.type = RowInfo.ROW_CONST;
-                elt.value = (CirSim.circuitRightSide[i] + rsadd) / qv;
-                CirSim.circuitRowInfo[i].dropRow = true;
+                elt.value = (Circuit.circuitRightSide[i] + rsadd) / qv;
+                Circuit.circuitRowInfo[i].dropRow = true;
                 //console.log(qp + " * " + qv + " = const " + elt.value);
                 i = -1; // start over from scratch
-            } else if (CirSim.circuitRightSide[i] + rsadd == 0) {
+            } else if (Circuit.circuitRightSide[i] + rsadd == 0) {
                 // we found a row with only two nonzero entries, and one
                 // instanceof the negative of the other; the values are equal
                 if (elt.type != RowInfo.ROW_NORMAL) {
@@ -2282,7 +2279,7 @@ CirSim.analyzeCircuit = function () {
                     var qq = qm;
                     qm = qp;
                     qp = qq;
-                    elt = CirSim.circuitRowInfo[qp];
+                    elt = Circuit.circuitRowInfo[qp];
                     if (elt.type != RowInfo.ROW_NORMAL) {
                         // we should follow the chain here, but this hardly ever happens so it's not worth worrying about
                         console.log("swap failed");
@@ -2291,7 +2288,7 @@ CirSim.analyzeCircuit = function () {
                 }
                 elt.type = RowInfo.ROW_EQUAL;
                 elt.nodeEq = qm;
-                CirSim.circuitRowInfo[i].dropRow = true;
+                Circuit.circuitRowInfo[i].dropRow = true;
                 //console.log(qp + " = " + qm);
             } // end elseif
 
@@ -2302,7 +2299,7 @@ CirSim.analyzeCircuit = function () {
     // find size of new matrix:
     var nn = 0;
     for (i = 0; i != matrixSize; ++i) {
-        var elt = CirSim.circuitRowInfo[i];
+        var elt = Circuit.circuitRowInfo[i];
         if (elt.type == RowInfo.ROW_NORMAL) {
             elt.mapCol = nn++;
             //console.log("col " + i + " maps to " + elt.mapCol);
@@ -2312,7 +2309,7 @@ CirSim.analyzeCircuit = function () {
             var e2 = null;
             // resolve chains of equality; 100 max steps to avoid loops
             for (j = 0; j != 100; j++) {
-                e2 = CirSim.circuitRowInfo[elt.nodeEq];
+                e2 = Circuit.circuitRowInfo[elt.nodeEq];
                 if (e2.type != RowInfo.ROW_EQUAL)
                     break;
                 if (i == e2.nodeEq)
@@ -2325,9 +2322,9 @@ CirSim.analyzeCircuit = function () {
     } // END for
 
     for (i = 0; i != matrixSize; i++) {
-        var elt = CirSim.circuitRowInfo[i];
+        var elt = Circuit.circuitRowInfo[i];
         if (elt.type == RowInfo.ROW_EQUAL) {
-            var e2 = CirSim.circuitRowInfo[elt.nodeEq];
+            var e2 = Circuit.circuitRowInfo[elt.nodeEq];
             if (e2.type == RowInfo.ROW_CONST) {
                 // if something instanceof equal to a const, it's a const
                 elt.type = e2.type;
@@ -2350,33 +2347,33 @@ CirSim.analyzeCircuit = function () {
     zeroArray(newrs);
     var ii = 0;
     for (i = 0; i != matrixSize; i++) {
-        var rri = CirSim.circuitRowInfo[i];
+        var rri = Circuit.circuitRowInfo[i];
         if (rri.dropRow) {
             rri.mapRow = -1;
             continue;
         }
-        newrs[ii] = CirSim.circuitRightSide[i];
+        newrs[ii] = Circuit.circuitRightSide[i];
         rri.mapRow = ii;
         //console.log("Row " + i + " maps to " + ii);
         for (j = 0; j != matrixSize; j++) {
-            var ri = CirSim.circuitRowInfo[j];
+            var ri = Circuit.circuitRowInfo[j];
             if (ri.type == RowInfo.ROW_CONST)
-                newrs[ii] -= ri.value * CirSim.circuitMatrix[i][j];
+                newrs[ii] -= ri.value * Circuit.circuitMatrix[i][j];
             else
-                newmatx[ii][ri.mapCol] += CirSim.circuitMatrix[i][j];
+                newmatx[ii][ri.mapCol] += Circuit.circuitMatrix[i][j];
         }
         ii++;
     }
 
-    CirSim.circuitMatrix = newmatx;
-    CirSim.circuitRightSide = newrs;
-    matrixSize = CirSim.circuitMatrixSize = newsize;
+    Circuit.circuitMatrix = newmatx;
+    Circuit.circuitRightSide = newrs;
+    matrixSize = Circuit.circuitMatrixSize = newsize;
     for (i = 0; i != matrixSize; i++)
-        CirSim.origRightSide[i] = CirSim.circuitRightSide[i];
+        Circuit.origRightSide[i] = Circuit.circuitRightSide[i];
     for (i = 0; i != matrixSize; i++)
         for (j = 0; j != matrixSize; j++)
-            CirSim.origMatrix[i][j] = CirSim.circuitMatrix[i][j];
-    CirSim.circuitNeedsMap = true;
+            Circuit.origMatrix[i][j] = Circuit.circuitMatrix[i][j];
+    Circuit.circuitNeedsMap = true;
 
     /* // For debugging
      console.log("matrixSize = " + matrixSize + " " + circuitNonLinear);
@@ -2389,9 +2386,9 @@ CirSim.analyzeCircuit = function () {
      */
 
     // if a matrix instanceof linear, we can do the lu_factor here instead of needing to do it every frame
-    if (!CirSim.circuitNonLinear) {
-        if (!CirSim.lu_factor(CirSim.circuitMatrix, CirSim.circuitMatrixSize, CirSim.circuitPermute)) {
-            CirSim.halt("Singular matrix!", null);
+    if (!Circuit.circuitNonLinear) {
+        if (!Circuit.lu_factor(Circuit.circuitMatrix, Circuit.circuitMatrixSize, Circuit.circuitPermute)) {
+            Circuit.halt("Singular matrix!", null);
             return;
         }
     }
@@ -2404,26 +2401,26 @@ CirSim.analyzeCircuit = function () {
  *
  * Called once per frame, runs many iterations
  */
-CirSim.runCircuit = function () {
+Circuit.runCircuit = function () {
 
-    if (CirSim.circuitMatrix == null || CirSim.elmList.length == 0) {
-        CirSim.circuitMatrix = null;
+    if (Circuit.circuitMatrix == null || Circuit.elementList.length == 0) {
+        Circuit.circuitMatrix = null;
         return;
     }
 
     var iter;
-    var debugPrint = CirSim.dumpMatrix;
+    var debugPrint = Circuit.dumpMatrix;
 
-    CirSim.dumpMatrix = false;
+    Circuit.dumpMatrix = false;
 
-    var steprate = Math.floor(160 * CirSim.getIterCount());
+    var steprate = Math.floor(160 * Circuit.getIterCount());
 
     var tm = (new Date()).getTime();
-    var lit = CirSim.lastIterTime;
+    var lit = Circuit.lastIterTime;
 
     // Double-check
-    if (1000 >= steprate * (tm - CirSim.lastIterTime)) {
-        console.log("returned: diff: " + (tm - CirSim.lastIterTime));
+    if (1000 >= steprate * (tm - Circuit.lastIterTime)) {
+        console.log("returned: diff: " + (tm - Circuit.lastIterTime));
         return;
     }
 
@@ -2436,13 +2433,13 @@ CirSim.runCircuit = function () {
         var subiter;
 
         // Start Iteration for each element in the circuit
-        for (i = 0; i < CirSim.elmList.length; ++i) {
-            var ce = CirSim.getElm(i);
+        for (i = 0; i < Circuit.elementList.length; ++i) {
+            var ce = Circuit.getElm(i);
             ce.startIteration();
         }
 
         // Keep track of the number of steps
-        ++CirSim.steps;
+        ++Circuit.steps;
 
         // The number of maximum allowable iterations
         var subiterCount = 500;
@@ -2450,35 +2447,35 @@ CirSim.runCircuit = function () {
         // Sub iteration
         for (subiter = 0; subiter != subiterCount; subiter++) {
 
-            CirSim.converged = true;
+            Circuit.converged = true;
 
-            CirSim.subIterations = subiter;
+            Circuit.subIterations = subiter;
 
-            for (i = 0; i < CirSim.circuitMatrixSize; ++i)
-                CirSim.circuitRightSide[i] = CirSim.origRightSide[i];
-            if (CirSim.circuitNonLinear) {
-                for (i = 0; i < CirSim.circuitMatrixSize; ++i)
-                    for (j = 0; j < CirSim.circuitMatrixSize; ++j)
-                        CirSim.circuitMatrix[i][j] = CirSim.origMatrix[i][j];
+            for (i = 0; i < Circuit.circuitMatrixSize; ++i)
+                Circuit.circuitRightSide[i] = Circuit.origRightSide[i];
+            if (Circuit.circuitNonLinear) {
+                for (i = 0; i < Circuit.circuitMatrixSize; ++i)
+                    for (j = 0; j < Circuit.circuitMatrixSize; ++j)
+                        Circuit.circuitMatrix[i][j] = Circuit.origMatrix[i][j];
             }
 
             // Step each element this iteration
-            for (i = 0; i < CirSim.elmList.length; ++i) {
-                var ce = CirSim.getElm(i);
+            for (i = 0; i < Circuit.elementList.length; ++i) {
+                var ce = Circuit.getElm(i);
                 ce.doStep();
             }
 
-            if (CirSim.stopMessage != null)
+            if (Circuit.stopMessage != null)
                 return;
 
             var printit = debugPrint;
             debugPrint = false;
-            for (j = 0; j < CirSim.circuitMatrixSize; ++j) {
-                for (i = 0; i < CirSim.circuitMatrixSize; ++i) {
-                    var x = CirSim.circuitMatrix[i][j];
+            for (j = 0; j < Circuit.circuitMatrixSize; ++j) {
+                for (i = 0; i < Circuit.circuitMatrixSize; ++i) {
+                    var x = Circuit.circuitMatrix[i][j];
                     if (isNaN(x) || isInfinite(x)) {
                         console.log("Matrix is invalid " + isNaN(x));
-                        CirSim.halt("Invalid matrix", null);
+                        Circuit.halt("Invalid matrix", null);
                         return;
                     }
                 }
@@ -2493,50 +2490,50 @@ CirSim.runCircuit = function () {
 //                console.log("\n");
 //            }
 
-            if (CirSim.circuitNonLinear) {
-                if (CirSim.converged && subiter > 0)
+            if (Circuit.circuitNonLinear) {
+                if (Circuit.converged && subiter > 0)
                     break;
 
-                if (!CirSim.lu_factor(CirSim.circuitMatrix, CirSim.circuitMatrixSize, CirSim.circuitPermute)) {
-                    CirSim.halt("Singular matrix!", null);
+                if (!Circuit.lu_factor(Circuit.circuitMatrix, Circuit.circuitMatrixSize, Circuit.circuitPermute)) {
+                    Circuit.halt("Singular matrix!", null);
                     return;
                 }
 
             }
 
-            CirSim.lu_solve(CirSim.circuitMatrix, CirSim.circuitMatrixSize, CirSim.circuitPermute, CirSim.circuitRightSide);
+            Circuit.lu_solve(Circuit.circuitMatrix, Circuit.circuitMatrixSize, Circuit.circuitPermute, Circuit.circuitRightSide);
 
-            for (j = 0; j < CirSim.circuitMatrixFullSize; ++j) {
-                var ri = CirSim.circuitRowInfo[j];
+            for (j = 0; j < Circuit.circuitMatrixFullSize; ++j) {
+                var ri = Circuit.circuitRowInfo[j];
                 var res = 0;
 
                 if (ri.type == RowInfo.ROW_CONST)
                     res = ri.value;
                 else
-                    res = CirSim.circuitRightSide[ri.mapCol];
+                    res = Circuit.circuitRightSide[ri.mapCol];
 
                 if (isNaN(res)) {
-                    CirSim.converged = false;
+                    Circuit.converged = false;
                     break;
                 }
 
-                if (j < (CirSim.nodeList.length - 1)) {
+                if (j < (Circuit.nodeList.length - 1)) {
 
-                    var cn = CirSim.getCircuitNode(j + 1);
+                    var cn = Circuit.getCircuitNode(j + 1);
                     for (k = 0; k < cn.links.length; ++k) {
                         var cn1 = cn.links[k];// as CircuitNodeLink;
 
                         cn1.elm.setNodeVoltage(cn1.num, res);
                     }
                 } else {
-                    var ji = j - (CirSim.nodeList.length - 1);
+                    var ji = j - (Circuit.nodeList.length - 1);
                     //console.log("setting vsrc " + ji + " to " + res);
-                    CirSim.voltageSources[ji].setCurrent(ji, res);
+                    Circuit.voltageSources[ji].setCurrent(ji, res);
                 }
 
             }
 
-            if (!CirSim.circuitNonLinear)
+            if (!Circuit.circuitNonLinear)
                 break;
 
         }	// End for
@@ -2544,13 +2541,13 @@ CirSim.runCircuit = function () {
         if (subiter > 5)
             console.log("converged after " + subiter + " iterations");
         if (subiter >= subiterCount) {
-            CirSim.halt("Convergence failed: " + subiter, null);
+            Circuit.halt("Convergence failed: " + subiter, null);
             break;
         }
 
-        CirSim.t += CirSim.timeStep;
-        for(i=0; i<CirSim.scopeCount; ++i)
-            CirSim.scopes[i].timeStep();
+        Circuit.t += Circuit.timeStep;
+        for(i=0; i<Circuit.scopeCount; ++i)
+            Circuit.scopes[i].timeStep();
 
         tm = (new Date()).getTime();
         lit = tm;
@@ -2558,17 +2555,17 @@ CirSim.runCircuit = function () {
         //console.log("diff: " + (tm-CirSim.lastIterTime) + " iter: " + iter + " ");
         //console.log(iterCount + " breaking from iteration: " + " sr: " + steprate + " iter: " + subiter + " time: " + (tm - CirSim.lastIterTime)+ " lastFrametime: " + CirSim.lastFrameTime );
         //iterCount++;
-        if (iter * 1000 >= steprate * (tm - CirSim.lastIterTime)) {
+        if (iter * 1000 >= steprate * (tm - Circuit.lastIterTime)) {
             //console.log("1 breaking from iteration: " + " sr: " + steprate + " iter: " + subiter + " time: " + (tm - CirSim.lastIterTime)+ " lastFrametime: " + CirSim.lastFrameTime );
             break;
-        } else if (tm - CirSim.lastFrameTime > 500) {
+        } else if (tm - Circuit.lastFrameTime > 500) {
             //console.log("2 breaking from iteration: " + " sr: " + steprate + " iter: " + iter + " time: " + (tm - CirSim.lastIterTime) + " lastFrametime: " + CirSim.lastFrameTime );
             break;
         }
 
     }
 
-    CirSim.lastIterTime = lit;
+    Circuit.lastIterTime = lit;
 };
 
 
@@ -2581,7 +2578,7 @@ CirSim.runCircuit = function () {
  * @param n dimension
  * @param ipvt pivot index
  */
-CirSim.lu_factor = function (a, n, ipvt) {
+Circuit.lu_factor = function (a, n, ipvt) {
 
     var i = 0;
     var j = 0;
@@ -2599,7 +2596,7 @@ CirSim.lu_factor = function (a, n, ipvt) {
         // Check for singular matrix:
         if (largest == 0)
             return false;
-        CirSim.scaleFactors[i] = 1.0 / largest;
+        Circuit.scaleFactors[i] = 1.0 / largest;
     }
 
     // Crout's method: Loop through columns first
@@ -2643,7 +2640,7 @@ CirSim.lu_factor = function (a, n, ipvt) {
                 a[largestRow][k] = a[j][k];
                 a[j][k] = x;
             }
-            CirSim.scaleFactors[largestRow] = CirSim.scaleFactors[j];
+            Circuit.scaleFactors[largestRow] = Circuit.scaleFactors[j];
         }
 
         // keep track of row interchanges
@@ -2678,7 +2675,7 @@ CirSim.lu_factor = function (a, n, ipvt) {
  * @param ipvt pivot index
  * @param b factored matrix
  */
-CirSim.lu_solve = function (a, n, ipvt, b) {
+Circuit.lu_solve = function (a, n, ipvt, b) {
     var i;
 
     // find first nonzero b element
@@ -2734,12 +2731,12 @@ CirSim.lu_solve = function (a, n, ipvt, b) {
  ****************************************************************
  ****************************************************************/
 
-CirSim.snapGrid = function (x) {
-    return (x + CirSim.gridRound) & CirSim.gridMask;
+Circuit.snapGrid = function (x) {
+    return (x + Circuit.gridRound) & Circuit.gridMask;
 };
 
 /** Computes the Euclidean distance between two points */
-CirSim.distanceSq = function (x1, y1, x2, y2) {
+Circuit.distanceSq = function (x1, y1, x2, y2) {
     x2 -= x1;
     y2 -= y1;
 
@@ -2747,13 +2744,13 @@ CirSim.distanceSq = function (x1, y1, x2, y2) {
 };
 
 
-CirSim.readHint = function (st) {
+Circuit.readHint = function (st) {
     if (typeof st == 'string')
         st = st.split(' ');
 
-    CirSim.hintType = st[0];
-    CirSim.hintItem1 = st[1];
-    CirSim.hintItem2 = st[2];
+    Circuit.hintType = st[0];
+    Circuit.hintItem1 = st[1];
+    Circuit.hintItem2 = st[2];
 };
 
 /* ****************************************************************
@@ -2761,20 +2758,20 @@ CirSim.readHint = function (st) {
        Errors and Warnings
    ****************************************************************
    ****************************************************************/
-CirSim.errorStack = new Array();
-CirSim.warningStack = new Array();
+Circuit.errorStack = new Array();
+Circuit.warningStack = new Array();
 
 
-CirSim.error = function (msg) {
+Circuit.error = function (msg) {
     console.log("Error: " + msg);
-    CirSim.errorStack.push(msg);
-    CirSim.drawError();
+    Circuit.errorStack.push(msg);
+    Circuit.drawError();
 };
 
-CirSim.drawError = function () {
+Circuit.drawError = function () {
     var msg = "";
-    for (var i = 0; i < CirSim.errorStack.length; ++i) {
-        msg += CirSim.errorStack[i] + '\n';
+    for (var i = 0; i < Circuit.errorStack.length; ++i) {
+        msg += Circuit.errorStack[i] + '\n';
     }
     console.error("Simulation Error: " + msg);
     // TODO: CANVAS
@@ -2782,16 +2779,16 @@ CirSim.drawError = function () {
     paper.fillText(msg, 150, getCanvasBounds().height - 50);
 };
 
-CirSim.warning = function (msg) {
+Circuit.warning = function (msg) {
     console.log("Warning: " + msg);
-    CirSim.warningStack.push(msg);
-    CirSim.drawWarning();
+    Circuit.warningStack.push(msg);
+    Circuit.drawWarning();
 };
 
-CirSim.drawWarning = function () {
+Circuit.drawWarning = function () {
     var msg = "";
-    for (var i = 0; i < CirSim.warningStack.length; ++i) {
-        msg += CirSim.warningStack[i] + '\n';
+    for (var i = 0; i < Circuit.warningStack.length; ++i) {
+        msg += Circuit.warningStack[i] + '\n';
     }
     //paper.text(150, getCanvasBounds().height - 70, msg).attr('fill', Color.color2HexString(Settings.WARNING_COLOR));
     paper.fillText(msg, 150, getCanvasBounds().height - 70);

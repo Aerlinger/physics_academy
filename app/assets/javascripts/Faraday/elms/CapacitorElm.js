@@ -64,7 +64,7 @@ CapacitorElm.prototype.draw = function (g) {
     this.setBboxPt(this.point1, this.point2, hs);
 
     this.curcount = this.updateDotCount();
-    if (CirSim.dragElm != this) {
+    if (Circuit.dragElm != this) {
         this.drawDots(this.point1, this.lead1, this.curcount);
         this.drawDots(this.point2, this.lead2, -this.curcount);
     }
@@ -85,7 +85,7 @@ CapacitorElm.prototype.draw = function (g) {
     CircuitElement.drawThickLinePt(this.plate2[0], this.plate2[1], color);
 
     this.drawPosts();
-    if (CirSim.showValuesCheckItem) {
+    if (Circuit.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.capacitance, "F");
         this.drawValues(s, hs);
     }
@@ -96,13 +96,13 @@ CapacitorElm.prototype.stamp = function () {
     // parallel with a resistor.  Trapezoidal is more accurate than Backward Euler but can cause oscillatory behavior
     // if RC is small relative to the timestep.
     if (this.isTrapezoidal())
-        this.compResistance = CirSim.timeStep / (2 * this.capacitance);
+        this.compResistance = Circuit.timeStep / (2 * this.capacitance);
     else
-        this.compResistance = CirSim.timeStep / this.capacitance;
+        this.compResistance = Circuit.timeStep / this.capacitance;
 
-    CirSim.stampResistor(this.nodes[0], this.nodes[1], this.compResistance);
-    CirSim.stampRightSide(this.nodes[0]);
-    CirSim.stampRightSide(this.nodes[1]);
+    Circuit.stampResistor(this.nodes[0], this.nodes[1], this.compResistance);
+    Circuit.stampRightSide(this.nodes[0]);
+    Circuit.stampRightSide(this.nodes[1]);
 };
 
 CapacitorElm.prototype.startIteration = function () {
@@ -124,7 +124,7 @@ CapacitorElm.prototype.calculateCurrent = function () {
 CapacitorElm.prototype.curSourceValue = 0;
 
 CapacitorElm.prototype.doStep = function () {
-    CirSim.stampCurrentSource(this.nodes[0], this.nodes[1], this.curSourceValue);
+    Circuit.stampCurrentSource(this.nodes[0], this.nodes[1], this.curSourceValue);
 };
 
 CapacitorElm.prototype.getInfo = function (arr) {

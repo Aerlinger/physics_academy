@@ -85,7 +85,7 @@ function EditDialog(ce) {
             if (ei.text == null)
                 this.setBar(ei);
         }
-        CirSim.needAnalyze();
+        Circuit.needAnalyze();
     });
 
 }
@@ -212,7 +212,7 @@ EditDialog.prototype.adjustmentValueChanged = function (e) {
             ei.value = Math.round(ei.value / ei.minval) * ei.minval;
             this.elm.setEditValue(i, ei);
             ei.textf.setText(this.unitString(ei));
-            CirSim.needAnalyze();
+            Circuit.needAnalyze();
         }
     }
 };

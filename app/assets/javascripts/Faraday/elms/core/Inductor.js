@@ -37,13 +37,13 @@ Inductor.prototype.stamp = function (n0, n1) {
     this.nodes[0] = n0;
     this.nodes[1] = n1;
     if (this.isTrapezoidal())
-        this.compResistance = 2 * this.inductance / CirSim.timeStep;
+        this.compResistance = 2 * this.inductance / Circuit.timeStep;
     else // backward euler
-        this.compResistance = this.inductance / CirSim.timeStep;
+        this.compResistance = this.inductance / Circuit.timeStep;
 
-    CirSim.stampResistor(this.nodes[0], this.nodes[1], this.compResistance);
-    CirSim.stampRightSide(this.nodes[0]);
-    CirSim.stampRightSide(this.nodes[1]);
+    Circuit.stampResistor(this.nodes[0], this.nodes[1], this.compResistance);
+    Circuit.stampRightSide(this.nodes[0]);
+    Circuit.stampRightSide(this.nodes[1]);
 };
 
 Inductor.prototype.nonLinear = function () {
@@ -67,5 +67,5 @@ Inductor.prototype.calculateCurrent = function (voltdiff) {
 };
 
 Inductor.prototype.doStep = function (voltdiff) {
-    CirSim.stampCurrentSource(this.nodes[0], this.nodes[1], this.curSourceValue);
+    Circuit.stampCurrentSource(this.nodes[0], this.nodes[1], this.curSourceValue);
 };

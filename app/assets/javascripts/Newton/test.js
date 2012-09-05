@@ -4,7 +4,7 @@
 function createBalls(world) {
   "use strict";
 
-  for (var i = 0; i < 0; ++i) {
+  for (var i = 0; i < 40; ++i) {
 
     var circleFixDef = new b2FixtureDef;
     var circleBodyDef = new b2BodyDef;

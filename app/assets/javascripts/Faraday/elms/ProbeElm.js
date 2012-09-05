@@ -22,7 +22,7 @@ ProbeElm.prototype.setPoints = function () {
     if (this.point2.y < this.point1.y) {
         var x = this.point1;
         this.point1 = this.point2;
-        this.point2 = this.x;
+        this.point2 = this.x1;
     }
     this.center = CircuitElement.interpPointPt(this.point1, this.point2, .5);
 };
@@ -31,8 +31,8 @@ ProbeElm.prototype.draw = function () {
     var hs = 8;
 
     CircuitElement.setBboxPt(this.point1, this.point2, hs);
-    var selected = (this.needsHighlight() || CirSim.plotYElm == this);
-    var len = (selected || CirSim.dragElm == this) ? 16 : this.dn - 32;
+    var selected = (this.needsHighlight() || Circuit.plotYElm == this);
+    var len = (selected || Circuit.dragElm == this) ? 16 : this.dn - 32;
 
     CircuitElement.calcLeads(Math.floor(len));
     var color = this.setVoltageColor(this.volts[0]);
@@ -51,10 +51,10 @@ ProbeElm.prototype.draw = function () {
 
     CircuitElement.setFont(f);
 
-    if (this == CirSim.plotXElm)
-        CircuitElement.drawCenteredText("X", this.center.x, this.center.y, color);
-    if (this == CirSim.plotYElm)
-        CircuitElement.drawCenteredText("Y", this.center.x, this.center.y, color);
+    if (this == Circuit.plotXElm)
+        CircuitElement.drawCenteredText("X", this.center.x1, this.center.y, color);
+    if (this == Circuit.plotYElm)
+        CircuitElement.drawCenteredText("Y", this.center.x1, this.center.y, color);
     if (this.mustShowVoltage()) {
         var s = CircuitElement.getShortUnitText(volts[0], "V");
         this.drawValues(s, 4);

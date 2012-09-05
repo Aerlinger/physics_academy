@@ -34,7 +34,7 @@ InductorElm.prototype.draw = function () {
     this.setPowerColor(false);
     this.drawCoil(8, this.lead1, this.lead2, v1, v2);
 
-    if (CirSim.showValuesCheckItem) {
+    if (Circuit.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.inductance, "H");
         this.drawValues(s, hs);
     }

@@ -1,6 +1,5 @@
-
-
 // static members /////////////////////////////////////////////////
+
 CircuitElement.voltageRange = 5;
 CircuitElement.colorScaleCount = 32;
 CircuitElement.colorScale = [];
@@ -14,6 +13,7 @@ CircuitElement.ps2 = new Point(50, 0);
 
 CircuitElement.whiteColor = Color.WHITE;
 CircuitElement.selectColor = Color.ORANGE;
+CircuitElement.drawColor = '#FFFFFF';
 CircuitElement.lightGreyColor = 0;
 
 CircuitElement.showFormat = 0;//showFormat:flash.globalization.NumberFormatter;
@@ -21,7 +21,7 @@ CircuitElement.shortFormat = 0;//flash.globalization.NumberFormatter;
 CircuitElement.noCommaFormat = 0;//noCommaFormat:flash.globalization.NumberFormatter;
 
 // non-static Member variables
-CircuitElement.prototype.x = 0;
+CircuitElement.prototype.x1 = 0;
 CircuitElement.prototype.y = 0;
 CircuitElement.prototype.x2 = 0;
 CircuitElement.prototype.y2 = 0;
@@ -54,7 +54,7 @@ CircuitElement.prototype.boundingBox;
 CircuitElement.prototype.noDiagonal = false;
 CircuitElement.prototype.selected = false;
 
-CircuitElement.drawColor = '#FFFFFF';
+
 
 
 // Constructor //////////////////////////////////////////////////////
@@ -63,10 +63,10 @@ function CircuitElement(xa, ya, xb, yb, f, st) {
     //Cir.initClass();
     this.boundingBox = new Rectangle(0, 0, Math.abs(xa - xb), Math.abs(ya - yb));
 
-    this.x = CirSim.snapGrid(xa);
-    this.y = CirSim.snapGrid(ya);
-    this.x2 = isNaN(xb) ? this.x : CirSim.snapGrid(xb);
-    this.y2 = isNaN(yb) ? this.y : CirSim.snapGrid(yb);
+    this.x1 = Circuit.snapGrid(xa);
+    this.y = Circuit.snapGrid(ya);
+    this.x2 = isNaN(xb) ? this.x1 : Circuit.snapGrid(xb);
+    this.y2 = isNaN(yb) ? this.y : Circuit.snapGrid(yb);
     this.flags = isNaN(f) ? this.getDefaultFlags() : f;
 
     CircuitElement.lightGrayColor = Settings.LIGHT_GREY;
@@ -76,7 +76,7 @@ function CircuitElement(xa, ya, xb, yb, f, st) {
     this.allocNodes();
     this.initBoundingBox();
 }
-;
+
 
 CircuitElement.setColor = function (color) {
     if (typeof(color) == 'string')
@@ -88,7 +88,7 @@ CircuitElement.setColor = function (color) {
 ///////////////////////////////////////////////////////////////////////
 // Methods to be overridden by children: //////////////////////////////
 CircuitElement.prototype.setPoints = function () {
-    this.dx = this.x2 - this.x;
+    this.dx = this.x2 - this.x1;
     this.dy = this.y2 - this.y;
     this.dn = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
 
@@ -96,7 +96,7 @@ CircuitElement.prototype.setPoints = function () {
     this.dpy1 = -this.dx / this.dn;
     this.dsign = (this.dy == 0) ? sign(this.dx) : sign(this.dy);
 
-    this.point1 = new Point(this.x, this.y);
+    this.point1 = new Point(this.x1, this.y);
     this.point2 = new Point(this.x2, this.y2);
 };
 
@@ -116,7 +116,7 @@ CircuitElement.prototype.toString = function () {
 };
 
 CircuitElement.prototype.isSelected = function () {
-    return CirSim.selected;
+    return Circuit.selected;
 };
 
 CircuitElement.initClass = function () {
@@ -159,9 +159,9 @@ CircuitElement.initClass = function () {
 CircuitElement.prototype.initBoundingBox = function () {
     this.boundingBox = new Rectangle(0, 0, 0, 0);
 
-    this.boundingBox.x = Math.min(this.x, this.x2);
+    this.boundingBox.x1 = Math.min(this.x1, this.x2);
     this.boundingBox.y = Math.min(this.y, this.y2);
-    this.boundingBox.width = Math.abs(this.x2 - this.x) + 1;
+    this.boundingBox.width = Math.abs(this.x2 - this.x1) + 1;
     this.boundingBox.height = Math.abs(this.y2 - this.y) + 1;
 };
 
@@ -169,13 +169,12 @@ CircuitElement.prototype.allocNodes = function () {
     this.nodes = new Array(this.getPostCount() + this.getInternalNodeCount());
     this.volts = new Array(this.getPostCount() + this.getInternalNodeCount());
 
-
     this.nodes = zeroArray(this.nodes);
     this.volts = zeroArray(this.volts);
 };
 
 CircuitElement.prototype.dump = function () {
-    return this.getDumpType() + " " + this.x + " " + this.y + " " + this.x2 + " " + this.y2 + " " + this.flags;
+    return this.getDumpType() + " " + this.x1 + " " + this.y + " " + this.x2 + " " + this.y2 + " " + this.flags;
 };
 
 CircuitElement.prototype.reset = function () {
@@ -187,7 +186,7 @@ CircuitElement.prototype.reset = function () {
 };
 
 CircuitElement.prototype.draw = function () {
-    paper.fillRect(this.boundingBox.x, this.boundingBox.y, this.boundingBox.width, this.boundingBox.height);
+    paper.fillRect(this.boundingBox.x1, this.boundingBox.y, this.boundingBox.width, this.boundingBox.height);
 };
 
 CircuitElement.prototype.setCurrent = function (x, c) {
@@ -224,14 +223,14 @@ CircuitElement.prototype.calculateCurrent = function () {
 };
 
 CircuitElement.prototype.setPoints = function () {
-    this.dx = this.x2 - this.x;
+    this.dx = this.x2 - this.x1;
     this.dy = this.y2 - this.y;
     this.dn = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
 
     this.dpx1 = this.dy / this.dn;
     this.dpy1 = -this.dx / this.dn;
     this.dsign = (this.dy == 0) ? sign(this.dx) : sign(this.dy);
-    this.point1 = new Point(this.x, this.y);
+    this.point1 = new Point(this.x1, this.y);
     this.point2 = new Point(this.x2, this.y2);
 };
 
@@ -251,7 +250,7 @@ CircuitElement.prototype.getDefaultFlags = function () {
 
 CircuitElement.interpPointPt = function (a, b, f, g) {
     if (!f)
-        CirSim.halt("no interpolation value (f) defined in interpPointPt");
+        Circuit.halt("no interpolation value (f) defined in interpPointPt");
 
     var p = new Point(0, 0);
     CircuitElement.interpPoint(a, b, p, f, g);
@@ -264,13 +263,13 @@ CircuitElement.interpPoint = function (a, b, c, f, g) {
 
     if (g) {
         gx = b.y - a.y;
-        gy = a.x - b.x;
+        gy = a.x1 - b.x1;
         g /= Math.sqrt(gx * gx + gy * gy);
     } else {
         g = 0;
     }
 
-    c.x = Math.floor(a.x * (1 - f) + b.x * f + g * gx + .48);
+    c.x1 = Math.floor(a.x1 * (1 - f) + b.x1 * f + g * gx + .48);
     c.y = Math.floor(a.y * (1 - f) + b.y * f + g * gy + .48);
 
     return b;
@@ -282,7 +281,7 @@ CircuitElement.interpPoint2 = function (a, b, c, d, f, g) {
 
     if (g != 0) {
         gx = b.y - a.y;
-        gy = a.x - b.x;
+        gy = a.x1 - b.x1;
         g /= Math.sqrt(gx * gx + gy * gy);
     } else {
         g = 0;
@@ -290,9 +289,9 @@ CircuitElement.interpPoint2 = function (a, b, c, d, f, g) {
 
     var offset = .48;
 
-    c.x = Math.floor(a.x * (1 - f) + b.x * f + g * gx + offset);
+    c.x1 = Math.floor(a.x1 * (1 - f) + b.x1 * f + g * gx + offset);
     c.y = Math.floor(a.y * (1 - f) + b.y * f + g * gy + offset);
-    d.x = Math.floor(a.x * (1 - f) + b.x * f - g * gx + offset);
+    d.x1 = Math.floor(a.x1 * (1 - f) + b.x1 * f - g * gx + offset);
     d.y = Math.floor(a.y * (1 - f) + b.y * f - g * gy + offset);
 };
 
@@ -313,10 +312,10 @@ CircuitElement.newPointArray = function (n) {
 
 CircuitElement.prototype.drawDots = function (pa, pb, pos) {
     // If the sim is stopped or has dots disabled
-    if (CirSim.stoppedCheck || pos == 0 || !CirSim.dotsCheckItem)
+    if (Circuit.stoppedCheck || pos == 0 || !Circuit.dotsCheckItem)
         return;
 
-    var dx = pb.x - pa.x;
+    var dx = pb.x1 - pa.x1;
     var dy = pb.y - pa.y;
 
     var dn = Math.sqrt(dx * dx + dy * dy);
@@ -328,7 +327,7 @@ CircuitElement.prototype.drawDots = function (pa, pb, pos) {
         pos += ds;
 
     for (var di = pos; di < dn; di += ds) {
-        var x0 = (pa.x + di * dx / dn);
+        var x0 = (pa.x1 + di * dx / dn);
         var y0 = (pa.y + di * dy / dn);
 
         // Draws each dot:
@@ -353,15 +352,15 @@ CircuitElement.calcArrow = function (a, b, al, aw) {
     var p1 = new Point(0, 0);
     var p2 = new Point(0, 0);
 
-    var adx = b.x - a.x;
+    var adx = b.x1 - a.x1;
     var ady = b.y - a.y;
 
     var l = Math.sqrt(adx * adx + ady * ady);
 
-    poly.addVertex(b.x, b.y);
+    poly.addVertex(b.x1, b.y);
     CircuitElement.interpPoint2(a, b, p1, p2, 1 - al / l, aw);
-    poly.addVertex(p1.x, p1.y);
-    poly.addVertex(p2.x, p2.y);
+    poly.addVertex(p1.x1, p1.y);
+    poly.addVertex(p2.x1, p2.y);
 
     return poly;
 };
@@ -369,12 +368,12 @@ CircuitElement.calcArrow = function (a, b, al, aw) {
 CircuitElement.createPolygon = function (a, b, c, d) {
     var p = new Polygon();
 
-    p.addVertex(a.x, a.y);
-    p.addVertex(b.x, b.y);
-    p.addVertex(c.x, c.y);
+    p.addVertex(a.x1, a.y);
+    p.addVertex(b.x1, b.y);
+    p.addVertex(c.x1, c.y);
 
     if (d)
-        p.addVertex(d.x, d.y);
+        p.addVertex(d.x1, d.y);
 
     return p;
 };
@@ -383,18 +382,18 @@ CircuitElement.createPolygonFromArray = function (a) {
     var p = new Polygon();
 
     for (var i = 0; i < a.length; ++i)
-        p.addVertex(a[i].x, a[i].y);
+        p.addVertex(a[i].x1, a[i].y);
 
     return p;
 };
 
 CircuitElement.prototype.drag = function (xx, yy) {
-    xx = CirSim.snapGrid(xx);
-    yy = CirSim.snapGrid(yy);
+    xx = Circuit.snapGrid(xx);
+    yy = Circuit.snapGrid(yy);
 
     if (this.noDiagonal) {
-        if (Math.abs(this.x - xx) < Math.abs(this.y - yy))
-            xx = this.x;
+        if (Math.abs(this.x1 - xx) < Math.abs(this.y - yy))
+            xx = this.x1;
         else
             yy = this.y;
     }
@@ -406,12 +405,12 @@ CircuitElement.prototype.drag = function (xx, yy) {
 };
 
 CircuitElement.prototype.move = function (dx, dy) {
-    this.x += dx;
+    this.x1 += dx;
     this.y += dy;
     this.x2 += dx;
     this.y2 += dy;
 
-    this.boundingBox.x += dx;
+    this.boundingBox.x1 += dx;
     this.boundingBox.y += dy;
 
     this.setPoints();
@@ -419,18 +418,18 @@ CircuitElement.prototype.move = function (dx, dy) {
 
 CircuitElement.prototype.allowMove = function (dx, dy) {
 
-    var nx = this.x + dx;
+    var nx = this.x1 + dx;
     var ny = this.y + dy;
 
     var nx2 = this.x2 + dx;
     var ny2 = this.y2 + dy;
 
-    for (var i = 0; i < CirSim.elmList.length; ++i) {
-        var ce = CirSim.getElm(i);
+    for (var i = 0; i < Circuit.elementList.length; ++i) {
+        var ce = Circuit.getElm(i);
 
-        if (ce.x == nx && ce.y == ny && ce.x2 == nx2 && ce.y2 == ny2)
+        if (ce.x1 == nx && ce.y == ny && ce.x2 == nx2 && ce.y2 == ny2)
             return false;
-        if (ce.x == nx2 && ce.y == ny2 && ce.x2 == nx && ce.y2 == ny)
+        if (ce.x1 == nx2 && ce.y == ny2 && ce.x2 == nx && ce.y2 == ny)
             return false;
     }
 
@@ -440,7 +439,7 @@ CircuitElement.prototype.allowMove = function (dx, dy) {
 
 CircuitElement.prototype.movePoint = function (n, dx, dy) {
     if (n == 0) {
-        this.x += dx;
+        this.x1 += dx;
         this.y += dy;
     } else {
         this.x2 += dx;
@@ -507,18 +506,18 @@ CircuitElement.prototype.setBbox = function (x1, y1, x2, y2) {
         y2 = q;
     }
 
-    this.boundingBox.x = x1;
+    this.boundingBox.x1 = x1;
     this.boundingBox.y = y1;
     this.boundingBox.width = x2 - x1 + 1;
     this.boundingBox.height = y2 - y1 + 1;
 };
 
 CircuitElement.prototype.setBboxPt = function (p1, p2, w) {
-    this.setBbox(p1.x, p1.y, p2.x, p2.y)
+    this.setBbox(p1.x1, p1.y, p2.x1, p2.y)
 
     var dpx = (this.dpx1 * w);
     var dpy = (this.dpy1 * w);
-    this.adjustBbox(p1.x + dpx, p1.y + dpy, p1.x - dpx, p1.y - dpy);
+    this.adjustBbox(p1.x1 + dpx, p1.y + dpy, p1.x1 - dpx, p1.y - dpy);
 };
 
 CircuitElement.prototype.adjustBbox = function (x1, y1, x2, y2) {
@@ -532,19 +531,19 @@ CircuitElement.prototype.adjustBbox = function (x1, y1, x2, y2) {
         y1 = y2;
         y2 = q;
     }
-    x1 = Math.min(this.boundingBox.x, x1);
+    x1 = Math.min(this.boundingBox.x1, x1);
     y1 = Math.min(this.boundingBox.y, y1);
-    x2 = Math.max(this.boundingBox.x + this.boundingBox.width - 1, x2);
+    x2 = Math.max(this.boundingBox.x1 + this.boundingBox.width - 1, x2);
     y2 = Math.max(this.boundingBox.y + this.boundingBox.height - 1, y2);
 
-    this.boundingBox.x = x1;
+    this.boundingBox.x1 = x1;
     this.boundingBox.y = y1;
     this.boundingBox.width = x2 - x1;
     this.boundingBox.height = y2 - y1;
 };
 
 CircuitElement.prototype.adjustBboxPt = function (p1, p2) {
-    this.adjustBbox(p1.x, p1.y, p2.x, p2.y);
+    this.adjustBbox(p1.x1, p1.y, p2.x1, p2.y);
 };
 
 CircuitElement.prototype.isCenteredText = function () {
@@ -597,7 +596,7 @@ CircuitElement.prototype.drawValues = function (s, hs) {
         xc = this.x2;
         yc = this.y2;
     } else {
-        xc = (this.x2 + this.x) / 2;
+        xc = (this.x2 + this.x1) / 2;
         yc = (this.y2 + this.y) / 2;
     }
 
@@ -621,7 +620,7 @@ CircuitElement.prototype.drawValues = function (s, hs) {
     } else {
         var xx = xc + Math.abs(dpx) + offset;
 
-        if (this instanceof VoltageElm || (this.x < this.x2 && this.y > this.y2))
+        if (this instanceof VoltageElm || (this.x1 < this.x2 && this.y > this.y2))
             xx = xc - (10 + Math.abs(dpx) + offset);
 
         // TODO: CANVAS
@@ -642,7 +641,7 @@ CircuitElement.prototype.drawCoil = function (hs, p1, p2, v1, v2) {
 
     var segf = 1 / segments;
 
-    CircuitElement.ps1.x = p1.x;
+    CircuitElement.ps1.x1 = p1.x1;
     CircuitElement.ps1.y = p1.y;
 
     for (var i = 0; i < segments; ++i) {
@@ -656,7 +655,7 @@ CircuitElement.prototype.drawCoil = function (hs, p1, p2, v1, v2) {
         var color = this.setVoltageColor(v);
         CircuitElement.drawThickLinePt(CircuitElement.ps1, CircuitElement.ps2, color);
 
-        CircuitElement.ps1.x = CircuitElement.ps2.x;
+        CircuitElement.ps1.x1 = CircuitElement.ps2.x1;
         CircuitElement.ps1.y = CircuitElement.ps2.y;
     }
 };
@@ -697,7 +696,7 @@ CircuitElement.drawThickLine = function (x, y, x2, y2, color) {
 };
 
 CircuitElement.drawThickLinePt = function (pa, pb, color) {
-    return CircuitElement.drawThickLine(pa.x, pa.y, pb.x, pb.y, color);
+    return CircuitElement.drawThickLine(pa.x1, pa.y, pb.x1, pb.y, color);
 };
 
 
@@ -722,15 +721,15 @@ CircuitElement.drawThickPolygonP = function (polygon, color) {
 CircuitElement.prototype.drawPosts = function () {
     for (var i = 0; i < this.getPostCount(); ++i) {
         var p = this.getPost(i);
-        this.drawPost(p.x, p.y, this.nodes[i]);
+        this.drawPost(p.x1, p.y, this.nodes[i]);
     }
 };
 
 CircuitElement.prototype.drawPost = function (x0, y0, node) {
     if (node) {
-        if (CirSim.dragElm == null && !this.needsHighlight() && CirSim.getCircuitNode(node).links.length == 2)
+        if (Circuit.dragElm == null && !this.needsHighlight() && Circuit.getCircuitNode(node).links.length == 2)
             return;
-        if (CirSim.mouseMode == CirSim.MODE_DRAG_ROW || CirSim.mouseMode == CirSim.MODE_DRAG_COLUMN)
+        if (Circuit.mouseMode == Circuit.MODE_DRAG_ROW || Circuit.mouseMode == Circuit.MODE_DRAG_COLUMN)
             return;
     }
 
@@ -772,7 +771,7 @@ CircuitElement.getUnitText = function (v, u) {
     if (va < 1e-6)
         return (v * 1e9).toFixed(2) + " n" + u;
     if (va < 1e-3)
-        return (v * 1e6).toFixed(2) + " " + CirSim.muString + u;
+        return (v * 1e6).toFixed(2) + " " + Circuit.muString + u;
     if (va < 1)
         return (v * 1e3).toFixed(2) + " m" + u;
     if (va < 1e3)
@@ -795,7 +794,7 @@ CircuitElement.getShortUnitText = function (v, u) {
     if (va < 1e-6)
         return (v * 1e9).toFixed(1) + "n" + u;
     if (va < 1e-3)
-        return (v * 1e6).toFixed(1) + CirSim.muString + u;
+        return (v * 1e6).toFixed(1) + Circuit.muString + u;
     if (va < 1)
         return (v * 1e3).toFixed(1) + "m" + u;
     if (va < 1e3)
@@ -822,7 +821,7 @@ CircuitElement.prototype.updateDotCount = function (cur, cc) {
     if (isNaN(cc))
         cc = this.curcount;
 
-    if (CirSim.stoppedCheck)
+    if (Circuit.stoppedCheck)
         return cc;
     var cadd = cur * CircuitElement.currentMult;
 
@@ -834,7 +833,7 @@ CircuitElement.prototype.updateDotCount = function (cur, cc) {
 CircuitElement.prototype.doDots = function () {
     this.curcount = this.updateDotCount();
 
-    if (CirSim.dragElm != this)
+    if (Circuit.dragElm != this)
         this.drawDots(this.point1, this.point2, this.curcount);
 
 };
@@ -853,8 +852,8 @@ CircuitElement.prototype.setVoltageColor = function (volts) {
     if (this.needsHighlight()) {
         return Settings.SELECT_COLOR
     }
-    if (!CirSim.voltsCheckItem) {
-        if (!CirSim.powerCheckItem) // && !conductanceCheckItem.getState())
+    if (!Circuit.voltsCheckItem) {
+        if (!Circuit.powerCheckItem) // && !conductanceCheckItem.getState())
             return CircuitElement.whiteColor;
     }
     var c = Math.floor((volts + CircuitElement.voltageRange) * (CircuitElement.colorScaleCount - 1) / (CircuitElement.voltageRange * 2));
@@ -869,7 +868,7 @@ CircuitElement.prototype.setVoltageColor = function (volts) {
 
 CircuitElement.prototype.setPowerColor = function (yellow) {
 
-    if (!CirSim.powerCheckItem)
+    if (!Circuit.powerCheckItem)
         return;
 
     var w0 = this.getPower();
@@ -933,7 +932,7 @@ CircuitElement.prototype.comparePair = function (x1, x2, y1, y2) {
 };
 
 CircuitElement.prototype.needsHighlight = function () {
-    return (CirSim.mouseElm == this || this.selected);
+    return (Circuit.mouseElm == this || this.selected);
 };
 
 CircuitElement.prototype.isSelected = function () {

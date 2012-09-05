@@ -110,7 +110,7 @@ OpAmpElm.prototype.setSize = function (s) {
 OpAmpElm.prototype.setPoints = function () {
 
     CircuitElement.prototype.setPoints.call(this);
-    if (this.dn > 150 && this == CirSim.dragElm)
+    if (this.dn > 150 && this == Circuit.dragElm)
         this.setSize(2);
     var ww = Math.floor(this.opwidth);
     if (ww > this.dn / 2)
@@ -162,21 +162,21 @@ OpAmpElm.prototype.getInfo = function (arr) {
 
 
 OpAmpElm.prototype.stamp = function () {
-    var vn = CirSim.nodeList.length + this.voltSource;
-    CirSim.stampNonLinear(vn);
-    CirSim.stampMatrix(this.nodes[2], vn, 1);
+    var vn = Circuit.nodeList.length + this.voltSource;
+    Circuit.stampNonLinear(vn);
+    Circuit.stampMatrix(this.nodes[2], vn, 1);
 };
 
 OpAmpElm.prototype.doStep = function () {
     var vd = this.volts[1] - this.volts[0];
 
     if (Math.abs(this.lastvd - vd) > .1)
-        CirSim.converged = false;
+        Circuit.converged = false;
     else if (this.volts[2] > this.maxOut + .1 || this.volts[2] < this.minOut - .1)
-        CirSim.converged = false;
+        Circuit.converged = false;
 
     var x = 0;
-    var vn = CirSim.nodeList.length + this.voltSource;
+    var vn = Circuit.nodeList.length + this.voltSource;
     var dx = 0;
 
     if (vd >= this.maxOut / this.gain && (this.lastvd >= 0 || getRand(4) == 1)) {
@@ -190,10 +190,10 @@ OpAmpElm.prototype.doStep = function () {
     //console.log("opamp " + vd + " " + volts[2] + " " + dx + " "  + x + " " + lastvd + " " + sim.converged);
 
     // newton's method:
-    CirSim.stampMatrix(vn, this.nodes[0], dx);
-    CirSim.stampMatrix(vn, this.nodes[1], -dx);
-    CirSim.stampMatrix(vn, this.nodes[2], 1);
-    CirSim.stampRightSide(vn, x);
+    Circuit.stampMatrix(vn, this.nodes[0], dx);
+    Circuit.stampMatrix(vn, this.nodes[1], -dx);
+    Circuit.stampMatrix(vn, this.nodes[2], 1);
+    Circuit.stampRightSide(vn, x);
 
     this.lastvd = vd;
     /*if (sim.converged)

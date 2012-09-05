@@ -1,5 +1,9 @@
 include ApplicationHelper
 
+## ----------------------------------------------------------------
+#   FLASH message loggers
+## ----------------------------------------------------------------
+
 RSpec::Matchers.define :have_error_message do |message|
   match do |page|
     page.should have_selector('.alert.alert-error')
@@ -18,6 +22,10 @@ RSpec::Matchers.define :have_success_message do |message|
   end
 end
 
+## ----------------------------------------------------------------
+#   LOGIN matchers
+## ----------------------------------------------------------------
+
 RSpec::Matchers.define :have_default_login_links do |message|
   match do |page|
     page.should have_link("Sign in")
@@ -27,7 +35,7 @@ end
 
 RSpec::Matchers.define :have_guest_login_links do |message|
   match do |page|
-    page.should have_link("Sign in or Sign up to save")
+    page.should have_link("guest_login")
   end
 end
 
@@ -39,6 +47,9 @@ RSpec::Matchers.define :show_user_in_header do |message|
   end
 end
 
+## ----------------------------------------------------------------
+#   HELPER Methods
+## ----------------------------------------------------------------
 
 def sign_out_user
   delete destroy_user_session_path
@@ -55,3 +66,5 @@ def sign_in(user)
   cookies[:remember_token] = user.remember_token
   page.should have_info_message
 end
+
+

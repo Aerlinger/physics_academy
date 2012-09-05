@@ -14,16 +14,12 @@ class User < ActiveRecord::Base
   attr_accessor :guest
   attr_protected :guest
 
-  has_many :evaluations, class_name: "RSEvaluation", as: :source
-  has_reputation :votes, source: {reputation: :votes, of: :lessons_content}, aggregated_by: :sum
-
   before_save :create_remember_token
   before_save :init_name_and_email
 
   has_many :subscriptions, dependent: :destroy
   has_many :lessons, through: :subscriptions
 
-  #validates :name, presence: true , length: { maximum: 50, minimum: 2 }
   validates :email, format: { with: ApplicationHelper::VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
   validates :name, length: { maximum: 50 }
@@ -50,9 +46,13 @@ class User < ActiveRecord::Base
     update_attributes(params)
   end
 
+  scope :guests, User.where("name IS ?", "GUEST")
+
   private
 
     def init_name_and_email
+      self.lazy_id ||= -1
+
       self.email = email.downcase
       self.name = "Anonymous User" if name.blank?
       self.name.try(:titleize)

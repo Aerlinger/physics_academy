@@ -45,14 +45,14 @@ CurrentElm.prototype.draw = function () {
     this.setVoltageColor((this.volts[0] + this.volts[1]) / 2);
     this.setPowerColor(false);
 
-    CircuitElement.drawCircle(this.center.x, this.center.y, cr);
+    CircuitElement.drawCircle(this.center.x1, this.center.y, cr);
     CircuitElement.drawCircle(this.ashaft1, this.ashaft2);
 
     CircuitElement.fillPolygon(this.arrow);
     CircuitElement.setBboxPt(this.point1, this.point2, cr);
 
     this.doDots();
-    if (CirSim.showValuesCheckItem) {
+    if (Circuit.showValuesCheckItem) {
         var s = CircuitElement.getShortUnitText(this.currentValue, "A");
         if (this.dx == 0 || this.dy == 0)
             this.drawValues(s, cr);
@@ -62,7 +62,7 @@ CurrentElm.prototype.draw = function () {
 
 CurrentElm.prototype.stamp = function () {
     this.current = this.currentValue;
-    CirSim.stampCurrentSource(this.nodes[0], this.nodes[1], this.current);
+    Circuit.stampCurrentSource(this.nodes[0], this.nodes[1], this.current);
 };
 
 CurrentElm.prototype.getEditInfo = function (n) {

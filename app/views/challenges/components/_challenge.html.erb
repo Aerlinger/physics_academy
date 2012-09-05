@@ -6,7 +6,7 @@
         begin
           render partial: path_for_lesson_challenge(@lesson, @challenge)
         rescue ActionView::MissingTemplate
-          "Couldn't find page"
+          "Couldn't find page #{path_for_lesson_challenge(@lesson, @challenge)}"
         end
     %>
 

@@ -100,7 +100,7 @@ Scope.prototype.resetGraph = function () {
     this.ptr = this.ctr = 0;
 
     paper.beginPath();
-    paper.strokeRect(this.rect.x, this.rect.y, this.rect.width, this.rect.height);
+    paper.strokeRect(this.rect.x1, this.rect.y, this.rect.width, this.rect.height);
     paper.closePath();
 
     this.allocImage();
@@ -141,7 +141,7 @@ Scope.prototype.getWidth = function () {
 };
 
 Scope.prototype.rightEdge = function () {
-    return this.rect.x + this.rect.width;
+    return this.rect.x1 + this.rect.width;
 };
 
 Scope.prototype.setElm = function (ce) {
@@ -250,7 +250,7 @@ Scope.prototype.draw2d = function () {
     var i;
     if (this.pixels == null || this.dpixels == null)
         return;
-    var col = (CirSim.printableCheckItem) ? 0xFFFFFFFF : 0;
+    var col = (Circuit.printableCheckItem) ? 0xFFFFFFFF : 0;
     for (i = 0; i != this.pixels.length; i++)
         this.pixels[i] = col;
 
@@ -276,11 +276,11 @@ Scope.prototype.draw2d = function () {
 //    });
 
     paper.beginPath();
-    paper.arc(this.rect.x + this.draw_ox - 2, this.rect.y + this.draw_oy - 2, 5, 0, 2*Math.PI,false);
+    paper.arc(this.rect.x1 + this.draw_ox - 2, this.rect.y + this.draw_oy - 2, 5, 0, 2*Math.PI,false);
     paper.closePath();
 
     var yt = this.rect.y + 10;
-    var x = this.rect.x;
+    var x = this.rect.x1;
     if (this.text != null && this.rect.y + this.rect.height > yt + 5) {
         // Todo: draw text
         //g.drawString(this.text, x, yt);
@@ -303,7 +303,7 @@ Scope.prototype.draw = function () {
     console.log("starting draw");
 
     var i;
-    var col = (CirSim.printableCheckItem) ? 0xFFFFFFFF : 0;
+    var col = (Circuit.printableCheckItem) ? 0xFFFFFFFF : 0;
 
     for (i = 0; i != this.pixels.length; i++)
         this.pixels[i] = col;
@@ -322,7 +322,7 @@ Scope.prototype.draw = function () {
     var curColor = '#FFFF00';
     var voltColor = (this.value > 0) ? '#FFFFFF' : '#00FF00';
 
-    if (CirSim.scopeSelected == -1 && this.elm == CirSim.mouseElm)
+    if (Circuit.scopeSelected == -1 && this.elm == Circuit.mouseElm)
         curColor = voltColor = 0xFF00FFFF;
 
     var ipa = this.ptr + this.scopePointCount - this.rect.width;
@@ -370,11 +370,11 @@ Scope.prototype.draw = function () {
     }
 
     gridStep = 1e-15;
-    var ts = CirSim.timeStep * this.speed;
+    var ts = Circuit.timeStep * this.speed;
     while (gridStep < ts * 5)
         gridStep *= 10;
-    var tstart = CirSim.t - CirSim.timeStep * this.speed * this.rect.width;
-    var tx = CirSim.t - (CirSim.t % gridStep);
+    var tstart = Circuit.t - Circuit.timeStep * this.speed * this.rect.width;
+    var tx = Circuit.t - (Circuit.t % gridStep);
     var first = 1;
     for (ll = 0; ; ll++) {
         var tl = tx - gridStep * ll;
@@ -566,7 +566,7 @@ Scope.prototype.draw = function () {
         avperiod /= periodct;
         avperiod2 /= periodct;
         var periodstd = Math.sqrt(avperiod2 - avperiod * avperiod);
-        freq = 1 / (avperiod * CirSim.timeStep * this.speed);
+        freq = 1 / (avperiod * Circuit.timeStep * this.speed);
         // don't show freq if standard deviation is too great
         if (periodct < 1 || periodstd > 2)
             freq = 0;
@@ -576,7 +576,7 @@ Scope.prototype.draw = function () {
     //TODO: CANVAS
     // paper.rect(this.rect.x, this.rect.y, this.rect.width, this.rect.height).attr({stroke:'red'});
     paper.beginPath();
-    paper.strokeRect(this.rect.x, this.rect.y, this.rect.width, this.rect.height);
+    paper.strokeRect(this.rect.x1, this.rect.y, this.rect.width, this.rect.height);
     paper.closePath();
 
     //////////////////////////////////////////////////
@@ -685,12 +685,12 @@ Scope.prototype.dump = function () {
 
     flags |= Scope.FLAG_YELM; // yelm present
 
-    var eno = CirSim.locateElm(this.elm);
+    var eno = Circuit.locateElm(this.elm);
 
     if (eno < 0)
         return null;
 
-    var yno = this.yElm == null ? -1 : CirSim.locateElm(this.yElm);
+    var yno = this.yElm == null ? -1 : Circuit.locateElm(this.yElm);
 
     var x = "o " + eno + " " + this.speed + " " + this.value + " " + flags + " " +
         this.minMaxV + " " + this.minMaxI + " " + this.position + " " + yno;
@@ -713,7 +713,7 @@ Scope.prototype.undump = function (st) {
     if (!e || e == -1)
         return;
 
-    this.elm = CirSim.getElm(e);
+    this.elm = Circuit.getElm(e);
 
     if (speed = st.shift())
         this.speed = parseInt(speed);
@@ -748,7 +748,7 @@ Scope.prototype.undump = function (st) {
         if ((this.flags & Scope.FLAG_YELM) != 0) {
             ye = parseInt(st.shift());
             if (ye != -1)
-                this.yElm = CirSim.getElm(ye);
+                this.yElm = Circuit.getElm(ye);
         }
         while (st.length > 0) {
             if (this.text == null)
@@ -881,19 +881,19 @@ Scope.prototype.allocImage = function () {
  */
 
 Scope.prototype.select = function () {
-    CirSim.mouseElm = this.elm;
+    Circuit.mouseElm = this.elm;
     if (this.plotXY) {
-        CirSim.plotXElm = this.elm;
-        CirSim.plotYElm = this.yElm;
+        Circuit.plotXElm = this.elm;
+        Circuit.plotYElm = this.yElm;
     }
 };
 
 Scope.prototype.selectY = function () {
-    var e = this.yElm == null ? -1 : CirSim.locateElm(this.yElm);
+    var e = this.yElm == null ? -1 : Circuit.locateElm(this.yElm);
     var firstE = e;
     while (true) {
-        for (e++; e < CirSim.elmList.size(); e++) {
-            var ce = CirSim.getElm(e);
+        for (e++; e < Circuit.elementList.size(); e++) {
+            var ce = Circuit.getElm(e);
             if ((ce instanceof OutputElm || ce instanceof ProbeElm) &&
                 ce != this.elm) {
                 this.yElm = ce;

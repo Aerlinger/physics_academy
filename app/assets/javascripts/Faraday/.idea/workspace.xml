@@ -2,57 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8c80be-45df-4817-afae-1b9cd20a3114" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../images/newton/bottle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/requests/guest_login_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/requests/mailing_list_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/requests/user_pages_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Newton/Box2D.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Newton/box2dJSONReader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Newton/createTestData.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Newton/debugPrint.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Newton/render.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../simulations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/simulations/newton_simulations/1.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/simulations/newton_simulations/2.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/simulations/newton_simulations/3.json" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\Box2dWeb-2_1_a_3.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\demo.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\example.html" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\initialization.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\raphael.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\grader.js.coffee" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\stylesheets\global\theme.css.scss.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\sessions\new.html.erb" afterPath="" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\submit.js.coffee.erb" afterPath="$PROJECT_DIR$/test.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/box.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/global/box.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/global/main.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/global/main.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/application_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/static_pages_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/static_pages_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/application_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/challenges_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/challenges_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/user.rb" afterPath="$PROJECT_DIR$/../../../models/user.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/.idea/Maxwell.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/CircuitElements/CircuitElement.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/CircuitElements/ColorScale.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Circuit.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/CircuitEngineParams.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/CircuitLoader.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/CircuitStates.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/ComponentDefinitions.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Grid.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Hint.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Messager.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/UndoRedo.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/solver/MatrixStamper.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/solver/Solver.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/render/Renderer.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/util/geom.coffee" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../kinetic-v4.0.1.js" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_sample_lesson.html" afterPath="" />
+      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\testData.js" afterPath="$PROJECT_DIR$/../Newton/test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" afterPath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile.lock" afterPath="$PROJECT_DIR$/../../../../Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile" afterPath="$PROJECT_DIR$/../../../../Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/devise/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/shared/_links.erb" afterPath="$PROJECT_DIR$/../../../views/devise/shared/_links.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_extra.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_extra.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/_form.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_canvas.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_canvas.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/routes.rb" afterPath="$PROJECT_DIR$/../../../../config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/schema.rb" afterPath="$PROJECT_DIR$/../../../../db/schema.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/test.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/authentication_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/authentication_pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/support/utilities.rb" afterPath="$PROJECT_DIR$/../../../../spec/support/utilities.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CirSim.js" afterPath="$PROJECT_DIR$/CirSim.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CircuitNode.js" afterPath="$PROJECT_DIR$/CircuitNode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FindPathInfo.js" afterPath="$PROJECT_DIR$/FindPathInfo.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Scope.js" afterPath="$PROJECT_DIR$/Scope.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/compiled.coffee" afterPath="$PROJECT_DIR$/compiled.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/CapacitorElm.js" afterPath="$PROJECT_DIR$/elms/CapacitorElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/CircuitElement.js" afterPath="$PROJECT_DIR$/elms/CircuitElement.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/CurrentElm.js" afterPath="$PROJECT_DIR$/elms/CurrentElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/GroundElm.js" afterPath="$PROJECT_DIR$/elms/GroundElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/InductorElm.js" afterPath="$PROJECT_DIR$/elms/InductorElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/MosfetElm.js" afterPath="$PROJECT_DIR$/elms/MosfetElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/OpAmpElm.js" afterPath="$PROJECT_DIR$/elms/OpAmpElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/OutputElm.js" afterPath="$PROJECT_DIR$/elms/OutputElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/ProbeElm.js" afterPath="$PROJECT_DIR$/elms/ProbeElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/RailElm.js" afterPath="$PROJECT_DIR$/elms/RailElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/ResistorElm.js" afterPath="$PROJECT_DIR$/elms/ResistorElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/SparkGapElm.js" afterPath="$PROJECT_DIR$/elms/SparkGapElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/SweepElm.js" afterPath="$PROJECT_DIR$/elms/SweepElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/Switch2Elm.js" afterPath="$PROJECT_DIR$/elms/Switch2Elm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/SwitchElm.js" afterPath="$PROJECT_DIR$/elms/SwitchElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/TextElm.js" afterPath="$PROJECT_DIR$/elms/TextElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/TransistorElm.js" afterPath="$PROJECT_DIR$/elms/TransistorElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/VarRailElm.js" afterPath="$PROJECT_DIR$/elms/VarRailElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/VoltageElm.js" afterPath="$PROJECT_DIR$/elms/VoltageElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/WireElm.js" afterPath="$PROJECT_DIR$/elms/WireElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/core/Diode.js" afterPath="$PROJECT_DIR$/elms/core/Diode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/core/Inductor.js" afterPath="$PROJECT_DIR$/elms/core/Inductor.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geom.js" afterPath="$PROJECT_DIR$/geom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/raphael-2.1.0.js" afterPath="$PROJECT_DIR$/lib/raphael-2.1.0.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.json" afterPath="$PROJECT_DIR$/test.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui/EditDialog.js" afterPath="$PROJECT_DIR$/ui/EditDialog.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/render.js" afterPath="$PROJECT_DIR$/../Newton/render.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../application.js" afterPath="$PROJECT_DIR$/../application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/test.log" afterPath="$PROJECT_DIR$/../../../../log/test.log" />
@@ -80,43 +99,52 @@
       <file leaf-file-name="CirSim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CirSim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="24" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.0">
+            <state line="1084" column="0" selection-start="32901" selection-end="32901" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CircuitElement.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FindPathInfo.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FindPathInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="9" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CircuitElement.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="31" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0">
+            <state line="182" column="18" selection-start="6040" selection-end="6045" vertical-scroll-proportion="0.48233217">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.json">
+      <file leaf-file-name="geom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="8" selection-start="911" selection-end="911" vertical-scroll-proportion="0.8471121">
+            <state line="62" column="10" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scope.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scope.js">
+      <file leaf-file-name="compiled.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compiled.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="397" column="26" selection-start="11487" selection-end="11487" vertical-scroll-proportion="0.0">
+            <state line="20" column="30" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/style/custom.css">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="118" column="16" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0">
+            <state line="79" column="45" selection-start="3559" selection-end="3559" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,7 +153,7 @@
       <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="2" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0">
+            <state line="124" column="56" selection-start="4287" selection-end="4287" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,10 +184,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/utility.js" />
         <option value="$PROJECT_DIR$/ui/EditDialog.js" />
         <option value="$PROJECT_DIR$/elms/OpAmpElm.js" />
-        <option value="$PROJECT_DIR$/elms/CircuitElement.js" />
         <option value="$PROJECT_DIR$/assets/Faraday/setuplist.txt" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/circuits/grid2.txt" />
@@ -168,10 +194,12 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/Scope.js" />
         <option value="$PROJECT_DIR$/style/custom.css" />
-        <option value="$PROJECT_DIR$/CirSim.js" />
         <option value="$PROJECT_DIR$/CircuitNode.js" />
         <option value="$PROJECT_DIR$/ui/ComponentGenerator.js" />
         <option value="$PROJECT_DIR$/test.json" />
+        <option value="$PROJECT_DIR$/geom.js" />
+        <option value="$PROJECT_DIR$/CirSim.js" />
+        <option value="$PROJECT_DIR$/elms/CircuitElement.js" />
       </list>
     </option>
   </component>
@@ -207,16 +235,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -233,6 +251,72 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Faraday" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="style" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="elms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -253,15 +337,15 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="69" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="713" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="737" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="713" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="67" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="62" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -356,13 +440,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18432671" sideWeight="0.4960464" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02202643" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13073273" sideWeight="0.4581498" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13073273" sideWeight="0.53414094" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3215859" sideWeight="0.49182922" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.52312773" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.14757709" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2852423" sideWeight="0.6035846" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819188" sideWeight="0.4900881" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.39272535" order="11" side_tool="true" content_ui="tabs" />
@@ -372,7 +457,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21585903" sideWeight="0.49182922" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.88105726" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -441,16 +525,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/circuits/xor.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="21" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindPathInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/circuits/besselbutter.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="59" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.68108976" />
@@ -459,11 +533,6 @@
     <entry file="file://$PROJECT_DIR$/setuplist.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="3384" selection-end="3384" vertical-scroll-proportion="0.0741301" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CircuitNode.js">
@@ -481,24 +550,9 @@
         <state line="20" column="35" selection-start="352" selection-end="352" vertical-scroll-proportion="-1.1744055" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="2" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.21064553" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui/ComponentGenerator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="0" selection-start="823" selection-end="823" vertical-scroll-proportion="0.019252548" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CirSim.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="24" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="31" selection-start="263" selection-end="263" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scope.js">
@@ -513,14 +567,52 @@
         <state line="118" column="16" selection-start="1491" selection-end="1491" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="2" selection-start="1144" selection-end="1144" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="8" selection-start="911" selection-end="911" vertical-scroll-proportion="0.8471121">
+        <state line="58" column="9" selection-start="1191" selection-end="1191" vertical-scroll-proportion="1.1166478" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CirSim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1084" column="0" selection-start="32901" selection-end="32901" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compiled.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="30" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="45" selection-start="3559" selection-end="3559" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="124" column="56" selection-start="4287" selection-end="4287" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindPathInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="9" selection-start="1398" selection-end="1398" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="10" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="18" selection-start="6040" selection-end="6045" vertical-scroll-proportion="0.48233217">
           <folding />
         </state>
       </provider>
