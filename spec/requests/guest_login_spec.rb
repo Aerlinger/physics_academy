@@ -31,17 +31,20 @@ describe "Guest user navigaton" do
 
       end
 
-      describe "after logging in" do
-        before(:suite) do
+      describe "after creating an account" do
+        before do
           guest = User.new(name: "user_from_guest", email: "userfromguest@test.com",
                            password: "testpass", password_confirmation: "testpass")
-          sign_in(guest)
+
+          create_user guest
         end
 
+        it { save_and_open_page }
         it { should_not have_guest_login_links }
         it { should show_user_in_header }
 
         describe "log out user" do
+
           before { sign_out_user }
 
           it { should_not show_user_in_header }

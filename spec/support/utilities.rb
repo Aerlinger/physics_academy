@@ -18,7 +18,7 @@ end
 
 RSpec::Matchers.define :have_success_message do |message|
   match do |page|
-    page.should have_selector('alert.alert-success')
+    page.should have_selector('.alert.alert-success')
   end
 end
 
@@ -64,7 +64,17 @@ def sign_in(user)
 
   # Sign in when not using Capybara:
   cookies[:remember_token] = user.remember_token
-  page.should have_info_message
+end
+
+def create_user(user)
+  visit new_user_registration_path
+
+  fill_in "Name", with: user.username
+  fill_in "Email", with: user.email
+  fill_in "Password", with: user.password
+  fill_in "Confirmation", with: user.password_confirmation
+
+  click_button "Sign Up"
 end
 
 

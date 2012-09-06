@@ -1,4 +1,5 @@
-class UsersController < ApplicationController
+class UsersController < Devise::RegistrationsController
+
 
   before_filter :correct_user,   only: [:show, :edit, :update]
   before_filter :admin_user,     only: [:index, :edit, :update, :destroy]
@@ -25,29 +26,21 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /users/new
-  # GET /users/new.json
-  def new
-    @user = User.new
-
-    respond_to do |format|
-      format.html   # new.html.erb
-      format.json { render json: @user }
-    end
-  end
-
   # POST /users
   # POST /users.json
   def create
+
     @user = User.new(params[:user])
 
     respond_to do |format|
-      # If the user saves successfully
       if @user.save
         format.html { redirect_to @user }
         format.json { render json: @user }
+      else
+        flash.now[:error] = "Invalid email or password."
       end
     end
+
   end
 
   # GET /users/1/edit
@@ -80,12 +73,19 @@ class UsersController < ApplicationController
     end
   end
 
+
+  protected
+
+    def after_sign_up_path_for(resource)
+      convert_guest_to_user resource
+    end
+
   private
 
     # Called only on edit/update action
     def correct_user
-      @user = User.find(params[:id])
-      redirect_to root_path, alert: "You cannot view that page" unless current_user == @user
+      #@user = User.find(params[:id])
+      #redirect_to root_path, alert: "You do not have access to that page" unless current_user == @user
     end
 
     def admin_user

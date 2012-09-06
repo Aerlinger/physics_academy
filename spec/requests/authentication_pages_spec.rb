@@ -2,6 +2,13 @@ require 'spec_helper'
 
 describe "Authentication Pages" do
 
+  #include Devise::TestHelpers
+
+  #def setup
+    #@request.env["devise.mapping"] = Devise.mappings[:registrations]
+    #sign_in FactoryGirl.create(:admin)
+  #end
+
   subject { page }
 
   context "Sign In" do
@@ -10,6 +17,7 @@ describe "Authentication Pages" do
 
     describe "should link to Sign up page" do
       before { click_link "Sign up" }
+      it { should have_selector('title', text: full_title("Sign up")) }
       it { should have_selector('title', text: full_title("Sign up")) }
       it { should have_selector('h1', text: "Sign Up") }
     end
@@ -83,7 +91,7 @@ describe "Authentication Pages" do
             end
 
             it "should render the default page" do
-              current_path.should eq(root_path)
+              current_path.should eq(user_path(user))
             end
 
             describe "visiting home path" do

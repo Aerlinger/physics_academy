@@ -20,6 +20,12 @@
           </h4>
         </div>
       </div>
+      <script type="text/javascript">
+        $(".flash").hide();
+        $(".flash").fadeIn("slow", function() {
+          // Todo: Called on completion
+        });
+      </script>
     <% end %>
 
       <%= yield %>

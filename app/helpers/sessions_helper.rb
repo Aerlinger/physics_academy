@@ -35,13 +35,17 @@ module SessionsHelper
     !current_or_guest_user.nil?
   end
 
+  def current_user?(user)
+    current_user == user
+  end
+
   # Same as current_or_guest user but creates a guest user if one does not exist
   def current_or_guest_user!
     if current_user
       if cookies[:uuid]
 
         # Called when a guest user is converted to current user
-        convert_guest_to_user(guest_user, current_user)
+        convert_guest_to_user(current_user)
 
         # destroy the guest user and the session
         destroy_guest_user
@@ -64,44 +68,49 @@ module SessionsHelper
     session.delete(:return_to)
   end
 
+  # Destroys the current guest_user from the database and destroys the guest_user cookie (cookie[:uuid]). Returns
+  # false if no guest is found.
+  def destroy_guest_user
+    if guest_user?
+      guest_user.destroy
+      cookies.delete :uuid
+      true
+    else
+      false
+    end
+  end
+
+  # Called (once) when the user logs in, insert any code your application needs
+  # to hand off from guest_user to current_user.
+  #
+  # There can be two cases where this method is called
+  #   1. User starts working (but not signed in) and signs into their existing account. This method will safely
+  #       Merge their progress to their account.
+  #   2. User starts working and creates a new account. Their progress will become saved to their account.
+  #
+  def convert_guest_to_user(user)
+    # What should be done here is take all that belongs to user with lazy_id matching current_user's uuid cookie...
+    #   then associate them with current_user
+
+    # Copy the subscription data from the guest user to the newly created user:
+
+    if !cookies[:uuid].nil?
+      user.subscriptions = guest_user.subscriptions.dup
+      true
+    else
+      false
+    end
+    # For example:
+    # guest_comments = guest_user.comments.all
+    # guest_comments.each do |comment|
+    # comment.user_id = current_user.id
+    # comment.save
+    # end
+  end
 
   private
 
-    # Called (once) when the user logs in, insert any code your application needs
-    # to hand off from guest_user to current_user.
-    #
-    # There can be two cases where this method is called
-    #   1. User starts working (but not signed in) and signs into their existing account. This method will safely
-    #       Merge their progress to their account.
-    #   2. User starts working and creates a new account. Their progress will become saved to their account.
-    #
-    def convert_guest_to_user(guest, user)
-      # What should be done here is take all that belongs to user with lazy_id matching current_user's uuid cookie...
-      #   then associate them with current_user
 
-      # Copy the subscription data from the guest user to the newly created user:
-
-      current_user.subscriptions = guest.subscriptions.dup
-
-      # For example:
-      # guest_comments = guest_user.comments.all
-      # guest_comments.each do |comment|
-      # comment.user_id = current_user.id
-      # comment.save
-      # end
-    end
-
-    # Destroys the current guest_user from the database and destroys the guest_user cookie (cookie[:uuid]). Returns
-    # false if no guest is found.
-    def destroy_guest_user
-      if guest_user?
-        guest_user.destroy
-        cookies.delete :uuid
-        true
-      else
-        false
-      end
-    end
 
     # Creates a new guest user and saves it to the database. This consists of the following steps
     #   1.) create unique user id (uuid)

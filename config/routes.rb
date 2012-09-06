@@ -4,7 +4,14 @@ PhysicsAcademy::Application.routes.draw do
 
   get "mailing_list/remove"
 
-  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+             controllers: { registrations: "users"  }
+
+  devise_scope :user do
+    match "/users/:id", to: "users#show"
+  end
+
+  resources :users, only: [:show, :index]
 
   root to: 'static_pages#home'
 
@@ -22,10 +29,7 @@ PhysicsAcademy::Application.routes.draw do
   get "labs/circuits"
   get "labs/mechanics"
 
-
   resources :simulations, only: [:show, :index]
-
-  resources :users, only: [:show, :index, :edit, :delete]
   resources :mailinglists, only: [:create]
 
   resources :circuit_simulations
@@ -118,32 +122,3 @@ PhysicsAcademy::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 end
 
-#== Route Map
-# Generated on 10 Jul 2012 16:24
-#
-#                 root        /                               static_pages#home
-#                users GET    /users(.:format)                users#index
-#                      POST   /users(.:format)                users#create
-#             new_user GET    /users/new(.:format)            users#new
-#            edit_user GET    /users/:id/edit(.:format)       users#edit
-#                 user GET    /users/:id(.:format)            users#show
-#                      PUT    /users/:id(.:format)            users#update
-#                      DELETE /users/:id(.:format)            users#destroy
-#          vote_lesson POST   /lessons_content/:id/vote(.:format)     lessons_content#vote
-#              lessons_content GET    /lessons_content(.:format)              lessons_content#index
-#                      POST   /lessons_content(.:format)              lessons_content#create
-#           new_lesson GET    /lessons_content/new(.:format)          lessons_content#new
-#          edit_lesson GET    /lessons_content/:id/edit(.:format)     lessons_content#edit
-#               lesson GET    /lessons_content/:id(.:format)          lessons_content#show
-#                      PUT    /lessons_content/:id(.:format)          lessons_content#update
-#                      DELETE /lessons_content/:id(.:format)          lessons_content#destroy
-#             sessions POST   /sessions(.:format)             sessions#create
-#          new_session GET    /sessions/new(.:format)         sessions#new
-#              session DELETE /sessions/:id(.:format)         sessions#destroy
-#               signup        /signup(.:format)               users#new
-#               signin        /signin(.:format)               sessions#new
-#              signout DELETE /signout(.:format)              sessions#destroy
-#                 help        /help(.:format)                 static_pages#help
-#                about        /about(.:format)                static_pages#about
-#              privacy        /privacy(.:format)              static_pages#privacy
-#                terms        /terms(.:format)                static_pages#terms

@@ -1,10 +1,11 @@
 require 'rubygems'
-require 'spork'
+#require 'spork'
+require 'support/controller_macros'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
 
-Spork.prefork do
+#Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
@@ -14,9 +15,8 @@ Spork.prefork do
   require 'rspec/rails'
   require 'rspec/autorun'
 
-  # Requires supporting ruby files with custom matchers and macros, etc,
-  # in spec/support/ and its subdirectories.
-  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+
+
 
   RSpec.configure do |config|
     # ## Mock Framework
@@ -35,17 +35,25 @@ Spork.prefork do
     # instead of true.
     config.use_transactional_fixtures = true
 
+    config.include Devise::TestHelpers, :type => :controller
+    config.extend ControllerMacros, :type => :controller
+
     # If true, the base class of anonymous controllers will be inferred
     # automatically. This will be the default behavior in future versions of
     # rspec-rails.
     config.infer_base_class_for_anonymous_controllers = false
   end
-end
-
-Spork.each_run do
+#end
+#
+#Spork.each_run do
   # This code will be run each time you run your specs.
+  ActiveSupport::Dependencies.clear
+  FactoryGirl.reload
 
-end
+  # Requires supporting ruby files with custom matchers and macros, etc,
+  # in spec/support/ and its subdirectories.
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+#end
 
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run

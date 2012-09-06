@@ -28,14 +28,10 @@
           <li class="divider-vertical"></li>
           <% if user_signed_in? %>
             <%= render partial: "layouts/user_thumbnail" %>
+
           <% elsif guest_user? %>
-            <li class=<%= is_active?(new_user_registration_path) %>>
-              <% if Rails.env.development? %>
-                <%= link_to "#{guest_user.username}", new_user_registration_path, id: "guest_login" %>
-              <% else %>
-                <%= link_to "Sign in or Sign up to save", new_user_registration_path, id: "guest_login" %>
-              <% end %>
-            </li>
+            <%= render partial: "layouts/guest_login" %>
+
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path, class: "login_link" %></li>
             <li><%= link_to "Create Account", new_user_registration_path, class: "login_link" %></li>

@@ -1,5 +1,7 @@
 FactoryGirl.define do
 
+  load "#{Rails.root}/app/models/user.rb"
+
   # Creates a long list of users
   factory :user do
     sequence(:name)  { |n| "Person #{n}" }
