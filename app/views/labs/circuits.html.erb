@@ -1,7 +1,12 @@
 <%= provide(:title, "Circuit Simulator") %>
 
+
+<!-- Column of sample circuits -->
+<div id="circuit_presets">
+</div>
+
 <!-- Toolbar containing available circuit elements -->
-<div id="toolbar">
+<div id="toolbar" style="display: none">
   <ul id="toolbar_buttons">
     <li class="testedworking"><a href="#" onClick="CirSim.resetSelection();">Select</a></li>
     <li class="testedworking"><a href="#" onClick="CirSim.deleteSelected();">Delete Selected</a></li>
@@ -10,10 +15,7 @@
 
 <div id="workspace">
   <!-- Circuit rendering canvas -->
-  <canvas id="canvas_container" width="800" height="600" class="opint"></canvas>
+  <canvas id="canvas_container" width="800" height="600" class="bandpass"></canvas>
   <div id="edit_pane"></div>
 </div>
 
-<!-- Column of sample circuits -->
-<div id="circuit_presets">
-</div>
