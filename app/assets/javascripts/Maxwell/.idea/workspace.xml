@@ -2,105 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d3df30-3f6d-4e5a-95c5-d3c906ac0eee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Maxwell.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../lib/tasks/test_seed.rake" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CircuitElements/CircuitElement.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CircuitElements/ColorScale.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/Circuit.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/CircuitEngineParams.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/CircuitLoader.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/CircuitStates.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/ComponentDefinitions.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/Grid.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/Hint.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/Messager.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/UndoRedo.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/solver/MatrixStamper.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/solver/Solver.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/render/Renderer.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/geom.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../kinetic-v4.0.1.js" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\challenges\_sample_lesson.html" afterPath="" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\testData.js" afterPath="$PROJECT_DIR$/../Newton/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" afterPath="$PROJECT_DIR$/../../../../.idea/mvc_testing.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile.lock" afterPath="$PROJECT_DIR$/../../../../Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile" afterPath="$PROJECT_DIR$/../../../../Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/challenge.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/challenge.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/lessons.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/lessons.css.scss.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/layouts/_mini_footer.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/layouts/small_footer_layout.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/static_pages/_samples.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/requests/admin_pages_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/support/subscription_spec_helpers.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/rails.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/sample.html" />
+      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\labs.js.coffee" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.rspec" afterPath="$PROJECT_DIR$/../../../../.rspec" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/box.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/box.css.scss.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/homepage.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/homepage.css.scss.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/main.css.scss.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/application_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/labs_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/labs_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/sessions_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/users_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/users_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/challenges_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/challenges_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/sessions_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/sessions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/lesson.rb" afterPath="$PROJECT_DIR$/../../../models/lesson.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/user.rb" afterPath="$PROJECT_DIR$/../../../models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/components/_challenge.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/components/_challenge.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/lessons_content/1-Introduction_to_Physics/1-What_is_physics/_task.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/lessons_content/1-Introduction_to_Physics/1-What_is_physics/_task.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/challenges/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/labs/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/labs/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/subscription.rb" afterPath="$PROJECT_DIR$/../../../models/subscription.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_canvas.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_canvas.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_user_thumbnail.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_user_thumbnail.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/index.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/routes.rb" afterPath="$PROJECT_DIR$/../../../../config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/edit.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/edit.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/test.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../lib/tasks/populate_lessons.rake" afterPath="$PROJECT_DIR$/../../../../lib/tasks/populate_lessons.rake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/factories.rb" afterPath="$PROJECT_DIR$/../../../../spec/factories.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/models/subscription_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/models/subscription_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/models/user_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/authentication_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/authentication_pages_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/challenges_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/challenges_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/guest_login_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/guest_login_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/lesson_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/lesson_pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/user_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/user_pages_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/spec_helper.rb" afterPath="$PROJECT_DIR$/../../../../spec/spec_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/support/utilities.rb" afterPath="$PROJECT_DIR$/../../../../spec/support/utilities.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Faraday/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/CirSim.js" afterPath="$PROJECT_DIR$/../Faraday/CirSim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/CircuitNode.js" afterPath="$PROJECT_DIR$/../Faraday/CircuitNode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/FindPathInfo.js" afterPath="$PROJECT_DIR$/../Faraday/FindPathInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/Scope.js" afterPath="$PROJECT_DIR$/../Faraday/Scope.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/compiled.coffee" afterPath="$PROJECT_DIR$/../Faraday/compiled.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/CapacitorElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/CapacitorElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/CircuitElement.js" afterPath="$PROJECT_DIR$/../Faraday/elms/CircuitElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/CurrentElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/CurrentElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/GroundElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/GroundElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/InductorElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/InductorElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/MosfetElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/MosfetElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/OpAmpElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/OpAmpElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/OutputElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/OutputElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/ProbeElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/ProbeElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/RailElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/RailElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/ResistorElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/ResistorElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/SparkGapElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/SparkGapElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/SweepElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/SweepElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/Switch2Elm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/Switch2Elm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/SwitchElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/SwitchElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/TextElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/TextElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/TransistorElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/TransistorElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/VarRailElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/VarRailElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/VoltageElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/VoltageElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/WireElm.js" afterPath="$PROJECT_DIR$/../Faraday/elms/WireElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/core/Diode.js" afterPath="$PROJECT_DIR$/../Faraday/elms/core/Diode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/elms/core/Inductor.js" afterPath="$PROJECT_DIR$/../Faraday/elms/core/Inductor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/geom.js" afterPath="$PROJECT_DIR$/../Faraday/geom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/index.html" afterPath="$PROJECT_DIR$/../Faraday/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/lib/raphael-2.1.0.js" afterPath="$PROJECT_DIR$/../Faraday/lib/raphael-2.1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/main.js" afterPath="$PROJECT_DIR$/../Faraday/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/test.json" afterPath="$PROJECT_DIR$/../Faraday/test.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/ui/EditDialog.js" afterPath="$PROJECT_DIR$/../Faraday/ui/EditDialog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/render.js" afterPath="$PROJECT_DIR$/../Newton/render.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../application.js" afterPath="$PROJECT_DIR$/../application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/challenges/lessons_content/1-Introduction_to_Physics/lesson-params.yml" afterPath="$PROJECT_DIR$/../../../views/challenges/lessons_content/1-Introduction_to_Physics/lesson-params.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="E:/Dropbox/WebDev/sandbox/gravity/js/box2d/box2dJSONReader.js" afterPath="E:/Dropbox/WebDev/sandbox/gravity/js/box2d/box2dJSONReader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/newton/simulations/1.json" afterPath="$PROJECT_DIR$/../../../views/newton/simulations/1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/test.log" afterPath="$PROJECT_DIR$/../../../../log/test.log" />
     </list>
@@ -123,98 +67,115 @@
     <favorites_list name="Maxwell" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Circuit.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimulatorEngine/Circuit.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="197" column="17" selection-start="4956" selection-end="4956" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SimulatorEngine/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="27" selection-start="37" selection-end="60" vertical-scroll-proportion="-1.3448275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geom.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util/geom.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ColorScale.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CircuitElements/ColorScale.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="27" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComponentDefinitions.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimulatorEngine/ComponentDefinitions.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="34" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CircuitStates.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimulatorEngine/CircuitStates.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="23" selection-start="102" selection-end="395" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CircuitElement.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CircuitElements/CircuitElement.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="22" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Renderer.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/render/Renderer.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="33" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Grid.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimulatorEngine/Grid.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Messager.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SimulatorEngine/Messager.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="13" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/test.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="1" column="27" selection-start="37" selection-end="60" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ColorScale.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CircuitElements/ColorScale.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="5" column="27" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ComponentDefinitions.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/ComponentDefinitions.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="47" column="34" selection-start="1447" selection-end="1447" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CircuitStates.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/CircuitStates.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="13" column="23" selection-start="102" selection-end="395" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="CircuitElement.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/CircuitElements/CircuitElement.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="54" column="22" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Renderer.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/render/Renderer.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="4" column="33" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Grid.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/Grid.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="6" column="0" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Messager.coffee" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/Messager.coffee">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="0" selection-start="163" selection-end="194" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="rails.html" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/rails.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="85" column="40" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.24850658">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sample.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/sample.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="148" column="12" selection-start="5082" selection-end="5082" vertical-scroll-proportion="0.0">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="sample.html" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/SimulatorEngine/sample.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="135" column="53" selection-start="4609" selection-end="4609" vertical-scroll-proportion="0.22156398">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -227,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/SimulatorEngine/ComponentDefinitions.coffee" />
-        <option value="$PROJECT_DIR$/SimulatorEngine/UndoRedo.coffee" />
         <option value="$PROJECT_DIR$/SimulatorEngine/CircuitLoader.coffee" />
         <option value="$PROJECT_DIR$/SimulatorEngine/CircuitSimulator.coffee" />
         <option value="$PROJECT_DIR$/SimulatorEngine/Messager.coffee" />
@@ -243,6 +202,8 @@
         <option value="$PROJECT_DIR$/CircuitElements/CircuitElement.coffee" />
         <option value="$PROJECT_DIR$/SimulatorEngine/Circuit.coffee" />
         <option value="$PROJECT_DIR$/SimulatorEngine/test.js" />
+        <option value="$PROJECT_DIR$/SimulatorEngine/rails.html" />
+        <option value="$PROJECT_DIR$/SimulatorEngine/sample.html" />
       </list>
     </option>
   </component>
@@ -278,6 +239,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -344,22 +315,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.CoffeeScript" />
+    <property name="options.lastSelected" value="IntelliLang.Configuration" />
     <property name="GoToClass.includeJavaFiles" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -373,6 +334,13 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node JS" working-dir="$PROJECT_DIR$" coffeescript-run="false">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <list size="0" />
@@ -409,12 +377,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1391671" sideWeight="0.6685022" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1391671" sideWeight="0.32378855" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10015815" sideWeight="0.68171805" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10015815" sideWeight="0.31057268" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -485,16 +453,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SimulatorEngine/CircuitEngineParams.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="181" selection-end="181" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatorEngine/CircuitLoader.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="40" selection-start="5169" selection-end="5169" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SimulatorEngine/solver/Solver.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="735" column="41" selection-start="21679" selection-end="21679" vertical-scroll-proportion="0.0" />
@@ -515,9 +473,19 @@
         <state line="0" column="19" selection-start="6" selection-end="19" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatorEngine/Circuit.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="197" column="17" selection-start="4956" selection-end="4956" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/util/geom.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="6" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatorEngine/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="27" selection-start="37" selection-end="60" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CircuitElements/ColorScale.coffee">
@@ -552,23 +520,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimulatorEngine/Messager.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="194" selection-end="194" vertical-scroll-proportion="0.0" />
+        <state line="9" column="0" selection-start="163" selection-end="194" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatorEngine/Circuit.coffee">
+    <entry file="file://$PROJECT_DIR$/SimulatorEngine/rails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="197" column="17" selection-start="4956" selection-end="4956" vertical-scroll-proportion="0.0">
+        <state line="85" column="40" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.24850658">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatorEngine/test.js">
+    <entry file="file://$PROJECT_DIR$/SimulatorEngine/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="27" selection-start="37" selection-end="60" vertical-scroll-proportion="-1.3448275">
+        <state line="135" column="53" selection-start="4609" selection-end="4609" vertical-scroll-proportion="0.22156398">
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

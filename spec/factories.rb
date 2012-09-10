@@ -14,14 +14,30 @@ FactoryGirl.define do
     end
   end
 
-  factory :lesson do
-    sequence(:title) { |n| "Lesson #{n}" }
-    sequence(:description) { |n| "Description for lesson #{n}" }
+  factory :subscription do
+    association :user
+    association :lesson
+    after_build do |instance|
+      10.times do
+        instance.lesson.challenges << Factory.build(:challenge)
+      end
+    end
   end
 
-  factory :challenges do
-    sequence(:title) { |n| "Lesson task#{n}" }
-    sequence(:content) { |n| "Content for lesson task #{n}" }
-  end
+end
 
+Factory.define :challenge do |f|
+  f.sequence(:title) { |n| "Title: Lesson challenge#{n}" }
+  f.sequence(:content) { |n| "Content for lesson challenge #{n}" }
+end
+
+Factory.define :lesson do |f|
+  f.sequence(:title) { |n| "Title: Lesson #{n}" }
+  f.sequence(:description) { |n| "Description for Lesson #{n}" }
+end
+
+Factory.define :user_with_subscription, class: 'User' do |u|
+  u.after_build do |user|
+    user.subscriptions << Factory.build(:subscription)
+  end
 end

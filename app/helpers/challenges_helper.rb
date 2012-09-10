@@ -38,14 +38,14 @@ module ChallengesHelper
 
     html = @lesson.challenges.all.each_with_index.collect do |challenge, index|
 
-      icon      = @subscription.completed_challenge?(challenge) ? "<i class='icon-ok'> </i>" : "<i class='icon-book'> </i>"
+      icon      = @subscription.completed_challenge_id?(challenge.id) ? "<i class='icon-ok'> </i>" : "<i class='icon-book'> </i>"
       link_url  = lesson_challenge_path(lesson_id: @lesson.id, id: challenge.id)
       link_text = icon.html_safe + "#{challenge.title}"
 
       class_type =
         if @challenge.index == (index+1)
            "active"
-        elsif @subscription.completed_challenge?(challenge)
+        elsif @subscription.completed_challenge_id?(challenge)
            "completed"
         end
 

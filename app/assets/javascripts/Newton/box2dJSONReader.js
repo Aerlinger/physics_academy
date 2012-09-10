@@ -81,8 +81,6 @@ function loadBox2dFromJSON(json, CanvasElmJQuery) {
 function getDimensionInMeters(PolygonBody) {
   "use strict";
 
-  "use strict";
-
   var position = PolygonBody.GetPosition();
   var FixtureNode = PolygonBody.GetFixtureList();
 

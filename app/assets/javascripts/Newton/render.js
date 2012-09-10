@@ -134,7 +134,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
         drawCircle(CurrentBodyNode, shape.GetRadius());
 
       // If this body is a polygon
-      else if (shape.GetType() == b2Shape.e_polygonShape)
+      if (shape.GetType() == b2Shape.e_polygonShape && world.debug)
         drawPolygon(CurrentBodyNode);
 
     }
@@ -194,10 +194,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
 
     // Draw the bounding box:
     context.scale(scaleX, scaleY);
-    context.rect(imageObj.width/2*scaleX+xOffset, yOffset, bodyWidthPixels/scaleX, -bodyHeightPixels/scaleY);
-    context.lineWidth = 2;
-    context.strokeStyle = 'black';
-    context.stroke();
+
 
     context.drawImage(imageObj, imageObj.width/2*scaleX+xOffset, -imageObj.height+yOffset);
 

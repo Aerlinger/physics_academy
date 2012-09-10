@@ -21,9 +21,8 @@ module SessionsHelper
 
   # Returns true if a guest user is logged in
   def guest_user?
-    !cookies[:uuid].nil? && !user_signed_in?
+     !cookies[:uuid].nil? && !guest_user.nil?
   end
-
 
   # if user is logged in, return current_user, else return guest_user
   def current_or_guest_user
@@ -45,7 +44,7 @@ module SessionsHelper
       if cookies[:uuid]
 
         # Called when a guest user is converted to current user
-        convert_guest_to_user(current_user)
+        promote_guest_to_user(current_user)
 
         # destroy the guest user and the session
         destroy_guest_user
@@ -88,11 +87,17 @@ module SessionsHelper
   #       Merge their progress to their account.
   #   2. User starts working and creates a new account. Their progress will become saved to their account.
   #
-  def convert_guest_to_user(user)
+  def promote_guest_to_user(user)
     # What should be done here is take all that belongs to user with lazy_id matching current_user's uuid cookie...
     #   then associate them with current_user
 
     # Copy the subscription data from the guest user to the newly created user:
+    # For example:
+    # guest_comments = guest_user.comments.all
+    #   guest_comments.each do |comment|
+    #   comment.user_id = current_user.id
+    #   comment.save
+    # end
 
     if !cookies[:uuid].nil?
       user.subscriptions = guest_user.subscriptions.dup
@@ -100,12 +105,10 @@ module SessionsHelper
     else
       false
     end
-    # For example:
-    # guest_comments = guest_user.comments.all
-    # guest_comments.each do |comment|
-    # comment.user_id = current_user.id
-    # comment.save
-    # end
+
+    # When we promote a guest to a user, the guest should be destroyed (This includes deleting the cookie)
+    destroy_guest_user
+
   end
 
   private
@@ -125,5 +128,7 @@ module SessionsHelper
       u.save(validate: false)
       u
     end
+
+
 
 end

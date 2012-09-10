@@ -7,7 +7,7 @@
 
   <div class="row offset3">
 
-    <div class="box-container span6 clear_side_margins" style="margin-left: 0px">
+    <div id="login-box" class="box-container span6 clear_side_margins" style="margin-left: 0px">
 
       <div class="box-header box-title">
         Enter your login info
@@ -35,11 +35,10 @@
 
               <div class="control-group">
                 <div class="controls">
-                  <% if devise_mapping.rememberable? -%>
 
-                    <label for="remember_me" class="control-label"><%= f.check_box :remember_me, id: "remember_me" %>
-                      &nbsp Remember me</label>
-                    <%# f.label :remember_me, class: "checkbox" %>
+                  <% if devise_mapping.rememberable? -%>
+                    <%= f.check_box :remember_me, id: "remember_me", name:"remember_me", style: "float: left" %>
+                    <%= label_tag :remember_me, "&nbsp&nbspRemember me".html_safe, style: "float: left" %>
                   <% end -%>
 
                 </div>

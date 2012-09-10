@@ -109,9 +109,7 @@ describe User do
 
     describe "with valid password" do
 
-      it {
-        found_user.password.should be_nil
-      }
+      it { found_user.password.should be_nil }
     end
 
     describe "with invalid password" do

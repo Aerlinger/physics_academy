@@ -5,7 +5,7 @@ class ChallengesController < ApplicationController
 
   def show
 
-    @subscription.touch_challenge(params[:id])
+    @subscription.current_challenge_id=(params[:id])
 
     respond_to do |format|
       format.js

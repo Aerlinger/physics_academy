@@ -1,6 +1,6 @@
 <% provide(:title, 'Edit Profile') %>
 
-<%=  render partial: 'layouts/subheader', locals: {title: "Account &raquo Edit Profile".html_safe} %>
+<%= render partial: 'layouts/subheader', locals: {title: "Account &raquo Edit Profile".html_safe} %>
 
 <div class="chalkboard-background">
 
@@ -8,7 +8,7 @@
 
     <div class="row">
 
-      <div class="box-container span11">
+      <div class="box-container span10 offset1">
 
         <div class="box-header">
           <div class="box-title">
@@ -16,147 +16,159 @@
           </div>
         </div>
 
-        <%= form_for(@user, class: "form-horizontal") do |f| %>
+        <div class="row-fluid">
 
-
-            <fieldset>
-
-              <div class="control-group">
-                <label class="control-label" for="focusedInput">Focused input</label>
-                <div class="controls">
-                  <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
-                </div>
-              </div>
-
-            </fieldset>
+          <%= form_for(@user, class: "form-horizontal") do |f| %>
 
             <div class="box-features form">
 
-            <%= render 'shared/error_messages', object: @user %>
+              <%= render 'shared/error_messages', object: @user %>
 
-            <table style="width: 500px">
+              <div id="edit_profile_column1" class="span5">
 
-              <tr>
-                <td>
-                  <%= f.label :name %>
-                </td>
-                <td>
-                  <%= f.text_field :name %>
-                </td>
-              </tr>
+                <table style="width: 100%">
 
-              <tr>
-                <td>
-                  <%= f.label :email %>
-                </td>
-                <td>
-                  <%= f.text_field :email %>
-                </td>
+                  <tr>
+                    <td>
+                      <%= f.label :name %>
+                    </td>
+                    <td>
+                      <%= f.text_field :name %>
+                    </td>
+                  </tr>
 
-              </tr>
+                  <tr>
+                    <td>
+                      <%= f.label :email %>
+                    </td>
+                    <td>
+                      <%= f.text_field :email %>
+                    </td>
+                  </tr>
 
-              <tr>
-                <td colspan="2"> <hr> </td>
-              </tr>
+                  <tr>
+                    <td colspan="2">
+                      <hr>
+                    </td>
+                  </tr>
 
-              <!-- TODO add current-password validation here -->
 
-              <tr>
-                <td>
-                  <%= f.label :password %>
-                </td>
-                <td>
-                  <%= f.password_field :password %>
-                </td>
-              </tr>
+                  <tr>
+                    <td>
+                      <%= f.label :username, "Username" %>
+                    </td>
+                    <td>
+                      <%= f.text_field :username %>
+                    </td>
+                  </tr>
 
-              <tr>
-                <td>
-                  <%= f.label :password_confirmation, "Confirm" %>
-                </td>
-                <td>
-                  <%= f.password_field :password_confirmation %>
-                </td>
-              </tr>
+                  <tr>
+                    <td>
+                      <%= f.label :location, "Location" %>
+                    </td>
+                    <td>
+                      <%= f.text_field :location %>
+                    </td>
+                  </tr>
 
-              <tr>
-                <td colspan="2"> <hr> </td>
-              </tr>
+                  <tr>
+                    <td colspan="2">
+                      <hr>
+                    </td>
+                  </tr>
+                  <!-- TODO add current-password validation here -->
 
-              <tr>
-                <td>
-                  <%= f.label :username, "Username" %>
-                </td>
-                <td>
-                  <%= f.text_field :username %>
-                </td>
-              </tr>
+                  <tr>
+                    <td>
+                      <%= f.label :password %>
+                    </td>
+                    <td>
+                      <%= f.password_field :password %>
+                    </td>
+                  </tr>
 
-              <tr>
-                <td>
-                  <%= f.label :location, "Location" %>
-                </td>
-                <td>
-                  <%= f.text_field :location %>
-                </td>
-              </tr>
+                  <tr>
+                    <td>
+                      <%= f.label :password_confirmation, "Confirm" %>
+                    </td>
+                    <td>
+                      <%= f.password_field :password_confirmation %>
+                    </td>
+                  </tr>
 
-              <tr>
-                <td>
-                  <%= f.label :about_me, "About Me" %>
-                </td>
-                <td>
-                  <%= f.text_area :about_me, maxlength: 250 %>
-                </td>
-              </tr>
+                </table>
 
-              <tr>
-                <td>
-                  <%= f.label :website_url, "Website" %>
-                </td>
-                <td>
-                  <%= f.text_field :website_url %>
-                </td>
-              </tr>
+              </div>
 
-              <tr>
-                <td>
-                  <%= f.label :website_url, "Website" %>
-                </td>
-                <td>
-                  <%= f.text_field :website_url %>
-                </td>
-              </tr>
+              <div id="edit_profile_column2" class="span6">
 
-              <tr>
-                <td>
-                  <%= f.label :twitter, "Twitter" %>
-                </td>
-                <td>
-                  <%= f.text_field :twitter %>
-                </td>
-              </tr>
+                <table style="width: 100%">
+                  <tr>
+                    <td>
+                      <%= f.label :about_me, "About Me" %>
+                    </td>
+                    <td>
+                      <%= f.text_area :about_me, maxlength: 250, size: "1x7" %>
+                    </td>
+                  </tr>
 
-              <tr>
-                <td>
-                  <%= f.label :linkedin_url, "LinkedIn URL" %>
-                </td>
-                <td>
-                  <%= f.text_field :linkedin_url %>
-                </td>
-              </tr>
+                  <tr>
+                    <td colspan="2">
+                      <hr>
+                    </td>
+                  </tr>
 
-            </table>
+                  <tr>
+                    <td>
+                      <%= f.label :website_url, "Website" %>
+                    </td>
+                    <td>
+                      <%= f.text_field :website_url %>
+                    </td>
+                  </tr>
 
-            <%# gravatar_for @user %>
-            <!--<a href="http://gravatar.com/emails" target="_blank">change</a>-->
-          </div>
+                  <tr>
+                    <td>
+                      <%= f.label :website_url, "Website" %>
+                    </td>
+                    <td>
+                      <%= f.text_field :website_url %>
+                    </td>
+                  </tr>
 
-          <div class="box-actions">
-            <%= f.submit "Save Changes", class: "btn btn-large btn-primary" %>
-          </div> <!-- /plan-actions -->
+                  <tr>
+                    <td>
+                      <%= f.label :twitter, "Twitter" %>
+                    </td>
+                    <td>
+                      <%= f.text_field :twitter %>
+                    </td>
+                  </tr>
 
-        <% end %>
+                  <tr>
+                    <td>
+                      <%= f.label :linkedin_url, "LinkedIn URL" %>
+                    </td>
+                    <td>
+                      <%= f.text_field :linkedin_url %>
+                    </td>
+                  </tr>
+
+                </table>
+              </div>
+
+              <%# gravatar_for @user %>
+              <!--<a href="http://gravatar.com/emails" target="_blank">change</a>-->
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="box-actions">
+              <%= f.submit "Save Changes", class: "btn btn-large btn-primary" %>
+            </div>
+            <!-- /plan-actions -->
+
+          <% end %>
+        </div>
 
       </div>
 

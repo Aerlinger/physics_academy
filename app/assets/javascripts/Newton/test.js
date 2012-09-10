@@ -9,7 +9,7 @@ function createBalls(world) {
     var circleFixDef = new b2FixtureDef;
     var circleBodyDef = new b2BodyDef;
 
-    var radius = .05 * Math.random() + 0.2;
+    var radius = 0.3;
     circleFixDef.shape = new b2CircleShape( radius );
     circleBodyDef.type = b2Body.b2_dynamicBody;
     circleFixDef.density = 0.0;
@@ -21,7 +21,7 @@ function createBalls(world) {
 
     // Set the velocity of the first ball to a fixed amount.
     if (i == 0)
-      circleBodyDef.linearVelocity.Set(20, 0);
+      circleBodyDef.linearVelocity.Set(50, 0);
     else
       circleBodyDef.linearVelocity.Set(0, 0);
 

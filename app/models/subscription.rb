@@ -4,10 +4,11 @@
 class Subscription < ActiveRecord::Base
 
   # Ensure completed challenges array is empty on initialization
-  after_initialize :create_empty_subscription
+  after_create :create_empty_subscription
 
   # lesson_id and user_id are the ids for the lesson and user this subscription references
   attr_accessible :user_id, :lesson_id
+  attr_reader :current_challenge_id, :last_completed_challenge_id
 
   belongs_to :user
   belongs_to :lesson
@@ -29,32 +30,40 @@ class Subscription < ActiveRecord::Base
   #   3. Adds the points of the completed lesson to this subscription
   #   4. Stores the completed challenge as the last completed challenge
   #   5. Saves the subscription record
-  def complete_challenge(challenge_id)
+  def complete_challenge
 
     # Only add a completed_challenge index to the completed challenges array if it does not yet exist.
-    already_included = completed_challenges.include? challenge_id
-
-    unless already_included
-
-      # Add the completed lesson id, and keep the list sorted
-      self.completed_challenges << challenge_id
-      self.completed_challenges.sort!
+    if completed_challenges.include? @current_challenge_id
+      logger.info( "\t #{@current_challenge_id} \tLesson: #{:lesson_id} \tUser: #{user.name} has already been completed" )
+      return 0
+    else
+      # Add the completed lesson id
+      self.completed_challenges << @current_challenge_id
 
       # Add the completed points to this subscription
-      self.points = points + Challenge.find_by_id(challenge_id).points
-
-      # Log the completion
-      logger.info( "COMPLETE: Challenge #{challenge_id}" )
+      self.points = points + Challenge.find_by_id(@current_challenge_id).points
 
       # We should always keep track of which challenge in this subscription was completed most recently.
-      self.last_completed_challenge_id = challenge_id
+      @last_completed_challenge_id = @current_challenge_id
+      @current_challenge_id = next_challenge_id
+      self.save!
 
-    else
-      logger.info( "\t #{challenge_id} \tLesson: #{:lesson_id} \tUser: #{self.user.name} has already been completed" )
+      # Log the completion
+      logger.info( "COMPLETED: Challenge #{@current_challenge_id}" )
+      self.points
     end
 
-    !already_included
+  end
 
+  def current_challenge_id=(challenge_id)
+
+    if (challenge_id.is_a? String) && challenge_id.match(/^\d+$/)
+      challenge_id = challenge_id.to_i
+    elsif !challenge_id.is_a? Integer
+      raise(ArgumentError, "challenge_id should be an integer pertaining to the id of the completed challenge")
+    end
+
+    @current_challenge_id = challenge_id
   end
 
   # Returns true if completed challenges isn't empty
@@ -62,66 +71,75 @@ class Subscription < ActiveRecord::Base
     num_removed = completed_challenges.size
     self.completed_challenges = []
 
-    touch_challenge( first_challenge )
-    self.last_completed_challenge_id = 0
-    self.points = 0;
+    self.current_challenge_id=(lesson.challenges.first.id)
+    @last_completed_challenge_id = 0
+    self.points = 0
+    self.save!
 
     num_removed
   end
 
-  # Resets the specified challenge to a non-completed state and sets the current_challenge to the last_completed_challenge
+  # Resets the specified and sets the current_challenge to the last_completed_challenge
   # Returns false if no challenge to be reset is found
-  def reset_challenge(challenge_id)
-    removed_challenge = completed_challenges.delete(challenge_id)
+  def reset_challenge
 
-    success = !removed_challenge.blank?
+    removed_challenge_id = completed_challenges.delete(@current_challenge_id)
 
-    if success
-      # Log the reset
-      logger.info( "RESET Challenge: #{challenge_id} \tLesson: #{lesson.id} \tUser: #{self.user.name}" ) if success
+    if !removed_challenge_id.blank?
 
-      self.points = points - removed_challenge.points
-      touch_challenge(:last_completed_challenge_id)
-      # There should never be a duplicate completed challenge in the completed challenges array
+      # deduct the points and mark the last lesson
+      self.points = points - lesson.challenges.find(removed_challenge_id).points
+
+      self.save!
+      logger.info( "RESET Challenge: #{@current_challenge_id} \tLesson: #{lesson.id} \tUser: #{self.user.name}" )
+
+      true
     end
 
-    success
+    false
   end
 
+  # Returns the id of the next non-completed challenge. If all challenges have been completed returns :lesson_finished.
+  #  This method should not modify any internals of self.
   def next_challenge_id
-    # if We're not on the last challenge
-    if current_challenge_id != lesson.challenges.last.id
-      return current_challenge_id+1
+
+    # If the non_completed_challenges array is empty, we're done.
+    if non_completed_challenge_ids.empty?
+      :lesson_finished
+
+    # Else, if the user is completing the last lesson, return them to the first lesson they skipped and didn't complete
+    elsif @current_challenge_id == lesson.challenges.last.id
+      non_completed_challenge_ids.min
+
+    # Otherwise, just go on to the next lesson
     else
-      return current_challenge_id
+      @current_challenge_id + 1
     end
+
   end
 
-  def first_challenge
-    lesson.challenges.first.id
-  end
+  # Returns an array of challenge_ids that have not yet been completed (complementary set of completed_challenges).
+  def non_completed_challenge_ids
 
-  def touch_challenge(challenge_id)
-    self.current_challenge_id = challenge_id
+    # Define a range over the first challenge to the last challenge
+    challenges = lesson.challenges
+    lesson_challenge_ids = (challenges.first.id..challenges.last.id).to_a
+
+    # Non completed challenges are the difference between all challenge id's and the completed challenges
+    return lesson_challenge_ids - completed_challenges
   end
 
   # returns true if the specified challenge has been completed
-  def completed_challenge?(challenge)
-    completed_challenges.include? challenge.id
-  end
-
-  def percent_progress
-    completed_challenges.size / lesson.challenges.size * 100
+  def completed_challenge_id?(challenge_id)
+    completed_challenges.include? challenge_id
   end
 
   private
 
-    def current_challenge
-      lesson.challenges.find_by_id(current_challenge_id)
-    end
-
     def create_empty_subscription
       self.completed_challenges ||= []
+      @last_completed_challenge_id = nil
+      @current_challenge_id = lesson.challenges.first.id
     end
 
 

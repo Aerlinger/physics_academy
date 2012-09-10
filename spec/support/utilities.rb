@@ -47,6 +47,14 @@ RSpec::Matchers.define :show_user_in_header do |message|
   end
 end
 
+RSpec::Matchers.define :show_small_footer do |message|
+  match do |page|
+    page.should have_selector(".footer a", text: "FAQ")
+    page.should have_selector(".footer a", text: "Contact")
+    page.should have_selector(".footer a", text: "Privacy Policy")
+  end
+end
+
 ## ----------------------------------------------------------------
 #   HELPER Methods
 ## ----------------------------------------------------------------

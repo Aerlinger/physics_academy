@@ -1,10 +1,10 @@
 {
-  "description": "Jar",
+  "description": "Sample Topic: Understanding the concept of pressure",
 
   "World": {
     "id" : "world",
     "debug": false,
-    "gravity" : [0, -9.8],
+    "gravity" : [0, 0],
     "doSleep" : true,
     "timeStep": 0.003,
     "positionIterations": 2,

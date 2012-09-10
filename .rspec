@@ -1,2 +1,2 @@
 --colour
---format documentation
+--format html -o "spec/rspec_output.html"

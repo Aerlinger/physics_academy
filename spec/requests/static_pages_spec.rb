@@ -2,14 +2,6 @@ require 'spec_helper'
 
 describe "Static Pages" do
 
-  #include Devise::TestHelpers
-
-  def setup
-    #@request.env["devise.mapping"] = Devise.mappings[:user]
-    #@request.env["devise.mapping"] = Devise.mappings[:session]
-    #sign_in FactoryGirl.create(:admin)
-  end
-
   subject { page }
 
 
@@ -88,6 +80,7 @@ describe "Static Pages" do
 
     # Check page selectors:
     it { should have_selector('h1', text: 'Sign In') }
+
   end
 
   describe "Sign up page" do

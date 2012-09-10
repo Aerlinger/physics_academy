@@ -28,7 +28,7 @@
         var world = loadBox2dFromJSON(data, $("#<%= canvas_id %> canvas"));
         world.debug = <%= debug %>
         createBounds(world);
-        createBalls(world);
+        var createBalls2 = createBalls(world);
         var mouseResponderInstance = new MouseResponder(world, $("#<%= canvas_id %>"));
         var interval_id = render(world, mouseResponderInstance, $("#<%= canvas_id %> canvas"));
         console.log("Interval_id " + interval_id);

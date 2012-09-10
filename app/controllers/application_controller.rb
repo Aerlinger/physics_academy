@@ -7,12 +7,12 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
   # Custom devise action
     @user = User.find_by_email(params[:user][:email])
-    convert_guest_to_user resource
+    promote_guest_to_user resource
     #redirect_back_or resource
   end
 
   def after_sign_out_path_for(resource)
-    destroy_guest_user if guest_user?
+    destroy_guest_user
     root_path
   end
 

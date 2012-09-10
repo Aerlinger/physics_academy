@@ -20,7 +20,9 @@ describe "Static Pages" do
 
   describe "Visit settings" do
     before { click_link "Settings" }
-    it { should_not have_error_message }
+
+    it { should show_user_in_header}
+    it { have_selector('title', text: full_title('Edit Profile')) }
   end
 
 end

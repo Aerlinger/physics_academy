@@ -4,16 +4,14 @@ describe "Challenges" do
 
   subject { page }
 
-  describe "should display each challenge" do
-    Lesson.all.each do |lesson|
-      Challenge.all.each do |challenge|
+  before do
+    visit root_path
+    click_link 'Lessons'
+    click_link "lesson_#{1}_start"
+  end
 
-        #visit lesson_challenge_path(lesson, challenge)
+  describe "Should navigate to first lessons" do
 
-        #it {should have_selector "challenge_nav"}
-
-      end
-    end
   end
 
 end
