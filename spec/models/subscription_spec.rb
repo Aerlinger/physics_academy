@@ -80,6 +80,29 @@ describe Subscription do
       end
 
     end
+
+    describe "completes five challenges not including the last challenge" do
+
+      before(:each) do
+        complete_challenges(@subscription, [0, 7, 9, 5, 3])
+      end
+
+      its(:non_completed_challenge_ids) { should have(5).items }
+      its(:completed_challenges) { should have(5).items }
+      its(:points) { should be (500) }
+      its(:current_challenge_id) { should be @challenges[4].id }
+      its(:next_challenge_id) { should be @challenges[4].id+1 }
+
+      describe "for last completed challenge" do
+        before { @subscription.current_challenge_id=(@subscription.last_completed_challenge_id) }
+
+        it { @subscription.completed_challenge_id?(@subscription.current_challenge_id).should be true }
+        it { expect { @subscription.complete_challenge }.to change { @subscription.completed_challenges.count }.by(0) }
+        it { expect { @subscription.reset_challenge }.to change { @subscription.completed_challenges.count }.by(-1) }
+      end
+
+    end
+
   end
 
 

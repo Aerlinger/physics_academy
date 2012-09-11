@@ -19,14 +19,14 @@ describe "Static Pages" do
 
     it { should have_selector('title', text: full_title('')) }
     it { should_not have_selector('title', text: '| Home') }
-    it { should have_selector('a#call_to_action') }
+    it { should have_selector('a#call_to_action_btn') }
 
     describe "for non-signed-in users" do
       it { should have_default_login_links }
     end
 
     it "Call to action button should redirect to sign-in page" do
-      click_link("call_to_action")
+      click_link("call_to_action_btn")
       page.should have_selector 'h1', text: 'Sign Up'
     end
 
