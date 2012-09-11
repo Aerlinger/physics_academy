@@ -4,7 +4,9 @@
 
     <div class="container">
 
-      <%= link_to "", :root, id: "logo" %>
+      <%= link_to :root, id: "logo" do %>
+        <%= image_tag asset_path "header/logo.png" %>
+      <% end %>
 
       <div class="nav-collapse">
         <ul class="nav pull-right">

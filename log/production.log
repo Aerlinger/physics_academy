@@ -10308,3 +10308,79 @@ Compiled main-responsive.css  (17ms)  (pid 5704)
 Compiled main.css  (58ms)  (pid 5704)
 Compiled unused.css  (9ms)  (pid 5704)
 Compiled application.css  (1286ms)  (pid 5704)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-10 19:25:03 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_canvas.html.erb (1.0ms)
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (63.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (18.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 173ms (Views: 161.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/simulations/1.json" for 127.0.0.1 at 2012-09-10 19:25:03 -0400
+Processing by SimulationsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendered newton/simulations/1.json (1.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2012-09-10 19:40:14 -0400
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_subheader.html.erb (0.0ms)
+  Rendered static_pages/about.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/about" for 127.0.0.1 at 2012-09-10 19:42:40 -0400
+Processing by StaticPagesController#about as HTML
+  Rendered layouts/_subheader.html.erb (0.0ms)
+  Rendered static_pages/about.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-10 19:42:42 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_canvas.html.erb (0.0ms)
+  Rendered layouts/_extra.html.erb (0.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/simulations/1.json" for 127.0.0.1 at 2012-09-10 19:42:42 -0400
+Processing by SimulationsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendered newton/simulations/1.json (0.0ms)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-10 19:42:43 -0400
+Processing by StaticPagesController#home as HTML
+  Rendered layouts/_canvas.html.erb (1.0ms)
+  Rendered layouts/_extra.html.erb (1.0ms)
+  Rendered static_pages/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/simulations/1.json" for 127.0.0.1 at 2012-09-10 19:42:43 -0400
+Processing by SimulationsController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendered newton/simulations/1.json (0.0ms)
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms)

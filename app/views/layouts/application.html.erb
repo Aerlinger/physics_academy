@@ -1,40 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title> <%= full_title(yield(:title)) %> </title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-    <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
-    <%= render 'layouts/shim' %>
-  </head>
+<head>
+  <title> <%= full_title(yield(:title)) %> </title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+</head>
 
-  <body>
+<body>
 
-    <%= render 'layouts/header' %>
-    <% flash.each do |key, value| %>
-      <div class="flash alert alert-<%= flash_key( key.to_s ) %>">
+  <%= render 'layouts/header' %>
+
+  <% flash.each do |key, value| %>
+
+    <a id="flash_link" href="#">
+      <div class="flash alert alert-<%= flash_key(key.to_s) %>">
         <div class="container">
+          <button type="button" class="close" data-dismiss="alert">×</button>
           <h4>
             <%= value %>
           </h4>
         </div>
       </div>
-      <script type="text/javascript">
-        $(".flash").hide();
-        $(".flash").fadeIn("slow", function() {
-          // Todo: Called on completion
-        });
-      </script>
-    <% end %>
+    </a>
 
-      <%= yield %>
-    <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
-    <%= debug(current_user || User.find_by_lazy_id(cookies[:uuid])) if Rails.env.development? %>
-    <%= debug(cookies) if Rails.env.development? %>
-    <%= debug(session) if Rails.env.development? %>
+    <script type="text/javascript">
+      $(".flash").hide();
+      $(".flash").fadeIn("slow").delay(2000).fadeOut('800');
+      $("#flash_link").click(function (event) {
+        event.preventDefault();
+        $(this).hide();
+      });
+      $("#flash_link").hover(function (event) {
+        $('.close').css("border", "1px solid #666");
+      }, function (event) {
+        $('.close').css("border", "none");
+      });
+    </script>
+  <% end %>
 
-  </body>
+  <%= yield %>
+
+  <%= render 'layouts/footer' %>
+
+  <%= debug(params) if Rails.env.development? %>
+  <%= debug(current_user || User.find_by_lazy_id(cookies[:uuid])) if Rails.env.development? %>
+  <%= debug(cookies) if Rails.env.development? %>
+  <%= debug(session) if Rails.env.development? %>
+
+</body>
 
 </html>

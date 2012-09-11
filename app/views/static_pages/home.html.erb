@@ -4,12 +4,17 @@
       <div class="row">
 
         <div class="span5">
-            <div class="landing-text">
+          <div class="landing-text">
             <h1>Learn physics in a whole new way.</h1>
+
             <h3>Through live interactive lessons we offer the most intuitive and engaging way to learn physics.</h3>
 
-            <%= link_to "Get Started", new_user_registration_path,
-                        class: "btn btn-large btn-success", id: "call_to_action" %>
+            <div class="call_to_action">
+
+              <%= link_to new_user_registration_path, class: "btn btn-large btn-success", id: "call_to_action_btn"  do %>
+                Get Started &nbsp; <i class="icon-chevron-right icon-white"></i>
+            <% end %>
+            </div>
 
           </div>
         </div>
@@ -26,18 +31,20 @@
   </div>
 </div>
 
-<div id="content">
-  <div class="inner">
-    <div class="container">
-      <div class="row">
+<div class="features-list">
 
-        <div class="features-list">
+  <div id="content">
+    <div class="inner">
+      <div class="container">
+        <div class="row">
+
+
           <div class="span4">
 
             <div class="feature-thumbnail">
               <div class="circle-icon">
                 <div>
-                 <i class="icon-pencil"></i>
+                  <i class="icon-pencil"></i>
                 </div>
                 <h2>Learn</h2>
               </div>
@@ -46,6 +53,7 @@
             <div class="feature-content">
               <%= link_to image_tag(asset_path 'test/mech_example3.png'), '#', alt: "Screenshot", class: "thumbnail" %>
               <h4>Physics like you've never <em>seen</em> it before</h4>
+
               <p>Physics Academy is the most effective and enjoyable way to learn and to teach physics at any level.
                 Take our interactive lessons and play games tailored for your level while tracking your progress and
                 earning redeemable points as you go.
@@ -67,11 +75,12 @@
 
             <div class="feature-content">
 
-            <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
+              <%= link_to image_tag(asset_path 'home/interact.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
               <h4>Ask questions and learn from others</h4>
+
               <p>Stuck on a problem? Have a question? Post questions and receive answers. Or invite your
                 friends, classmates, or mentors to Physics Academy via email or your preferred social network.
-               </p>
+              </p>
             </div>
           </div>
 
@@ -89,6 +98,7 @@
             <div class="feature-content">
               <%= link_to image_tag(asset_path 'home/contribute.jpg'), '#', alt: "Screenshot", class: "thumbnail" %>
               <h4>Share your knowledge with the world</h4>
+
               <p>Are you a physics guru? Physics Academy gives you the forum to reach others and share your knowledge
                 with the world. Gain reputation and build your resume or CV based on your own contributions.
               </p>

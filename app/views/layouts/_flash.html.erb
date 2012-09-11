@@ -1,0 +1,27 @@
+<% flash.each do |key, value| %>
+
+  <a id="flash_link" href="#">
+    <div class="flash alert alert-<%= flash_key( key.to_s ) %>">
+      <div class="container">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        <h4>
+          <%= value %>
+        </h4>
+      </div>
+    </div>
+  </a>
+
+  <script type="text/javascript">
+    $(".flash").hide();
+    $(".flash").fadeIn("slow");//.delay(2000).fadeOut('800');
+    $("#flash_link").click(function(event){
+      event.preventDefault();
+      $(this).hide();
+    });
+    $("#flash_link").hover(function(event){
+      $('.close').css("border", "1px solid #666");
+    }, function(event) {
+      $('.close').css("border", "none");
+    });
+  </script>
+<% end %>

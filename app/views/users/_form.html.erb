@@ -1,6 +1,6 @@
 <div class="row offset3">
 
-  <div class="box-container span6 clear_margins">
+  <div class="box-container span6 clear-side-margins shadow" style="margin-top: 45px;">
 
     <div class="box-header box-title">
       Create a new Account
@@ -10,12 +10,12 @@
 
       <%= render 'shared/error_messages', object: @user %>
 
-      <fieldset>
+        <fieldset>
 
         <div class="box-features">
 
           <div class="control-group">
-            <%= f.label :name, class: "control-label" %>
+            <%= f.label :name, class: "control-label", text: "Name (optional)" %>
             <div class="controls">
               <%= f.text_field :name, class: "input-xlarge focused" %>
             </div>
@@ -42,9 +42,11 @@
             </div>
           </div>
 
+          <p>Already have an account? <%= link_to "Sign in", new_user_session_path, style: "font-weight: bold" %></p>
+
         </div>
 
-        <div class="box-actions">
+        <div class="box-actions" style="margin-bottom: 1px;">
           <%= f.submit "Sign Up", class: "btn btn-success btn-large btn-primary" %>
         </div>
 
@@ -52,7 +54,11 @@
 
     <% end %>
 
+
+
   </div>
+
+
 
 </div>
 

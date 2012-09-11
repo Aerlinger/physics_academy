@@ -100,7 +100,7 @@ module SessionsHelper
     # end
 
     if !cookies[:uuid].nil?
-      user.subscriptions = guest_user.subscriptions.dup
+      #user.subscriptions = guest_user.subscriptions.dup
       true
     else
       false
