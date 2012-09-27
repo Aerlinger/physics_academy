@@ -1,5 +1,5 @@
 class AddPointsToChallenges < ActiveRecord::Migration
   def change
-    add_column :challenges, :points, :integer, default: 100
+    add_column :tasks, :points, :integer, default: 100
   end
 end

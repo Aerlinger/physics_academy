@@ -1,0 +1,34 @@
+<!-- HEADER CONTENT -->
+<div class="box-header">
+
+  <!-- TITLE -->
+  <div class="box-title">
+    <%= @lesson.title %>
+  </div>
+
+  <!-- LOGO AND PROGRESS -->
+  <div class="box-subheader">
+    <%= image_tag "thumbs/default.png" %>
+    <span class="term">
+              Completed <%= @subscription.completed_tasks.size %> of <%= @lesson.tasks.size %> Tasks
+            </span>
+            <span class="term">
+              Points Earned: <%= @subscription.points %>
+            </span>
+  </div>
+
+</div>
+
+<!-- NAVIGATION LIST -->
+<div class="box-features">
+  <ol id="task_nav" class="nav">
+
+    <%= task_list -%>
+
+  </ol>
+</div>
+
+<!-- SUBMISSION BUTTON -->
+<div class="box-actions">
+
+</div>

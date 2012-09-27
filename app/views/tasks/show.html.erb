@@ -1,0 +1,41 @@
+<% provide(:title, @lesson.title) %>
+
+<!-- Padding for window -->
+<div class="chalkboard-background padded">
+
+  <!-- PATHBAR -->
+  <div class="row-fluid">
+    <%= render partial: "tasks/components/breadcrumb" %>
+  </div>
+
+  <div class="row-fluid">
+
+    <!-- LEFT NAVBAR -->
+    <div class="box-container span3 sidebar-nav">
+        <%= render partial: "tasks/components/nav_sidebar" %>
+    </div>
+
+    <div class="span7 box-container orange-header">
+
+      <!-- LESSON DESCRIPTION -->
+      <%= render partial: "tasks/components/description" %>
+
+      <!------------------------------------------------------------->
+      <!-- LESSON CONTENT ------------------------------------------->
+      <%= render 'tasks/components/task' %>
+      <!------------------------------------------------------------->
+      <!------------------------------------------------------------->
+
+    </div>
+
+    <%= render partial: "tasks/components/help" %>
+
+  </div>
+
+  <%= render partial: "tasks/components/modal" %>
+
+  <%= debug(@subscription) if Rails.env.development? %>
+  <%= debug(@subscription) if Rails.env.development? %>
+
+</div>
+

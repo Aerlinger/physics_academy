@@ -1,0 +1,62 @@
+<div class="well lesson-content">
+
+  <div id="task_content">
+
+    <%=
+        begin
+          render partial: path_for_lesson_task(@lesson, @task)
+        rescue ActionView::MissingTemplate
+          "Couldn't find page #{path_for_lesson_task(@lesson, @task)}"
+        end
+    %>
+
+  </div>
+
+  <div class="span12">
+    <div class="row">
+
+      <% if Rails.env.development? %>
+
+        <div class="breadcrumb">
+          <h4>Developer Mode:</h4>
+
+          <input type="radio" id="success" name="submission_response" value="success" checked="true"/>
+          Success:
+          <input type="text" name="success_response" value="Success!"/>
+          <br/>
+
+          <input type="radio" id="info" name="submission_response" value="info"/>
+          Info
+          <input type="text" name="info_response" value="Info!"/>
+          <br/>
+
+          <input type="radio" id="warn" name="submission_response" value="Warning!"/>
+          Warn:
+          <input type="text" name="warn_response"/>
+          <br/>
+
+          <input type="radio" id="error" name="submission_response" value="Error!"/>
+          Error:
+          <input type="text" name="error_response"/>
+          <br/>
+
+        </div>
+
+      <% end %>
+
+    </div>
+
+    <%= link_to "Submit", submit_lesson_task_path, remote: true,
+                class: "btn btn-success btn-large title",
+                id: "submit", style: "width: 90%;" %>
+  </div>
+
+  <!-- SUBMISSION FEEDBACK -->
+  <div class="row">
+    <div id="grader_response" style="margin-left: 1.5em; margin-top: 1em;">
+      <!-- Submission  feedback response is rendered through AJAX here -->
+    </div>
+  </div>
+
+</div>
+

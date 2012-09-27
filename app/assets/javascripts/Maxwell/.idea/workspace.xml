@@ -2,51 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95d3df30-3f6d-4e5a-95c5-d3c906ac0eee" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/layouts/_mini_footer.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/layouts/small_footer_layout.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/static_pages/_samples.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/requests/admin_pages_spec.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../spec/support/subscription_spec_helpers.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/rails.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SimulatorEngine/sample.html" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\labs.js.coffee" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.rspec" afterPath="$PROJECT_DIR$/../../../../.rspec" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/box.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/box.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/homepage.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/homepage.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/main.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/main.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/application_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/challenges_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../controllers/users_controller.rb" afterPath="$PROJECT_DIR$/../../../controllers/users_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/challenges_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/challenges_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/sessions_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/sessions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/subscription.rb" afterPath="$PROJECT_DIR$/../../../models/subscription.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" afterPath="$PROJECT_DIR$/../../../views/devise/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_canvas.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_canvas.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_user_thumbnail.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_user_thumbnail.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" afterPath="$PROJECT_DIR$/../../../views/lessons/_lesson.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/about.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/users/edit.html.erb" afterPath="$PROJECT_DIR$/../../../views/users/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/test.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/factories.rb" afterPath="$PROJECT_DIR$/../../../../spec/factories.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/models/subscription_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/models/subscription_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/models/user_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/models/user_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/authentication_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/authentication_pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/challenges_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/challenges_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/guest_login_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/guest_login_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/lesson_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/lesson_pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/user_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/user_pages_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/spec_helper.rb" afterPath="$PROJECT_DIR$/../../../../spec/spec_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/support/utilities.rb" afterPath="$PROJECT_DIR$/../../../../spec/support/utilities.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/production.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/production.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../../../../.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="E:/Dropbox/WebDev/sandbox/gravity/js/box2d/box2dJSONReader.js" afterPath="E:/Dropbox/WebDev/sandbox/gravity/js/box2d/box2dJSONReader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/newton/simulations/1.json" afterPath="$PROJECT_DIR$/../../../views/newton/simulations/1.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/test.log" afterPath="$PROJECT_DIR$/../../../../log/test.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/production.log" afterPath="$PROJECT_DIR$/../../../../log/production.log" />
     </list>
     <ignored path="Maxwell.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -145,7 +105,7 @@
           <file leaf-file-name="rails.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/SimulatorEngine/rails.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="85" column="40" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.24850658">
+                <state line="85" column="40" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.23665048">
                   <folding />
                 </state>
               </provider>
@@ -167,7 +127,7 @@
           <file leaf-file-name="sample.html" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/SimulatorEngine/sample.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="135" column="53" selection-start="4609" selection-end="4609" vertical-scroll-proportion="0.22156398">
+                <state line="135" column="53" selection-start="4609" selection-end="4609" vertical-scroll-proportion="0.11374407">
                   <folding />
                 </state>
               </provider>
@@ -208,9 +168,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="x" value="1912" />
+    <option name="y" value="22" />
+    <option name="width" value="1696" />
     <option name="height" value="1066" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -239,16 +199,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -315,15 +265,25 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="IntelliLang.Configuration" />
-    <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -376,13 +336,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="false" />
+    <frame x="1912" y="22" width="1696" height="1066" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10015815" sideWeight="0.68171805" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10015815" sideWeight="0.31057268" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.099577546" sideWeight="0.68502206" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.099577546" sideWeight="0.3072687" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -525,14 +485,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/SimulatorEngine/rails.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="40" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.24850658">
+        <state line="85" column="40" selection-start="3323" selection-end="3323" vertical-scroll-proportion="0.23665048">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SimulatorEngine/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="53" selection-start="4609" selection-end="4609" vertical-scroll-proportion="0.22156398">
+        <state line="135" column="53" selection-start="4609" selection-end="4609" vertical-scroll-proportion="0.11374407">
           <folding />
         </state>
       </provider>

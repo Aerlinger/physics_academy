@@ -19,7 +19,7 @@ class Lesson < ActiveRecord::Base
   has_many :subscriptions
   has_many :users, through: :subscriptions
 
-  has_many :challenges, dependent: :destroy
+  has_many :tasks, dependent: :destroy
 
 
   # Returns the index of this lesson in the Lessons.all array
@@ -31,12 +31,12 @@ class Lesson < ActiveRecord::Base
     "#{id}-#{title.parameterize}"
   end
 
-  def first_challenge
-    challenges.first
+  def first_task
+    tasks.first
   end
 
-  def last_challenge
-    challenge.last
+  def last_task
+    tasks.last
   end
 
 

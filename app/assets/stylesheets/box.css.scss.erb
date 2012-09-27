@@ -4,6 +4,19 @@
   CSS for windows and frames used in Physics Academy
 -------------------------------------------------------------------*/
 
+@mixin rounded-top {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+}
+
+@mixin rounded-bottom {
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 /*-- Box Container --*/
 .box-container {
   position: relative;
@@ -11,6 +24,10 @@
 
   margin-top: 1em;
   margin-bottom: 1em;
+
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 
   label {
     font-weight: bold;
@@ -41,18 +58,11 @@
 
   background-color: #821800;
 
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-radius-topleft: 4px;
-  -moz-border-radius-topright: 4px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-
 }
 
-
-
 .box-title {
+  @include rounded-top;
+
   padding: .5em 1em;
 
   font-size: 1.3em;
@@ -60,7 +70,6 @@
 
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  border-radius: 4px 4px 0 0;
 }
 
 .box-subheader {
@@ -99,23 +108,12 @@
 
 .box-content {
 
-  img {
-    background: #ffffff;
-    float: left;
 
-    margin-right: 1em;
-    margin-top: .5em;
-
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-
-    margin: .5em 1em .5em .5em;
-    border: 1px solid #d8d8d8;
-
-    -moz-box-shadow: 1px 1px 5px #888;
-    -webkit-box-shadow: 1px 1px 5px #888;
-    box-shadow: 1px 1px 5px #888;
+  .feature-block {
+    padding: 5px !important;
+    .thumbnail {
+      margin-bottom: 3px !important;
+    }
   }
 
   p {
@@ -129,14 +127,17 @@
   #covered_topics {
     background-color: #f8fbef;
     text-align: center;
-    border-bottom: 1px solid #d3af89;
+    border-bottom: 1px solid #ffdbaa;
     font-weight: bolder;
     color: black
   }
 
-  .well {
+  .well, .breadcrumb {
     padding: 0;
-    margin: .5em;
+    margin: 0;
+    width: 100%;
+    border: 1px solid #c1c1c1;
+    background-color: white;
   }
 
   ul {
@@ -144,7 +145,7 @@
     padding: 0 !important;
   }
 
-  background-color: #e3dbd8;
+  background-color: #fffcf9;
 }
 
 #login-box {
@@ -184,24 +185,32 @@
     margin-bottom: 15px;
   }
 
-  ul {
+  ol {
     padding: 0;
     margin: 0;
 
-    list-style: none;
+    list-style-type: decimal;
   }
 
   li {
 
+    list-style-position: inside;
+
     padding: 0;
-    margin: 0em 1em;
+    margin: 0;
 
     text-align: left;
     border-bottom: 1px dotted #CCC;
     color: #5e0f0f;
 
     a {
-      padding: 1em 1em;
+      padding: .5em 1em;
+      display: block;
+
+      i {
+        font-style: normal;
+      }
+
       color: #ab1515;
     }
 
@@ -215,30 +224,30 @@
     a {
       font-weight: bold;
       color: #292929;
-      background-color: #c7dfc9;
+      border: 2px solid green;
     }
 
     a:hover {
       color: black;
-      background-color: #c7dfc9;
     }
 
   }
 
   li.completed {
 
+    background-color: #c7dfc9;
     i {
       margin-right: .2em;
       color: #96c4a1;
     }
 
     a {
-      color: #272727;
+      color: #002702;
     }
 
     a:hover {
       color: black;
-      background-color: #c7dfc9;
+      background-color: #dbf3dd;
     }
   }
 
@@ -259,6 +268,9 @@
 }
 
 .box-actions {
+
+  @include rounded-bottom;
+
   padding: .5em 1em;
 
   background-color: whiteSmoke;
@@ -276,12 +288,6 @@
 
   border: 1px solid #DDD;
 
-  -webkit-border-bottom-right-radius: 4px;
-  -webkit-border-bottom-left-radius: 4px;
-  -moz-border-radius-bottomright: 4px;
-  -moz-border-radius-bottomleft: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
 
   .btn {
     display: block;
@@ -297,6 +303,13 @@
   .btn.pull_right {
     float: right;
     width: 8em;
+  }
+
+  .btn.full-width {
+    display: block;
+    width: 85%;
+    position: relative;
+    left: 12px;
   }
 }
 
@@ -316,6 +329,11 @@
   background-color: #dec23b;
   text-align: left;
   color: black;
+
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+
   .plan-title {
     padding-left: 2em;
   }

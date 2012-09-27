@@ -2,54 +2,134 @@
 
 <%= render :partial => 'layouts/subheader', locals: {title: "Labs"} %>
 
-
+<div class="chalkboard-background">
 
 <div id="subpage">
 <div class="container">
+
+
 <div class="row">
 
-  <div class="span12">
 
-    <div class="big-intro">Practice your knowledge and test new concepts</div>
+  <div class="box-container orange-header shadow span12">
+
+    <div class="box-header">
+
+      <div class="box-title">
+        <h2>The Circuit Laboratory</h2>
+      </div>
+
+      <div class="box-content">
+
+        <div class="row-fluid">
+          <div class="span7 feature-block">
+
+            <div class="thumbnail">
+              <%= link_to image_tag(asset_path 'labs/Circuits.png'), labs_circuits_path %>
+            </div>
+
+            <div class="well">
+              <p> A place to explore, create, and save your very own circuit designs in a live and fully interactive
+                setting. If you're seeking inspiration, feel free to check out our samples of real-world circuits on
+                the right.</p>
+            </div>
+
+            <div style="clear: both"></div>
+          </div>
+
+          <div class="span5">
+
+              <ul class="nav">
+                <li id="covered_topics"><h3>Live Examples</h3></li>
+
+                <li style="margin-left: 1em;"> <%= link_to "Example Circuit", "#" %> </li>
+                <li style="margin-left: 1em;"> <%= link_to "Example Circuit", "#" %> </li>
+                <li style="margin-left: 1em;"> <%= link_to "Example Circuit", "#" %> </li>
+                <li style="margin-left: 1em;"> <%= link_to "Example Circuit", "#" %> </li>
+                <li style="margin-left: 1em;"> <%= link_to "Example Circuit", "#" %> </li>
+
+                <li style="text-align: center; border-top: 1px solid #bad3c4; background-color: #ebf2ef">
+                  <%= link_to "#" do %>
+                    More...
+                  <% end %>
+                </li>
+
+              </ul>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="box-actions">
+      <div class="row">
+        <%= link_to labs_circuits_path, id: "start_circuits", class: "btn btn-success full-width" do %>
+          <h2>Start</h2>
+        <% end %>
+      </div>
+    </div>
+
+    <!--</div>-->
+  </div>
+
+
+</div>
+
+
+<div class="row">
+
+
+  <div class="span6 feature-block">
+
+    <h2><span class="slash">//</span> Circuit Simulator</h2>
+
+    <div class="thumbnail">
+      <%= link_to image_tag(asset_path 'labs/Circuits.png'), labs_circuits_path %>
+    </div>
+
+    <h4>Create and your very own circuit designs in a live and fully interactive setting.</h4>
+
+  </div>
+
+  <div class="span6">
+
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="">one</a></li>
+      <li><a href="">two</a></li>
+      <li><a href="">three</a></li>
+      <li><a href="">four</a></li>
+    </ul>
 
   </div>
 </div>
 
-<br /><br />
+<hr>
 
 <div class="row">
 
-
   <div class="span6 feature-block">
 
-    <h2><span class="slash">//</span> Circuits & Electronics</h2>
-
-    <div class="thumbnail">
-      <%= link_to image_tag(asset_path 'labs/Circuits.png'), labs_circuits_path %>
-    </div> <!-- /thumbnail -->
-
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-  </div> <!-- /span6 -->
-
-  <div class="span6 feature-block">
-
-    <h2><span class="slash">//</span> Mechanics</h2>
+    <h2><span class="slash">//</span> Mechanics Simulator</h2>
 
     <div class="thumbnail">
 
       <%= link_to image_tag(asset_path 'test/mechanics.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span6 -->
+  </div>
 
 
-</div> <!-- /row -->
+</div>
 
 
-<br /><br />
+<br/><br/>
 
 <hr>
 <div class="row">
@@ -62,11 +142,15 @@
 
     <div class="thumbnail">
       <%= link_to image_tag(asset_path 'test/example1.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span4 -->
+  </div>
+  <!-- /span4 -->
 
   <div class="span4 feature-block">
 
@@ -74,11 +158,15 @@
 
     <div class="thumbnail">
       <%= link_to image_tag('test/example2.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span4 -->
+  </div>
+  <!-- /span4 -->
 
   <div class="span4 feature-block">
 
@@ -86,14 +174,19 @@
 
     <div class="thumbnail">
       <%= link_to image_tag(asset_path 'test/example3.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span4 -->
+  </div>
+  <!-- /span4 -->
 
 
-</div> <!-- /row -->
+</div>
+<!-- /row -->
 
 <hr>
 <div class="row">
@@ -106,11 +199,15 @@
 
     <div class="thumbnail">
       <%= link_to image_tag(asset_path 'test/mech_example1.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span4 -->
+  </div>
+  <!-- /span4 -->
 
   <div class="span4 feature-block">
 
@@ -118,11 +215,15 @@
 
     <div class="thumbnail">
       <%= link_to image_tag(asset_path 'test/mech_example2.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span4 -->
+  </div>
+  <!-- /span4 -->
 
   <div class="span4 feature-block">
 
@@ -130,16 +231,21 @@
 
     <div class="thumbnail">
       <%= link_to image_tag(asset_path 'test/mech_example3.png'), '#' %>
-    </div> <!-- /thumbnail -->
+    </div>
+    <!-- /thumbnail -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.</p>
 
-  </div> <!-- /span4 -->
+  </div>
+  <!-- /span4 -->
 
 
-</div> <!-- /row -->
+</div>
+<!-- /row -->
 
-<br /><br />
+<br/><br/>
 
 <!--
 
@@ -305,3 +411,4 @@
 </div>
 
 
+</div>

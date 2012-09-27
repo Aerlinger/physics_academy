@@ -5,7 +5,7 @@ namespace :db do
     # Clear all lesson entries from the database
     Lesson.delete_all
 
-    root_path = "app/views/challenges/lessons_content"
+    root_path = "app/views/tasks/lessons_content"
 
     if Dir::exists?(root_path)
 
@@ -31,9 +31,9 @@ def create_lesson_from_yaml(lesson_yaml)
   new_lesson.description  = lesson_yaml[:description]
   new_lesson.difficulty   = lesson_yaml[:difficulty]
 
-  lesson_yaml[:challenges].each do |challenge|
-    new_lesson.challenges.build(title: challenge, content: "Description for challenge goes here")
-    puts challenge
+  lesson_yaml[:tasks].each do |task|
+    new_lesson.tasks.build(title: task, content: "Description for task goes here")
+    puts task
   end
 
   puts y new_lesson

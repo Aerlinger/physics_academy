@@ -1,0 +1,70 @@
+console.log("Sent answer to server");
+
+var grader = function() {
+
+  var response = "";
+
+  if( $("#success").selected() ) {
+    response = "Success!";
+
+  } else if ( $("#info").selected() ) {
+    response = "Info!";
+
+  } else if ( $("#warn").selected() ) {
+    response = "Warn!";
+
+  } else if ( $("#error").selected() ) {
+    response = "Error!";
+  }
+
+  this.onSuccess = function( successCallback ) {
+
+  }
+
+  this.onInfo = function( infoCallback ) {
+
+  }
+
+  this.onWarn = function( warningCallback ) {
+
+  }
+
+  this.onError = function( errorCallback ) {
+
+  }
+
+};
+
+var grader = new grader();
+
+grader.onSuccess( function(message) {
+  alert(message);
+});
+
+grader.onInfo( function(message) {
+  alert(message);
+});
+
+grader.onWarn( function(message) {
+  alert(message);
+});
+
+grader.onError( function(message) {
+  alert(message);
+});
+
+
+if(response == "warning") {
+  $.get("<%= escape_javascript warning_lesson_task_url %>");
+}
+
+else if (response=="error") {
+  $.get("<%= escape_javascript error_lesson_task_url %>");
+}
+
+else if (response=="success") {
+  $("#submit").removeClass('btn-info').addClass('btn-success');
+  $('#task_nav').html("<%= escape_javascript task_list %>");
+
+  $.get( "<%= escape_javascript next_lesson_task_url %>", function() { alert("Success!") } );
+}

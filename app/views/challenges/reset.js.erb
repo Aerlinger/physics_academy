@@ -1,9 +1,0 @@
-<% success = @subscription.reset_challenge(@challenge.id) %>
-
-<% if success %>
-  $("#grader_response").html("<%= escape_javascript show_info(@subscription.completed_challenges.size) %>");
-<% else %>
-  $("#grader_response").html("<%= escape_javascript show_info("Challenge already Reset!") %>");
-<% end %>
-
-$('#challenge_nav').html("<%= escape_javascript challenge_list %>");

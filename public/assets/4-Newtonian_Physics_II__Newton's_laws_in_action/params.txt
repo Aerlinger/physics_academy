@@ -1,2 +1,0 @@
-{:
-titleI"2Newtonian Physics II: Newton's laws in action:EF:descriptionI"Description goes here;F:image_urlI"newtonian_physics_ii.jpg;F:difficultyI"Beginner;F:subjectI"Introductory;F:challenges[I"Challenge 1;FI"Challenge 2;FI"Challenge 3;FI"Challenge 4;FI"Challenge 5;FI"Challenge 6;F:completedF

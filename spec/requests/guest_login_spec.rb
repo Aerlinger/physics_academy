@@ -18,11 +18,8 @@ describe "Guest user navigaton" do
 
     describe "After visiting a lesson" do
 
-      before do
-        visit root_path
-        click_link 'Lessons'
-        click_link "lesson_#{1}_start"
-      end
+      before { visit_first_lesson }
+
 
       it { should have_guest_login_links }
 

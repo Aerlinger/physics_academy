@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120820172819) do
+ActiveRecord::Schema.define(:version => 20120918031624) do
 
   create_table "badges", :force => true do |t|
     t.string   "title"
@@ -19,16 +19,6 @@ ActiveRecord::Schema.define(:version => 20120820172819) do
     t.string   "icon"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-  end
-
-  create_table "challenges", :force => true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.text     "hint"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
-    t.integer  "lesson_id"
-    t.integer  "points",     :default => 100
   end
 
   create_table "circuit_elements", :force => true do |t|
@@ -103,18 +93,28 @@ ActiveRecord::Schema.define(:version => 20120820172819) do
   create_table "subscriptions", :force => true do |t|
     t.integer  "user_id"
     t.integer  "lesson_id"
-    t.datetime "created_at",                                 :null => false
-    t.datetime "updated_at",                                 :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "completed_lessons"
-    t.text     "completed_challenges"
-    t.integer  "current_challenge_id",        :default => 1
-    t.integer  "last_completed_challenge_id", :default => 0
-    t.integer  "points",                      :default => 0
+    t.text     "completed_tasks"
+    t.integer  "current_task_id",        :default => 1
+    t.integer  "last_completed_task_id", :default => 0
+    t.integer  "points",                 :default => 0
   end
 
   add_index "subscriptions", ["lesson_id"], :name => "index_subscriptions_on_lesson_id"
   add_index "subscriptions", ["user_id", "lesson_id"], :name => "index_subscriptions_on_user_id_and_lesson_id", :unique => true
   add_index "subscriptions", ["user_id"], :name => "index_subscriptions_on_user_id"
+
+  create_table "tasks", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.text     "hint"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.integer  "lesson_id"
+    t.integer  "points",     :default => 100
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name",                   :default => ""
@@ -144,6 +144,7 @@ ActiveRecord::Schema.define(:version => 20120820172819) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "lazy_id"
+    t.integer  "current_task_id"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

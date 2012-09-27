@@ -1,17 +1,17 @@
 require 'spec_helper'
 
-describe "Challenges" do
+describe "tasks" do
 
   subject { page }
 
   before do
-    visit root_path
-    click_link 'Lessons'
-    click_link "lesson_#{1}_start"
+    visit_first_lesson
   end
 
-  describe "Should navigate to first lessons" do
-
+  describe "should have task buttons" do
+    it { should have_selector('a#task_1') }
+    it { should have_selector('a#task_2') }
+    it { should have_selector('a#task_3') }
   end
 
 end

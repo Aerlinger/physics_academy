@@ -1,2 +1,0 @@
-{:
-titleI",Newtonian Physics I: The laws of motion:EF:descriptionI"xNewtonian physics describes the motion and interaction of physical bodies under the influence of energy and forces.;F:image_urlI"newtonian_physics_ii.jpg;F:completedF:difficultyI"Beginner;F:subjectI"Introductory;F:challenges[I"Challenge 1;FI"Challenge 2;FI"Challenge 3;FI"Challenge 4;FI"Challenge 5;FI"Challenge 6;F

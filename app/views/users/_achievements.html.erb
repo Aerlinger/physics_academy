@@ -32,7 +32,7 @@
     <ul class="nav">
 
       <% @user.subscriptions.all.each_with_index do |subscription, index| %>
-        <%= content_tag :li, link_to("#{index+1}: #{subscription.lesson.title}", lesson_challenge_path(subscription.lesson.id) ) %>
+        <%= content_tag :li, link_to("#{index+1}: #{subscription.lesson.title}", lesson_task_path(subscription.lesson.id) ) %>
       <% end %>
 
     </ul>

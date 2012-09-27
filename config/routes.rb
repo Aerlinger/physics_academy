@@ -1,7 +1,6 @@
 PhysicsAcademy::Application.routes.draw do
 
   get "mailing_list/submit"
-
   get "mailing_list/remove"
 
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
@@ -15,11 +14,9 @@ PhysicsAcademy::Application.routes.draw do
 
   root to: 'static_pages#home'
 
-
-  match '/help',    to: 'static_pages#help'
-  match '/about',   to: 'static_pages#about'
-  match '/privacy', to: 'static_pages#privacy'
-  match '/terms',   to: 'static_pages#terms'
+  %w[help about privacy terms].each do |page|
+    get page, controller: "static_pages", action: page
+  end
 
   post '/mailing_list/submit' => 'mailing_list#submit'
 
@@ -39,13 +36,11 @@ PhysicsAcademy::Application.routes.draw do
 
     member { post :vote }
 
-    resources :challenges do
-      put :submit, on: :member
+    resources :tasks do
+      get :submit, on: :member
+      put :success, on: :member
       put :reset, on: :member
       put :reset_all, on: :member
-      get :error, on: :member
-      get :warning, on: :member
-      get :next, on: :member
     end
 
   end

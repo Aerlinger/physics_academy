@@ -19,16 +19,16 @@ FactoryGirl.define do
     association :lesson
     after_build do |instance|
       10.times do
-        instance.lesson.challenges << Factory.build(:challenge)
+        instance.lesson.tasks << Factory.build(:task)
       end
     end
   end
 
 end
 
-Factory.define :challenge do |f|
-  f.sequence(:title) { |n| "Title: Lesson challenge#{n}" }
-  f.sequence(:content) { |n| "Content for lesson challenge #{n}" }
+Factory.define :task do |f|
+  f.sequence(:title) { |n| "Title: Lesson task #{n}" }
+  f.sequence(:content) { |n| "Content for lesson task #{n}" }
 end
 
 Factory.define :lesson do |f|

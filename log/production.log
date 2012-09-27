@@ -10858,3 +10858,6 @@ Compiled lessons.css  (4ms)  (pid 7716)
 Compiled main-responsive.css  (31ms)  (pid 7716)
 Compiled main.css  (74ms)  (pid 7716)
 Compiled application.css  (1613ms)  (pid 7716)
+Connecting to database specified by database.yml
+Binary data inserted for `string` type on column `encrypted_password`
+Binary data inserted for `string` type on column `encrypted_password`

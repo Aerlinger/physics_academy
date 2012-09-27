@@ -82,11 +82,16 @@ h2 {
   line-height: 36px;
 }
 
-h1, h2, h3,
-h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .85em;
+.btn {
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+  }
 }
+
+/*h1, h2, h3, h4, h5, h6 {*/
+  /*margin-top: 0;*/
+  /*margin-bottom: .85em;*/
+/*}*/
 
 h3, h4, h6 {
   margin-bottom: 1.15em;
@@ -107,9 +112,39 @@ a:hover {
   color: #bd6000;
 }
 
-.shadow {
+.btn {
+  border: 2px solid #ffffff;
+
+  -webkit-box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, .3);
+  box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, .3);
+}
+
+.btn.title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+@mixin shadow {
   -webkit-box-shadow:  0px 1px 7px 1px rgba(0, 0, 0, .3);
   box-shadow:  0px 1px 7px 1px rgba(0, 0, 0, .3);
+}
+
+@mixin shadow-inset {
+  -webkit-box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, .3);
+  box-shadow: inset 0px 0px 5px 2px rgba(0, 0, 0, .3);
+}
+
+.shadow {
+  @include shadow
+}
+
+.shadow-inset {
+  @include shadow-inset
+}
+
+.breadcrumb {
+  color: black;
 }
 
 /*------------------------------------------------------------------
@@ -131,10 +166,6 @@ a:hover {
     img {
       float: left;
     }
-  }
-
-  .container {
-    position: relative;
   }
 
   .nav {
@@ -172,9 +203,13 @@ a:hover {
   }
 
   .navbar-inner {
+    @include shadow;
     background: url(<%= asset_path "theme/header-bg.jpg" %>);
     border-bottom: 1px solid #710300;
   }
+
+
+
 }
 
 .navbar-fixed-top {
@@ -213,6 +248,18 @@ a:hover {
     border-width: 4px;
     border-color: #444;
     border-top: 8px solid #bf6e00;
+  }
+}
+
+.chalkboard-background {
+  .container {
+    background-color: white;
+    border-left: 1px solid #373737;
+    border-right: 1px solid #a9a9a9;
+
+    padding: 0 20px;
+
+    @include shadow;
   }
 }
 
@@ -342,7 +389,6 @@ a:hover {
 */
 
 #subpage {
-  margin-top: 3em;
   margin-bottom: 2.5em;
 }
 
@@ -358,12 +404,20 @@ a:hover {
 
   background: #444;
   border-color: $borderRed;
-  border-bottom: 1px solid #6c4b36;
+  border-bottom: 1px solid #ba7800;
+
+  -webkit-box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, .3);
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, .3);
 
   .inner {
     background: #a2a3a3 url(<%= asset_path "theme/header-bg.png" %>) repeat 0 0;
     padding: 20px 0;
   }
+
+  h1 {
+    margin-left: 3em;
+  }
+
 }
 
 #subheader h1, #subheader h2, #subheader h3, #subheader h4, #subheader h5, #subheader h6 {

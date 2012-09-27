@@ -27,9 +27,9 @@
                   <li class="nav-header" id="covered_topics">
                     Covered Topics:
                   </li>
-                  <% lesson.challenges.all(limit: 5).each do |challenge| %>
+                  <% lesson.tasks.all(limit: 5).each do |task| %>
                     <li style="margin-left: 1em;">
-                      <%= link_to raw("&bull; " + challenge.title), "#" %>
+                      <%= link_to raw("&bull; " + task.title), "#" %>
                     </li>
                   <% end %>
                   <li style="text-align: center; border-top: 1px solid #bad3c4; background-color: #ebf2ef">
@@ -82,7 +82,7 @@
           <% end %>
 
           <% link_text = (signed_in? && current_user.subscribed_to?(lesson)) ? "Continue &raquo;" : "Start &raquo;" %>
-          <%= link_to link_text.html_safe, lesson_challenge_path(lesson_id: lesson.id, id: lesson.challenges.first.id),
+          <%= link_to link_text.html_safe, lesson_task_path(lesson_id: lesson.id, id: lesson.tasks.first.id),
                       id: "lesson_#{lesson.id}_start", class: "btn btn-success pull_right" %>
 
         </div>
