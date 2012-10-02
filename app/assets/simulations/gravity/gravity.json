@@ -1,0 +1,55 @@
+{
+  "description": "Sample Topic: Orbits in space",
+  "backgroundURL": "./backgrounds/stars.jpg",
+
+  "World": {
+    "id" : "world",
+    "debug": false,
+    "gravity" : [0, 0],
+    "doSleep" : true,
+    "timeStep": 0.003,
+    "positionIterations": 2,
+    "velocityIterations": 6
+  },
+
+  "rigidBodies":[
+    {
+      "name": "Bottle",
+      "imagePath": "./images/bottle_non_square.png",
+      "origin":{
+        "x":0,
+        "y":0
+      },
+      "velocity": {"x":0, "y":0},
+      "density": 6000,
+      "massive": true,
+      "restitution":0,
+      "polygons":[]
+    }
+  ],
+  "dynamicObjects":[],
+  "circles":[
+    {
+      "name": "Earth",
+      "imagePath": "./backgrounds/earth.png",
+      "origin": {"x": 5, "y": 7},
+      "velocity": {"x":0, "y":0},
+      "density": 6000,
+      "massive": true,
+      "restitution":0,
+      "friction":1,
+      "radius": 5
+    },
+    {
+      "name": "Moon",
+      "imagePath": "./backgrounds/moon.png",
+      "origin": {"x": 9, "y": 15},
+      "velocity": {"x":1.5, "y":-1},
+      "density": 3000,
+      "massive": true,
+      "restitution":0,
+      "friction":1,
+      "radius": 1
+    }
+  ]
+}

@@ -18,6 +18,8 @@
 //= require simulations
 //= require kinetic-v4.0.1
 //
+//= require_tree ./quiz
+//
 //= require_tree ./Newton
 //
 //= require Faraday/utility

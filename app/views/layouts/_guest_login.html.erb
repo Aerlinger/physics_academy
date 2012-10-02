@@ -1,15 +1,18 @@
 <li id="fat-menu" class="dropdown">
   <% if Rails.env.development? %>
 
-    <%= link_to new_user_registration_path, id: "guest_login", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
+    <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+
+  <% else %>
+
+    <%= link_to new_user_session_path, id: "guest_login", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
       <%= guest_user.username %>
     <% end %>
 
     <ul class="dropdown-menu">
+      <li><%= link_to destroy_user_session_path %></li>
       <li><%= link_to "Logout Guest", destroy_user_session_path, method: "delete" %></li>
     </ul>
 
-  <% else %>
-    <%= link_to "Sign in or Sign up to save", new_user_registration_path, id: "guest_login" %>
   <% end %>
 </li>

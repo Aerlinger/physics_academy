@@ -19,12 +19,5 @@ Physics is the domain of science concerned with the behavior of the natural univ
 
 </p>
 
-  <%= render partial: "layouts/canvas", locals: {simulation_id: 1} %>
-
-<p>
-
-</p>
-  <%= render partial: "layouts/canvas", locals: {simulation_id: 2, width: 500, height: 300, float: "center", show_questions: true} %>
-<p>
-
-</p>
+<%= render partial: "layouts/newton", locals: {simulation_id: 1} %>
+<%= render partial: "layouts/newton", locals: {simulation_id: 2, width: 500, height: 300, float: "center", show_questions: true} %>

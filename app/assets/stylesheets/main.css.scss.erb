@@ -646,28 +646,7 @@ a:hover {
   cursor: default;
 }
 
-/*------------------------------------------------------------------
-[Simulators (Newton and Faraday)]
-*/
 
-canvas {
-  background-color: black;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-
-}
-
-.newton {
-<% if Rails.env.development? %> border: 1px solid #ff4500;
-<% end %>
-}
-
-.faraday {
-<% if Rails.env.development? %> border: 1px solid green;
-<% end %>
-}
 
 /*------------------------------------------------------------------
 [*. Bootstrap Overrides]

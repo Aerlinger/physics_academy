@@ -10,11 +10,11 @@
   <div class="box-subheader">
     <%= image_tag "thumbs/default.png" %>
     <span class="term">
-              Completed <%= @subscription.completed_tasks.size %> of <%= @lesson.tasks.size %> Tasks
-            </span>
-            <span class="term">
-              Points Earned: <%= @subscription.points %>
-            </span>
+      Completed <%= @subscription.completed_tasks.size %> of <%= @lesson.tasks.size %> Tasks
+    </span>
+    <span class="term">
+      Points Earned: <%= @subscription.points %>
+    </span>
   </div>
 
 </div>
@@ -23,7 +23,21 @@
 <div class="box-features">
   <ol id="task_nav" class="nav">
 
-    <%= task_list -%>
+    <% @lesson.tasks.all.each_with_index do |task, index| %>
+
+      <% link_url = lesson_task_path(lesson_id: @lesson.id, id: task.id) %>
+      <% task_completed = @subscription.completed_task_id?(task.id) %>
+      <% class_type = "#{'active' if @task.index == (index+1)} #{'completed' if task_completed}" %>
+
+      <%=
+          content_tag :li, class: class_type do
+            link_to link_url, id: "task_#{index+1}", id_offset: :index do
+              "#{task.title}"
+            end
+          end
+      %>
+
+    <% end %>
 
   </ol>
 </div>

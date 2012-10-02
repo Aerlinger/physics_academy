@@ -8,6 +8,19 @@ $outer_corner_radius: 5px;
 $shadow_color: 333;
 $opacity: .8;
 
+/*------------------------------------------------------------------
+[Simulators (Newton and Faraday)]
+*/
+
+canvas {
+  background-color: black;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+
+}
+
 .canvas_wrapper {
 
   float: left;
@@ -25,7 +38,7 @@ $opacity: .8;
     z-index: 0;
   }
 
-  a {
+  a.title {
     padding: 0 .8em;
 
     background-color: #444;

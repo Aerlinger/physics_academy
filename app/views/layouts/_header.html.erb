@@ -20,7 +20,7 @@
           </li>
 
           <li class=<%= is_active?(labs_path) %>>
-            <%= link_to "Labs".html_safe, labs_path, class: "dropdown-toggle"  %>
+            <%= link_to "Labs".html_safe, labs_path, class: "dropdown-toggle" %>
           </li>
 
           <li class=<%= is_active?(about_path) %>>
@@ -33,7 +33,6 @@
 
           <% elsif guest_user? %>
             <%= render partial: "layouts/guest_login" %>
-
           <% else %>
             <li><%= link_to "Sign in", new_user_session_path, class: "login_link" %></li>
             <li><%= link_to "Create Account", new_user_registration_path, class: "login_link" %></li>

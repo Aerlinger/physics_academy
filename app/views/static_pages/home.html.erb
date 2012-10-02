@@ -10,10 +10,9 @@
             <h3>Through live interactive lessons we offer the most intuitive and engaging way to learn physics.</h3>
 
             <div class="call_to_action">
-
-              <%= link_to new_user_registration_path, class: "btn btn-large btn-success", id: "call_to_action_btn"  do %>
+              <%= link_to new_user_registration_path, class: "btn btn-large btn-success", id: "call_to_action_btn" do %>
                 Get Started &nbsp; <i class="icon-chevron-right icon-white"></i>
-            <% end %>
+              <% end %>
             </div>
 
           </div>
@@ -21,8 +20,11 @@
 
         <!-- The Lesson Preview Partial -->
         <div class="span7">
-          <%= render partial: "layouts/canvas", locals:
-                  {simulation_id: 1, type: :newton, debug: false, show_questions: false, width: 500, height: 320} %>
+          <div id="preview" class="newton canvas_wrapper" data-width="500" data-height="320" data-path=<%= asset_path("gravity/gravity.json")%> >
+            <div class="questions"></div>
+          </div>
+
+
         </div>
 
       </div>

@@ -22,9 +22,9 @@ class TasksController < ApplicationController
   # PUT
   def submit
 
-    respond_to do |format|
-      format.js
-    end
+    # TODO: Submission validation here
+    render action: :success
+
   end
 
 

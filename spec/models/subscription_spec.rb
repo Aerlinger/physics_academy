@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Subscription do
 
-  before(:all) do
+  before(:each) do
     @subscription = FactoryGirl.create(:subscription)
     @user = @subscription.user
     @lesson = @subscription.lesson

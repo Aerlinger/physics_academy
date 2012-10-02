@@ -1,0 +1,15 @@
+<% if !canvas_id.blank? %>
+
+  <div id="<%= canvas_id %>_questions" class="questions row-fluid">
+
+  </div>
+
+<% else %>
+  <%=
+      error_message = "Specify the ID of the canvas element to attach these questions to."
+      raise error_message
+  %>
+  <script type="text/javascript">
+    console.log(<%= error_message %>);
+  </script>
+<% end %>

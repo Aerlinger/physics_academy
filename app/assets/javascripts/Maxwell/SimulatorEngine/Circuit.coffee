@@ -1,6 +1,6 @@
 # #######################################################################
 # Circuit:
-#     Defines a Top-level specification for a circuit
+#     Top-level-class specification for a circuit
 #
 # @author Anthony Erlinger
 # @year 2012

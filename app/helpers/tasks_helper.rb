@@ -45,7 +45,7 @@ module TasksHelper
       link_url = lesson_task_path(lesson_id: @lesson.id, id: task.id)
 
       task_completed = @subscription.completed_task_id?(task.id)
-      class_type = "#{'active' if task.index == (index+1)} #{'completed' if task_completed}"
+      class_type = "#{'active' if @task.index == (index+1)} #{'completed' if task_completed}"
 
       content_tag :li, class: class_type do
         link_to link_url, id: "task_#{index+1}", data: {task_id: task.id}, id_offset: :index do

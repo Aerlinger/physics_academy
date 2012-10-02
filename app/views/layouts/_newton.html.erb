@@ -1,0 +1,21 @@
+<!-- Default local parameters -->
+
+<% width ||= 400 %>
+<% height ||= 300 %>
+
+<% float ||= "none" %>
+<% show_questions ||= false %>
+<% debug ||= false %>
+
+<!------------------------>
+
+
+<div class="newton canvas_wrapper" data-width="<%= width %>" data-height="<%= height %>" data-path="<%= json_path %>"
+    style="float: <%= float %>;">
+
+    <div style="width: <%= width + 4 %>px; float: <%= float %>" class="questions">
+      <label>Text here</label>
+      questions will go here
+    </div>
+
+</div>

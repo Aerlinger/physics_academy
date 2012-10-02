@@ -4,7 +4,7 @@
 class Subscription < ActiveRecord::Base
 
   # Ensure completed tasks array is empty on initialization
-  after_create :create_empty_subscription
+  before_create :create_empty_subscription
 
   # lesson_id and user_id are the ids for the lesson and user this subscription references
   attr_accessible :user_id, :lesson_id, :current_task_id
@@ -14,8 +14,8 @@ class Subscription < ActiveRecord::Base
   belongs_to :lesson
 
   # Subscription must have both a user and a lesson
-  validates :user_id, presence: true
-  validates :lesson_id, presence: true
+  validates_presence_of :user_id
+  validates_presence_of :lesson_id
 
   # completed_tasks is an array of integers containing the id's of completed lessons
   serialize :completed_tasks
@@ -35,23 +35,22 @@ class Subscription < ActiveRecord::Base
     # Only add a completed_task index to the completed task array if it does not yet exist.
     if completed_tasks.include? current_task_id
       logger.info( "\t #{current_task_id} \tLesson: #{:lesson_id} \tUser: #{user.name} has already been completed" )
-      return 0
     else
       # Add the completed lesson id
       self.completed_tasks << current_task_id
 
       # Add the completed points to this subscription
       self.points = points + Task.find_by_id(current_task_id).points
-
-      # We should always keep track of which task in this subscription was completed most recently.
-      @last_completed_task_id = current_task_id
-      current_task_id = next_task_id
-      self.save!
-
-      # Log the completion
-      logger.info( "COMPLETED: Task #{current_task_id}" )
-      self.points
     end
+
+    # We should always keep track of which task in this subscription was completed most recently.
+    @last_completed_task_id = current_task_id
+    self.current_task_id = next_task_id
+    self.save!
+
+    # Log the completion
+    logger.info( "COMPLETED: Task #{current_task_id}" )
+    self.points
 
   end
 
@@ -135,11 +134,14 @@ class Subscription < ActiveRecord::Base
     completed_tasks.include? task_id
   end
 
+
   private
+
 
     def create_empty_subscription
       self.completed_tasks ||= []
       @last_completed_task_id = nil
+      self.current_task_id = lesson.tasks.first.id
     end
 
 
