@@ -30,7 +30,7 @@
       <%=
           content_tag :li, class: class_type do
             link_to link_url, id: "task_#{index+1}", id_offset: :index do
-              "#{task.title}"
+              raw("#{task.title.html_safe} #{"<i class='icon-ok'></i>" if task_completed}")
             end
           end
       %>

@@ -5,7 +5,7 @@
 </div>
 
 <div class="box-features rounded padded">
-  <p id="#task_content" class="task_description">
-    <%= "#{@task.content}" %>
+  <p id="task_description" class="task_description">
+    <%= yield :description %>
   </p>
 </div>

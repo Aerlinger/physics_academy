@@ -1,5 +1,4 @@
 $(function () {
-  console.log("Newton starting...");
 
   $('.newton').each(function (index) {
 
@@ -33,7 +32,7 @@ $(function () {
       var mouseResponder = new MouseResponder(world, canvasJQueryElm);
       var intervalId = render(world, mouseResponder, canvasJQueryElm);
 
-      loadQuestions(splicePaths(jsonPath, "questions.json"), newton_wrapper);
+      loadQuestions(util.splicePaths(jsonPath, "questions.json"), newton_wrapper);
     });
 
   });

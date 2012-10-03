@@ -2406,7 +2406,6 @@ Circuit.runCircuit = function () {
 
   // Double-check
   if (1000 >= steprate * (tm - Circuit.lastIterTime)) {
-    console.log("returned: diff: " + (tm - Circuit.lastIterTime));
     return;
   }
 

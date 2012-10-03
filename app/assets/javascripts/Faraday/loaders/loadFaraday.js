@@ -10,7 +10,7 @@ $(function () {
     var jsonPath = faraday_wrapper.data("path");
 
     faraday_wrapper.prepend(
-      "<canvas id='faraday_" + index + "' class='faraday_canvas' width=" + width + "'px' height=" + height + "'px'></canvas>"
+      "<canvas id='faraday_" + index + "' class='faraday_canvas' width=" + width + "'px' height=" + height + "'px' style='background-color: white !important;'></canvas>"
     );
 
     faraday_wrapper.css({'width':width + 4, 'height':height + 4});
@@ -19,8 +19,8 @@ $(function () {
 
     loadCircuitFromJSON(jsonPath, canvasJQueryElm, function (jsonData) {
 
-      //if (jsonData.backgroundURL)
-      // canvasJQueryElm.css("background", 'url(' + splicePaths(jsonPath, jsonData.backgroundURL) + ') repeat');
+      if (jsonData.backgroundURL)
+       canvasJQueryElm.css("background", 'url(' + splicePaths(jsonPath, jsonData.backgroundURL) + ') repeat');
 
       if (jsonData.description) {
         $('.faraday .title').remove();

@@ -106,7 +106,7 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
 
   end
 
-  File.open("circuits/" + circuit_filename.gsub("txt", "json"), 'w+') { |f| f.write clean_json(output_data.to_json) }
+  File.open(circuit_filename.gsub("txt", "json"), 'w+') { |f| f.write clean_json(output_data.to_json) }
 
 end
 

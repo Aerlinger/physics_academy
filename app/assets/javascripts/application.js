@@ -56,6 +56,10 @@
 //= require Faraday/elms/TransistorElm
 //= require Faraday/elms/MosfetElm
 //= require Faraday/elms/JFetElm
+//=
+//= require Faraday/loaders/loadCircuitFromJSON
+//= require Faraday/loaders/loadFaraday
+//=
 //= require Faraday/lib/Font
 //= require Faraday/ui/ComponentGenerator
 //= require Faraday/ui/EditDialog

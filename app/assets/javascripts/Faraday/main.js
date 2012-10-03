@@ -160,50 +160,51 @@ function Run(canvas) {
   CANVAS = canvas;
 
   // Create the context for rendering:
-  var className = document.getElementById('canvas_container');
+  //var className = document.getElementById('canvas_container');
+  var canvasDomElement = $('.faraday_canvas').get(0);
 
   // If we can't load the canvas do nothing:
-  if (!className) {
-    console.log("Couldn't load: " + className);
+  if (!canvasDomElement) {
+    console.log("Couldn't load: " + canvasDomElement);
     return;
   }
 
-  paper = className.getContext("2d");
+  paper = canvasDomElement.getContext("2d");
   paper.lineWidth = Settings.LINE_WIDTH;
   paper.lineCap = "round";
   paper.lineJoin = "round";
 
 
-  $("#canvas_container").css({
+  $('.faraday_canvas').css({
     'background-color':Color.color2HexString(Settings.BG_COLOR), 'border-width':'2px'
   });
 
-  $("#canvas_container").click(function (event) {
+  $('.faraday_canvas').click(function (event) {
     event.preventDefault();
     Circuit.onMouseClicked(event);
   });
 
-  $("#canvas_container").mouseenter(function (event) {
+  $('.faraday_canvas').mouseenter(function (event) {
     Circuit.onMouseEntered(event);
   });
 
-  $("#canvas_container").mouseleave(function (event) {
+  $('.faraday_canvas').mouseleave(function (event) {
     event.preventDefault();
     Circuit.onMouseReleased(event);
     Circuit.onMouseExited(event);
   });
 
-  $("#canvas_container").mousemove(function (event) {
+  $('.faraday_canvas').mousemove(function (event) {
     event.preventDefault();
     Circuit.onMouseMove(event);
   });
 
-  $("#canvas_container").mousedown(function (event) {
+  $('.faraday_canvas').mousedown(function (event) {
     event.preventDefault();
     Circuit.onMousePressed(event);
   });
 
-  $("#canvas_container").mouseup(function (event) {
+  $('.faraday_canvas').mouseup(function (event) {
     event.preventDefault();
     Circuit.onMouseReleased(event);
   });

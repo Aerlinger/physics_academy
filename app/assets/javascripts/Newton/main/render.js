@@ -35,7 +35,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
   function start() {
     "use strict";
     numTexturesLoaded++;
-    if(numTexturesLoaded == numTexturesToBeLoaded) {
+    if(numTexturesLoaded >= numTexturesToBeLoaded) {
       console.log("Starting render: " + CanvasElmJQuery.attr('class'));
       interval_id = window.setInterval(updateAndRender, world.timeStep);
     }
@@ -128,7 +128,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
         var yDiff = CurrentSubNode.GetPosition().y - CurrentBodyNode.GetPosition().y;
 
         var m1 = CurrentBodyNode.GetMass();
-        var m2 = BodyNode.GetMass();
+        var m2 = CurrentSubNode.GetMass();
         var gravityVec = new b2Vec2(xDiff, yDiff);
 
         var rMagSquared = gravityVec.LengthSquared();

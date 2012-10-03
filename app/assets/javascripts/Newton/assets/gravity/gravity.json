@@ -4,12 +4,14 @@
 
   "World": {
     "id" : "world",
-    "debug": false,
+    "debug": true,
     "gravity" : [0, 0],
     "doSleep" : true,
     "timeStep": 0.003,
     "positionIterations": 2,
-    "velocityIterations": 6
+    "velocityIterations": 6,
+    "bounded": true,
+    "randomBalls": true
   },
 
   "rigidBodies":[

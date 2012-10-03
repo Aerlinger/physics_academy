@@ -23,6 +23,10 @@ $radius: 5px;
 
 /*-- Box Container --*/
 .box-container {
+
+  @extend .rounded-top;
+  @extend .rounded-bottom;
+
   position: relative;
   float: left;
 
@@ -178,7 +182,7 @@ $radius: 5px;
   padding-bottom: 1em;
   padding-top: .5em;
 
-  color: #170505;
+  color: #000000;
 
   .control-group {
     margin: 0 auto;
@@ -230,21 +234,14 @@ $radius: 5px;
   }
 
   li.active {
-
-    background-color: #0d331e;
-
+    background-color: #85b48a;
     a {
       font-weight: bold;
-      color: #fdfdfd;
-    }
+      color: #070707;
 
-    a:hover {
-      background-color: #165330;
-      color: black;
-    }
-
-    ol & {
-      color: white;
+      &:hover {
+        background-color: #92c69b;
+      }
     }
 
   }
@@ -252,6 +249,7 @@ $radius: 5px;
   li.completed {
 
     background-color: #ccfad7;
+
     i {
       margin-right: .2em;
       color: #96c4a1;
@@ -259,11 +257,11 @@ $radius: 5px;
 
     a {
       color: #002702;
+      &:hover {
+        background-color: #d9fae0;
+      }
     }
 
-    a:hover {
-      color: black;
-    }
   }
 
   li:last-child {
