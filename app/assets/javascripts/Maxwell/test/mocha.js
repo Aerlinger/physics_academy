@@ -954,7 +954,7 @@ require.register("mocha.js", function(module, exports, require){
  */
 
 var path = require('browser/path')
-  , utils = require('./utils');
+  , utils = require('./util');
 
 /**
  * Expose `Mocha`.
@@ -3637,7 +3637,7 @@ require.register("runner.js", function(module, exports, require){
 var EventEmitter = require('browser/events').EventEmitter
   , debug = require('browser/debug')('mocha:runner')
   , Test = require('./test')
-  , utils = require('./utils')
+  , utils = require('./util')
   , filter = utils.filter
   , keys = utils.keys
   , noop = function(){};
@@ -4139,7 +4139,7 @@ require.register("suite.js", function(module, exports, require){
 var EventEmitter = require('browser/events').EventEmitter
   , debug = require('browser/debug')('mocha:suite')
   , milliseconds = require('./ms')
-  , utils = require('./utils')
+  , utils = require('./util')
   , Hook = require('./hook');
 
 /**

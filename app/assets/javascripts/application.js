@@ -19,6 +19,7 @@
 //= require kinetic-v4.0.1
 //
 //= require_tree ./quiz
+//= require_tree ./util
 //
 //= require_tree ./Newton
 //

@@ -8,12 +8,10 @@
 
   <!-- LOGO AND PROGRESS -->
   <div class="box-subheader">
-    <%= image_tag "thumbs/default.png" %>
     <span class="term">
-      Completed <%= @subscription.completed_tasks.size %> of <%= @lesson.tasks.size %> Tasks
-    </span>
-    <span class="term">
-      Points Earned: <%= @subscription.points %>
+      <%= @subscription.points %>
+      <br />
+      <span class="small">points earned</span>
     </span>
   </div>
 
@@ -42,7 +40,5 @@
   </ol>
 </div>
 
-<!-- SUBMISSION BUTTON -->
-<div class="box-actions">
-
-</div>
+<!--Just for decoration-->
+<div class="box-actions"> </div>

@@ -153,8 +153,10 @@ a:hover {
 
 .navbar {
 
+  position: relative;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, .3);
+  border-bottom: 1px solid #3A3A3A;
   margin-bottom: 0;
-  border-bottom: 1px solid #d28800;
 
   #logo {
 
@@ -199,21 +201,13 @@ a:hover {
   }
 
   .nav > li > a:hover {
-    color: #bbada8;
+    color: #ecf1eb;
   }
 
   .navbar-inner {
-    @include shadow;
     background: url(<%= asset_path "theme/header-bg.jpg" %>);
-    border-bottom: 1px solid #710300;
   }
 
-
-
-}
-
-.navbar-fixed-top {
-  position: static;
 }
 
 .navbar-inner {
@@ -248,18 +242,6 @@ a:hover {
     border-width: 4px;
     border-color: #444;
     border-top: 8px solid #bf6e00;
-  }
-}
-
-.chalkboard-background {
-  .container {
-    background-color: white;
-    border-left: 1px solid #373737;
-    border-right: 1px solid #a9a9a9;
-
-    padding: 0 20px;
-
-    @include shadow;
   }
 }
 
@@ -577,9 +559,17 @@ a:hover {
 /*------------------------------------------------------------------
 [Extra-5. Backgrounds]
 */
-.chalkboard-background {
-  background: url(<%= asset_path "theme/chalkboard-bg.jpg" %>);
 
+.chalkboard-background {
+  .container {
+    background-color: white;
+    border-left: 1px solid #373737;
+    border-right: 1px solid #a9a9a9;
+
+    padding: 0 20px;
+
+    @include shadow;
+  }
 }
 
 .chalkboard-background > p, .chalkboard-background > .container > p {
@@ -594,9 +584,6 @@ a:hover {
   color: #cd8f55;
 }
 
-.chalkboard-dense-background {
-  background: url(<%= asset_path "theme/chalkboard-dense.jpg" %>);
-}
 
 /*------------------------------------------------------------------
 [Miscellaneous]

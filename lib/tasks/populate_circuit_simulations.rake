@@ -1,3 +1,5 @@
+require "json"
+
 namespace :db do
   desc "Read circuits from setup list and populates database with the data"
   task populate_circuit_simulations: :environment do
@@ -47,7 +49,7 @@ def read_setup_list
       circuit_sim.topic             = topic
       circuit_sim.name_unique       = filename
 
-      read_circuit_file( circuit_sim, path, filename)
+      read_circuit_file(circuit_sim, path, filename)
 
       begin
         circuit_sim.save!
@@ -64,6 +66,7 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
   circuit_data = File.read("#{path}circuits/#{circuit_filename}")
 
   lines = circuit_data.split("\n")
+  output_data = []
 
   lines.each do |line|
 
@@ -81,19 +84,33 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
       circuit_sim.current_speed   = sim_params.shift
       circuit_sim.voltage_range   = sim_params.shift
       circuit_sim.power_range     = sim_params.shift || 0
+
+      output_data << circuit_sim
+
     # Else, this is a Circuit Element
     else
       circuit_element_params = line.split(' ')
 
-      new_circuit_element = circuit_sim.circuit_elements.build(token_character: circuit_element_params.shift)
-      new_circuit_element.x1 = circuit_element_params.shift
-      new_circuit_element.y1 = circuit_element_params.shift
-      new_circuit_element.x2 = circuit_element_params.shift
-      new_circuit_element.y2 = circuit_element_params.shift
-      new_circuit_element.flags = circuit_element_params.shift
-      new_circuit_element.params = circuit_element_params
+      new_circuit_element = {}
+      new_circuit_element[:sym] = circuit_element_params.shift
+      new_circuit_element[:x1] = circuit_element_params.shift
+      new_circuit_element[:y1] = circuit_element_params.shift
+      new_circuit_element[:x2] = circuit_element_params.shift
+      new_circuit_element[:y2] = circuit_element_params.shift
+      new_circuit_element[:flags] = circuit_element_params.shift
+      new_circuit_element[:params] = circuit_element_params
+
+      output_data << new_circuit_element
+      #circuit_sim.circuit_elements.build(new_circuit_element)
     end
 
   end
 
+  File.open("circuits/" + circuit_filename.gsub("txt", "json"), 'w+') { |f| f.write clean_json(output_data.to_json) }
+
+end
+
+def clean_json(json_string)
+  json_string.gsub!("},", "},\n")
+  json_string.gsub!(",", ",\t\t")
 end

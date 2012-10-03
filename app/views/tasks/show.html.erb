@@ -20,10 +20,8 @@
       <!-- LESSON DESCRIPTION -->
       <%= render partial: "tasks/components/description" %>
 
-      <!------------------------------------------------------------->
       <!-- LESSON CONTENT ------------------------------------------->
-      <%= render 'tasks/components/task' %>
-      <!------------------------------------------------------------->
+      <%= render 'tasks/components/task_content' %>
       <!------------------------------------------------------------->
 
     </div>
@@ -34,7 +32,7 @@
 
   <%= render partial: "tasks/components/modal" %>
 
-  <%= debug(@subscription) if Rails.env.development? %>
-
 </div>
+
+<%= debug(@subscription) if Rails.env.development? %>
 

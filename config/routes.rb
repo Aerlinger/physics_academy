@@ -38,7 +38,7 @@ PhysicsAcademy::Application.routes.draw do
 
     resources :tasks do
       get :submit, on: :member
-      put :success, on: :member
+      put :pass, on: :member
       put :reset, on: :member
       put :reset_all, on: :member
     end

@@ -195,10 +195,12 @@ function render(world, mouseResponder, CanvasElmJQuery) {
 
     Body.width = Body.height = 2*Body.GetFixtureList().GetShape().GetRadius();
 
-    var position = Body.GetPosition();
-
     if (Body.imagePath)
       drawImage(Body);
+
+    // Uncomment to draw border
+    /*
+     var position = Body.GetPosition();
 
     context.strokeStyle = "#FF1100";
     context.fillStyle = "#FF8800";
@@ -209,6 +211,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
     context.stroke();
     context.closePath();
     context.lineWidth = 1;
+    */
   }
 
 

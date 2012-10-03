@@ -5,7 +5,7 @@ namespace :db do
     # Clear all lesson entries from the database
     Lesson.delete_all
 
-    root_path = "app/views/tasks/lessons_content"
+    root_path = "app/views/lesson_templates"
 
     if Dir::exists?(root_path)
 

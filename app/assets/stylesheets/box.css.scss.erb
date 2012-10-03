@@ -3,18 +3,22 @@
 /*------------------------------------------------------------------
   CSS for windows and frames used in Physics Academy
 -------------------------------------------------------------------*/
+$radius: 5px;
 
-@mixin rounded-top {
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-topleft: 10px;
+.rounded-top {
+  -webkit-border-top-right-radius: $radius;
+  -webkit-border-top-left-radius: $radius;
+  -moz-border-radius-topright: $radius;
+  -moz-border-radius-topleft: $radius;
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
 }
 
-@mixin rounded-bottom {
-  -moz-border-radius-bottomleft: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+.rounded-bottom {
+  -moz-border-radius-bottomleft: $radius;
+  -moz-border-radius-bottomright: $radius;
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
 }
 
 /*-- Box Container --*/
@@ -22,12 +26,8 @@
   position: relative;
   float: left;
 
-  margin-top: 1em;
-  margin-bottom: 1em;
-
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 
   label {
     font-weight: bold;
@@ -51,8 +51,9 @@
 }
 
 /*-- Box Header --*/
-
 .box-header {
+  @extend .rounded-top;
+
   text-align: center;
   color: #FFF;
 
@@ -61,8 +62,6 @@
 }
 
 .box-title {
-  @include rounded-top;
-
   padding: .5em 1em;
 
   font-size: 1.3em;
@@ -77,9 +76,8 @@
   padding: 1.0em 0 .5em 0;
 
   font-size: 1em;
-  line-height: 0.8em;
 
-  background-color: #a0a1b0;
+  background: url(<%= asset_path("tasks/lesson_bg_default.jpg") %>) repeat;
 
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(0, 0, 0, 0.48);
@@ -88,10 +86,16 @@
     font-weight: bold;
 
     display: block;
-    margin: .5em auto;
+    margin: .8em auto;
 
-    font-size: 1em;
+    text-align: center;
+    font-size: 5em;
     padding: 0;
+
+    span.small {
+      text-align: center;
+      font-size: .3em;
+    }
   }
 
   span.note {
@@ -103,11 +107,16 @@
     font-size: 1em;
     line-height: 0.8em;
   }
+}
 
+.breadcrumb {
+ margin: 0;
 }
 
 .box-content {
 
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
 
   .feature-block {
     padding: 5px !important;
@@ -189,6 +198,9 @@
     padding: 0;
     margin: 0;
 
+    font-size: 1.1em;
+    font-weight: bold;
+
     list-style-type: decimal;
   }
 
@@ -200,11 +212,11 @@
     margin: 0;
 
     text-align: left;
-    border-bottom: 1px dotted #CCC;
-    color: #5e0f0f;
+    border-bottom: 1px solid #CCC;
 
     a {
       padding: .5em 1em;
+      font-weight: bold;
       display: block;
 
       i {
@@ -212,30 +224,34 @@
       }
 
       color: #ab1515;
+
     }
 
-    a:hover {
-      background-color: #fff2ed;
-    }
   }
 
   li.active {
 
+    background-color: #0d331e;
+
     a {
       font-weight: bold;
-      color: #292929;
-      border: 2px solid green;
+      color: #fdfdfd;
     }
 
     a:hover {
+      background-color: #165330;
       color: black;
+    }
+
+    ol & {
+      color: white;
     }
 
   }
 
   li.completed {
 
-    background-color: #c7dfc9;
+    background-color: #ccfad7;
     i {
       margin-right: .2em;
       color: #96c4a1;
@@ -247,7 +263,6 @@
 
     a:hover {
       color: black;
-      background-color: #dbf3dd;
     }
   }
 
@@ -269,7 +284,7 @@
 
 .box-actions {
 
-  @include rounded-bottom;
+  @extend .rounded-bottom;
 
   padding: .5em 1em;
 

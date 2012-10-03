@@ -2,17 +2,16 @@ class TasksController < ApplicationController
 
   before_filter :read_params, except: [:index]
   after_filter :save_subscription, only: [:reset, :reset_all, :submit] # Only executed on PUT requests
+  after_filter :start_from_beginning, only: [:reset, :reset_all]
 
 
   def show
-
     @subscription.set_current_task_id=(params[:id])
 
     respond_to do |format|
       format.js
       format.html
     end
-
   end
 
   def index
@@ -21,38 +20,35 @@ class TasksController < ApplicationController
 
   # PUT
   def submit
-
     # TODO: Submission validation here
-    render action: :success
-
+    redirect_to action: :pass, method: :put
   end
 
 
-  def success
-
+  def pass
     #  On success:
     #    Save subscription
     #    Mark lesson as completed and advance to next lessons
-
     @subscription.complete_task
-    redirect_to lesson_task_url(lesson_id: @lesson.id, id: @subscription.next_task_id)
+    redirect_to lesson_task_url(lesson_id: @lesson.id, id: @subscription.current_task_id)
   end
 
   # PUT
   def reset
     @subscription.reset_task
-    redirect_to lesson_task_url(lesson_id: @lesson.id, id: @subscription.current_task_id)
   end
 
   # PUT
   def reset_all
     @subscription.reset
-    redirect_to lesson_task_url(lesson_id: @lesson.id, id: @subscription.current_task_id)
   end
 
 
   private
 
+  def start_from_beginning
+    redirect_to lesson_task_url(lesson_id: @lesson.id, id: @subscription.current_task_id)
+  end
 
   # PUT
   def save_subscription

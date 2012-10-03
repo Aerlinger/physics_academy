@@ -17,20 +17,16 @@ module TasksHelper
   end
 
   # build the path directory that contains the partial for lesson task.
-  def path_for_lesson_task(lesson, task)
-
-    # 1. Define the root directory where the lesson content resides
-    lesson_root = "tasks/lessons_content"
-
-    # 2. Get the name of the lesson folder.
+  def path_for_lesson_task(lesson, task, lesson_root = "lesson_templates")
+    # 1. Get the name of the lesson folder.
     lesson_folder = clean_filename "#{lesson.index}-#{lesson.title.gsub(' ', '_')}"
 
-    # 3. Get the name of the task folder
+    # 2. Get the name of the task folder
     task_folder = clean_filename "#{task.index}-#{task.title.gsub(' ', '_')}"
 
     task_file = "task"
 
-    # 4. Return the spliced string
+    # 3. Return the spliced string
     "#{lesson_root}/#{lesson_folder}/#{task_folder}/#{task_file}"
   end
 
