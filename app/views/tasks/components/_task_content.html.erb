@@ -10,34 +10,11 @@
     %>
   </div>
 
-  <!--<%# if Rails.env.development? %>
+  <% if Rails.env.development? %>
 
-    <div class="breadcrumb">
-      <h4>Developer Mode:</h4>
+   <%= render partial: "dev_response" %>
 
-      <input type="radio" id="success" name="submission_response" value="success" checked="true"/>
-      Success:
-      <input type="text" name="success_response" value="Success!"/>
-      <br/>
-
-      <input type="radio" id="info" name="submission_response" value="info"/>
-      Info
-      <input type="text" name="info_response" value="Info!"/>
-      <br/>
-
-      <input type="radio" id="warn" name="submission_response" value="Warning!"/>
-      Warn:
-      <input type="text" name="warn_response"/>
-      <br/>
-
-      <input type="radio" id="error" name="submission_response" value="Error!"/>
-      Error:
-      <input type="text" name="error_response"/>
-      <br/>
-
-    </div>
-
-  <%# end %>-->
+  <% end %>
 
 </div>
 

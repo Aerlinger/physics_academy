@@ -155,12 +155,6 @@ function loadBox2dFromJSON(jsonPath, CanvasJQueryElm, onComplete) {
     world.widthInMeters = world.widthInPixels / world.pixelsToMeters;
     world.heightInMeters = world.heightInPixels / world.pixelsToMeters;
 
-    console.log("Pixels to meters: " + world.pixelsToMeters);
-    console.log("Width in pixels: " + world.widthInPixels);
-    console.log("Height in pixels: " + world.heightInPixels);
-    console.log("Time Step: " + world.timeStep);
-    console.log("Debug: " + world.debug);
-
     world.destroyAllBodies();
 
     if(worldParamsJSON.bounded)
@@ -250,8 +244,7 @@ function loadBox2dFromJSON(jsonPath, CanvasJQueryElm, onComplete) {
     var newCircle = world.CreateBody(circleBodyDef);
     newCircle.CreateFixture(circleFixDef);
 
-    if(circleElemJSON.massive)
-      newCircle.massive = true;
+    newCircle.massive = circleElemJSON.massive;
 
     newCircle.name = circleElemJSON.name;
     newCircle.imagePath = util.splicePaths(jsonPath, circleElemJSON.imagePath);
