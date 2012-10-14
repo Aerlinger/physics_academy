@@ -14,7 +14,7 @@ describe "Static Pages" do
 
     it { should have_selector("div#extra") }
     it { should have_selector("div#footer") }
-    it { should have_selector("canvas") }
+    it { should have_selector("canvas_wrapper") }
     it { should have_button("Subscribe") }
 
     it { should have_selector('title', text: full_title('')) }
@@ -25,9 +25,9 @@ describe "Static Pages" do
       it { should have_default_login_links }
     end
 
-    it "Call to action button should redirect to sign-in page" do
-      click_link("call_to_action_btn")
-      page.should have_selector 'h1', text: 'Sign Up'
+    describe "Call to action button should redirect to first lesson" do
+      before { click_link("call_to_action_btn") }
+      it { should have_selector('a#task_1') }
     end
 
     describe "for signed-in users" do

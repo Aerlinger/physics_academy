@@ -74,7 +74,7 @@ end
 # it's advisable to move it into a separate file so you can easily edit it
 # without restarting spork.  (For example, with RSpec, you could move
 # non-trivial code into a file spec/support/my_helper.rb, making sure that the
-# spec/support/* files are require'd from inside the each_run block.)
+# spec/support/* files are required from inside the each_run block.)
 #
 # Any code that is left outside the two blocks will be run during preforking
 # *and* during each_run -- that's probably not what you want.

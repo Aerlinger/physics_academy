@@ -2,45 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f34307d1-37c3-4c18-9988-98e614083320" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/joints/index.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/loaders/jointLoader.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/backgrounds/milky_way.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/backgrounds/stars.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/gravity.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/images/checker10px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/images/checker5px.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/images/concave_polygon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/images/multiple_shapes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/images/multiple_shapes_non_square.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gravity/questions.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/gravity/backgrounds/earth.png" afterPath="$PROJECT_DIR$/assets/joints/backgrounds/earth.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/gravity/backgrounds/moon.png" afterPath="$PROJECT_DIR$/assets/joints/backgrounds/moon.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/gravity/images/bottle.png" afterPath="$PROJECT_DIR$/assets/joints/images/bottle.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/assets/gravity/images/bottle_non_square.png" afterPath="$PROJECT_DIR$/assets/joints/images/bottle_non_square.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/test.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/test.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile.lock" afterPath="$PROJECT_DIR$/../../../../Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/.idea/Faraday.iml" afterPath="$PROJECT_DIR$/../Faraday/.idea/Faraday.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/../Faraday/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Faraday/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Faraday/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Faraday/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/orbit2/index.json" afterPath="$PROJECT_DIR$/assets/orbit2/index.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../views/newton/simulations/1.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../../../views/newton/simulations/2.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/tasks/components/_task_content.html.erb" afterPath="$PROJECT_DIR$/../../../views/tasks/components/_task_content.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loaders/loadBox2dFromJSON.js" afterPath="$PROJECT_DIR$/loaders/loadBox2dFromJSON.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loaders/loadNewton.js" afterPath="$PROJECT_DIR$/loaders/loadNewton.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/render.js" afterPath="$PROJECT_DIR$/main/render.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/util/extend.js" afterPath="$PROJECT_DIR$/util/extend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../util/util.js" afterPath="$PROJECT_DIR$/../util/util.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../helpers/application_helper.rb" afterPath="$PROJECT_DIR$/../../../helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../models/user.rb" afterPath="$PROJECT_DIR$/../../../models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/schema.rb" afterPath="$PROJECT_DIR$/../../../../db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../lib/tasks/populate_circuit_simulations.rake" afterPath="$PROJECT_DIR$/../../../../lib/tasks/populate_circuit_simulations.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../lib/tasks/populate_lessons.rake" afterPath="$PROJECT_DIR$/../../../../lib/tasks/populate_lessons.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../public/assets/newton/2.json" afterPath="$PROJECT_DIR$/../../../../public/assets/newton/2.json" />
     </list>
     <ignored path="Newton.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jointLoader.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="jointLoader.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loaders/jointLoader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="41" selection-start="793" selection-end="793" vertical-scroll-proportion="0.2997685">
+            <state line="47" column="0" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -105,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loadBox2dFromJSON.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="loadBox2dFromJSON.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loaders/loadBox2dFromJSON.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="218" column="33" selection-start="7143" selection-end="7143" vertical-scroll-proportion="0.0">
+            <state line="76" column="32" selection-start="2699" selection-end="2699" vertical-scroll-proportion="0.6597222">
               <folding />
             </state>
           </provider>
@@ -145,8 +110,8 @@
         <option value="$PROJECT_DIR$/main/render.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/joints/index.json" />
-        <option value="$PROJECT_DIR$/loaders/loadBox2dFromJSON.js" />
         <option value="$PROJECT_DIR$/loaders/jointLoader.js" />
+        <option value="$PROJECT_DIR$/loaders/loadBox2dFromJSON.js" />
       </list>
     </option>
   </component>
@@ -710,16 +675,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loaders/loadBox2dFromJSON.js">
+    <entry file="file://$PROJECT_DIR$/loaders/jointLoader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="218" column="33" selection-start="7143" selection-end="7143" vertical-scroll-proportion="0.0">
+        <state line="47" column="0" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loaders/jointLoader.js">
+    <entry file="file://$PROJECT_DIR$/loaders/loadBox2dFromJSON.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="41" selection-start="793" selection-end="793" vertical-scroll-proportion="0.2997685">
+        <state line="76" column="32" selection-start="2699" selection-end="2699" vertical-scroll-proportion="0.6597222">
           <folding />
         </state>
       </provider>

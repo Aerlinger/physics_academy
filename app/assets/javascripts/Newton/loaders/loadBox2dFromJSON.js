@@ -68,8 +68,10 @@ function loadBox2dFromJSON(jsonPath, CanvasJQueryElm, onComplete) {
      [Step 3. Read and create joints from JSON data
      */
     var jointsJSON = jsonData.joints;
-    for(var i=0; i<jointsJSON.length; ++i) {
-      readAndCreateJoint(world, jointsJSON);
+    if(jointsJSON) {
+      for(var i=0; i<jointsJSON.length; ++i) {
+        readAndCreateJoint(world, jointsJSON);
+      }
     }
 
     onComplete(world, jsonData);

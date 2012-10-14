@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
     update_attributes(params)
   end
 
-  scope :guests, find_by_name("GUEST")
+  scope :guests, where(name: "GUEST")
 
   private
 
