@@ -11,12 +11,13 @@
 <script type="text/javascript" src="./core/Box2D.js"></script>
 <script type="text/javascript" src="./util/extend.js"></script>
 
-<script type="text/javascript" src="loaders/loadBox2dFromJSON.js"></script>
+<script type="text/javascript" src="./loaders/jointLoader.js"></script>
+<script type="text/javascript" src="./loaders/loadBox2dFromJSON.js"></script>
+<script type="text/javascript" src="./loaders/loadNewton.js"></script>
 <script type="text/javascript" src="./util/util.js"></script>
 <script type="text/javascript" src="../util/util.js"></script>
 <script type="text/javascript" src="./main/mouseResponder.js"></script>
 <script type="text/javascript" src="./main/render.js"></script>
-<script type="text/javascript" src="./loaders/loadNewton.js"></script>
 
 <!-- Styles -->
 <link rel="stylesheet" type="text/css" href="./styles/styles.css" media="all">
@@ -24,9 +25,10 @@
 <head>
     <title>Newton</title>
 </head>
+
 <body>
 
-<div id="preview" class="newton" data-width="800" data-height="600" data-path="./assets/orbit/index.json"></div>
+<div id="preview" class="newton" data-width="800" data-height="600" data-path="./assets/joints/index.json"></div>
 <div id="preview_questions" data-target="preview" class="questions"></div>
 
 </body>
