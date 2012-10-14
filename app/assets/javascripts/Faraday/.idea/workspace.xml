@@ -2,377 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8c80be-45df-4817-afae-1b9cd20a3114" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/backgrounds/earth.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/backgrounds/milky_way.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/backgrounds/moon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/backgrounds/stars.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/bottle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/bottle_non_square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/checker10px.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/checker5px.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/concave_polygon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/multiple_shapes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/images/multiple_shapes_non_square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/backgrounds/earth.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/backgrounds/milky_way.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/backgrounds/moon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/backgrounds/stars.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/bottle.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/bottle_non_square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/checker10px.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/checker5px.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/concave_polygon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/multiple_shapes.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/images/multiple_shapes_non_square.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/orbit.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/pressure.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/pressure/questions.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/projectiles.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../simulations/newton/projectiles/questions.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/2-Fun_With_Gravity/_task.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/3-The_Tower_of_Babel/_task.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/4-The_Odd_Ball/_task.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/5-Pressure_and_Temperature/_task.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/6-Electrical_Resistance/_task.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/7-Phase_in_a_circuit/_task.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/9-Escape_from_a_Black_Hole/_task.html.erb" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\javascripts\Newton\loaders\box2dJSONReader.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\gravity.json" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\1-The_Philosophy_of_Science\_task.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\2-A_brief_timeline\_task.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\3-Matter_and_energy\_task.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\4-Matter_in_its_different_forms\_task.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\5-Energy_in_its_different_forms\_task.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\6-In_Review\_task.html.erb" afterPath="" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\backgrounds\earth.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/backgrounds/earth.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\backgrounds\milky_way.jpg" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/backgrounds/milky_way.jpg" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\backgrounds\moon.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/backgrounds/moon.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\backgrounds\stars.jpg" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/backgrounds/stars.jpg" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\bottle.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/bottle.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\bottle_non_square.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/bottle_non_square.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\checker10px.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/checker10px.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\checker5px.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/checker5px.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\concave_polygon.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/concave_polygon.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\multiple_shapes.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/multiple_shapes.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\images\multiple_shapes_non_square.png" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/images/multiple_shapes_non_square.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\assets\simulations\newton\gravity\questions.json" afterPath="$PROJECT_DIR$/../../simulations/newton/orbit/questions.json" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\bg.png" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/bg.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\lesson-params.yml" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/lesson-params.yml" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-A_tour\thumbnail.png" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/1-A_Tour_of_Physics_Academy/thumbnail.png" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\1-The_Philosophy_of_Science\_task.html.erb" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/1-The_Philosophy_of_Science/_task.html.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\2-A_brief_timeline\_task.erb" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/2-A_brief_timeline/_task.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\3-Matter_and_energy\_task.erb" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/3-Matter_and_energy/_task.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\4-Matter_in_its_different_forms\_task.erb" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/4-Matter_in_its_different_forms/_task.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\5-Energy_in_its_different_forms\_task.erb" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/5-Energy_in_its_different_forms/_task.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\6-In_Review\_task.erb" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/6-In_Review/_task.erb" />
-      <change type="MOVED" beforePath="C:\rails_projects\physics_academy\app\views\lesson_templates\1-Introduction_to_Physics\lesson-params.yml" afterPath="$PROJECT_DIR$/../../../views/lesson_templates/2-Introduction_to_Physics/lesson-params.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../images/newton/checker10px.png" afterPath="$PROJECT_DIR$/../../images/newton/checker10px.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../db/development.sqlite3" afterPath="$PROJECT_DIR$/../../../../db/development.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../Gemfile.lock" afterPath="$PROJECT_DIR$/../../../../Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Faraday.iml" afterPath="$PROJECT_DIR$/.idea/Faraday.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CirSim.js" afterPath="$PROJECT_DIR$/CirSim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/CircuitElement.js" afterPath="$PROJECT_DIR$/elms/CircuitElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loaders/loadFaraday.js" afterPath="$PROJECT_DIR$/loaders/loadFaraday.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/../Newton/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Newton/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Newton/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/assets/gravity/gravity.json" afterPath="$PROJECT_DIR$/../Newton/assets/gravity/gravity.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/index.html" afterPath="$PROJECT_DIR$/../Newton/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/loaders/loadNewton.js" afterPath="$PROJECT_DIR$/../Newton/loaders/loadNewton.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/main/render.js" afterPath="$PROJECT_DIR$/../Newton/main/render.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/util/extend.js" afterPath="$PROJECT_DIR$/../Newton/util/extend.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../application.js" afterPath="$PROJECT_DIR$/../application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-cgand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-cgand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-cgor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-cgor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-f211.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-f211.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-f220.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-f220.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-f221.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-f221.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-invert.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3-invert.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3way.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/3way.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/4way.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/4way.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555int.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555int.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555lowduty.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555lowduty.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555missing.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555missing.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555monostable.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555monostable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555pulsemod.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555pulsemod.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555saw.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555saw.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555schmitt.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555schmitt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555sequencer.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555sequencer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555square.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/555square.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/7segdecoder.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/7segdecoder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/allpass1.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/allpass1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/allpass2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/allpass2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amdetect.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amdetect.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-dfdx.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-dfdx.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-diff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-diff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-follower.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-follower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-fullrect.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-fullrect.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-integ.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-integ.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-invert.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-invert.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-noninvert.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-noninvert.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-rect.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-rect.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-schmitt.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-schmitt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-sum.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/amp-sum.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/bandpass.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/bandpass.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/besselbutter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/besselbutter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/blank.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/blank.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/butter10lo.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/butter10lo.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cap.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cap.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capac.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capac.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capmult.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capmult.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capmultcaps.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capmultcaps.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capmultfreq.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capmultfreq.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cappar.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cappar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capseries.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/capseries.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2imp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2imp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2impn.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2impn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2n.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cc2n.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccdiff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccdiff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cciamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cciamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccinductor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccinductor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccint.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccint.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccitov.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccitov.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccvccs.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ccvccs.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ceamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ceamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/classd.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/classd.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/clockedsrff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/clockedsrff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosinverter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosinverter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosinvertercap.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosinvertercap.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosinverterslow.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosinverterslow.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosmsff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosmsff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosnand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosnand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosnor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosnor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmostransgate.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmostransgate.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosxor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cmosxor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/colpitts.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/colpitts.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/counter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/counter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/counter8.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/counter8.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/coupled1.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/coupled1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/coupled2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/coupled2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/coupled3.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/coupled3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/crossover.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/crossover.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cube.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/cube.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/currentsrc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/currentsrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/currentsrcelm.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/currentsrcelm.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/currentsrcramp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/currentsrcramp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dac.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dac.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/darlington.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/darlington.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dcrestoration.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dcrestoration.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/deccounter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/deccounter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/decoder.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/decoder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/default.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/default.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/delayrc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/delayrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/deltasigma.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/deltasigma.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/digcompare.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/digcompare.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/digsine.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/digsine.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodeclip.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodeclip.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodecurve.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodecurve.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodelimit.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodelimit.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodevar.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/diodevar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/divideby2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/divideby2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/divideby3.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/divideby3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dram.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dram.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dtlinverter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dtlinverter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dtlnand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dtlnand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dtlnor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/dtlnor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/eclnor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/eclnor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/eclosc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/eclosc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/edgedff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/edgedff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-hipass-l.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-hipass-l.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-hipass.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-hipass.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-lopass-l.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-lopass-l.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-lopass.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-lopass.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-vcvs-hipass.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-vcvs-hipass.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-vcvs-lopass.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/filt-vcvs-lopass.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/flashadc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/flashadc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/follower.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/follower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/freqdouble.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/freqdouble.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/fulladd.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/fulladd.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/fullrect.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/fullrect.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/fullrectf.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/fullrectf.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/graycode.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/graycode.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/grid.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/grid.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/grid2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/grid2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/gyrator.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/gyrator.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/halfadd.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/halfadd.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/hartley.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/hartley.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/hfadc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/hfadc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/howland.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/howland.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/impedance.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/impedance.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indmultfreq.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indmultfreq.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indmultind.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indmultind.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indpar.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indpar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indseries.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/indseries.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/induct.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/induct.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductac.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductac.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductkick-block.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductkick-block.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductkick-snub.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductkick-snub.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductkick.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inductkick.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inv-osc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/inv-osc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/invertamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/invertamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/itov.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/itov.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetcurrentsrc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetcurrentsrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetfollower-nooff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetfollower-nooff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetfollower.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jfetfollower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jkff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/jkff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/johnsonctr.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/johnsonctr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ladder.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ladder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/leadingedge.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/leadingedge.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ledflasher.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ledflasher.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/lissa.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/lissa.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/logconvert.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/logconvert.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/longdist.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/longdist.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/lrc-critical.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/lrc-critical.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/lrc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/lrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/majority.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/majority.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/masterslaveff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/masterslaveff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mirror.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mirror.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/moscurrentramp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/moscurrentramp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/moscurrentsrc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/moscurrentsrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosfetamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosfetamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosfollower.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosfollower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosmirror.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosmirror.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosswitch.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mosswitch.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-crossbar.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-crossbar.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-sine.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-sine.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-sine2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-sine2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-sine3.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-sine3.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-square.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-square.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-triangle.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr-triangle.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/multivib-a.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/multivib-a.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/multivib-bi.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/multivib-bi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/multivib-mono.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/multivib-mono.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mux.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mux.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mux3state.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/mux3state.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nandff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nandff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nic-r.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nic-r.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosfet.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosfet.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosinverter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosinverter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosinverter2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosinverter2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosnand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/nmosnand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/norton.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/norton.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/notch.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/notch.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/npn.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/npn.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ohms.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ohms.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opamp-regulator.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opamp-regulator.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opampfeedback.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opampfeedback.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint-current.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint-current.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint-invert-amp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint-invert-amp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint-slew.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint-slew.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/opint.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/peak-detect.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/peak-detect.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phasecomp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phasecomp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phasecompint.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phasecompint.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phaseseq.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phaseseq.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phaseshiftosc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phaseshiftosc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phasesplit.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/phasesplit.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pll.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pll.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pll2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pll2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pll2a.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pll2a.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pmosfet.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pmosfet.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pnp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pnp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pot.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pot.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/potdivide.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/potdivide.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/powerfactor1.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/powerfactor1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/powerfactor2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/powerfactor2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pushpull.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pushpull.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pushpullxover.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/pushpullxover.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/r2rladder.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/r2rladder.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rectify.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rectify.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relaxosc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relaxosc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relay.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relay.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayctr.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayctr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relaymux.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relaymux.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relaytff.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relaytff.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayxor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/relayxor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/res-par.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/res-par.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/res-series.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/res-series.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/resistors.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/resistors.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ringing.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ringing.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ringmod.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ringmod.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rossler.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rossler.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rtlinverter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rtlinverter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rtlnand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rtlnand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rtlnor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/rtlnor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/samplenhold.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/samplenhold.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/sawtooth.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/sawtooth.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/schmitt.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/schmitt.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/scr.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/scr.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/scractrig.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/scractrig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/sine.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/sine.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/sinediode.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/sinediode.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/spark-marx.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/spark-marx.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/spark-sawtooth.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/spark-sawtooth.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/spikegen.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/spikegen.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/switchedcap.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/switchedcap.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/switchfilter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/switchfilter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/swtreedac.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/swtreedac.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/synccounter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/synccounter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tdiode.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tdiode.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tdosc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tdosc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tdrelax.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tdrelax.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tesla.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tesla.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/thevenin.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/thevenin.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tl.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tl.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlfreq.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlfreq.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tllight.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tllight.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tllopass.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tllopass.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmatch1.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmatch1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmatch2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmatch2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmis1.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmis1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmismatch.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlmismatch.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlstand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlstand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlterm.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/tlterm.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/traffic.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/traffic.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/trans-diffamp-common.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/trans-diffamp-common.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/trans-diffamp-cursrc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/trans-diffamp-cursrc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/trans-diffamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/trans-diffamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformer.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformerdc.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformerdc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformerdown.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformerdown.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformerup.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transformerup.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transswitch.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/transswitch.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/triangle.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/triangle.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/triode.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/triode.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/triodeamp.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/triodeamp.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ttlinverter.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ttlinverter.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ttlnand.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ttlnand.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ttlnor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/ttlnor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/twint.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/twint.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/vco.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/vco.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltdivide.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltdivide.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltdouble.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltdouble.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltdouble2.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltdouble2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltinvert.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltinvert.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltquad.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/voltquad.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/volttriple.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/volttriple.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/volume.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/volume.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/wheatstone.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/wheatstone.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/xor.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/xor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/xorphasedet.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/xorphasedet.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/zeneriv.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/zeneriv.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/zenerref.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/zenerref.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/zenerreffollow.json" afterPath="$PROJECT_DIR$/../../simulations/faraday/sample_circuits/zenerreffollow.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/box.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/box.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/canvas.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/canvas.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../stylesheets/challenge.css.scss.erb" afterPath="$PROJECT_DIR$/../../stylesheets/challenge.css.scss.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/../../../views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/tasks/components/_breadcrumb.html.erb" afterPath="$PROJECT_DIR$/../../../views/tasks/components/_breadcrumb.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/tasks/components/_description.html.erb" afterPath="$PROJECT_DIR$/../../../views/tasks/components/_description.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/tasks/components/_help.html.erb" afterPath="$PROJECT_DIR$/../../../views/tasks/components/_help.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/tasks/components/_nav_sidebar.html.erb" afterPath="$PROJECT_DIR$/../../../views/tasks/components/_nav_sidebar.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/tasks/show.html.erb" afterPath="$PROJECT_DIR$/../../../views/tasks/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../lib/tasks/populate_circuit_simulations.rake" afterPath="$PROJECT_DIR$/../../../../lib/tasks/populate_circuit_simulations.rake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../log/development.log" afterPath="$PROJECT_DIR$/../../../../log/development.log" />
     </list>
     <ignored path="Faraday.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -407,7 +45,7 @@
       <file leaf-file-name="CircuitElement.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="64" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.40270728">
+            <state line="46" column="40" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.8772348">
               <folding />
             </state>
           </provider>
@@ -416,7 +54,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="61" selection-start="3544" selection-end="3544" vertical-scroll-proportion="-7.4615383">
+            <state line="73" column="61" selection-start="3544" selection-end="3544" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -470,7 +108,7 @@
       <file leaf-file-name="CirSim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CirSim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="557" column="3" selection-start="16298" selection-end="16298" vertical-scroll-proportion="-6.68">
+            <state line="557" column="3" selection-start="16298" selection-end="16298" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -520,10 +158,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="y" value="22" />
+    <option name="width" value="1920" />
+    <option name="height" value="1012" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -539,7 +176,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ColorIdeProjectViewPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -557,6 +194,30 @@
             <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Faraday">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Faraday" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -596,16 +257,17 @@
     <property name="options.lastSelected" value="Settings.JavaScript.Linters.JSLint" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Newton" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="305" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="984" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="951" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="984" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="306" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="300" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -707,29 +369,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="7" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1920" height="1012" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18432671" sideWeight="0.4960464" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02202643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3215859" sideWeight="0.49182922" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.23237886" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.438326" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.3647587" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20347917" sideWeight="0.62738496" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23788546" sideWeight="0.6035846" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819188" sideWeight="0.4900881" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.39272535" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Pomodoro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.4960464" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3215859" sideWeight="0.49182922" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.88105726" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.49815497" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -787,6 +451,41 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/loaders/loadCircuitFromJSON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="37" selection-start="3178" selection-end="3178" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setuplist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="40" selection-start="822" selection-end="822" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ccinductor.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="27" selection-start="6048" selection-end="6048" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CirSim.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="557" column="3" selection-start="16298" selection-end="16298" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="213" column="32" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.0">
@@ -858,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="61" selection-start="3544" selection-end="3544" vertical-scroll-proportion="-7.4615383">
+        <state line="73" column="61" selection-start="3544" selection-end="3544" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -879,14 +578,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CirSim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="557" column="3" selection-start="16298" selection-end="16298" vertical-scroll-proportion="-6.68">
+        <state line="557" column="3" selection-start="16298" selection-end="16298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="64" selection-start="2191" selection-end="2191" vertical-scroll-proportion="0.40270728">
+        <state line="46" column="40" selection-start="1508" selection-end="1508" vertical-scroll-proportion="0.8772348">
           <folding />
         </state>
       </provider>

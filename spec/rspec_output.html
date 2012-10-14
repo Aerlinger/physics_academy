@@ -1,0 +1,1221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>RSpec results</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Expires" content="-1" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <style type="text/css">
+  body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    font-size: 80%;
+  }
+  </style>
+  <script type="text/javascript">
+    // <![CDATA[
+
+function addClass(element_id, classname) {
+  document.getElementById(element_id).className += (" " + classname);
+}
+
+function removeClass(element_id, classname) {
+  var elem = document.getElementById(element_id);
+  var classlist = elem.className.replace(classname,'');
+  elem.className = classlist;
+}
+
+function moveProgressBar(percentDone) {
+  document.getElementById("rspec-header").style.width = percentDone +"%";
+}
+
+function makeRed(element_id) {
+  removeClass(element_id, 'passed');
+  removeClass(element_id, 'not_implemented');
+  addClass(element_id,'failed');
+}
+
+function makeYellow(element_id) {
+  var elem = document.getElementById(element_id);
+  if (elem.className.indexOf("failed") == -1) {  // class doesn't includes failed
+    if (elem.className.indexOf("not_implemented") == -1) { // class doesn't include not_implemented
+      removeClass(element_id, 'passed');
+      addClass(element_id,'not_implemented');
+    }
+  }
+}
+
+function apply_filters() {
+  var passed_filter = document.getElementById('passed_checkbox').checked;
+  var failed_filter = document.getElementById('failed_checkbox').checked;
+  var pending_filter = document.getElementById('pending_checkbox').checked;
+
+  assign_display_style("example passed", passed_filter);
+  assign_display_style("example failed", failed_filter);
+  assign_display_style("example not_implemented", pending_filter);
+
+  assign_display_style_for_group("example_group passed", passed_filter);
+  assign_display_style_for_group("example_group not_implemented", pending_filter, pending_filter || passed_filter);
+  assign_display_style_for_group("example_group failed", failed_filter, failed_filter || pending_filter || passed_filter);
+}
+
+function get_display_style(display_flag) {
+  var style_mode = 'none';
+  if (display_flag == true) {
+    style_mode = 'block';
+  }
+  return style_mode;
+}
+
+function assign_display_style(classname, display_flag) {
+  var style_mode = get_display_style(display_flag);
+  var elems = document.getElementsByClassName(classname)
+  for (var i=0; i<elems.length;i++) {
+    elems[i].style.display = style_mode;
+  }
+}
+
+function assign_display_style_for_group(classname, display_flag, subgroup_flag) {
+  var display_style_mode = get_display_style(display_flag);
+  var subgroup_style_mode = get_display_style(subgroup_flag);
+  var elems = document.getElementsByClassName(classname)
+  for (var i=0; i<elems.length;i++) {
+    var style_mode = display_style_mode;
+    if ((display_flag != subgroup_flag) && (elems[i].getElementsByTagName('dt')[0].innerHTML.indexOf(", ") != -1)) {
+      elems[i].style.display = subgroup_style_mode;
+    } else {
+      elems[i].style.display = display_style_mode;
+    }
+  }
+}
+
+    // ]]>
+  </script>
+  <style type="text/css">
+#rspec-header {
+  background: #65C400; color: #fff; height: 4em;
+}
+
+.rspec-report h1 {
+  margin: 0px 10px 0px 10px;
+  padding: 10px;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+  font-size: 1.8em;
+  position: absolute;
+}
+
+#label {
+  float:left;
+}
+
+#display-filters {
+  float:left;
+  padding: 28px 0 0 40%;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+}
+
+#summary {
+  float:right;
+  padding: 5px 10px;
+  font-family: "Lucida Grande", Helvetica, sans-serif;
+  text-align: right;
+}
+
+#summary p {
+  margin: 0 0 0 2px;
+}
+
+#summary #totals {
+  font-size: 1.2em;
+}
+
+.example_group {
+  margin: 0 10px 5px;
+  background: #fff;
+}
+
+dl {
+  margin: 0; padding: 0 0 5px;
+  font: normal 11px "Lucida Grande", Helvetica, sans-serif;
+}
+
+dt {
+  padding: 3px;
+  background: #65C400;
+  color: #fff;
+  font-weight: bold;
+}
+
+dd {
+  margin: 5px 0 5px 5px;
+  padding: 3px 3px 3px 18px;
+}
+
+dd .duration {
+  padding-left: 5px;
+  text-align: right;
+  right: 0px;
+  float:right;
+}
+
+dd.example.passed {
+  border-left: 5px solid #65C400;
+  border-bottom: 1px solid #65C400;
+  background: #DBFFB4; color: #3D7700;
+}
+
+dd.example.not_implemented {
+  border-left: 5px solid #FAF834;
+  border-bottom: 1px solid #FAF834;
+  background: #FCFB98; color: #131313;
+}
+
+dd.example.pending_fixed {
+  border-left: 5px solid #0000C2;
+  border-bottom: 1px solid #0000C2;
+  color: #0000C2; background: #D3FBFF;
+}
+
+dd.example.failed {
+  border-left: 5px solid #C20000;
+  border-bottom: 1px solid #C20000;
+  color: #C20000; background: #FFFBD3;
+}
+
+
+dt.not_implemented {
+  color: #000000; background: #FAF834;
+}
+
+dt.pending_fixed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+dt.failed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+
+#rspec-header.not_implemented {
+  color: #000000; background: #FAF834;
+}
+
+#rspec-header.pending_fixed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+#rspec-header.failed {
+  color: #FFFFFF; background: #C40D0D;
+}
+
+
+.backtrace {
+  color: #000;
+  font-size: 12px;
+}
+
+a {
+  color: #BE5C00;
+}
+
+/* Ruby code, style similar to vibrant ink */
+.ruby {
+  font-size: 12px;
+  font-family: monospace;
+  color: white;
+  background-color: black;
+  padding: 0.1em 0 0.2em 0;
+}
+
+.ruby .keyword { color: #FF6600; }
+.ruby .constant { color: #339999; }
+.ruby .attribute { color: white; }
+.ruby .global { color: white; }
+.ruby .module { color: white; }
+.ruby .class { color: white; }
+.ruby .string { color: #66FF00; }
+.ruby .ident { color: white; }
+.ruby .method { color: #FFCC00; }
+.ruby .number { color: white; }
+.ruby .char { color: white; }
+.ruby .comment { color: #9933CC; }
+.ruby .symbol { color: white; }
+.ruby .regex { color: #44B4CC; }
+.ruby .punct { color: white; }
+.ruby .escape { color: white; }
+.ruby .interp { color: white; }
+.ruby .expr { color: white; }
+
+.ruby .offending { background-color: gray; }
+.ruby .linenum {
+  width: 75px;
+  padding: 0.1em 1em 0.2em 0;
+  color: #000000;
+  background-color: #FFFBD3;
+}
+
+  </style>
+</head>
+<body>
+<div class="rspec-report">
+
+<div id="rspec-header">
+  <div id="label">
+    <h1>RSpec Code Examples</h1>
+  </div>
+
+  <div id="display-filters">
+    <input id="passed_checkbox" name="passed_checkbox" type="checkbox" checked onchange="apply_filters()" value="1"> <label for="passed_checkbox">Passed</label>
+    <input id="failed_checkbox" name="failed_checkbox" type="checkbox" checked onchange="apply_filters()" value="2"> <label for="failed_checkbox">Failed</label>
+    <input id="pending_checkbox" name="pending_checkbox" type="checkbox" checked onchange="apply_filters()" value="3"> <label for="pending_checkbox">Pending</label>
+  </div>
+
+  <div id="summary">
+    <p id="totals">&nbsp;</p>
+    <p id="duration">&nbsp;</p>
+  </div>
+</div>
+
+
+<div class="results">
+<div id="div_group_1" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_1" class="passed">Subscription</dt>
+    <script type="text/javascript">moveProgressBar('0.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #last_completed_task_id</span><span class='duration'>0.80446s</span></dd>
+    <script type="text/javascript">moveProgressBar('1.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #set_current_task_id=</span><span class='duration'>0.16655s</span></dd>
+    <script type="text/javascript">moveProgressBar('2.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #completed_task_ids</span><span class='duration'>0.30071s</span></dd>
+    <script type="text/javascript">moveProgressBar('2.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #user</span><span class='duration'>0.20062s</span></dd>
+    <script type="text/javascript">moveProgressBar('3.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #lesson</span><span class='duration'>0.25626s</span></dd>
+    <script type="text/javascript">moveProgressBar('4.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #user_id</span><span class='duration'>0.21430s</span></dd>
+    <script type="text/javascript">moveProgressBar('4.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #lesson_id</span><span class='duration'>0.24570s</span></dd>
+    <script type="text/javascript">moveProgressBar('5.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #points</span><span class='duration'>0.26272s</span></dd>
+    <script type="text/javascript">moveProgressBar('6.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #reset</span><span class='duration'>0.19006s</span></dd>
+    <script type="text/javascript">moveProgressBar('7.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #reset_task</span><span class='duration'>0.38242s</span></dd>
+    <script type="text/javascript">moveProgressBar('7.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #next_task_id</span><span class='duration'>0.16166s</span></dd>
+    <script type="text/javascript">moveProgressBar('8.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should eq [#&lt;Task id: 67, title: &quot;Title: Lesson task 111&quot;, content: &quot;Content for lesson task 111&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 68, title: &quot;Title: Lesson task 112&quot;, content: &quot;Content for lesson task 112&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 69, title: &quot;Title: Lesson task 113&quot;, content: &quot;Content for lesson task 113&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 70, title: &quot;Title: Lesson task 114&quot;, content: &quot;Content for lesson task 114&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 71, title: &quot;Title: Lesson task 115&quot;, content: &quot;Content for lesson task 115&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 72, title: &quot;Title: Lesson task 116&quot;, content: &quot;Content for lesson task 116&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 73, title: &quot;Title: Lesson task 117&quot;, content: &quot;Content for lesson task 117&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 74, title: &quot;Title: Lesson task 118&quot;, content: &quot;Content for lesson task 118&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 75, title: &quot;Title: Lesson task 119&quot;, content: &quot;Content for lesson task 119&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;, #&lt;Task id: 76, title: &quot;Title: Lesson task 120&quot;, content: &quot;Content for lesson task 120&quot;, hint: nil, created_at: &quot;2012-10-09 15:53:20&quot;, updated_at: &quot;2012-10-09 15:53:20&quot;, lesson_id: 10, points: 100&gt;]</span><span class='duration'>0.13578s</span></dd>
+    <script type="text/javascript">moveProgressBar('9.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be empty</span><span class='duration'>0.13092s</span></dd>
+  </dl>
+</div>
+<div id="div_group_2" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_2" class="passed">user</dt>
+    <script type="text/javascript">moveProgressBar('9.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal #&lt;User id: 3, name: &quot;Person 14&quot;, email: &quot;person_14@example.com&quot;, num_completed_lessons: 0, num_points: 0, num_achievements: 0, created_at: &quot;2012-10-09 15:53:21&quot;, updated_at: &quot;2012-10-09 15:53:21&quot;, password_digest: nil, remember_token: &quot;lzARhczGzKFBTGoB5b04_Q&quot;, admin: false, location: nil, about_me: nil, website_url: nil, twitter: nil, linkedin_url: nil, avatar: nil, username: nil, encrypted_password: &quot;$2a$04$ulTuwCfw9YYUYESTimi9SO2AIdYM1qKcjOv9/aci0VX....&quot;, reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, lazy_id: -1, current_task_id: nil&gt;</span><span class='duration'>0.12285s</span></dd>
+  </dl>
+</div>
+<div id="div_group_3" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_3" class="passed">lesson</dt>
+    <script type="text/javascript">moveProgressBar('10.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal #&lt;Lesson id: 10, title: &quot;Title: Lesson 15&quot;, description: &quot;Description for Lesson 15&quot;, created_at: &quot;2012-10-09 15:53:21&quot;, updated_at: &quot;2012-10-09 15:53:21&quot;, introduction: nil, image_url: nil, difficulty: &quot;0&quot;, completed: nil, subject: nil&gt;</span><span class='duration'>0.23080s</span></dd>
+  </dl>
+</div>
+<div id="div_group_4" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_4" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('11.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be empty</span><span class='duration'>0.12237s</span></dd>
+  </dl>
+</div>
+<div id="div_group_5" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_5" class="passed">current_task_id</dt>
+    <script type="text/javascript">moveProgressBar('11.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 67</span><span class='duration'>0.11332s</span></dd>
+  </dl>
+</div>
+<div id="div_group_6" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_6" class="passed">next_task_id</dt>
+    <script type="text/javascript">moveProgressBar('12.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 68</span><span class='duration'>0.12020s</span></dd>
+  </dl>
+</div>
+<div id="div_group_7" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_7" class="passed">last_completed_task_id</dt>
+    <script type="text/javascript">moveProgressBar('13.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be nil</span><span class='duration'>0.10815s</span></dd>
+  </dl>
+</div>
+<div id="div_group_8" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_8" class="passed">User completes a task</dt>
+  </dl>
+</div>
+<div id="div_group_9" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_9" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('14.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 1 item</span><span class='duration'>0.19134s</span></dd>
+  </dl>
+</div>
+<div id="div_group_10" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_10" class="passed">subscription gets reset</dt>
+    <script type="text/javascript">moveProgressBar('14.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be empty</span><span class='duration'>0.26935s</span></dd>
+  </dl>
+</div>
+<div id="div_group_11" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_11" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('15.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be empty</span><span class='duration'>0.22124s</span></dd>
+  </dl>
+</div>
+<div id="div_group_12" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_12" class="passed">subscription gets reset</dt>
+    <script type="text/javascript">moveProgressBar('16.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be empty</span><span class='duration'>0.11723s</span></dd>
+  </dl>
+</div>
+<div id="div_group_13" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_13" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('16.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be empty</span><span class='duration'>0.12693s</span></dd>
+  </dl>
+</div>
+<div id="div_group_14" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_14" class="passed">points</dt>
+    <script type="text/javascript">moveProgressBar('17.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 0</span><span class='duration'>0.11049s</span></dd>
+  </dl>
+</div>
+<div id="div_group_15" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_15" class="passed">completes four tasks including the last task</dt>
+  </dl>
+</div>
+<div id="div_group_16" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_16" class="passed">non_completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('18.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 6 items</span><span class='duration'>0.35625s</span></dd>
+  </dl>
+</div>
+<div id="div_group_17" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_17" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('19.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 4 items</span><span class='duration'>0.36570s</span></dd>
+  </dl>
+</div>
+<div id="div_group_18" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_18" class="passed">points</dt>
+    <script type="text/javascript">moveProgressBar('19.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 400</span><span class='duration'>0.26487s</span></dd>
+  </dl>
+</div>
+<div id="div_group_19" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_19" class="passed">current_task_id</dt>
+    <script type="text/javascript">moveProgressBar('20.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 68</span><span class='duration'>0.35021s</span></dd>
+  </dl>
+</div>
+<div id="div_group_20" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_20" class="passed">next_task_id</dt>
+    <script type="text/javascript">moveProgressBar('21.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 69</span><span class='duration'>0.49534s</span></dd>
+  </dl>
+</div>
+<div id="div_group_21" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_21" class="passed">for last completed task</dt>
+    <script type="text/javascript">moveProgressBar('21.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal true</span><span class='duration'>0.29730s</span></dd>
+    <script type="text/javascript">moveProgressBar('22.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should change #result</span><span class='duration'>0.39020s</span></dd>
+    <script type="text/javascript">moveProgressBar('23.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should change #result</span><span class='duration'>0.40052s</span></dd>
+  </dl>
+</div>
+<div id="div_group_22" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_22" class="passed">completes five tasks not including the last task</dt>
+  </dl>
+</div>
+<div id="div_group_23" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_23" class="passed">non_completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('23.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 5 items</span><span class='duration'>0.43623s</span></dd>
+  </dl>
+</div>
+<div id="div_group_24" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_24" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('24.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 5 items</span><span class='duration'>0.33533s</span></dd>
+  </dl>
+</div>
+<div id="div_group_25" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_25" class="passed">points</dt>
+    <script type="text/javascript">moveProgressBar('25.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 500</span><span class='duration'>0.37847s</span></dd>
+  </dl>
+</div>
+<div id="div_group_26" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_26" class="passed">current_task_id</dt>
+    <script type="text/javascript">moveProgressBar('26.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 71</span><span class='duration'>0.44734s</span></dd>
+  </dl>
+</div>
+<div id="div_group_27" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_27" class="passed">next_task_id</dt>
+    <script type="text/javascript">moveProgressBar('26.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 72</span><span class='duration'>0.50951s</span></dd>
+  </dl>
+</div>
+<div id="div_group_28" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_28" class="passed">for last completed task</dt>
+    <script type="text/javascript">moveProgressBar('27.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal true</span><span class='duration'>0.31640s</span></dd>
+    <script type="text/javascript">moveProgressBar('28.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should change #result</span><span class='duration'>0.48248s</span></dd>
+    <script type="text/javascript">moveProgressBar('28.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should change #result</span><span class='duration'>0.50747s</span></dd>
+  </dl>
+</div>
+<div id="div_group_29" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_29" class="passed">completing the same task many times</dt>
+  </dl>
+</div>
+<div id="div_group_30" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_30" class="passed">last_completed_task_id</dt>
+    <script type="text/javascript">moveProgressBar('29.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 71</span><span class='duration'>0.51735s</span></dd>
+  </dl>
+</div>
+<div id="div_group_31" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_31" class="passed">current_task_id</dt>
+    <script type="text/javascript">moveProgressBar('30.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 72</span><span class='duration'>0.63586s</span></dd>
+  </dl>
+</div>
+<div id="div_group_32" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_32" class="passed">next_task_id</dt>
+    <script type="text/javascript">moveProgressBar('30.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 73</span><span class='duration'>0.64137s</span></dd>
+  </dl>
+</div>
+<div id="div_group_33" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_33" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('31.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 1 item</span><span class='duration'>0.52548s</span></dd>
+  </dl>
+</div>
+<div id="div_group_34" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_34" class="passed">non_completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('32.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 9 items</span><span class='duration'>0.74245s</span></dd>
+  </dl>
+</div>
+<div id="div_group_35" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_35" class="passed">points</dt>
+    <script type="text/javascript">moveProgressBar('33.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should eql 100</span><span class='duration'>0.56085s</span></dd>
+  </dl>
+</div>
+<div id="div_group_36" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_36" class="passed">completes all tasks</dt>
+  </dl>
+</div>
+<div id="div_group_37" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_37" class="passed">consecutively</dt>
+  </dl>
+</div>
+<div id="div_group_38" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_38" class="passed">last_completed_task_id</dt>
+    <script type="text/javascript">moveProgressBar('33.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 76</span><span class='duration'>0.65916s</span></dd>
+  </dl>
+</div>
+<div id="div_group_39" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_39" class="passed">current_task_id</dt>
+    <script type="text/javascript">makeRed('rspec-header');</script>
+    <script type="text/javascript">makeRed('div_group_39');</script>
+    <script type="text/javascript">makeRed('example_group_39');</script>
+    <script type="text/javascript">moveProgressBar('34.5');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should equal :lesson_finished</span>
+      <span class="duration">0.61790s</span>
+      <div class="failure" id="failure_1">
+        <div class="message"><pre>
+expected #&lt;Symbol:3440968&gt; =&gt; :lesson_finished
+     got #&lt;Fixnum:3&gt; =&gt; 1
+
+Compared using equal?, which compares object identity,
+but expected and actual are not the same object. Use
+&#x27;actual.should eq(expected)&#x27; if you don&#x27;t care about
+object identity in this example.
+
+</pre></div>
+        <div class="backtrace"><pre>./spec/models/subscription_spec.rb:135:in `block (4 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">133</span>
+<span class="linenum">134</span>      its(:last_completed_task_id) { should be @tasks[9].id }
+<span class="offending"><span class="linenum">135</span>      its(:current_task_id) { should be :lesson_finished }</span>
+<span class="linenum">136</span>      its(:next_task_id) { should be :lesson_finished }
+<span class="linenum">137</span>      its(:completed_task_ids) { should have(10).items }
+<span class="linenum">138</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_40" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_40" class="passed">next_task_id</dt>
+    <script type="text/javascript">moveProgressBar('35.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal :lesson_finished</span><span class='duration'>0.53839s</span></dd>
+  </dl>
+</div>
+<div id="div_group_41" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_41" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('35.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 10 items</span><span class='duration'>0.66288s</span></dd>
+  </dl>
+</div>
+<div id="div_group_42" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_42" class="passed">non_completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('36.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be empty</span><span class='duration'>0.62218s</span></dd>
+  </dl>
+</div>
+<div id="div_group_43" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_43" class="passed">in a random order</dt>
+  </dl>
+</div>
+<div id="div_group_44" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_44" class="passed">last_completed_task_id</dt>
+    <script type="text/javascript">moveProgressBar('37.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal 67</span><span class='duration'>0.81630s</span></dd>
+  </dl>
+</div>
+<div id="div_group_45" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_45" class="passed">next_task_id</dt>
+    <script type="text/javascript">moveProgressBar('38.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should equal :lesson_finished</span><span class='duration'>0.95768s</span></dd>
+  </dl>
+</div>
+<div id="div_group_46" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_46" class="passed">current_task_id</dt>
+    <script type="text/javascript">makeRed('div_group_46');</script>
+    <script type="text/javascript">makeRed('example_group_46');</script>
+    <script type="text/javascript">moveProgressBar('38.7');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should equal :lesson_finished</span>
+      <span class="duration">0.53735s</span>
+      <div class="failure" id="failure_2">
+        <div class="message"><pre>
+expected #&lt;Symbol:3440968&gt; =&gt; :lesson_finished
+     got #&lt;Fixnum:3&gt; =&gt; 1
+
+Compared using equal?, which compares object identity,
+but expected and actual are not the same object. Use
+&#x27;actual.should eq(expected)&#x27; if you don&#x27;t care about
+object identity in this example.
+
+</pre></div>
+        <div class="backtrace"><pre>./spec/models/subscription_spec.rb:148:in `block (4 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">146</span>      its(:last_completed_task_id) { should be @tasks[0].id }
+<span class="linenum">147</span>      its(:next_task_id) { should be :lesson_finished }
+<span class="offending"><span class="linenum">148</span>      its(:current_task_id) { should be :lesson_finished }</span>
+<span class="linenum">149</span>      its(:completed_task_ids) { should have(10).items }
+<span class="linenum">150</span>      its(:non_completed_task_ids) { should be_empty }
+<span class="linenum">151</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_47" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_47" class="passed">completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('39.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have 10 items</span><span class='duration'>1.07719s</span></dd>
+  </dl>
+</div>
+<div id="div_group_48" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_48" class="passed">non_completed_task_ids</dt>
+    <script type="text/javascript">moveProgressBar('40.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be empty</span><span class='duration'>0.95007s</span></dd>
+  </dl>
+</div>
+<div id="div_group_49" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_49" class="passed">User</dt>
+    <script type="text/javascript">moveProgressBar('40.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #name</span><span class='duration'>0.01073s</span></dd>
+    <script type="text/javascript">moveProgressBar('41.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #email</span><span class='duration'>0.00951s</span></dd>
+    <script type="text/javascript">moveProgressBar('42.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #password</span><span class='duration'>0.01124s</span></dd>
+    <script type="text/javascript">moveProgressBar('42.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #password_digest</span><span class='duration'>0.01211s</span></dd>
+    <script type="text/javascript">moveProgressBar('43.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #password_confirmation</span><span class='duration'>0.01103s</span></dd>
+    <script type="text/javascript">moveProgressBar('44.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #remember_token</span><span class='duration'>0.01044s</span></dd>
+    <script type="text/javascript">moveProgressBar('45.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #admin</span><span class='duration'>0.01928s</span></dd>
+    <script type="text/javascript">moveProgressBar('45.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should respond to #subscriptions</span><span class='duration'>0.01753s</span></dd>
+    <script type="text/javascript">moveProgressBar('46.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.04899s</span></dd>
+    <script type="text/javascript">moveProgressBar('47.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be admin</span><span class='duration'>0.01206s</span></dd>
+  </dl>
+</div>
+<div id="div_group_50" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_50" class="passed">accessible attributes</dt>
+    <script type="text/javascript">moveProgressBar('47.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not allow access to admin</span><span class='duration'>0.02652s</span></dd>
+  </dl>
+</div>
+<div id="div_group_51" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_51" class="passed">with admin attribute set to &#x27;true&#x27;</dt>
+    <script type="text/javascript">moveProgressBar('48.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be admin</span><span class='duration'>0.06503s</span></dd>
+  </dl>
+</div>
+<div id="div_group_52" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_52" class="passed">when name is not present do</dt>
+  </dl>
+</div>
+<div id="div_group_53" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_53" class="passed">name</dt>
+    <script type="text/javascript">moveProgressBar('49.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should eq &quot;Anonymous User&quot;</span><span class='duration'>0.06875s</span></dd>
+  </dl>
+</div>
+<div id="div_group_54" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_54" class="passed">when email is not present</dt>
+    <script type="text/javascript">moveProgressBar('50.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.87117s</span></dd>
+  </dl>
+</div>
+<div id="div_group_55" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_55" class="passed">when name is too long</dt>
+    <script type="text/javascript">moveProgressBar('50.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.04839s</span></dd>
+  </dl>
+</div>
+<div id="div_group_56" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_56" class="passed">when email format is invalid</dt>
+    <script type="text/javascript">moveProgressBar('51.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be invalid</span><span class='duration'>0.14902s</span></dd>
+  </dl>
+</div>
+<div id="div_group_57" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_57" class="passed">when email format is valid</dt>
+    <script type="text/javascript">moveProgressBar('52.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be valid</span><span class='duration'>0.09227s</span></dd>
+  </dl>
+</div>
+<div id="div_group_58" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_58" class="passed">when email address is already taken</dt>
+    <script type="text/javascript">moveProgressBar('52.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.07296s</span></dd>
+  </dl>
+</div>
+<div id="div_group_59" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_59" class="passed">when password is not present</dt>
+    <script type="text/javascript">moveProgressBar('53.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.18215s</span></dd>
+  </dl>
+</div>
+<div id="div_group_60" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_60" class="passed">when password doesn&#x27;t match confirmation</dt>
+    <script type="text/javascript">moveProgressBar('54.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.05804s</span></dd>
+  </dl>
+</div>
+<div id="div_group_61" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_61" class="passed">when password confirmation is nil</dt>
+    <script type="text/javascript">moveProgressBar('54.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.08394s</span></dd>
+  </dl>
+</div>
+<div id="div_group_62" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_62" class="passed">when password is too short</dt>
+    <script type="text/javascript">moveProgressBar('55.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be valid</span><span class='duration'>0.08395s</span></dd>
+  </dl>
+</div>
+<div id="div_group_63" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_63" class="passed">return value of authenticate method</dt>
+  </dl>
+</div>
+<div id="div_group_64" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_64" class="passed">with valid password</dt>
+    <script type="text/javascript">moveProgressBar('56.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be nil</span><span class='duration'>0.04590s</span></dd>
+  </dl>
+</div>
+<div id="div_group_65" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_65" class="passed">with invalid password</dt>
+    <script type="text/javascript">moveProgressBar('57.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not == false</span><span class='duration'>0.04335s</span></dd>
+    <script type="text/javascript">moveProgressBar('57.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should be false</span><span class='duration'>0.04127s</span></dd>
+  </dl>
+</div>
+<div id="div_group_66" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_66" class="passed">remember token</dt>
+  </dl>
+</div>
+<div id="div_group_67" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_67" class="passed">remember_token</dt>
+    <script type="text/javascript">moveProgressBar('58.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not be blank</span><span class='duration'>0.03467s</span></dd>
+  </dl>
+</div>
+<div id="div_group_68" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_68" class="passed">Admin Pages</dt>
+  </dl>
+</div>
+<div id="div_group_69" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_69" class="passed">Should have dashboard link in header</dt>
+    <script type="text/javascript">moveProgressBar('59.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Dashboard&quot;</span><span class='duration'>0.99767s</span></dd>
+  </dl>
+</div>
+<div id="div_group_70" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_70" class="passed">Authentication Pages</dt>
+  </dl>
+</div>
+<div id="div_group_71" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_71" class="passed">Sign In</dt>
+  </dl>
+</div>
+<div id="div_group_72" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_72" class="passed">should link to Sign up page</dt>
+    <script type="text/javascript">moveProgressBar('59.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy | Sign up&quot;</span><span class='duration'>0.09365s</span></dd>
+    <script type="text/javascript">moveProgressBar('60.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy | Sign up&quot;</span><span class='duration'>0.06441s</span></dd>
+    <script type="text/javascript">moveProgressBar('61.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;Sign Up&quot;</span><span class='duration'>0.06614s</span></dd>
+  </dl>
+</div>
+<div id="div_group_73" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_73" class="passed">with invalid information</dt>
+    <script type="text/javascript">moveProgressBar('61.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;.alert.alert-error&quot;</span><span class='duration'>0.18324s</span></dd>
+    <script type="text/javascript">moveProgressBar('62.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h4&quot;</span><span class='duration'>0.08252s</span></dd>
+    <script type="text/javascript">moveProgressBar('63.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;Sign In&quot;</span><span class='duration'>0.08431s</span></dd>
+  </dl>
+</div>
+<div id="div_group_74" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_74" class="passed">after visiting another page</dt>
+    <script type="text/javascript">moveProgressBar('64.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;.alert.alert-error&quot;</span><span class='duration'>0.12314s</span></dd>
+  </dl>
+</div>
+<div id="div_group_75" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_75" class="passed">with valid information</dt>
+    <script type="text/javascript">moveProgressBar('64.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Profile&quot;</span><span class='duration'>0.28935s</span></dd>
+    <script type="text/javascript">moveProgressBar('65.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Sign out&quot;</span><span class='duration'>0.17627s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Settings&quot;</span><span class='duration'>0.18464s</span></dd>
+    <script type="text/javascript">moveProgressBar('66.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not has link &quot;Sign in&quot;</span><span class='duration'>0.21785s</span></dd>
+  </dl>
+</div>
+<div id="div_group_76" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_76" class="passed">followed by sign-out</dt>
+    <script type="text/javascript">moveProgressBar('67.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Sign in&quot;</span><span class='duration'>0.41461s</span></dd>
+    <script type="text/javascript">moveProgressBar('68.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;.alert.alert-info&quot;</span><span class='duration'>0.28300s</span></dd>
+  </dl>
+</div>
+<div id="div_group_77" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_77" class="passed">Authorization</dt>
+  </dl>
+</div>
+<div id="div_group_78" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_78" class="passed">for non-signed-in users</dt>
+  </dl>
+</div>
+<div id="div_group_79" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_79" class="passed">when attempting to visit a protected page</dt>
+    <script type="text/javascript">moveProgressBar('69.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;.alert.alert-error&quot;</span><span class='duration'>0.52974s</span></dd>
+    <script type="text/javascript">moveProgressBar('69.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should eq &quot;/users/login&quot;</span><span class='duration'>0.17000s</span></dd>
+  </dl>
+</div>
+<div id="div_group_80" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_80" class="passed">after signing in</dt>
+  </dl>
+</div>
+<div id="div_group_81" class="example_group passed">
+  <dl style="margin-left: 75px;">
+  <dt id="example_group_81" class="passed">when signing in again</dt>
+    <script type="text/javascript">moveProgressBar('70.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should render the default page</span><span class='duration'>0.94014s</span></dd>
+  </dl>
+</div>
+<div id="div_group_82" class="example_group passed">
+  <dl style="margin-left: 90px;">
+  <dt id="example_group_82" class="passed">visiting home path</dt>
+    <script type="text/javascript">moveProgressBar('71.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should go to homepage when home is clicked</span><span class='duration'>0.82932s</span></dd>
+  </dl>
+</div>
+<div id="div_group_83" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_83" class="passed">in the Users controller</dt>
+  </dl>
+</div>
+<div id="div_group_84" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_84" class="passed">visiting the edit page</dt>
+    <script type="text/javascript">moveProgressBar('71.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Sign in&quot;</span><span class='duration'>0.09251s</span></dd>
+    <script type="text/javascript">moveProgressBar('72.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;div.alert.alert-error&quot;</span><span class='duration'>0.06272s</span></dd>
+  </dl>
+</div>
+<div id="div_group_85" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_85" class="passed">as wrong user</dt>
+  </dl>
+</div>
+<div id="div_group_86" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_86" class="passed">visiting the wrong user&#x27;s show page</dt>
+    <script type="text/javascript">moveProgressBar('73.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not has css &quot;h1&quot; with text &quot;User Profile&quot;</span><span class='duration'>0.40552s</span></dd>
+    <script type="text/javascript">moveProgressBar('73.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;.alert.alert-error&quot;</span><span class='duration'>0.66009s</span></dd>
+  </dl>
+</div>
+<div id="div_group_87" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_87" class="passed">as non-admin user</dt>
+  </dl>
+</div>
+<div id="div_group_88" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_88" class="passed">submitting a DELETE request to the Users#destroy action</dt>
+    <script type="text/javascript">moveProgressBar('74.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should redirect to root</span><span class='duration'>0.43826s</span></dd>
+  </dl>
+</div>
+<div id="div_group_89" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_89" class="passed">tasks</dt>
+  </dl>
+</div>
+<div id="div_group_90" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_90" class="passed">should have task buttons</dt>
+    <script type="text/javascript">moveProgressBar('75.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;a#task_1&quot;</span><span class='duration'>1.49908s</span></dd>
+    <script type="text/javascript">moveProgressBar('76.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;a#task_2&quot;</span><span class='duration'>0.96004s</span></dd>
+    <script type="text/javascript">moveProgressBar('76.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;a#task_3&quot;</span><span class='duration'>0.79020s</span></dd>
+  </dl>
+</div>
+<div id="div_group_91" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_91" class="passed">Guest user navigaton</dt>
+  </dl>
+</div>
+<div id="div_group_92" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_92" class="passed">Visit Lessons</dt>
+  </dl>
+</div>
+<div id="div_group_93" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_93" class="passed">Should have right login links in header</dt>
+    <script type="text/javascript">moveProgressBar('77.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Create Account&quot;</span><span class='duration'>0.13975s</span></dd>
+  </dl>
+</div>
+<div id="div_group_94" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_94" class="passed">After visiting a lesson</dt>
+    <script type="text/javascript">moveProgressBar('78.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;guest_login&quot;</span><span class='duration'>1.08251s</span></dd>
+  </dl>
+</div>
+<div id="div_group_95" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_95" class="passed">after creating an account</dt>
+    <script type="text/javascript">moveProgressBar('78.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;guest_login&quot;</span><span class='duration'>1.45886s</span></dd>
+    <script type="text/javascript">moveProgressBar('79.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Sign out&quot;</span><span class='duration'>1.06538s</span></dd>
+  </dl>
+</div>
+<div id="div_group_96" class="example_group passed">
+  <dl style="margin-left: 60px;">
+  <dt id="example_group_96" class="passed">log out user</dt>
+    <script type="text/javascript">moveProgressBar('80.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Profile&quot;</span><span class='duration'>1.02293s</span></dd>
+    <script type="text/javascript">moveProgressBar('80.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Create Account&quot;</span><span class='duration'>0.97398s</span></dd>
+  </dl>
+</div>
+<div id="div_group_97" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_97" class="passed">Mailing List</dt>
+  </dl>
+</div>
+<div id="div_group_98" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_98" class="passed">User clicks subscribe link</dt>
+    <script type="text/javascript">moveProgressBar('81.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should add the right email to the mailing list</span><span class='duration'>0.14560s</span></dd>
+  </dl>
+</div>
+<div id="div_group_99" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_99" class="passed">user enters invalid email</dt>
+    <script type="text/javascript">moveProgressBar('82.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not add user</span><span class='duration'>0.08013s</span></dd>
+  </dl>
+</div>
+<div id="div_group_100" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_100" class="passed">Static Pages</dt>
+    <script type="text/javascript">moveProgressBar('83.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should have the right links on the layout</span><span class='duration'>0.42574s</span></dd>
+  </dl>
+</div>
+<div id="div_group_101" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_101" class="passed">Visit Home page</dt>
+    <script type="text/javascript">moveProgressBar('83.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;div#extra&quot;</span><span class='duration'>0.04957s</span></dd>
+    <script type="text/javascript">moveProgressBar('84.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;div#footer&quot;</span><span class='duration'>0.05347s</span></dd>
+    <script type="text/javascript">makeRed('div_group_101');</script>
+    <script type="text/javascript">makeRed('example_group_101');</script>
+    <script type="text/javascript">moveProgressBar('85.2');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">should has css &quot;canvas&quot;</span>
+      <span class="duration">0.04118s</span>
+      <div class="failure" id="failure_3">
+        <div class="message"><pre>expected css &quot;canvas&quot; to return something</pre></div>
+        <div class="backtrace"><pre>./spec/requests/static_pages_spec.rb:17:in `block (3 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">15</span>    it { should have_selector("div#extra") }
+<span class="linenum">16</span>    it { should have_selector("div#footer") }
+<span class="offending"><span class="linenum">17</span>    it { should have_selector("canvas") }</span>
+<span class="linenum">18</span>    it { should have_button("Subscribe") }
+<span class="linenum">19</span>
+<span class="linenum">20</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+    <script type="text/javascript">moveProgressBar('85.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has button &quot;Subscribe&quot;</span><span class='duration'>0.04613s</span></dd>
+    <script type="text/javascript">moveProgressBar('86.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy&quot;</span><span class='duration'>0.04187s</span></dd>
+    <script type="text/javascript">moveProgressBar('87.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should not has css &quot;title&quot; with text &quot;| Home&quot;</span><span class='duration'>0.04501s</span></dd>
+    <script type="text/javascript">moveProgressBar('88.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;a#call_to_action_btn&quot;</span><span class='duration'>0.15957s</span></dd>
+    <script type="text/javascript">moveProgressBar('88.7');</script>
+    <dd class="example failed">
+      <span class="failed_spec_name">Call to action button should redirect to sign-in page</span>
+      <span class="duration">0.22669s</span>
+      <div class="failure" id="failure_4">
+        <div class="message"><pre>expected css &quot;h1&quot; with text &quot;Sign Up&quot; to return something</pre></div>
+        <div class="backtrace"><pre>./spec/requests/static_pages_spec.rb:30:in `block (3 levels) in <top (required)>'</pre></div>
+    <pre class="ruby"><code><span class="linenum">28</span>    it "Call to action button should redirect to sign-in page" do
+<span class="linenum">29</span>      click_link("call_to_action_btn")
+<span class="offending"><span class="linenum">30</span>      page.should have_selector 'h1', text: 'Sign Up'</span>
+<span class="linenum">31</span>    end
+<span class="linenum">32</span>
+<span class="linenum">33</span><span class="comment"># gem install syntax to get syntax highlighting</span></code></pre>
+      </div>
+    </dd>
+  </dl>
+</div>
+<div id="div_group_102" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_102" class="passed">for non-signed-in users</dt>
+    <script type="text/javascript">moveProgressBar('89.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Create Account&quot;</span><span class='duration'>0.05613s</span></dd>
+  </dl>
+</div>
+<div id="div_group_103" class="example_group passed">
+  <dl style="margin-left: 30px;">
+  <dt id="example_group_103" class="passed">for signed-in users</dt>
+  </dl>
+</div>
+<div id="div_group_104" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_104" class="passed">Redirect to User&#x27;s profile page when signing in</dt>
+    <script type="text/javascript">moveProgressBar('90.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">example at ./spec/requests/static_pages_spec.rb:42</span><span class='duration'>0.28168s</span></dd>
+  </dl>
+</div>
+<div id="div_group_105" class="example_group passed">
+  <dl style="margin-left: 45px;">
+  <dt id="example_group_105" class="passed">Should display drop-down links</dt>
+    <script type="text/javascript">moveProgressBar('90.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Sign out&quot;</span><span class='duration'>0.41956s</span></dd>
+  </dl>
+</div>
+<div id="div_group_106" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_106" class="passed">Lessons page</dt>
+    <script type="text/javascript">moveProgressBar('91.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h3&quot; with text &quot;Browse By:&quot;</span><span class='duration'>0.14761s</span></dd>
+    <script type="text/javascript">moveProgressBar('92.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy | All Lessons&quot;</span><span class='duration'>0.12225s</span></dd>
+  </dl>
+</div>
+<div id="div_group_107" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_107" class="passed">Labs page</dt>
+    <script type="text/javascript">moveProgressBar('92.9');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;Labs&quot;</span><span class='duration'>0.03792s</span></dd>
+    <script type="text/javascript">moveProgressBar('93.6');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy | Labs&quot;</span><span class='duration'>0.17315s</span></dd>
+  </dl>
+</div>
+<div id="div_group_108" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_108" class="passed">About page</dt>
+    <script type="text/javascript">moveProgressBar('94.3');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;About Us&quot;</span><span class='duration'>0.03112s</span></dd>
+    <script type="text/javascript">moveProgressBar('95.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy | About&quot;</span><span class='duration'>0.03361s</span></dd>
+  </dl>
+</div>
+<div id="div_group_109" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_109" class="passed">Sign in page</dt>
+    <script type="text/javascript">moveProgressBar('95.7');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;Sign In&quot;</span><span class='duration'>0.03583s</span></dd>
+  </dl>
+</div>
+<div id="div_group_110" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_110" class="passed">Sign up page</dt>
+    <script type="text/javascript">moveProgressBar('96.4');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;Sign Up&quot;</span><span class='duration'>0.03317s</span></dd>
+  </dl>
+</div>
+<div id="div_group_111" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_111" class="passed">Terms page</dt>
+    <script type="text/javascript">moveProgressBar('97.1');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;h1&quot; with text &quot;Terms&quot;</span><span class='duration'>0.03260s</span></dd>
+    <script type="text/javascript">moveProgressBar('97.8');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;title&quot; with text &quot;Physics Academy | Terms&quot;</span><span class='duration'>0.03087s</span></dd>
+  </dl>
+</div>
+<div id="div_group_112" class="example_group passed">
+  <dl style="margin-left: 0px;">
+  <dt id="example_group_112" class="passed">Static Pages</dt>
+  </dl>
+</div>
+<div id="div_group_113" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_113" class="passed">Visit profile</dt>
+    <script type="text/javascript">moveProgressBar('98.5');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has css &quot;.alert.alert-error&quot;</span><span class='duration'>0.19924s</span></dd>
+  </dl>
+</div>
+<div id="div_group_114" class="example_group passed">
+  <dl style="margin-left: 15px;">
+  <dt id="example_group_114" class="passed">Visit settings</dt>
+    <script type="text/javascript">moveProgressBar('99.2');</script>
+    <dd class="example passed"><span class="passed_spec_name">should has link &quot;Sign out&quot;</span><span class='duration'>0.24407s</span></dd>
+    <script type="text/javascript">moveProgressBar('100.0');</script>
+    <dd class="example passed"><span class="passed_spec_name">example at ./spec/requests/user_pages_spec.rb:25</span><span class='duration'>0.33571s</span></dd>
+  </dl>
+</div>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>46.15013 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "142 examples, 4 failures";</script>
+</div>
+</div>
+</body>
+</html>

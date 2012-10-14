@@ -10,25 +10,44 @@ function render(world, mouseResponder, CanvasElmJQuery) {
   "use strict";
 
   // The context is derived from the DOM element of the canvas jQuery selector
-  var context = CanvasElmJQuery.get(0).getContext("2d");
+  var renderContext = CanvasElmJQuery.get(0).getContext("2d");
 
   var hasTextures = false;
   var numTexturesLoaded = 0;
   var numTexturesToBeLoaded = 0;
   var interval_id = null;
 
+  preloadTextures();
+  if(!hasTextures)
+    start();
+
   if(world.debug) {
     console.log("\tIn debug mode");
     loadDebug();
-    start();
-  } else {
-    preloadTextures();
-    if(!hasTextures)
-      start();
   }
 
 
-  /** Starts the render loop through a setInterval function. Rendering is not started until this function is called.
+  /**
+   * Sets drawing parameters for debug mode.
+   */
+  function loadDebug() {
+    "use strict";
+
+    var debugDraw = new b2DebugDraw();
+
+    debugDraw.SetSprite(renderContext);
+    debugDraw.SetDrawScale(world.pixelsToMeters);
+    debugDraw.SetFillAlpha(1);
+    debugDraw.SetLineThickness(3.0);
+    debugDraw.SetFlags()
+    debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
+
+    world.SetDebugDraw(debugDraw);
+  }
+
+
+  /**
+   * Starts the render loop through a setInterval function. Rendering is not started until this function is called.
    *
    * @return the intervalId of window.setInterval (used for pausing/clearing).
     */
@@ -64,7 +83,6 @@ function render(world, mouseResponder, CanvasElmJQuery) {
       }
 
     }
-
   }
 
 
@@ -93,21 +111,29 @@ function render(world, mouseResponder, CanvasElmJQuery) {
    */
   function updateAndRender() {
 
-    context.clearRect(0, 0, world.widthInPixels, world.heightInPixels);
+    renderContext.clearRect(0, 0, world.widthInPixels, world.heightInPixels);
+
     if(mouseResponder)
       mouseResponder.queryMouseAndUpdateWorld();
 
-    applyGravity();
     world.Step(world.timeStep, world.velocityIterations, world.positionIterations);
+    applyGravity();
+
 
     if (world.debug)
       world.DrawDebugData();
-    else
-      render();
+
+    render();
 
     world.ClearForces();
   }
 
+
+  /**
+   * Iterates through each object in the world, and applies a Newtonian model of gravity (i.e. g*m1*m2/r^2)
+   *
+   * Note: This function has O(n^2) complexity.
+   */
   function applyGravity() {
 
     //world.ClearForces();
@@ -147,7 +173,6 @@ function render(world, mouseResponder, CanvasElmJQuery) {
 
       BodyNode = BodyNode.GetNext();
     }
-
   }
 
 
@@ -155,6 +180,9 @@ function render(world, mouseResponder, CanvasElmJQuery) {
    * Iterates through list of objects in the world, drawing each one based on its type (circle, image, or polygon)
    */
   function render() {
+
+    if(!world.backgroundURL)
+      drawGrid();
 
     var BodyNode = world.GetBodyList();
 
@@ -164,23 +192,22 @@ function render(world, mouseResponder, CanvasElmJQuery) {
       var CurrentBodyNode = BodyNode;
       BodyNode = BodyNode.GetNext();
 
-      // Canvas Y coordinates start at opposite location, so we flip
+      // Canvas Y coordinates start at opposite location, so we flip.
       var FixtureNode = CurrentBodyNode.GetFixtureList();
-      if (!FixtureNode)
+      if (!FixtureNode) {
+        throw BodyNode.name + " has no fixture data!";
         continue;
+      }
 
       var shape = FixtureNode.GetShape();
 
-      // If this body is a circle
       if (shape.GetType() == b2Shape.e_circleShape)
         drawCircle(CurrentBodyNode, shape.GetRadius());
 
-      // If this body is a polygon
-      if (shape.GetType() == b2Shape.e_polygonShape && world.debug)
+      if (shape.GetType() == b2Shape.e_polygonShape)
         drawPolygon(CurrentBodyNode);
 
     }
-
   }
 
 
@@ -193,25 +220,23 @@ function render(world, mouseResponder, CanvasElmJQuery) {
   function drawCircle(Body, radius) {
     "use strict";
 
-    Body.width = Body.height = 2*Body.GetFixtureList().GetShape().GetRadius();
-
     if (Body.imagePath)
       drawImage(Body);
+  }
 
-    // Uncomment to draw border
-    /*
-     var position = Body.GetPosition();
 
-    context.strokeStyle = "#FF1100";
-    context.fillStyle = "#FF8800";
-    context.beginPath();
-    context.arc(position.x * world.pixelsToMeters,
-      (-position.y + world.heightInMeters) * world.pixelsToMeters,
-      radius * world.pixelsToMeters, 0, 2*Math.PI, true);
-    context.stroke();
-    context.closePath();
-    context.lineWidth = 1;
-    */
+  /**
+   * Iterates through each fixture within a PolygonBody and draws an outline for that fixture. A polygon
+   * has many fixtures, and each fixture has many vertices. Each fixture is drawn by connecting the vertices of that
+   * fixture.
+   *
+   * @param PolygonBody The Polygon to be drawn.
+   */
+  function drawPolygon(PolygonBody) {
+    "use strict";
+
+    if (PolygonBody.imagePath)
+      drawImage(PolygonBody);
   }
 
 
@@ -228,7 +253,7 @@ function render(world, mouseResponder, CanvasElmJQuery) {
     var bodyWidthPixels   = Body.width * world.pixelsToMeters;
     var bodyHeightPixels  = Body.height * world.pixelsToMeters;
 
-    context.save();
+    renderContext.save();
 
     var imageObj = Body.imageObj;
 
@@ -236,83 +261,38 @@ function render(world, mouseResponder, CanvasElmJQuery) {
     var scaleY = bodyHeightPixels/imageObj.height;
 
     // Translate to the center of the object, then flip and scale appropriately
-    context.translate(position.x * world.pixelsToMeters, (-position.y + world.heightInMeters) * world.pixelsToMeters);
-    context.rotate(-Body.GetAngle());
+    renderContext.translate(position.x * world.pixelsToMeters, (-position.y + world.heightInMeters) * world.pixelsToMeters);
+    renderContext.rotate(-Body.GetAngle());
 
     // Draw the bounding box:
-    context.scale(scaleX, scaleY);
+    renderContext.scale(scaleX, scaleY);
 
-    context.drawImage(imageObj, -imageObj.width/2, -imageObj.height/2);
+    renderContext.drawImage(imageObj, -imageObj.width/2, -imageObj.height/2);
 
-    context.restore();
+    renderContext.restore();
   }
 
 
   /**
-   * Iterates through each fixture within a PolygonBody and draws an outline for that fixture. A polygon
-   * has many fixtures, and each fixture has many vertices. Each fixture is drawn by connecting the vertices of that
-   * fixture.
-   *
-   * @param PolygonBody The Polygon to be drawn.
+   * Draws a 10px spaced grid background on the canvas.
    */
-  function drawPolygon(PolygonBody) {
-    "use strict";
-
-    var position = PolygonBody.GetPosition();
-    var FixtureNode = PolygonBody.GetFixtureList();
-
-    if (PolygonBody.imagePath)
-      drawImage(PolygonBody);
-
-    // Loop through each Fixture in this polygon definition
-    while(FixtureNode) {
-
-      var CurrentFixtureNode = FixtureNode;
-      FixtureNode = FixtureNode.GetNext();
-
-      var vertices = CurrentFixtureNode.GetShape().GetVertices();
-
-      context.beginPath();
-
-      // Find first vertex of this fixture, and move to that position for drawing
-      b2Math.MulMV(PolygonBody.m_xf.R, vertices[0]);
-      var tV = b2Math.AddVV(position, b2Math.MulMV(PolygonBody.m_xf.R, vertices[0]));
-      context.moveTo(tV.x * world.pixelsToMeters, (world.heightInMeters - tV.y) * world.pixelsToMeters);
-
-      // Loop through each vertex within this polygon draw the line from the previous vertex to this one.
-      for (var i = 0; i < vertices.length; i++) {
-        var v = b2Math.AddVV(position, b2Math.MulMV(PolygonBody.m_xf.R, vertices[i]));
-        context.lineTo(v.x * world.pixelsToMeters, (world.heightInMeters - v.y) * world.pixelsToMeters);
-      }
-
-      // Draw line connecting the last vertex to the first vertex
-      context.lineTo(tV.x * world.pixelsToMeters, (world.heightInMeters - tV.y) * world.pixelsToMeters);
-
-      context.closePath();
-
-      context.strokeStyle = "#CCC";
-      context.fillStyle = "#88A";
-      context.stroke();
-      context.fill();
+  function drawGrid() {
+    renderContext.strokeStyle = "777";
+    renderContext.lineWidth = .1;
+    for(var i=0; i < world.widthInPixels/10; ++i ) {
+      renderContext.beginPath();
+      renderContext.moveTo(i*10, 0);
+      renderContext.lineTo(i*10, world.widthInPixels);
+      renderContext.closePath();
+      renderContext.stroke();
     }
-  }
-
-
-  /**
-   * Sets drawing parameters for debug mode.
-   */
-  function loadDebug() {
-    "use strict";
-
-    var debugDraw = new b2DebugDraw();
-
-    debugDraw.SetSprite(context);
-    debugDraw.SetDrawScale(world.pixelsToMeters);
-    debugDraw.SetFillAlpha(0.5);
-    debugDraw.SetLineThickness(1.0);
-    debugDraw.SetFlags(b2DebugDraw.e_shapeBit | b2DebugDraw.e_jointBit);
-
-    world.SetDebugDraw(debugDraw);
+    for(var j=0; j < world.widthInPixels/10; ++j ) {
+      renderContext.beginPath();
+      renderContext.moveTo(0, j*10);
+      renderContext.lineTo(world.widthInPixels, j*10);
+      renderContext.closePath();
+      renderContext.stroke();
+    }
   }
 
   return interval_id;

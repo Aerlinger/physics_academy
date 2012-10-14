@@ -4,11 +4,11 @@
     <connections />
   </component>
   <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
     <content url="file://C:/Program Files/nodejs">
       <excludeFolder url="file://C:/Program Files/nodejs/deps" />
       <excludeFolder url="file://C:/Program Files/nodejs/test" />
     </content>
-    <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

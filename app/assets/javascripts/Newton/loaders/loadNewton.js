@@ -32,7 +32,8 @@ $(function () {
       var mouseResponder = new MouseResponder(world, canvasJQueryElm);
       var intervalId = render(world, mouseResponder, canvasJQueryElm);
 
-      loadQuestions(util.splicePaths(jsonPath, "questions.json"), newton_wrapper);
+      if(window.loadQuestions)
+        window.loadQuestions(util.splicePaths(jsonPath, "questions.json"), newton_wrapper);
     });
 
   });

@@ -9,7 +9,6 @@ util = {}
  * @param rootFilePath The root path of the file
  * @param relativeFilePath Path relative to root path of the
  */
-
 util.splicePaths = function (rootFilePath, relativeFilePath) {
 
   // Regexp to get the filename of the root file.
@@ -34,7 +33,7 @@ util.splicePaths = function (rootFilePath, relativeFilePath) {
     slash = "/";
 
   var splicedPath = rootFilePath + slash + relativeFilePath;
-  console.log("SPLICED: " + splicedPath);
+  console.log("Loaded Asset: " + splicedPath);
 
   return splicedPath;
 }

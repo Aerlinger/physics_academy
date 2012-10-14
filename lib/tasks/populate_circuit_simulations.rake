@@ -4,11 +4,11 @@ namespace :db do
   desc "Read circuits from setup list and populates database with the data"
   task populate_circuit_simulations: :environment do
     CircuitSimulation.delete_all
-    read_setup_list
+    read_circuit_setup_list
   end
 end
 
-def read_setup_list
+def read_circuit_setup_list
 
   topic_stack = Array.new
   topic_stack << "root"
@@ -101,12 +101,12 @@ def read_circuit_file(circuit_sim, path, circuit_filename)
       new_circuit_element[:params] = circuit_element_params
 
       output_data << new_circuit_element
-      #circuit_sim.circuit_elements.build(new_circuit_element)
+
     end
 
   end
 
-  File.open(circuit_filename.gsub("txt", "json"), 'w+') { |f| f.write clean_json(output_data.to_json) }
+  #File.open(circuit_filename.gsub("txt", "json"), 'w+') { |f| f.write clean_json(output_data.to_json) }
 
 end
 

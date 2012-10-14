@@ -20,8 +20,8 @@
 
         <!-- The Lesson Preview Partial -->
         <div class="span7">
-          <div id="preview" class="faraday canvas_wrapper" data-width="500" data-height="320" data-path=<%= asset_path("faraday/sample_circuits/bandpass.json")%> >
-          </div>
+          <%= faraday_tag "faraday/sample_circuits/bandpass.json", id: "preview", width: 500, height: 320  %>
+
         </div>
 
       </div>

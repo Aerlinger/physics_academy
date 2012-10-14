@@ -36,7 +36,5 @@ def create_lesson_from_yaml(lesson_yaml)
     puts task
   end
 
-  puts y new_lesson
-
   new_lesson.save!
 end
