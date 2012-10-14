@@ -11,9 +11,9 @@ namespace :db do
 
       puts "reading from Root directory: #{root_path}"
 
-      Dir.glob("#{root_path}/**/lesson-params.yml") do |file|
-        puts "Reading lesson configuration file #{file}"
-        data = YAML::load(File.open(file))
+      Dir.glob("#{root_path}/**/lesson-params.yml").sort! do |filename|
+        puts "Reading lesson configuration file #{filename}"
+        data = YAML::load(File.open(filename))
 
         create_lesson_from_yaml(data)
       end
