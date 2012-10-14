@@ -11,7 +11,9 @@ namespace :db do
 
       puts "reading from Root directory: #{root_path}"
 
-      Dir.glob("#{root_path}/**/lesson-params.yml").sort! do |filename|
+      files = Dir.glob("#{root_path}/**/lesson-params.yml").sort!
+
+      files.each do |filename|
         puts "Reading lesson configuration file #{filename}"
         data = YAML::load(File.open(filename))
 
