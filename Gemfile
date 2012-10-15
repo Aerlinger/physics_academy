@@ -11,6 +11,8 @@ gem 'bootstrap-will_paginate', '0.0.5'
 gem 'devise'
 gem "amazon-ec2", require: "AWS"
 
+gem 'thin'
+
 # Deploy with Capistrano
 gem 'capistrano'
 

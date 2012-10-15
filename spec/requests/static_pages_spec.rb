@@ -59,7 +59,7 @@ describe "Static Pages" do
   end
 
 
-  describe "Labs page" do
+  describe "labs page" do
     before { visit labs_path }
 
     it { should have_selector('h1', text: 'Labs') }
