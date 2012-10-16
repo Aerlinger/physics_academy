@@ -12,89 +12,88 @@ $opacity: .8;
 [Simulators (Newton and Faraday)]
 */
 
-.faraday_canvas {
- background: url(<%= asset_path ("faraday/grid16px.png") %>) !important;
+.faraday_canvas, .faraday {
+    background: url(<%= asset_path ("faraday/grid16px.png") %>) !important;
+    backround-color: white;
 }
 
 canvas {
-  background-color: black;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-  -o-border-radius: 2px;
-  border-radius: 2px;
-
+    background-color: black;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
 }
 
 .canvas_wrapper {
 
-  display: table;
-  margin: 0 auto;
+    display: table;
+    margin: 0 auto;
 
-  canvas {
-    -webkit-border-radius: $outer_corner_radius;
-    -moz-border-radius: $outer_corner_radius;
-    border-radius: $outer_corner_radius;
+    canvas {
+        -webkit-border-radius: $outer_corner_radius;
+        -moz-border-radius: $outer_corner_radius;
+        border-radius: $outer_corner_radius;
 
-    background: url(<%= asset_path "newton/checker10px.png" %>) repeat;
+        background: url(<%= asset_path "newton/checker10px.png" %>) repeat;
 
-    border: $outer_border_width solid #8b0000;
-    position: static;
-    z-index: 0;
-  }
+        border: $outer_border_width solid #8b0000;
+        position: static;
+        z-index: 0;
+    }
 
-  a.title {
-    padding: 0 .8em;
+    a.title {
+        padding: 0 .8em;
 
-    background-color: #444;
-    color: white;
-    font-weight: bold;
+        background-color: #444;
+        color: white;
+        font-weight: bold;
 
-    text-decoration: none;
-    position: absolute;
-    z-index: 1;
-    height: $title_height;
-    line-height: $title_height;
+        text-decoration: none;
+        position: absolute;
+        z-index: 1;
+        height: $title_height;
+        line-height: $title_height;
 
-    overflow: hidden;
-    white-space: nowrap;
+        overflow: hidden;
+        white-space: nowrap;
 
-    margin-left: $outer_border_width;
-    margin-top: $outer_border_width;
+        margin-left: $outer_border_width;
+        margin-top: $outer_border_width;
 
-    font-size: 1.0em;
-    font-family: "Arial", "Helvetica", "Helvetica New" "Verdana";
+        font-size: 1.0em;
+        font-family: "Arial", "Helvetica", "Helvetica New" "Verdana";
 
-    -webkit-border-bottom-right-radius: 5px;
-    -moz-border-radius-bottomright: 5px;
-    border-bottom-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-bottom-right-radius: 5px;
 
-    -webkit-border-top-left-radius: $outer_corner_radius - $outer_border_width - 1;
-    -moz-border-top-left-radius: $outer_corner_radius - $outer_border_width - 1;
-    border-top-left-radius: $outer_corner_radius - $outer_border_width - 1;
+        -webkit-border-top-left-radius: $outer_corner_radius - $outer_border_width - 1;
+        -moz-border-top-left-radius: $outer_corner_radius - $outer_border_width - 1;
+        border-top-left-radius: $outer_corner_radius - $outer_border_width - 1;
 
-    opacity: $opacity;
-    -moz-opacity: $opacity;
-    -webkit-opacity: $opacity;
+        opacity: $opacity;
+        -moz-opacity: $opacity;
+        -webkit-opacity: $opacity;
 
-    -moz-box-shadow: 1px 2px 3px $shadow_color;
-    -webkit-box-shadow: 1px 2px 3px $shadow_color;
-    box-shadow: 1px 2px 3px $shadow_color;
+        -moz-box-shadow: 1px 2px 3px $shadow_color;
+        -webkit-box-shadow: 1px 2px 3px $shadow_color;
+        box-shadow: 1px 2px 3px $shadow_color;
 
-    border-right: 1px solid orange;
-    border-bottom: 1px solid orange;
-  }
+        border-right: 1px solid orange;
+        border-bottom: 1px solid orange;
+    }
 
-  a:hover {
-    text-decoration: underline;
-    color: white;
-    opacity: 1;
-    -moz-opacity: 1;
-    -webkit-opacity: 1;
-  }
+    a:hover {
+        text-decoration: underline;
+        color: white;
+        opacity: 1;
+        -moz-opacity: 1;
+        -webkit-opacity: 1;
+    }
 
-  .questions {
-    border: 1px solid red;
-    color: green;
-  }
-
+    .questions {
+        border: 1px solid red;
+        color: green;
+    }
 }

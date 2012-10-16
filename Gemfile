@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '3.2.8'
 gem 'bootstrap-sass'
 
@@ -10,8 +9,6 @@ gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.5'
 gem 'devise'
 gem "amazon-ec2", require: "AWS"
-
-gem 'thin'
 
 # Deploy with Capistrano
 gem 'capistrano'
@@ -45,6 +42,7 @@ end
 
 group :production do
   gem 'pg', '0.12.2'
+  gem 'thin'
 end
 
 # To use ActiveModel has_secure_password
