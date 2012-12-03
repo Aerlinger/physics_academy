@@ -10,6 +10,8 @@ VarRailElm.prototype.sliderText;
 function VarRailElm(xa, ya, xb, yb, f, st) {
     RailElm.call(this, xa, ya, xb, yb, f, st)
 
+    this.bias = 0;
+    this.maxVoltage = 5;
     this.sliderText = "voltage";
     this.frequency = this.maxVoltage;
     this.createSlider();
@@ -21,7 +23,7 @@ VarRailElm.prototype.dump = function () {
 };
 
 VarRailElm.prototype.getDumpType = function () {
-    return 172;
+    return '172';
 };
 
 VarRailElm.prototype.createSlider = function () {
@@ -29,7 +31,7 @@ VarRailElm.prototype.createSlider = function () {
 };
 
 VarRailElm.getVoltage = function () {
-    frequency = slider.getValue() * (maxVoltage - bias) / 100. + bias;
+    frequency = 1 * (this.maxVoltage - this.bias) / 100. + this.bias;
     return frequency;
 };
 
@@ -40,24 +42,24 @@ VarRailElm.prototype.delete = function () {
 
 VarRailElm.prototype.getEditInfo = function (n) {
     if (n == 0)
-        return new EditInfo("Min Voltage", bias, -20, 20);
+        return new EditInfo("Min Voltage", this.bias, -20, 20);
     if (n == 1)
-        return new EditInfo("Max Voltage", maxVoltage, -20, 20);
+        return new EditInfo("Max Voltage", this.maxVoltage, -20, 20);
     if (n == 2) {
         var ei = new EditInfo("Slider Text", 0, -1, -1);
-        ei.text = sliderText;
-        return ei;
+        //ei.text = sliderText;
+        //return ei;
     }
     return null;
 };
 
 VarRailElm.prototype.setEditValue = function (n, ei) {
     if (n == 0)
-        bias = ei.value;
+        this.bias = ei.value;
     if (n == 1)
-        maxVoltage = ei.value;
+        this.maxVoltage = ei.value;
     if (n == 2) {
-        sliderText = ei.textf.getText();
-        label.setText(sliderText);
+        //sliderText = ei.textf.getText();
+        //label.setText(sliderText);
     }
 };

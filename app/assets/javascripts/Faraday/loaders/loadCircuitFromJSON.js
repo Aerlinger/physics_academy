@@ -102,8 +102,8 @@ function loadCircuitFromJSON(jsonPath, CanvasJQueryElm, onComplete) {
       var f = Math.floor(circuitElementJSON.flags);
 
       var cls = Circuit.dumpTypes[type];
-
-      if (cls == null) {
+      //console.log(cls);
+      if (cls === null) {
         Circuit.error("unrecognized dump type: " + type);
         break;
       }

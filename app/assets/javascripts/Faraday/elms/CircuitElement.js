@@ -63,10 +63,10 @@ function CircuitElement(xa, ya, xb, yb, f, st) {
     //Cir.initClass();
     this.boundingBox = new Rectangle(0, 0, Math.abs(xa - xb), Math.abs(ya - yb));
 
-    this.x1 = Circuit.snapGrid(xa) - 90;
-    this.y = Circuit.snapGrid(ya) - 60;
-    this.x2 = (isNaN(xb) ? this.x1 : Circuit.snapGrid(xb)) - 90;
-    this.y2 = (isNaN(yb) ? this.y : Circuit.snapGrid(yb))  - 60;
+    this.x1 = Circuit.snapGrid(xa);
+    this.y = Circuit.snapGrid(ya);
+    this.x2 = (isNaN(xb) ? this.x1 : Circuit.snapGrid(xb));
+    this.y2 = (isNaN(yb) ? this.y : Circuit.snapGrid(yb));
     this.flags = isNaN(f) ? this.getDefaultFlags() : f;
 
     CircuitElement.lightGrayColor = Settings.LIGHT_GREY;
@@ -312,7 +312,7 @@ CircuitElement.newPointArray = function (n) {
 
 CircuitElement.prototype.drawDots = function (pa, pb, pos) {
     // If the sim is stopped or has dots disabled
-    if (Circuit.stoppedCheck || pos == 0 || !Circuit.dotsCheckItem)
+    if (Circuit.stoppedCheck || pos == 0)
         return;
 
     var dx = pb.x1 - pa.x1;
@@ -339,10 +339,6 @@ CircuitElement.prototype.drawDots = function (pa, pb, pos) {
             paper.stroke();
             paper.fill();
         paper.closePath();
-//        paper.circle(x0, y0, Settings.CURRENT_RADIUS).attr({
-//            stroke:Color.color2HexString(Settings.DOTS_OUTLINE),
-//            fill:Color.color2HexString(Settings.DOTS_COLOR)
-//        });
     }
 };
 

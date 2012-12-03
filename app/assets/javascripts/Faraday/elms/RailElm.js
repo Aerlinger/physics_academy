@@ -50,8 +50,8 @@ RailElm.prototype.draw = function () {
 
     this.drawPosts();
     this.curcount = this.updateDotCount(-this.current, this.curcount);
-    if (Circuit.dragElm != this)
-        this.drawDots(this.point1, this.lead1, this.curcount);
+
+    this.drawDots(this.point1, this.lead1, this.curcount);
 
 };
 

@@ -1,0 +1,108 @@
+index.html<!DOCTYPE html>
+<html>
+<head>
+    <title>Faraday</title>
+
+    <script>
+        /** Create an Console object shell (Console object not supported in IE) */
+        if (!window.console) {
+            console = {
+                log:function () {
+                }
+            };
+        }
+    </script>
+
+    <!-- External libraries -->
+    <script type="text/javascript" src="lib/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="lib/raphael-2.1.0.js"></script>
+
+    <!-- helper classes (must be declared first) -->
+    <script type="text/javascript" src="utility.js"></script>
+    <script type="text/javascript" src="geom.js"></script>
+
+    <!-- entry point -->
+    <script type="text/javascript" src="main.js"></script>
+
+    <!-- Simulation engine -->
+    <script type="text/javascript" src="CirSim.js"></script>
+    <script type="text/javascript" src="FindPathInfo.js"></script>
+    <script type="text/javascript" src="CircuitNode.js"></script>
+    <script type="text/javascript" src="RowInfo.js"></script>
+
+    <!-- Circuit elements: -->
+    <script type="text/javascript" src="elms/CircuitElement.js"></script>
+    <script type="text/javascript" src="elms/core/Diode.js"></script>
+    <script type="text/javascript" src="elms/core/Inductor.js"></script>
+    <script type="text/javascript" src="elms/AntennaElm.js"></script>
+    <script type="text/javascript" src="elms/DiodeElm.js"></script>
+    <script type="text/javascript" src="elms/ResistorElm.js"></script>
+    <script type="text/javascript" src="elms/CapacitorElm.js"></script>
+    <script type="text/javascript" src="elms/InductorElm.js"></script>
+    <script type="text/javascript" src="elms/WireElm.js"></script>
+    <script type="text/javascript" src="elms/GroundElm.js"></script>
+    <script type="text/javascript" src="elms/LogicInputElm.js"></script>
+    <script type="text/javascript" src="elms/SwitchElm.js"></script>
+    <script type="text/javascript" src="elms/Switch2Elm.js"></script>
+    <script type="text/javascript" src="elms/TextElm.js"></script>
+    <script type="text/javascript" src="elms/VoltageElm.js"></script>
+    <script type="text/javascript" src="elms/RailElm.js"></script>
+    <script type="text/javascript" src="elms/VarRailElm.js"></script>
+    <script type="text/javascript" src="elms/SweepElm.js"></script>
+    <script type="text/javascript" src="elms/OpAmpElm.js"></script>
+    <script type="text/javascript" src="elms/SparkGapElm.js"></script>
+    <script type="text/javascript" src="elms/CurrentElm.js"></script>
+    <script type="text/javascript" src="elms/ProbeElm.js"></script>
+    <script type="text/javascript" src="elms/OutputElm.js"></script>
+    <script type="text/javascript" src="elms/TransistorElm.js"></script>
+    <script type="text/javascript" src="elms/MosfetElm.js"></script>
+    <script type="text/javascript" src="elms/JFetElm.js"></script>
+    <script type="text/javascript" src="elms/LogicOutputElm.js"></script>
+
+    <script type="text/javascript" src="../util/util.js"></script>
+
+    <script type="text/javascript" src="loaders/loadCircuitFromJSON.js"></script>
+    <script type="text/javascript" src="loaders/loadFaraday.js"></script>
+
+    <!-- UI sources -->
+    <script type="text/javascript" src="lib/Font.js"></script>
+    <script type="text/javascript" src="ui/EditInfo.js"></script>
+    <script type="text/javascript" src="ui/EditDialog.js"></script>
+    <script type="text/javascript" src="ui/ComponentGenerator.js"></script>
+    <script type="text/javascript" src="Scope.js"></script>
+
+    <!-- Stylesheets -->
+    <link type="text/css" rel=STYLESHEET href="style/Aristo.css" media=screen/>
+    <link type="text/css" rel=STYLESHEET href="style/custom.css" media=screen/>
+
+</head>
+
+<body class="ui-form">
+
+<!-- Title -->
+<div id="header">
+    <div id="sitename">Faraday</div>
+</div>
+
+<!-- Toolbar containing available circuit elements -->
+<div id="toolbar">
+    <ul id="toolbar_buttons">
+        <li class="green"><a href="#" onClick="Circuit.resetSelection();">Select</a></li>
+        <li class="green"><a href="#" onClick="Circuit.deleteSelected();">Delete Selected</a></li>
+    </ul>
+</div>
+
+<div id="workspace">
+    <!-- Circuit rendering canvas -->
+    <!--<canvas id="canvas_container" width="800" height="600" class="besselbutter"></canvas>-->
+    <div id="preview" class="faraday" data-width="800" data-height="600" data-path="./circuits/opampfeedback.json"></div>
+    <div id="edit_pane"></div>
+</div>
+
+<!-- Column of sample circuits -->
+<div id="circuit_presets">
+
+</div>
+
+</body>
+</html>

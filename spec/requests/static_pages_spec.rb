@@ -39,7 +39,7 @@ describe "Static Pages" do
       end
 
       describe "Redirect to User's profile page when signing in" do
-        it { have_selector('title', text: full_title('Profile'))  }
+        it { should have_selector('title', text: full_title('Profile'))  }
       end
 
       describe "Should display drop-down links" do
