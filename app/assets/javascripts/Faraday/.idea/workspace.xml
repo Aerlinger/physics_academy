@@ -2,71 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3c8c80be-45df-4817-afae-1b9cd20a3114" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/circuits/voltdividesimple.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/component/circuitElement.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/component/circuitElementDisplay.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/component/drawHelpers.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/core/engine/rowInfo.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/core/engineParams.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/core/node_graph/circuitNode.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/core/node_graph/findPathInfo.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/scope/scope.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/script/test" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/settings/settings.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/test/_helper.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/test/mocha.opts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/test/utils/ColorUtilsTest.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/test/utils/UtilsTest.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/ui/parent.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/util/arrayUtils.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/util/color.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/util/formatUtils.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Maxwell/util/mathUtils.coffee" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../lib/tasks/capistrano_tasks.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../../../../lib/tasks/sessions.rake" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Maxwell/CircuitElements/CircuitElement.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/CircuitEngineParams.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Maxwell/lib/underscore-1.3.3.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/CircuitElements/ColorScale.coffee" afterPath="$PROJECT_DIR$/../Maxwell/component/colorScale.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Circuit.coffee" afterPath="$PROJECT_DIR$/../Maxwell/core/circuit.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/CircuitLoader.coffee" afterPath="$PROJECT_DIR$/../Maxwell/io/circuitLoader.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/CircuitStates.coffee" afterPath="$PROJECT_DIR$/../Maxwell/ui/circuitStates.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/ComponentDefinitions.coffee" afterPath="$PROJECT_DIR$/../Maxwell/core/componentDefs.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Grid.coffee" afterPath="$PROJECT_DIR$/../Maxwell/ui/grid.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Hint.coffee" afterPath="$PROJECT_DIR$/../Maxwell/core/hint.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/Log.coffee" afterPath="$PROJECT_DIR$/../Maxwell/io/logger.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/UndoRedo.coffee" afterPath="$PROJECT_DIR$/../Maxwell/ui/commandHistory.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/solver/MatrixStamper.coffee" afterPath="$PROJECT_DIR$/../Maxwell/core/engine/matrixStamper.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/SimulatorEngine/solver/Solver.coffee" afterPath="$PROJECT_DIR$/../Maxwell/core/engine/circuitSolver.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/render/Renderer.coffee" afterPath="$PROJECT_DIR$/../Maxwell/render/renderer.coffee" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/test/mocha.css" afterPath="$PROJECT_DIR$/../Maxwell/test/mocha/mocha.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/test/mocha.js" afterPath="$PROJECT_DIR$/../Maxwell/test/mocha/mocha.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/test/test.html" afterPath="$PROJECT_DIR$/../Maxwell/test/mocha/test.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/../Maxwell/util/geom.coffee" afterPath="$PROJECT_DIR$/../Maxwell/render/primitives.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CirSim.js" afterPath="$PROJECT_DIR$/CirSim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FindPathInfo.js" afterPath="$PROJECT_DIR$/FindPathInfo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circuits/ohms.json" afterPath="$PROJECT_DIR$/circuits/ohms.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/CircuitElement.js" afterPath="$PROJECT_DIR$/elms/CircuitElement.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/RailElm.js" afterPath="$PROJECT_DIR$/elms/RailElm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/elms/VarRailElm.js" afterPath="$PROJECT_DIR$/elms/VarRailElm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/circuits/opint.json" afterPath="$PROJECT_DIR$/circuits/opint.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/loaders/loadCircuitFromJSON.js" afterPath="$PROJECT_DIR$/loaders/loadCircuitFromJSON.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Maxwell/.idea/misc.xml" afterPath="$PROJECT_DIR$/../Maxwell/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Maxwell/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Maxwell/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Newton/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Newton/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_footer.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_footer.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" afterPath="$PROJECT_DIR$/../../../views/layouts/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/environment.rb" afterPath="$PROJECT_DIR$/../../../../config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/environments/development.rb" afterPath="$PROJECT_DIR$/../../../../config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../config/environments/production.rb" afterPath="$PROJECT_DIR$/../../../../config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" afterPath="$PROJECT_DIR$/../../../../spec/requests/static_pages_spec.rb" />
     </list>
     <ignored path="Faraday.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,82 +28,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="37" selection-start="3862" selection-end="3862" vertical-scroll-proportion="0.33606556">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index2.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index2.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index3.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index3.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="45.208332">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index4.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index4.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="45.208332">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index5.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index5.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="101" selection-start="4393" selection-end="4393" vertical-scroll-proportion="-15.416667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CirSim.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CirSim.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2414" column="0" selection-start="67513" selection-end="67513" vertical-scroll-proportion="0.0">
+            <state line="1541" column="8" selection-start="41739" selection-end="41739" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RowInfo.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RowInfo.js">
+      <file leaf-file-name="geom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+            <state line="28" column="7" selection-start="502" selection-end="593" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scope.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scope.js">
+      <file leaf-file-name="CircuitNode.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CircuitNode.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="322" column="26" selection-start="8688" selection-end="8688" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResistorElm.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/elms/ResistorElm.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="20" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0">
+            <state line="11" column="2" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -173,7 +58,61 @@
       <file leaf-file-name="CircuitElement.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0">
+            <state line="858" column="47" selection-start="23879" selection-end="23879" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MosfetElm.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elms/MosfetElm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="5" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CapacitorElm.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elms/CapacitorElm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="107" column="23" selection-start="3732" selection-end="3732" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InductorElm.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elms/InductorElm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JFetElm.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elms/JFetElm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RowInfo.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RowInfo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="1" selection-start="317" selection-end="317" vertical-scroll-proportion="0.29801324">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OpAmpElm.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/elms/OpAmpElm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="12" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ui/ComponentGenerator.js" />
         <option value="$PROJECT_DIR$/geom.js" />
         <option value="$PROJECT_DIR$/load/loadFaraday.js" />
         <option value="$PROJECT_DIR$/test.json" />
@@ -218,19 +156,20 @@
         <option value="$PROJECT_DIR$/elms/CircuitElement.js" />
         <option value="$PROJECT_DIR$/elms/RailElm.js" />
         <option value="$PROJECT_DIR$/circuits/voltdividesimple.json" />
-        <option value="$PROJECT_DIR$/CirSim.js" />
         <option value="$PROJECT_DIR$/index2.html" />
         <option value="$PROJECT_DIR$/index3.html" />
         <option value="$PROJECT_DIR$/index4.html" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/index5.html" />
+        <option value="$PROJECT_DIR$/circuits/opint.json" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/CirSim.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1920" />
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="y" value="22" />
+    <option name="width" value="1920" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -274,6 +213,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ColorIdeProjectViewPane">
         <subPane>
           <PATH>
@@ -294,34 +243,20 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Faraday">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="280" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="298" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="310" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Maxwell" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="305" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="984" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="951" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="984" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="306" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="300" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -440,15 +375,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="22" width="1920" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18432671" sideWeight="0.4960464" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.02202643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18406759" sideWeight="0.34660926" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18406759" sideWeight="0.3573735" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28848225" sideWeight="0.6035846" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15972589" sideWeight="0.58949625" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15972589" sideWeight="0.40300107" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2744887" sideWeight="0.6035846" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18819188" sideWeight="0.4900881" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32599118" sideWeight="0.39272535" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -457,14 +392,14 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28740582" sideWeight="0.49182922" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28740582" sideWeight="0.49182922" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.88105726" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.49815497" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32929516" sideWeight="0.49815497" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -518,139 +453,138 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="44" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/CirSim.js</url>
+          <line>1765</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="48" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/elms/VoltageElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="28" selection-start="1441" selection-end="1448" vertical-scroll-proportion="0.34945056" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loaders/loadCircuitFromJSON.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="33" selection-start="2905" selection-end="2914" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circuits/ohms.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="136" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/VarRailElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/RailElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="12" selection-start="1713" selection-end="1713" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circuits/res-series.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circuits/resistors.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circuits/voltdividesimple.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="1" selection-start="1005" selection-end="1005" vertical-scroll-proportion="0.20454545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/circuits/voltdivide.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="102" selection-start="1011" selection-end="1011" vertical-scroll-proportion="0.17937219" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/GroundElm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="1360" selection-end="1360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/elms/WireElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="2" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="32" column="2" selection-start="941" selection-end="941" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scope.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="322" column="26" selection-start="8688" selection-end="8688" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="322" column="26" selection-start="8688" selection-end="8688" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/elms/ResistorElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="20" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0">
+        <state line="127" column="20" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="101" selection-start="4393" selection-end="4393" vertical-scroll-proportion="0.7266515" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setuplist.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setuplist.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="143" column="24" selection-start="3964" selection-end="3973" vertical-scroll-proportion="0.016629713" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/circuits/opint.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="52" selection-start="6719" selection-end="6719" vertical-scroll-proportion="0.3481153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="111" selection-start="4403" selection-end="4403" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="7" selection-start="502" selection-end="593" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RowInfo.js">
+    <entry file="file://$PROJECT_DIR$/CircuitNode.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+        <state line="11" column="2" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CirSim.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2414" column="0" selection-start="67513" selection-end="67513" vertical-scroll-proportion="0.0">
+        <state line="1541" column="8" selection-start="41739" selection-end="41739" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index5.html">
+    <entry file="file://$PROJECT_DIR$/elms/CircuitElement.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="101" selection-start="4393" selection-end="4393" vertical-scroll-proportion="-15.416667">
+        <state line="858" column="47" selection-start="23879" selection-end="23879" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index4.html">
+    <entry file="file://$PROJECT_DIR$/elms/CapacitorElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="45.208332">
+        <state line="107" column="23" selection-start="3732" selection-end="3732" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index3.html">
+    <entry file="file://$PROJECT_DIR$/elms/InductorElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="45.208332">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index2.html">
+    <entry file="file://$PROJECT_DIR$/elms/JFetElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/elms/MosfetElm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="37" selection-start="3862" selection-end="3862" vertical-scroll-proportion="0.33606556">
+        <state line="18" column="5" selection-start="496" selection-end="496" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RowInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="317" selection-end="317" vertical-scroll-proportion="0.29801324">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/elms/OpAmpElm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="12" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

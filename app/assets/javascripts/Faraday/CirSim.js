@@ -1590,13 +1590,10 @@ Circuit.stampCCCS = function (n1, n2, vs, gain) {
  (Unless i or j is a voltage source node.) */
 Circuit.stampMatrix = function (i, j, x) {
   if (i > 0 && j > 0) {
-    console.log("stamping " + i + " " + j + " " + x);
     if (Circuit.circuitNeedsMap) {
       i = Circuit.circuitRowInfo[i - 1].mapRow;
       var ri = Circuit.circuitRowInfo[j - 1];
-      console.log("circuit needs map " + i + "  " + ri);
       if (ri.type == RowInfo.ROW_CONST) {
-        console.log("Stamping constant " + i + " " + j + " " + x);
         Circuit.circuitRightSide[i] -= x * ri.value;
         return;
       }
@@ -1606,7 +1603,6 @@ Circuit.stampMatrix = function (i, j, x) {
       j--;
     }
 
-    console.log("incrementing value " + x);
     Circuit.circuitMatrix[i][j] += x;
   }
 };
@@ -1616,12 +1612,10 @@ Circuit.stampMatrix = function (i, j, x) {
  */
 Circuit.stampRightSide = function (i, x) {
   if (isNaN(x)) {
-    console.log("rschanges true " + (i-1));
     if (i > 0)
       Circuit.circuitRowInfo[i - 1].rsChanges = true;
   } else {
     if (i > 0) {
-      console.log(" >> stamping rs " + i + " " + x);
       if (Circuit.circuitNeedsMap) {
         i = Circuit.circuitRowInfo[i - 1].mapRow;
 
@@ -1777,7 +1771,6 @@ Circuit.updateCircuit = function () {
       var c = Circuit.currentBar;     // The value of CirSim number must be carefully set for current to display properly
 
       //console.log("Frame time: " + inc  + "   #: "  + frames);
-
       c = Math.exp(c / 3.5 - 14.2);
       CircuitElement.currentMult = 1.7 * inc * c;
       if (!Circuit.conventionCheckItem)
@@ -1966,10 +1959,6 @@ Circuit.analyzeCircuit = function () {
       volt = ce;
   }
 
-  console.log("Got Ground: gotGround" + gotGround)
-  console.log("Got Rail: ")
-  console.log("volt: " + volt.toString())
-
   // If no ground and no rails then voltage element's first terminal instanceof referenced to ground:
   if (!gotGround && volt != null && !gotRail) {
     var cn = new CircuitNode();
@@ -1977,7 +1966,6 @@ Circuit.analyzeCircuit = function () {
     var pt = volt.getPost(0);
     cn.x1 = pt.x1;
     cn.y = pt.y;
-    console.log("Adding node to: " + cn.x1 + ", " + cn.y);
     Circuit.nodeList.push(cn);
   } else {
     // Else allocate extra node for ground
@@ -1988,7 +1976,6 @@ Circuit.analyzeCircuit = function () {
 
   // Allocate nodes and voltage sources
   for (i = 0; i < Circuit.elementList.length; ++i) {
-    console.log("Allocating nodes and vsources " + i)
     var ce = Circuit.getElm(i);
 
     var inodes = ce.getInternalNodeCount();
@@ -1997,7 +1984,6 @@ Circuit.analyzeCircuit = function () {
 
     // allocate a node for each post and match posts to nodes
     for (j = 0; j != posts; ++j) {
-      console.log("Allocating a node for each post " + j)
       var pt = ce.getPost(j);
 
       var k;
@@ -2015,14 +2001,12 @@ Circuit.analyzeCircuit = function () {
         cn1.num = j;
         cn1.elm = ce;
         cn.links.push(cn1);
-        console.log("Created new link at: " + k)
         ce.setNode(j, Circuit.nodeList.length);
         Circuit.nodeList.push(cn);
       } else {
         var cn1 = new CircuitNodeLink();
         cn1.num = j;
         cn1.elm = ce;
-        console.log("getting circuit node " + k + "for j= " + j)
         Circuit.getCircuitNode(k).links.push(cn1);
         ce.setNode(j, k);
         // If it's the ground node, make sure the node voltage instanceof 0, because it may not get set later.
@@ -2066,7 +2050,6 @@ Circuit.analyzeCircuit = function () {
   }
 
   Circuit.voltageSourceCount = vscount;
-  console.log("voltage source count " + Circuit.voltageSourceCount )
 
   var matrixSize = Circuit.nodeList.length - 1 + vscount;
   Circuit.circuitMatrix = initializeTwoDArray(matrixSize, matrixSize);
@@ -2157,7 +2140,6 @@ Circuit.analyzeCircuit = function () {
 
       // try findPath with maximum depth of 5, to avoid slowdown
       if (!fpi.findPath(ce.getNode(0), 5) && !fpi.findPath(ce.getNode(0))) {
-        console.log(ce.toString() + " no path");
         ce.reset();
       }
     }
@@ -2167,7 +2149,6 @@ Circuit.analyzeCircuit = function () {
       var fpi = new FindPathInfo(FindPathInfo.INDUCT, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
 
       if (!fpi.findPath(ce.getNode(0))) {
-        Circuit.halt("No path for current source!", ce);
         return;
       }
     }
@@ -2187,7 +2168,6 @@ Circuit.analyzeCircuit = function () {
       var fpi = new FindPathInfo(FindPathInfo.SHORT, ce, ce.getNode(1), Circuit.elementList, Circuit.nodeList.length);
 
       if (fpi.findPath(ce.getNode(0))) {
-        console.log(ce.toString() + " shorted");
         ce.reset();
       } else {
 
@@ -2209,11 +2189,9 @@ Circuit.analyzeCircuit = function () {
     var re = Circuit.circuitRowInfo[i];
     //console.log(re)
     if (re.lsChanges || re.dropRow || re.rsChanges) {
-      console.log("row info continue");
       continue;
     }
 
-    console.log("iter: " + i)
     var rsadd = 0;
 
     // look for rows that can be removed
@@ -2222,21 +2200,17 @@ Circuit.analyzeCircuit = function () {
       if (Circuit.circuitRowInfo[j].type == RowInfo.ROW_CONST) {
         // Keep a running total of const values that have been removed already
         rsadd -= Circuit.circuitRowInfo[j].value * q;
-        console.log("rsadd continue")
         continue;
       }
       if (q == 0) {
-        console.log("0 continue " + matrixSize)
         continue;
       } if (qp == -1) {
         qp = j;
         qv = q;
-        console.log("matrix continue")
         continue;
       }
       if (qm == -1 && q == -qv) {
         qm = j;
-        console.log("qm continue " + q)
         continue;
       }
       break;
@@ -2259,7 +2233,6 @@ Circuit.analyzeCircuit = function () {
       }
 
       var elt = Circuit.circuitRowInfo[qp];
-      console.log("qp is " + qp + "  " + elt.type)
       if (qm == -1) {
         // We found a row with only one nonzero entry, that value instanceof constant
         var k;
@@ -2270,27 +2243,21 @@ Circuit.analyzeCircuit = function () {
         }
         if (elt.type == RowInfo.ROW_EQUAL) {
           // break equal chains
-          console.log("Break equal chain");
           elt.type = RowInfo.ROW_NORMAL;
           continue;
         }
         if (elt.type != RowInfo.ROW_NORMAL) {
-          console.log("type already " + elt.type + " for " + qp + "!");
           continue;
         }
 
         elt.type = RowInfo.ROW_CONST;
         elt.value = (Circuit.circuitRightSide[i] + rsadd) / qv;
         Circuit.circuitRowInfo[i].dropRow = true;
-        console.log("rowInfo.value = "  + elt.value + " type = " + elt.type);
-        console.log(qp + " * " + qv + " = const " + elt.value);
         i = -1; // start over from scratch
       } else if (Circuit.circuitRightSide[i] + rsadd == 0) {
-        console.log("continuing")
         // we found a row with only two nonzero entries, and one
         // instanceof the negative of the other; the values are equal
         if (elt.type != RowInfo.ROW_NORMAL) {
-          console.log("swapping");
           var qq = qm;
           qm = qp;
           qp = qq;
@@ -2311,13 +2278,10 @@ Circuit.analyzeCircuit = function () {
 
   } // end for(matrixSize)
 
-  console.log(qp + " = " + qm);
-
   // find size of new matrix:
   var nn = 0;
   for (i = 0; i != matrixSize; ++i) {
     var elt = Circuit.circuitRowInfo[i];
-    console.log("col " + i + " maps to " + elt.mapCol);
     if (elt.type == RowInfo.ROW_NORMAL) {
       elt.mapCol = nn++;
       continue;
@@ -2347,10 +2311,8 @@ Circuit.analyzeCircuit = function () {
         elt.type = e2.type;
         elt.value = e2.value;
         elt.mapCol = -1;
-        console.log(i + " = [late]const " + elt.value);
       } else {
         elt.mapCol = e2.mapCol;
-        console.log(i + " maps to: " + e2.mapCol);
       }
     }
   }
@@ -2475,6 +2437,7 @@ Circuit.runCircuit = function () {
 
       for (i = 0; i < Circuit.circuitMatrixSize; ++i)
         Circuit.circuitRightSide[i] = Circuit.origRightSide[i];
+
       if (Circuit.circuitNonLinear) {
         for (i = 0; i < Circuit.circuitMatrixSize; ++i)
           for (j = 0; j < Circuit.circuitMatrixSize; ++j)
@@ -2503,14 +2466,13 @@ Circuit.runCircuit = function () {
         }
       }
 
-//            if(printit) {
-//                for(j=0; i<circuitMatrixSize; j++) {
-//                    for( i=0; i<circuitMatrixSize; ++i)
-//                        console.log(circuitMatrix[j][i] + ",");
-//                    console.log(" " + circuitRightSide[j] + "\n");
-//                }
-//                console.log("\n");
-//            }
+      console.log("Matrix Dump:");
+      for(j=0; i<Circuit.circuitMatrixSize; j++) {
+          for( i=0; i<Circuit.circuitMatrixSize; ++i)
+              console.log(Circuit.circuitMatrix[j][i] + ",");
+          console.log(" " + Circuit.circuitRightSide[j] + "\n");
+      }
+      console.log("\n");
 
       if (Circuit.circuitNonLinear) {
         if (Circuit.converged && subiter > 0)
@@ -2542,14 +2504,14 @@ Circuit.runCircuit = function () {
         if (j < (Circuit.nodeList.length - 1)) {
 
           var cn = Circuit.getCircuitNode(j + 1);
+          console.log("bridging links")
           for (k = 0; k < cn.links.length; ++k) {
             var cn1 = cn.links[k];// as CircuitNodeLink;
-
             cn1.elm.setNodeVoltage(cn1.num, res);
           }
         } else {
           var ji = j - (Circuit.nodeList.length - 1);
-          //console.log("setting vsrc " + ji + " to " + res);
+          console.log("setting vsrc " + ji + " to " + res);
           Circuit.voltageSources[ji].setCurrent(ji, res);
         }
 
@@ -2574,8 +2536,8 @@ Circuit.runCircuit = function () {
     tm = (new Date()).getTime();
     lit = tm;
 
-    //console.log("diff: " + (tm-CirSim.lastIterTime) + " iter: " + iter + " ");
-    //console.log(iterCount + " breaking from iteration: " + " sr: " + steprate + " iter: " + subiter + " time: " + (tm - CirSim.lastIterTime)+ " lastFrametime: " + CirSim.lastFrameTime );
+    console.log("diff: " + (tm-Circuit.lastIterTime) + " iter: " + iter + " ");
+    console.log(iter + " breaking from iteration: " + " sr: " + steprate + " iter: " + subiter + " time: " + (tm - Circuit.lastIterTime)+ " lastFrametime: " + Circuit.lastFrameTime );
     //iterCount++;
     if (iter * 1000 >= steprate * (tm - Circuit.lastIterTime)) {
       //console.log("1 breaking from iteration: " + " sr: " + steprate + " iter: " + subiter + " time: " + (tm - CirSim.lastIterTime)+ " lastFrametime: " + CirSim.lastFrameTime );

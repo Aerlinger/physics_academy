@@ -136,7 +136,6 @@ class Subscription < ActiveRecord::Base
 
   private
 
-
     def create_empty_subscription
       self.completed_task_ids ||= []
       @last_completed_task_id = nil
